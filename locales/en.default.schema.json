@@ -1,0 +1,89 @@
+{
+  "sections": {
+    "header": {
+      "name": "Header",
+      "settings": {
+        "logo": {
+          "label": "Logo image"
+        },
+        "logo_width": {
+          "unit": "px",
+          "label": "Custom logo width"
+        },
+        "menu": {
+          "label": "Menu"
+        },
+        "show_search": {
+          "label": "Enable Search"
+        },
+        "show_currency": {
+          "label": "Enable Currency Converter"
+        },
+        "enable_sticky_header": {
+          "label": "Enable sticky header",
+          "info": "Header shows on the screen as customers scroll up."
+        }
+      }
+    },
+    "main-slider": {
+      "name": "Main Slider",
+      "blocks": {
+        "style1": {
+          "name": "Style 1",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "subheading": {
+              "label": "Sub Heading"
+            },
+            "content": {
+              "label": "Content"
+            },
+            "sale": {
+              "label": "Sale %"
+            },
+            "btn": {
+              "label": "Button Text"
+            },
+            "link": {
+              "label": "Button Link"
+            },
+            "image": {
+              "label": "Image"
+            }
+          }
+        },
+        "style2": {
+          "name": "Style 2",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "subheading": {
+              "label": "Sub Heading"
+            },
+            "content": {
+              "label": "Content"
+            },
+            "sale": {
+              "label": "Sale Text"
+            },
+            "btn": {
+              "label": "Button Text"
+            },
+            "link": {
+              "label": "Button Link"
+            },
+            "image": {
+              "label": "Image"
+            }
+          }
+        }
+      },
+      "presets":{
+        "name":"Main Slider"
+      }
+    }
+  }
+}
