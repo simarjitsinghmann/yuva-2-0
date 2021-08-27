@@ -23,10 +23,13 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-    {{ 'owl.carousel.min.css' | asset_url | stylesheet_tag }}
-    {{ 'owl.theme.default.min.css' | asset_url | stylesheet_tag }}
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+    {{ 'fonts.css' | asset_url | stylesheet_tag }}
     {{ 'variable.css' | asset_url | stylesheet_tag }}
     {{ 'style.css' | asset_url | stylesheet_tag }}
+    {{ 'owl.carousel.min.css' | asset_url | stylesheet_tag }}
+    {{ 'owl.theme.default.min.css' | asset_url | stylesheet_tag }}
+
     {{ content_for_header }}
 
     {%- liquid
@@ -44,9 +47,9 @@
     {%- endunless -%}
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
-    <script src="{{'jquery.min.js' | asset_url}}"></script> 
-    <script src="{{'owl.carousel.js' | asset_url}}"></script> 
-    <script src="{{'custom.js' | asset_url}}"></script> 
+    <script src="{{'jquery.min.js' | asset_url}}" ></script> 
+    <script src="{{'owl.carousel.js' | asset_url}}" defer="defer"></script> 
+    <script src="{{'custom.js' | asset_url}}" defer="defer"></script> 
   </head>
 
   <body>

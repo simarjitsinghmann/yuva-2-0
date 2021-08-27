@@ -1,0 +1,177 @@
+<div class="container">
+    <div class="row">
+        <div class="category-list shopify__top__section">
+            <small>{{section.settings.subheading}}</small>
+            <h3>{{section.settings.heading}}</h3>
+            <ul class="grid grid--3-col-tablet grid--3-col-desktop" role="list">
+                {% for block in section.blocks%}
+                  {%- if block.settings.bgcolor != blank -%}
+                  <style>
+                    #offer-block-{{block.id}} .card-information__wrapper{
+                      background-color:{{block.settings.bgcolor}} !important;
+                    }
+                  </style>
+                {% endif %}
+                <li id="offer-block-{{block.id}}"  class="grid__item">
+                    <div class="card-wrapper">
+                        <div class="card-information">
+                        <div class="card-information-image">
+                            <a href="{{block.settings.link}}" class="animate_hvrbr">
+                              {% if block.settings.image != blank %}
+                              <img src="{{block.settings.image | img_url:'master'}}" alt="">
+                              {% endif %}
+                            </a>
+                        </div>
+                            <div class="card-information__wrapper {{block.settings.info_position}}">
+                              {% if block.settings.heading != blank %}
+                                <h5>{{block.settings.heading}}</h5>
+                                {% endif%}
+                                {% if block.settings.offer_heading != blank %}
+                                <p class="category-name">{{block.settings.offer_heading}}</p>
+                                {% endif%}
+                                <p class="offer-name">
+                                {% if block.settings.offer != blank %}
+                                  <span>{{block.settings.offer}}</span>
+                                {% endif%}
+                                  {% if block.settings.offer_sub != blank %}
+                                  {{block.settings.offer_sub}}
+                                {% endif%}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+              {% endfor%}
+            </ul>
+        </div>
+    </div>
+</div>
+<style>
+  #shopify-section-{{section.id}}{
+    background-color:{{section.settings.color}};
+  }
+</style>
+{% schema %}
+{
+  "name": "t:sections.offer-section.name",
+  "tag": "section",
+  "class":"category-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "default": "BEST FOR YOU",
+      "label": "t:sections.offer-section.settings.subheading.label"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "What's More",
+      "label": "t:sections.offer-section.settings.heading.label"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "default": "#efedeb",
+      "label": "t:sections.offer-section.settings.color.label"
+    }
+],
+  "blocks": [
+	  {
+      "type":"offer",
+      "name":"t:sections.offer-section.blocks.offer.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Heading",
+          "label": "t:sections.offer-section.blocks.offer.settings.heading.label"
+        },
+        {
+          "type": "text",
+          "id": "offer_heading",
+          "default": "Flat Up To",
+          "label": "t:sections.offer-section.blocks.offer.settings.offer_heading.label"
+        },
+        {
+          "type": "text",
+          "id": "offer",
+          "default": "70%",
+          "label": "t:sections.offer-section.blocks.offer.settings.offer.label"
+        },
+        {
+          "type": "text",
+          "id": "offer_sub",
+          "default": "off",
+          "label": "t:sections.offer-section.blocks.offer.settings.offer_sub.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.offer-section.blocks.offer.settings.image.label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.offer-section.blocks.offer.settings.link.label"
+        },
+        {
+          "type": "color",
+          "id": "bgcolor",
+          "default": "#ffffff",
+          "label": "t:sections.offer-section.blocks.offer.settings.bgcolor.label"
+        },
+        {
+          "type": "select",
+          "id": "info_position",
+          "label": "t:sections.offer-section.blocks.offer.settings.info_position.label",
+          "default": "center-left",
+          "options": [
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.top-left.label",
+              "value": "top-left"
+            },
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.center-left.label",
+              "value": "center-left"
+            },
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.bottom-left.label",
+              "value": "bottom-left"
+            },
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.top-center.label",
+              "value": "top-center"
+            },
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.center.label",
+              "value": "center"
+            },
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.bottom-center.label",
+              "value": "bottom-center"
+            },
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.top-right.label",
+              "value": "top-right"
+            },
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.center-right.label",
+              "value": "center-right"
+            },
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.bottom-right.label",
+              "value": "bottom-right"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.offer-section.presets.name"
+    }
+  ]
+}
+{% endschema %}

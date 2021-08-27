@@ -3,6 +3,21 @@
     "header": {
       "name": "Header",
       "settings": {
+        "header_1": {
+          "content": "Announcement Bar"
+        },
+        "show_bar": {
+          "label": "Show Announcement Bar"
+        },
+        "announcement": {
+          "label": "Announcement Message"
+        },
+        "announcement_bgcolor": {
+          "label": "Announcement Background Color"
+        },
+        "header_2": {
+          "content": "Header"
+        },
         "logo": {
           "label": "Logo image"
         },
@@ -26,10 +41,10 @@
       }
     },
     "main-slider": {
-      "name": "Main Slider",
+      "name": "Slider",
       "blocks": {
-        "style1": {
-          "name": "Style 1",
+        "slide": {
+          "name": "Slide",
           "settings": {
             "heading": {
               "label": "Heading"
@@ -41,7 +56,7 @@
               "label": "Content"
             },
             "sale": {
-              "label": "Sale %"
+              "label": "Highlight Text"
             },
             "btn": {
               "label": "Button Text"
@@ -51,38 +66,120 @@
             },
             "image": {
               "label": "Image"
-            }
-          }
-        },
-        "style2": {
-          "name": "Style 2",
-          "settings": {
-            "heading": {
-              "label": "Heading"
             },
-            "subheading": {
-              "label": "Sub Heading"
+            "bgcolor": {
+              "label": "Background Color"
             },
-            "content": {
-              "label": "Content"
-            },
-            "sale": {
-              "label": "Sale Text"
-            },
-            "btn": {
-              "label": "Button Text"
-            },
-            "link": {
-              "label": "Button Link"
-            },
-            "image": {
-              "label": "Image"
+            "info_position": {
+              "top-left": {
+                "label": "Top Left"
+              },
+              "center-left": {
+                "label": "Center Left"
+              },
+              "bottom-left": {
+                "label": "Bottom Left"
+              },
+              "top-center": {
+                "label": "Top Center"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "bottom-center": {
+                "label": "Bottom Center"
+              },
+              "top-right": {
+                "label": "Top Right"
+              },
+              "center-right": {
+                "label": "Center Right"
+              },
+              "bottom-right": {
+                "label": "Bottom Right"
+              },
+              "label": "Info Position"
             }
           }
         }
       },
       "presets":{
-        "name":"Main Slider"
+        "name":"Slider"
+      }
+    },
+    "offer-section": {
+      "name": "Offer Section",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "subheading": {
+          "label": "Sub Heading"
+        }
+      },
+      "blocks": {
+        "offer": {
+          "name": "Offer",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "subheading": {
+              "label": "Sub Heading"
+            },
+            "offer_heading": {
+              "label": "Offer Heading"
+            },
+            "offer": {
+              "label": "Offer"
+            },
+            "offer_sub": {
+              "label": "Offer Subtext"
+            },
+            "link": {
+              "label": "Offer Link"
+            },
+            "image": {
+              "label": "Background Image"
+            },
+            "bgcolor": {
+              "label": "Info Background Color"
+            },
+            "info_position": {
+              "top-left": {
+                "label": "Top Left"
+              },
+              "center-left": {
+                "label": "Center Left"
+              },
+              "bottom-left": {
+                "label": "Bottom Left"
+              },
+              "top-center": {
+                "label": "Top Center"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "bottom-center": {
+                "label": "Bottom Center"
+              },
+              "top-right": {
+                "label": "Top Right"
+              },
+              "center-right": {
+                "label": "Center Right"
+              },
+              "bottom-right": {
+                "label": "Bottom Right"
+              },
+              "label": "Info Position"
+            }
+          }
+        }
+      },
+      "presets":{
+        "name":"Offer Section"
       }
     }
   }

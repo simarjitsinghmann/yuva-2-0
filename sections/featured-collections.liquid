@@ -1,0 +1,205 @@
+<div class="container">
+        <div class="row">
+            <div class="collection page-width">
+                <div class="collection-section-header">
+                <h4 class="title">Collection list</h4>
+                <a class="view-all" href="javascript:void(0)">View All</a>
+                </div>
+                <div class="collection-gutter">
+                    <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col" role="list">
+                        <div class="card-wrapper left-sided">
+                            <div class="card__warpper__detail left__sided">
+                                <div class="collection-image">
+                                    <img src="https://yova.shinedezign.pro/assets/images/winter-collection.jpg" alt="">
+                                </div>
+                                <div class="collection-detail">
+                                    <h4>
+                                        Winter Collections
+                                    </h4>
+                                    <small>Contrary to popular belief, Lorem Ipsum is not simply random.</small>
+                                    <a href="javascript:void(0)"><span><svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> Explore</span></a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col" role="list">
+                        <ul class="collection__right__list" role="list">
+                            <li class="grid__item__list">
+                                <div class="card-wrapper">
+                                    <div class="card__warpper__detail right__sided">
+                                    <div class="collection-image">
+                                        <img src="https://yova.shinedezign.pro/assets/images/men-collection.jpg" alt="">
+                                    </div>
+                                    <div class="collection-detail-right">
+                                        <h5>
+                                            Men’s Collections
+                                        </h5>
+                                        <small>Contrary to popular belief, Lorem Ipsum is not simply random.</small>
+                                        <a href="javascript:void(0)"><span><svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> Explore</span></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="grid__item__list">
+                                <div class="card-wrapper">
+                                    <div class="card__warpper__detail right__sided">
+                                    <div class="collection-image">
+                                        <img src="https://yova.shinedezign.pro/assets/images/kids-collection.jpg" alt="">
+                                    </div>
+                                    <div class="collection-detail-right">
+                                        <h5>
+                                            Women’ Collections
+                                        </h5>
+                                        <small>Contrary to popular belief, Lorem Ipsum is not simply random.</small>
+                                        <a href="javascript:void(0)"><span><svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> Explore</span></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="grid__item__list">
+                                <div class="card-wrapper">
+                                    <div class="card__warpper__detail right__sided">
+                                    <div class="collection-image">
+                                        <img src="https://yova.shinedezign.pro/assets/images/women-collection.jpg" alt="">
+                                    </div>
+                                    <div class="collection-detail-right">
+                                        <h5>
+                                            Winter Collections
+                                        </h5>
+                                        <small>Contrary to popular belief, Lorem Ipsum is not simply random.</small>
+                                        <a href="javascript:void(0)"><span><svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> Explore</span></a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% schema %}
+{
+  "name": "Featured Collections",
+  "tag": "section",
+  "class":"spaced-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "default": "BEST FOR YOU",
+      "label": "t:sections.offer-section.settings.subheading.label"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "What's More",
+      "label": "t:sections.offer-section.settings.heading.label"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "default": "#efedeb",
+      "label": "t:sections.offer-section.settings.color.label"
+    }
+],
+  "blocks": [
+	  {
+      "type":"offer",
+      "name":"t:sections.offer-section.blocks.offer.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Heading",
+          "label": "t:sections.offer-section.blocks.offer.settings.heading.label"
+        },
+        {
+          "type": "text",
+          "id": "offer_heading",
+          "default": "Flat Up To",
+          "label": "t:sections.offer-section.blocks.offer.settings.offer_heading.label"
+        },
+        {
+          "type": "text",
+          "id": "offer",
+          "default": "70%",
+          "label": "t:sections.offer-section.blocks.offer.settings.offer.label"
+        },
+        {
+          "type": "text",
+          "id": "offer_sub",
+          "default": "off",
+          "label": "t:sections.offer-section.blocks.offer.settings.offer_sub.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.offer-section.blocks.offer.settings.image.label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.offer-section.blocks.offer.settings.link.label"
+        },
+        {
+          "type": "color",
+          "id": "bgcolor",
+          "default": "#ffffff",
+          "label": "t:sections.offer-section.blocks.offer.settings.bgcolor.label"
+        },
+        {
+          "type": "select",
+          "id": "info_position",
+          "label": "t:sections.offer-section.blocks.offer.settings.info_position.label",
+          "default": "center-left",
+          "options": [
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.top-left.label",
+              "value": "top-left"
+            },
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.center-left.label",
+              "value": "center-left"
+            },
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.bottom-left.label",
+              "value": "bottom-left"
+            },
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.top-center.label",
+              "value": "top-center"
+            },
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.center.label",
+              "value": "center"
+            },
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.bottom-center.label",
+              "value": "bottom-center"
+            },
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.top-right.label",
+              "value": "top-right"
+            },
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.center-right.label",
+              "value": "center-right"
+            },
+            {
+              "label": "t:sections.offer-section.blocks.offer.settings.bottom-right.label",
+              "value": "bottom-right"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collections"
+    }
+  ]
+}
+{% endschema %}
