@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="slider-list">
 				<div class="d-flex">
-				  <div class="loop owl-carousel owl-theme">
+				  <div class="loopED owl-carousel owl-theme">
 					{% for block in section.blocks %}
 					<div class="item">
 						{% if block.settings.image != blank %}
@@ -65,7 +65,7 @@
 </section>
 {% javascript %}
 jQuery(document).ready(function($) {
-	$('.loop').owlCarousel({
+	$('.loop').owlCarouSSsel({
 	 center: false,
 	 items: 1,
 	 loop: true,
