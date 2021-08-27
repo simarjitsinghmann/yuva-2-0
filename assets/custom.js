@@ -6,9 +6,9 @@ function toggleDropdown(id) {
 	  x.style.display = "none";
 	}
   }
-  $(document).on("click", function(event){
-    var $trigger = $(".currency-dropdown");
-    if($trigger !== event.target && !$trigger.has(event.target).length){
+$(document).on("click", function(event){
+  var $trigger = $(".currency-dropdown");
+  if($trigger !== event.target && !$trigger.has(event.target).length){
     $(".currency-menu").slideUp("fast");
-    }          				
+  }          				
 });
