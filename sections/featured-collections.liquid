@@ -2,203 +2,320 @@
         <div class="row">
             <div class="collection page-width">
                 <div class="collection-section-header">
-                <h4 class="title">Collection list</h4>
-                <a class="view-all" href="javascript:void(0)">View All</a>
+                  {% if section.settings.heading != blank %}
+                  <h4 class="title">{{section.settings.heading}}</h4>
+                  {% endif %}
+                  {% if section.settings.btntext != blank %}
+                  <a class="view-all" href="{{section.settings.btnlink}}">{{section.settings.btntext}}</a>
+                  {% endif %}
                 </div>
                 <div class="collection-gutter">
+                  {% if section.settings.m_collection != blank or section.settings.m_collection != false %}
                     <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col" role="list">
+                      {% assign collection = ''%}
+                      {% if section.settings.m_collection != blank %}
+                      {% assign collection = collections[section.settings.m_collection]%}
+                      {% endif %}
                         <div class="card-wrapper left-sided">
                             <div class="card__warpper__detail left__sided">
                                 <div class="collection-image">
-                                    <img src="https://yova.shinedezign.pro/assets/images/winter-collection.jpg" alt="">
+                                  {% if section.settings.custom == false and collection.featured_image != blank %} 
+                                  {% assign feature_image = collection.featured_image | img_url:'master' %}
+                                  {% elsif section.settings.custom == true and section.settings.mc_image == blank and collection.featured_image != blank %}
+                                  {% assign feature_image = collection.featured_image | img_url:'master' %}
+                                    {% elsif section.settings.custom and section.settings.mc_image != blank  %}
+                                    {% assign feature_image = section.settings.mc_image | img_url:'master' %}
+                                    {%else%}
+                                    {% assign feature_image = 'collection1.svg' | asset_url %}
+                                  {% endif %}
+                                  <img src="{{feature_image}}" alt="">
                                 </div>
                                 <div class="collection-detail">
                                     <h4>
-                                        Winter Collections
+                                      {% if section.settings.custom == false %}
+                                        {{collection.title}}
+                                        {% elsif section.settings.custom and section.settings.mc_heading != blank  %}
+                                        {{section.settings.mc_heading}}
+                                      {% endif %}
                                     </h4>
-                                    <small>Contrary to popular belief, Lorem Ipsum is not simply random.</small>
-                                    <a href="javascript:void(0)"><span><svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> Explore</span></a>
+                                    <small>
+                                      {% if section.settings.custom == false %}
+                                        {{collection.description | strip_html | truncatewords: 15, "" }}
+                                        {% elsif section.settings.custom and section.settings.mc_desc != blank  %}
+                                        {{section.settings.mc_desc}}
+                                      {% endif %}
+                                    </small>
+                                      {% if section.settings.mc_btntext != blank %}
+                                        
+                                        {% if section.settings.custom and section.settings.mc_btnlink != blank  %}
+                                          {% assign btnlink = section.settings.mc_btnlink %}
+                                    {% else %}
+                                    {% assign btnlink = collection.url %}
+                                      {% endif%}               
+                                      
+                                    <a href="{{btnlink}}">                       
+                                      <span>
+                                      <svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> 
+                                      {{section.settings.mc_btntext}}
+                                    </span>
+                                    </a>
+                                  {% endif %}
                                 </div>
                             </div>
                             
                         </div>
                     </div>
+                  {% endif %}
+                  {% if section.blocks.size > 0 %}
                     <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col" role="list">
                         <ul class="collection__right__list" role="list">
+                          {% for block in section.blocks %}
+                            {% assign collection = ''%}
+                            {% if block.settings.collection != blank %}
+                            {% assign collection = collections[block.settings.collection]%}
+                            {% endif %}
+                            {% capture image_content %}
+                            <div class="collection-image">
+                              {% if block.settings.custom == false and collection.featured_image != blank %} 
+                              {% assign feature_image = collection.featured_image | img_url:'master' %}
+                              {% elsif block.settings.custom == true and block.settings.image == blank and collection.featured_image != blank %}
+                              {% assign feature_image = collection.featured_image | img_url:'master' %}
+                                {% elsif block.settings.custom and block.settings.image != blank  %}
+                                {% assign feature_image = block.settings.image | img_url:'master' %}
+                                {%else%}
+                                {% assign feature_image = 'collection2.svg' | asset_url %}
+                              {% endif %}
+                              <img src="{{feature_image}}" alt="">
+                            </div>
+                            {% endcapture %}
                             <li class="grid__item__list">
                                 <div class="card-wrapper">
                                     <div class="card__warpper__detail right__sided">
-                                    <div class="collection-image">
-                                        <img src="https://yova.shinedezign.pro/assets/images/men-collection.jpg" alt="">
-                                    </div>
+                                      {% if block.settings.info_position == 'right'%}
+                                        {{image_content}}
+                                      {% endif %}
                                     <div class="collection-detail-right">
                                         <h5>
-                                            Men’s Collections
+                                          {% if block.settings.custom == false %}
+                                            {{collection.title}}
+                                            {% elsif block.settings.custom and block.settings.heading != blank  %}
+                                            {{block.settings.heading}}
+                                          {% endif %}
                                         </h5>
-                                        <small>Contrary to popular belief, Lorem Ipsum is not simply random.</small>
-                                        <a href="javascript:void(0)"><span><svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> Explore</span></a>
+                                        <small>
+                                          {% if block.settings.custom == false %}
+                                            {{collection.description | strip_html | truncatewords: 15, "" }}
+                                            {% elsif block.settings.custom and block.settings.desc != blank  %}
+                                            {{block.settings.desc}}
+                                          {% endif %}
+                                        </small> 
+                                        {% if block.settings.btntext != blank %}
+                                        
+                                          {% if block.settings.custom and block.settings.btnlink != blank  %}
+                                            {% assign btnlink = block.settings.btnlink %}
+                                      {% else %}
+                                      {% assign btnlink = collection.url %}
+                                        {% endif%}               
+                                        
+                                      <a href="{{btnlink}}">    
+                                          <span>
+                                            <svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> 
+                                            {{block.settings.btntext }}
+                                          </span>
+                                        </a>
+                                      {% endif %}
                                     </div>
+                                    {% if block.settings.info_position == 'left'%}
+                                      {{image_content}}
+                                    {% endif %}
                                     </div>
                                 </div>
                             </li>
-                            <li class="grid__item__list">
-                                <div class="card-wrapper">
-                                    <div class="card__warpper__detail right__sided">
-                                    <div class="collection-image">
-                                        <img src="https://yova.shinedezign.pro/assets/images/kids-collection.jpg" alt="">
-                                    </div>
-                                    <div class="collection-detail-right">
-                                        <h5>
-                                            Women’ Collections
-                                        </h5>
-                                        <small>Contrary to popular belief, Lorem Ipsum is not simply random.</small>
-                                        <a href="javascript:void(0)"><span><svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> Explore</span></a>
-                                    </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="grid__item__list">
-                                <div class="card-wrapper">
-                                    <div class="card__warpper__detail right__sided">
-                                    <div class="collection-image">
-                                        <img src="https://yova.shinedezign.pro/assets/images/women-collection.jpg" alt="">
-                                    </div>
-                                    <div class="collection-detail-right">
-                                        <h5>
-                                            Winter Collections
-                                        </h5>
-                                        <small>Contrary to popular belief, Lorem Ipsum is not simply random.</small>
-                                        <a href="javascript:void(0)"><span><svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> Explore</span></a>
-                                    </div>
-                                    </div>
-                                </div>
-                            </li>
+                            {% endfor %}
                         </ul>
                     </div>
+                  {% endif %}
                 </div>
             </div>
         </div>
     </div>
 {% schema %}
 {
-  "name": "Featured Collections",
+  "name": "t:sections.featured-collections.name",
   "tag": "section",
   "class":"spaced-section",
   "settings": [
     {
       "type": "text",
-      "id": "subheading",
-      "default": "BEST FOR YOU",
-      "label": "t:sections.offer-section.settings.subheading.label"
+      "id": "heading",
+      "default": "Collection list",
+      "label": "t:sections.featured-collections.settings.heading.label"
     },
     {
       "type": "text",
-      "id": "heading",
-      "default": "What's More",
-      "label": "t:sections.offer-section.settings.heading.label"
+      "id": "btntext",
+      "default": "View All",
+      "label": "t:sections.featured-collections.settings.btntext.label"
     },
     {
-      "type": "color",
-      "id": "color",
-      "default": "#efedeb",
-      "label": "t:sections.offer-section.settings.color.label"
+      "type": "url",
+      "id": "btnlink",
+      "label": "t:sections.featured-collections.settings.btnlink.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.featured-collections.settings.main_collection_1.content"
+    },
+    {
+      "type": "collection",
+      "id": "m_collection",
+      "label": "t:sections.featured-collections.settings.m_collection.label"
+    },
+    {
+      "type": "select",
+      "id": "info_position",
+      "label": "t:sections.featured-collections.settings.info_position.label",
+      "default": "top-center",
+      "options": [
+        {
+          "label": "t:sections.featured-collections.settings.info_position.top-left.label",
+          "value": "top-left"
+        },
+        {
+          "label": "t:sections.featured-collections.settings.info_position.center-left.label",
+          "value": "center-left"
+        },
+        {
+          "label": "t:sections.featured-collections.settings.info_position.bottom-left.label",
+          "value": "bottom-left"
+        },
+        {
+          "label": "t:sections.featured-collections.settings.info_position.top-center.label",
+          "value": "top-center"
+        },
+        {
+          "label": "t:sections.featured-collections.settings.info_position.center.label",
+          "value": "center"
+        },
+        {
+          "label": "t:sections.featured-collections.settings.info_position.bottom-center.label",
+          "value": "bottom-center"
+        },
+        {
+          "label": "t:sections.featured-collections.settings.info_position.top-right.label",
+          "value": "top-right"
+        },
+        {
+          "label": "t:sections.featured-collections.settings.info_position.center-right.label",
+          "value": "center-right"
+        },
+        {
+          "label": "t:sections.featured-collections.settings.info_position.bottom-right.label",
+          "value": "bottom-right"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "mc_btntext",
+      "default": "Explore",
+      "label": "t:sections.featured-collections.settings.mc_btntext.label"
+    },     
+    {
+      "type": "checkbox",
+      "id": "custom",
+      "default": true,
+      "label": "t:sections.featured-collections.settings.custom.label"
+    },
+    {
+      "type": "text",
+      "id": "mc_heading",
+      "default":"Main Collection",
+      "label": "t:sections.featured-collections.settings.mc_heading.label"
+    },
+    {
+      "type": "textarea",
+      "id": "mc_desc",
+      "default":"Contrary to popular belief, Lorem Ipsum is not simply random.",
+      "label": "t:sections.featured-collections.settings.mc_desc.label"
+    },
+    {
+      "type": "url",
+      "id": "mc_btnlink",
+      "label": "t:sections.featured-collections.settings.mc_btnlink.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "mc_image",
+      "label": "t:sections.featured-collections.settings.mc_image.label"
     }
-],
+  ],
   "blocks": [
 	  {
-      "type":"offer",
-      "name":"t:sections.offer-section.blocks.offer.name",
-      "settings": [
+      "type":"collection",
+      "name":"t:sections.featured-collections.blocks.collection.name",
+      "settings": [        
         {
-          "type": "text",
-          "id": "heading",
-          "default": "Heading",
-          "label": "t:sections.offer-section.blocks.offer.settings.heading.label"
+          "type": "collection",
+          "id": "collection",
+          "label": "t:sections.featured-collections.blocks.collection.settings.collection.label"
         },
         {
           "type": "text",
-          "id": "offer_heading",
-          "default": "Flat Up To",
-          "label": "t:sections.offer-section.blocks.offer.settings.offer_heading.label"
-        },
-        {
-          "type": "text",
-          "id": "offer",
-          "default": "70%",
-          "label": "t:sections.offer-section.blocks.offer.settings.offer.label"
-        },
-        {
-          "type": "text",
-          "id": "offer_sub",
-          "default": "off",
-          "label": "t:sections.offer-section.blocks.offer.settings.offer_sub.label"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "t:sections.offer-section.blocks.offer.settings.image.label"
-        },
-        {
-          "type": "url",
-          "id": "link",
-          "label": "t:sections.offer-section.blocks.offer.settings.link.label"
-        },
-        {
-          "type": "color",
-          "id": "bgcolor",
-          "default": "#ffffff",
-          "label": "t:sections.offer-section.blocks.offer.settings.bgcolor.label"
+          "id": "btntext",
+          "default": "Explore",
+          "label": "t:sections.featured-collections.blocks.collection.settings.btntext.label"
         },
         {
           "type": "select",
           "id": "info_position",
-          "label": "t:sections.offer-section.blocks.offer.settings.info_position.label",
-          "default": "center-left",
+          "label": "t:sections.featured-collections.blocks.collection.settings.info_position.label",
+          "default": "left",
           "options": [
             {
-              "label": "t:sections.offer-section.blocks.offer.settings.top-left.label",
-              "value": "top-left"
+              "label": "t:sections.featured-collections.blocks.collection.settings.info_position.left.label",
+              "value": "left"
             },
             {
-              "label": "t:sections.offer-section.blocks.offer.settings.center-left.label",
-              "value": "center-left"
-            },
-            {
-              "label": "t:sections.offer-section.blocks.offer.settings.bottom-left.label",
-              "value": "bottom-left"
-            },
-            {
-              "label": "t:sections.offer-section.blocks.offer.settings.top-center.label",
-              "value": "top-center"
-            },
-            {
-              "label": "t:sections.offer-section.blocks.offer.settings.center.label",
-              "value": "center"
-            },
-            {
-              "label": "t:sections.offer-section.blocks.offer.settings.bottom-center.label",
-              "value": "bottom-center"
-            },
-            {
-              "label": "t:sections.offer-section.blocks.offer.settings.top-right.label",
-              "value": "top-right"
-            },
-            {
-              "label": "t:sections.offer-section.blocks.offer.settings.center-right.label",
-              "value": "center-right"
-            },
-            {
-              "label": "t:sections.offer-section.blocks.offer.settings.bottom-right.label",
-              "value": "bottom-right"
+              "label": "t:sections.featured-collections.blocks.collection.settings.info_position.right.label",
+              "value": "right"
             }
           ]
+        },     
+        {
+          "type": "checkbox",
+          "id": "custom",
+          "default": true,
+          "label": "t:sections.featured-collections.blocks.collection.settings.custom.label"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default":"Collection",
+          "label": "t:sections.featured-collections.blocks.collection.settings.heading.label"
+        },
+        {
+          "type": "textarea",
+          "id": "desc",
+          "default":"Contrary to popular belief, Lorem Ipsum is not simply random.",
+          "label": "t:sections.featured-collections.blocks.collection.settings.desc.label"
+        },
+        {
+          "type": "url",
+          "id": "btnlink",
+          "label": "t:sections.featured-collections.blocks.collection.settings.btnlink.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.featured-collections.blocks.collection.settings.image.label"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Featured Collections"
+      "name": "t:sections.featured-collections.presets.name"
     }
   ]
 }

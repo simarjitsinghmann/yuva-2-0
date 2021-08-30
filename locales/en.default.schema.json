@@ -115,6 +115,9 @@
         },
         "subheading": {
           "label": "Sub Heading"
+        },
+        "color": {
+          "label": "Background Color"
         }
       },
       "blocks": {
@@ -180,6 +183,114 @@
       },
       "presets":{
         "name":"Offer Section"
+      }
+    },
+    "featured-collections": {
+      "name": "Featured Collections",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "btntext": {
+          "label": "Button Text"
+        },
+        "btnlink": {
+          "label": "Button Link"
+        },
+        "main_collection_1": {
+          "content": "Main Collection"
+        },
+        "m_collection": {
+          "label": "Collection"
+        },
+        "info_position": {
+          "top-left": {
+            "label": "Top Left"
+          },
+          "center-left": {
+            "label": "Center Left"
+          },
+          "bottom-left": {
+            "label": "Bottom Left"
+          },
+          "top-center": {
+            "label": "Top Center"
+          },
+          "center": {
+            "label": "Center"
+          },
+          "bottom-center": {
+            "label": "Bottom Center"
+          },
+          "top-right": {
+            "label": "Top Right"
+          },
+          "center-right": {
+            "label": "Center Right"
+          },
+          "bottom-right": {
+            "label": "Bottom Right"
+          },
+          "label": "Info Position"
+        },
+        "custom": {
+          "label": "Custom Collection Info"
+        },
+        "mc_btntext": {
+          "label": "Button Text"
+        },
+        "mc_heading": {
+          "label": "Heading"
+        },
+        "mc_desc": {
+          "label": "Description"
+        },
+        "mc_btnlink": {
+          "label": "Button Link"
+        },
+        "mc_image": {
+          "label": "Image"
+        }
+      },
+      "blocks": {
+        "collection": {
+          "name": "Collection",
+          "settings": {
+            "collection": {
+              "label": "Collection"
+            },
+            "btntext": {
+              "label": "Button Text"
+            },
+            "info_position": {
+              "left": {
+                "label": "Left"
+              },
+              "right": {
+                "label": "Right"
+              },
+              "label": "Info Position"
+            },
+            "custom": {
+              "label": "Custom Collection Info"
+            },
+            "heading": {
+              "label": "Heading"
+            },
+            "desc": {
+              "label": "Description"
+            },
+            "btnlink": {
+              "label": "Button Link"
+            },
+            "image": {
+              "label": "Image"
+            }
+          }
+        }
+      },
+      "presets":{
+        "name":"Featured Collections"
       }
     }
   }
