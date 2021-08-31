@@ -80,7 +80,7 @@
                               {% assign feature_image = collection.featured_image | img_url:'master' %}
                               {% elsif block.settings.custom == true and block.settings.image == blank and collection.featured_image != blank %}
                               {% assign feature_image = collection.featured_image | img_url:'master' %}
-                                {% elsif block.settings.custom and block.settings.image != blank  %}
+                                {% elsif block.settings.image != blank  %}
                                 {% assign feature_image = block.settings.image | img_url:'master' %}
                                 {%else%}
                                 {% assign feature_image = 'collection2.svg' | asset_url %}
@@ -141,7 +141,7 @@
     </div>
 {% schema %}
 {
-  "name": "t:sections.featured-collections.name",
+  "name": "t:sections.collection-list.name",
   "tag": "section",
   "class":"spaced-section",
   "settings": [
@@ -149,68 +149,68 @@
       "type": "text",
       "id": "heading",
       "default": "Collection list",
-      "label": "t:sections.featured-collections.settings.heading.label"
+      "label": "t:sections.collection-list.settings.heading.label"
     },
     {
       "type": "text",
       "id": "btntext",
       "default": "View All",
-      "label": "t:sections.featured-collections.settings.btntext.label"
+      "label": "t:sections.collection-list.settings.btntext.label"
     },
     {
       "type": "url",
       "id": "btnlink",
-      "label": "t:sections.featured-collections.settings.btnlink.label"
+      "label": "t:sections.collection-list.settings.btnlink.label"
     },
     {
       "type": "header",
-      "content": "t:sections.featured-collections.settings.main_collection_1.content"
+      "content": "t:sections.collection-list.settings.main_collection_1.content"
     },
     {
       "type": "collection",
       "id": "m_collection",
-      "label": "t:sections.featured-collections.settings.m_collection.label"
+      "label": "t:sections.collection-list.settings.m_collection.label"
     },
     {
       "type": "select",
       "id": "info_position",
-      "label": "t:sections.featured-collections.settings.info_position.label",
+      "label": "t:sections.collection-list.settings.info_position.label",
       "default": "top-center",
       "options": [
         {
-          "label": "t:sections.featured-collections.settings.info_position.top-left.label",
+          "label": "t:sections.collection-list.settings.info_position.top-left.label",
           "value": "top-left"
         },
         {
-          "label": "t:sections.featured-collections.settings.info_position.center-left.label",
+          "label": "t:sections.collection-list.settings.info_position.center-left.label",
           "value": "center-left"
         },
         {
-          "label": "t:sections.featured-collections.settings.info_position.bottom-left.label",
+          "label": "t:sections.collection-list.settings.info_position.bottom-left.label",
           "value": "bottom-left"
         },
         {
-          "label": "t:sections.featured-collections.settings.info_position.top-center.label",
+          "label": "t:sections.collection-list.settings.info_position.top-center.label",
           "value": "top-center"
         },
         {
-          "label": "t:sections.featured-collections.settings.info_position.center.label",
+          "label": "t:sections.collection-list.settings.info_position.center.label",
           "value": "center"
         },
         {
-          "label": "t:sections.featured-collections.settings.info_position.bottom-center.label",
+          "label": "t:sections.collection-list.settings.info_position.bottom-center.label",
           "value": "bottom-center"
         },
         {
-          "label": "t:sections.featured-collections.settings.info_position.top-right.label",
+          "label": "t:sections.collection-list.settings.info_position.top-right.label",
           "value": "top-right"
         },
         {
-          "label": "t:sections.featured-collections.settings.info_position.center-right.label",
+          "label": "t:sections.collection-list.settings.info_position.center-right.label",
           "value": "center-right"
         },
         {
-          "label": "t:sections.featured-collections.settings.info_position.bottom-right.label",
+          "label": "t:sections.collection-list.settings.info_position.bottom-right.label",
           "value": "bottom-right"
         }
       ]
@@ -219,65 +219,65 @@
       "type": "text",
       "id": "mc_btntext",
       "default": "Explore",
-      "label": "t:sections.featured-collections.settings.mc_btntext.label"
+      "label": "t:sections.collection-list.settings.mc_btntext.label"
     },     
     {
       "type": "checkbox",
       "id": "custom",
       "default": true,
-      "label": "t:sections.featured-collections.settings.custom.label"
+      "label": "t:sections.collection-list.settings.custom.label"
     },
     {
       "type": "text",
       "id": "mc_heading",
       "default":"Main Collection",
-      "label": "t:sections.featured-collections.settings.mc_heading.label"
+      "label": "t:sections.collection-list.settings.mc_heading.label"
     },
     {
       "type": "textarea",
       "id": "mc_desc",
       "default":"Contrary to popular belief, Lorem Ipsum is not simply random.",
-      "label": "t:sections.featured-collections.settings.mc_desc.label"
+      "label": "t:sections.collection-list.settings.mc_desc.label"
     },
     {
       "type": "url",
       "id": "mc_btnlink",
-      "label": "t:sections.featured-collections.settings.mc_btnlink.label"
+      "label": "t:sections.collection-list.settings.mc_btnlink.label"
     },
     {
       "type": "image_picker",
       "id": "mc_image",
-      "label": "t:sections.featured-collections.settings.mc_image.label"
+      "label": "t:sections.collection-list.settings.mc_image.label"
     }
   ],
   "blocks": [
 	  {
       "type":"collection",
-      "name":"t:sections.featured-collections.blocks.collection.name",
+      "name":"t:sections.collection-list.blocks.collection.name",
       "settings": [        
         {
           "type": "collection",
           "id": "collection",
-          "label": "t:sections.featured-collections.blocks.collection.settings.collection.label"
+          "label": "t:sections.collection-list.blocks.collection.settings.collection.label"
         },
         {
           "type": "text",
           "id": "btntext",
           "default": "Explore",
-          "label": "t:sections.featured-collections.blocks.collection.settings.btntext.label"
+          "label": "t:sections.collection-list.blocks.collection.settings.btntext.label"
         },
         {
           "type": "select",
           "id": "info_position",
-          "label": "t:sections.featured-collections.blocks.collection.settings.info_position.label",
-          "default": "left",
+          "label": "t:sections.collection-list.blocks.collection.settings.info_position.label",
+          "default": "right",
           "options": [
             {
-              "label": "t:sections.featured-collections.blocks.collection.settings.info_position.left.label",
+              "label": "t:sections.collection-list.blocks.collection.settings.info_position.left.label",
               "value": "left"
             },
             {
-              "label": "t:sections.featured-collections.blocks.collection.settings.info_position.right.label",
+              "label": "t:sections.collection-list.blocks.collection.settings.info_position.right.label",
               "value": "right"
             }
           ]
@@ -286,36 +286,36 @@
           "type": "checkbox",
           "id": "custom",
           "default": true,
-          "label": "t:sections.featured-collections.blocks.collection.settings.custom.label"
+          "label": "t:sections.collection-list.blocks.collection.settings.custom.label"
         },
         {
           "type": "text",
           "id": "heading",
           "default":"Collection",
-          "label": "t:sections.featured-collections.blocks.collection.settings.heading.label"
+          "label": "t:sections.collection-list.blocks.collection.settings.heading.label"
         },
         {
           "type": "textarea",
           "id": "desc",
           "default":"Contrary to popular belief, Lorem Ipsum is not simply random.",
-          "label": "t:sections.featured-collections.blocks.collection.settings.desc.label"
+          "label": "t:sections.collection-list.blocks.collection.settings.desc.label"
         },
         {
           "type": "url",
           "id": "btnlink",
-          "label": "t:sections.featured-collections.blocks.collection.settings.btnlink.label"
+          "label": "t:sections.collection-list.blocks.collection.settings.btnlink.label"
         },
         {
           "type": "image_picker",
           "id": "image",
-          "label": "t:sections.featured-collections.blocks.collection.settings.image.label"
+          "label": "t:sections.collection-list.blocks.collection.settings.image.label"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "t:sections.featured-collections.presets.name"
+      "name": "t:sections.collection-list.presets.name"
     }
   ]
 }

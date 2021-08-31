@@ -13,7 +13,7 @@
           "label": "Announcement Message"
         },
         "announcement_bgcolor": {
-          "label": "Announcement Background Color"
+          "label": "Announcement Background"
         },
         "header_2": {
           "content": "Header"
@@ -185,8 +185,8 @@
         "name": "Offer Section"
       }
     },
-    "featured-collections": {
-      "name": "Featured Collections",
+    "collection-list": {
+      "name": "Collection List",
       "settings": {
         "heading": {
           "label": "Heading"
@@ -290,7 +290,30 @@
         }
       },
       "presets": {
-        "name": "Featured Collections"
+        "name": "Collection List"
+      }
+    },
+    "featured-collection": {
+      "name": "Featured Collection",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "subheading": {
+          "label": "Sub Heading"
+        },
+        "collection": {
+          "label": "Collection"
+        },
+        "col_size": {
+          "label": "Products per Row"
+        },
+        "row_size": {
+          "label": "Rows"
+        }
+      },
+      "presets": {
+        "name": "Featured Collection"
       }
     }
   }

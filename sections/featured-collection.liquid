@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="row">
+        <div class="best__for__you shopify__top__section">
+            <small>All Products</small>
+            <h4>See the latest!</h4>
+            {% if section.settings.collection != blank %}
+            {% assign collection = collections[section.settings.collection]%}
+            <div class="grid grid--4-col-desktop grid--3-col-tablet">
+                <div class="grid__item full__item products-grid ">
+                    <div class="row column-{{section.settings.col_size}}">
+                        {% assign limit = section.settings.col_size | times : section.settings.row_size%}
+                        {% for product in collection.products limit:limit%}
+                        {% include 'product-grid'%}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endif%}
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+  "name": "t:sections.featured-collection.name",
+  "tag": "section",
+  "class":"latest__sale",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "All Products",
+      "label": "t:sections.featured-collection.settings.heading.label"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "default": "See the latest!",
+      "label": "t:sections.featured-collection.settings.subheading.label"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:sections.featured-collection.settings.collection.label"
+    },
+    {
+        "type": "range",
+        "id": "col_size",
+        "min": 2,
+        "max": 5,
+        "step": 1,
+        "label": "t:sections.featured-collection.settings.col_size.label",
+        "default": 5
+    },
+    {
+        "type": "range",
+        "id": "row_size",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "label": "t:sections.featured-collection.settings.row_size.label",
+        "default": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.featured-collection.presets.name"
+    }
+  ]
+}
+{% endschema %}
