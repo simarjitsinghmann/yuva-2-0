@@ -1,0 +1,156 @@
+<div class="container">
+    <div class="row">
+        <div class="shopify__top__section">
+            <small>{{section.settings.subheading}}</small>
+            <h4>{{section.settings.heading}}</h4>  
+            {% if section.settings.show_stars %}   
+            <div class="star-rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>
+            {% endif %} 
+        </div>
+        {% if section.blocks.size > 0 %}
+        <div class="testimonial-slider">
+            <div id="testimonials-{{section-id}}" class="testimonial-slide owl-carousel owl-theme">
+                {% for block in section.blocks %}
+                <div class="item">
+                    <div class="slider-content">
+                        {% if block.settings.image != blank %}
+                            {% assign image_url = block.settings.image | img_url:'master' %}
+                            {% else %}
+                            {% assign image_url = "https://yova.shinedezign.pro/assets/images/client-image.png" %}
+                            {% endif %}
+
+                        <img src="https://yova.shinedezign.pro/assets/images/client-image.png" loading="lazy" alt="{{section.settings.author}}">
+                        <div class="slider-caption">
+                            <p class="testimonial-title">{{block.settings.message}}</p>
+                            <h5 class="author">{{block.settings.author}}</h5>
+                            <span>{{block.settings.from}}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %} 
+    </div>
+</div>
+<style>
+    #shopify-section-{{section.id}}{
+      background-color:{{section.settings.bgcolor}};
+    }
+  </style>
+  <script>
+    jQuery(document).ready(function($) {
+        $('#testimonials-{{section-id}}').owlCarousel({
+            center: false,
+            items: 3,
+            loop: true,
+            margin: 30,
+            dots:false,
+            slideSpeed: 1200,
+            paginationSpeed: 500,
+            responsiveClass:true,
+            nav:true,
+            navText: ["<img src='https://yova.shinedezign.pro/assets/images/carousel-left-arrow.svg'>","<img src='https://yova.shinedezign.pro/assets/images/carousel-right-arrow.svg'>"],
+            responsive: {
+                740: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                1200: {
+                    items: 3
+                }
+            }
+        });
+    });
+  </script> 
+{% schema %}
+{
+  "name": "t:sections.testimonials.name",
+  "tag": "section",
+  "class":"testimonial",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "default": "HAPPY CLIENT’S",
+      "label": "t:sections.testimonials.settings.subheading.label"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "What Our Customers Say",
+      "label": "t:sections.testimonials.settings.heading.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_stars",
+      "default": true,
+      "label": "t:sections.testimonials.settings.show_stars.label"
+    },
+    {
+      "type": "color",
+      "id": "bgcolor",
+      "default": "#f6f4f2",
+      "label": "t:sections.testimonials.settings.bgcolor.label"
+    }
+  ],
+  "blocks": [
+	  {
+      "type":"quote",
+      "name":"t:sections.testimonials.blocks.quote.name",
+      "settings": [        
+        {
+          "type": "textarea",
+          "id": "message",
+          "default": "We were dolor sit amet, consectetur theme adipiscing elit, sed do eiusmod tempor and incididunt ut labore.",
+          "label": "t:sections.testimonials.blocks.quote.settings.message.label"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "default": "Anderson smith",
+          "label": "t:sections.testimonials.blocks.quote.settings.author.label"
+        },
+        {
+          "type": "text",
+          "id": "from",
+          "default":"Shopify",
+          "label": "t:sections.testimonials.blocks.quote.settings.from.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.testimonials.blocks.quote.settings.image.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.testimonials.presets.name",
+      "blocks": [
+        {
+          "type": "quote"
+        },
+        {
+          "type": "quote"
+        },
+        {
+          "type": "quote"
+        },
+        {
+          "type": "quote"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

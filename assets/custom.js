@@ -12,3 +12,10 @@ $(document).on("click", function(event){
     $(".currency-menu").slideUp("fast");
   }          				
 });
+///search-top//
+$('.search-form').click(function(){
+	$('body').toggleClass('addsearch');
+});
+$('.HeaderProClose').click(function(){
+	$("body").removeClass("addsearch");
+});

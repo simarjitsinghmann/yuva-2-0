@@ -1,299 +1,116 @@
-<footer class="footer color-{{ section.settings.color_scheme }}">
-  {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social -%}
-    <div class="footer__content-top page-width">
-      {%- if section.blocks.size > 0 -%}
-        {%- liquid
-          if section.blocks.size == 9
-            assign footer_grid_class = 'grid--3-col-tablet'
-          elsif section.blocks.size > 6
-            assign footer_grid_class = 'grid--4-col-desktop'
-          elsif section.blocks.size > 4
-            assign footer_grid_class = 'grid--3-col-tablet'
-          endif
-        -%}
-        <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
-          {%- for block in section.blocks -%}
-            <div class="footer-block grid__item{% if block.type == 'link_list' and block.settings.heading != blank %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
-              {%- if block.settings.heading != blank -%}
-                <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
-              {%- endif -%}
-
-              {%- case block.type -%}
-                {%- when 'text' -%}
-                  <div class="footer-block__details-content rte">
-                    {{ block.settings.subtext }}
-                  </div>
-                {%- when 'link_list' -%}
-                  {%- if block.settings.menu != blank and block.settings.heading != blank -%}
-                    <ul class="footer-block__details-content list-unstyled">
-                      {%- for link in block.settings.menu.links -%}
-                        <li>
-                          <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
-                            {{ link.title }}
-                          </a>
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  {%- endif -%}
-                {%- when 'image' -%}
-                  <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
-                    {%- if block.settings.image != blank -%}
-                      {%- assign image_size = block.settings.image_width | append: 'x' -%}
-                      <img
-                        srcset= "{{ block.settings.image | img_url: image_size }}, {{ block.settings.image | img_url: image_size, scale: 2 }} 2x"
-                        src="{{ block.settings.image | img_url: '400x' }}"
-                        alt="{{ block.settings.image.alt | escape }}"
-                        loading="lazy"
-                        width="{{ block.settings.image.width }}"
-                        height="{{ block.settings.image.height }}"
-                        style="max-width: min(100%, {{ block.settings.image_width }}px);"
-                      >
-                    {%- else -%}
-                      {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                    {%- endif -%}
-                  </div>
-                {%- endcase -%}
-            </div>
-          {%- endfor -%}
-        </div>
-      {%- endif -%}
-
-      <div class="footer-block--newsletter">
-        {%- if section.settings.newsletter_enable -%}
-          <div class="footer-block__newsletter">
-            {%- if section.settings.newsletter_heading != blank -%}
-              <h2 class="footer-block__heading">{{ section.settings.newsletter_heading | escape }}</h2>
-            {%- endif -%}
-            {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
-              <input type="hidden" name="contact[tags]" value="newsletter">
-              <div class="newsletter-form__field-wrapper">
-                <div class="field">
-                  <input
-                    id="NewsletterForm--{{ section.id }}"
-                    type="email"
-                    name="contact[email]"
-                    class="field__input"
-                    value="{{ form.email }}"
-                    aria-required="true"
-                    autocorrect="off"
-                    autocapitalize="off"
-                    autocomplete="email"
-                    {% if form.errors %}
-                      autofocus
-                      aria-invalid="true"
-                      aria-describedby="ContactFooter-error"
-                    {% elsif form.posted_successfully? %}
-                      aria-describedby="ContactFooter-success"
-                    {% endif %}
-                    placeholder="{{ 'newsletter.label' | t }}"
-                    required
-                  >
-                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                    {{ 'newsletter.label' | t }}
-                  </label>
-                  <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
-                    {% render 'icon-arrow' %}
-                  </button>
-                </div>
-                {%- if form.errors -%}
-                  <small class="newsletter-form__message form__message" id="ContactFooter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
-                {%- endif -%}
-              </div>
-              {%- if form.posted_successfully? -%}
-                <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
-              {%- endif -%}
-            {%- endform -%}
-          </div>
-        {%- endif -%}
-
-        {%- if section.settings.show_social -%}
-          <ul class="footer__list-social list-unstyled list-social" role="list">
-            {%- if settings.social_twitter_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_twitter_link }}" class="link link--text list-social__link" aria-describedby="a11y-external-message">
-                  {%- render 'icon-twitter' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if settings.social_facebook_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_facebook_link }}" class="link link--text list-social__link" aria-describedby="a11y-external-message">
-                  {%- render 'icon-facebook' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if settings.social_pinterest_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_pinterest_link }}" class="link link--text list-social__link" aria-describedby="a11y-external-message">
-                  {%- render 'icon-pinterest' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if settings.social_instagram_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_instagram_link }}" class="link link--text list-social__link" aria-describedby="a11y-external-message">
-                  {%- render 'icon-instagram' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if settings.social_tiktok_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_tiktok_link }}" class="link link--text list-social__link" aria-describedby="a11y-external-message">
-                  {%- render 'icon-tiktok' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if settings.social_tumblr_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_tumblr_link }}" class="link link--text list-social__link" aria-describedby="a11y-external-message">
-                  {%- render 'icon-tumblr' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if settings.social_snapchat_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_snapchat_link }}" class="link link--text list-social__link" aria-describedby="a11y-external-message">
-                  {%- render 'icon-snapchat' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if settings.social_youtube_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_youtube_link }}" class="link link--text list-social__link" aria-describedby="a11y-external-message">
-                  {%- render 'icon-youtube' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-            {%- if settings.social_vimeo_link != blank -%}
-              <li class="list-social__item">
-                <a href="{{ settings.social_vimeo_link }}" class="link link--text list-social__link" aria-describedby="a11y-external-message">
-                  {%- render 'icon-vimeo' -%}
-                  <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-          </ul>
-        {%- endif -%}
-      </div>
-    </div>
-  {%- endif -%}
-
-  <div class="footer__content-bottom">
-    <div class="footer__content-bottom-wrapper page-width">
-      <div class="footer__column footer__localization">
-        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
-          <noscript>
-            {%- form 'localization', id: 'FooterCountryFormNoScript', class: 'localization-form' -%}
-              <div class="localization-form__select">
-                <h2 class="visually-hidden" id="FooterCountryLabelNoScript">{{ 'localization.country_label' | t }}</h2>
-                <select class="localization-selector link" name="country_code" aria-labelledby="FooterCountryLabelNoScript">
-                  {%- for country in localization.available_countries -%}
-                    <option value="{{ country.iso_code }}" {%- if country.iso_code == localization.country.iso_code %} selected{% endif %}>
-                      {{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})
-                    </option>
-                  {%- endfor -%}
-                </select>
-                {% render 'icon-caret' %}
-              </div>
-              <button class="button button--tertiary">{{ 'localization.update_country' | t }}</button>
-            {%- endform -%}
-          </noscript>
-          <localization-form>
-            {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
-              <div class="no-js-hidden">
-                <h2 class="caption-large" id="FooterCountryLabel">{{ 'localization.country_label' | t }}</h2>
-                <div class="disclosure">
-                  <button type="button" class="disclosure__button localization-form__select localization-selector link link--text caption-large" aria-expanded="false" aria-controls="FooterCountryList" aria-describedby="FooterCountryLabel">
-                    {{ localization.country.name }} ({{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }})
-                    {% render 'icon-caret' %}
-                  </button>
-                  <ul id="FooterCountryList" role="list" class="disclosure__list list-unstyled" hidden>
-                    {%- for country in localization.available_countries -%}
-                      <li class="disclosure__item" tabindex="-1">
-                        <a class="link link--text disclosure__link caption-large{% if country.iso_code == localization.country.iso_code %} disclosure__link--active{% endif %} focus-inset" href="#"{% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
-                          {{ country.name }} <span class="localization-form__currency">({{ country.currency.iso_code }} {{ country.currency.symbol }})</span>
-                        </a>
-                      </li>
-                    {%- endfor -%}
-                  </ul>
-                </div>
-                <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
-              </div>
-            {%- endform -%}
-          </localization-form>
-        {%- endif -%}
-
-        {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-          <noscript>
-            {%- form 'localization', id: 'FooterLanguageFormNoScript', class: 'localization-form' -%}
-              <div class="localization-form__select">
-                <h2 class="visually-hidden" id="FooterLanguageLabelNoScript">{{ 'localization.language_label' | t }}</h2>
-                <select class="localization-selector link" name="locale_code" aria-labelledby="FooterLanguageLabelNoScript">
-                  {%- for language in localization.available_languages -%}
-                    <option value="{{ language.iso_code }}" lang="{{ language.iso_code }}" {%- if language.iso_code == localization.language.iso_code %} selected{% endif %}>
-                      {{ language.endonym_name | capitalize }}
-                    </option>
-                  {%- endfor -%}
-                </select>
-                {% render 'icon-caret' %}
-              </div>
-              <button class="button button--tertiary">{{ 'localization.update_language' | t }}</button>
-            {%- endform -%}
-          </noscript>
-
-          <localization-form>
-            {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
-              <div class="no-js-hidden">
-                <h2 class="caption-large" id="FooterLanguageLabel">{{ 'localization.language_label' | t }}</h2>
-                <div class="disclosure">
-                  <button type="button" class="disclosure__button localization-form__select localization-selector link link--text caption-large" aria-expanded="false" aria-controls="FooterLanguageList" aria-describedby="FooterLanguageLabel">
-                    {{ localization.language.endonym_name | capitalize }}
-                    {% render 'icon-caret' %}
-                  </button>
-                  <ul id="FooterLanguageList" role="list" class="disclosure__list list-unstyled" hidden>
-                    {%- for language in localization.available_languages -%}
-                      <li class="disclosure__item" tabindex="-1">
-                        <a class="link link--text disclosure__link caption-large{% if language.iso_code == localization.language.iso_code %} disclosure__link--active{% endif %} focus-inset" href="#" hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}"{% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %} data-value="{{ language.iso_code }}">
-                          {{ language.endonym_name | capitalize }}
-                        </a>
-                      </li>
-                    {%- endfor -%}
-                  </ul>
-                </div>
-                <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">
-              </div>
-            {%- endform -%}
-          </localization-form>
-        {%- endif -%}
-      </div>
-      <div class="footer__column footer__column--info">
-        {%- if section.settings.payment_enable -%}
-          <div class="footer__payment">
-            <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
-            <ul class="list list-payment" role="list">
-              {%- for type in shop.enabled_payment_types -%}
-                <li class="list-payment__item">
-                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                </li>
-              {%- endfor -%}
-            </ul>
-          </div>
-        {%- endif -%}
-        <div class="footer__copyright caption">
-          <small class="copyright__content">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</small>
-          <small class="copyright__content">{{ powered_by_link }}</small>
-        </div>
-      </div>
-    </div>
-  </div>
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="footer__content-top page-width">
+				<div class="footer__column footer__column--info d-flex justify-content-between">
+					<div class="col">
+						<h6>FREESHIPPING WORLD WIDE</h6>
+						<p>100% Original guarantee<br> for all products at yuva.com</p>
+					</div>
+					<div class="col">
+						<h6>30 DAYS MONEY BACK</h6>
+						<p>Return within 30days of receiving your orderguarantee </p>
+					</div>
+					<div class="col">
+						<h6>SUPPORT 24/7</h6>
+						<p>Get free delivery for every order above Rs. 1199</p>
+					</div>
+					<div class="col">
+						<h6>100% SECURE CHECKOUT</h6>
+						<p>100% Original guarantee<br> for all products at yuva.com</p>
+					</div>
+				
+				</div>
+			
+			</div>
+			<div class="footer__content-middle page-width">
+			<div class="footer-block d-flex">
+				<div class="grid__item full__item  col-sm-4 col-md-4 col-lg-3">
+					<h5>Company</h5>
+					<ul>
+						<li><a href="javascript:void(0)">Home</a></li>
+						<li><a href="javascript:void(0)">Product</a></li>
+						<li><a href="javascript:void(0)">Collection</a></li>
+						<li><a href="javascript:void(0)">Catalog</a></li>
+						<li><a href="javascript:void(0)">About </a></li>
+					</ul>
+				</div>
+				<div class="grid__item full__item  col-sm-4 col-md-4 col-lg-3">
+					<h5>Useful links</h5>
+					<ul>
+						<li><a href="javascript:void(0)">My Account</a></li>
+						<li><a href="javascript:void(0)">About Us</a></li>
+						<li><a href="javascript:void(0)">Contact Us</a></li>
+						<li><a href="javascript:void(0)">Support Policy</a></li>
+						<li><a href="javascript:void(0)">FAQs</a></li>
+					</ul>
+				</div>
+				<div class="grid__item full__item  col-sm-4 col-md-4 col-lg-3">
+					<h5>Contact info</h5>
+					<ul>
+						<li><a href="javascript:void(0)">My Account</a></li>
+						<li><a href="javascript:void(0)">About Us</a></li>
+						<li><a href="javascript:void(0)">Contact Us</a></li>
+						<li><a href="javascript:void(0)">Support Policy</a></li>
+						<li><a href="javascript:void(0)">FAQs</a></li>
+					</ul>
+				</div>
+				<div class="grid__item full__item  col-sm-12 col-md-12 col-lg-3">
+					<h5>Newsletter</h5>
+					<p>Receive our weekly newsletter.<br>
+					   For dietary content, fashion insider and the best offers.</p>
+					<form id="ContactFooter" accept-charset="UTF-8" class="footer__newsletter newsletter-form">
+					   <div class="newsletter-form__field-wrapper">
+							<div class="field">
+								<input id="NewsletterForm--footer" type="email" name="contact[email]" class="field__input" value="" aria-required="true" autocorrect="off" autocapitalize="none" autocomplete="email" placeholder="Your email">
+								<label class="field__label" for="NewsletterForm--footer">
+									Email address
+								</label>
+							</div>
+						</div>
+						<button type="submit" class="button button--secondary newsletter-form__button" name="commit" id="Subscribe">
+							Join
+						</button>
+					</form>
+					<div class="social-links">
+						<ul>
+							<li class="fb"><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+							<li class="twitter"><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+							<li class="linkedin"><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a></li>
+							<li class="insta"><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="footer__content-bottom">
+				<div class="footer__content-bottom-wrapper page-width">
+				  <div class="footer__column footer__column--info d-flex justify-content-between align-items-center">
+						<div class="footer__copyright">
+							<small class="copyright__content">© 2019. All Rights Reserved</small>
+						</div>
+						<div class="footer__payment">
+							<span class="visually-hidden">Payment methods</span>
+							<ul class="list list-payment" role="list">
+								<li><a href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="24" viewBox="0 0 38 24">
+  <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="38" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAYCAYAAACWTY9zAAADS0lEQVRIie2XW2gUVxjHfzPZnU12sya7mzWJ5mKyiSiKdqO2UdFWQaHeQOO1SCHVBpUYRNCCILaIjRdUGttCH0ytYEm9IPigolEwLaIiXsCH5qLmJjVu3MRukk0mmd0yZ5OQbaIkT9mH/OHAzHfmO+c3/zPnDJ8E6M0CKIy+goAKdBgEVP7VDViTjoJkH120oBff6738uqxMFk5FBJQuyR5iQZH7AxEjwSLJkQMUrjGwkSpiwQzv6zArMo3fTcNmjnpv8qJTNayeEUfRp85hTVZyx0N5lY9LX2VgjJL646X3vGwtqycYHAbY5tk2WvwaOccqxf2twiwyHQozj1Tyb6fGvqWJHPg8iVmpZjaeqeV+XQdrP4pn6RQrBWUNYWPNmBAjcq4UZLJjQQKFFxt51ODnytcZIq/gj4YwqA+C7Vzo5McKj3CuXQ2I6xOrJ1Lfoorj+fsbTdTsn8rzZpXzT1qxKDLN7T10qAFqvSrnvkwXMV2z08zMPVFF3umXTE2K5tzDFm4XZlHtUdn0Wx1aIDho/iHBFmXHMsmucPqel0MrkvF1ahy59YaDy5NF/9ZcBz/c8XDhSSt3X3aw0BXLO78WNsbh8iaiJAlrtExFUTbXt7uYc7xKLOX1bS6sJpklP1fj7w4MacyQYPo3c+aBV9ivO6UFEBOffeAV/ak2I+vc8Ry60UR9SzdnN6fx7bXXYWNsn58g3FZ6v6XySp+AMBlk/nzRxp7F43E5FB41+ocHpju1Yto4phf/zarpcayZGSfiuv2nKprpM333Z07hQFaCSTz3f7C/XrSjGEJQWhB2XX5FSV4KqfFG8kprcVoMwsV5J6upae4aBKZvuRg+2fZNX2DfkkQyE0x42nrEdatfwxodxXq3DV+XhjslRiz13AyL2Fn5uXYmjzfR1hUgN91CttOEySBhMclEG0Ptja+HLbkONubE47AY+DjdzLN/OlngimV9jo0Lj1tFfr/u/3JUfyU7RY/f9sVKv0jD3ntE6O5s+b2eGKPMT+tShrR8JCq+2cS7zgDFK5ORBuQ9feXnwEDHS9yOQWARoRK3Y+yXNFKNgY1UcmjzBb2RgxRikUVVohcAEQHXW4yA2le+mXvLt4HHy2hJBdr/A0rzI7RARsUgAAAAAElFTkSuQmCC"></image>
+</svg>
+</a></li>
+								<li><a href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="24" viewBox="0 0 38 24">
+  <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="38" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAYCAYAAACWTY9zAAACL0lEQVRIic2XsWsTURzHv++upldzYpoKhZJgxVLs6iIUCoJ2a4dC0blVl+IQUBz8A9wKHaRTqGtdXOqmFVwEF0EQOtTCkbR1MdXixaaHd0++R5MOd+/uwkFyXwjc5fuSfPi93/v+LgIAX3kAOfRfEoAD4C9JTMuyHnie15B9FhnIwkKxWkXP83aFEMUMVAxSyiNN0yY03mQFCucsQssAS6gGulns1Q9xslaFs/UOrlX339PHy8jNz2Ko8hAHxVGs7djY2m/Bsl3fHzd1zJcMVKZMlPN64t/ye0xK2Yhb2Hr1Gs2V55Ct01C/uvgUmzNz+FoYCvUNXWD9VgFLExfjoYQYSVQxQtnLT5R+daGCn9du4+6+DVcKfBs2gt/hSix/+uVfJ4GL7TFuHyul0m7pBn5MznbcO4c2Ljuucv3K59+oN9V+YjD2lGr7qM25x7jgyc79gJS42ThRrmfl2IepwdjoUTotXA241/84kZ/h4UgN1j59KpmuCDhRW0m1T2wqsH4pFow5FSVblwH3OBedV8y2OMWCMTyjZBzXAu7epegHFQZuajAmujAGlf69ty/xT5z3Ga+/jISHLM6CllMgNZhWHkN+/YXSn6zvYPT7h8799pgZuZVM/ySjKVHzG0v3YW6sKiv36M0qrlgf8b5khqY+ziq1MT2cKPXRzaxED4c4Z2VXYL0SwTKdY3zQP8oAi682C8GcWq32LAtwZCALmdp/33hUmIrBwdd7OQCa/wGRs1n5+LwqfAAAAABJRU5ErkJggg=="></image>
+</svg></a></li>
+								<li><a href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="24" viewBox="0 0 38 24">
+  <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="38" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAYCAYAAACWTY9zAAACE0lEQVRIic2XPUvDUBSG35vYD5MO2haUYsFBQfAXiC4OBQedO/sxOQmCQ3+Am+DkJDo7Ozi4OAj+AkFwKa0Wl1aHph+JN1dOtLWS3iQlYPNCh9xzOX3uOeeekzAA9NMBxDF+CQAmgBaRpMrl8q5t23UxZhEDsVCgKFpp27afGWPpCEQMQoiGoigLCj1EBQq/LEyJAMtQTYyy2a7W0D49h3l9C16uOmvqfB7xrQImD/ZAZ+WP5+DVW4jmt52l8lDzBajLe2B6LvB/OTUmhKj7bexcXsHYL0F0ukPt2mYXsVWAzySGO1ATiK0cQ10s+kMxlgkUMYJq7hxK7dpGG1qmATxR9U6Dz2ruTbwL6/7bRxA43xqj9FGkZFJzHFruvW+NPX+AdT6l+62HEoRRCw9GNSVLH0lfbwJcDJxEYOLFkDvkXacOQ4NRoXsppnXcTuvutT9sVW+fgcB6t08mZrrT5pVKUu/GhgIbl3zBqE95nj7uvtgi6X3Zqbf5yReMmqeXrFbSZbUz7rVBUcMNDeZ09KSkaQIw7lKAwgY8MnzO6R5UCWcKhAZT8jnoZ8dSO39V0X6b6j9bi1OeqaTuH2Q0BSr+5HYRqYsTaeSMGw2tehbWUnZ418fPSFo7CdT1McqsxD8OcZqVI4H9lwgs0n2MXvQbEWBx1GMhMLNSqRxFAY4YiIWYep9vdJXo822gIY1NJgDjC2dcUV8k7bWoAAAAAElFTkSuQmCC"></image>
+</svg></a></li>
+								<li><a href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="24" viewBox="0 0 38 24">
+  <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="38" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAYCAYAAACWTY9zAAAC80lEQVRIie2XbUhTURjH/3doTJfZ5iyd+TpNLdOtTVKYM4uMMhIFsQIVqagvQRH4JYk+lfglK4lArEwsSftkhRYaZB8C8x3FF6qxcpriwNnUprs3zrNcBDYzIRf4h8t9zvOcc8/vPM+5nHs5AOySANiAtZcAwAZghpFsNBgMJ3menxTWWIyBsbBEsWzJeJ4f5jhO5gYZgyAIZpFIFCliDXeBwk8WTuQGLEtqHWyl+r/ASm+9wcGcB5BvL6Gr+GqzM9bS+pF8cbpy9PZ/ITsqsQyCANTU90CpLXOOi066CePIFI2bm1tAhOY6+S8UN/4dWNE5HZrq8lF3N5faDU2DzlhVbSfd83NV6OobI1uToMDA8ATOX3qOKcsccjJ3ovCEGsowKYIVvtSnvqEPlulvZHd0m5YF83AVTNOFY5tiEz6bLJg0z8A2b0djyzA8PUQoPK7GtRut1E+rDqLssayx2NmCRCTEBfzyrIrqdoQE+ZL/2cshWGdskHj//rBZdo/p9oQ6VtkziurH3bDbBRw9FAN/uQSdvaMU2x2vwL6UCARu9cH8Ao/0nCpcvNyI2dl5ir999wl9A+M4lr0L+uQw8LyArt4xl/MuC6ZPdoC1d5tQVdtF9uk8Le2Z/sFxaqvjAyH386byZx2OJXjW90rpK2e2mNLTIhETJXc+z5VclpIyluQAu3O/DV+tNqjiAqBVKdDWOUIAYSGbIfUVw2azQxHgg4qyTMikXqis6UD/0ARMY9N4+sKxR7PyH7Ejx1mBVYGxyZRhMrw3mKl9Kk9D98UyJmmCsWDn6S3VqBTwEnui+fUHih1IVeLeww5aACv9FrmE/KysbGGrAqMJ9iox8cRKmcjO2EE+Vgqx2AMpyaEYGbUgNtqfssMUHipFdkYszhRoEZ96m3zlJRnYr48gW3+k0plNtvClRF8XgiBM/gngvxLHcX7rR9JKtQ62UokcX7OC2V2AFlkYmM1oNBa5AxxjYCyMafH3zfvH7xuz11o2ANbv7j2jN2gY+IoAAAAASUVORK5CYII="></image>
+</svg></a></li>
+							</ul>
+					  </div></div>
+				</div>
+		  </div>
+		</div>
+	</div>
 </footer>
 
 {% schema %}

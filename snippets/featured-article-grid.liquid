@@ -1,0 +1,17 @@
+<li class="grid__item">
+    <div class="post-wrapper">
+        <div class="post-information">
+            {% if article.image %}
+            <div class="post-information-image">
+                <a href="{{article.url}}" class="animate_hvrbr"><img src="{{article.image | img_url:'master'}}" alt=""></a>
+            </div>
+            {% endif %}
+            <div class="post-information__wrapper">
+                <div class="post-date">
+                    <h4 class="custom-title">{{article.published_at | date: "%d" }}<span>{{article.published_at | date: " %b %Y" }}</span></h4>
+                </div>
+                <div class="post-name"><p><a href="{{article.url}}">{{article.title}}</a></p></div>
+            </div>
+        </div>
+    </div>
+</li>

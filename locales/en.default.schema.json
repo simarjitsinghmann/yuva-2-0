@@ -310,10 +310,84 @@
         },
         "row_size": {
           "label": "Rows"
+        },
+        "color": {
+          "label": "Background Color"
+        },
+        "fontcolor": {
+          "label": "Font Color"
         }
       },
       "presets": {
         "name": "Featured Collection"
+      }
+    },
+    "featured-blog": {
+      "name": "Featured Blog",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "subheading": {
+          "label": "Sub Heading"
+        },
+        "blog": {
+          "label": "Blog"
+        },
+        "custom": {
+          "label": "Show Custom Articles"
+        },
+        "article1": {
+          "label": "Custom Article 1"
+        },
+        "article2": {
+          "label": "Custom Article 2"
+        },
+        "article3": {
+          "label": "Custom Article 3"
+        }
+      },
+      "presets": {
+        "name": "Featured Blog"
+      }
+    },
+    "testimonials": {
+      "name": "Testimonials",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "subheading": {
+          "label": "Subheading"
+        },
+        "show_stars": {
+          "label": "Show Review Stars"
+        },
+        "bgcolor": {
+          "label": "Background"
+        }
+      },
+      "blocks": {
+        "quote": {
+          "name": "Quote",
+          "settings": {
+            "message": {
+              "label": "Message"
+            },
+            "author": {
+              "label": "Author"
+            },
+            "from": {
+              "label": "Location\/Company"
+            },
+            "image": {
+              "label": "Author Image"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Testimonials"
       }
     }
   }
