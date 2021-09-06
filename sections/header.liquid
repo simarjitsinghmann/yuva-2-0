@@ -1,13 +1,11 @@
 {{ 'header.css' | asset_url | stylesheet_tag }}
 <header>
-    {% if section.settings.show_bar %}
+    {% if section.settings.show_bar and section.settings.announcement != blank %}
     <div id="shopify-section-announcement-bar"> 
         <div class="announcement-bar" style="background-color:{{section.settings.announcement_bgcolor}};border-color:{{section.settings.announcement_bgcolor}}">
-            {% if section.settings.announcement != blank %}
             <div class="announcement-bar__message h5">
                 {{section.settings.announcement}}
             </div>
-        {% endif %}
         </div>
     </div>
     {% endif %}
@@ -119,6 +117,7 @@
                                     </span>
                                 </a>
                             </div>
+                            {% if shop.customer_accounts_enabled %}                      
                             <div class="customer-links">
                                 <a class="acc-links text-hover acc-sign-in" id="customer_login_link" href="javascript:void(0)">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
@@ -133,6 +132,7 @@
                                     </svg>
                                 </a>
                             </div>
+                            {% endif %}
                             {% if section.settings.show_currency %}
                             <div class="select-language">
                                 <div class="currency-block">
@@ -166,49 +166,6 @@
         </div>
     </{% if section.settings.enable_sticky_header %}header-sticky{% else %}div{% endif %}>
 </header>
-{% javascript %}
-  class Sticky extends HTMLElement {
-    constructor() {
-      super();
-    }
-
-    connectedCallback() {
-      this.header = document.getElementById('header');
-      this.headerParent = document.getElementById('shopify-section-header');
-      this.headerBounds = {};
-      this.scrollTop = 0;
-      this.preventReveal = false;
-
-      this.onScrollHandler = this.onScrollPage.bind(this);
-      window.addEventListener('scroll', this.onScrollHandler, false);
-	}
-
- 
-
-    onScrollPage() {
-      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (currentScrollTop > 150) {
-          requestAnimationFrame(this.makeSticky.bind(this));
-        } else {
-          requestAnimationFrame(this.unSticky.bind(this));
-        }
-      this.scrollTop = currentScrollTop;
-    }
-
-    unSticky() {
-		this.header.classList.remove('sticky-header');
-		this.headerParent.classList.remove('sticky-header');
-    }
-
-    makeSticky() {
-		this.header.classList.add('sticky-header');
-		this.headerParent.classList.add('sticky-header');
-    }
-  }
-
-  customElements.define('header-sticky', Sticky);
-  
-{% endjavascript %}
 
 <script type="application/ld+json">
   {

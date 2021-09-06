@@ -39,24 +39,16 @@
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
     %}
 
-
-    {%- unless settings.type_body_font.system? -%}
-      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
-    {%- endunless -%}
-    {%- unless settings.type_header_font.system? -%}
-      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
-    {%- endunless -%}
-
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
     <script src="{{'jquery.min.js' | asset_url}}" ></script> 
     <script src="{{'owl.carousel.js' | asset_url}}" defer="defer"></script> 
-    <script src="{{'custom.js' | asset_url}}" defer="defer"></script> 
+    <script src="{{'common.js' | asset_url}}" defer="defer"></script> 
   </head>
 
   <body>
     <div class="wrapper">
-      {% section 'search-drawer' %}
     {% section 'header' %}
+    
       
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
@@ -64,32 +56,16 @@
 
     {% section 'footer' %}
 
+    {% include 'search-drawer' %}
+    {% render 'similar-products'%}
+    {% if shop.customer_accounts_enabled %}  
+    {% include 'account-drawer' %}
+  {% endif %}
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
     </ul>
 
-    <script>
-      window.routes = {
-        cart_add_url: '{{ routes.cart_add_url }}',
-        cart_change_url: '{{ routes.cart_change_url }}',
-        cart_update_url: '{{ routes.cart_update_url }}'
-      };
-
-      window.cartStrings = {
-        error: `{{ 'sections.cart.cart_error' | t }}`,
-        quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t }}`
-      }
-
-      window.variantStrings = {
-        addToCart: `{{ 'products.product.add_to_cart' | t }}`,
-        soldOut: `{{ 'products.product.sold_out' | t }}`,
-        unavailable: `{{ 'products.product.unavailable' | t }}`,
-      }
-
-      window.accessibilityStrings = {
-        shareSuccess: `{{ 'general.share.success_message' | t }}`,
-      }
-    </script>
+    <div class="wrapper-overlay" style="display: none;"></div>
   </div>
   </body>
 </html>
