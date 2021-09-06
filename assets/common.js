@@ -85,6 +85,7 @@ $(document).ready(function(){
 	$("body").removeClass("show__similar__products"), $(".wrapper-overlay").hide();
 	});
 	
+	
 	///search-top//
 	$('.search-form').click(function(){
 	$('body').toggleClass('addsearch');
