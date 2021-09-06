@@ -22,21 +22,6 @@ $(window).scroll(function () {
 	  $("#shopify-section-header").removeClass("sticky-header");
 	}
 });
-///search-top//
-$('.search-form').click(function(){
-	$('body').toggleClass('addsearch');
-});
-$('.HeaderProClose').click(function(){
-	$("body").removeClass("addsearch");
-});
-///account-sidebar//
-$('.acc-sign-in').click(function(){
-	$('body').toggleClass('customer-open');
-	$('.wrapper-overlay').css({"display": "block"});
-});
-$('.close-customer').click(function(){
-	$("body").removeClass("customer-open"), $(".wrapper-overlay").hide();
-});
 $(document).ready(function(){
 	$('.navbar-toggler').click(function(){
 	$('.navbar-collapse').toggleClass('show');
@@ -84,8 +69,7 @@ $(document).ready(function(){
 	$('.close-customer').click(function(){
 	$("body").removeClass("show__similar__products"), $(".wrapper-overlay").hide();
 	});
-	
-	
+		
 	///search-top//
 	$('.search-form').click(function(){
 	$('body').toggleClass('addsearch');
