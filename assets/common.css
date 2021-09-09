@@ -1,4 +1,3 @@
-@import "variable.css";
 *,
 *::before,
 *::after {
@@ -87,63 +86,7 @@ html {
     width: device-width;
   }
 }
-.top-left {
-    top: 17px;
-    left: 17px;
-}
-.bottom-left {
-	bottom:17px;
-    left: 17px;
-}
-.center {
-    top: 50%;
-    left: 17px;
-    right: 17px;
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-.center-left {
-    top: 50%;
-    left: 17px;
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-.top-center {
-    top: 17px;
-    left: 17px;
-	right:17px;
-}
-.bottom-center {
-    bottom: 17px;
-    left: 17px;
-	right:17px;
-}
-.top-right {
-    top: 17px;
-	right:17px;
-}
-.center-right {
-     top: 50%;
-    right: 17px;
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-.bottom-right {
-     bottom: 17px;
-     right: 17px;
-}
-.text__left{text-align:left;}
-.text__right{text-align:right;}
-.text__center{text-align:center;}
-.text__center img, .text__left img, .text__right img {
-    display: inline;
-}
+
 /* Set core body defaults */
 body {
   min-height: 100vh;
@@ -824,4 +767,19 @@ padding-right: 15px;
 }
 .quality-select .dropdown-menu li:hover {
   background-color: #ccc;
+}
+.top-left {top: 17px;left: 17px;}
+.bottom-left {bottom:17px;left: 17px;}
+.center {top: 50%;left: 17px;right: 17px;-moz-transform: translateY(-50%);-webkit-transform: translateY(-50%);-o-transform: translateY(-50%);transform: translateY(-50%);}
+.center-left {top: 50%;left: 17px;-moz-transform: translateY(-50%);-webkit-transform: translateY(-50%);-o-transform: translateY(-50%);transform: translateY(-50%);}
+.top-center {top: 17px;left: 17px;right:17px;}
+.bottom-center {bottom: 17px;left: 17px;right:17px;}
+.top-right {top: 17px;right:17px;}
+.center-right {top: 50%;right: 17px;-moz-transform: translateY(-50%);-webkit-transform: translateY(-50%);-o-transform: translateY(-50%);transform: translateY(-50%);}
+.bottom-right {bottom: 17px; right: 17px;}
+.text__left{text-align:left;}
+.text__right{text-align:right;}
+.text__center{text-align:center;}
+.text__center img, .text__left img, .text__right img {
+    display: inline;
 }
