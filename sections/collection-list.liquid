@@ -14,7 +14,7 @@
                     <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col" role="list">
                       {% assign collection = ''%}
                       {% if section.settings.m_collection != blank %}
-                      {% assign collection = collections[section.settings.m_collection]%}
+                      {% assign collection = section.settings.m_collection %}
                       {% endif %}
                         <div class="card-wrapper left-sided">
                             <div class="card__warpper__detail left__sided">
@@ -72,7 +72,7 @@
                           {% for block in section.blocks %}
                             {% assign collection = ''%}
                             {% if block.settings.collection != blank %}
-                            {% assign collection = collections[block.settings.collection]%}
+                            {% assign collection = block.settings.collection %}
                             {% endif %}
                             {% capture image_content %}
                             <div class="collection-image">

@@ -4,7 +4,7 @@
             <small>All Products</small>
             <h4>See the latest!</h4>
             {% if section.settings.collection != blank %}
-            {% assign collection = collections[section.settings.collection]%}
+            {% assign collection = section.settings.collection %}
             <div class="grid grid--4-col-desktop grid--3-col-tablet">
                 <div class="grid__item full__item products-grid ">
                     <div class="row column-{{section.settings.col_size}}">

@@ -1,9 +1,12 @@
 <div class="container">
     <div class="row">
         <div class="shopify__top__section">
-            <h4>Follow Us On Instagram</h4>
-            <h6><span>@themewexample</span></h6>
+            <h4>{{section.settings.title}}</h4>
+            <h6><span>{{section.settings.handle}}</span></h6>
         </div>
+        {% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
+          <div class="instagram-post-list" id="instafeed"></div>
+        {% else %}
         <div class="instagram-post-list">
             <ul>
                 <li>
@@ -38,20 +41,22 @@
                 </li>
             </ul>
         </div>
+      {% endif %}
     </div>
 </div>
-<style>   
-{% if section.settings.title_color!= blank %}
-    .insta-feed .container h2 {
-      color: {{ section.settings.title_color }};
-    }
+{% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
+<script>
+  var userFeed = new Instafeed({
+    get: 'user',
+    userId: '{{ section.settings.insta_user_id}}',
+    accessToken: '{{ section.settings.insta_access_Token}}',
+    limit: 6,
+    resolution : 'standard_resolution'
+  });
+  userFeed.run();
+  setTimeout(function(){ $('#instafeed a').attr('target','_blank'); }, 1000);
+</script>
 {% endif %}
-{% if section.settings.subheading_color!= blank %}
-    .insta-feed .container h5 {
-      color: {{ section.settings.subheading_color }};
-    }
-{% endif %}
-</style>
 {% schema %}
   {
     "name": "t:sections.instagram.name",
@@ -60,27 +65,15 @@
     "settings": [
       {
         "type": "text",
-        "id": "section_title",
+        "id": "title",
         "label": "Heading",
-        "default": "Insta Feed"
+        "default": "Follow Us On Instagram"
       },
       {
-        "type": "color",
-        "id": "title_color",
-        "label": "Heading Color",
-		"default": "#405352"
-      },
-      {
-        "type": "html",
-        "id": "subheading",
-        "label": "Description",
-        "default": "<p>Follow us on <a href=\"https:\/\/www.instagram.com\/shinedezigntheme\/\" title=\"#\">Shinedezigntheme\n<\/a><\/p>"
-      },
-      {
-        "type": "color",
-        "id": "subheading_color",
-        "label": "Description Color",
-        "default": "#405352"
+        "type": "text",
+        "id": "handle",
+        "label": "Instagram Username",
+		    "default": "@themewexample"
       },
        {
         "type": "text",
