@@ -1,17 +1,6 @@
-# Dawn
+# Yuva
 
-[![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/CONTRIBUTING.md)
-
-[Getting started](#getting-started) |
-[Staying up to date with Dawn changes](#staying-up-to-date-with-dawn-changes) |
-[Developer tools](#developer-tools) |
-[Contributing](#contributing) |
-[Code of conduct](#code-of-conduct) |
-[Theme Store submission](#theme-store-submission) |
-[License](#license)
-
-Dawn represents a HTML-first, JavaScript-only-as-needed approach to theme development. It's Shopify's first source available theme with performance, flexibility, and [Online Store 2.0 features](https://www.shopify.com/partners/blog/shopify-online-store) built-in and acts as a reference for building Shopify themes.
+Yuva represents a HTML-first, JavaScript-only-as-needed approach to theme development. It's Shopify's first source available theme with performance, flexibility, and [Online Store 2.0 features](https://www.shopify.com/partners/blog/shopify-online-store) built-in and acts as a reference for building Shopify themes.
 
 * **Web-native in its purest form:** Themes run on the [evergreen web](https://www.w3.org/2001/tag/doc/evergreen-web/). We leverage the latest web browsers to their fullest, while maintaining support for the older ones through progressive enhancement—not polyfills.
 * **Lean, fast, and reliable:** Functionality and design defaults to “no” until it meets this requirement. Code ships on quality. Themes must be built with purpose. They shouldn’t support each and every feature in Shopify.
@@ -19,37 +8,37 @@ Dawn represents a HTML-first, JavaScript-only-as-needed approach to theme develo
 * **Server-rendered:** HTML must be rendered by Shopify servers using Liquid. Business logic and platform primitives such as translations and money formatting don’t belong on the client. Async and on-demand rendering of parts of the page is OK, but we do it sparingly as a progressive enhancement.
 * **Functional, not pixel-perfect:** The Web doesn’t require each page to be rendered pixel-perfect by each browser engine. Using semantic markup, progressive enhancement, and clever design, we ensure that themes remain functional regardless of the browser.
 
-You can find a more detailed version of our theme code principles in the [contribution guide](https://github.com/Shopify/dawn/blob/main/.github/CONTRIBUTING.md#theme-code-principles).
+You can find a more detailed version of our theme code principles in the [contribution guide](https://github.com/Shopify/Yuva/blob/main/.github/CONTRIBUTING.md#theme-code-principles).
 
 ## Getting started
 
 1. Fork the repository and clone it:
 ```sh
-git clone git@github.com:your-username/dawn.git
-cd dawn
+git clone git@github.com:your-username/Yuva.git
+cd Yuva
 ```
 2. Install the [Shopify CLI](https://github.com/Shopify/shopify-cli) by following [these steps](https://shopify.dev/themes/tools/cli/installation).
-3. Launch a development server in the `dawn/` folder:
+3. Launch a development server in the `Yuva/` folder:
 ```sh
 shopify theme serve
 ```
 
 >:information_source: You'll need access to a Shopify store in order to get started with theme development. If you don't already have one, you can set up a [development store](https://shopify.dev/themes/tools/development-stores).
 
-## Staying up to date with Dawn changes
+## Staying up to date with Yuva changes
 
-Say you're building a new theme off Dawn but you still want to be able to pull in the latest changes, you can add a remote `upstream` pointing to this Dawn repository.
+Say you're building a new theme off Yuva but you still want to be able to pull in the latest changes, you can add a remote `upstream` pointing to this Yuva repository.
 
 1. Navigate to your local theme folder.
 2. Verify the list of remotes and validate that you have both an `origin` and `upstream`:
 ```sh
 git remote -v
 ```
-3. If you don't see an `upstream`, you can add one that points to Shopify's Dawn repository:
+3. If you don't see an `upstream`, you can add one that points to Shopify's Yuva repository:
 ```sh
-git remote add upstream https://github.com/Shopify/dawn.git
+git remote add upstream https://github.com/Shopify/Yuva.git
 ```
-4. Pull in the latest Dawn changes into your repository:
+4. Pull in the latest Yuva changes into your repository:
 ```sh
 git fetch upstream
 git pull upstream main
@@ -57,7 +46,7 @@ git pull upstream main
 
 ## Developer tools
 
-There are a number of really useful tools that the Shopify Themes team uses during development. Dawn is already set up to work with these tools.
+There are a number of really useful tools that the Shopify Themes team uses during development. Yuva is already set up to work with these tools.
 
 ### Shopify CLI
 
@@ -69,7 +58,7 @@ You can follow this [quick start guide for theme developers](https://github.com/
 
 We recommend using [Theme Check](https://github.com/shopify/theme-check) as a way to validate and lint your Shopify themes.
 
-We've added Theme Check to Dawn's [list of VS Code extensions](/.vscode/extensions.json) so if you're using Visual Studio Code as your code editor of choice, you'll be prompted to install the [Theme Check VS Code](https://marketplace.visualstudio.com/items?itemName=Shopify.theme-check-vscode) extension upon opening VS Code after you've forked and cloned Dawn.
+We've added Theme Check to Yuva's [list of VS Code extensions](/.vscode/extensions.json) so if you're using Visual Studio Code as your code editor of choice, you'll be prompted to install the [Theme Check VS Code](https://marketplace.visualstudio.com/items?itemName=Shopify.theme-check-vscode) extension upon opening VS Code after you've forked and cloned Yuva.
 
 You can also run it from a terminal with the following Shopify CLI command:
 
@@ -79,7 +68,7 @@ shopify theme check
 
 ### Continuous Integration
 
-Dawn uses [GitHub Actions](https://github.com/features/actions) to maintain the quality of the theme. [This is a starting point](https://github.com/Shopify/dawn/blob/main/.github/workflows/ci.yml) and what we suggest to use in order to ensure you're building better themes. Feel free to build off of it!
+Yuva uses [GitHub Actions](https://github.com/features/actions) to maintain the quality of the theme. [This is a starting point](https://github.com/Shopify/Yuva/blob/main/.github/workflows/ci.yml) and what we suggest to use in order to ensure you're building better themes. Feel free to build off of it!
 
 #### Shopify/lighthouse-ci-action
 
@@ -87,15 +76,15 @@ We love fast websites! Which is why we created [Shopify/lighthouse-ci-action](ht
 
 #### Shopify/theme-check-action
 
-Dawn runs [Theme Check](#Theme-Check) on every commit via [Shopify/theme-check-action](https://github.com/Shopify/theme-check-action).
+Yuva runs [Theme Check](#Theme-Check) on every commit via [Shopify/theme-check-action](https://github.com/Shopify/theme-check-action).
 
 ## Contributing
 
-Want to make commerce better for everyone by contributing to Dawn? We'd love your help! Please read our [contributing guide](https://github.com/Shopify/dawn/blob/main/.github/CONTRIBUTING.md) to learn about our development process, how to propose bug fixes and improvements, and how to build for Dawn.
+Want to make commerce better for everyone by contributing to Yuva? We'd love your help! Please read our [contributing guide](https://github.com/Shopify/Yuva/blob/main/.github/CONTRIBUTING.md) to learn about our development process, how to propose bug fixes and improvements, and how to build for Yuva.
 
 ## Code of conduct
 
-All developers who wish to contribute through code or issues, please first read our [Code of Conduct](https://github.com/Shopify/dawn/blob/main/.github/CODE_OF_CONDUCT.md).
+All developers who wish to contribute through code or issues, please first read our [Code of Conduct](https://github.com/Shopify/Yuva/blob/main/.github/CODE_OF_CONDUCT.md).
 
 ## Theme Store submission
 

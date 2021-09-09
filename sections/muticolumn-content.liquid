@@ -1,0 +1,106 @@
+{% if section.blocks.size > 0 %}
+<div class="container">
+    <div class="row">
+        <div class="service__content page-width">
+            <div class="service__column footer__column--info d-flex justify-content-between">
+                {% for block in section.blocks %}
+                <div class="col text__{{block.settings.alignment}}">
+                    {% if block.settings.image != blank %}
+                    <img src="{{block.settings.image | img_url:'master'}}" alt="{{block.settings.heading}}">
+                    {% else %}
+                    <img src="https://yova.shinedezign.pro/assets/images/delivery.png" alt="delivery">
+                    {% endif %}
+                    <h6>{{block.settings.heading}}</h6>
+                    {{block.settings.subtext}}
+                </div>            
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+<style>
+    #shopify-section-{{section.id}}{
+      background-color:{{section.settings.bgcolor}};
+      padding: 50px 0;
+    }
+  </style>
+{% schema %}
+{
+  "name": "t:sections.multicolumn.name",
+  "tag": "section",
+  "max_blocks":4,
+  "settings": [
+    {
+      "type": "color",
+      "id": "bgcolor",
+      "default": "#efedeb",
+      "label": "t:sections.multicolumn.settings.bgcolor.label"
+    }
+  ],
+  "blocks": [
+	  {
+      "type":"column",
+      "name":"t:sections.multicolumn.blocks.column.name",
+      "settings": [        
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "FREE SHIPPING WORLD WIDE",
+          "label": "t:sections.multicolumn.blocks.column.settings.heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "subtext",
+          "default": "<p>100% Original guarantee</p><p>for all products at yuva.com</p>",
+          "label": "t:sections.multicolumn.blocks.column.settings.subtext.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.multicolumn.blocks.column.settings.image.label"
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "t:sections.multicolumn.blocks.column.settings.alignment.label",
+          "default": "left",
+          "options": [
+            {
+              "label": "t:sections.multicolumn.blocks.column.settings.alignment.left.label",
+              "value": "left"
+            },
+            {
+              "label": "t:sections.multicolumn.blocks.column.settings.alignment.center.label",
+              "value": "center"
+            },
+            {
+              "label": "t:sections.multicolumn.blocks.column.settings.alignment.right.label",
+              "value": "right"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.multicolumn.presets.name",
+      "blocks": [
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

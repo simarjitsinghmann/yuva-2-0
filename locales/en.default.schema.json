@@ -98,7 +98,19 @@
               "bottom-right": {
                 "label": "Bottom Right"
               },
-              "label": "Info Position"
+              "label": "Content Position"
+            },
+            "info_alignment": {
+              "left": {
+                "label": "Left"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Right"
+              },
+              "label": "Content Alignment"
             }
           }
         }
@@ -233,6 +245,18 @@
           },
           "label": "Info Position"
         },
+        "info_alignment": {
+          "left": {
+            "label": "Left"
+          },
+          "center": {
+            "label": "Center"
+          },
+          "right": {
+            "label": "Right"
+          },
+          "label": "Content Alignment"
+        },
         "custom": {
           "label": "Custom Collection Info"
         },
@@ -291,6 +315,48 @@
       },
       "presets": {
         "name": "Collection List"
+      }
+    },
+    "multicolumn": {
+      "name": "Multi Column Content",
+      "settings": {
+        "bgcolor": {
+          "label": "Background Color"
+        },
+        "show_divider": {
+          "label": "Show Column Divider"
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "Column",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "subtext": {
+              "label": "Sub Text"
+            },
+            "alignment": {
+              "left": {
+                "label": "Left"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Right"
+              },
+              "label": "Info Position"
+            },
+            "image": {
+              "label": "Image"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Multi Column Content"
       }
     },
     "featured-collection": {
@@ -390,6 +456,26 @@
         "name": "Testimonials"
       }
     },
+    "instagram": {
+      "name": "Instagram Feed",
+      "settings": {
+        "title": {
+          "label": "Heading"
+        },
+        "handle": {
+          "label": "Instagram User Name"
+        },
+        "insta_user_id": {
+          "label": "Instagram User Id"
+        },
+        "insta_access_Token": {
+          "label": "Access Token"
+        }
+      },
+      "presets": {
+        "name": "Instagram Feed"
+      }
+    },
     "footer": {
       "name": "Footer",
       "blocks": {
@@ -416,63 +502,61 @@
               "label": "Subtext"
             }
           }
+        },
+        "image": {
+          "name": "Image",
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "image_width": {
+              "label": "Image Width"
+            },
+            "subtext": {
+              "label": "Subtext"
+            }
+          }
+        },
+        "newsletter": {
+          "name": "Newsletter",
+          "settings": {
+            "header__1": {
+              "content": "Email Signup",
+              "info": "Subscribers added to your “accepted marketing” [customer list.](https:\/\/help.shopify.com\/en\/manual\/customers\/manage-customers)"
+            },
+            "heading": {
+              "label": "Heading"
+            },
+            "subtext": {
+              "label": "Subtext"
+            },
+            "placeholder": {
+              "label": "Placeholder"
+            },
+            "btn_text": {
+              "label": "Button Text"
+            },
+            "header__2": {
+              "content": "Social media icons",
+              "info": "To display your social media accounts, link them in your theme settings."
+            },
+            "show_social": {
+              "label": "Show social media icons"
+            }
+          }
         }
       },
       "settings": {
-        "color_scheme": {
-          "options__1": {
-            "label": "Accent 1"
-          },
-          "options__2": {
-            "label": "Accent 2"
-          },
-          "options__3": {
-            "label": "Background 1"
-          },
-          "options__4": {
-            "label": "Background 2"
-          },
-          "options__5": {
-            "label": "Inverse"
-          },
-          "label": "Color scheme"
-        },
-        "newsletter_enable": {
-          "label": "Show email signup"
-        },
-        "newsletter_heading": {
-          "label": "Heading"
-        },
         "header__1": {
-          "content": "Email Signup",
-          "info": "Subscribers added to your “accepted marketing” [customer list.](https:\/\/help.shopify.com\/en\/manual\/customers\/manage-customers)"
-        },
-        "header__2": {
-          "content": "Social media icons",
-          "info": "To display your social media accounts, link them in your theme settings."
-        },
-        "show_social": {
-          "label": "Show social media icons"
-        },
-        "header__3": {
-          "content": "Country\/region selector"
-        },
-        "header__4": {
-          "info": "To add a country\/region, go to your [payment settings.](\/admin\/settings\/payments)"
-        },
-        "enable_country_selector": {
-          "label": "Enable country\/region selector"
-        },
-        "header__5": {
           "content": "Language selector"
         },
-        "header__6": {
+        "header__2": {
           "info": "To add a language, go to your [language settings.](\/admin\/settings\/languages)"
         },
         "enable_language_selector": {
           "label": "Enable language selector"
         },
-        "header__7": {
+        "header__3": {
           "content": "Payment methods"
         },
         "payment_enable": {

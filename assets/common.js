@@ -141,12 +141,6 @@ $(document).ready(function(){
 		}
 	  });
 });
-$(document).on("click", function(event){
-	var $trigger = $(".currency-dropdown");
-	if($trigger !== event.target && !$trigger.has(event.target).length){
-	$(".currency-menu").slideUp("fast");
-	}          				
-});
 
 $(document).on("click", function(event){
 	var $trigger = $(".quality-select");

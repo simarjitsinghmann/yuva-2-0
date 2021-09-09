@@ -4,44 +4,44 @@
 			<div class="slider-list">
 				<div class="d-flex">
 					{% if section.blocks.size > 1 %}
-				  <div id="slider-{{section.id}}" class="loop owl-carousel owl-theme">
+				  	<div id="slider-{{section.id}}" class="loop owl-carousel owl-theme">
 					{% else %}
-					<div class="loop owl-carousel owl-theme">
-				  {% endif %}
+					<div class="loop owl-carousel owl-theme" style="display:block">
+					{% endif %}
 					{% for block in section.blocks %}
-					<div class="item">
-						{% if block.settings.image != blank %}
-					  <img src="{{block.settings.image | img_url:'master'}}" loading="lazy" alt="">
-					  {%else%}
-					  {% include 'banner-placeholder'%}
-						{% endif %}
-							<div class="carousel-caption {{block.settings.info_position}}">
-							<div class="container">
-								<div class="row">
-									<div class="carousel-caption-title style2">
-										{% if block.settings.heading != blank %}
-										<h2 class="top-title">{{block.settings.heading}}</h2>
-									{% endif %}
-										{% if block.settings.subheading != blank %}
-										<h1 class="smaller-heading">{{block.settings.subheading}}</h1>
-									{% endif %}
-										{% if block.settings.sale != blank %}
-										<h1 class="bigger-heading">{{block.settings.sale}}</h1>
-									{% endif %}
-										{% if block.settings.content != blank %}
-										<h5 class="bottom-title">{{block.settings.content}}</h5>
-									{% endif %}
-										{% if block.settings.btn != blank %}
-										<a href="{{block.settings.link}}" class="black-btn button">{{block.settings.btn}}<i class="fas fa-arrow-right"></i></a>
-									{% endif %}
+						<div class="item">
+							{% if block.settings.image != blank %}
+							<img src="{{block.settings.image | img_url:'master'}}" loading="lazy" alt="">
+							{%else%}
+							{% include 'banner-placeholder'%}
+							{% endif %}
+							<div class="carousel-caption">
+								<div class="container">
+									<div class="row">
+										<div class="carousel-caption-title style2 {{block.settings.info_position}} text__{{block.settings.info_alignment}}">
+											{% if block.settings.heading != blank %}
+											<h2 class="top-title">{{block.settings.heading}}</h2>
+											{% endif %}
+											{% if block.settings.subheading != blank %}
+											<h1 class="smaller-heading">{{block.settings.subheading}}</h1>
+											{% endif %}
+											{% if block.settings.sale != blank %}
+											<h1 class="bigger-heading">{{block.settings.sale}}</h1>
+											{% endif %}
+											{% if block.settings.content != blank %}
+											<h5 class="bottom-title">{{block.settings.content}}</h5>
+											{% endif %}
+											{% if block.settings.btn != blank %}
+											<a href="{{block.settings.link}}" class="black-btn button">{{block.settings.btn}}<i class="fas fa-arrow-right"></i></a>
+											{% endif %}
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				{% endfor %}
-				  </div>
-				 </div>
+					{% endfor %}
+				  	</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -131,36 +131,56 @@ jQuery(document).ready(function($) {
 				  "value": "top-left"
 				},
 				{
-				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.center-left.label",
-				  "value": "center-left"
-				},
-				{
-				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.bottom-left.label",
-				  "value": "bottom-left"
-				},
-				{
 				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.top-center.label",
 				  "value": "top-center"
-				},
-				{
-				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.center.label",
-				  "value": "center"
-				},
-				{
-				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.bottom-center.label",
-				  "value": "bottom-center"
 				},
 				{
 				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.top-right.label",
 				  "value": "top-right"
 				},
 				{
+				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.center-left.label",
+				  "value": "center-left"
+				},
+				{
+				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.center.label",
+				  "value": "center"
+				},
+				{
 				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.center-right.label",
 				  "value": "center-right"
 				},
 				{
+				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.bottom-left.label",
+				  "value": "bottom-left"
+				},
+				{
+				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.bottom-center.label",
+				  "value": "bottom-center"
+				},
+				{
 				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.bottom-right.label",
 				  "value": "bottom-right"
+				}
+			  ]
+			},
+			{
+			  "type": "select",
+			  "id": "info_alignment",
+			  "label": "t:sections.main-slider.blocks.slide.settings.info_alignment.label",
+			  "default": "left",
+			  "options": [
+				{
+				  "label": "t:sections.main-slider.blocks.slide.settings.info_alignment.left.label",
+				  "value": "left"
+				},
+				{
+				  "label": "t:sections.main-slider.blocks.slide.settings.info_alignment.center.label",
+				  "value": "center"
+				},
+				{
+				  "label": "t:sections.main-slider.blocks.slide.settings.info_alignment.right.label",
+				  "value": "right"
 				}
 			  ]
 			}

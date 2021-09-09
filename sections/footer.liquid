@@ -2,86 +2,68 @@
 	<div class="container">
 		<div class="row">
 			<div class="footer__content-top page-width">
-				<div class="footer__column footer__column--info d-flex justify-content-between">
-					<div class="col">
-						<h6>FREESHIPPING WORLD WIDE</h6>
-						<p>100% Original guarantee<br> for all products at yuva.com</p>
-					</div>
-					<div class="col">
-						<h6>30 DAYS MONEY BACK</h6>
-						<p>Return within 30days of receiving your orderguarantee </p>
-					</div>
-					<div class="col">
-						<h6>SUPPORT 24/7</h6>
-						<p>Get free delivery for every order above Rs. 1199</p>
-					</div>
-					<div class="col">
-						<h6>100% SECURE CHECKOUT</h6>
-						<p>100% Original guarantee<br> for all products at yuva.com</p>
-					</div>
-				
-				</div>
-			
-			</div>
-			<div class="footer__content-middle page-width">
-			<div class="footer-block d-flex">
-				<div class="grid__item full__item  col-sm-4 col-md-4 col-lg-3">
-					<h5>Company</h5>
-					<ul>
-						<li><a href="javascript:void(0)">Home</a></li>
-						<li><a href="javascript:void(0)">Product</a></li>
-						<li><a href="javascript:void(0)">Collection</a></li>
-						<li><a href="javascript:void(0)">Catalog</a></li>
-						<li><a href="javascript:void(0)">About </a></li>
-					</ul>
-				</div>
-				<div class="grid__item full__item  col-sm-4 col-md-4 col-lg-3">
-					<h5>Useful links</h5>
-					<ul>
-						<li><a href="javascript:void(0)">My Account</a></li>
-						<li><a href="javascript:void(0)">About Us</a></li>
-						<li><a href="javascript:void(0)">Contact Us</a></li>
-						<li><a href="javascript:void(0)">Support Policy</a></li>
-						<li><a href="javascript:void(0)">FAQs</a></li>
-					</ul>
-				</div>
-				<div class="grid__item full__item  col-sm-4 col-md-4 col-lg-3">
-					<h5>Contact info</h5>
-					<ul>
-						<li><a href="javascript:void(0)">My Account</a></li>
-						<li><a href="javascript:void(0)">About Us</a></li>
-						<li><a href="javascript:void(0)">Contact Us</a></li>
-						<li><a href="javascript:void(0)">Support Policy</a></li>
-						<li><a href="javascript:void(0)">FAQs</a></li>
-					</ul>
-				</div>
-				<div class="grid__item full__item  col-sm-12 col-md-12 col-lg-3">
-					<h5>Newsletter</h5>
-					<p>Receive our weekly newsletter.<br>
-					   For dietary content, fashion insider and the best offers.</p>
-					<form id="ContactFooter" accept-charset="UTF-8" class="footer__newsletter newsletter-form">
-					   <div class="newsletter-form__field-wrapper">
-							<div class="field">
-								<input id="NewsletterForm--footer" type="email" name="contact[email]" class="field__input" value="" aria-required="true" autocorrect="off" autocapitalize="none" autocomplete="email" placeholder="Your email">
-								<label class="field__label" for="NewsletterForm--footer">
-									Email address
-								</label>
-							</div>
-						</div>
-						<button type="submit" class="button button--secondary newsletter-form__button" name="commit" id="Subscribe">
-							Join
-						</button>
-					</form>
-					<div class="social-links">
-						<ul>
-							<li class="fb"><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
-							<li class="twitter"><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
-							<li class="linkedin"><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a></li>
-							<li class="insta"><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+        <div class="footer-block d-flex">
+          {% for block in section.blocks %}
+            {% case block.type %}
+            {% when 'link_list'%}
+            <div class="grid__item full__item  col-sm-4 col-md-4 col-lg-3">
+              {% if block.settings.heading != blank %}
+              <h5>{{block.settings.heading}}</h5>
+              {% endif %}
+              {% if block.settings.menu != blank %}
+              <ul>
+                {% for link in block.settings.menu.links %}
+                <li><a href="{{link.url}}">{{link.title}}</a></li>
+              {% endfor %}
+              </ul>
+            {% endif %}
+            </div>
+            {% when 'newsletter'%}
+            <div class="grid__item full__item  col-sm-12 col-md-12 col-lg-3">
+
+              {% if block.settings.heading != blank %}
+              <h5>{{block.settings.heading}}</h5>
+              {% endif %}
+              
+              {% if block.settings.subtext != blank %}
+                {{block.settings.subtext}}
+              {% endif %}
+
+              <form id="ContactFooter" accept-charset="UTF-8" class="footer__newsletter newsletter-form">
+                <div class="newsletter-form__field-wrapper">
+                  <div class="field">
+                    <input id="NewsletterForm--footer" type="email" name="contact[email]" class="field__input" value="" aria-required="true" autocorrect="off" autocapitalize="none" autocomplete="email" placeholder="Your email">
+                    <label class="field__label" for="NewsletterForm--footer">
+                      {% if block.settings.placeholder != blank %}
+                        {{block.settings.placeholder}}
+                      {% endif %}
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="button button--secondary newsletter-form__button" name="commit" id="Subscribe">
+                  {% if block.settings.btn_text != blank %}
+                    {{block.settings.btn_text}}
+                    {% else%}
+                    Join
+                  {% endif %}
+                </button>
+              </form>
+
+              
+              {% if block.settings.show_social %}
+              <div class="social-links">
+                <ul>
+                  <li class="fb"><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                  <li class="twitter"><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+                  <li class="linkedin"><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a></li>
+                  <li class="insta"><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+              </div>
+            {% endif %}
+            </div>
+            {% endcase %}
+          {% endfor %}
+        </div>
 			</div>
 			<div class="footer__content-bottom">
 				<div class="footer__content-bottom-wrapper page-width">
@@ -89,6 +71,7 @@
 						<div class="footer__copyright">
 							<small class="copyright__content">© 2019. All Rights Reserved</small>
 						</div>
+            {%- if section.settings.payment_enable -%}
 						<div class="footer__payment">
 							<span class="visually-hidden">Payment methods</span>
 							<ul class="list list-payment" role="list">
@@ -98,7 +81,9 @@
                   </li>
                 {%- endfor -%}
 							</ul>
-					  </div></div>
+					  </div>
+          {%- endif -%}
+          </div>
 				</div>
 		  </div>
 		</div>
@@ -108,6 +93,7 @@
 {% schema %}
 {
   "name": "t:sections.footer.name",
+  "max_blocks":4,
   "blocks": [
     {
       "type": "link_list",
@@ -132,6 +118,7 @@
     {
       "type": "text",
       "name": "t:sections.footer.blocks.text.name",
+      "limit": 1,
       "settings": [
         {
           "type": "text",
@@ -149,12 +136,13 @@
     },
     {
       "type": "image",
-      "name": "Image",
+      "name": "t:sections.footer.blocks.image.name",
+      "limit": 1,
       "settings": [
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image"
+          "label": "t:sections.footer.blocks.image.settings.image.label"
         },
         {
           "type": "range",
@@ -163,28 +151,60 @@
           "max": 200,
           "step": 5,
           "unit": "px",
-          "label": "Image width",
+          "label": "t:sections.footer.blocks.image.settings.image_width.label",
           "default": 100
         },
         {
-          "type": "select",
-          "id": "alignment",
-          "label": "Image alignment on large screen",
-          "options": [
-            {
-              "value": "",
-              "label": "Left"
-            },
-            {
-              "value": "center",
-              "label": "Center"
-            },
-            {
-              "value": "right",
-              "label": "Right"
-            }
-          ],
-          "default": "center"
+          "type": "richtext",
+          "id": "subtext",
+          "label": "t:sections.footer.blocks.image.settings.subtext.label"
+        }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "name": "t:sections.footer.blocks.newsletter.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "t:sections.footer.settings.header__1.content",
+          "info": "t:sections.footer.blocks.newsletter.settings.header__1.info"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Newsletter",
+          "label": "t:sections.footer.blocks.newsletter.settings.heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "subtext",
+          "default": "<p>Receive our weekly newsletter.</p><p>For dietary content, fashion insider and the best offers.</p>",
+          "label": "t:sections.footer.blocks.newsletter.settings.subtext.label"
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "default": "Email address",
+          "label": "t:sections.footer.blocks.newsletter.settings.placeholder.label"
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "default": "Join",
+          "label": "t:sections.footer.blocks.newsletter.settings.btn_text.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.footer.blocks.newsletter.settings.header__2.content",
+          "info": "t:sections.footer.blocks.newsletter.settings.header__2.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_social",
+          "default": false,
+          "label": "t:sections.footer.blocks.newsletter.settings.show_social.label"
         }
       ]
     }
@@ -193,46 +213,7 @@
     {
       "type": "header",
       "content": "t:sections.footer.settings.header__1.content",
-      "info": "t:sections.footer.settings.header__1.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "newsletter_enable",
-      "default": true,
-      "label": "t:sections.footer.settings.newsletter_enable.label"
-    },
-    {
-      "type": "text",
-      "id": "newsletter_heading",
-      "default": "Subscribe to our emails",
-      "label": "t:sections.footer.settings.newsletter_heading.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__2.content",
       "info": "t:sections.footer.settings.header__2.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_social",
-      "default": false,
-      "label": "t:sections.footer.settings.show_social.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__3.content",
-      "info": "t:sections.footer.settings.header__4.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_country_selector",
-      "default": true,
-      "label": "t:sections.footer.settings.enable_country_selector.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__5.content",
-      "info": "t:sections.footer.settings.header__6.info"
     },
     {
       "type": "checkbox",
@@ -242,7 +223,7 @@
     },
     {
       "type": "header",
-      "content": "t:sections.footer.settings.header__7.content"
+      "content": "t:sections.footer.settings.header__3.content"
     },
     {
       "type": "checkbox",
