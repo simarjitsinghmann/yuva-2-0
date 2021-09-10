@@ -7,7 +7,7 @@
             {% assign collection = section.settings.collection %}
             <div class="grid grid--4-col-desktop grid--3-col-tablet">
                 <div class="grid__item full__item products-grid ">
-                    <div class="row column-{{section.settings.col_size}}">
+                    <div class="row column-{{section.settings.col_size}} d-flex justify-content-center">
                         {% assign limit = section.settings.col_size | times : section.settings.row_size%}
                         {% for product in collection.products limit:limit%}
                         {% include 'product-grid'%}

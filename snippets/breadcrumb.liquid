@@ -1,0 +1,54 @@
+{% unless template == 'index' %}
+    <div class="breadcrumb">
+        <nav class="breadcrumb-nav">
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb-list bg-transparent">           
+                        <li class="breadcrumb-item"><a href="/" title="Home">Home</a></li>
+                        {% if template contains 'page' %}
+                        <li class="breadcrumb-item">
+                            <span>{{ page.title }}</span></li>
+                        {% elsif template contains 'product' %}
+                        {% if collection.url %}
+                            <li class="breadcrumb-item"> 
+                            {{ collection.title | link_to: collection.url }}</li>
+                        {% endif %}
+                        <li class="breadcrumb-item"> 
+                            <span>{{ product.title }}</span></li>
+                        {% elsif template contains 'collection' and collection.handle %}
+                        
+                        {% if current_tags %}
+                            {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+                            <li class="breadcrumb-item"> {{ collection.title | link_to: url }}
+                            
+                            <span>{{ current_tags | join: " + " }}</span></li>
+                        {% else %}
+                        <li class="breadcrumb-item"> <span>{{ collection.title }}</span></li>
+                        {% endif %}
+                        {% elsif template == 'blog' %}
+                        
+                        {% if current_tags %}
+                            {{ blog.title | link_to: blog.url }}
+                            <li class="breadcrumb-item"> 
+                            <span>{{ current_tags | join: " + " }}</span></li>
+                        {% else %}
+                        <li class="breadcrumb-item"> <span>{{ blog.title }}</span></li>
+                        {% endif %}
+                        {% elsif template == 'article' %}
+                        <li class="breadcrumb-item"> 
+                            {{ blog.title | link_to: blog.url }} </li>
+                        <li class="breadcrumb-item">
+                            <span> {%comment%}{{ article.title }} {%endcomment%} {{ 'Blog Detail' }}</span></li>
+                        {% else %}
+                        <li class="breadcrumb-item">
+                            <span>{{ page_title }}</span></li>
+                        {% endif %}
+                    </ol>
+                </div>
+            </div>
+        </nav>
+    </div>
+{% endunless %}
+{% if template contains 'account' %}
+    <a href="/account/logout" class="logout-btn">{{ 'customer.login.logout' | t }}</a>
+{% endif %}
