@@ -1,6 +1,145 @@
 {
   "sections": {
+    "slider": {
+      "type": "slider",
+      "blocks": {
+        "slide":{
+          "type":"slide",
+          "settings":{}
+        }
+      },
+      "block_order": [
+        "slide"
+      ]
+    },
+    "offer-section": {
+      "type": "offer-section",
+      "blocks": {
+        "offer":{
+          "type":"offer",
+          "settings":{}
+        },
+        "offer1":{
+          "type":"offer",
+          "settings":{}
+        },
+        "offer2":{
+          "type":"offer",
+          "settings":{}
+        }
+      },
+      "block_order": [
+        "offer",
+        "offer1",
+        "offer2"
+      ]
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "blocks": {
+        "collection":{
+          "type":"collection",
+          "settings":{}
+        },
+        "collection1":{
+          "type":"collection",
+          "settings":{}
+        },
+        "collection2":{
+          "type":"collection",
+          "settings":{}
+        }
+      },
+      "block_order": [
+        "collection",
+        "collection1",
+        "collection2"
+      ]
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+          "collection":"frontpage"
+      }
+    },
+    "featured-blog": {
+      "type": "featured-blog",
+      "settings": {
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "quote":{
+          "type":"quote",
+          "settings":{}
+        },
+        "quote1":{
+          "type":"quote",
+          "settings":{}
+        },
+        "quote2":{
+          "type":"quote",
+          "settings":{}
+        },
+        "quote3":{
+          "type":"quote",
+          "settings":{}
+        },
+        "quote4":{
+          "type":"quote",
+          "settings":{}
+        }
+      },
+      "block_order": [
+        "quote",
+        "quote1",
+        "quote2",
+        "quote3",
+        "quote4"
+      ]
+    },
+    "instagram": {
+      "type": "instagram",
+      "settings": {
+      }
+    },
+    "multicolumn-content": {
+      "type": "multicolumn-content",
+      "blocks": {
+        "column":{
+          "type":"column",
+          "settings":{}
+        },
+        "column1":{
+          "type":"column",
+          "settings":{}
+        },
+        "column2":{
+          "type":"column",
+          "settings":{}
+        },
+        "column3":{
+          "type":"column",
+          "settings":{}
+        }
+      },
+      "block_order": [
+        "column",
+        "column1",
+        "column2",
+        "column3"
+      ]
+    }
   },
   "order": [
+    "slider",    
+    "offer-section",
+    "collection-list",
+    "featured-collection",
+    "featured-blog",
+    "testimonials",
+    "instagram",
+    "multicolumn-content"
   ]
 }

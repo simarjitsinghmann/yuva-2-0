@@ -8,7 +8,7 @@
                   {%- if block.settings.bgcolor != blank -%}
                   <style>
                     #offer-block-{{block.id}} .card-information__wrapper{
-                      background-color:{{block.settings.bgcolor}} !important;
+                      background-color:{{block.settings.bgcolor}};
                     }
                   </style>
                 {% endif %}
@@ -19,6 +19,9 @@
                             <a href="{{block.settings.link}}" class="animate_hvrbr">
                               {% if block.settings.image != blank %}
                               <img src="{{block.settings.image | img_url:'master'}}" alt="">
+                            {% else %}
+                              <img src="{{ 'featured_article.svg' | asset_url}}" alt="">
+                              
                               {% endif %}
                             </a>
                         </div>

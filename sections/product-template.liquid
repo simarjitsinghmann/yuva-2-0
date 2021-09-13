@@ -133,6 +133,7 @@
                 </div>
                 <div class="col-sm-5 col-md-5">
                    <div class="single__product__right sidebar-fixed">
+                     {%- assign product_form_id = 'product-form-' | append: section.id -%}
                         <h4>{{product.title}}</h4>
                         <p class="single__product_sub_title">{{product.vendor}}</p>
                         <div class="ratingbox">
@@ -178,6 +179,7 @@
                     <input name="id" type="hidden">
                       <div class="select__quantity">
                          <p class="small-size size_title">SELECT Quantity</p>
+                         <input type="hidden" name="quantity" form="{{product_form_id}}">
                          <div class="dropdown quality-select">
                             <button id="dLabel" class="dropdown-select" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             01
@@ -193,16 +195,18 @@
                             </ul>
                          </div>
                       </div>
+                      <input type="hidden" name="quantity" form="{{product_form_id}}">
+              {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+               <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                       <div class="product_button">
                          <div class="pdp-action-container">
                             <div class="pdp-add-to-bag pdp-button pdp-flex pdp-center">
-                               <span class="add_to_cart orange-btn button">Add to Cart</span>
+                              <button type="submit"> <span class="add_to_cart orange-btn button">Add to Cart</span></button>
                             </div>
-                            <div class="pdp-buy_now pdp-button pdp-button pdp-flex pdp-center">
-                               <span class="buy_now black-btn button">Buy Now</span>
-                            </div>
+                            {{ form | payment_button }}
                          </div>
                       </div>
+                     {% endform %}
                          <div class="product-detail">
                             <div class="accordion-container">
                                <div class="set">
@@ -279,6 +283,7 @@
        </div>
     </div>
 </section>
+
 {% schema %}
 {
     "name": "t:sections.main-product.name",
