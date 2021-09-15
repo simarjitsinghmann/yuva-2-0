@@ -168,6 +168,8 @@ $(document).on("click", function(event){
 $('.dropdown-menu li').on('click', function() {
 	var getValue = $(this).text();
 	$('.dropdown-select').text(getValue);
+	$(this).closest('.select__quantity').find('input[name=quantity]').val(getValue);
+	$('.dropdown-menu').slideUp("fast");
 });
 
 ///quantitly-custom//		
@@ -200,5 +202,4 @@ jQuery('.quantity').each(function() {
 		spinner.find("input").val(newVal);
 		spinner.find("input").trigger("change");
 	});
-
 });

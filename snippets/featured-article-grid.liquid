@@ -1,11 +1,15 @@
 <li class="grid__item">
     <div class="post-wrapper">
         <div class="post-information">
+            {% assign article_image = 'featured_image.png' | asset_url %}
             {% if article.image %}
-            <div class="post-information-image">
-                <a href="{{article.url}}" class="animate_hvrbr"><img src="{{article.image | img_url:'master'}}" alt=""></a>
-            </div>
+            {% assign article_image = article.image | img_url:'master' %}
             {% endif %}
+            <div class="post-information-image">
+                <a href="{{article.url}}" class="animate_hvrbr">
+                    <img src="{{article_image}}" alt="">
+                </a>
+            </div>
             <div class="post-information__wrapper">
                 <div class="post-date">
                     <h4 class="custom-title">{{article.published_at | date: "%d" }}<span>{{article.published_at | date: " %b %Y" }}</span></h4>
