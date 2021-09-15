@@ -34,17 +34,36 @@
               "menu": "footer"
             }
           },
-          "footer-1": {
-            "type": "text",
+          "ff4862a6-d894-4776-ac14-624cf050f527": {
+            "type": "link_list",
             "settings": {
-              "heading": "Heading",
-              "subtext": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
+              "heading": "Quick links",
+              "menu": "footer"
+            }
+          },
+          "d6eab6c4-60ce-4c0c-9d92-888c3d84949a": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
+          },
+          "a742e200-d70f-4d4f-8751-396a45166768": {
+            "type": "newsletter",
+            "settings": {
+              "heading": "Newsletter",
+              "subtext": "<p>Receive our weekly newsletter.<\/p><p>For dietary content, fashion insider and the best offers.<\/p>",
+              "placeholder": "Email address",
+              "btn_text": "Join",
+              "show_social": true
             }
           }
         },
         "block_order": [
           "footer-0",
-          "footer-1"
+          "ff4862a6-d894-4776-ac14-624cf050f527",
+          "d6eab6c4-60ce-4c0c-9d92-888c3d84949a",
+          "a742e200-d70f-4d4f-8751-396a45166768"
         ],
         "settings": {
           "enable_language_selector": true,
