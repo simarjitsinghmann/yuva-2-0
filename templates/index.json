@@ -3,92 +3,209 @@
     "slider": {
       "type": "slider",
       "blocks": {
-        "slide":{
-          "type":"slide",
-          "settings":{}
+        "slide": {
+          "type": "slide",
+          "settings": {
+            "heading": "Heading",
+            "subheading": "Sub Heading",
+            "sale": "Sale 40%",
+            "content": "content",
+            "btn": "Explore Now",
+            "link": "",
+            "image": "shopify:\/\/shop_images\/banner-img3.jpg",
+            "bgcolor": "",
+            "info_position": "center-left",
+            "info_alignment": "left"
+          }
         }
       },
       "block_order": [
         "slide"
-      ]
+      ],
+      "settings": {
+      }
     },
     "offer-section": {
       "type": "offer-section",
       "blocks": {
-        "offer":{
-          "type":"offer",
-          "settings":{}
+        "offer": {
+          "type": "offer",
+          "settings": {
+            "heading": "Heading",
+            "offer_heading": "Flat Up To",
+            "offer": "70%",
+            "offer_sub": "off",
+            "image": "shopify:\/\/shop_images\/category1.jpg",
+            "link": "",
+            "bgcolor": "#ffffff",
+            "info_position": "bottom-left"
+          }
         },
-        "offer1":{
-          "type":"offer",
-          "settings":{}
+        "offer1": {
+          "type": "offer",
+          "settings": {
+            "heading": "Heading",
+            "offer_heading": "Flat Up To",
+            "offer": "70%",
+            "offer_sub": "off",
+            "image": "shopify:\/\/shop_images\/category2.jpg",
+            "link": "",
+            "bgcolor": "#ffffff",
+            "info_position": "bottom-left"
+          }
         },
-        "offer2":{
-          "type":"offer",
-          "settings":{}
+        "offer2": {
+          "type": "offer",
+          "settings": {
+            "heading": "Heading",
+            "offer_heading": "Flat Up To",
+            "offer": "70%",
+            "offer_sub": "off",
+            "image": "shopify:\/\/shop_images\/category3.jpg",
+            "link": "",
+            "bgcolor": "#ffffff",
+            "info_position": "bottom-left"
+          }
         }
       },
       "block_order": [
         "offer",
         "offer1",
         "offer2"
-      ]
+      ],
+      "settings": {
+        "subheading": "BEST FOR YOU",
+        "heading": "What's More",
+        "color": "#efedeb"
+      }
     },
     "collection-list": {
       "type": "collection-list",
       "blocks": {
-        "collection":{
-          "type":"collection",
-          "settings":{}
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "btntext": "Explore",
+            "info_position": "right",
+            "custom": true,
+            "heading": "Collection",
+            "desc": "Contrary to popular belief, Lorem Ipsum is not simply random.",
+            "btnlink": "",
+            "image": "shopify:\/\/shop_images\/men-collection.jpg"
+          }
         },
-        "collection1":{
-          "type":"collection",
-          "settings":{}
+        "collection1": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "btntext": "Explore",
+            "info_position": "right",
+            "custom": true,
+            "heading": "Collection",
+            "desc": "Contrary to popular belief, Lorem Ipsum is not simply random.",
+            "btnlink": "",
+            "image": "shopify:\/\/shop_images\/kids-collection.jpg"
+          }
         },
-        "collection2":{
-          "type":"collection",
-          "settings":{}
+        "collection2": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "btntext": "Explore",
+            "info_position": "right",
+            "custom": true,
+            "heading": "Collection",
+            "desc": "Contrary to popular belief, Lorem Ipsum is not simply random.",
+            "btnlink": "",
+            "image": "shopify:\/\/shop_images\/men-collection.jpg"
+          }
         }
       },
       "block_order": [
         "collection",
         "collection1",
         "collection2"
-      ]
+      ],
+      "settings": {
+        "heading": "Collection list",
+        "btntext": "View All",
+        "btnlink": "",
+        "m_collection": "",
+        "info_position": "top-center",
+        "info_alignment": "center",
+        "mc_btntext": "Explore",
+        "custom": true,
+        "mc_heading": "Main Collection",
+        "mc_desc": "Contrary to popular belief, Lorem Ipsum is not simply random.",
+        "mc_btnlink": "",
+        "mc_image": "shopify:\/\/shop_images\/winter-collection.jpg"
+      }
     },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-          "collection":"frontpage"
+        "heading": "All Products",
+        "subheading": "See the latest!",
+        "collection": "frontpage",
+        "col_size": 4,
+        "row_size": 2
       }
     },
     "featured-blog": {
       "type": "featured-blog",
       "settings": {
+        "heading": "CONSECTETUR",
+        "subheading": "Blog post everyday",
+        "blog": "",
+        "custom": true,
+        "article1": "test\/test-blog",
+        "article2": "test\/test-blog",
+        "article3": "test\/test-blog"
       }
     },
     "testimonials": {
       "type": "testimonials",
       "blocks": {
-        "quote":{
-          "type":"quote",
-          "settings":{}
+        "quote": {
+          "type": "quote",
+          "settings": {
+            "message": "We were dolor sit amet, consectetur theme adipiscing elit, sed do eiusmod tempor and incididunt ut labore.",
+            "author": "Anderson smith",
+            "from": "Shopify"
+          }
         },
-        "quote1":{
-          "type":"quote",
-          "settings":{}
+        "quote1": {
+          "type": "quote",
+          "settings": {
+            "message": "We were dolor sit amet, consectetur theme adipiscing elit, sed do eiusmod tempor and incididunt ut labore.",
+            "author": "Anderson smith",
+            "from": "Shopify"
+          }
         },
-        "quote2":{
-          "type":"quote",
-          "settings":{}
+        "quote2": {
+          "type": "quote",
+          "settings": {
+            "message": "We were dolor sit amet, consectetur theme adipiscing elit, sed do eiusmod tempor and incididunt ut labore.",
+            "author": "Anderson smith",
+            "from": "Shopify"
+          }
         },
-        "quote3":{
-          "type":"quote",
-          "settings":{}
+        "quote3": {
+          "type": "quote",
+          "settings": {
+            "message": "We were dolor sit amet, consectetur theme adipiscing elit, sed do eiusmod tempor and incididunt ut labore.",
+            "author": "Anderson smith",
+            "from": "Shopify"
+          }
         },
-        "quote4":{
-          "type":"quote",
-          "settings":{}
+        "quote4": {
+          "type": "quote",
+          "settings": {
+            "message": "We were dolor sit amet, consectetur theme adipiscing elit, sed do eiusmod tempor and incididunt ut labore.",
+            "author": "Anderson smith",
+            "from": "Shopify"
+          }
         }
       },
       "block_order": [
@@ -97,31 +214,57 @@
         "quote2",
         "quote3",
         "quote4"
-      ]
+      ],
+      "settings": {
+        "subheading": "HAPPY CLIENT’S",
+        "heading": "What Our Customers Say",
+        "show_stars": true,
+        "bgcolor": "#f6f4f2"
+      }
     },
     "instagram": {
       "type": "instagram",
       "settings": {
+        "title": "Follow Us On Instagram",
+        "handle": "@themewexample",
+        "insta_user_id": "",
+        "insta_access_Token": ""
       }
     },
     "multicolumn-content": {
       "type": "multicolumn-content",
       "blocks": {
-        "column":{
-          "type":"column",
-          "settings":{}
+        "column": {
+          "type": "column",
+          "settings": {
+            "heading": "FREE SHIPPING WORLD WIDE",
+            "subtext": "<p>100% Original guarantee<\/p><p>for all products at yuva.com<\/p>",
+            "alignment": "left"
+          }
         },
-        "column1":{
-          "type":"column",
-          "settings":{}
+        "column1": {
+          "type": "column",
+          "settings": {
+            "heading": "FREE SHIPPING WORLD WIDE",
+            "subtext": "<p>100% Original guarantee<\/p><p>for all products at yuva.com<\/p>",
+            "alignment": "left"
+          }
         },
-        "column2":{
-          "type":"column",
-          "settings":{}
+        "column2": {
+          "type": "column",
+          "settings": {
+            "heading": "FREE SHIPPING WORLD WIDE",
+            "subtext": "<p>100% Original guarantee<\/p><p>for all products at yuva.com<\/p>",
+            "alignment": "left"
+          }
         },
-        "column3":{
-          "type":"column",
-          "settings":{}
+        "column3": {
+          "type": "column",
+          "settings": {
+            "heading": "FREE SHIPPING WORLD WIDE",
+            "subtext": "<p>100% Original guarantee<\/p><p>for all products at yuva.com<\/p>",
+            "alignment": "left"
+          }
         }
       },
       "block_order": [
@@ -129,11 +272,14 @@
         "column1",
         "column2",
         "column3"
-      ]
+      ],
+      "settings": {
+        "bgcolor": "#efedeb"
+      }
     }
   },
   "order": [
-    "slider",    
+    "slider",
     "offer-section",
     "collection-list",
     "featured-collection",
