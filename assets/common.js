@@ -12,16 +12,7 @@ $(document).on("click", function(event){
     $(".currency-menu").slideUp("fast");
   }          				
 });
-///Sticky-header//
-$(window).scroll(function () {
-	if($(window).scrollTop()>150){
-	   $("header-sticky.top-header").addClass("sticky-header");
-	   $("#shopify-section-header").addClass("sticky-header");
-	}else {
-	  $("header-sticky.top-header").removeClass("sticky-header");
-	  $("#shopify-section-header").removeClass("sticky-header");
-	}
-});
+
 $(document).ready(function(){
 	$('.navbar-toggler').click(function(){
 		$('.navbar-collapse').toggleClass('show');

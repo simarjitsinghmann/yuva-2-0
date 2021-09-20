@@ -1,109 +1,45 @@
 {% assign current_variant = product.selected_or_first_available_variant %}
-<section class="single__product">
     <div class="container">
        <div class="row">
           <div class="single-detail-detail">
              <div class="row">
                 <div class="col-sm-7 col-md-7">
                     {% if product.media.size > 1%}
-                   <div class="left-product-images has_slider" style="display:none;">
-                      <div class="ImageleftContainer">
-                         <div class="left-vertical">
-                            <ul class="product-thumbnail_">
-                               <li class="slider-item">
-                                  <a href="javascript:;" data-img-id="1" data-thumbnail-id="14206942281859" data-product-single-thumbnail="" aria-current="true" class="">
-                                  <img class="product-single__thumbnail-image" src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1_9fb9b8ce-cba7-494b-9596-0dc7fcda00bb_160x160.png" alt="Women luggage bag">
-                                  </a>
-                               </li>
-                               <li class="slider-item">
-                                  <a href="javascript:;" data-img-id="2" data-thumbnail-id="14206942314627" data-product-single-thumbnail="" class="">
-                                  <img class="product-single__thumbnail-image" src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1b_160x160.png" alt="Women luggage bag">
-                                  </a>
-                               </li>
-                               <li class="slider-item">
-                                  <a href="javascript:;" data-img-id="3" data-thumbnail-id="14206942347395" data-product-single-thumbnail="" class="active-thumb">
-                                  <img class="product-single__thumbnail-image" src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1a_160x160.png?v=1581050858" alt="Women luggage bag">
-                                  </a>
-                               </li>
-                            </ul>
-                         </div>
-                         <div class="product-image-left lightbox-pop">
-                            <div data-index="1" id="imagel-1" data-image-id="14206942281859" class="scroll-image responsive-image__wrapper">
-                               <img id="Image-14206942281859" class="responsive-image__image lazyautosizes lazyloaded" src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1_9fb9b8ce-cba7-494b-9596-0dc7fcda00bb_800x.png?v=1581050857" data-src="" data-widths="[]" data-aspectratio="0.8888888888888888" data-sizes="auto" tabindex="-1" alt="Women luggage bag" sizes="689px">
-                               <a href="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1_9fb9b8ce-cba7-494b-9596-0dc7fcda00bb_1000x.png?v=1581050857" class="image-popup-link btn-gallery"><i class="fa fa-expand" aria-hidden="true"></i></a>
-                            </div>
-                            <div data-index="2" id="imagel-2" data-image-id="14206942314627" class="scroll-image responsive-image__wrapper">
-                               <img id="Image-14206942314627" class="responsive-image__image lazyautosizes lazyloaded" src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1b_800x.png?v=1581050857" data-src="" data-widths="[]" data-aspectratio="0.8888888888888888" data-sizes="auto" tabindex="-1" alt="Women luggage bag" sizes="689px">
-                               <a href="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1b_1000x.png?v=1581050857" class="image-popup-link btn-gallery"><i class="fa fa-expand" aria-hidden="true"></i></a>
-                            </div>
-                            <div data-index="3" id="imagel-3" data-image-id="14206942347395" class="scroll-image responsive-image__wrapper">
-                               <img id="Image-14206942347395" class="responsive-image__image lazyautosizes lazyloaded" src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1a_800x.png?v=1581050858" data-src="" data-widths="[]" data-aspectratio="0.8888888888888888" data-sizes="auto" tabindex="-1" alt="Women luggage bag" sizes="689px">
-                               <a href="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1a_1000x.png?v=1581050858" class="image-popup-link btn-gallery"><i class="fa fa-expand" aria-hidden="true"></i></a>
-                            </div>
-                         </div>
-                         <div class="product-image-left single-item lightbox-pop slick-initialized slick-slider slick-dotted" role="toolbar" style="">
-                            <div aria-live="polite" class="slick-list draggable" style="height: 20px;">
-                               <div class="slick-track" role="listbox" style="opacity: 1; width: 0px; transform: translate3d(0px, 0px, 0px);">
-                                  <div data-index="3" data-image-id="14206942347395" class="responsive-image__wrapper slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 0px;">
-                                     <a href="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1a_1000x.png?v=1581050858" class="image-popup-link" tabindex="-1"><img id="" class="responsive-image__image lazyload " src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1a_800x.png?v=1581050858" data-src="" data-widths="[]" data-aspectratio="0.8888888888888888" data-sizes="auto" tabindex="-1" alt="Women luggage bag">
-                                     </a>  
-                                  </div>
-                                  <div data-index="1" id="ImageWrapper-14206942281859" data-image-id="14206942281859" class="responsive-image__wrapper slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide00" style="width: 0px;">
-                                     <a href="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1_9fb9b8ce-cba7-494b-9596-0dc7fcda00bb_1000x.png?v=1581050857" class="image-popup-link" tabindex="0"><img id="Image-14206942281859" class="responsive-image__image lazyload " src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1_9fb9b8ce-cba7-494b-9596-0dc7fcda00bb_800x.png?v=1581050857" data-src="" data-widths="[]" data-aspectratio="0.8888888888888888" data-sizes="auto" tabindex="-1" alt="Women luggage bag">
-                                     </a>  
-                                  </div>
-                                  <div data-index="2" id="ImageWrapper-14206942314627" data-image-id="14206942314627" class="responsive-image__wrapper slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide01" style="width: 0px;">
-                                     <a href="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1b_1000x.png?v=1581050857" class="image-popup-link" tabindex="-1"><img id="Image-14206942314627" class="responsive-image__image lazyload " src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1b_800x.png?v=1581050857" data-src="" data-widths="[]" data-aspectratio="0.8888888888888888" data-sizes="auto" tabindex="-1" alt="Women luggage bag">
-                                     </a>  
-                                  </div>
-                                  <div data-index="3" id="ImageWrapper-14206942347395" data-image-id="14206942347395" class="responsive-image__wrapper slick-slide" data-slick-index="2" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide02" style="width: 0px;">
-                                     <a href="//cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1a_1000x.png?v=1581050858" class="image-popup-link" tabindex="-1"><img id="Image-14206942347395" class="responsive-image__image lazyload " src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1a_800x.png?v=1581050858" data-src="" data-widths="[]" data-aspectratio="0.8888888888888888" data-sizes="auto" tabindex="-1" alt="Women luggage bag">
-                                     </a>  
-                                  </div>
-                                  <div data-index="1" data-image-id="14206942281859" class="responsive-image__wrapper slick-slide slick-cloned" data-slick-index="3" aria-hidden="true" tabindex="-1" style="width: 0px;">
-                                     <a href="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1_9fb9b8ce-cba7-494b-9596-0dc7fcda00bb_1000x.png?v=1581050857" class="image-popup-link" tabindex="-1"><img id="" class="responsive-image__image lazyload " src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1_9fb9b8ce-cba7-494b-9596-0dc7fcda00bb_800x.png?v=1581050857" data-src="" data-widths="[]" data-aspectratio="0.8888888888888888" data-sizes="auto" tabindex="-1" alt="Women luggage bag">
-                                     </a>  
-                                  </div>
-                               </div>
-                            </div>
-                            <ul class="slick-dots" style="display: block;" role="tablist">
-                               <li class="slick-active" aria-hidden="false" role="presentation" aria-selected="true" aria-controls="navigation00" id="slick-slide00"><button type="button" data-role="none" role="button" tabindex="0">1</button></li>
-                               <li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation01" id="slick-slide01"><button type="button" data-role="none" role="button" tabindex="0">2</button></li>
-                               <li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation02" id="slick-slide02"><button type="button" data-role="none" role="button" tabindex="0">3</button></li>
-                            </ul>
-                         </div>
-                         <!-- <a href="#ProductGallery" class="btn-gallery"><i class="fa fa-expand" aria-hidden="true"></i></a> -->
-                         <div id="ProductGallery" class="ProductGallery" style="display:none">
-                            <a href="//cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1_9fb9b8ce-cba7-494b-9596-0dc7fcda00bb_1000x.png?v=1581050857"></a>
-                            <a href="//cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1b_1000x.png?v=1581050857"></a>
-                            <a href="//cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1a_1000x.png?v=1581050858"></a>
-                         </div>
-                         <a href="#ProductVideo" class="btn-video">
-                            <svg version="1.1" class="play-btn" height="17px" width="19px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 41.999 41.999" style="enable-background:new 0 0 41.999 41.999;" xml:space="preserve">
-                               <path d="M36.068,20.176l-29-20C6.761-0.035,6.363-0.057,6.035,0.114C5.706,0.287,5.5,0.627,5.5,0.999v40 
-                                  c0,0.372,0.206,0.713,0.535,0.886c0.146,0.076,0.306,0.114,0.465,0.114c0.199,0,0.397-0.06,0.568-0.177l29-20 c0.271-0.187,0.432-0.494,0.432-0.823S36.338,20.363,36.068,20.176z M7.5,39.095V2.904l26.239,18.096L7.5,39.095z"></path>
-                               <g></g>
-                               <g></g>
-                               <g></g>
-                               <g></g>
-                               <g></g>
-                               <g></g>
-                               <g></g>
-                               <g></g>
-                               <g></g>
-                               <g></g>
-                               <g></g>
-                               <g></g>
-                               <g></g>
-                               <g></g>
-                               <g></g>
-                            </svg>
-                         </a>
-                         <div id="ProductVideo" class="ProductVideo" style="display:none">     
-                            <a href="https://www.youtube.com/watch?v=7QdAkHjfldQ"></a>
-                         </div>
-                      </div>
-                   </div>
+                     {% if section.settings.gallery_style == 'stacked'%}
+                     <div class="left-product-images has_slider">
+                        <div class="ImageleftContainer">
+                           <div class="nav-container">
+                              <div class="slider-nav">
+                                 {%- for media in product.media -%}
+                                    {%-if media.media_type == 'image'-%}
+                                    <div>
+                                       <a href="javascript:void(0);">
+                                       <img class="product-single__thumbnail-image" src="{{media | img_url: '150x'}}" alt="{{ media.preview_image.alt | escape }}">
+                                       </a>
+                                    </div>
+                                    {%-endif-%}
+                                 {%-endfor-%}
+                              </div>
+                           </div>
+                           <div class="main-container">
+                              <div class="slider slider-main">
+                                 {%- for media in product.media -%}
+                                    {%-if media.media_type == 'image'-%}
+                                    <div class="responsive-image__wrapper slick-slide">
+                                       <img class="responsive-image__image lazyload" src="{{media | img_url: 'master'}}" alt="{{ media.preview_image.alt | escape }}">
+                                       <a href="{{media | img_url: 'master'}}" class="image-popup-link btn-gallery">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                             <path d="M212.686 315.314L120 408l32.922 31.029c15.12 15.12 4.412 40.971-16.97 40.971h-112C10.697 480 0 469.255 0 456V344c0-21.382 25.803-32.09 40.922-16.971L72 360l92.686-92.686c6.248-6.248 16.379-6.248 22.627 0l25.373 25.373c6.249 6.248 6.249 16.378 0 22.627zm22.628-118.628L328 104l-32.922-31.029C279.958 57.851 290.666 32 312.048 32h112C437.303 32 448 42.745 448 56v112c0 21.382-25.803 32.09-40.922 16.971L376 152l-92.686 92.686c-6.248 6.248-16.379 6.248-22.627 0l-25.373-25.373c-6.249-6.248-6.249-16.378 0-22.627z"/>
+                                          </svg>
+                                       </a>
+                                    </div>
+                                    {%-endif-%}
+                                 {%-endfor-%}
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     {% else %}
                    <div class="left-product-images multiple-images">
                       <ul class="gallery-item ">
                         {%- if current_variant.featured_media != null -%}
@@ -129,6 +65,7 @@
                         {%-endfor-%}
                       </ul>
                    </div>
+                  {% endif %}
                   {% endif %}
                 </div>
                 <div class="col-sm-5 col-md-5">
@@ -224,150 +161,233 @@
                               </div>
                            {% endform %}
                            {% when 'description_tab' %}
-                              {% if block.settings.heading != blank %}
-                              <div class="product-detail">
-                                 <div class="accordion-container">
-                                    <div class="set">
-                                       <h4 class="panel-title">
-                                          <a href="javascript:void(0)">
-                                          {{block.settings.heading}}
-                                          <i class="fa fa-plus"></i>
-                                          </a>
-                                       </h4>
-                                       <div class="content" style="display:none;">
-                                          <div class="panel-body">
-                                             {{product.description}}
+                              {% if block.settings.width == 'half' %}
+                                 <div class="product-detail">
+                                    <div class="accordion-container">
+                                       <div class="set">
+                                          <h4 class="panel-title">
+                                             <a href="javascript:void(0)">
+                                             Description
+                                             <i class="fa fa-plus"></i>
+                                             </a>
+                                          </h4>
+                                          <div class="content" style="display:none;">
+                                             <div class="panel-body">
+                                                {{product.description}}
+                                             </div>
                                           </div>
                                        </div>
                                     </div>
                                  </div>
-                              </div>
+                              {% endif %}
+                           {% when 'reviews_tab' %}
+                              {% if block.settings.width == 'half' %}
+                                 <div class="product-detail">
+                                    <div class="accordion-container">
+                                       <div class="set">
+                                          <h4 class="panel-title">
+                                             <a href="javascript:void(0)">
+                                             Reviews
+                                             <i class="fa fa-plus"></i>
+                                             </a>
+                                          </h4>
+                                          <div class="content" style="display:none;">
+                                             <div class="panel-body">
+                                                <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
                               {% endif %}
                            {% when 'accordion' %}
-                              {% if block.settings.heading != blank %}
-                              <div class="product-detail">
-                                 <div class="accordion-container">
-                                    <div class="set">
-                                       <h4 class="panel-title">
-                                          <a href="javascript:void(0)">
-                                          {{block.settings.heading}}
-                                          <i class="fa fa-plus"></i>
-                                          </a>
-                                       </h4>
-                                       <div class="content" style="display:none;">
-                                          <div class="panel-body">
-                                             {{block.settings.content}}
+                              {% if block.settings.width == 'half' %}
+                                 {% if block.settings.heading != blank %}
+                                    <div class="product-detail">
+                                       <div class="accordion-container">
+                                          <div class="set">
+                                             <h4 class="panel-title">
+                                                <a href="javascript:void(0)">
+                                                {{block.settings.heading}}
+                                                <i class="fa fa-plus"></i>
+                                                </a>
+                                             </h4>
+                                             <div class="content" style="display:none;">
+                                                <div class="panel-body">
+                                                   {{block.settings.content}}
+                                                </div>
+                                             </div>
                                           </div>
                                        </div>
                                     </div>
-                                 </div>
-                              </div>
+                                 {% endif %}
                               {% endif %}
                         {% endcase %}
                      {% endfor %}
                    </div>
                 </div>
-             </div>
+             </div>             
           </div>
        </div>
     </div>
-</section>
-
 {% schema %}
 {
-    "name": "Product Section",
+    "name": "t:sections.product-template.name",
     "tag": "section",
-    "class": "product-section",
+    "class": "product-section single__product",
+    "settings": [
+         {
+         "type": "select",
+         "id": "gallery_style",
+         "label": "t:sections.product-template.settings.gallery_style.label",
+         "default":"gallery",
+         "options": [
+            {
+               "value": "gallery",
+               "label": "t:sections.product-template.settings.gallery_style.options.gallery.label"
+            },
+            {
+               "value": "stacked",
+               "label": "t:sections.product-template.settings.gallery_style.options.stacked.label"
+            }
+         ]
+      }
+    ],
     "blocks": [
         {
             "type": "@app"
         },
         {
             "type": "title",
-            "name": "Title",
+            "name": "t:sections.product-template.blocks.title.name",
             "limit":1
         },
         {
             "type": "text",
-            "name": "Text",
+            "name": "t:sections.product-template.blocks.text.name",
             "settings": [
                {
                "type": "text",
                "id": "text",
-               "label": "Text block"
+               "label": "t:sections.product-template.blocks.text.settings.text.name"
                }
             ]
         },
         {
             "type": "price",
-            "name": "Price",
+            "name": "t:sections.product-template.blocks.price.name",
             "limit":1
         },
         {
             "type": "review-star",
-            "name": "Review Star",
+            "name": "t:sections.product-template.blocks.review-star.name",
             "limit":1
         },
         {
             "type": "variant",
             "name": "Variant",
-            "limit":1,
-            "settings": [
-            ]
+            "name": "t:sections.product-template.blocks.variant.name",
+            "limit":1
         },
         {
             "type": "quantity",
-            "name": "Quantity",
-            "limit":1,
-            "settings": [
-            ]
-        },
-        {
-            "type": "description",
-            "name": "Description",
-            "limit":1,
-            "settings": [
-            ]
-        },
-        {
-            "type": "description_tab",
-            "name": "Description Tab",
-            "limit":1,
-            "settings": [
-               {
-                  "type": "text",
-                  "id": "heading",
-                  "label": "Heading",
-                  "default": "Description"
-               }
-            ]
+            "name": "t:sections.product-template.blocks.quantity.name",
+            "limit":1
         },
         {
             "type": "button",
-            "name": "Buy Buttons",
+            "name": "t:sections.product-template.blocks.button.name",
             "limit":1,
             "settings": [
                {
                   "type": "checkbox",
                   "id": "dynamic_checkout_btn",
                   "default":true,
-                  "label": "Show Dynamic Checkout Button"
+                  "label": "t:sections.product-template.blocks.button.settings.dynamic_checkout_btn.label"
+               }
+            ]
+        },
+        {
+            "type": "description",
+            "name": "t:sections.product-template.blocks.description.name",
+            "limit":1
+        },
+        {
+            "type": "description_tab",
+            "name": "t:sections.product-template.blocks.description_tab.name",
+            "limit":1,
+            "settings": [
+               {
+                  "type": "select",
+                  "id": "width",
+                  "label": "t:sections.product-template.blocks.accordion.settings.width.label",
+                  "default":"half",
+                  "options": [
+                     {
+                        "value": "half",
+                        "label": "t:sections.product-template.blocks.accordion.settings.width.options.half.label"
+                     },
+                     {
+                        "value": "full",
+                        "label": "t:sections.product-template.blocks.accordion.settings.width.options.full.label"
+                     }
+                  ]
+               }
+            ]            
+        },
+        {
+            "type": "reviews_tab",
+            "name": "t:sections.product-template.blocks.reviews_tab.name",
+            "limit":1,
+            "settings": [
+               {
+                  "type": "select",
+                  "id": "width",
+                  "label": "t:sections.product-template.blocks.accordion.settings.width.label",
+                  "default":"half",
+                  "options": [
+                     {
+                        "value": "half",
+                        "label": "t:sections.product-template.blocks.accordion.settings.width.options.half.label"
+                     },
+                     {
+                        "value": "full",
+                        "label": "t:sections.product-template.blocks.accordion.settings.width.options.full.label"
+                     }
+                  ]
                }
             ]
         },
         {
             "type": "accordion",
             "name": "Accordion",
+            "name": "t:sections.product-template.blocks.accordion.name",
             "settings": [
                {
-               "type": "text",
-               "id": "heading",
-               "label": "Heading"
+                  "type": "text",
+                  "id": "heading",
+                  "label": "t:sections.product-template.blocks.accordion.settings.heading.label"
                },
                {
-               "type": "richtext",
-               "id": "content",
-               "label": "Content"
+                  "type": "richtext",
+                  "id": "content",
+                  "label": "t:sections.product-template.blocks.accordion.settings.content.label"
+               },
+               {
+                  "type": "select",
+                  "id": "width",
+                  "label": "t:sections.product-template.blocks.accordion.settings.width.label",
+                  "default":"half",
+                  "options": [
+                     {
+                        "value": "half",
+                        "label": "t:sections.product-template.blocks.accordion.settings.width.options.half.label"
+                     },
+                     {
+                        "value": "full",
+                        "label": "t:sections.product-template.blocks.accordion.settings.width.options.full.label"
+                     }
+                  ]
                }
             ]
         }
