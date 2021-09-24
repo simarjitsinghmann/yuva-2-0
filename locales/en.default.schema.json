@@ -1,5 +1,72 @@
 {
   "sections": {
+    "announcement-bar": {
+      "name": "Announcement Bar",
+      "settings": {
+        "show_bar": {
+          "label": "Show Announcement Bar"
+        },
+        "show_close": {
+          "label": "Show Close Icon"
+        }
+      },
+      "blocks": {
+        "announcement": {
+          "name": "Announcement",
+          "settings": {
+            "announcement": {
+              "label": "Announcement"
+            },
+            "icon": {
+              "none": {
+                "label": "No Icon"
+              },
+              "horn": {
+                "label": "Horn"
+              },
+              "gift": {
+                "label": "Gift"
+              },
+              "label": "Icon"
+            },
+            "bg_style": {
+              "solid": {
+                "label": "Solid Color"
+              },
+              "gradient": {
+                "label": "Gradient Colors"
+              },
+              "label": "Background Style"
+            },
+            "bgcolor": {
+              "label": "Background Color"
+            },
+            "bgcolor2": {
+              "label": "Background Color 2",
+              "info": "This works with Background Style option Gradient Colors"
+            },
+            "fontcolor": {
+              "label": "Font Color"
+            },
+            "btn": {
+              "label": "Button Text"
+            },
+            "link": {
+              "label": "Button Link"
+            },
+            "btn_bgcolor": {
+              "label": "Button Background Color"
+            },
+            "btn_fontcolor": {
+              "label": "Button Font Color"
+            },
+            "bborder_color": {
+              "label": "Button Border Color"
+            }
+          }
+        }
+      }
+    },
     "header": {
       "name": "Header",
       "settings": {

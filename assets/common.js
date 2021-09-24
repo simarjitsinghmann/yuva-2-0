@@ -162,7 +162,9 @@ $('.dropdown-menu li').on('click', function() {
 	$(this).closest('.select__quantity').find('input[name=quantity]').val(getValue);
 	$('.dropdown-menu').slideUp("fast");
 });
-
+$('.announce_close').click(function(){
+	$('.announcement-bar').hide();
+});
 ///quantitly-custom//		
 jQuery('.quantity').each(function() {
 	var spinner = jQuery(this),
