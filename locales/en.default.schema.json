@@ -6,6 +6,9 @@
         "show_bar": {
           "label": "Show Announcement Bar"
         },
+        "auto_rotate": {
+          "label": "Auto Rotate"
+        },
         "show_close": {
           "label": "Show Close Icon"
         }
@@ -14,6 +17,12 @@
         "announcement": {
           "name": "Announcement",
           "settings": {
+            "header1": {
+              "content": "Announcement Content"
+            }, 
+            "header2": {
+              "content": "Announcement Style"
+            },
             "announcement": {
               "label": "Announcement"
             },
@@ -36,6 +45,9 @@
               "gradient": {
                 "label": "Gradient Colors"
               },
+              "image": {
+                "label": "Image"
+              },
               "label": "Background Style"
             },
             "bgcolor": {
@@ -44,6 +56,84 @@
             "bgcolor2": {
               "label": "Background Color 2",
               "info": "This works with Background Style option Gradient Colors"
+            },
+            "bgimage": {
+              "label": "Background Image",
+              "info": "This works with Background Style option Image"
+            },
+            "fontcolor": {
+              "label": "Font Color"
+            },
+            "btn": {
+              "label": "Button Text"
+            },
+            "link": {
+              "label": "Button Link"
+            },
+            "btn_bgcolor": {
+              "label": "Button Background Color"
+            },
+            "btn_fontcolor": {
+              "label": "Button Font Color"
+            },
+            "bborder_color": {
+              "label": "Button Border Color"
+            }
+          }
+        },
+        "timer": {
+          "name": "Timer Announcement",
+          "settings": {
+            "header1": {
+              "content": "Announcement Content"
+            }, 
+            "header2": {
+              "content": "Announcement Style"
+            },
+            "first_text": {
+              "label": "Text 1"
+            },
+            "date": {
+              "label": "Launch Date",
+              "info": "Date Format should be DD/MM/YYYY and should be future date"
+            },
+            "last_text": {
+              "label": "Text 2"
+            },
+            "icon": {
+              "none": {
+                "label": "No Icon"
+              },
+              "horn": {
+                "label": "Horn"
+              },
+              "gift": {
+                "label": "Gift"
+              },
+              "label": "Icon"
+            },
+            "bg_style": {
+              "solid": {
+                "label": "Solid Color"
+              },
+              "gradient": {
+                "label": "Gradient Colors"
+              },
+              "image": {
+                "label": "Image"
+              },
+              "label": "Background Style"
+            },
+            "bgcolor": {
+              "label": "Background Color"
+            },
+            "bgcolor2": {
+              "label": "Background Color 2",
+              "info": "This works with Background Style option Gradient Colors"
+            },
+            "bgimage": {
+              "label": "Background Image",
+              "info": "This works with Background Style option Image"
             },
             "fontcolor": {
               "label": "Font Color"
@@ -70,17 +160,23 @@
     "header": {
       "name": "Header",
       "settings": {
-        "header_1": {
-          "content": "Announcement Bar"
-        },
-        "show_bar": {
-          "label": "Show Announcement Bar"
-        },
-        "announcement": {
-          "label": "Announcement Message"
-        },
-        "announcement_bgcolor": {
-          "label": "Announcement Background"
+        "header_style": {
+          "header1": {
+            "label": "Logo Left, Menu Center"
+          },
+          "header2": {
+            "label": "Logo Center, Menu Left"
+          },
+          "header3": {
+            "label": "Full Width Menu"
+          },
+          "header4": {
+            "label": "Logo Center With Hamburger Menu"
+          },
+          "header5": {
+            "label": "Logo Center, 2 Menus"
+          },
+          "label": "Background Style"
         },
         "header_2": {
           "content": "Header"
@@ -94,6 +190,14 @@
         },
         "menu": {
           "label": "Menu"
+        },
+        "menu2": {
+          "label": "Second Menu",
+          "info": "It works with Header style 'Logo Center, 2 Menus'"
+        },
+        "top_message": {
+          "label": "Top Bar Message",
+          "info": "It works with Header style 'Logo Center, 2 Menus'"
         },
         "show_search": {
           "label": "Enable Search"
@@ -178,6 +282,72 @@
                 "label": "Right"
               },
               "label": "Content Alignment"
+            }
+          }
+        },
+        "split": {
+          "name": "Image With Text(Column)",
+          "settings": {
+            "header1": {
+              "content": "Image"
+            },
+            "image_desktop": {
+              "label": "Image",
+              "info":"Size:544x649"
+            },
+            "header2": {
+              "content": "Content"
+            },
+            "banner_left_bk": {
+              "label": "Content Background"
+            },
+            "banner_tag_line": {
+              "label": "Tag line"
+            },
+            "tag_line_color": {
+              "label": "Tag line Color"
+            },
+            "tag_line_bk": {
+              "label": "Tag line Background"
+            },
+            "banner_title": {
+              "label": "Title"
+            },
+            "banner_title_color": {
+              "label": "Title Color"
+            },
+            "banner_desc": {
+              "label": "Description"
+            },
+            "banner_desc_color": {
+              "label": "Description Color"
+            },
+            "header3": {
+              "content": "BUTTON"
+            },
+            "button_text": {
+              "label": "Button Text"
+            },
+            "button_link": {
+              "label": "Button Link"
+            },
+            "button_border_color": {
+              "label": "Button Border Color"
+            },
+            "button_text_color": {
+              "label": "Button Text Color"
+            },
+            "button_text_bk": {
+              "label": "Button Background"
+            },
+            "hvr_button_text_color": {
+              "label": "Button Hover Text Color"
+            },
+            "hvr_button_text_bk": {
+              "label": "Button Hover Text Background"
+            },
+            "banner_button_radius": {
+              "label": "Button Radius"
             }
           }
         }
@@ -493,6 +663,18 @@
         "subheading": {
           "label": "Subheading"
         },
+        "style": {
+          "label": "Testimonials Style",
+          "style1":{
+            "label":"Style 1"
+          },
+          "style2":{
+            "label":"Style 2"
+          }
+        },
+        "description": {
+          "label": "Description"
+        },
         "show_stars": {
           "label": "Show Review Stars"
         },
@@ -649,6 +831,109 @@
             }
           }
         }
+      }
+    },
+    "video-banner": {
+      "name": "Video Banner",
+      "settings": {
+        "videofile": {
+          "label": "Video Link"
+        },
+        "poster": {
+          "label": "Placeholder Image"
+        },
+        "header": {
+          "content": "Text"
+        },
+        "title": {
+          "label": "Title"
+        },
+        "description": {
+          "label": "Description"
+        },
+        "overlay": {
+          "label": "Add Overlay"
+        },
+        "bgcolor": {
+          "label": "Overlay Color"
+        },
+        "opacity": {
+          "label": "Overlay Opacity"
+        },
+        "header2": {
+          "content": "Button"
+        },
+        "link_text": {
+          "label": "Button Text"
+        },
+        "link": {
+          "label": "Button Link"
+        },
+        "text_position": {
+          "top-left": {
+            "label": "Top Left"
+          },
+          "center-left": {
+            "label": "Center Left"
+          },
+          "bottom-left": {
+            "label": "Bottom Left"
+          },
+          "top-center": {
+            "label": "Top Center"
+          },
+          "center": {
+            "label": "Center"
+          },
+          "bottom-center": {
+            "label": "Bottom Center"
+          },
+          "top-right": {
+            "label": "Top Right"
+          },
+          "center-right": {
+            "label": "Center Right"
+          },
+          "bottom-right": {
+            "label": "Bottom Right"
+          },
+          "label": "Text Position"
+        },
+        "text_align": {
+          "left": {
+            "label": "Left"
+          },
+          "center": {
+            "label": "Center"
+          },
+          "right": {
+            "label": "Right"
+          },
+          "label": "Text Alignment"
+        }
+      },
+      "presets": {
+        "name": "Video Banner"
+      }
+    },
+    "newsletter": {
+      "name": "Newsletter",
+      "settings": {
+        "heading": {
+          "label": "Heading"
+        },
+        "description": {
+          "label": "Description"
+        },
+        "placeholder": {
+          "label": "Placeholder"
+        },
+        "btn": {
+          "label": "Button Text"
+        }
+      },
+      "presets": {
+        "name": "Newsletter"
       }
     },
     "footer": {

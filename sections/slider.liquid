@@ -8,38 +8,125 @@
 					{% else %}
 					<div class="slider-item">
 					{% endif %}
-					{% for block in section.blocks %}
-						<div class="item">
-							{% if block.settings.image != blank %}
-							<img src="{{block.settings.image | img_url:'master'}}" loading="lazy" alt="">
-							{%else%}
-							{% include 'banner-placeholder'%}
-							{% endif %} 
-							<div class="carousel-caption">
-								<div class="container">
-									<div class="row">
-										<div class="carousel-caption-title style2 {{block.settings.info_position}} text__{{block.settings.info_alignment}}">
-											{% if block.settings.heading != blank %}
-											<h2 class="top-title">{{block.settings.heading}}</h2>
-											{% endif %}
-											{% if block.settings.subheading != blank %}
-											<h1 class="smaller-heading">{{block.settings.subheading}}</h1>
-											{% endif %}
-											{% if block.settings.sale != blank %}
-											<h1 class="bigger-heading">{{block.settings.sale}}</h1>
-											{% endif %}
-											{% if block.settings.content != blank %}
-											<h5 class="bottom-title">{{block.settings.content}}</h5>
-											{% endif %}
-											{% if block.settings.btn != blank %}
-											<a href="{{block.settings.link}}" class="black-btn button">{{block.settings.btn}}<i class="fas fa-arrow-right"></i></a>
-											{% endif %}
+						{% for block in section.blocks %}
+							{% case block.type %}
+								{% when 'slide' %}
+								<div class="item" {{ block.shopify_attributes }}>
+									{% if block.settings.image != blank %}
+									<img src="{{block.settings.image | img_url:'master'}}" loading="lazy" alt="">
+									{%else%}
+									{% include 'banner-placeholder'%}
+									{% endif %} 
+									<div class="carousel-caption">
+										<div class="container">
+											<div class="row">
+												<div class="carousel-caption-title style2 {{block.settings.info_position}} text__{{block.settings.info_alignment}}">
+													{% if block.settings.heading != blank %}
+													<h2 class="top-title">{{block.settings.heading}}</h2>
+													{% endif %}
+													{% if block.settings.subheading != blank %}
+													<h1 class="smaller-heading">{{block.settings.subheading}}</h1>
+													{% endif %}
+													{% if block.settings.sale != blank %}
+													<h1 class="bigger-heading">{{block.settings.sale}}</h1>
+													{% endif %}
+													{% if block.settings.content != blank %}
+													<h5 class="bottom-title">{{block.settings.content}}</h5>
+													{% endif %}
+													{% if block.settings.btn != blank %}
+													<a href="{{block.settings.link}}" class="black-btn button">{{block.settings.btn}}<i class="fas fa-arrow-right"></i></a>
+													{% endif %}
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-					{% endfor %}
+								{% when 'split' %}
+									{% if block.settings.image_desktop != blank %}
+									{% assign banner_image = block.settings.image_desktop | img_url: "1000x1000" %} 
+									{% else %}
+									{% assign banner_image = 'banner.svg' | asset_url  %} 
+									{% endif %}
+									<div class="banner banner-section item" {{ block.shopify_attributes }}>	   
+										<div class="slide_container">
+											<div class="row">
+												<div class="col-md-6 banner-left">
+												<div class="carousel-caption-title style_new">
+												{% if block.settings.banner_tag_line != blank %}
+												<h6>{{block.settings.banner_tag_line}}</h6>
+												{% endif %}
+												{% if block.settings.banner_title != blank %}
+												<div class="clerafix"></div>
+												<h1>{{block.settings.banner_title}}</h1>
+												{% endif %}
+												{% if block.settings.banner_desc != blank %}
+												<p>{{block.settings.banner_desc}} </p>
+												{% endif %}
+												{% if block.settings.button_text != blank %}
+												<div class="btn-box"> 
+													<a href="{{block.settings.button_link}}" class="slide-btn" >{{block.settings.button_text}}</a>
+												</div>
+												{% endif %}
+												</div>
+												</div>
+												<div class="col-md-6 banner-right" >                 
+												<img src="{{banner_image}}" class="banner_image" loading="lazy" alt="">
+												</div>
+											</div>
+										</div>
+										<style>   
+											{% if block.settings.tag_line_color!= blank %}
+												.banner .slide_container h6 { color: {{ block.settings.tag_line_color }};}
+											{% endif %}
+
+											{% if block.settings.banner_left_bk!= blank %}
+												.banner {background: {{ block.settings.banner_left_bk }}!important;}
+											{% endif %}
+											
+											{% if block.settings.tag_line_bk!= blank %}
+												.banner .slide_container h6 {background: {{ block.settings.tag_line_bk }};}
+											{% endif %}
+											
+											{% if block.settings.banner_title_color!= blank %}
+												.banner .slide_container h1 {color: {{ block.settings.banner_title_color }};}
+											{% endif %}
+											
+											{% if block.settings.banner_title_color!= blank %}								
+												.banner .slide_container p {color: {{ block.settings.banner_title_color }};}								 
+											{% endif %}
+												
+											{% if block.settings.banner_desc_color!= blank %}								
+												.banner .slide_container p {color: {{ block.settings.banner_desc_color }};}								 
+											{% endif %}
+
+											{% if block.settings.button_text_color!= blank %}
+												.banner .slide_container .btn-box a {color: {{ block.settings.button_text_color }};}
+											{% endif %}
+											
+											{% if block.settings.button_text_bk!= blank %}
+												.banner .slide_container .btn-box a {background: {{ block.settings.button_text_bk }};}
+											{% endif %}
+												
+											{% if block.settings.banner_button_radius!= blank %}
+												.banner .slide_container .btn-box a {border-radius: {{ block.settings.banner_button_radius }}px; }								 
+												.banner .slide_container .btn-box .hvr-sweep-to-right:before {border-radius:  {{ block.settings.banner_button_radius }}px;}								  
+											{% endif %}
+
+											{% if block.settings.hvr_button_text_bk!= blank %}
+												.banner .slide_container .btn-box .hvr-sweep-to-right:before {background:  {{ block.settings.hvr_button_text_bk }};}
+											{% endif %}
+											
+											{% if block.settings.hvr_button_text_color!= blank %}
+												.banner  .banner-left .btn-box a:hover{color:  {{ block.settings.hvr_button_text_color }};}
+											{% endif %}
+
+											{% if block.settings.button_border_color!= blank %}
+												.banner  .banner-left .btn-box a{border: 1px solid {{block.settings.button_border_color}};}
+											{% endif %}
+										</style>
+									</div>								
+							{% endcase %}
+						{% endfor %}
 				  	</div>
 				</div>
 			</div>
@@ -60,9 +147,11 @@ jQuery(document).ready(function($) {
 	 loop: false,
 	 margin: 0,
 	 dots:false,
-	 //autoplay:true,
+	 autoplay:false,
+	 nav:true,
 	 slideSpeed: 4000,
-	 autoPlaySpeed: 4000
+	 autoPlaySpeed: 4000,
+	 navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}} alt='right-arrow'></i></span>"]
   });
 });
 </script>
@@ -185,7 +274,129 @@ jQuery(document).ready(function($) {
 			  ]
 			}
 		]
-	}
+	}, 
+	{
+		"type": "split",
+		"name": "t:sections.main-slider.blocks.split.name",
+		"settings":[
+			{
+			   "type":"header",
+			   "content":"t:sections.main-slider.blocks.split.settings.header1.content"
+			},
+			{
+			   "type":"image_picker",
+			   "id":"image_desktop",
+			   "label":"t:sections.main-slider.blocks.split.settings.image_desktop.label",
+			   "info":"t:sections.main-slider.blocks.split.settings.image_desktop.info"
+			},
+			{
+			   "type":"header",
+			   "content":"t:sections.main-slider.blocks.split.settings.header2.content"
+			},
+			{
+			   "type":"color",
+			   "id":"banner_left_bk",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_left_bk.label"
+			},
+			{
+			   "type":"text",
+			   "id":"banner_tag_line",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_tag_line.label",
+			   "default":"Shop the latest collection"
+			},
+			{
+			   "type":"color",
+			   "id":"tag_line_color",
+			   "label":"t:sections.main-slider.blocks.split.settings.tag_line_color.label",
+			   "default":"#ffffff"
+			},
+			{
+			   "type":"color",
+			   "id":"tag_line_bk",
+			   "label":"t:sections.main-slider.blocks.split.settings.tag_line_bk.label",
+			   "default":"#47c1bf"
+			},
+			{
+			   "type":"text",
+			   "id":"banner_title",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_title.label",
+			   "default":"Summer Collection"
+			},
+			{
+			   "type":"color",
+			   "id":"banner_title_color",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_title_color.label",
+			   "default":"#003135"
+			},
+			{
+			   "type":"text",
+			   "id":"banner_desc",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_desc.label",
+			   "default":"Add Some Description Here"
+			},
+			{
+			   "type":"color",
+			   "id":"banner_desc_color",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_desc_color.label",
+			   "default":"#405352"
+			},
+			{
+			   "type":"header",
+			   "content":"t:sections.main-slider.blocks.split.settings.header3.content"
+			},
+			{
+			   "type":"text",
+			   "id":"button_text",
+			   "label":"t:sections.main-slider.blocks.split.settings.button_text.label",
+			   "default":"SHOP NOW"
+			},
+			{
+			   "type":"url",
+			   "id":"button_link",
+			   "label":"t:sections.main-slider.blocks.split.settings.button_link.label"
+			},
+			{
+			   "type":"color",
+			   "id":"button_border_color",
+			   "label":"t:sections.main-slider.blocks.split.settings.button_border_color.label",
+			   "default":"#47C1BF"
+			},
+			{
+			   "type":"color",
+			   "id":"button_text_color",
+			   "label":"t:sections.main-slider.blocks.split.settings.button_text_color.label",
+			   "default":"#ffffff"
+			},
+			{
+			   "type":"color",
+			   "id":"button_text_bk",
+			   "label":"t:sections.main-slider.blocks.split.settings.button_text_bk.label",
+			   "default":"#47c1bf"
+			},
+			{
+			   "type":"color",
+			   "id":"hvr_button_text_color",
+			   "label":"t:sections.main-slider.blocks.split.settings.hvr_button_text_color.label",
+			   "default":"#ffffff"
+			},
+			{
+			   "type":"color",
+			   "id":"hvr_button_text_bk",
+			   "label":"t:sections.main-slider.blocks.split.settings.hvr_button_text_bk.label",
+			   "default":"#003135"
+			},
+			{
+			   "type":"range",
+			   "id":"banner_button_radius",
+			   "min":0,
+			   "max":50,
+			   "step":1,
+			   "unit":"px",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_button_radius.label",
+			   "default":0
+			}
+		]
+	}	  
   ],
   "presets": [
     {
@@ -193,6 +404,9 @@ jQuery(document).ready(function($) {
       "blocks": [
         {
           "type": "slide"
+        },
+        {
+          "type": "split"
         }
       ]
     }

@@ -1,0 +1,44 @@
+<div class="side-menu">
+    <div class="inner-side">
+       <button class="close-btn">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 40 40">
+             <path d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z" class="layer"></path>
+          </svg>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto list-menu list-menu--inline">
+            {%- for link in section.settings.menu.links -%}
+             <li class="nav-item {% if link.links != blank %}dropdown{% endif %} {% if link.current %}active{% endif %}">
+                <a class="list-menu__item {% if link.links != blank %}toggle{% endif %}" href="{% if link.links != blank %}javascript:void(0){%else%}{{ link.url }}{% endif %}">{{link.title | escape | capitalize }}</a>
+                {%- if link.links != blank -%}
+                <ul class="inner child" style="display:none">
+                    {%- for childlink in link.links -%}
+                        <li>
+                            <a class="toggle-level" href="{{ childlink.url }}">{{ childlink.title | escape | captilize }}</a><span class="caret"></span>
+                            {%- if childlink.links != blank -%}
+                            <ul class="inner grandchild" style="display: none;">
+                                
+                                {%- for grandchildlink in childlink.links -%}
+                                <li>
+                                    <a href="{{ grandchildlink.url }}"><span>{{ grandchildlink.title | escape | captilize }}</span></a>
+                                </li>
+                                {%- endfor -%}
+                            </ul>
+                        {% endif %}
+                        </li>
+                    {%- endfor-%}	
+                </ul>
+                {% endif %}
+             </li>	
+            {%- endfor-%}
+          </ul>
+          <div class="navigation-close-mob" style="display:none;">
+             <a href="javascript:void(0)" title="close_navigation" class="close-btn">
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 40 40">
+                   <path d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z" class="layer"></path>
+                </svg>
+             </a>
+          </div>
+       </div>
+    </div>
+ </div>

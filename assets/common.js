@@ -149,6 +149,94 @@ $(document).ready(function(){
 	  });
 });
 
+///slide-nav///
+$('.list-menu__item.toggle').click(function(){
+	var $this = $(this);
+	if ($this.next().hasClass('show')) {
+	  setTimeout(function() {
+		$this.removeClass('open-menu-drop');
+	  }, 80);
+	  $this.next().removeClass('show');
+	  $this.next().slideUp(350);
+	} else {
+	  setTimeout(function() {
+		$this.addClass('open-menu-drop');
+	  }, 80);
+	  $this.parent().parent().find('li .inner').removeClass('show');
+	  $this.parent().parent().find('li .inner').slideUp(350);
+	  $this.next().toggleClass('show');
+	  $this.next().slideToggle(350);
+	}
+});
+  
+$('.toggle-level').click(function(){
+	var $this = $(this);
+	if ($this.next().hasClass('show')) {
+		setTimeout(function() {
+		$this.removeClass('open-menu-drop');
+		}, 70);
+		$this.next().removeClass('show');
+		$this.next().slideUp(350);
+	} else {
+		setTimeout(function() {
+		$this.addClass('open-menu-drop');
+		}, 70);
+		$this.parent().parent().find('li .inner').removeClass('show');
+		$this.parent().parent().find('li .inner').slideUp(350);
+		$this.next().toggleClass('show');
+		$this.next().slideToggle(350);
+	}
+});
+  
+
+//count timer//
+
+(function () {
+const second = 1000,
+		minute = second * 60,
+		hour = minute * 60,
+		day = hour * 24;
+
+		var eventdate = document.getElementById("eventDate");
+		if(eventdate) {
+			const myArr = eventdate.value.split("/");
+			let _day = myArr[0];
+			let _month = myArr[1];
+			let _year = myArr[2];
+			let _date = _month+" "+_day+","+_year+" 00:00:00";
+			countDown = new Date(_date).getTime();
+			if(isNaN(countDown)){
+				if(Shopify.designMode){
+					alert('Incorrect Date or Date Format');
+				}
+				return false;
+			}
+			x = setInterval(function() {    
+
+				let now = new Date().getTime(),
+				distance = countDown - now;
+				if(distance > 0){
+					document.getElementsByClassName("announcement-bar")[0].classList.remove('hidden');
+					var leftDays = Math.floor(distance / (day));
+					if(leftDays > 0){
+						document.getElementById("dayHours").textContent= 'Days';
+					}
+					else{
+						document.getElementById("dayHours").textContent = 'Hours';
+					}
+					document.getElementById("days").innerText = leftDays,
+					document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+					document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+					document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+				}
+				else{
+					document.getElementsByClassName("announcement-bar")[0].classList.add('hidden');
+					clearInterval(x);
+				}
+			}, 0)
+		}
+}());
+
 $(document).on("click", function(event){
 	var $trigger = $(".quality-select");
 	if($trigger !== event.target && !$trigger.has(event.target).length){
