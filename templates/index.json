@@ -17,11 +17,22 @@
             "info_position": "center-left",
             "info_alignment": "left"
           }
+        },        
+        "split": {
+          "type": "split",
+          "settings": {
+          }
         }
       },
       "block_order": [
-        "slide"
+        "slide",
+        "split"
       ],
+      "settings": {
+      }
+    },
+    "video-banner": {
+      "type": "video-banner",
       "settings": {
       }
     },
@@ -280,6 +291,7 @@
   },
   "order": [
     "slider",
+    "video-banner",
     "offer-section",
     "collection-list",
     "featured-collection",

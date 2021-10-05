@@ -213,27 +213,92 @@
     },
     "main-slider": {
       "name": "Slider",
+      "settings": {
+        "rotate":{
+          "label":"Enable Auto Rotate"
+        },
+        "arrows":{
+          "label":"Enable Arrows"
+        },
+        "rotate_speed":{
+          "label":"Auto Rotate Speed"
+        }
+      },
       "blocks": {
         "slide": {
           "name": "Slide",
           "settings": {
+            "header1": {
+              "content": "Heading"
+            },
+            "header2": {
+              "content": "Sub Heading"
+            },
+            "header3": {
+              "content": "Highlighted Text"
+            },
+            "header4": {
+              "content": "Description"
+            },
+            "header5": {
+              "content": "Button"
+            },
+            "header6": {
+              "content": "Background and Content Style"
+            },
             "heading": {
               "label": "Heading"
+            },
+            "h_text": {
+              "label": "Text Color"
+            },
+            "h_bg": {
+              "label": "Text Background Color"
             },
             "subheading": {
               "label": "Sub Heading"
             },
+            "sh_text": {
+              "label": "Text Color"
+            },
+            "sh_bg": {
+              "label": "Text Background Color"
+            },
             "content": {
               "label": "Content"
             },
+            "c_text": {
+              "label": "Text Color"
+            },
+            "c_bg": {
+              "label": "Text Background Color"
+            },
             "sale": {
               "label": "Highlight Text"
+            },
+            "sale_text": {
+              "label": "Text Color"
+            },
+            "sale_bg": {
+              "label": "Text Background Color"
             },
             "btn": {
               "label": "Button Text"
             },
             "link": {
               "label": "Button Link"
+            },
+            "btn_bg": {
+              "label": "Button Background Color"
+            },
+            "btn_text": {
+              "label": "Button Text Color"
+            },
+            "btn_h_bg": {
+              "label": "Button Hover Background Color"
+            },
+            "btn_h_text": {
+              "label": "Button Hover Text Color"
             },
             "image": {
               "label": "Image"
@@ -619,6 +684,9 @@
         },
         "fontcolor": {
           "label": "Font Color"
+        },
+        "show_second_image": {
+          "label": "Change Image on Hover"
         }
       },
       "presets": {
@@ -750,7 +818,7 @@
         }
       },
       "presets": {
-        "name": "Instagram Feed"
+        "name": "Featured Product"
       }
     },
     "product-template": {

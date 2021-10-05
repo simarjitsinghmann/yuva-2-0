@@ -124,6 +124,13 @@
       "label": "t:sections.header.settings.menu.label"
     },
     {
+      "type": "checkbox",
+      "id": "megamenu",
+      "default": false,
+      "label": "Enable Mega Menu",
+      "info": "For Mega Menu, Add Blocks in the Header"
+    },
+    {
       "type": "link_list",
       "id": "menu2",
       "default": "main-menu",
@@ -156,6 +163,248 @@
       "label": "t:sections.header.settings.enable_sticky_header.label",
       "info": "t:sections.header.settings.enable_sticky_header.info"
     }
+  ],
+  "blocks": [
+      {
+        "type":"no-dropdown",
+        "name":"No Dropdown",
+        "settings": [
+          {
+              "type": "text",
+              "id": "heading",
+              "label": "Heading"
+          },
+          {
+              "type": "url",
+              "id": "link",
+              "label": "Heading Link"
+          }
+        ]
+      },
+      {
+        "type":"mutli-column",
+        "name":"Multi Column Dropdown",
+        "settings": [
+          {
+              "type": "text",
+              "id": "heading",
+              "label": "Heading"
+          },
+          {
+              "type": "url",
+              "id": "link",
+              "label": "Heading Link"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Dropdown Width",
+            "default": "full",
+            "options": [
+              {
+                "label": "Full Width",
+                "value": "full"
+              },
+              {
+                "label": "Auto Width",
+                "value": "auto"
+              }
+            ]
+          },
+          {
+              "type": "header",
+              "content": "Column 1"
+          },
+          {
+              "type": "text",
+              "id": "c_heading1",
+              "label": "Title"
+          },
+          {
+              "type": "link_list",
+              "id": "c_link1",
+              "label": "Menu"
+          },
+          {
+              "type": "header",
+              "content": "Column 2"
+          },
+          {
+              "type": "text",
+              "id": "c_heading2",
+              "label": "Title"
+          },
+          {
+              "type": "link_list",
+              "id": "c_link2",
+              "label": "Menu"
+          },
+          {
+              "type": "header",
+              "content": "Column 3"
+          },
+          {
+              "type": "text",
+              "id": "c_heading3",
+              "label": "Title"
+          },
+          {
+              "type": "link_list",
+              "id": "c_link3",
+              "label": "Link"
+          },
+          {
+              "type": "header",
+              "content": "Column 4"
+          },
+          {
+              "type": "text",
+              "id": "c_heading4",
+              "label": "Title"
+          },
+          {
+              "type": "link_list",
+              "id": "c_link4",
+              "label": "Menu"
+          },
+          {
+              "type": "header",
+              "content": "Column 5"
+          },
+          {
+              "type": "text",
+              "id": "c_heading5",
+              "label": "Title"
+          },
+          {
+              "type": "link_list",
+              "id": "c_link5",
+              "label": "Menu"
+          },
+          {
+              "type": "header",
+              "content": "Column 6"
+          },
+          {
+              "type": "text",
+              "id": "c_heading6",
+              "label": "Title"
+          },
+          {
+              "type": "link_list",
+              "id": "c_link6",
+              "label": "Menu"
+          }
+        ]
+      },
+      {
+        "type":"mc-image",
+        "name":"Multi Column with Image",
+        "settings": [
+          {
+              "type": "text",
+              "id": "heading",
+              "label": "Heading"
+          },
+          {
+              "type": "url",
+              "id": "link",
+              "label": "Heading Link"
+          },
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Dropdown Width",
+            "default": "full",
+            "options": [
+              {
+                "label": "Full Width",
+                "value": "full"
+              },
+              {
+                "label": "Auto Width",
+                "value": "auto"
+              }
+            ]
+          },
+          {
+              "type": "header",
+              "content": "Column 1"
+          },
+          {
+              "type": "text",
+              "id": "c_heading1",
+              "label": "Title"
+          },
+          {
+              "type": "link_list",
+              "id": "c_link1",
+              "label": "Menu"
+          },
+          {
+              "type": "header",
+              "content": "Column 2"
+          },
+          {
+              "type": "text",
+              "id": "c_heading2",
+              "label": "Title"
+          },
+          {
+              "type": "link_list",
+              "id": "c_link2",
+              "label": "Menu"
+          },
+          {
+              "type": "header",
+              "content": "Column 3"
+          },
+          {
+              "type": "text",
+              "id": "c_heading3",
+              "label": "Title"
+          },
+          {
+              "type": "link_list",
+              "id": "c_link3",
+              "label": "Menu"
+          },
+          {
+              "type": "header",
+              "content": "Column 4"
+          },
+          {
+              "type": "text",
+              "id": "c_heading4",
+              "label": "Title"
+          },
+          {
+              "type": "link_list",
+              "id": "c_link4",
+              "label": "Menu"
+          },
+          {
+              "type": "header",
+              "content": "Image"
+          },
+          {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+          },
+          {
+              "type": "url",
+              "id": "image_link",
+              "label": "Image Link"
+          },
+          {
+            "type": "checkbox",
+            "id": "img_style",
+            "label": "Show Space Around Image",
+            "default": true
+          }
+        ]
+      }
   ]
 }
 {% endschema %}

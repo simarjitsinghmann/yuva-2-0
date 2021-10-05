@@ -116,6 +116,13 @@ $(document).ready(function(){
 		$(this).find(".currency-menu").slideToggle("fast");
 		$('.currency-menu').css({"display": "block"});
 	});
+
+	// var results = $(".card-wrapper-img").find(".fdsf");
+	// if(results.length > 1){
+	// 	$(this).prev().addClass('sdfds');
+	// }else{
+	// 	alert('not there');
+	// } 
 	
 	///WISHLIST-IMG-FILL///
 	$('.product__view__option').click(function(){

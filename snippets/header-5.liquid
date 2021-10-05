@@ -105,7 +105,7 @@
                         <ul class="navbar-nav mr-auto list-menu list-menu--inline left-side">							
                             {%- for link in section.settings.menu.links -%}
                             <li class="nav-item {% if link.current %}active{% endif %}">
-                                <a class="list-menu__item" href="{{ link.url }}">{{link.title | escape | capitalize }}</a>                                
+                                <a class="list-menu__item" href="{{ link.url }}">{{link.title | split:"{badge" | first | escape | capitalize }}</a>                                
                                 {%- if link.links != blank -%}
                                 <div class="sub-menu">
                                     <div class="site-nav-dropdown">
@@ -115,16 +115,16 @@
                                                     {%- for childlink in link.links -%}
                                                     <div class="sub-menu-list">
                                                         <div class="menu-mb-title">
-                                                            <span><a href="{{ childlink.url }}">{{ childlink.title | escape | captilize }}</a></span>
+                                                            <span>{%- unless childlink.links != blank -%}<a href="{{ childlink.url }}">{% endunless %}{{ childlink.title | split:"{badge" | first | escape | captilize }}{%- unless childlink.links != blank -%}</a>{% endunless %}</span>
                                                         </div>
                                                         {%- if childlink.links != blank -%}
                                                         <ul class="site-nav-dropdown">
                                                             <li class="menu-lv-3 hide_pc">
-                                                                <a href="{{ childlink.url }}"><span>{{ childlink.title | escape | captilize }}</span></a>
+                                                                <a href="{{ childlink.url }}"><span>{{ childlink.title | split:"{badge" | first | escape | captilize }}</span></a>
                                                             </li>
                                                             {%- for grandchildlink in childlink.links -%}
                                                             <li class="menu-lv-3">
-                                                                <a href="{{ grandchildlink.url }}"><span>{{ grandchildlink.title | escape | captilize }}</span></a>
+                                                                <a href="{{ grandchildlink.url }}"><span>{{ grandchildlink.title | split:"{badge" | first | escape | captilize }}</span></a>
                                                             </li>
                                                             {%- endfor -%}
                                                         </ul>
@@ -163,7 +163,7 @@
                     <ul class="navbar-nav mr-auto list-menu list-menu--inline right-side">							
                         {%- for link in section.settings.menu2.links -%}
                         <li class="nav-item {% if link.current %}active{% endif %}">
-                            <a class="list-menu__item" href="{{ link.url }}">{{link.title | escape | capitalize }}</a>                                
+                            <a class="list-menu__item" href="{{ link.url }}">{{link.title | split:"{badge" | first | escape | capitalize }}</a>                                
                             {%- if link.links != blank -%}
                             <div class="sub-menu">
                                 <div class="site-nav-dropdown">
@@ -173,16 +173,16 @@
                                                 {%- for childlink in link.links -%}
                                                 <div class="sub-menu-list">
                                                     <div class="menu-mb-title">
-                                                        <span><a href="{{ childlink.url }}">{{ childlink.title | escape | captilize }}</a></span>
+                                                        <span>{%- unless childlink.links != blank -%}<a href="{{ childlink.url }}">{% endunless %}{{ childlink.title | split:"{badge" | first | escape | captilize }}{%- unless childlink.links != blank -%}</a>{% endunless %}</span>
                                                     </div>
                                                     {%- if childlink.links != blank -%}
                                                     <ul class="site-nav-dropdown">
                                                         <li class="menu-lv-3 hide_pc">
-                                                            <a href="{{ childlink.url }}"><span>{{ childlink.title | escape | captilize }}</span></a>
+                                                            <a href="{{ childlink.url }}"><span>{{ childlink.title | split:"{badge" | first | escape | captilize }}</span></a>
                                                         </li>
                                                         {%- for grandchildlink in childlink.links -%}
                                                         <li class="menu-lv-3">
-                                                            <a href="{{ grandchildlink.url }}"><span>{{ grandchildlink.title | escape | captilize }}</span></a>
+                                                            <a href="{{ grandchildlink.url }}"><span>{{ grandchildlink.title | split:"{badge" | first | escape | captilize }}</span></a>
                                                         </li>
                                                         {%- endfor -%}
                                                     </ul>

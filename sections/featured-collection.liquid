@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="best__for__you shopify__top__section">
+        <div class="best__for__you shopify__top__section text__center">
             <small>All Products</small>
             <h4>See the latest!</h4>
             {% if section.settings.collection != blank %}
@@ -19,6 +19,21 @@
         </div>
     </div>
 </div>
+<style>
+ .product__on__sale {
+    background: url(//cdn.shopify.com/s/files/1/0597/9668/5009/t/7/assets/badge-bg.svg?v=10910737147684277171);
+    width: 55px;
+    height: 20px;
+    background-size: 55px;
+    background-repeat: no-repeat;
+    padding-left: 9px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-top: 2px;
+    font-weight: var(--medium);
+}
+</style>
 {% schema %}
 {
   "name": "t:sections.featured-collection.name",
@@ -59,6 +74,12 @@
         "step": 1,
         "label": "t:sections.featured-collection.settings.row_size.label",
         "default": 2
+    },
+    {
+      "type": "checkbox",
+      "id": "show_second_image",
+      "default": false,
+      "label": "t:sections.featured-collection.settings.show_second_image.label"
     }
   ],
   "presets": [

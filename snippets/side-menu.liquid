@@ -9,18 +9,22 @@
           <ul class="navbar-nav mr-auto list-menu list-menu--inline">
             {%- for link in section.settings.menu.links -%}
              <li class="nav-item {% if link.links != blank %}dropdown{% endif %} {% if link.current %}active{% endif %}">
-                <a class="list-menu__item {% if link.links != blank %}toggle{% endif %}" href="{% if link.links != blank %}javascript:void(0){%else%}{{ link.url }}{% endif %}">{{link.title | escape | capitalize }}</a>
+                <a class="list-menu__item {% if link.links != blank %}toggle{% endif %}" href="{% if link.links != blank %}javascript:void(0){%else%}{{ link.url }}{% endif %}">{{link.title | split:"{badge" | first | escape | capitalize }}</a>
                 {%- if link.links != blank -%}
                 <ul class="inner child" style="display:none">
                     {%- for childlink in link.links -%}
                         <li>
-                            <a class="toggle-level" href="{{ childlink.url }}">{{ childlink.title | escape | captilize }}</a><span class="caret"></span>
+                           {% assign childlink_url = childlink.url %}
+                           {% if childlink.links != blank %}
+                              {% assign childlink_url = 'javascript:void(0)'%}
+                           {% endif%}
+                            <a class="toggle-level" href="{{ childlink_url }}">{{ childlink.title | split:"{badge" | first | escape | captilize }}</a><span class="caret"></span>
                             {%- if childlink.links != blank -%}
                             <ul class="inner grandchild" style="display: none;">
                                 
                                 {%- for grandchildlink in childlink.links -%}
                                 <li>
-                                    <a href="{{ grandchildlink.url }}"><span>{{ grandchildlink.title | escape | captilize }}</span></a>
+                                    <a href="{{ grandchildlink.url }}"><span>{{ grandchildlink.title | split:"{badge" | first | escape | captilize }}</span></a>
                                 </li>
                                 {%- endfor -%}
                             </ul>
