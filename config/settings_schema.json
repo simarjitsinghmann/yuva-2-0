@@ -8,6 +8,100 @@
     "theme_support_url": "https://shinedezigninfonet.com/about"
   },
   {
+    "name": "t:settings_schema.search.name",
+    "settings": [
+      {
+        "type": "select",
+        "id": "search_style",
+        "default": "full",
+        "label": "t:settings_schema.search.settings.search_style.label",
+        "info": "t:settings_schema.search.settings.search_style.info",
+        "options":[
+          {
+            "value":"full",
+            "label":"t:settings_schema.search.settings.search_style.full.label"
+          },
+          {
+            "value":"auto",
+            "label":"t:settings_schema.search.settings.search_style.auto.label"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.newsletter-popup.name",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "newsletter_pop_enable",
+        "label": "t:settings_schema.newsletter-popup.settings.newsletter_pop_enable.label",
+        "default": false
+      },
+      {
+        "type": "image_picker",
+        "id": "newsletter_left_image",
+        "label": "t:settings_schema.newsletter-popup.settings.newsletter_left_image.label",
+        "info": "t:settings_schema.newsletter-popup.settings.newsletter_left_image.info"
+      },
+      {
+        "type": "html",
+        "id": "newsletter_heading",
+        "label": "t:settings_schema.newsletter-popup.settings.newsletter_heading.label",
+        "default": "SUMMER <span>SALE<\/span>"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_subheading",
+        "label": "t:settings_schema.newsletter-popup.settings.newsletter_subheading.label",
+        "default": "50% OFF"
+      },
+      {
+        "type": "html",
+        "id": "newsletter_description",
+        "label": "t:settings_schema.newsletter-popup.settings.newsletter_description.label",
+        "default": "<h6>Don’t Miss Out<\/h6><p>Stay In The Know About The Latest Arrivals, Sales, Events, And More<\/p>"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.newsletter-popup.settings.header1.content"
+      },
+      {
+        "type": "color",
+        "id": "newsletter_heading_color",
+        "label": "t:settings_schema.newsletter-popup.settings.newsletter_heading_color.label",
+        "default": "#646464"
+      },
+      {
+        "type": "color",
+        "id": "newsletter_subheading_color",
+        "label": "t:settings_schema.newsletter-popup.settings.newsletter_subheading_color.label",
+        "default": "#323030"
+      },
+      {
+        "type": "color",
+        "id": "newsletter_description_color",
+        "label": "t:settings_schema.newsletter-popup.settings.newsletter_description_color.label",
+        "default": "#323030"
+      },
+      {
+        "type": "color",
+        "id": "newsletter_bk",
+        "label": "t:settings_schema.newsletter-popup.settings.newsletter_bk.label",
+        "default": "#ffffff"
+      },
+      {
+        "type": "range",
+        "id": "popup_cookie",
+        "min": 1,
+        "max": 30,
+        "step": 1,
+        "label": "t:settings_schema.newsletter-popup.settings.popup_cookie.label",
+        "default": 1
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.colors.name",
     "settings": [
       {

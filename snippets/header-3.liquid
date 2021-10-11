@@ -14,7 +14,7 @@
                 <form class="form-inline mt-2 mt-md-0">
                     <div class="header__icons">
                         {% if section.settings.show_search %}
-                        <div class="search-form">
+                        <div class="search-form" data-search-drawer="{% if settings.search_style == 'full' %}addsearch{% elsif settings.search_style == 'auto' %}small_search{% endif %}">
 
                             <input type="hidden" name="q" placeholder="Search.." class="input-group-field header-search__input">
                             <a class="btn icon-search">
@@ -94,6 +94,11 @@
                         {% endif %}
                     </div>
                 </form>
+                {% if section.settings.show_search %}
+                {% if settings.search_style == 'auto' %}
+                {% include 'search-drawer' %}
+                {% endif %}
+                {% endif %}
             </div>
         </div>
     </div>
@@ -110,7 +115,8 @@
                     </button>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mr-auto list-menu list-menu--inline">							
+                    <ul class="navbar-nav mr-auto list-menu list-menu--inline">	
+                        {% unless section.blocks.size > 0 and section.settings.megamenu %}							
                         {%- for link in section.settings.menu.links -%}
                         <li class="nav-item {% if link.current %}active{% endif %}">
                             <a class="list-menu__item" href="{{ link.url }}">{{link.title | split:"{badge" | first | escape | capitalize }}</a>                                
@@ -148,6 +154,9 @@
                             {%- endif -%}
                         </li>
                         {%- endfor-%}
+                        {% else %}                        
+                        {% render 'mega-menu' sectin:section %}
+                    {% endunless %}
                     </ul>
                     <div class="navigation-close-mob" style="display:none;">
                         <a href="javascript:void(0)" title="close_navigation" class="close-btn">

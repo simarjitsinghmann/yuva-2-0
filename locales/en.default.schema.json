@@ -1092,5 +1092,61 @@
         }
       }
     }
+  },
+  "settings_schema": {
+    "search": {
+      "name": "Search",
+      "settings": {
+        "search_style": {
+          "label": "Search Drawer Style",
+          "info": "Change the Style of the search drawer",
+          "full": {
+            "label": "Full Width"
+          },
+          "auto": {
+            "label":"Small Width"
+          }
+        }
+      }
+    },
+    "newsletter-popup": {
+      "name": "Newsletter Popup",
+      "settings": {
+        "newsletter_pop_enable": {
+          "label": "Enable Newsletter Popup"
+        },
+        "newsletter_left_image": {
+          "label": "Image",
+          "info": "Image should be 401 x 503px"
+        },
+        "newsletter_heading": {
+          "label": "Heading"
+        },
+        "newsletter_subheading": {
+          "label": "Subheading"
+        },
+        "newsletter_description": {
+          "label": "Description"
+        },
+        "header1": {
+          "content": "Colors"
+        },
+        "newsletter_heading_color": {
+          "label": "Heading color"
+        },
+        "newsletter_subheading_color": {
+          "label": "Subheading color"
+        },
+        "newsletter_description_color": {
+          "label": "Description color"
+        },
+        "newsletter_bk": {
+          "label": "Popup background"
+        },
+        "popup_cookie": {
+          "label": "Set cookie for newsletter popup(days)"
+        }
+      }
+    }
   }
 }

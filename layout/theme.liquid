@@ -70,7 +70,7 @@
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
 
-    <script src="{{'jquery.min.js' | asset_url}}" ></script> 
+    <script src="{{'vendor.js' | asset_url}}" ></script> 
 
     <script src="{{'owl.carousel.js' | asset_url}}" defer="defer"></script> 
 
@@ -101,9 +101,9 @@
       {% section 'footer' %}
 
       {% include 'mini-cart' %}
-
+      {% if settings.search_style == 'full' %}
       {% include 'search-drawer' %}
-
+      {% endif %}
       {% render 'similar-products'%}
 
       {% if shop.customer_accounts_enabled %} 
@@ -121,7 +121,7 @@
       <div class="wrapper-overlay" style="display: none;"></div>
 
     </div>
-
+    {% render 'newsletter-popup'%}
   <script src="https://cdn.jsdelivr.net/npm/owl.carousel2.thumbs@0.1.8/dist/owl.carousel2.thumbs.min.js" defer="defer"></script>
 
   </body>

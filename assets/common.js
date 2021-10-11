@@ -90,10 +90,12 @@ $(document).ready(function(){
 		
 	///search-top//
 	$('.search-form').click(function(){
-		$('body').toggleClass('addsearch');
+		var _class=$(this).data('search-drawer');
+		$('body').toggleClass(_class);
 	});
 	$('.HeaderProClose').click(function(){
 		$("body").removeClass("addsearch");
+		$("body").removeClass("small_search");
 	});
 	
 	
@@ -290,4 +292,19 @@ jQuery('.quantity').each(function() {
 		spinner.find("input").val(newVal);
 		spinner.find("input").trigger("change");
 	});
+});
+
+var mouse_is_inside = false;
+
+$(document).ready(function()
+{
+    $('.search-bar-container,.search-form').hover(function(){ 
+        mouse_is_inside=true; 
+    }, function(){ 
+        mouse_is_inside=false; 
+    });
+
+    $("body").mouseup(function(){ 
+        if(! mouse_is_inside) $('body').removeClass('addsearch').removeClass('small_search');
+    });
 });

@@ -51,12 +51,11 @@
   <script>
     $(document).ready(function(){
       var recomend = setInterval(function(){
-        console.log($('.recent-product-slide'))
         if($('.recent-product-slide').length > 0 ){
           $('.recent-product-slide').owlCarousel({
             center: false,
-            items: 1,
-            loop: true,
+            items: 6,
+            loop: false,
             margin: 26,
             dots:false,
             slideSpeed: 1200,

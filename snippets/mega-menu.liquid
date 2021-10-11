@@ -1,6 +1,25 @@
-{% for block in section.blocks %}
+{% if limit %}
+{% assign custom_limit = limit %}
+{% else %}
+{% assign custom_limit = 20 %}
+{% endif %}
+{% if offset %}
+{% assign custom_offset = offset %}
+{% else %}
+{% assign custom_offset = 0 %}
+{% endif %}
+{% for block in section.blocks limit:custom_limit  offset:custom_offset%}
     {% if block.settings.heading != blank %}
-        <li class="nav-item {% if block.settings.width == 'auto' %}menu-item--no-mega{% endif %}">
+        
+        {% assign dropMenuCount = 0 %}
+        {% for i in (1..6) %}
+            {% assign dropMenu = 'c_link' | append:i %}
+            {% if block.settings[dropMenu] != blank %}
+                {% assign dropDown = true%}
+                {% assign dropMenuCount = dropMenuCount | plus: 1 %}
+            {% endif %}
+        {% endfor %}
+        <li class="nav-item {% if block.type != 'no-dropdown' and dropDown %}dropdown{% endif %} {% if block.settings.width == 'auto' %}menu-item--no-mega{% endif %}">
             <a class="list-menu__item" href="{{ block.settings.link }}">
                 {{block.settings.heading | escape | capitalize }}
                 {% if block.type != 'no-dropdown' %}
@@ -10,15 +29,7 @@
                         </svg>
                     </span>
                 {% endif %}
-            </a>           
-            {% assign dropMenuCount = 0 %}
-            {% for i in (1..6) %}
-                {% assign dropMenu = 'c_link' | append:i %}
-                {% if block.settings[dropMenu] != blank %}
-                    {% assign dropDown = true%}
-                    {% assign dropMenuCount = dropMenuCount | plus: 1 %}
-                {% endif %}
-            {% endfor %}
+            </a>       
             {% if block.type != 'no-dropdown' and dropDown %}
                 {% if block.settings.width == 'full' %}
                     <div class="sub-menu">

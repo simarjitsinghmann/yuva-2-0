@@ -95,14 +95,15 @@
     <div class="container">
         <div class="row">
             <div class="navbar navbar-expand-md header__inline-menu" role="navigation" id="nav_style_5">
-                {%- if section.settings.menu != blank -%}
+                {%- if section.settings.menu != blank or section.blocks.size > 0 -%}
                     <div class="nav__btn">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="navbar-nav mr-auto list-menu list-menu--inline left-side">							
+                        <ul class="navbar-nav mr-auto list-menu list-menu--inline left-side">	
+                            {% unless section.blocks.size > 0 and section.settings.megamenu %}							
                             {%- for link in section.settings.menu.links -%}
                             <li class="nav-item {% if link.current %}active{% endif %}">
                                 <a class="list-menu__item" href="{{ link.url }}">{{link.title | split:"{badge" | first | escape | capitalize }}</a>                                
@@ -140,6 +141,9 @@
                                 {%- endif -%}
                             </li>
                             {%- endfor-%}
+                            {% else %}                        
+                            {% render 'mega-menu' sectin:section ,limit:4 ,offset: 0 %}
+                        {% endunless %}
                         </ul>
                         <div class="navigation-close-mob" style="display:none;">
                             <a href="javascript:void(0)" title="close_navigation" class="close-btn">
@@ -158,9 +162,10 @@
                         <span class="h2">{{ shop.name }}</span>
                         {% endif %}
                     </a>
-                {%- if section.settings.menu2 != blank -%}
+                {%- if section.settings.menu2 != blank or section.blocks.size > 4  -%}
                 <div class="collapse navbar-collapse  right-sided" id="navbarCollapse">
-                    <ul class="navbar-nav mr-auto list-menu list-menu--inline right-side">							
+                    <ul class="navbar-nav mr-auto list-menu list-menu--inline right-side">
+                        {% unless section.blocks.size > 4 and section.settings.megamenu %}								
                         {%- for link in section.settings.menu2.links -%}
                         <li class="nav-item {% if link.current %}active{% endif %}">
                             <a class="list-menu__item" href="{{ link.url }}">{{link.title | split:"{badge" | first | escape | capitalize }}</a>                                
@@ -198,6 +203,9 @@
                             {%- endif -%}
                         </li>
                         {%- endfor-%}
+                        {% else %}                        
+                        {% render 'mega-menu' sectin:section ,offset: 4 %}
+                        {% endunless %}
                     </ul>
                     <div class="navigation-close-mob" style="display:none;">
                         <a href="javascript:void(0)" title="close_navigation" class="close-btn">
