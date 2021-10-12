@@ -12,10 +12,72 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "771dd9da-66b7-418e-b03f-e6b60fddac64": {
+            "type": "no-dropdown",
+            "settings": {
+              "heading": "Home",
+              "link": "#"
+            }
+          },
+          "70c81fce-aafb-4138-afe5-8087e299280e": {
+            "type": "no-dropdown",
+            "settings": {
+              "heading": "About Us",
+              "link": "#"
+            }
+          },
+          "e502872b-9399-46cf-998d-ea6deaa8ee24": {
+            "type": "mutli-column",
+            "settings": {
+              "heading": "Catalogs",
+              "link": "#",
+              "c_heading1": "",
+              "c_link1": "",
+              "c_heading2": "",
+              "c_link2": "",
+              "c_heading3": "",
+              "c_link3": "",
+              "c_heading4": "",
+              "c_link4": "",
+              "c_heading5": "",
+              "c_link5": "",
+              "c_heading6": "",
+              "c_link6": ""
+            }
+          },
+          "cdc40a84-f4da-4ada-ba48-d04f636177ef": {
+            "type": "mc-image",
+            "settings": {
+              "heading": "Blogs",
+              "link": "#",
+              "c_heading1": "",
+              "c_link1": "",
+              "c_heading2": "",
+              "c_link2": "",
+              "c_heading3": "",
+              "c_link3": "",
+              "c_heading4": "",
+              "c_link4": "",
+              "image_link": "",
+              "img_style": true
+            }
+          }
+        },
+        "block_order": [
+          "771dd9da-66b7-418e-b03f-e6b60fddac64",
+          "70c81fce-aafb-4138-afe5-8087e299280e",
+          "e502872b-9399-46cf-998d-ea6deaa8ee24",
+          "cdc40a84-f4da-4ada-ba48-d04f636177ef"
+        ],
         "settings": {
+          "header_style": "header1",
           "logo": "shopify:\/\/shop_images\/logo.png",
           "logo_width": 250,
           "menu": "main-menu",
+          "megamenu": false,
+          "menu2": "main-menu",
+          "top_message": "Welcome to Our Shopping Website",
           "show_search": true,
           "show_currency": true,
           "enable_sticky_header": true
@@ -65,6 +127,14 @@
         "settings": {
           "enable_language_selector": true,
           "payment_enable": true
+        }
+      },
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "show_bar": true,
+          "auto_rotate": false,
+          "show_close": true
         }
       }
     },
