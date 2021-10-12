@@ -43,7 +43,7 @@
             "banner_desc_color": "#405352",
             "button_text": "SHOP NOW",
             "button_link": "",
-            "button_border_color": "#47C1BF",
+            "button_border_color": "#47c1bf",
             "button_text_color": "#ffffff",
             "button_text_bk": "#47c1bf",
             "hvr_button_text_color": "#ffffff",
@@ -205,6 +205,46 @@
         "show_second_image": false
       }
     },
+    "1634038735de36515c": {
+      "type": "slider",
+      "blocks": {
+        "1634038735de36515c-0": {
+          "type": "slide",
+          "settings": {
+            "heading": "Heading",
+            "h_bg": "",
+            "h_text": "#000000",
+            "subheading": "Sub Heading",
+            "sh_bg": "#000000",
+            "sh_text": "#ffffff",
+            "sale": "Sale 40%",
+            "sale_bg": "",
+            "sale_text": "#f17e35",
+            "content": "content",
+            "c_bg": "",
+            "c_text": "#000000",
+            "btn": "Explore Now",
+            "link": "",
+            "btn_bg": "#f17e35",
+            "btn_text": "#ffffff",
+            "btn_h_bg": "#000000",
+            "btn_h_text": "#ffffff",
+            "image": "shopify:\/\/shop_images\/daily-offer.jpg",
+            "bgcolor": "",
+            "info_position": "center-right",
+            "info_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "1634038735de36515c-0"
+      ],
+      "settings": {
+        "rotate": false,
+        "arrows": false,
+        "rotate_speed": 2
+      }
+    },
     "featured-blog": {
       "type": "featured-blog",
       "settings": {
@@ -331,46 +371,6 @@
         "bgcolor": "#efedeb",
         "textcolor": "#000000"
       }
-    },
-    "1634038735de36515c": {
-      "type": "slider",
-      "blocks": {
-        "1634038735de36515c-0": {
-          "type": "slide",
-          "settings": {
-            "heading": "Heading",
-            "h_bg": "",
-            "h_text": "#000000",
-            "subheading": "Sub Heading",
-            "sh_bg": "#000000",
-            "sh_text": "#ffffff",
-            "sale": "Sale 40%",
-            "sale_bg": "",
-            "sale_text": "#f17e35",
-            "content": "content",
-            "c_bg": "",
-            "c_text": "#000000",
-            "btn": "Explore Now",
-            "link": "",
-            "btn_bg": "#f17e35",
-            "btn_text": "#ffffff",
-            "btn_h_bg": "#000000",
-            "btn_h_text": "#ffffff",
-            "image": "shopify:\/\/shop_images\/daily-offer.jpg",
-            "bgcolor": "",
-            "info_position": "center-right",
-            "info_alignment": "left"
-          }
-        }
-      },
-      "block_order": [
-        "1634038735de36515c-0"
-      ],
-      "settings": {
-        "rotate": false,
-        "arrows": false,
-        "rotate_speed": 2
-      }
     }
   },
   "order": [
@@ -379,10 +379,10 @@
     "offer-section",
     "collection-list",
     "featured-collection",
+    "1634038735de36515c",
     "featured-blog",
     "testimonials",
     "instagram",
-    "multicolumn-content",
-    "1634038735de36515c"
+    "multicolumn-content"
   ]
 }
