@@ -8,6 +8,12 @@
 		max-width: 95%;
 	}
 	}
+	@media only screen and (max-width:1650px){
+		#nav_style_5 .navbar-nav .nav-item {
+			padding: 0 10px;
+		}
+
+	}
 	@media only screen and (max-width:1500px){
 	.search-bar-container .search-bar-box .AjaxSearchResponse .results-box .leftsearch a.searc-item-box .img {
 		height: 200px;
