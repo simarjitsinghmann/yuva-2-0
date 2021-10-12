@@ -7,20 +7,48 @@
           "type": "slide",
           "settings": {
             "heading": "Heading",
+            "h_bg": "",
+            "h_text": "#000000",
             "subheading": "Sub Heading",
+            "sh_bg": "#000000",
+            "sh_text": "#ffffff",
             "sale": "Sale 40%",
+            "sale_bg": "",
+            "sale_text": "#f17e35",
             "content": "content",
+            "c_bg": "",
+            "c_text": "#000000",
             "btn": "Explore Now",
             "link": "",
+            "btn_bg": "#f17e35",
+            "btn_text": "#ffffff",
+            "btn_h_bg": "#000000",
+            "btn_h_text": "#ffffff",
             "image": "shopify:\/\/shop_images\/banner-img3.jpg",
             "bgcolor": "",
             "info_position": "center-left",
             "info_alignment": "left"
           }
-        },        
+        },
         "split": {
           "type": "split",
           "settings": {
+            "banner_left_bk": "",
+            "banner_tag_line": "Shop the latest collection",
+            "tag_line_color": "#ffffff",
+            "tag_line_bk": "#47c1bf",
+            "banner_title": "Summer Collection",
+            "banner_title_color": "#003135",
+            "banner_desc": "Add Some Description Here",
+            "banner_desc_color": "#405352",
+            "button_text": "SHOP NOW",
+            "button_link": "",
+            "button_border_color": "#47C1BF",
+            "button_text_color": "#ffffff",
+            "button_text_bk": "#47c1bf",
+            "hvr_button_text_color": "#ffffff",
+            "hvr_button_text_bk": "#003135",
+            "banner_button_radius": 0
           }
         }
       },
@@ -29,11 +57,24 @@
         "split"
       ],
       "settings": {
+        "rotate": true,
+        "arrows": true,
+        "rotate_speed": 2
       }
     },
     "video-banner": {
       "type": "video-banner",
       "settings": {
+        "videofile": "https:\/\/cdn.shopify.com\/s\/files\/1\/2018\/8867\/files\/ice.mp4",
+        "title": "Video with text overlay",
+        "description": "This area is used to describe your store.",
+        "overlay": true,
+        "bgcolor": "#707070",
+        "opacity": 40,
+        "text_position": "center",
+        "text_align": "text__center",
+        "link_text": "View products",
+        "link": ""
       }
     },
     "offer-section": {
@@ -160,7 +201,8 @@
         "subheading": "See the latest!",
         "collection": "frontpage",
         "col_size": 4,
-        "row_size": 2
+        "row_size": 2,
+        "show_second_image": false
       }
     },
     "featured-blog": {
@@ -227,9 +269,10 @@
         "quote4"
       ],
       "settings": {
+        "style": "style1",
         "subheading": "HAPPY CLIENT’S",
         "heading": "What Our Customers Say",
-        "show_stars": true,
+        "description": "What Our Customers Say",
         "bgcolor": "#f6f4f2"
       }
     },
@@ -285,7 +328,48 @@
         "column3"
       ],
       "settings": {
-        "bgcolor": "#efedeb"
+        "bgcolor": "#efedeb",
+        "textcolor": "#000000"
+      }
+    },
+    "1634038735de36515c": {
+      "type": "slider",
+      "blocks": {
+        "1634038735de36515c-0": {
+          "type": "slide",
+          "settings": {
+            "heading": "Heading",
+            "h_bg": "",
+            "h_text": "#000000",
+            "subheading": "Sub Heading",
+            "sh_bg": "#000000",
+            "sh_text": "#ffffff",
+            "sale": "Sale 40%",
+            "sale_bg": "",
+            "sale_text": "#f17e35",
+            "content": "content",
+            "c_bg": "",
+            "c_text": "#000000",
+            "btn": "Explore Now",
+            "link": "",
+            "btn_bg": "#f17e35",
+            "btn_text": "#ffffff",
+            "btn_h_bg": "#000000",
+            "btn_h_text": "#ffffff",
+            "image": "shopify:\/\/shop_images\/daily-offer.jpg",
+            "bgcolor": "",
+            "info_position": "center-right",
+            "info_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "1634038735de36515c-0"
+      ],
+      "settings": {
+        "rotate": false,
+        "arrows": false,
+        "rotate_speed": 2
       }
     }
   },
@@ -298,6 +382,7 @@
     "featured-blog",
     "testimonials",
     "instagram",
-    "multicolumn-content"
+    "multicolumn-content",
+    "1634038735de36515c"
   ]
 }
