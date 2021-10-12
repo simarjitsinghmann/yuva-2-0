@@ -205,6 +205,9 @@ $('.back-btn').click(function(){
 //count timer//
 
 (function () {
+	function pad2(number) {
+		return (number < 10 ? '0' : '') + number
+	 }
 const second = 1000,
 		minute = second * 60,
 		hour = minute * 60,
@@ -237,10 +240,10 @@ const second = 1000,
 					else{
 						document.getElementById("dayHours").textContent = 'Hours';
 					}
-					document.getElementById("days").innerText = leftDays,
-					document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-					document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-					document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+					document.getElementById("days").innerText = pad2(leftDays),
+					document.getElementById("hours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
+					document.getElementById("minutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
+					document.getElementById("seconds").innerText = pad2(Math.floor((distance % (minute)) / second));
 				}
 				else{
 					document.getElementsByClassName("announcement-bar")[0].classList.add('hidden');

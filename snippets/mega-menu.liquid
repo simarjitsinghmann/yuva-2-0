@@ -32,7 +32,6 @@
                 {% endif %}
             </a>       
             {% if block.type != 'no-dropdown' and dropDown %}
-                {% if block.settings.width == 'full' %}
                     <div class="sub-menu">
                         <div class="site-nav-dropdown">
                             <div class="container">
@@ -75,47 +74,6 @@
                             </div>
                         </div>
                     </div>
-                {% else %}
-                    <div class="sub-menu multiple_navigation mutluColumn-{{dropMenuCount}} {% if block.settings.image != blank %}columnWithImage{% endif %}">
-                        {% for i in (1..6) %}
-                            {% assign dropdownTitle = 'c_heading' | append:i %}
-                            {% assign dropdownMenu = 'c_link' | append:i %}
-                            
-                            {% if block.settings[dropdownMenu] != blank %}
-                                <div class="site-nav-dropdown">
-                                    <div class="menu-lv-2 inner dropdown">
-                                        <div class="sub-menu-list">
-                                            <div class="menu-mb-title">
-                                                <span>{{block.settings[dropdownTitle]}}</span>
-                                            </div>
-                                            <ul class="site-nav-dropdown">
-                                                {% for clink in block.settings[dropdownMenu].links %}
-                                                <li class="menu-lv-3">
-                                                    <a href="{{clink.url}}">{{clink.title | split:"{badge" | first | escape | captilize }}
-                                                    {% if clink.title contains '{badge:sale}' %}
-                                                        <span class="sale_on">Sale</span>
-                                                        {% elsif clink.title contains '{badge:new}' %}
-                                                        <span class="new_arrival">New</span>
-                                                    {% endif %}
-                                                    </a>
-                                                </li>
-                                                {% endfor %}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                        
-                        {% if block.settings.image != blank %}
-                            <div class="sub-menu-list {% if block.settings.img_style %}spacing_around_image{% else %}no_space_around_image{% endif %}">
-                                <a href="{{block.settings.image_link}}">
-                                <img src="{{block.settings.image | img_url:'500x'}}" alt="">
-                                </a>
-                            </div>
-                        {% endif %}
-                    </div>
-                {% endif %}
             {% endif %}
         </li>
     {% endif %}
@@ -132,102 +90,72 @@
                 {% assign dropMenuCount = dropMenuCount | plus: 1 %}
             {% endif %}
         {% endfor %}
-        <li class="nav-item {% if block.type != 'no-dropdown' and dropDown %}dropdown{% endif %} {% if block.settings.width == 'auto' %}menu-item--no-mega{% endif %}">
-            <a class="list-menu__item" href="{{ block.settings.link }}">
+        <li class="nav-item {% if block.type != 'no-dropdown' and dropDown %}dropdown{% endif %}">
+            <a class="list-menu__item {% if block.type != 'no-dropdown' and dropDown %}toggle open-menu-drop{% endif %}" href="{% if block.settings.link != blank %}javascript:void(0){%else%}{{ block.settings.link }}{% endif %}">
                 {{block.settings.heading | escape | capitalize }}
-                {% if block.type != 'no-dropdown' %}
-                    <span class="ml-2 sf-menu__arrow">
-                        <svg class="w-2 h-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" class=""></path>
-                        </svg>
-                    </span>
-                {% endif %}
             </a>       
             {% if block.type != 'no-dropdown' and dropDown %}
-                {% if block.settings.width == 'full' %}
-                    <div class="sub-menu">
-                        <div class="site-nav-dropdown">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="menu-lv-2 inner dropdown">                                            
-                                    {% for i in (1..6) %}
-                                        {% assign dropdownTitle = 'c_heading' | append:i %}
-                                        {% assign dropdownMenu = 'c_link' | append:i %}
-                                        
-                                        {% if block.settings[dropdownMenu] != blank %}
-                                        <div class="sub-menu-list">
-                                            <div class="menu-mb-title">
-                                                <span>{{block.settings[dropdownTitle]}}</span>
-                                            </div>
-                                            <ul class="site-nav-dropdown">
-                                                {% for clink in block.settings[dropdownMenu].links %}
-                                                <li class="menu-lv-3">
-                                                    <a href="{{clink.url}}">{{clink.title | split:"{badge" | first | escape | captilize }}
-                                                    {% if clink.title contains '{badge:sale}' %}
-                                                        <span class="sale_on">Sale</span>
-                                                        {% elsif clink.title contains '{badge:new}' %}
-                                                        <span class="new_arrival">New</span>
-                                                    {% endif %}
-                                                    </a>
-                                                </li>
-                                                {% endfor %}
-                                            </ul>
-                                        </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                    {% if block.settings.image != blank %}
-                                        <div class="sub-menu-list {% if block.settings.img_style %}spacing_around_image{% else %}no_space_around_image{% endif %}">
-                                            <a href="{{block.settings.image_link}}">
-                                            <img src="{{block.settings.image | img_url:'500x'}}" alt="">
-                                            </a>
-                                        </div>
-                                    {% endif %}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <ul class="inner grandchild">
+                <div class="inner-child-menu">
+                    <div class="menu_back_btn">
+                          <button class="back-btn">
+                             <svg height="17.031" viewbox="0 0 24 17.031" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                      <style>
+                             .cls-1 {
+                                fill-rule: evenodd;
+                             }
+                             </style>
+                                </defs>
+                                <path class="cls-1" d="M684,76.476H663.835l6.119-6.091-1.412-1.406-7.132,7.1h0L660,77.484l1.413,1.406,7.132,7.1,1.412-1.406-6.148-6.121H684V76.476Z" transform="translate(-660 -68.969)"></path>
+                             </svg>
+                             Back
+                          </button>
                     </div>
-                {% else %}
-                    <div class="sub-menu multiple_navigation mutluColumn-{{dropMenuCount}} {% if block.settings.image != blank %}columnWithImage{% endif %}">
-                        {% for i in (1..6) %}
-                            {% assign dropdownTitle = 'c_heading' | append:i %}
-                            {% assign dropdownMenu = 'c_link' | append:i %}
-                            
-                            {% if block.settings[dropdownMenu] != blank %}
-                                <div class="site-nav-dropdown">
-                                    <div class="menu-lv-2 inner dropdown">
-                                        <div class="sub-menu-list">
-                                            <div class="menu-mb-title">
-                                                <span>{{block.settings[dropdownTitle]}}</span>
-                                            </div>
-                                            <ul class="site-nav-dropdown">
-                                                {% for clink in block.settings[dropdownMenu].links %}
-                                                <li class="menu-lv-3">
-                                                    <a href="{{clink.url}}">{{clink.title | split:"{badge" | first | escape | captilize }}
-                                                    {% if clink.title contains '{badge:sale}' %}
-                                                        <span class="sale_on">Sale</span>
-                                                        {% elsif clink.title contains '{badge:new}' %}
-                                                        <span class="new_arrival">New</span>
-                                                    {% endif %}
-                                                    </a>
-                                                </li>
-                                                {% endfor %}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                        
-                        {% if block.settings.image != blank %}
-                            <div class="sub-menu-list {% if block.settings.img_style %}spacing_around_image{% else %}no_space_around_image{% endif %}">
-                                <a href="{{block.settings.image_link}}">
-                                <img src="{{block.settings.image | img_url:'500x'}}" alt="">
-                                </a>
-                            </div>
-                        {% endif %}
+                    <div class="category_title">
+                          <h4>{{block.settings.heading | escape | capitalize }}</h4>
                     </div>
-                {% endif %}
+                 </div>
+                {% for i in (1..6) %}
+                    {% assign dropdownTitle = 'c_heading' | append:i %}
+                    {% assign dropdownMenu = 'c_link' | append:i %}
+                    
+                    {% if block.settings[dropdownMenu] != blank %}
+                    <li>
+                        <a class="toggle-level" href="javascript:void(0)">
+                            {{block.settings[dropdownTitle]}} <span class="caret"></span>
+                        </a>
+                        <ul class="inner grandchild">                              
+                            <div class="inner-child-menu">
+                               <div class="menu_back_btn">
+                                     <button class="back-btn">
+                                        <svg height="17.031" viewbox="0 0 24 17.031" width="24" xmlns="http://www.w3.org/2000/svg">
+                                           <defs>
+                                                 <style>
+                                        .cls-1 {
+                                           fill-rule: evenodd;
+                                        }
+                                        </style>
+                                           </defs>
+                                           <path class="cls-1" d="M684,76.476H663.835l6.119-6.091-1.412-1.406-7.132,7.1h0L660,77.484l1.413,1.406,7.132,7.1,1.412-1.406-6.148-6.121H684V76.476Z" transform="translate(-660 -68.969)"></path>
+                                        </svg>
+                                        Back
+                                     </button>
+                               </div>
+                               <div class="category_title">
+                                     <h4>{{block.settings[dropdownTitle]}}</h4>
+                               </div>
+                            </div>
+                               {%- for grandchildlink in block.settings[dropdownMenu].links -%}
+                               <li>
+                                     <a href="{{ grandchildlink.url }}"><span>{{ grandchildlink.title | split:"{badge" | first | escape | captilize }}</span></a>
+                               </li>
+                               {%- endfor -%}
+                            </ul>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>                
             {% endif %}
         </li>
     {% endif %}

@@ -2,8 +2,9 @@
 footer { background: var(--bg-footer); padding: 60px 0 15px; overflow: hidden; } 
 footer .full__item h5 { font-size: 22px; font-weight: var(--font-medium); margin-bottom: 19px; color: var(--color-secondary); } 
 footer ul li a, footer .grid__item p { font-size: var(--small-font); text-decoration: none; color: var(--footer-link-color); font-weight: var(--font-normal); line-height: 35px; letter-spacing: 0.2px; } 
-footer .grid__item p { line-height: 22px; } 
+footer .grid__item p { line-height: 22px;margin-top: 6px;display: inline-block; } 
 footer ul li a:hover { color: var(--color-theme-text); }
+.footer-innner-continer {padding: 0px 20px 10px 0;}
 #ContactFooter .field { position: relative; width: 100%; } 
 #ContactFooter #NewsletterForm--footer { padding: 13px 90px 13px 20px; height: auto; background: var(--bg-white); font-size: 13px; min-height:46px; color:#343434; } 
 #ContactFooter { position: relative; margin-top: 28px; } 
@@ -12,7 +13,9 @@ footer ul li a:hover { color: var(--color-theme-text); }
 .field__input:focus ~ .field__label, .field__input:not(:placeholder-shown) ~ .field__label, .field__input:-webkit-autofill ~ .field__label, .customer .field input:focus ~ label, .customer .field input:not(:placeholder-shown) ~ label, .customer .field input:-webkit-autofill ~ label {
      font-size: 11px; top: -1px; letter-spacing: 0.4px;
 }
-footer .grid__item:nth-last-child(2) { position: relative; } footer .grid__item:nth-last-child(2)::after { content: ""; position: absolute; right: 0px; border-right: 1px solid #1d2329; width: 1px; height: 100%; top: 0px; }
+footer .grid__item .footer-innner-continer p {margin-top: 3px;}
+footer .grid__item:nth-last-child(2) { position: relative; } 
+/* footer .grid__item:nth-last-child(2)::after { content: ""; position: absolute; right: 0px; border-right: 1px solid #1d2329; width: 1px; height: 100%; top: 0px; } */
 .social-links ul li { width: 34px; height: 34px; border-radius: 50%; background: #dadada; text-align: center; display: inline-block; margin-right: 14px; color: #fff; }
 .social-links ul li:last-child { margin-right: 0px;}
 .social-links { margin-top: 33px; } 

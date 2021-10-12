@@ -50,8 +50,9 @@
                         {% if block.type == 'announcement' %}
                         {{block.settings.announcement}}
                         {% elsif block.type == 'timer' %}
+                        <p>
                         {{block.settings.first_text}}
-                            
+                        </p>
                             {% if block.settings.date != blank %}
                                 <input type="hidden" id="eventDate" value="{{block.settings.date}}">
                             <ul>
@@ -61,12 +62,15 @@
                                 <li><span id="seconds"></span> <span id="dayHours">Hours</span></li>
                             </ul>
                             {% endif %}
+                            <p>
                             {{block.settings.last_text}}
+                        </p>
                         {% endif %}
+                        
+                    
                         {% if block.settings.btn != blank %}
                             <a class="announce-btn" href="{{block.settings.link}}">{{block.settings.btn}}</a>
                         {% endif %}
-                        
                     </div>
                     {% if section.settings.show_close %}
                         <a href="javascript:void(0)" class="announce_close close">

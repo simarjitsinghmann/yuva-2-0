@@ -1,7 +1,7 @@
-@import "variable.css";
 /***top announcement_bar***/      
 .announcement-bar {border: 1px solid var(--bg-top-header);background-color: var(--bg-top-header);} 
-.announcement-bar__message p {text-align: center;padding: 9px 10px;margin: 0;color: var(--color-secondary);font-size: var(--small-font);font-weight: var(--normal);letter-spacing: 1px; display: flex;flex-wrap: wrap;align-items: center;justify-content: center; } 
+.announcement-bar__message {text-align: center; padding: 7px 10px; margin: 0; letter-spacing: 1px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center;}
+.announcement-bar__message p {text-align: center;margin: 0;color: var(--color-secondary);font-size: var(--small-font);font-weight: var(--normal);letter-spacing: 1px; } 
 .announcement-bar__message a{font-weight: var(--font-semibold);text-decoration:none;color: var(--color-secondary);border-bottom:1px solid var(--border-light-theme); }
 .announcement-bar .border-bg {border: 1px solid var(--border-white);}
 .announcement-bar .fill-bg {border: 1px solid var(--border-white);}
@@ -31,6 +31,21 @@ background: linear-gradient(to right, #fd5392 0%,#f86f64 33%,#f8ad64 66%,#f8ad64
 .sf__scrolling-text.text-base { width: 100%; } 
 .list-menu--inline .nav-item.menu-item--no-mega .sub-menu { padding: 15px 15px 15px; } 
 .announcement-bar.style-5 { background: -moz-linear-gradient(left, #fd5392 0%, #f86f64 33%, #f8ad64 66%, #f8ad64 100%); background: -webkit-linear-gradient(left, #fd5392 0%,#f86f64 33%,#f8ad64 66%,#f8ad64 100%); background: linear-gradient(to right, #fd5392 0%,#f86f64 33%,#f8ad64 66%,#f8ad64 100%); border:0; }
+.announcement-bar__message ul li {
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+}
+.announcement-bar__message ul li span {
+    background: #000;
+    color: var(--color-secondary);
+    font-size: var(--small-font);
+    font-weight: var(--normal);
+    padding: 6px 4px;
+    margin: 0 1px;
+	min-width: 26px;
+	border-radius: 4px;
+}
 @-moz-keyframes sf-scrolling-text-animation {
     0% { -moz-transform: translateX(100%); }
     100% { -moz-transform: translateX(-100%); }
@@ -444,6 +459,8 @@ div.lower-nav .nav-item .userful__links {
 .site-nav-dropdown .inner.dropdown .sub-menu-list .site-nav-dropdown li a:hover { color: var(--color-theme-text); } 
 .site-nav-dropdown .inner.dropdown { display: flex; width: 100%; flex-wrap: wrap; justify-content: flex-start; } 
 .site-nav-dropdown .inner.dropdown .sub-menu-list {	flex: 0 0 16.66%;}
+.site-nav-dropdown .inner.dropdown .sub-menu-list.spacing_around_image {flex: 0 0 33.33%;}
+.site-nav-dropdown .inner.dropdown .sub-menu-list.spacing_around_image img{width:100%}
 .list-menu--inline .nav-item:hover>.sub-menu { opacity: 1; visibility: visible; pointer-events: auto;top: 100%;border-top: 1px solid #d3d9e0; }
 .customer-open #dropdown-customer { right: 0; } 
 .custom_login { padding: 30px 30px;}
@@ -453,7 +470,7 @@ header.sticky-header { position: fixed; top: 0; left: 0; z-index: 5; }
 .top-header .nav__header { background: #f7f7f7; border-top: 1px solid #eaeaea; } 
 div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { display: inline-block; color: #fff; } 
 .announcement-bar { display: flex; align-items: center; justify-content: center; overflow-x: hidden; } 
-.announcement-bar ul { min-width: 125px; } .announcement-bar__message ul { display: flex; align-items: center; justify-content: center; margin: 0 10px; }
+.announcement-bar ul { min-width: 125px; } .announcement-bar__message ul { display: flex; align-items: center; justify-content: center; margin: 0 5px; }
 .header__icons .wrapper-top-cart span.cartCount { background:var(--bg-top-header); width: 17px; height: 17px; color: var(--color-secondary); font-size: var(--small-font); position: absolute; text-align: center; border-radius: 50%; padding: 2px 0; line-height: normal; right: -7px; top: -10px;font-size: 11px; } 
 .header__icons .wrapper-top-cart a.cart-icon { text-decoration: none; position: relative; } 
 .search-bar-container { z-index: 99999; background-color: var(--bg-white); position: fixed; width: 100%; top:0; transition: 0.5s; transform:translateY(-100%); } 
@@ -461,6 +478,9 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 .search-bar-box.search-box {
 	border-bottom: 1px solid #d8dee3;
 	box-shadow: 0 0 3px #ebeef1;
+}
+.announcement-bar__message ul li span#dayHours {
+    background: transparent;
 }
 #recent_search_list h5, .results-box h5 {
 	font-weight: var(--semibold);
