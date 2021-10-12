@@ -7,7 +7,7 @@
           {% for block in section.blocks %}
             {% case block.type %}
             {% when 'link_list'%}
-            <div class="grid__item full__item  col-sm-4 col-md-4 col-lg-3">
+            <div class="grid__item full__item  col-sm-4 col-md-4 col-lg-3" {{ block.shopify_attributes }}>
               {% if block.settings.heading != blank %}
               <h5>{{block.settings.heading}}</h5>
               {% endif %}
@@ -19,8 +19,23 @@
               </ul>
             {% endif %}
             </div>
+            {% when 'image'%}
+            <div class="grid__item full__item  col-sm-4 col-md-4 col-lg-3" {{ block.shopify_attributes }}>
+              {% if block.settings.heading != blank %}
+              <h5>{{block.settings.heading}}</h5>
+              {% endif %}
+              {% if block.settings.image != blank %}
+              {% assign width = block.settings.image_width | append:'x' %}
+              <img src="{{block.settings.image | img_url:width}}">
+              {% endif %}
+              {% if block.settings.subtext != blank %}
+              <div class="footer-innner-continer">
+                {{ block.settings.subtext }}
+              </div>
+              {% endif %}
+              </div>
             {% when 'newsletter'%}
-            <div class="grid__item full__item  col-sm-12 col-md-12 col-lg-3">
+            <div class="grid__item full__item  col-sm-12 col-md-12 col-lg-3" {{ block.shopify_attributes }}>
 
               {% if block.settings.heading != blank %}
               <h5>{{block.settings.heading}}</h5>
@@ -140,6 +155,12 @@
       "name": "t:sections.footer.blocks.image.name",
       "limit": 1,
       "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "About Us",
+          "label": "t:sections.footer.blocks.newsletter.settings.heading.label"
+        },
         {
           "type": "image_picker",
           "id": "image",

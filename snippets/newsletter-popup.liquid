@@ -20,18 +20,17 @@
             </div>
             <div class="popup-body row align-items-center">
                 {% if settings.newsletter_left_image != blank %}
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <div class="news-img">
                         <img src="{{ settings.newsletter_left_image | img_url: 'master' }}"/>
                     </div>
                 </div>
                 {% endif %}
-                <div class="{% if settings.newsletter_left_image != blank %}col-md-6{% else %}col-md-12{% endif %}">
+                <div class="{% if settings.newsletter_left_image != blank %}col-md-7{% else %}col-md-12{% endif %}">
                     <div class="news-content">
                         <div class="nl-content text-center">
                             <div class="discount">
                                 <h2 style="color:{{settings.newsletter_heading_color}}">{{settings.newsletter_heading}}</h2>
-                                <strong style="color:{{settings.newsletter_subheading_color}}">{{settings.newsletter_subheading}}</strong>
                                 <div class="newsDescription">
                                     {{settings.newsletter_description}}
                                 </div>
@@ -53,6 +52,10 @@
                                             </button>
                                         </div>
                                     {% endif %}
+                                </div>
+                                <div class="close_dialog">
+                                <input type="checkbox" id="close-dialog" name="close-dialog">
+                                <label for="dialog-close">Do not show this dialog again</label>
                                 </div>
                             </form>
                         </div>

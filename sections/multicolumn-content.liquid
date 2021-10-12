@@ -21,8 +21,16 @@
 {% endif %}
 <style>
     #shopify-section-{{section.id}}{
-      background-color:{{section.settings.bgcolor}};
       padding: 50px 0;
+      background-color:{{section.settings.bgcolor}};
+    }
+    #shopify-section-{{section.id}} .service__column .col h6,
+    #shopify-section-{{section.id}} .service__column .col p{
+      color:{{section.settings.textcolor}};
+    }
+    
+    #shopify-section-{{section.id}} .service__column .col{
+      border-color:{{section.settings.textcolor}};
     }
   </style>
 {% schema %}
@@ -36,6 +44,12 @@
       "id": "bgcolor",
       "default": "#efedeb",
       "label": "t:sections.multicolumn.settings.bgcolor.label"
+    },
+    {
+      "type": "color",
+      "id": "textcolor",
+      "default": "#000000",
+      "label": "t:sections.multicolumn.settings.textcolor.label"
     }
   ],
   "blocks": [

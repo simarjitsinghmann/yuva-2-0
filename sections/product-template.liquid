@@ -121,8 +121,10 @@
                               {% endfor %}
                            {% endunless %}
                            <script type="application/json">
-                              {{ product.variants | json }}
-                           </script>
+
+{{ product.variants | json }}
+
+</script>
                            {% when 'quantity' %}
                            <div class="select__quantity">
                               <p class="small-size size_title">SELECT Quantity</p>
@@ -179,6 +181,8 @@
                                        </div>
                                     </div>
                                  </div>
+                              {% else %}
+                              {% assign full_width_tabs = true %}
                               {% endif %}
                            {% when 'reviews_tab' %}
                               {% if block.settings.width == 'half' %}
@@ -199,6 +203,8 @@
                                        </div>
                                     </div>
                                  </div>
+                                 {% else %}
+                                 {% assign full_width_tabs = true %}
                               {% endif %}
                            {% when 'accordion' %}
                               {% if block.settings.width == 'half' %}
@@ -221,15 +227,134 @@
                                        </div>
                                     </div>
                                  {% endif %}
+                                 {% else %}
+                                 {% assign full_width_tabs = true %}
                               {% endif %}
                         {% endcase %}
                      {% endfor %}
                    </div>
                 </div>
-             </div>             
+             </div> 
+          
+             {% if full_width_tabs %}
+             <div class="Specification-tabs">           
+               <div class="container container-product">
+                 <ul class="resp-tabs-list easy_tabs">    
+                  {% for block in section.blocks %}                  
+                  {% if block.type == 'description_tab' and block.settings.width == 'full' %}  
+                   <li class="resp-tab-item easy_tabs" content="tabContent{{forloop.index}}"><a>Description</a></li> 
+                   {% endif %}                   
+                  {% if block.type == 'reviews_tab' and block.settings.width == 'full' %}   
+                  <li class="resp-tab-item easy_tabs" content="tabContent{{forloop.index}}"><a>Reviews</a></li> 
+                  {% endif %}
+                  {% if block.type == 'accordion' and block.settings.width == 'full' %}   
+                   <li class="resp-tab-item easy_tabs" content="tabContent{{forloop.index}}"><a>{{block.settings.heading}}</a></li> 
+                   {% endif %}
+                   {% endfor %}
+                 </ul>
+               </div>
+             </div>
+             <div class="container ">        
+               <div class="row">
+               {% for block in section.blocks %}
+                  {% if block.type == 'description_tab' and block.settings.width == 'full' %}   
+                     <div class="product-description tab-content resp-tab-content easy_tabs" id="tabContent{{forloop.index}}" aria-labelledby="easy_tabs_tab_item-2" style="display: none;">
+                        {{product.description}}             
+                     </div>   
+                  {% endif %}
+                  {% if block.type == 'reviews_tab' and block.settings.width == 'full' %}   
+                     <div class="product-description tab-content resp-tab-content easy_tabs" id="tabContent{{forloop.index}}" aria-labelledby="easy_tabs_tab_item-2" style="display: none;">
+                        <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>           
+                     </div> 
+                  {% endif %}
+                  {% if block.type == 'accordion' and block.settings.width == 'full' %}   
+                     <div class="product-description tab-content resp-tab-content easy_tabs" id="tabContent{{forloop.index}}" aria-labelledby="easy_tabs_tab_item-2" style="display: none;">
+                        {{block.settings.content}}            
+                     </div> 
+                  {% endif %}
+               {% endfor %}
+               </div>
+               </div>
+             {% endif %}          
           </div>
        </div>
     </div>
+   <script>
+      var tabHead = document.getElementsByClassName('resp-tab-item');
+      tabHead[0].classList.add('active');
+      var tabContent =  document.getElementsByClassName('resp-tab-content');
+      tabContent[0].style.display = 'block';
+      function clearActive(){
+         Array.from(tabHead).forEach(function(item) {
+            item.classList.remove('active');
+         });
+         Array.from(tabContent).forEach(function(item) {
+            item.style.display = 'none';
+         });
+      }
+      Array.from(tabHead).forEach(function(btn) {
+         btn.addEventListener("click", ()=>{ 
+            clearActive();
+            btn.classList.add("active");
+            var _value = btn.getAttribute("content");
+            document.getElementById(_value).style.display = "block";
+         });
+      });
+   </script>
+   <style>
+      li.resp-tab-item.easy_tabs a {
+    color: #757575;
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 30px;
+    font-weight: 500;
+    padding: 15px 0;
+    display: inline-block;
+    position: relative;
+    margin-left: 0;
+    cursor: pointer;
+}
+li.resp-tab-item.easy_tabs {
+    list-style: none;
+    width: auto;
+    text-align: left;
+    padding-right: 7%;
+}
+ul.resp-tabs-list.easy_tabs {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.Specification-tabs {
+    text-align: center;
+    border-top: 1px solid #eff0f3;
+    border-bottom: 1px solid #eff0f3;
+    margin-top: 0;
+}
+li.resp-tab-item.easy_tabs.active a {
+    color: #000;
+    position: relative;
+}
+li.resp-tab-item.easy_tabs.active a:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background-color: #000;
+    width: 100%;
+    height: 2px;
+}
+.product-description.tab-content.resp-tab-content {
+    padding: 10px 0 5px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 890px;
+    text-align: left;
+}
+.product-description.tab-content.resp-tab-content :empty {
+   display:inline-block;
+}
+   </style>
 {{'slider.js' | asset_url | script_tag}}
 {% schema %}
 {

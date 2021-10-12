@@ -1,6 +1,6 @@
 <div id="banner-{{block.id}}" class="item" {{ block.shopify_attributes }}>
     {% if block.settings.image != blank %}
-    <img src="{{block.settings.image | img_url:'master'}}" loading="lazy" alt="">
+    <img src="{{block.settings.image | img_url:'master'}}" loading="lazy" alt=""  style="height:850px">
     {%else%}
     {% include 'banner-placeholder'%}
     {% endif %} 

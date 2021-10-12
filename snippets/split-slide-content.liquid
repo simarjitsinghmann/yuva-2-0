@@ -1,5 +1,5 @@
 {% if block.settings.image_desktop != blank %}
-    {% assign banner_image = block.settings.image_desktop | img_url: "1000x1000" %} 
+    {% assign banner_image = block.settings.image_desktop | img_url: "master" %} 
     {% else %}
     {% assign banner_image = 'banner.svg' | asset_url  %} 
     {% endif %}
@@ -26,7 +26,7 @@
                 </div>
                 </div>
                 <div class="col-md-6 banner-right" >                 
-                <img src="{{banner_image}}" class="banner_image" loading="lazy" alt="">
+                <img src="{{banner_image}}" class="banner_image" loading="lazy" alt="" style="height:850px">
                 </div>
             </div>
         </div>

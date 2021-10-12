@@ -45,22 +45,16 @@
         "info": "t:settings_schema.newsletter-popup.settings.newsletter_left_image.info"
       },
       {
-        "type": "html",
+        "type": "text",
         "id": "newsletter_heading",
         "label": "t:settings_schema.newsletter-popup.settings.newsletter_heading.label",
         "default": "SUMMER <span>SALE<\/span>"
       },
       {
-        "type": "text",
-        "id": "newsletter_subheading",
-        "label": "t:settings_schema.newsletter-popup.settings.newsletter_subheading.label",
-        "default": "50% OFF"
-      },
-      {
-        "type": "html",
+        "type": "richtext",
         "id": "newsletter_description",
         "label": "t:settings_schema.newsletter-popup.settings.newsletter_description.label",
-        "default": "<h6>Don’t Miss Out<\/h6><p>Stay In The Know About The Latest Arrivals, Sales, Events, And More<\/p>"
+        "default": "<p><b>Don’t Miss Out<\/b>Stay In The Know About The Latest Arrivals, Sales, Events, And More<\/p>"
       },
       {
         "type": "header",
@@ -71,12 +65,6 @@
         "id": "newsletter_heading_color",
         "label": "t:settings_schema.newsletter-popup.settings.newsletter_heading_color.label",
         "default": "#646464"
-      },
-      {
-        "type": "color",
-        "id": "newsletter_subheading_color",
-        "label": "t:settings_schema.newsletter-popup.settings.newsletter_subheading_color.label",
-        "default": "#323030"
       },
       {
         "type": "color",
