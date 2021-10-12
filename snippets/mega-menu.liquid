@@ -39,6 +39,7 @@
                                     <div class="menu-lv-2 inner dropdown">                                            
                                     {% for i in (1..6) %}
                                         {% assign dropdownTitle = 'c_heading' | append:i %}
+                                        {% assign headColor = 'c_heading_color' | append:i %}
                                         {% assign dropdownMenu = 'c_link' | append:i %}
                                         
                                         {% if block.settings[dropdownMenu] != blank %}
