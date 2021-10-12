@@ -45,7 +45,7 @@
                                         {% if block.settings[dropdownMenu] != blank %}
                                         <div class="sub-menu-list">
                                             <div class="menu-mb-title">
-                                                <span>{{block.settings[dropdownTitle]}}</span>
+                                                <span style="color:{{block.settings[headColor]}} !important">{{block.settings[dropdownTitle]}}</span>
                                             </div>
                                             <ul class="site-nav-dropdown">
                                                 {% for clink in block.settings[dropdownMenu].links %}
