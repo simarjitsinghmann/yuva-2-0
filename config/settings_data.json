@@ -150,6 +150,29 @@
       },
       "announcement-bar": {
         "type": "announcement-bar",
+        "blocks": {
+          "f8a1a66c-2658-4513-99c5-4b8065a4f338": {
+            "type": "timer",
+            "settings": {
+              "icon": "gift",
+              "first_text": "Sale Starts in",
+              "date": "15\/10\/2021",
+              "last_text": "Get Ready",
+              "btn": "Explore Now",
+              "link": "#",
+              "bg_style": "solid",
+              "bgcolor": "#f17e35",
+              "bgcolor2": "#f86f64",
+              "fontcolor": "#ffffff",
+              "btn_bgcolor": "#f17e35",
+              "btn_fontcolor": "#ffffff",
+              "bborder_color": ""
+            }
+          }
+        },
+        "block_order": [
+          "f8a1a66c-2658-4513-99c5-4b8065a4f338"
+        ],
         "settings": {
           "show_bar": true,
           "auto_rotate": false,
