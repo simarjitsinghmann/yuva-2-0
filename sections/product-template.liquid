@@ -107,42 +107,65 @@
                               {%- for option in product.options_with_values -%}
                                  {% assign downOption = option.name | downcase %}
                                  {% assign optionIndex = forloop.index %}
+                                 {% assign varOptionIndex = 'option'|append:forloop.index %}
                                  <div class="select__{{downOption}}">
                                     <p class="small-size size_title">SELECT {{option.name}}</p>
-                                    <ul class="product-loop-variants {{downOption}} variants circle _small list-unstyled">                            
-                                 {%- for value in option.values -%}
+                                    {% if block.settings.option_style == 'swatch' %}
+                                    <ul class="product-loop-variants {{downOption}} variants {{block.settings.color_swatch_style}} _small list-unstyled">                            
+                                    {%- for value in option.values -%}  
                                        <li class="{{downOption}}_option">
-                                          <input type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
-                                          <span class="option {% if option.selected_value == value %}selected{% endif %}" {% if downOption == 'color' or  downOption == 'colour'%}style="background-color:{{value}};"{% endif %}>{{value}}</span>
+                                          <input class="productOption" type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
+                                          <span class="option {% if option.selected_value == value %}selected{% endif %}" {% if downOption == 'color' or  downOption == 'colour'%}{% unless block.settings.variant_image %} style="background-color:{{value}};"{% endunless %}{% endif %}>
+                                             {% if downOption == 'color' or  downOption == 'colour'%}    
+                                                {% if block.settings.variant_image %}                                                                                  
+                                                   {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
+                                                   {% for variant in variantsList %}
+                                                      {% if variant.featured_image != blank %}
+                                                         <img src="{{variant.featured_image | img_url:"100x"}}">
+                                                         {% break %}
+                                                      {% endif %}
+                                                   {% endfor %}
+                                                {% endif %}
+                                             {% else %}
+                                             {{value}}
+                                             {% endif%}
+                                          </span>
                                        </li>
                                     {% endfor %}
                                     </ul> 
+                                    {% elsif block.settings.option_style == 'dropdown' %}
+                                    <div class="dropdown {{downOption}}-select productOptionSelect">
+                                       <button id="dLabel" class="dropdown-selected" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        {{option.selected_value}}
+                                       </button>
+                                        <span class="caret"></span>
+                                       <ul class="product-loop-variants dropdown-menu {{downOption}}-menu productOptionSelectList" aria-labelledby="dLabel" style="display: none;">
+                                          {%- for value in option.values -%}
+                                          <li class="productOption">
+                                          <input type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
+                                          {{value}}
+                                       </li>
+                                        {% endfor %}
+                                       </ul>
+                                     </div>
+                                    {% endif %}
                                  </div>
                               {% endfor %}
                            {% endunless %}
-                           <script type="application/json">
-
-{{ product.variants | json }}
-
-</script>
+                           <script type="application/json" name="variant-json">
+                              {{ product.variants | json }}
+                           </script>
                            {% when 'quantity' %}
                            <div class="select__quantity">
-                              <p class="small-size size_title">SELECT Quantity</p>
-                              <input type="hidden" name="quantity" form="{{product_form_id}}">
-                              <div class="dropdown quality-select">
-                                 <button id="dLabel" class="dropdown-select" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                 01
-                                 </button>
-                                 <span class="caret"></span>
-                                 <ul class="dropdown-menu quality-menu" aria-labelledby="dLabel">
-                                    <li>1</li>
-                                    <li>2</li>
-                                    <li>3</li>
-                                    <li>4</li>
-                                    <li>5</li>
-                                    <li>6</li>
-                                 </ul>
-                              </div>
+                              <p class="small-size size_title">SELECT Quantity</p>                              
+                              <div class="quantity">
+                                   <input type="number" name="quantity" min="1" max="50" step="1" value="1" form="{{product_form_id}}">
+                                   <div class="quantity-nav">
+                                      <div class="quantity-button quantity-up"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102 99" style="enable-background:new 0 0 102 99;" xml:space="preserve"><polygon points="100.1,37.2 63.5,37.2 63.5,0.5 39.1,0.5 39.1,37.2 2.4,37.2 2.4,61.6 39.1,61.6 39.1,98.3 63.5,98.3 63.5,61.6 100.1,61.6 "></polygon></svg></div>
+                                      <div class="quantity-button quantity-down"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102 99" style="enable-background:new 0 0 102 99;" xml:space="preserve"><polyline points="63.3,61.6 102,61.6 102,37.2 63.3,37.2 "></polyline><polyline points="78.7,37.2 0.1,37.2 0.1,61.6 78.7,61.6 "></polyline></svg></div>
+                                   </div>
+                                </div>
+                              
                            </div>
                            {% when 'description' %}
                               <div class="rte">
@@ -411,9 +434,48 @@ li.resp-tab-item.easy_tabs.active a:before {
         },
         {
             "type": "variant",
-            "name": "Variant",
             "name": "t:sections.product-template.blocks.variant.name",
-            "limit":1
+            "limit":1,
+            "settings":[
+               {
+                  "type":"select",
+                  "id":"option_style",
+                  "label":"option_style",
+                  "options":[
+                     {
+                        "value":"dropdown",
+                        "label":"Dropdown"
+                     },
+                     {
+                        "value":"swatch",
+                        "label":"Color Swatch"
+                     }
+                  ],
+                  "default":"dropdown"
+               },
+               {
+                  "type":"select",
+                  "id":"color_swatch_style",
+                  "label":"Color Swatch Style",
+                  "options":[
+                     {
+                        "value":"circle",
+                        "label":"Circle"
+                     },
+                     {
+                        "value":"square",
+                        "label":"Square"
+                     }
+                  ],
+                  "default":"circle"
+               },
+               {
+                  "type":"checkbox",
+                  "id":"variant_image",
+                  "label":"Swatch with Variant Image ",
+                  "default":false
+               }
+            ]
         },
         {
             "type": "quantity",

@@ -5,7 +5,7 @@
             <h4>{{section.settings.subheading}}</h4>
             {% assign main_articles = section.settings.blog.articles %}
             {% if main_articles.size > 0 or section.settings.custom %}
-            <ul class="grid grid--3-col-tablet grid--3-col-desktop" role="list">  
+            <ul class="grid grid--3-col-tablet grid--3-col-desktop {% if section.settings.style == "style2" %}blog-variation2{% endif %}" role="list">  
                 {% if section.settings.custom != true %}              
                     {% for article in main_articles %}
                         {% include 'featured-article-grid' %}
@@ -36,6 +36,22 @@
         "id": "heading",
         "default": "CONSECTETUR",
         "label": "t:sections.featured-blog.settings.heading.label"
+      },
+      {
+        "type": "select",
+        "id": "style",
+        "default": "style1",
+        "label": "t:sections.featured-blog.settings.style.label",
+        "options":[
+          {
+              "value":"style1",
+              "label":"t:sections.featured-blog.settings.style.options.style1.label"
+          },
+          {
+            "value":"style2",
+            "label":"t:sections.featured-blog.settings.style.options.style2.label"
+          }
+        ]
       },
       {
         "type": "textarea",

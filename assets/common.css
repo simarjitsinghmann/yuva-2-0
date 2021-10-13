@@ -151,6 +151,7 @@ body {
   line-height: 1.5;
   font-family: var(--font-family);
   letter-spacing:0.2px;
+padding-top: 68px;
 }
 label {
 	font-size: var(--small-font);
@@ -745,7 +746,7 @@ padding-right: 15px;
 :empty{
 	display:block;
 }
-#dLabel {
+.dropdown.productOptionSelect .dropdown-selected {
 	width: 295px;
 	height: 51px;
 	border-radius: 4px;
@@ -756,7 +757,7 @@ padding-right: 15px;
 	color: #000;
 	padding: 10px 20px;
 }
-.quality-select .caret {
+.quality-select .caret, .dropdown.productOptionSelect .caret {
     float: right;
     margin-top: 4px;
     display: block;
@@ -771,7 +772,7 @@ padding-right: 15px;
     right: 20px;
     top: 16px;
 }
-.quality-select .dropdown-menu {
+.quality-select .dropdown-menu, .dropdown.productOptionSelect .dropdown-menu {
   width: 240px;
   padding: 0;
   margin: 0;
@@ -779,21 +780,29 @@ padding-right: 15px;
   border-top-right-radius: 0;
 }
 
-.dropdown.quality-select button:hover, .dropdown.quality-select button:focus {
+/* .dropdown.quality-select button:hover, .dropdown.quality-select button:focus, .dropdown.productOptionSelect button:hover, .dropdown.productOptionSelect button:focus {
   border: none;
   outline: 0;
-}
-
-.dropdown.quality-select.open ul {
+} */
+.dropdown.productOptionSelect .dropdown-menu li input[type="radio"] {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    }
+.dropdown.quality-select.open ul, .dropdown.productOptionSelect.open ul  {
    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23);
    border: 1px solid #e2e2e2;
 	border-top: none;
   height: auto;
 }
-.quality-select.open .dropdown-menu {
+.quality-select.open .dropdown-menu, .dropdown.productOptionSelect.open .dropdown-menu {
     display: block;
 }
-.quality-select .dropdown-menu {
+.quality-select .dropdown-menu, .dropdown.productOptionSelect .dropdown-menu {
     position: absolute;
     top: 100%;
     left: 0;
@@ -812,7 +821,7 @@ padding-right: 15px;
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }
-.quality-select .dropdown-menu li {
+.quality-select .dropdown-menu li, .dropdown.productOptionSelect .dropdown-menu li  {
    line-height: 1.5;
   letter-spacing: 0.7px;
   color: #666;
@@ -820,8 +829,9 @@ padding-right: 15px;
   cursor: pointer;
   padding: 7.5px 15px;
   border-top: solid 1px #f3f3f3;
+  position:relative;
 }
-.quality-select .dropdown-menu li:hover {
+.quality-select .dropdown-menu li:hover, .dropdown.productOptionSelect .dropdown-menu li:hover {
   background-color: #ccc;
 }
 .ml-auto, .mx-auto {

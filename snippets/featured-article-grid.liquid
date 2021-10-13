@@ -1,3 +1,4 @@
+{% unless section.settings.style == 'style2' %}
 <li class="grid__item">
     <div class="post-wrapper">
         <div class="post-information">
@@ -19,3 +20,27 @@
         </div>
     </div>
 </li>
+
+{% else %}
+
+<li class="grid__item">
+    <div class="post-wrapper">
+      <div class="post-information">          
+        {% assign article_image = 'featured_image.png' | asset_url %}
+        {% if article.image %}
+        {% assign article_image = article.image | img_url:'master' %}
+        {% endif %}
+        <div class="post-information-image">
+          <a href="{{article.url}}" class="animate_hvrbr"><img src="{{article_image}}"" alt=""></a>
+        </div>
+        <div class="post-information__wrapper text__left">
+          <div class="post-date">
+            <p>{{article.published_at | date: "%d %b %Y" }}</p>
+          </div>
+          <h5>{{article.title | truncatewords: 6}}</h5>
+          <div class="post-name"><p><a href="javascript:void(0)">{{article.article.excerpt_or_content | truncatewords: 6}}</a></p></div>
+        </div>
+      </div>
+    </div>
+  </li>
+  {% endunless %}
