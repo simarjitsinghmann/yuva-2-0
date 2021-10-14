@@ -1,3 +1,54 @@
+if ((typeof Shopify) === 'undefined') { Shopify = {}; }
+if (!Shopify.formatMoney) {
+  Shopify.formatMoney = function(cents, format) {
+    var value = '',
+        placeholderRegex = /\{\{\s*(\w+)\s*\}\}/,
+        formatString = (format || this.money_format);
+
+    if (typeof cents == 'string') {
+      cents = cents.replace('.','');
+    }
+
+    function defaultOption(opt, def) {
+      return (typeof opt == 'undefined' ? def : opt);
+    }
+
+    function formatWithDelimiters(number, precision, thousands, decimal) {
+      precision = defaultOption(precision, 2);
+      thousands = defaultOption(thousands, ',');
+      decimal   = defaultOption(decimal, '.');
+
+      if (isNaN(number) || number == null) {
+        return 0;
+      }
+
+      number = (number/100.0).toFixed(precision);
+
+      var parts   = number.split('.'),
+          dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands),
+          cents   = parts[1] ? (decimal + parts[1]) : '';
+
+      return dollars + cents;
+    }
+
+    switch(formatString.match(placeholderRegex)[1]) {
+      case 'amount':
+        value = formatWithDelimiters(cents, 2);
+        break;
+      case 'amount_no_decimals':
+        value = formatWithDelimiters(cents, 0);
+        break;
+      case 'amount_with_comma_separator':
+        value = formatWithDelimiters(cents, 2, '.', ',');
+        break;
+      case 'amount_no_decimals_with_comma_separator':
+        value = formatWithDelimiters(cents, 0, '.', ',');
+        break;
+    }
+
+    return formatString.replace(placeholderRegex, value);
+  };
+}
 function toggleDropdown(id) {
 	var x = document.getElementById(id);
 	if (x.style.display === "none") {
@@ -48,7 +99,7 @@ $(document).ready(function(){
 		$('body').toggleClass('minicart-open');
 		$('.wrapper-overlay').css({"display": "block"});
 	});
-	$('.close-customer').click(function(){
+	$(document).on('click','.close-customer',function(){
 		$("body").removeClass("minicart-open"), $(".wrapper-overlay").hide();
 	});
 	
@@ -257,6 +308,7 @@ $('.back-btn').click(function(){
 				}
 			}, 0)
 		}
+		
 	var productOptions = document.getElementsByClassName('productOption');
 	if(productOptions){
 		var options=[];
@@ -273,7 +325,7 @@ $('.back-btn').click(function(){
 						document.querySelectorAll('[name="id"]')[0].value = getVariant.id
 					}
 					else{
-						alert('This combination is not available')
+						document.queryselecter
 					}
 				},200)
 			})
@@ -303,9 +355,10 @@ $('.back-btn').click(function(){
 // 	$(this).closest('.select__quantity').find('input[name=quantity]').val(getValue);
 // 	$('.dropdown-menu').slideUp("fast");
 // });
-// $('.announce_close').click(function(){
-// 	$('.announcement-bar').hide();
-// });
+$('.announce_close').click(function(){
+	$('.announcement-bar').slideToggle();
+	$('body').removeClass('announcement_open');
+});
 
 $(document).on("click", function(event){
 	var $trigger = $(".productOptionSelect");
@@ -376,3 +429,22 @@ $(document).ready(function()
 		}
     });
 });
+
+$(document).on('click', '.quickView', function(evt) {
+    evt.preventDefault();
+	var _url = $(this).data('href');
+	$('.Quick_loader').hide();
+	$.ajax({
+		url:_url+'?view=quick-view',
+		type:'GET',
+		success: function(data){
+			$('#ProductQuickView').html(data);
+			$('.Quick_loader').hide();
+			$('#ProductQuickView,#qucikview').show();
+		}
+	 });
+});
+$(document).on('click', '.quickViewClose',function(evt) {
+    evt.preventDefault();
+	$('#qucikview').hide();
+})

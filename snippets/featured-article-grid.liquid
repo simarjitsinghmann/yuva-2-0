@@ -1,5 +1,5 @@
 {% unless section.settings.style == 'style2' %}
-<li class="grid__item">
+<div class="item grid__item style1">
     <div class="post-wrapper">
         <div class="post-information">
             {% assign article_image = 'featured_image.png' | asset_url %}
@@ -19,11 +19,11 @@
             </div>
         </div>
     </div>
-</li>
+</div>
 
 {% else %}
 
-<li class="grid__item">
+<div class="item grid__item style2">
     <div class="post-wrapper">
       <div class="post-information">          
         {% assign article_image = 'featured_image.png' | asset_url %}
@@ -42,5 +42,5 @@
         </div>
       </div>
     </div>
-  </li>
+  </div>
   {% endunless %}

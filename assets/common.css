@@ -151,7 +151,10 @@ body {
   line-height: 1.5;
   font-family: var(--font-family);
   letter-spacing:0.2px;
-padding-top: 68px;
+padding-top: 92px;
+}
+body.announcement_open {
+	padding-top: 138px;
 }
 label {
 	font-size: var(--small-font);

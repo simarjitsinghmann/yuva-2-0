@@ -177,7 +177,7 @@
                               <div class="product_button">
                                  <div class="pdp-action-container">
                                     <div class="pdp-add-to-bag pdp-button pdp-flex pdp-center">
-                                       <button type="submit"> <span class="add_to_cart orange-btn button">Add to Cart</span></button>
+                                       <input type="submit" class="add_to_cart orange-btn button" value="Add to Cart"/> 
                                     </div>
                                     {% if block.settings.dynamic_checkout_btn %}
                                     {{ form | payment_button }}
@@ -304,25 +304,27 @@
     </div>
    <script>
       var tabHead = document.getElementsByClassName('resp-tab-item');
-      tabHead[0].classList.add('active');
-      var tabContent =  document.getElementsByClassName('resp-tab-content');
-      tabContent[0].style.display = 'block';
-      function clearActive(){
-         Array.from(tabHead).forEach(function(item) {
-            item.classList.remove('active');
-         });
-         Array.from(tabContent).forEach(function(item) {
-            item.style.display = 'none';
+      if(tabHead.length > 0 ){
+         tabHead[0].classList.add('active');
+         var tabContent =  document.getElementsByClassName('resp-tab-content');
+         tabContent[0].style.display = 'block';
+         function clearActive(){
+            Array.from(tabHead).forEach(function(item) {
+               item.classList.remove('active');
+            });
+            Array.from(tabContent).forEach(function(item) {
+               item.style.display = 'none';
+            });
+         }
+         Array.from(tabHead).forEach(function(btn) {
+            btn.addEventListener("click", ()=>{ 
+               clearActive();
+               btn.classList.add("active");
+               var _value = btn.getAttribute("content");
+               document.getElementById(_value).style.display = "block";
+            });
          });
       }
-      Array.from(tabHead).forEach(function(btn) {
-         btn.addEventListener("click", ()=>{ 
-            clearActive();
-            btn.classList.add("active");
-            var _value = btn.getAttribute("content");
-            document.getElementById(_value).style.display = "block";
-         });
-      });
    </script>
    <style>
       li.resp-tab-item.easy_tabs a {

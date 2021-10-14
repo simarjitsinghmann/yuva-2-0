@@ -432,6 +432,15 @@
         },
         "color": {
           "label": "Background Color"
+        },
+        "style": {
+          "style1": {
+            "label": "Style 1"
+          },
+          "style2": {
+            "label": "Style 2"
+          },
+          "label": "Style"
         }
       },
       "blocks": {
@@ -444,17 +453,8 @@
             "subheading": {
               "label": "Sub Heading"
             },
-            "offer_heading": {
-              "label": "Offer Heading"
-            },
-            "offer": {
-              "label": "Offer"
-            },
-            "offer_sub": {
-              "label": "Offer Subtext"
-            },
             "link": {
-              "label": "Offer Link"
+              "label": "Link"
             },
             "image": {
               "label": "Background Image"
@@ -510,6 +510,15 @@
         },
         "btnlink": {
           "label": "Button Link"
+        },
+        "style": {
+          "style1": {
+            "label": "Style 1"
+          },
+          "style2": {
+            "label": "Style 2"
+          },
+          "label": "Collection Style"
         },
         "main_collection_1": {
           "content": "Main Collection"
@@ -574,6 +583,15 @@
         "mc_btnlink": {
           "label": "Button Link"
         },
+        "button_icon": {
+          "label": "Show Icon in Button"
+        },
+        "btn_bg": {
+          "label": "Button Background Color"
+        },
+        "btn_text": {
+          "label": "Button Text Color"
+        },
         "mc_image": {
           "label": "Image"
         }
@@ -611,6 +629,37 @@
             },
             "image": {
               "label": "Image"
+            },
+            "text_position": {
+              "top-left": {
+                "label": "Top Left"
+              },
+              "center-left": {
+                "label": "Center Left"
+              },
+              "bottom-left": {
+                "label": "Bottom Left"
+              },
+              "top-center": {
+                "label": "Top Center"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "bottom-center": {
+                "label": "Bottom Center"
+              },
+              "top-right": {
+                "label": "Top Right"
+              },
+              "center-right": {
+                "label": "Center Right"
+              },
+              "bottom-right": {
+                "label": "Bottom Right"
+              },
+              "label": "Info Position",
+              "info": "It works with Style 2 Only"
             }
           }
         }

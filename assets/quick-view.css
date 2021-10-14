@@ -1,0 +1,480 @@
+/*---------------------------------QUICK VIEW MODAL CSS CODE STARTS---------------------------------*/
+div#qucikview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100%;
+    display: none;
+    height: 100%;
+    overflow: hidden;
+    background: #000000a1;
+    outline: 0;
+}
+.quickview.modal.fade .modal-dialog {
+    max-width: 880px;
+    width: 100%;
+    margin: 0 auto;
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.modal .modal-content .ask_cross {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    opacity: 1;
+    background-color: #000;
+    width: 37px;
+    height: 37px;
+    text-align: center;
+    line-height: 34px;
+    z-index: 1050;
+    border-radius: 0;
+    box-shadow: none;
+    display: inline-block;
+    text-shadow: none;
+    padding-top: 3px;
+	cursor:pointer;
+}
+.modal .modal-content .ask_cross svg {
+	fill:#ffffff;
+}
+.modal-body .product-add-to-cart-right h2 {
+    margin-bottom: 11px;
+}
+    @media only screen and (max-width: 1024px) {
+      .quickview.modal.fade .modal-dialog {
+        padding: 0 40px; } }
+    @media only screen and (max-width: 767px) {
+      .quickview.modal.fade .modal-dialog {
+        padding: 0 20px; } }
+  .quickview.modal.show {
+    padding-right: 0 !important; }
+    @media only screen and (max-width: 767px) {
+      .quickview.modal.show {
+        display: none !important; } }
+    .quickview.modal.show .modal-dialog {
+      max-width: 880px;
+      width: 100%;
+      margin: 0 auto;
+      opacity: 1;
+      visibility: visible;
+      -webkit-transition: initial;
+      -moz-transition: initial;
+      -ms-transition: initial;
+      -o-transition: initial;
+      transition: initial; }
+      @media only screen and (max-width: 1024px) {
+        .quickview.modal.show .modal-dialog {
+          padding: 50px 40px;
+          max-width: 850px; } }
+      @media only screen and (max-width: 992px) {
+        .quickview.modal.show .modal-dialog {
+          padding: 35px 40px; } }
+  .quickview.modal .modal-content {
+    border: 0px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0; }
+    .quickview.modal .modal-content .modal-body {
+      padding: 0; background:#ffffff}
+      .quickview.modal .modal-content .modal-body img.Quick_loader {
+        position: relative;
+        z-index: 101;
+        max-width: 100%;
+        width: auto; }
+      .quickview.modal .modal-content .modal-body .quickviewcontent {
+        margin: 0; }
+        .quickview.modal .modal-content .modal-body .quickviewcontent .col-md-6:nth-child(1) {
+          background: #f4f4f6; }
+        .quickview.modal .modal-content .modal-body .quickviewcontent .quantity input {
+          border: 1px solid #cccccc; }
+      .quickview.modal .modal-content .modal-body .viewimg {
+        background-color: #f4f4f6;
+        padding: 30px;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        border-right: 1px solid #f4f4f6; }
+        @media only screen and (max-width: 1024px) {
+          .quickview.modal .modal-content .modal-body .viewimg {
+            min-height: 1px;
+            padding: 10px; } }
+        .quickview.modal .modal-content .modal-body .viewimg .single-image img {
+          width: auto; }
+          @media only screen and (max-width: 767px) {
+            .quickview.modal .modal-content .modal-body .viewimg .single-image img {
+              max-width: 180px; } }
+        .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb {
+          margin: 0 auto;
+          padding: 0 0; }
+          @media only screen and (max-width: 1024px) {
+            .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb {
+              padding: 0; } }
+          .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb .owl-stage-outer .owl-item .item img {
+            max-width: 100%;
+            width: auto; }
+          .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb .quickviewThumb {
+            position: relative; }
+            .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb .quickviewThumb img {
+              display: block;
+              margin: 0 auto;
+              width: auto; }
+          .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb button.slick-arrow {
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            border: none;
+            opacity: .8;
+            padding: 0;
+            font-size: 0px;
+            line-height: 29px;
+            position: absolute;
+            top: 50%;
+            margin-top: -17px;
+            z-index: 1;
+            right: auto;
+            border-radius: 100%;
+            background-color: white;
+            box-shadow: 0 0 0 0 transparent;
+            -webkit-transition: all 400ms ease-in-out 0s;
+            -moz-transition: all 400ms ease-in-out 0s;
+            -ms-transition: all 400ms ease-in-out 0s;
+            -o-transition: all 400ms ease-in-out 0s;
+            transition: all 400ms ease-in-out 0s;
+            display: none !important; }
+            .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb button.slick-arrow:before {
+              background-image: url(//cdn.shopify.com/s/files/1/0331/0108/6851/t/2/assets/arrow-icon.png?v=17903120053832045946);
+              background-repeat: no-repeat;
+              background-size: 180%;
+              content: '';
+              display: block;
+              width: 12px;
+              height: 12px;
+              position: absolute;
+              top: 50%;
+              margin-top: -12px;
+              margin-left: -6px;
+              background-size: 150%;
+              background-position: 2px 8px; }
+            .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb button.slick-arrow.slick-prev {
+              left: 1px; }
+              .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb button.slick-arrow.slick-prev:before {
+                background-position: 2px 3px;
+                left: 15px; }
+            .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb button.slick-arrow.slick-next {
+              right: 1px; }
+              .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb button.slick-arrow.slick-next:before {
+                background-position: -10px 3px;
+                right: 9px; }
+          .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb .quickviewThumbnail {
+            padding: 10px 0  0;
+            position: relative; }
+            .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb .quickviewThumbnail .slick-track {
+              margin: 0 auto; }
+            .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb .quickviewThumbnail li.slick-slide {
+              padding: 0 4px; }
+              .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb .quickviewThumbnail li.slick-slide img {
+                width: auto;
+                margin: 0 auto;
+                background: white;
+                height: auto; }
+              .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb .quickviewThumbnail li.slick-slide.slick-current img {
+                border: 1px solid #D0D0D0; }
+            .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb .quickviewThumbnail button.slick-arrow {
+              width: auto;
+              height: auto;
+              opacity: 1;
+              line-height: normal;
+              z-index: 1;
+              right: auto;
+              background-color: transparent;
+              margin-top: 0;
+              display: block !important; }
+              .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb .quickviewThumbnail button.slick-arrow.slick-prev {
+                left: -15px; }
+                @media (min-width: 768px) and (max-width: 1024px) {
+                  .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb .quickviewThumbnail button.slick-arrow.slick-prev {
+                    left: -10px; } }
+                .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb .quickviewThumbnail button.slick-arrow.slick-prev:before {
+                  background-position: 3px 8px;
+                  left: 5px; }
+              .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb .quickviewThumbnail button.slick-arrow.slick-next {
+                right: -15px; }
+                @media (min-width: 768px) and (max-width: 1024px) {
+                  .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb .quickviewThumbnail button.slick-arrow.slick-next {
+                    right: -10px; } }
+                .quickview.modal .modal-content .modal-body .viewimg #qucikview-thumb .quickviewThumbnail button.slick-arrow.slick-next:before {
+                  background-position: -9px 8px;
+                  right: 0; }
+      .quickview.modal .modal-content .modal-body .ready-to-shop-product {
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        position: relative; }
+        @media (min-width: 768px) and (max-width: 1024px) {
+          .quickview.modal .modal-content .modal-body .ready-to-shop-product .container {
+            padding: 0; } }
+      .quickview.modal .modal-content .modal-body .viewtext h2 {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%; }
+      .quickview.modal .modal-content .modal-body .viewtext .ratingbox {
+        margin: 0 0; }
+      .quickview.modal .modal-content .modal-body .viewtext p.qv-product-type {
+        margin: 0 0 10px; }
+      .quickview.modal .modal-content .modal-body .viewtext .price_response h3 {
+        color: #15161d;
+        font-size: 25px;
+        line-height: 26px;
+        letter-spacing: -0.2px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        margin: 0; }
+        .quickview.modal .modal-content .modal-body .viewtext .price_response h3 span {
+          color: #757575;
+          font-size: 13px;
+          font-weight: 400;
+          text-decoration: line-through;
+          position: relative;
+          top: 0;
+          line-height: 26px;
+          margin-left: 12px; }
+      .quickview.modal .modal-content .modal-body .viewtext p.qv-product-description {
+        font-size: 13px;
+        line-height: 19px;
+        margin: 5px 0 20px; }
+        @media only screen and (max-width: 992px) {
+          .quickview.modal .modal-content .modal-body .viewtext p.qv-product-description {
+            font-size: 11px;
+            line-height: 17px;
+            margin: 0 0 20px; } }
+        .quickview.modal .modal-content .modal-body .viewtext p.qv-product-description a {
+          font-weight: 500;
+          border: 1px solid black;
+          padding: 0px 4px;
+          display: inline-block;
+          font-size: 10px; }
+          .quickview.modal .modal-content .modal-body .viewtext p.qv-product-description a:hover {
+            color: black; }
+      .quickview.modal .modal-content .modal-body .viewtext .prizebox, .quickview.modal .modal-content .modal-body .viewtext .size {
+        margin: 0px; }
+      .quickview.modal .modal-content .modal-body .viewtext .quantity, .quickview.modal .modal-content .modal-body .viewtext .swatch {
+        margin: 0 0px 20px; }
+      .quickview.modal .modal-content .modal-body .viewtext .qv-add-to-cart {
+        float: left;
+        width: 99%; }
+        .quickview.modal .modal-content .modal-body .viewtext .qv-add-to-cart .quantity span {
+          color: #757575;
+          font-size: 12px;
+          line-height: 26px;
+          font-weight: 500;
+          text-transform: uppercase;
+          font-family: "Optima nova", sans-serif;
+          margin: 0;
+          display: inline-block;
+          padding-right: 20px;
+          min-width: 100px; }
+      .quickview.modal .modal-content .modal-body .viewtext .qv-product-options span.option.header {
+        display: block;
+        font-size: 12px; }
+      .quickview.modal .modal-content .modal-body .viewtext .qv-product-options .swatch-element {
+        margin: 0 6px 6px 0;
+        -webkit-transform: translate(0px, 0px);
+        -moz-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        -o-transform: translate(0px, 0px);
+        transform: translate(0px, 0px); }
+        .quickview.modal .modal-content .modal-body .viewtext .qv-product-options .swatch-element label {
+          font-size: 11px;
+          line-height: 28px;
+          height: auto !important; }
+      .quickview.modal .modal-content .modal-body .viewtext .qv-product-options .option.size .swatch-element input:checked + label {
+        background-color: black;
+        color: white; }
+      .quickview.modal .modal-content .modal-body .viewtext .qv-product-options .option.size .swatch-element label {
+        color: black;
+        font-size: 12px;
+        line-height: 30px;
+        font-weight: 500;
+        margin: 0;
+        border: none;
+        height: 30px !important;
+        padding: 0px;
+        border-radius: 0;
+        background: #E6E6E6;
+        width: 40px;
+        opacity: 1; }
+        @media (max-width: 767px) {
+          .quickview.modal .modal-content .modal-body .viewtext .qv-product-options .option.size .swatch-element label {
+            font-size: 10px; } }
+        .quickview.modal .modal-content .modal-body .viewtext .qv-product-options .option.size .swatch-element label:hover, .quickview.modal .modal-content .modal-body .viewtext .qv-product-options .option.size .swatch-element label:focus {
+          -webkit-transition: all 0.3s linear;
+          -moz-transition: all 0.3s linear;
+          -ms-transition: all 0.3s linear;
+          -o-transition: all 0.3s linear;
+          transition: all 0.3s linear;
+          background-color: black;
+          color: white; }
+        .quickview.modal .modal-content .modal-body .viewtext .qv-product-options .option.size .swatch-element label sup {
+          color: black;
+          font-size: 16px;
+          top: -3px;
+          right: -3px; }
+      .quickview.modal .modal-content .modal-body .viewtext .qv-product-options .option.color .swatch-element input:checked + label {
+        position: relative;
+        padding: 2px; }
+        .quickview.modal .modal-content .modal-body .viewtext .qv-product-options .option.color .swatch-element input:checked + label:before {
+          content: '\f00c';
+          font-family: FontAwesome;
+          position: absolute;
+          top: 5px;
+          right: 0;
+          left: 0;
+          color: #f8f8fa;
+          font-size: 16px;
+          text-shadow: 1px 1px 2px #989393;
+          display: none; }
+      .quickview.modal .modal-content .modal-body .viewtext .qv-product-options .option.color .swatch-element label {
+        color: #15161d;
+        font-size: 13px;
+        line-height: 7px;
+        font-weight: 500;
+        margin: 0;
+        border: 2px solid white;
+        height: 25px !important;
+        min-width: 25px !important;
+        padding: 0px;
+        border-radius: 50%;
+        opacity: 1;
+        background-clip: content-box; }
+      .quickview.modal .modal-content .modal-body .viewtext .qv-add-to-cart-response.success span {
+        font-size: 11px;
+        color: #757575; }
+        .quickview.modal .modal-content .modal-body .viewtext .qv-add-to-cart-response.success span a {
+          color: black;
+          border-radius: 3px;
+          font-weight: 500;
+          padding-left: 3px; }
+          .quickview.modal .modal-content .modal-body .viewtext .qv-add-to-cart-response.success span a:hover, .quickview.modal .modal-content .modal-body .viewtext .qv-add-to-cart-response.success span a:focus {
+            color: black; }
+      .quickview.modal .modal-content .modal-body .viewtext .qv-add-to-cart-response.error {
+        padding: 0 0 10px;
+        font-size: 11px;
+        color: #757575;
+        border-radius: 3px; }
+        .quickview.modal .modal-content .modal-body .viewtext .qv-add-to-cart-response.error b {
+          color: #f51322;
+          text-align: center;
+          width: 100%;
+          display: inline-block;
+          margin-top: 4px; }
+      .quickview.modal .modal-content .modal-body .viewtext .btn-box {
+        margin: 10px 0px; }
+        .quickview.modal .modal-content .modal-body .viewtext .btn-box button {
+          min-width: 180px;
+          width: 100%;
+          margin: 0;
+          border: 1px solid transparent; }
+      .quickview.modal .modal-content .modal-body .viewtext .view_details_panel a {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 0 10px;
+        cursor: pointer;
+        outline: none;
+        text-align: center;
+        -webkit-transition: all 0.6s;
+        -moz-transition: all 0.6s;
+        -ms-transition: all 0.6s;
+        -o-transition: all 0.6s;
+        transition: all 0.6s;
+        background-color: transparent !important;
+        border: none;
+        display: inline-block;
+        color: white;
+        min-height: 47px;
+        line-height: 47px;
+        margin-top: 0 !important;
+        display: block; }
+        .quickview.modal .modal-content .modal-body .viewtext .view_details_panel a:focus {
+          box-shadow: none;
+          outline: none; }
+        .quickview.modal .modal-content .modal-body .viewtext .view_details_panel a:hover {
+          color: black !important;
+          background-color: transparent !important; }
+          .quickview.modal .modal-content .modal-body .viewtext .view_details_panel a:hover:before {
+            left: -100%; }
+          .quickview.modal .modal-content .modal-body .viewtext .view_details_panel a:hover:after {
+            border: 1px solid black !important; }
+          @media (max-width: 1024px) {
+            .quickview.modal .modal-content .modal-body .viewtext .view_details_panel a:hover {
+              color: white !important; }
+              .quickview.modal .modal-content .modal-body .viewtext .view_details_panel a:hover:before {
+                left: 0; } }
+        @media (max-width: 992px) {
+          .quickview.modal .modal-content .modal-body .viewtext .view_details_panel a {
+            min-height: 40px;
+            line-height: 40px; } }
+        .quickview.modal .modal-content .modal-body .viewtext .view_details_panel a:before {
+          content: '';
+          background: black !important;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          z-index: -1;
+          -webkit-transition: all 0.6s;
+          -moz-transition: all 0.6s;
+          -ms-transition: all 0.6s;
+          -o-transition: all 0.6s;
+          transition: all 0.6s;
+          border: 1px solid black !important;
+          -webkit-transform: inherit;
+          -moz-transform: inherit;
+          -ms-transform: inherit;
+          -o-transform: inherit;
+          transform: inherit;
+          margin-left: 0;
+          margin-bottom: 0;
+          opacity: 1;
+          visibility: visible; }
+        .quickview.modal .modal-content .modal-body .viewtext .view_details_panel a:after {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: -1;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s;
+          border: 1px solid transparent !important;
+          -webkit-transform: inherit;
+          -moz-transform: inherit;
+          -ms-transform: inherit;
+          -o-transform: inherit;
+          transform: inherit;
+          margin-left: 0;
+          padding: 0; }
+  
+  .quickview .modal-content .carousel-inner {
+    overflow: visible; }
+  
+  /*---------------------------------QUICK VIEW MODAL CSS CODE ENDS---------------------------------*/

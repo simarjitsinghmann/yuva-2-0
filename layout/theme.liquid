@@ -37,7 +37,9 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-
+    <script>
+      var moneyFormat = '{{shop.money_format}}';
+    </script>
     <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
@@ -74,24 +76,23 @@
 
     <script src="{{'owl.carousel.js' | asset_url}}" defer="defer"></script> 
 
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel2.thumbs@0.1.8/dist/owl.carousel2.thumbs.min.js" defer="defer"></script>
     <script src="{{'common.js' | asset_url}}" defer="defer"></script> 
     
   </head>
 
   <body>
-
     <div class="wrapper">   
 
       <header>
 
           {% section 'announcement-bar' %}
-
           {% section 'header' %}      
 
       </header>
 
       {% include 'breadcrumb' %}      
-      
+
       <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
 
         {{ content_for_layout }}
@@ -100,7 +101,6 @@
 
       {% section 'footer' %}
 
-      {% include 'mini-cart' %}
       {% if settings.search_style == 'full' %}
       {% include 'search-drawer' %}
       {% endif %}
@@ -122,8 +122,9 @@
 
     </div>
     {% render 'newsletter-popup'%}
-  <script src="https://cdn.jsdelivr.net/npm/owl.carousel2.thumbs@0.1.8/dist/owl.carousel2.thumbs.min.js" defer="defer"></script>
-
+  
+  {% include 'product-quick-view' %}
+  {% include 'mini-cart' %}
   </body>
 
 </html>

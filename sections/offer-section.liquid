@@ -3,7 +3,7 @@
         <div class="category-list shopify__top__section text__center">
             <small>{{section.settings.subheading}}</small>
             <h3>{{section.settings.heading}}</h3>
-            <ul class="grid grid--3-col-tablet grid--3-col-desktop d-flex justify-content-center" role="list">
+            <ul class="grid grid--3-col-tablet grid--3-col-desktop d-flex justify-content-center {% if section.settings.style == 'style2' %}style_variation_2{% endif %}" role="list">
                 {% for block in section.blocks%}
                   {%- if block.settings.bgcolor != blank -%}
                   <style>
@@ -29,17 +29,9 @@
                               {% if block.settings.heading != blank %}
                                 <h5>{{block.settings.heading}}</h5>
                                 {% endif%}
-                                {% if block.settings.offer_heading != blank %}
-                                <p class="category-name">{{block.settings.offer_heading}}</p>
+                                {% if block.settings.subheading != blank %}
+                                {{block.settings.subheading}}
                                 {% endif%}
-                                <p class="offer-name">
-                                {% if block.settings.offer != blank %}
-                                  <span>{{block.settings.offer}}</span>
-                                {% endif%}
-                                  {% if block.settings.offer_sub != blank %}
-                                  {{block.settings.offer_sub}}
-                                {% endif%}
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -47,47 +39,6 @@
               {% endfor%}
             </ul>
 
-            <ul class="grid grid--3-col-tablet grid--3-col-desktop d-flex justify-content-center style_variation_2" role="list">
-              <li class="grid__item">
-                <div class="card-wrapper">
-                  <div class="card-information">
-                  <div class="card-information-image">
-                    <a href="javascript:void(0)" class="animate_hvrbr"><img src="https://yova.shinedezign.pro/assets/images/category-ver1.png" alt=""></a>
-                  </div>
-                    <div class="card-information__wrapper">
-                      <h5>New look of women tops</h5>
-                        <h3 class="category-name"><span>Upto 50</span>% Off</h3>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="grid__item">
-                <div class="card-wrapper">
-                  <div class="card-information">
-                    <div class="card-information-image">
-                      <a href="javascript:void(0)" class="animate_hvrbr"><img src="https://yova.shinedezign.pro/assets/images/category-ver2.png" alt=""></a>
-                    </div>
-                    <div class="card-information__wrapper">
-                      <h5>New look of women tops</h5>
-                      <h3 class="category-name"><span>Upto 25</span>% Off</h3>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="grid__item">
-                <div class="card-wrapper">
-                  <div class="card-information">
-                    <div class="card-information-image">
-                      <a href="javascript:void(0)" class="animate_hvrbr"><img src="https://yova.shinedezign.pro/assets/images/category-ver3.png" alt=""></a>
-                    </div>
-                    <div class="card-information__wrapper">
-                      <h5>New look of women tops</h5>
-                      <h3 class="category-name"><span>Upto 40</span>% Off</h3>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
         </div>
     </div>
 </div>
@@ -120,6 +71,22 @@
       "id": "color",
       "default": "#efedeb",
       "label": "t:sections.offer-section.settings.color.label"
+    },
+    {
+      "type": "select",
+      "id": "style",
+      "label": "t:sections.offer-section.settings.style.label",
+      "default": "style1",
+      "options": [
+        {
+          "label": "t:sections.offer-section.settings.style.style1.label",
+          "value": "style1"
+        },
+        {
+          "label": "t:sections.offer-section.settings.style.style2.label",
+          "value": "style2"
+        }
+      ]
     }
   ],
   "blocks": [
@@ -134,22 +101,10 @@
           "label": "t:sections.offer-section.blocks.offer.settings.heading.label"
         },
         {
-          "type": "text",
-          "id": "offer_heading",
-          "default": "Flat Up To",
-          "label": "t:sections.offer-section.blocks.offer.settings.offer_heading.label"
-        },
-        {
-          "type": "text",
-          "id": "offer",
-          "default": "70%",
-          "label": "t:sections.offer-section.blocks.offer.settings.offer.label"
-        },
-        {
-          "type": "text",
-          "id": "offer_sub",
-          "default": "off",
-          "label": "t:sections.offer-section.blocks.offer.settings.offer_sub.label"
+          "type": "richtext",
+          "id": "subheading",
+          "default": "<p>Flat Up To</p>",
+          "label": "t:sections.offer-section.blocks.offer.settings.subheading.label"
         },
         {
           "type": "image_picker",
