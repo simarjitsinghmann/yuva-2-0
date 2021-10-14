@@ -126,7 +126,7 @@ div#banner-slide > img { width: 100%;}
 .view-all:hover { color: var(--color-theme-text); border-color: var(--color-theme-text); } 
 .collection-section-header { align-items: center; justify-content: space-between; display: flex; margin-bottom: 14px; }
 .shopify__top__section h3{text-align:center;font-family: var(--font-family);}
-.card-wrapper .collection-detail { position: absolute;padding: 20px; }
+.card-wrapper .collection-detail { position: absolute;padding: 20px;z-index:4; }
 .card__warpper__detail { width: 100%; } 
 .collection-detail a { color: var(--color-theme-text); font-size: var(--small-font); text-decoration: none; font-weight: var(--medium);font-family: var(--font-family); } 
 .collection-detail a svg { fill: var(--color-theme-text); font-size: var(--small-font); width: 12px; height: 12px; position: relative; top: 1px; }
