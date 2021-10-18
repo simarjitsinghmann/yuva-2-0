@@ -75,7 +75,7 @@
           "type": "offer",
           "settings": {
             "heading": "Heading",
-            "subheading": "<p>Flat Up To<\/p>",
+            "subheading": "<p><strong>Flat Up <\/strong>To<\/p>",
             "image": "shopify:\/\/shop_images\/category1.jpg",
             "link": "",
             "bgcolor": "#ffffff",
@@ -86,7 +86,7 @@
           "type": "offer",
           "settings": {
             "heading": "Heading",
-            "subheading": "<p>Flat Up To<\/p>",
+            "subheading": "<p><strong>Flat Up <\/strong>To<\/p>",
             "image": "shopify:\/\/shop_images\/category2.jpg",
             "link": "",
             "bgcolor": "#ffffff",
@@ -97,7 +97,7 @@
           "type": "offer",
           "settings": {
             "heading": "Heading",
-            "subheading": "<p>Flat Up To<\/p>",
+            "subheading": "<p><strong>Flat Up <\/strong>To<\/p>",
             "image": "shopify:\/\/shop_images\/category3.jpg",
             "link": "",
             "bgcolor": "#ffffff",
@@ -114,11 +114,12 @@
         "subheading": "BEST FOR YOU",
         "heading": "What's More",
         "color": "#efedeb",
-        "style": "style1"
+        "style": "style2"
       }
     },
     "video-banner": {
       "type": "video-banner",
+      "disabled": true,
       "settings": {
         "videofile": "https:\/\/cdn.shopify.com\/s\/files\/1\/2018\/8867\/files\/ice.mp4",
         "title": "Video with text overlay",
@@ -232,7 +233,7 @@
         "heading": "Collection list",
         "btntext": "View All",
         "btnlink": "",
-        "style": "style1",
+        "style": "style2",
         "m_collection": "",
         "info_position": "top-center",
         "info_alignment": "center",
@@ -291,7 +292,7 @@
       "type": "featured-blog",
       "settings": {
         "heading": "CONSECTETUR",
-        "style": "style1",
+        "style": "style2",
         "subheading": "Blog post everyday",
         "blog": "",
         "custom": true,
@@ -367,11 +368,22 @@
         "8f276b0f-5c04-4526-8b17-1bc211ed9099"
       ],
       "settings": {
-        "style": "style1",
+        "style": "style2",
         "subheading": "HAPPY CLIENT’S",
         "heading": "What Our Customers Say",
         "description": "What Our Customers Say",
         "bgcolor": "#f6f4f2"
+      }
+    },
+    "163456266607727edf": {
+      "type": "featured-product",
+      "settings": {
+        "product": "maroon-top",
+        "show_share_buttons": false,
+        "enable_payment_button": true,
+        "product_quantity_enable": true,
+        "product_vendor_enable": true,
+        "product_reviews_enable": true
       }
     },
     "instagram": {
@@ -442,6 +454,7 @@
     "16345626467f5a91b7",
     "featured-blog",
     "testimonials",
+    "163456266607727edf",
     "instagram",
     "multicolumn-content"
   ]
