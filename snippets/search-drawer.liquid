@@ -4,10 +4,10 @@
         <div class="container">
             <div class="row">
                 <!---search-field---->
-                <form action="" method="get" role="search">
+                <form action="/search" method="get" role="search">
                     <input type="hidden" name="type" value="product">
                     <div class="input-group">
-                        <input type="search" name="q" placeholder="Search our Products..."
+                        <input type="text" name="q" placeholder="Search our Products..."
                             class="form-control search-input" autocomplete="">
                         <!-- <input type="text" name="q" class="form-control search-input" value="" placeholder="Search our products" autocomplete="off"> -->
                         <div class="input-group-append">
@@ -59,42 +59,6 @@
         <div class="container">
             <div class="row">
                 <div class="recent-search-list ActiveSearch" id="recent_search_list">
-                    <h5 style="">Recent Search</h5>
-                    <div class="recent-search-inner mCustomScrollbar">
-                        <div id="mCSB_9_container" class="mCSB_container mCS_x_hidden mCS_no_scrollbar_x"
-                            style="position: relative; top: 0px; left: 0px; width: 100%;" dir="ltr">
-                            <ul style="display: flex; align-items: center; list-style: none;">
-                                <li>
-                                    <a href="javascript:void(0)" title="Basic Fur Hood Grey Jacket">
-                                        <img src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/jacket2_large.png"
-                                            class="mCS_img_loaded">
-                                        <span>Gear Footwear</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" title="Basic Fur Hood Grey Jacket">
-                                        <img src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/jacket2_large.png"
-                                            class="mCS_img_loaded">
-                                        <span>Gear Footwear</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" title="Basic Fur Hood Grey Jacket">
-                                        <img src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/jacket2_large.png"
-                                            class="mCS_img_loaded">
-                                        <span>Gear Footwear</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" title="Basic Fur Hood Grey Jacket">
-                                        <img src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/jacket2_large.png"
-                                            class="mCS_img_loaded">
-                                        <span>Gear Footwear</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -103,67 +67,6 @@
         <div class="container">
             <div class="row">
                 <div class="results-box">
-                    <h5>Search Products</h5>
-                    <div class="result-list">
-                        <a class="searc-item-box" href="javascript:void(0)">
-                            <div class="img">
-                                <img
-                                    src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1_9fb9b8ce-cba7-494b-9596-0dc7fcda00bb_large.png">
-                            </div>
-                            <div class="title_price">
-                                <div class="d-title">Women luggage bag</div>
-                                <div class="d-price">$120.00</div>
-                            </div>
-                        </a>
-                        <a class="searc-item-box" href="javascript:void(0)">
-                            <div class="img">
-                                <img src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/DSC_0178_large.jpg">
-                            </div>
-                            <div class="title_price">
-                                <div class="d-title">Chanel Iridescent Gold Quilted Lambskin</div>
-                                <div class="d-price">$6,000.00</div>
-                            </div>
-                        </a>
-                        <a class="searc-item-box" href="javascript:void(0)">
-                            <div class="img">
-                                <img src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/bag1_large.png">
-                            </div>
-                            <div class="title_price">
-                                <div class="d-title">Hand Bag</div>
-                                <div class="d-price">$20.00</div>
-                            </div>
-                        </a>
-                        <a class="searc-item-box" href="javascript:void(0)">
-                            <div class="img">
-                                <img
-                                    src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1_9fb9b8ce-cba7-494b-9596-0dc7fcda00bb_large.png">
-                            </div>
-                            <div class="title_price">
-                                <div class="d-title">Women luggage bag</div>
-                                <div class="d-price">$120.00</div>
-                            </div>
-                        </a>
-                        <a class="searc-item-box" href="javascript:void(0)">
-                            <div class="img">
-                                <img src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/DSC_0178_large.jpg">
-                            </div>
-                            <div class="title_price">
-                                <div class="d-title">Chanel Iridescent Gold Quilted Lambskin</div>
-                                <div class="d-price">$6,000.00</div>
-                            </div>
-                        </a>
-                        <a class="searc-item-box" href="javascript:void(0)">
-                            <div class="img">
-                                <img
-                                    src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1_9fb9b8ce-cba7-494b-9596-0dc7fcda00bb_large.png">
-                            </div>
-                            <div class="title_price">
-                                <div class="d-title">Women luggage bag</div>
-                                <div class="d-price">$120.00</div>
-                            </div>
-                        </a>
-                    </div>
-                    <a href="javascript:void(0)" class="note">See all Results </a>
                 </div>
             </div>
         </div>
@@ -174,13 +77,12 @@
     <div class="search-bar-box search-box">
         <div class="search-padding-sec">
             <!---search-field---->
-            <form action="" method="get" role="search">
+            <form action="/search" method="get" role="search">
                 <input type="hidden" name="type" value="product">
                 <div class="input-group">
                     <label>What are you looking for ?</label>
                     <div class="cstm-input-box">
-                        <input type="search" name="q" placeholder="Search our Products..."
-                            class="form-control search-input" autocomplete="">
+                        <input type="text" name="q" placeholder="Search our Products..." class="form-control search-input" autocomplete="">
                         <!-- <input type="text" name="q" class="form-control search-input" value="" placeholder="Search our products" autocomplete="off"> -->
                         <div class="input-group-append">
                             <svg width="24" height="24" class="header_icon_search" xmlns="http://www.w3.org/2000/svg"
@@ -205,95 +107,10 @@
                         <div class="row">
                             <div class="col-sm-6 col-md-6 small-list-left">
                                 <div class="recent-search-list ActiveSearch" id="recent_search_list">
-                                    <h5 style="">Recent Search</h5>
-                                    <div class="recent-search-inner mCustomScrollbar">
-                                        <div id="mCSB_9_container"
-                                            class="mCSB_container mCS_x_hidden mCS_no_scrollbar_x"
-                                            style="position: relative; top: 0px; left: 0px; width: 100%;" dir="ltr">
-                                            <ul
-                                                style="display: flex; align-items: center; list-style: none;flex-wrap:wrap;">
-                                                <li>
-                                                    <a href="javascript:void(0)" title="Basic Fur Hood Grey Jacket">
-                                                        <img src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/jacket2_large.png"
-                                                            class="mCS_img_loaded">
-                                                        <span>Gear Footwear</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)" title="Basic Fur Hood Grey Jacket">
-                                                        <img src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/jacket2_large.png"
-                                                            class="mCS_img_loaded">
-                                                        <span>Gear Footwear</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)" title="Basic Fur Hood Grey Jacket">
-                                                        <img src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/jacket2_large.png"
-                                                            class="mCS_img_loaded">
-                                                        <span>Gear Footwear</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)" title="Basic Fur Hood Grey Jacket">
-                                                        <img src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/jacket2_large.png"
-                                                            class="mCS_img_loaded">
-                                                        <span>Gear Footwear</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-6 small-list-right">
                                 <div class="results-box">
-                                    <div class="result-list">
-                                        <a class="searc-item-box" href="javascript:void(0)">
-                                            <div class="img">
-                                                <img
-                                                    src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1_9fb9b8ce-cba7-494b-9596-0dc7fcda00bb_large.png">
-                                            </div>
-                                            <div class="title_price">
-                                                <span class="product__category">Men’ Clothes</span>
-                                                <div class="d-title">Women luggage bag</div>
-                                                <div class="d-price">$120.00</div>
-                                            </div>
-                                        </a>
-                                        <a class="searc-item-box" href="javascript:void(0)">
-                                            <div class="img">
-                                                <img
-                                                    src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/DSC_0178_large.jpg">
-                                            </div>
-                                            <div class="title_price">
-                                                <span class="product__category">Men’ Clothes</span>
-                                                <div class="d-title">Chanel Iridescent Gold Quilted Lambskin</div>
-                                                <div class="d-price">$6,000.00</div>
-                                            </div>
-                                        </a>
-                                        <a class="searc-item-box" href="javascript:void(0)">
-                                            <div class="img">
-                                                <img
-                                                    src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/bag1_large.png">
-                                            </div>
-                                            <div class="title_price">
-                                                <span class="product__category">Men’ Clothes</span>
-                                                <div class="d-title">Hand Bag</div>
-                                                <div class="d-price">$20.00</div>
-                                            </div>
-                                        </a>
-                                        <a class="searc-item-box" href="javascript:void(0)">
-                                            <div class="img">
-                                                <img
-                                                    src="https://cdn.shopify.com/s/files/1/0331/0108/6851/products/pro_1_9fb9b8ce-cba7-494b-9596-0dc7fcda00bb_large.png">
-                                            </div>
-                                            <div class="title_price">
-                                                <span class="product__category">Men’ Clothes</span>
-                                                <div class="d-title">Women luggage bag</div>
-                                                <div class="d-price">$120.00</div>
-                                            </div>
-                                        </a>
-
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -301,6 +118,7 @@
                 </div>
             </form>
         </div>
+        
         <a href="javascript:void(0)" class="note">See all Results </a>
     </div>
 
@@ -308,3 +126,4 @@
     <!--SMALL SEARCH-END-->
 </div>
 {% endif %}
+<script src="{{'search.js' | asset_url}}" defer></script>

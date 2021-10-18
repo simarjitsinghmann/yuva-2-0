@@ -14,11 +14,14 @@ h6{
 
 
 h1.bigger-heading{font-size:100px;color:var(--color-secondary);}
+h1.smaller-heading{font-size:70px}
 .big-size{font-size:116px;color:var(--color-secondary);}
-.style2 .bigger-heading{font-size:124px;color:var(--color-secondary);text-transform: uppercase;}
+.style2 .bigger-heading{font-size:154px;color:var(--color-secondary);text-transform: uppercase;}
 .style2 h2.top-title {
-	font-size: 48px;
-	font-family: var(--font-family2);
+	font-size: 40px;
+	font-weight: var(--thin);
+    letter-spacing: 1px;
+    line-height: 80px;
 }
 .offer h2{
   font-size: 60px;

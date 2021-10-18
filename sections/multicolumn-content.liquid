@@ -21,8 +21,11 @@
 {% endif %}
 <style>
     #shopify-section-{{section.id}}{
-      padding: 50px 0;
+      padding: {{section.settings.padding}}px 0;
       background-color:{{section.settings.bgcolor}};
+      {%- if section.settings.show_divider -%}
+      border-bottom: 1px solid {{section.settings.textcolor | color_lighten: 50}};
+      {%- endif -%}
     }
     #shopify-section-{{section.id}} .service__column .col h6,
     #shopify-section-{{section.id}} .service__column .col p{
@@ -30,7 +33,7 @@
     }
     
     #shopify-section-{{section.id}} .service__column .col{
-      border-color:{{section.settings.textcolor}};
+      border-color:{{section.settings.textcolor | color_lighten: 50}};
     }
   </style>
 {% schema %}
@@ -50,6 +53,22 @@
       "id": "textcolor",
       "default": "#000000",
       "label": "t:sections.multicolumn.settings.textcolor.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_divider",
+      "default": true,
+      "label": "t:sections.multicolumn.settings.show_divider.label"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "default": 100,
+      "min":0,
+      "max":150,
+      "step":5,
+      "unit":"px",
+      "label": "t:sections.multicolumn.settings.padding.label"
     }
   ],
   "blocks": [

@@ -12,19 +12,15 @@
       </div> 
     </div>
   </div>
-  <div class="col-md-6 euqal-height background-white">
+  <div class="col-md-6 euqal-height background-white product_content_section">
     <div class="product-add-to-cart-right">
                   
       <div class="clearfix"> </div>
       <h2>{{ product.title | default: 'Example Product Title' }}</h2>
-       {% if section.settings.product_vendor_enable %}
       <p class="vendor_name">{{product.vendor}}</p>
-       {% endif %}
-      {% if section.settings.product_reviews_enable %}
       <div class="ratingbox">
         <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
       </div>
-       {% endif %}
       {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
       <input type="hidden" name="form_type" value="product">
       <div class="prizebox" data-price-wrapper>
@@ -42,10 +38,37 @@
       </div>
       <div class="form-group">
         {% if product.available and product.variants.size > 1 %}
-        {% for option in product.options %}
-        {% include 'swatch' with option %}
-        {% endfor %}
-        {% endif %}
+              {% for option in product.options_with_values %}
+              {% assign downOption = option.name | downcase %}
+                {% assign optionIndex = forloop.index %}
+                {% assign varOptionIndex = 'option'|append:forloop.index %}
+                <div class="select__{{downOption}}">
+                  <p class="small-size size_title">SELECT {{option.name}}</p>
+                  <ul class="product-loop-variants {{downOption}} variants circle _small list-unstyled">                            
+                  {%- for value in option.values -%}  
+                      <li class="{{downOption}}_option">
+                        <input class="productOption" type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
+                        <span class="option {% if option.selected_value == value %}selected{% endif %}" {% if downOption == 'color' or  downOption == 'colour'%}{% unless block.settings.variant_image %} style="background-color:{{value}};"{% endunless %}{% endif %}>
+                            {% if downOption == 'color' or  downOption == 'colour'%}    
+                              {% if block.settings.variant_image %}                                                                                  
+                                  {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
+                                  {% for variant in variantsList %}
+                                    {% if variant.featured_image != blank %}
+                                        <img src="{{variant.featured_image | img_url:"100x"}}">
+                                        {% break %}
+                                    {% endif %}
+                                  {% endfor %}
+                              {% endif %}
+                            {% else %}
+                            {{value}}
+                            {% endif%}
+                        </span>
+                      </li>
+                  {% endfor %}
+                  </ul> 
+                </div>
+              {% endfor %}
+              {% endif %}
         <select name="id" id="ProductSelect" class="product-form__variants no-js hide js">
           {% for variant in product.variants %}
           {% if variant.available %}
@@ -76,7 +99,7 @@
                   name="add"
                   data-add-to-cart id="Sd_addProduct"
                   {% unless product.available %}disabled="disabled"{% endunless %}
-                  {% if section_onboarding %}disabled="disabled"{% endif %} class="black-btn button">
+                  {% if section_onboarding %}disabled="disabled"{% endif %} class="Sd_addProduct black-btn button">
             {% if product.available %}
             {{ 'products.product.add_to_cart' | t }}
             {% else %}
@@ -84,22 +107,23 @@
             {% endif %}
           </button>
 
-          {% if product.available %}
-          {% endif %}
           {% if section.settings.enable_payment_button %}
           {{ form | payment_button }}
           {% endif %}
         </div>
       </div>
       {% endform %}
-      {% if section.settings.show_share_buttons %}
+      <div class="rte">
+        {{product.description}}
+      </div>
       {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
-      {% endif %}
     </div>
-  </div>
-  <script type="application/json" data-product-json>
-    {{ product | json }}
+  
+  
+    <script type="application/json" name="variant-json">
+      {{ product.variants | json }}
     </script>
+  </div>
     <script>
     $(document).ready(function(){
         $('#feature__product-{{product.id}}').owlCarousel({

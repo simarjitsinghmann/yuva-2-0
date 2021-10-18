@@ -79,7 +79,7 @@ function changeItem(line, quantity, callback) {
         });
     },
     error: function(XMLHttpRequest, textStatus) {
-        ShopifyAPI.onError(XMLHttpRequest, textStatus);
+        console.log(XMLHttpRequest, textStatus);
     }
     };
     jQuery.ajax(params);
@@ -106,7 +106,7 @@ $(document).on('submit','[action="/cart/add"]', function(evt) {
             errorCallback(XMLHttpRequest, textStatus);
             }
             else {
-            ShopifyAPI.onError(XMLHttpRequest, textStatus);
+                console.log(XMLHttpRequest, textStatus);
             }
         }
         };
