@@ -75,9 +75,7 @@
           "type": "offer",
           "settings": {
             "heading": "Heading",
-            "offer_heading": "Flat Up To",
-            "offer": "70%",
-            "offer_sub": "off",
+            "subheading": "<p>Flat Up To<\/p>",
             "image": "shopify:\/\/shop_images\/category1.jpg",
             "link": "",
             "bgcolor": "#ffffff",
@@ -88,9 +86,7 @@
           "type": "offer",
           "settings": {
             "heading": "Heading",
-            "offer_heading": "Flat Up To",
-            "offer": "70%",
-            "offer_sub": "off",
+            "subheading": "<p>Flat Up To<\/p>",
             "image": "shopify:\/\/shop_images\/category2.jpg",
             "link": "",
             "bgcolor": "#ffffff",
@@ -101,9 +97,7 @@
           "type": "offer",
           "settings": {
             "heading": "Heading",
-            "offer_heading": "Flat Up To",
-            "offer": "70%",
-            "offer_sub": "off",
+            "subheading": "<p>Flat Up To<\/p>",
             "image": "shopify:\/\/shop_images\/category3.jpg",
             "link": "",
             "bgcolor": "#ffffff",
@@ -119,7 +113,8 @@
       "settings": {
         "subheading": "BEST FOR YOU",
         "heading": "What's More",
-        "color": "#efedeb"
+        "color": "#efedeb",
+        "style": "style1"
       }
     },
     "video-banner": {
@@ -146,6 +141,7 @@
             "collection": "",
             "btntext": "Explore",
             "info_position": "right",
+            "text_position": "top-center",
             "custom": true,
             "heading": "Collection",
             "desc": "Contrary to popular belief, Lorem Ipsum is not simply random.",
@@ -159,6 +155,7 @@
             "collection": "",
             "btntext": "Explore",
             "info_position": "left",
+            "text_position": "top-center",
             "custom": true,
             "heading": "Collection",
             "desc": "Contrary to popular belief, Lorem Ipsum is not simply random.",
@@ -172,6 +169,7 @@
             "collection": "",
             "btntext": "Explore",
             "info_position": "right",
+            "text_position": "top-center",
             "custom": true,
             "heading": "Collection",
             "desc": "Contrary to popular belief, Lorem Ipsum is not simply random.",
@@ -185,6 +183,7 @@
             "collection": "",
             "btntext": "Explore",
             "info_position": "left",
+            "text_position": "top-center",
             "custom": true,
             "heading": "Collection",
             "desc": "Contrary to popular belief, Lorem Ipsum is not simply random.",
@@ -198,6 +197,7 @@
             "collection": "",
             "btntext": "Explore",
             "info_position": "right",
+            "text_position": "top-center",
             "custom": true,
             "heading": "Collection",
             "desc": "Contrary to popular belief, Lorem Ipsum is not simply random.",
@@ -211,6 +211,7 @@
             "collection": "",
             "btntext": "Explore",
             "info_position": "left",
+            "text_position": "top-center",
             "custom": true,
             "heading": "Collection",
             "desc": "Contrary to popular belief, Lorem Ipsum is not simply random.",
@@ -231,6 +232,7 @@
         "heading": "Collection list",
         "btntext": "View All",
         "btnlink": "",
+        "style": "style1",
         "m_collection": "",
         "info_position": "top-center",
         "info_alignment": "center",
@@ -239,7 +241,12 @@
         "mc_heading": "Main Collection",
         "mc_desc": "Contrary to popular belief, Lorem Ipsum is not simply random.",
         "mc_btnlink": "",
-        "mc_image": "shopify:\/\/shop_images\/winter-collection.jpg"
+        "mc_image": "shopify:\/\/shop_images\/winter-collection.jpg",
+        "button_icon": true,
+        "btn_bg": "",
+        "btn_text": "#000000",
+        "hvr_btn_bg": "#000000",
+        "hvr_btn_text": "#ffffff"
       }
     },
     "featured-collection": {
@@ -253,50 +260,38 @@
         "show_second_image": false
       }
     },
-    "1634038735de36515c": {
-      "type": "slider",
-      "blocks": {
-        "1634038735de36515c-0": {
-          "type": "slide",
-          "settings": {
-            "heading": "Women Day 2020",
-            "h_bg": "rgba(0,0,0,0)",
-            "h_text": "#ffffff",
-            "subheading": "The Day Dreamers",
-            "sh_bg": "#ffffff",
-            "sh_text": "#000000",
-            "sale": "40% off",
-            "sale_bg": "",
-            "sale_text": "#ffffff",
-            "content": "Discover the latest chapter of the collection.",
-            "c_bg": "",
-            "c_text": "#ffffff",
-            "btn": "Explore Now",
-            "link": "",
-            "btn_bg": "#000000",
-            "btn_text": "#ffffff",
-            "btn_h_bg": "#000000",
-            "btn_h_text": "#ffffff",
-            "image": "shopify:\/\/shop_images\/daily-offer.jpg",
-            "bgcolor": "",
-            "info_position": "center-right",
-            "info_alignment": "left"
-          }
-        }
-      },
-      "block_order": [
-        "1634038735de36515c-0"
-      ],
+    "16345626467f5a91b7": {
+      "type": "banner-section",
       "settings": {
-        "rotate": false,
-        "arrows": false,
-        "rotate_speed": 2
+        "heading": "Women Day 2020",
+        "h_bg": "",
+        "h_text": "#000000",
+        "subheading": "The Day Dreamers",
+        "sh_bg": "#000000",
+        "sh_text": "#ffffff",
+        "sale": "40% Off",
+        "sale_bg": "",
+        "sale_text": "#f17e35",
+        "content": "Discover the latest chapter of the collection.",
+        "c_bg": "",
+        "c_text": "#000000",
+        "btn": "Shop Now",
+        "link": "",
+        "btn_bg": "#f17e35",
+        "btn_text": "#ffffff",
+        "btn_h_bg": "#000000",
+        "btn_h_text": "#ffffff",
+        "image": "shopify:\/\/shop_images\/daily-offer.jpg",
+        "bgcolor": "",
+        "info_position": "center-right",
+        "info_alignment": "left"
       }
     },
     "featured-blog": {
       "type": "featured-blog",
       "settings": {
         "heading": "CONSECTETUR",
+        "style": "style1",
         "subheading": "Blog post everyday",
         "blog": "",
         "custom": true,
@@ -432,7 +427,9 @@
       ],
       "settings": {
         "bgcolor": "#efedeb",
-        "textcolor": "#000000"
+        "textcolor": "#000000",
+        "show_divider": true,
+        "padding": 100
       }
     }
   },
@@ -442,7 +439,7 @@
     "video-banner",
     "collection-list",
     "featured-collection",
-    "1634038735de36515c",
+    "16345626467f5a91b7",
     "featured-blog",
     "testimonials",
     "instagram",
