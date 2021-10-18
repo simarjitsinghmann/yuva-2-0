@@ -219,7 +219,7 @@ div#banner-slide > img { width: 100%;}
 .card.card--product .product__on__sale svg { width: 56px; } 
 .card.card--product { position: relative; } 
 .card.card--product .product__on__sale { position: absolute; top: 26px; z-index:1; } 
-.product-information__wrapper .caption-with-letter-spacing { font-size: var(--small-size); color: var(--color-gray); line-height: 20px;  text-transform: unset; opacity: 1; padding-top: 16px; padding-bottom: 9px; font-weight: var(--medium);} 
+.product-information__wrapper .caption-with-letter-spacing { font-size: var(--small-size); color: var(--color-gray); line-height: 20px; letter-spacing:0; text-transform: unset; opacity: 1; padding-top: 16px; padding-bottom: 9px; font-weight: var(--medium);} 
 .product-information__wrapper .price-item { font-size: var(--small-font); font-weight: var(--bold); color: var(--color-primary); line-height: 20px; letter-spacing: 0.2px; margin-right: 11px;} 
 /*.product-variants-wrapper .product-loop-variants .color_option span { font-size: 0px; width: 15px; height: 15px; color: inherit; display: inline-block; border-radius: 50%; float: left; cursor:pointer; }*/ 
 .product-loop-variants.circle, .product-loop-variants.square { display: flex; } 
