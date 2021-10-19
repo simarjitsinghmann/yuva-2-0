@@ -24,7 +24,7 @@
       padding: {{section.settings.padding}}px 0;
       background-color:{{section.settings.bgcolor}};
       {%- if section.settings.show_divider -%}
-      border-bottom: 1px solid {{section.settings.textcolor | color_lighten: 50}};
+      border-bottom: 1px solid {{section.settings.textcolor | color_lighten: 80}};
       {%- endif -%}
     }
     #shopify-section-{{section.id}} .service__column .col h6,
@@ -33,7 +33,7 @@
     }
     
     #shopify-section-{{section.id}} .service__column .col{
-      border-color:{{section.settings.textcolor | color_lighten: 50}};
+      border-color:{{section.settings.textcolor | color_lighten: 80}};
     }
   </style>
 {% schema %}
