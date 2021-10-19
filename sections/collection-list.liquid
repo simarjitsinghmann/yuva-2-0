@@ -93,7 +93,7 @@
                             {% assign collection = block.settings.collection %}
                             {% endif %}
                             {% capture image_content %}
-                            <div class="collection-image block-{{forloop.index}}">
+                            <div class="collection-image ">
                               {% if block.settings.custom == false and collection.featured_image != blank %} 
                               {% assign feature_image = collection.featured_image | img_url:'master' %}
                               {% elsif block.settings.custom == true and block.settings.image == blank and collection.featured_image != blank %}
@@ -108,7 +108,7 @@
                             {% endcapture %}
                             <li class="grid__item__list">
                                 <div class="card-wrapper">
-                                    <div class="card__warpper__detail right__sided">
+                                    <div class="card__warpper__detail right__sided block-{{forloop.index}}">
                                       {% if block.settings.info_position == 'right'%}
                                         {{image_content}}
                                       {% endif %}
