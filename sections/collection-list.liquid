@@ -80,12 +80,20 @@
                     <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col" role="list">
                         <ul class="collection__right__list" role="list">
                           {% for block in section.blocks %}
+                          {% if section.settings.style == 'style2' %}
+                          <style>
+                            .section-{{section.id}} block-{{block.id}} .right__sided .collection-detail h4,
+                            .section-{{section.id}} .left__sided .collection-detail small{
+                              color:{{section.settings.text_color}} !important;
+                            }
+                          </style>
+                          {% endif %}
                             {% assign collection = ''%}
                             {% if block.settings.collection != blank %}
                             {% assign collection = block.settings.collection %}
                             {% endif %}
                             {% capture image_content %}
-                            <div class="collection-image">
+                            <div class="collection-image block-{{block.id}}">
                               {% if block.settings.custom == false and collection.featured_image != blank %} 
                               {% assign feature_image = collection.featured_image | img_url:'master' %}
                               {% elsif block.settings.custom == true and block.settings.image == blank and collection.featured_image != blank %}
