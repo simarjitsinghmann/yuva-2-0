@@ -163,11 +163,13 @@ function updateQuantity(line, qty) {
 $(document).on('click', '.sd_mini_removeproduct', function(evt) {
   evt.preventDefault();
     var $el = $(this),
+        parent = $el.closest('.media-link'),
         line = $el.data('line');
 
-
+	
     // If it has a data-line, update the cart
     if (line) {
+      parent.remove();
         updateQuantity(line, 0);
     }
 })
