@@ -133,7 +133,7 @@ div#banner-slide > img { width: 100%;}
 /* .card__warpper__detail.left__sided .collection-image {height: 100vh;} */
 /* .card__warpper__detail.left__sided .collection-image > img {height: 100vh;object-fit: cover;} */
 .title { font-family: var(--font-family);color: var(--color-primary); line-height: 45px; text-align: left; font-weight: var(--bold); margin:0;font-size:28px;} 
-.collection-detail h4 { font-family: var(--font-family); line-height: 45px; color: var(--color-primary); font-weight: var(--semibold); padding: 36px 0 9px; letter-spacing: 0.2px; } 
+ { font-family: var(--font-family); line-height: 45px; color: var(--color-primary); font-weight: var(--semibold); padding: 36px 0 9px; letter-spacing: 0.2px; } 
 .collection-detail small { font-family: var(--font-family);font-weight: var(--medium); color: var(--color-gray); font-size:var(--small-font); line-height: 20px; width: 100%; display: block; margin: 0 auto 4px; letter-spacing: 0; letter-spacing: 0.2px;max-width: 320px; } 
 .view-all { font-size: 13px; line-height: 15px; color: var(--color-gray); letter-spacing: 0.2px; text-decoration: none; border-bottom: 1px solid #a1a1a1;font-weight: var(--medium); } 
 .view-all:hover { color: var(--color-theme-text); border-color: var(--color-theme-text); } 
@@ -419,7 +419,7 @@ a.wishlist-view .fas { display: none; }
     font-size: var(--extra-small);
 }
 .blog-variation2 .post-information__wrapper h5 {
-    font-weight: var(--semibold);
+    font-weight: var(--bold);
     margin-bottom: 8px;
     font-size: 16px;
     letter-spacing: 0;
