@@ -382,9 +382,10 @@ $('.back-btn').click(function(){
          });
       });
     }
-	function hideOptions(options){
-		Array.from(showOptions).forEach(function(option) {
-          
+	function hideOptions(){
+      var options = document.getElementsByClassName('product-wrap');
+		Array.from(options).forEach(function(option) {
+          option.style.display="none";
         });
   }
 }
