@@ -3,57 +3,40 @@
     "product-template": {
       "type": "product-template",
       "blocks": {
-        "title":{
-          "type":"title",
-          "settings":{}
-        },
-        "text":{
-          "type":"text",
-          "settings":{
-            "text":"{{product.vendor}}"
+        "ed5aa936-0a62-4a16-aa49-2b56113ffdfe": {
+          "type": "title",
+          "settings": {
           }
         },
-        "reviews":{
-          "type":"review-star",
-          "settings":{
+        "1fd84199-98b7-4ff9-8610-6ada9ce20f0e": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}"
           }
         },
-        "price":{
-          "type":"price",
-          "settings":{
+        "abfd10b4-fa40-4666-a606-62c0b5cdf066": {
+          "type": "price",
+          "settings": {
           }
         },
-        "variant":{
-          "type":"variant",
-          "settings":{
-          }
-        },
-        "quantity":{
-          "type":"quantity",
-          "settings":{
-          }
-        },
-        "button":{
-          "type":"button",
-          "settings":{
-          }
-        },
-        "description_tab":{
-          "type":"description_tab",
-          "settings":{
+        "c17b7cf0-f3c0-43b5-bcf4-1a9c1ab391c1": {
+          "type": "variant",
+          "settings": {
+            "option_style": "swatch",
+            "color_swatch_style": "circle",
+            "variant_image": false
           }
         }
       },
       "block_order": [
-        "title",
-        "text",
-        "reviews",
-        "price",
-        "variant",
-        "quantity",
-        "button",
-        "description_tab"
-      ]
+        "ed5aa936-0a62-4a16-aa49-2b56113ffdfe",
+        "1fd84199-98b7-4ff9-8610-6ada9ce20f0e",
+        "abfd10b4-fa40-4666-a606-62c0b5cdf066",
+        "c17b7cf0-f3c0-43b5-bcf4-1a9c1ab391c1"
+      ],
+      "settings": {
+        "gallery_style": "gallery"
+      }
     },
     "product_recommendations": {
       "type": "product_recommendations",
