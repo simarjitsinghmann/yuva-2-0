@@ -382,7 +382,7 @@ $('.back-btn').click(function(){
       });
     }
 	
-	var closeOptions = document.getElementsByClassName('showOptions');
+	var closeOptions = document.getElementsByClassName('close-product-wrap');
     if(closeOptions){		
       Array.from(closeOptions).forEach(function(option) {
         option.addEventListener("click", ()=>{
