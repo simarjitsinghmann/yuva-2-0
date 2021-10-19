@@ -472,10 +472,22 @@ div.lower-nav .nav-item .userful__links {
 	background: #00000057;
 	width: 100%;
 	height: 100%;
-	left: 0;
+	left: -100%;
 	right: 0;
 	bottom: 0;
 	z-index: 9;
+	opacity: 0;
+	visibility: hidden;
+  webkit-transition: all 0.7s ease;
+-moz-transition: all .7s ease;
+-ms-transition: all .7s ease;
+-o-transition: all .7s ease;
+transition: all .7s ease;
+}
+.nav-open .slide-menu-outer {
+opacity: 1;
+visibility: visible; 
+  left: 0;
 }
 #similar__product {max-width: 470px; right: -470px;padding: 0;}
 #mini__cart {padding:0;}
