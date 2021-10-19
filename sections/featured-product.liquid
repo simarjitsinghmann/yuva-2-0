@@ -14,10 +14,13 @@
             {% unless product == empty %}
           
             <div id="feature__product-{{section.id}}" class="feature__product owl-carousel" data-slider-id="1">
-                {% for image in product.images %}
-                <div id="media-{{image.id}}"class="item" data-thumb="{{image | img_url:'master'}}" >
-                    <img src="{{image | img_url:'master'}}" alt="">
+
+              {%- for media in product.media -%}
+              {%-if media.media_type == 'image'-%}
+                <div id="media-{{media.id}}"class="item" data-thumb="{{media | img_url:'master'}}" >
+                    <img src="{{media | img_url:'master'}}" alt="">
                 </div>
+              {%-endif-%}
                 {% endfor %}
             </div>          
             
