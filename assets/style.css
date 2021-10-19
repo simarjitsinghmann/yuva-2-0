@@ -990,7 +990,8 @@ section.store__support { background: var(--bg-gray); padding: 50px 0; }
 .product-add-to-cart-right h2 { position: relative; font-size: 26px; margin-bottom: 0; font-weight: 600; letter-spacing: .3px; } 
 .product-add-to-cart-right p.vendor_name { margin: 0 0 15px; } 
 .product-add-to-cart-right p { color: #757575; font-size: 13px; margin: 0 0 0; width: 100%; max-width: 100%; line-height: 25px; } 
-.feature__product .owl-thumbs button.owl-thumb-item { width: 88px; height: auto; border: 1px solid #eff0f3; margin: 0 5px; } 
+.feature__product .owl-thumbs button.owl-thumb-item { width: 88px; height: auto; border: 1px solid #eff0f3; margin: 0 5px; }
+.feature__product .owl-thumbs button.owl-thumb-item.active {border: 1px solid var(--color-theme-text);}
 .feature__product .owl-thumbs button.owl-thumb-item img { width: 100%; background: #fff; } 
 .feature__product.owl-carousel .owl-item img { display: block; width: 100%; max-width: 382px; margin: 0 auto; } 
 .feature__product .owl-thumbs { margin: 0 auto 30px; display: flex; /* align-items: center; */ justify-content: center; } 
