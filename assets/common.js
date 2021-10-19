@@ -342,7 +342,10 @@ $('.back-btn').click(function(){
                       var image= getVariant.featured_media['preview_image']['src'];
                       image= image.replace("https:", "");                       
 						_productParent.querySelectorAll('[name="id"]')[0].value = getVariant.id;
-                      	_productParent.querySelectorAll(".owl-thumb-item img[src='"+image+"']")[0].click();
+                      	var imageSource = _productParent.querySelectorAll(".owl-thumb-item img[src='"+image+"']")[0];
+                      if(imageSource){
+                        imageSource.click();
+                      }
 						if(getVariant.available == true){
 							_productParent.querySelectorAll('.Sd_addProduct')[0].removeAttribute("disabled");
 							_productParent.querySelectorAll('.Sd_addProduct')[0].innerHTML  = "Add to Cart";
