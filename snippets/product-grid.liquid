@@ -20,45 +20,45 @@
                 <img class="product-second-img" src="{{second_image}}" alt="">
             {% endif %} 
           
-              {% unless has_only_default_variant or product.variants.size == 1 %}
+          {% unless has_only_default_variant or product.variants.size == 1 %}
           <div class="product-wrap product_content_section">
-          	{% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
+            {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
             <input type="hidden" name="form_type" value="product">
             <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
             <div class="form-group">
               {% if product.available and product.variants.size > 1 %}
               {% for option in product.options_with_values %}
               {% assign downOption = option.name | downcase %}
-                {% assign optionIndex = forloop.index %}
-                {% assign varOptionIndex = 'option'|append:forloop.index %}
-                <div class="select__{{downOption}}">
-                  <p class="small-size size_title">SELECT {{option.name}}</p>
-                  <ul class="product-loop-variants {{downOption}} variants circle _small list-unstyled">                            
+              {% assign optionIndex = forloop.index %}
+              {% assign varOptionIndex = 'option'|append:forloop.index %}
+              <div class="select__{{downOption}}">
+                <p class="small-size size_title">SELECT {{option.name}}</p>
+                <ul class="product-loop-variants {{downOption}} variants circle _small list-unstyled">                            
                   {%- for value in option.values -%}  
-                      <li class="{{downOption}}_option">
-                        <input class="productOption" type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
-                        <span class="option {% if option.selected_value == value %}selected{% endif %}" {% if downOption == 'color' or  downOption == 'colour'%}{% unless block.settings.variant_image %} style="background-color:{{value}};"{% endunless %}{% endif %}>
-                            {% if downOption == 'color' or  downOption == 'colour'%}    
-                              {% if block.settings.variant_image %}                                                                                  
-                                  {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
-                                  {% for variant in variantsList %}
-                                    {% if variant.featured_image != blank %}
-                                        <img src="{{variant.featured_image | img_url:"100x"}}">
-                                        {% break %}
-                                    {% endif %}
-                                  {% endfor %}
-                              {% endif %}
-                            {% else %}
-                            {{value}}
-                            {% endif%}
-                        </span>
-                      </li>
+                  <li class="{{downOption}}_option">
+                    <input class="productOption" type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
+                    <span class="option {% if option.selected_value == value %}selected{% endif %}" {% if downOption == 'color' or  downOption == 'colour'%}{% unless block.settings.variant_image %} style="background-color:{{value}};"{% endunless %}{% endif %}>
+                      {% if downOption == 'color' or  downOption == 'colour'%}    
+                      {% if block.settings.variant_image %}                                                                                  
+                      {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
+                      {% for variant in variantsList %}
+                      {% if variant.featured_image != blank %}
+                      <img src="{{variant.featured_image | img_url:"100x"}}">
+                      {% break %}
+                      {% endif %}
+                      {% endfor %}
+                      {% endif %}
+                      {% else %}
+                      {{value}}
+                      {% endif%}
+                    </span>
+                  </li>
                   {% endfor %}
-                  </ul> 
-                </div>
+                </ul> 
+              </div>
               {% endfor %}
               {% endif %}
-              
+
               <div class="btn-box product-featured-form-submit {% if section.settings.enable_payment_button %} product-form--payment-button{% endif %}">
                 <button
                         type="submit"
@@ -82,7 +82,7 @@
             </div>
             <script type="application/json" name="variant-json">
           {{ product.variants | json }}
-        </script>
+            </script>
             {% endform %}
           </div>
           {% endunless %}
