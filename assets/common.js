@@ -427,20 +427,7 @@ $('.announce_close').click(function(){
 	$('.announcement-bar').slideToggle();
 	$('body').removeClass('announcement_open');
 });
-	$('#slider-custom-slider').owlCarousel({
-	 center: false,
-	 items: 1,
-	 loop: false,
-	 margin: 0,
-	 dots:false,
-	 autoplay:true,
-	 nav:true,
-	 slideSpeed: 2000,
-	 autoHeight: false,
-	 autoHeightClass: 'owl-height',
-	 autoPlaySpeed: 3000,
-	 navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}} alt='right-arrow'></i></span>"]
-  });
+
 $(document).on("click", function(event){
 	var $trigger = $(".productOptionSelect");
 	if($trigger !== event.target && !$trigger.has(event.target).length){
