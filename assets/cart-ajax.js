@@ -165,7 +165,7 @@ $(document).on('click', '.sd_mini_removeproduct', function(evt) {
     var $el = $(this),
         parent = $el.closest('.media-link'),
         line = $el.data('line');
-
+	console.log($el)
 	
     // If it has a data-line, update the cart
     if (line) {
