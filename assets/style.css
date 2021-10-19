@@ -1033,7 +1033,10 @@ section.feature-section { padding: 70px 0; background-color: #f8f8f8; margin-top
 }
  .product-add-to-cart-right .form-group .btn-box { display: flex; margin: 0 0 25px; align-items: center; } 
  .product-add-to-cart-right .form-group .btn-box button { position: relative; overflow: hidden; z-index: 1; font-size: 14px; font-weight: var(--medium); padding: 4px 10px 0; cursor: pointer; outline: 0; text-align: center; -webkit-transition: all .6s; -moz-transition: all .6s; -ms-transition: all .6s; -o-transition: all .6s; transition: all .6s; border: none; display: inline-block; color: #fff; min-height: 47px; line-height: 47px; margin-right: 10px; width: 100%; min-width: 150px;    font-family: var(--font-family);text-transform: uppercase; } 
- .product-add-to-cart-right .form-group button.shopify-payment-button__more-options {
+.product-add-to-cart-right .form-group .shopify-payment-button__button--unbranded {
+    background-color: #000000;
+} 
+.product-add-to-cart-right .form-group button.shopify-payment-button__more-options {
     display: none;
 }
  .product-add-to-cart-right .form-group .btn-box .shopify-payment-button { position: relative; min-width: 150px; width: 100%; margin-right: 0; } 
