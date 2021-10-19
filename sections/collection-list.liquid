@@ -82,8 +82,8 @@
                           {% for block in section.blocks %}
                           {% if section.settings.style == 'style2' %}
                           <style>
-                            .section-{{section.id}} block-{{block.id}} .right__sided .collection-detail h4,
-                            .section-{{section.id}} .left__sided .collection-detail small{
+                            .section-{{section.id}} .block-{{forloop.index}} .right__sided .collection-detail h4,
+                            .section-{{section.id}} .block-{{forloop.index}} .left__sided .collection-detail small{
                               color:{{block.settings.text_color}} !important;
                             }
                           </style>
@@ -93,7 +93,7 @@
                             {% assign collection = block.settings.collection %}
                             {% endif %}
                             {% capture image_content %}
-                            <div class="collection-image block-{{block.id}}">
+                            <div class="collection-image block-{{forloop.index}}">
                               {% if block.settings.custom == false and collection.featured_image != blank %} 
                               {% assign feature_image = collection.featured_image | img_url:'master' %}
                               {% elsif block.settings.custom == true and block.settings.image == blank and collection.featured_image != blank %}
