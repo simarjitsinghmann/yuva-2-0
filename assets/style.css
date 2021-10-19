@@ -411,13 +411,20 @@ a.wishlist-view .fas { display: none; }
 }
 .blog-variation2 .post-information__wrapper .post-date p {
     font-weight: var(--semibold);
-    color: rgba(0, 0, 0, 80%);
-    margin-bottom: 5px
+    color: rgb(0 0 0 / 80%);
+    margin-bottom: 5px;
     font-size: var(--small-font);
 }
 .blog-variation2 .post-information__wrapper h5 {
     font-weight: var(--semibold);
     margin-bottom: 3px;
+}
+.blog-variation2 .post-information__wrapper .post-name p a {
+    color: var(--color-gray);
+    line-height: 26px;
+    text-decoration: none;
+    font-weight: var(--medium);
+    font-size: var(--small-size);
 }
 .blog-variation2  .post-information__wrapper .post-name {
     width: 100%;
