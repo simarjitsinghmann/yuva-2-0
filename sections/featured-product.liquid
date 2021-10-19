@@ -15,7 +15,7 @@
           
             <div id="feature__product-{{section.id}}" class="feature__product owl-carousel" data-slider-id="1">
                 {% for image in product.images %}
-                <div id="imageId-{{image.id}}"class="item" data-thumb="{{image | img_url:'master'}}" >
+                <div id="media-{{image.id}}"class="item" data-thumb="{{image | img_url:'master'}}" >
                     <img src="{{image | img_url:'master'}}" alt="">
                 </div>
                 {% endfor %}
