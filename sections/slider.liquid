@@ -30,8 +30,7 @@
 </style>
 <script>
 jQuery(document).ready(function($) {
-  console.log(Shopify.request)
-	$('#slider-{{section.id}}').owlCarousel({
+	var owlCarousel = $('#slider-{{section.id}}').owlCarousel({
 	 center: false,
 	 items: 1,
 	 loop: false,
