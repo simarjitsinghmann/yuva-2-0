@@ -36,11 +36,29 @@
                                       {% else %}
                                       <h3>
                                         {% endif %}
+                                        {% if section.settings.style == 'style2' %}
+                                         <small class="style2">
+                                      {% if section.settings.custom == false %}
+                                        {{collection.description | strip_html | truncatewords: 15, "" }}
+                                        {% elsif section.settings.custom and section.settings.mc_desc != blank  %}
+                                        {{section.settings.mc_desc}}
+                                      {% endif %}
+                                    </small>
+                                        {% endif %}
                                       {% if section.settings.custom == false %}
                                         {{collection.title}}
                                         {% elsif section.settings.custom and section.settings.mc_heading != blank  %}
                                         {{section.settings.mc_heading}}
                                       {% endif %}
+                                        {% if section.settings.style == 'style1' %}
+                                         <small>
+                                      {% if section.settings.custom == false %}
+                                        {{collection.description | strip_html | truncatewords: 15, "" }}
+                                        {% elsif section.settings.custom and section.settings.mc_desc != blank  %}
+                                        {{section.settings.mc_desc}}
+                                      {% endif %}
+                                    </small>
+                                        {% endif %}
                                       {% if section.settings.style == 'style1' %}
                                       </h4>
                                         {% else %}
