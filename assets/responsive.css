@@ -139,15 +139,14 @@
 	max-width: calc(50% - 120px);
 }
       #nav_style_2.navbar-expand-md .nav-item .list-menu__item {
-	font-size: var(--font-normal);;
+	font-size: var(--font-normal);
+      padding-right: 13px;
+	padding-left: 13px;
 }
       #nav_style_2 .navbar-nav .nav-item {
 	padding: 0 3px;
 }
-       #nav_style_2 .navbar-expand-md .nav-item .list-menu__item {
-	padding-right: 13px;
-	padding-left: 13px;
-}
+
 	}
 	@media only screen and (max-width:1400px){
       .navbar-expand-md .nav-item .list-menu__item {
