@@ -22,8 +22,14 @@
           
           {% unless has_only_default_variant or product.variants.size == 1 %}
           <div class="product-wrap product_content_section">
+            
+            <button class="close-product-wrap">
+              <svg aria-hidden="true" class="icon icon-close" focusable="false" role="presentation" viewbox="0 0 40 40">
+                <path class="layer" d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z"></path>
+              </svg>
+              Close
+            </button>
             {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
-            <input type="hidden" name="form_type" value="product">
             <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
             <div class="form-group">
               {% if product.available and product.variants.size > 1 %}
@@ -96,9 +102,14 @@
                             <li class="addToWishlist"><a class="wishlist-view" href="javascript:void(0);"><i class="far fa-heart"></i>
                                 <i class="fas fa-heart"></i>
                             </a></li>
-                            <li><a href="{{product.url}}"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
+                            <li>
+                              {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
+                              <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
+                              <a href="{{product.url}}"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
                                     <path class="cls-1" d="M811.524,2918.03a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,811.524,2918.03Zm6.579,0a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,818.1,2918.03Zm7.781-9.41a1.222,1.222,0,0,0-1.01-.59H810.352l-0.688-4.02h-4.638a0.99,0.99,0,1,0,0,1.98h2.941l0.636,3.83,0.89,6.06a1.212,1.212,0,0,0,1.2.99h10.329a1.228,1.228,0,0,0,1.01-.6l3.81-6.52A1.19,1.19,0,0,0,825.884,2908.62Zm-5.336,6.33h-9.155l-0.718-4.95h12.764Z" transform="translate(-804 -2904)"></path>
-                                </svg></a>
+                                </svg>
+                              </a>
+                              {% endform %}
                                 </li>
                         </ul>
                     </div>
