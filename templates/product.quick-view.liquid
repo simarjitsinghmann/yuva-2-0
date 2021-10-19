@@ -114,7 +114,7 @@
       </div>
       {% endform %}
       <div class="rte">
-        {{product.description}}
+        {{product.description | truncatewords:25}}
       </div>
       {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
     </div>
