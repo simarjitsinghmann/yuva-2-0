@@ -21,7 +21,7 @@
             {% endif %} 
           
               {% unless has_only_default_variant or product.variants.size == 1 %}
-          <div class="product-wrap">
+          <div class="product-wrap" style="display:none">
           	{% for option in product.options_with_values%}
                 {% assign opName = option.name | downcase %}
                 {% assign opIndex = forloop.index%}
