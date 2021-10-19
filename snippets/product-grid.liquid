@@ -80,6 +80,9 @@
                 {% endif %}
               </div>
             </div>
+            <script type="application/json" name="variant-json">
+          {{ product.variants | json }}
+        </script>
             {% endform %}
           </div>
           {% endunless %}
