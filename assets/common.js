@@ -376,12 +376,17 @@ $('.back-btn').click(function(){
 		
       Array.from(showOptions).forEach(function(option) {
         option.addEventListener("click", ()=>{	
-                                hideOptions(showOptions);
+           hideOptions();
 			var product = option.getAttribute("data-product");
         		document.getElementById(product).style.display="block";
          });
       });
     }
+	function hideOptions(options){
+		Array.from(showOptions).forEach(function(option) {
+          
+        });
+  }
 }
 	productVariants();
 }());
