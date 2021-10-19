@@ -390,6 +390,7 @@ $('.back-btn').click(function(){
   }
 }
 	productVariants();
+showMultipleOptions();
 }());
 
 // $(document).on("click", function(event){
