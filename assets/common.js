@@ -337,6 +337,7 @@ $('.back-btn').click(function(){
 						return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
 					});
 					var getVariant = variantChange(options,_productParent);
+                  console.log(getVariant)
 					if(getVariant != undefined){
 						_productParent.querySelectorAll('[name="id"]')[0].value = getVariant.id;
 						if(getVariant.available == true){
