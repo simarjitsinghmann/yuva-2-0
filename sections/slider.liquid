@@ -30,7 +30,7 @@
 </style>
 <script>
 jQuery(document).ready(function($) {
-  var options={
+	$('#slider-{{section.id}}').owlCarousel({
 	 center: false,
 	 items: 1,
 	 loop: false,
@@ -43,11 +43,6 @@ jQuery(document).ready(function($) {
 	 autoHeightClass: 'owl-height',
 	 autoPlaySpeed: {{section.settings.rotate_speed | times:1000}},
 	 navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}} alt='right-arrow'></i></span>"]
-  };
-  var url = window.location.href;
-  $('#slider-{{section.id}}').load(url, function () {
-    $('#slider-{{section.id}}').trigger('destroy.owl.carousel');
-    $('#slider-{{section.id}}').owlCarousel(options);
   });
 });
 </script>
