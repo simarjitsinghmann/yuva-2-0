@@ -433,12 +433,12 @@ $('.announce_close').click(function(){
 	 loop: false,
 	 margin: 0,
 	 dots:false,
-	 autoplay:{{section.settings.rotate}},
-	 nav:{{section.settings.arrows}},
+	 autoplay:true,
+	 nav:true,
 	 slideSpeed: 2000,
 	 autoHeight: false,
 	 autoHeightClass: 'owl-height',
-	 autoPlaySpeed: {{section.settings.rotate_speed | times:1000}},
+	 autoPlaySpeed: 3000,
 	 navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}} alt='right-arrow'></i></span>"]
   });
 $(document).on("click", function(event){
