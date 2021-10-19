@@ -21,7 +21,7 @@
             {% endif %} 
           
               {% unless has_only_default_variant or product.variants.size == 1 %}
-          <div class="product-wrap product_content_section" style="display:none">
+          <div class="product-wrap product_content_section">
           	{% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
             <input type="hidden" name="form_type" value="product">
             <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
