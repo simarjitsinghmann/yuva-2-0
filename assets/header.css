@@ -467,7 +467,16 @@ div.lower-nav .nav-item .userful__links {
 
 .side-menu, .side-menu .inner-side .nav-item.dropdown ul{right:auto;left:-430px;}
 .nav-open .side-menu, .nav-open .side-menu .inner-side .nav-item.dropdown ul.child.show, .nav-open .side-menu .inner-side .nav-item.dropdown ul.grandchild.show {left: 0;}
-
+.slide-menu-outer {
+	position: fixed;
+	background: #00000057;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9;
+}
 #similar__product {max-width: 470px; right: -470px;padding: 0;}
 #mini__cart {padding:0;}
 .cart-product-title h5 {font-weight: var(--font-semibold);}
