@@ -44,8 +44,21 @@ jQuery(document).ready(function($) {
 	 autoPlaySpeed: {{section.settings.rotate_speed | times:1000}},
 	 navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}} alt='right-arrow'></i></span>"]
   });
-  owlCarouselSlider.on('changed.owl.carousel', function(event) {
-    owlCarouselSlider.trigger('refresh.owl.carousel');
+ $('#slider-{{section.id}}').on('changed.owl.carousel', function(event) {
+    $('#slider-{{section.id}}').owlCarousel({
+	 center: false,
+	 items: 1,
+	 loop: false,
+	 margin: 0,
+	 dots:false,
+	 autoplay:{{section.settings.rotate}},
+	 nav:{{section.settings.arrows}},
+	 slideSpeed: 500,
+	 autoHeight: false,
+	 autoHeightClass: 'owl-height',
+	 autoPlaySpeed: {{section.settings.rotate_speed | times:1000}},
+	 navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}} alt='right-arrow'></i></span>"]
+  });
   });
 });
 </script>
