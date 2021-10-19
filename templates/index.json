@@ -147,7 +147,8 @@
             "heading": "Men’s Winter Collections",
             "desc": "",
             "btnlink": "",
-            "image": "shopify:\/\/shop_images\/collection-list2.jpg"
+            "image": "shopify:\/\/shop_images\/collection-list2.jpg",
+            "text_color": "#000000"
           }
         },
         "collection1": {
@@ -161,7 +162,8 @@
             "heading": "Men’s Winter Collections",
             "desc": "",
             "btnlink": "",
-            "image": "shopify:\/\/shop_images\/collection-list3.jpg"
+            "image": "shopify:\/\/shop_images\/collection-list3.jpg",
+            "text_color": "#000000"
           }
         },
         "collection2": {
@@ -175,7 +177,8 @@
             "heading": "Men’s Winter Collections",
             "desc": "",
             "btnlink": "",
-            "image": "shopify:\/\/shop_images\/collection-list2.jpg"
+            "image": "shopify:\/\/shop_images\/collection-list2.jpg",
+            "text_color": "#000000"
           }
         },
         "d97ff3c5-5970-48d0-9268-561aa5e31c28": {
@@ -189,7 +192,8 @@
             "heading": "Men’s Winter Collections",
             "desc": "",
             "btnlink": "",
-            "image": "shopify:\/\/shop_images\/collection-list3.jpg"
+            "image": "shopify:\/\/shop_images\/collection-list3.jpg",
+            "text_color": "#000000"
           }
         },
         "1f573bca-2e9d-4476-b024-64f266d64a6f": {
@@ -203,7 +207,8 @@
             "heading": "Men’s Winter Collections",
             "desc": "",
             "btnlink": "",
-            "image": "shopify:\/\/shop_images\/collection-list2.jpg"
+            "image": "shopify:\/\/shop_images\/collection-list2.jpg",
+            "text_color": "#000000"
           }
         }
       },
@@ -228,6 +233,7 @@
         "mc_desc": "",
         "mc_btnlink": "",
         "mc_image": "shopify:\/\/shop_images\/Layer_0.jpg",
+        "text_color": "#000000",
         "button_icon": false,
         "btn_bg": "#ffffff",
         "btn_text": "#000000",
@@ -275,15 +281,30 @@
     },
     "featured-blog": {
       "type": "featured-blog",
+      "blocks": {
+        "796d3d0e-f6ec-4d53-b1c2-0f22f7bbefd0": {
+          "type": "article",
+          "settings": {
+            "article": "news\/redefine-your-workday-with-the-palm-treo-pro-smart-phone-2"
+          }
+        },
+        "0a114bd4-1861-4320-baa9-7e06682915eb": {
+          "type": "article",
+          "settings": {
+            "article": "news\/redefine-your-workday-with-the-palm-treo-pro-smart-phone"
+          }
+        }
+      },
+      "block_order": [
+        "796d3d0e-f6ec-4d53-b1c2-0f22f7bbefd0",
+        "0a114bd4-1861-4320-baa9-7e06682915eb"
+      ],
       "settings": {
         "heading": "CONSECTETUR",
         "style": "style2",
         "subheading": "Blog post everyday",
         "blog": "",
-        "custom": true,
-        "article1": "news\/redefine-your-workday-with-the-palm-treo-pro-smart-phone-2",
-        "article2": "news\/redefine-your-workday-with-the-palm-treo-pro-smart-phone",
-        "article3": "test\/test-blog"
+        "custom": true
       }
     },
     "testimonials": {
