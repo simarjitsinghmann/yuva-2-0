@@ -2,7 +2,10 @@
 buildCart = function (cart,showCart) {
     if (cart.item_count === 0) {
         $('[data-cart-count]').hide();
-        $('#mini__cart').html(`<p>"translation missing: en.cart.general.empty"</p>`);
+        $('#mini__cart').html(`<div class="emptySideCart">
+								<p>Your Cart is Empty</p>
+                                <p><a href="/">Continue Shopping</a></p>
+                          </div>`);
         return;
     }
 
