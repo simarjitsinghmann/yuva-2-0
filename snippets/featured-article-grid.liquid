@@ -38,7 +38,7 @@
             <p>{{article.published_at | date: "%d %b %Y" }}</p>
           </div>
           <h5>{{article.title | truncatewords: 6}}</h5>
-          <div class="post-name"><p><a href="javascript:void(0)">{{article.article.excerpt_or_content | truncatewords: 6}}</a></p></div>
+          <div class="post-name"><p><a href="javascript:void(0)">{{article.article.content | truncatewords: 6}}</a></p></div>
         </div>
       </div>
     </div>
