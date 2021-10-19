@@ -24,19 +24,7 @@
           <div class="product-wrap product_content_section" style="display:none">
           	{% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
             <input type="hidden" name="form_type" value="product">
-            <div class="prizebox" data-price-wrapper>
-              <label class="visually-hidden" data-price-text>{{ 'Price' }}</label>
-              <h3 data-product-price id="get_price">
-                {{ current_variant.price | default: '1999' | money }}
-                {% if product.compare_at_price_max > product.price %}
-                <span data-compare-price>
-                  {% if current_variant.compare_at_price > current_variant.price %}
-                  {{ current_variant.compare_at_price | money }}
-                  {% endif %}
-                </span>
-                {% endif %}
-              </h3>
-            </div>
+            <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
             <div class="form-group">
               {% if product.available and product.variants.size > 1 %}
               {% for option in product.options_with_values %}
@@ -70,18 +58,6 @@
                 </div>
               {% endfor %}
               {% endif %}
-              <select name="id" id="ProductSelect" class="product-form__variants no-js hide js">
-                {% for variant in product.variants %}
-                {% if variant.available %}
-                <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
-                  {{ variant.title }}
-                </option>
-                {% else %}
-                <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
-                {% endif %}
-                {% endfor %}
-              </select>
-              
                {% if section.settings.product_quantity_enable %}
               <div class="quantity">
                 <label for="Featured_quantity" class="quantity_label">Quantity</label>
