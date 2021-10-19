@@ -20,7 +20,8 @@
                 <img class="product-second-img" src="{{second_image}}" alt="">
             {% endif %} 
           
-              {% unless has_only_default_variant %}
+              {% unless has_only_default_variant or product.variants.size == 1 %}
+          
           {% endunless %}
             <div class="shop__options">
                     <div class="product__view__option">
@@ -91,7 +92,7 @@
                         </span>
                     </div>
                 </div>
-              {% unless has_only_default_variant %}
+              {% unless has_only_default_variant or product.variants.size == 1 %}
                 {% for option in product.options_with_values%}
                 {% assign opName = option.name | downcase %}
                 {% assign opIndex = forloop.index%}
