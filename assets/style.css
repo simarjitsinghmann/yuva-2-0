@@ -1075,3 +1075,15 @@ section.feature-section { padding: 70px 0; background-color: #f8f8f8; margin-top
  .product-add-to-cart-right .share-icons li a:focus, .product-add-to-cart-right .share-icons li a:hover { background: red; border: 2px solid red; } 
  .product-add-to-cart-right .share-icons li a:focus svg, .product-add-to-cart-right .share-icons li a:hover svg { fill: white; }
 /**Feature Product Section End**/
+
+/**Quick-view**/
+#ProductQuickView .product-loop-variants.circle .color_option span.option {
+    width: 35px;
+    height: 35px;
+}
+#ProductQuickView .product-loop-variants.circle .color_option {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+/**Quick0view-end**/
