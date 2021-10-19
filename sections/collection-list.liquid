@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container section-{{section.id}}">
         <div class="row">
             <div class="collection page-width">
                 <div class="collection-section-header">
@@ -166,6 +166,11 @@
 .mainColbutton-{{section.id}}:hover svg {
   fill:{{section.settings.hvr_btn_text}} !important ;
 }
+    {% if section.settings.style == 'style2' %}
+    .section-{{section.id}} .left__sided .collection-detail h3{
+      color:{{section.settings.text_color}} !important;
+    }
+    {% endif %}
   </style>
 {% schema %}
 {
