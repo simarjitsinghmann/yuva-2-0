@@ -31,9 +31,7 @@
 <script>
 jQuery(document).ready(function($) {
   var owl_feat = $('#slider-{{section.id}}');
-owl_feat.owlCarousel();
-owl_feat.on('changed.owl.carousel', function(event) {
-	$('#slider-{{section.id}}').owlCarousel({
+                   var options={
 	 center: false,
 	 items: 1,
 	 loop: false,
@@ -46,7 +44,10 @@ owl_feat.on('changed.owl.carousel', function(event) {
 	 autoHeightClass: 'owl-height',
 	 autoPlaySpeed: {{section.settings.rotate_speed | times:1000}},
 	 navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}} alt='right-arrow'></i></span>"]
-  });
+  };
+owl_feat.owlCarousel(options);
+owl_feat.on('changed.owl.carousel', function(event) {
+	$('#slider-{{section.id}}').owlCarousel(options);
    });
 });
 </script>
