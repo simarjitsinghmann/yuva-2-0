@@ -1146,4 +1146,19 @@ section.feature-section { padding: 70px 0; background-color: #f8f8f8; margin-top
 	padding: 13px 12px 10px;
 	min-width: 150px;
 }
+.product-wrap .close-product-wrap {
+	font-size: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: var(--bg-primary);
+	padding: 7px;
+}
+.product-wrap .close-product-wrap:hover{}
+.product-wrap .close-product-wrap .icon-close {
+	width: 13px;
+	height: 13px;
+	color: var(--color-secondary);
+	fill: var(--color-secondary);
+}
 /**add-to-cart-end**/
