@@ -82,8 +82,8 @@
                           {% for block in section.blocks %}
                           {% if section.settings.style == 'style2' %}
                           <style>
-                            .section-{{section.id}} .block-{{forloop.index}} .right__sided .collection-detail h4,
-                            .section-{{section.id}} .block-{{forloop.index}} .left__sided .collection-detail small{
+                            .section-{{section.id}} .block-{{forloop.index}}.right__sided .collection-detail h4,
+                            .section-{{section.id}} .block-{{forloop.index}}.right__sided .collection-detail small{
                               color:{{block.settings.text_color}} !important;
                             }
                           </style>
