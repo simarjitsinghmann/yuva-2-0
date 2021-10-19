@@ -163,14 +163,12 @@ function updateQuantity(line, qty) {
 $(document).on('click', '.sd_mini_removeproduct', function(evt) {
   evt.preventDefault();
     var $el = $(this),
-        line = $el.data('line'),
-        qty = parseInt($el.val().replace(/\D/g, ''));
+        line = $el.data('line');
 
-    var qty = validateQty(qty);
 
     // If it has a data-line, update the cart
     if (line) {
-        updateQuantity(line, qty);
+        updateQuantity(line, 0);
     }
 })
 
