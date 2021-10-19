@@ -76,12 +76,12 @@ $(document).ready(function(){
 	$('.navbar-toggler').click(function(){
 	$('.navbar-collapse').toggleClass('show');
 	$('body').toggleClass('nav-open');
-	$('.slide-menu-outer').css({"display": "block"});
+	//$('.slide-menu-outer').css({"display": "block"});
 	});
 	
 	$('.close-btn').click(function(){
 		$('body').toggleClass('nav-open'), $('.navbar-collapse').removeClass('show');
-		$('.slide-menu-outer').css({"display": "none"});
+		//$('.slide-menu-outer').css({"display": "none"});
 	});
 	
 	
