@@ -138,6 +138,9 @@
       #nav_style_2.navbar-expand-md .navbar-collapse, .top-header .navbar#nav_style_2 form {
 	max-width: calc(50% - 120px);
 }
+      #nav_style_2.navbar-expand-md .nav-item .list-menu__item {
+	font-size: var(--font-normal);;
+}
 	}
 	@media only screen and (max-width:1400px){
       .navbar-expand-md .nav-item .list-menu__item {
