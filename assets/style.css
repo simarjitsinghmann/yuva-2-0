@@ -1188,7 +1188,13 @@ section.feature-section { padding: 70px 0; background-color: #f8f8f8; margin-top
 	font-weight: var(--bold);
 	margin-bottom: 10px;
 }
+
 #mini__cart .emptySideCart {
 	text-align: center;
 	padding: 100px 20px;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	height: 100%;
 }
