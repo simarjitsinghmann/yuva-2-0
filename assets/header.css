@@ -151,7 +151,9 @@ background: linear-gradient(to right, #fd5392 0%,#f86f64 33%,#f8ad64 66%,#f8ad64
     padding: 3px 2px 1px;
     margin-left: 6px;
 }
-
+.navbar-expand-md .nav-item .list-menu__item {
+text-transform: capitalize;
+}
 /**nav-style2**/
 #nav_style_2 ul.navbar-nav.list-menu--inline li.nav-item:first-child, #nav_style_2 ul.navbar-nav.list-menu--inline li.nav-item:first-child a, #nav_style_5 ul.list-menu.left-side li.nav-item:first-child, #nav_style_5 ul.list-menu.left-side li.nav-item:first-child a{ padding-left: 0; } 
 #nav_style_2 ul.navbar-nav.list-menu--inline, #nav_style_5 ul.list-menu.left-side { margin-left: 0; } 
