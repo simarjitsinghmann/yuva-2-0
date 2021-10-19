@@ -301,6 +301,9 @@ display: flex;font-size: 18px;font-weight: var(--normal);opacity: 0.6;font-famil
     -o-transition: width 300ms ease-in-out;
     transition: width 300ms ease-in-out;
 }
+.navbar-expand-md .nav-item .list-menu__item:before {
+    height: 4px;
+}
 #nav_style_4 .side-menu .inner-side ul.list-menu li a:hover::before {
 	width: 110px;
 }
