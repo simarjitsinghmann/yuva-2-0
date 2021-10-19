@@ -137,6 +137,13 @@
 }
 	}
 	@media only screen and (max-width:1400px){
+      .navbar-expand-md .nav-item .list-menu__item {
+	padding-bottom: 20px;
+	padding-top: 21px;
+}
+      .site-nav-dropdown .inner.dropdown .sub-menu-list .menu-mb-title span {
+	font-size: 15px;
+}
 	footer ul li a, footer .grid__item p {
 		line-height: 30px;
 	}
