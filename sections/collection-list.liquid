@@ -125,13 +125,21 @@
                                         {{image_content}}
                                       {% endif %}
                                     <div class="{% if section.settings.style == 'style1' %}collection-detail-right{% else %}collection-detail {{ block.settings.text_position }} {% endif %}">
-                                        <h4>
+                                           {% if section.settings.style == 'style1' %}
+                                      <h5>
+                                        {% else %}
+                                    <h4>
+                                          {% endif %}
                                           {% if block.settings.custom == false %}
                                             {{collection.title}}
                                             {% elsif block.settings.custom and block.settings.heading != blank  %}
                                             {{block.settings.heading}}
                                           {% endif %}
-                                        </h4>
+                                           {% if section.settings.style == 'style1' %}
+                                      </h5>
+                                        {% else %}
+                                    </h4>
+                                          {% endif %}
                                         <small>
                                           {% if block.settings.custom == false %}
                                             {{collection.description | strip_html | truncatewords: 15, "" }}
