@@ -159,6 +159,21 @@ function updateQuantity(line, qty) {
     }, 250);
 }
 
+
+$(document).on('click', '.sd_mini_removeproduct', function(evt) {
+  evt.preventDefault();
+    var $el = $(this),
+        line = $el.data('line'),
+        qty = parseInt($el.val().replace(/\D/g, ''));
+
+    var qty = validateQty(qty);
+
+    // If it has a data-line, update the cart
+    if (line) {
+        updateQuantity(line, qty);
+    }
+})
+
 validateQty = function (qty) {
     if((parseFloat(qty) == parseInt(qty)) && !isNaN(qty)) {
         // We have a valid number!
