@@ -987,7 +987,7 @@ section.feature-section { padding: 70px 0; background-color: #f8f8f8; margin-top
  .swatch .tooltip { display: none; } 
  .product-add-to-cart-right .form-group .color.swatch-element label { color: #15161d; font-size: 13px; line-height: normal; font-weight: var(--medium); margin: 0; border: 2px solid transparent; height: 25px; min-width: 25px; padding: 0; opacity: 1; border-radius: 50%; } 
  .product-add-to-cart-right .form-group .color.swatch-element input:checked+label { border: 2px solid #e2dfdf; position: relative; padding: 2px; } 
- .product-add-to-cart-right .form-group .quantity { margin: 0 0 35px 0; width: 100%; } 
+ .product-add-to-cart-right .form-group .quantity { margin: 0 0 35px 0; width: 100%;display: flex;align-items:center; } 
  .swatch-element.color { margin: 0 6px 6px 0; } .swatch .swatch-element .crossed-out { display: none; } 
  .crossed-out { position: absolute; width: 100%; height: 100%; left: 0; top: 0; } 
  .quantity .quantity_container { position: relative; left: -4px; display: inline-block; } 
