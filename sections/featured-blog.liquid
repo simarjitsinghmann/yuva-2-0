@@ -13,10 +13,10 @@
                         {% include 'featured-article-grid' %}
                     {% endfor %}
                 {% else %}
-                    {% for i in (1..3) %}  
-                        {% assign main_article = 'article' | append:i %}
-                        {% if section.settings[main_article] != blank %}  
-                            {% assign article = section.settings[main_article] %}
+                    {% for block in section.blocks %}  
+                       
+                        {% if block.settings.article != blank %}  
+                            {% assign article = block.settings.article %}
                             {% include 'featured-article-grid' %}
                         {% endif %}
                     {% endfor %}
