@@ -19,6 +19,9 @@
             {% if section.settings.show_second_image %}
                 <img class="product-second-img" src="{{second_image}}" alt="">
             {% endif %} 
+          
+              {% unless has_only_default_variant %}
+          {% endunless %}
             <div class="shop__options">
                     <div class="product__view__option">
                         <ul>
@@ -88,6 +91,7 @@
                         </span>
                     </div>
                 </div>
+              {% unless has_only_default_variant %}
                 {% for option in product.options_with_values%}
                 {% assign opName = option.name | downcase %}
                 {% assign opIndex = forloop.index%}
@@ -108,6 +112,7 @@
                 </div>
             {% endif %}
             {% endfor %}
+              {% endunless %}
             </div>
             
         </div>
