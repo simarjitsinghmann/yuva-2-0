@@ -1049,6 +1049,9 @@ section.feature-section { padding: 70px 0; background-color: #f8f8f8; margin-top
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 } 
+.quantity .q_down {
+	line-height: 50px;
+}
  .quantity .mini_q_up.sd_mini_quantity, .quantity .q_up { right: 0; } .quantity svg { fill: black; height: 8px; width: 10px; opacity: 1; } 
  .quantity .mini_q_down.sd_mini_quantity, .quantity .q_down { left: 0; } 
  button.Sd_addProduct:disabled {
