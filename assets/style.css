@@ -1072,7 +1072,7 @@ section.feature-section { padding: 70px 0; background-color: #f8f8f8; margin-top
  .product-add-to-cart-right .share-icons li { list-style: none; display: inline-block; vertical-align: middle; margin-right: 10px; font-size: 12px; } 
  .product-add-to-cart-right .share-icons li a { display: flex; width: 30px; height: 30px; background: #f3f3f3; border: 2px solid #f3f3f3; border-radius: 50%; text-align: center; line-height: 23px; align-items: center; justify-content: center; }
  .product-add-to-cart-right .share-icons li a svg { fill: #757575; margin-right: 0; width: 14px; height: 14px; } 
- .product-add-to-cart-right .share-icons li a:focus, .product-add-to-cart-right .share-icons li a:hover { background: red; border: 2px solid red; } 
+ .product-add-to-cart-right .share-icons li a:focus, .product-add-to-cart-right .share-icons li a:hover { background: var(--color-primary); border: 2px solid var(--color-primary); } 
  .product-add-to-cart-right .share-icons li a:focus svg, .product-add-to-cart-right .share-icons li a:hover svg { fill: white; }
 /**Feature Product Section End**/
 
