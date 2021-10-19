@@ -76,12 +76,12 @@ $(document).ready(function(){
 	$('.navbar-toggler').click(function(){
 	$('.navbar-collapse').toggleClass('show');
 	$('body').toggleClass('nav-open');
-	//$('.slide-menu-outer').css({"display": "block"});
+	$('.wrapper-overlay').css({"display": "block"});
 	});
 	
 	$('.close-btn').click(function(){
 		$('body').toggleClass('nav-open'), $('.navbar-collapse').removeClass('show');
-		//$('.slide-menu-outer').css({"display": "none"});
+		$('.wrapper-overlay').hide();
 	});
 	
 	
@@ -427,7 +427,20 @@ $('.announce_close').click(function(){
 	$('.announcement-bar').slideToggle();
 	$('body').removeClass('announcement_open');
 });
-
+	$('#slider-custom-slider').owlCarousel({
+	 center: false,
+	 items: 1,
+	 loop: false,
+	 margin: 0,
+	 dots:false,
+	 autoplay:{{section.settings.rotate}},
+	 nav:{{section.settings.arrows}},
+	 slideSpeed: 2000,
+	 autoHeight: false,
+	 autoHeightClass: 'owl-height',
+	 autoPlaySpeed: {{section.settings.rotate_speed | times:1000}},
+	 navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}} alt='right-arrow'></i></span>"]
+  });
 $(document).on("click", function(event){
 	var $trigger = $(".productOptionSelect");
 	if($trigger !== event.target && !$trigger.has(event.target).length){
