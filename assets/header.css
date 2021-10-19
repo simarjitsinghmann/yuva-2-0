@@ -478,16 +478,16 @@ div.lower-nav .nav-item .userful__links {
 	z-index: 9;
 	opacity: 0;
 	visibility: hidden;
-  webkit-transition: all 0.1s ease;
--moz-transition: all .1s ease;
--ms-transition: all .1s ease;
--o-transition: all .1s ease;
-transition: all .1s ease;
 }
 .nav-open .slide-menu-outer {
 opacity: 1;
 visibility: visible; 
   left: 0;
+    webkit-transition: all 0.6s ease;
+-moz-transition: all .6s ease;
+-ms-transition: all .6s ease;
+-o-transition: all .6s ease;
+transition: all .6s ease;
 }
 #similar__product {max-width: 470px; right: -470px;padding: 0;}
 #mini__cart {padding:0;}
