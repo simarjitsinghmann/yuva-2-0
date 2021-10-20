@@ -499,10 +499,12 @@ $(document).on('click', '.quickView', function(evt) {
 		url:_url+'?view=quick-view',
 		type:'GET',
 		success: function(data){
+          setTimeout(function(){
 			$('#ProductQuickView').html(data);
 			$('.Quick_loader').hide();
 			$('#ProductQuickView').show();
 			productVariants();
+            },300)
 		}
 	 });
 });
