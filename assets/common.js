@@ -501,7 +501,7 @@ $(document).on('click', '.quickView', function(evt) {
 		success: function(data){
 			$('#ProductQuickView').html(data);
 			$('.Quick_loader').hide();
-			$('#ProductQuickView').show();
+			$('#ProductQuickView').fadeIn('slow');
 			productVariants();
 		}
 	 });
