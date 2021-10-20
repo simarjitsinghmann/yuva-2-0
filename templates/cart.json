@@ -1,22 +1,7 @@
 {
   "sections": {
-    "cart-items": {
-      "type": "main-cart-items"
-    },
-    "cart-footer": {
-      "type": "main-cart-footer",
-      "blocks": {
-        "subtotal": {
-          "type": "subtotal"
-        },
-        "buttons": {
-          "type": "buttons"
-        }
-      },
-      "block_order": [
-        "subtotal",
-        "buttons"
-      ]
+    "main-cart": {
+      "type": "main-cart"
     },
     "featured-products": {
       "type": "featured-collection",
@@ -27,8 +12,7 @@
     }
   },
   "order": [
-    "cart-items",
-    "cart-footer",
+    "main-cart",
     "featured-products"
   ]
 }
