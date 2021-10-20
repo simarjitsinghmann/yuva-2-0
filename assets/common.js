@@ -492,7 +492,8 @@ $(document).ready(function()
 $(document).on('click', '.quickView', function(evt) {
     evt.preventDefault();
 	var _url = $(this).data('href');
-	$('.Quick_loader').hide();
+	$('.Quick_loader').show();
+  $('#ProductQuickView,#qucikview').show();
 	$.ajax({
 		url:_url+'?view=quick-view',
 		type:'GET',
