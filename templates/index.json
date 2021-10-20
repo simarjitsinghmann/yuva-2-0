@@ -247,6 +247,41 @@
         "info_alignment": "left"
       }
     },
+    "featured-blog": {
+      "type": "featured-blog",
+      "blocks": {
+        "796d3d0e-f6ec-4d53-b1c2-0f22f7bbefd0": {
+          "type": "article",
+          "settings": {
+            "article": "news\/redefine-your-workday-with-the-palm-treo-pro-smart-phone-2"
+          }
+        },
+        "0a114bd4-1861-4320-baa9-7e06682915eb": {
+          "type": "article",
+          "settings": {
+            "article": "news\/redefine-your-workday-with-the-palm-treo-pro-smart-phone"
+          }
+        },
+        "9440572b-9a6e-4e04-a502-e390b885223b": {
+          "type": "article",
+          "settings": {
+            "article": "test\/test-blog"
+          }
+        }
+      },
+      "block_order": [
+        "796d3d0e-f6ec-4d53-b1c2-0f22f7bbefd0",
+        "0a114bd4-1861-4320-baa9-7e06682915eb",
+        "9440572b-9a6e-4e04-a502-e390b885223b"
+      ],
+      "settings": {
+        "heading": "CONSECTETUR",
+        "style": "style1",
+        "subheading": "Blog post everyday",
+        "blog": "",
+        "custom": true
+      }
+    },
     "testimonials": {
       "type": "testimonials",
       "blocks": {
@@ -319,41 +354,6 @@
         "heading": "What Our Customers Say",
         "description": "",
         "bgcolor": "#f6f4f2"
-      }
-    },
-    "featured-blog": {
-      "type": "featured-blog",
-      "blocks": {
-        "796d3d0e-f6ec-4d53-b1c2-0f22f7bbefd0": {
-          "type": "article",
-          "settings": {
-            "article": "news\/redefine-your-workday-with-the-palm-treo-pro-smart-phone-2"
-          }
-        },
-        "0a114bd4-1861-4320-baa9-7e06682915eb": {
-          "type": "article",
-          "settings": {
-            "article": "news\/redefine-your-workday-with-the-palm-treo-pro-smart-phone"
-          }
-        },
-        "9440572b-9a6e-4e04-a502-e390b885223b": {
-          "type": "article",
-          "settings": {
-            "article": "test\/test-blog"
-          }
-        }
-      },
-      "block_order": [
-        "796d3d0e-f6ec-4d53-b1c2-0f22f7bbefd0",
-        "0a114bd4-1861-4320-baa9-7e06682915eb",
-        "9440572b-9a6e-4e04-a502-e390b885223b"
-      ],
-      "settings": {
-        "heading": "CONSECTETUR",
-        "style": "style2",
-        "subheading": "Blog post everyday",
-        "blog": "",
-        "custom": true
       }
     },
     "163456266607727edf": {
@@ -433,8 +433,8 @@
     "collection-list",
     "featured-collection",
     "16345626467f5a91b7",
-    "testimonials",
     "featured-blog",
+    "testimonials",
     "163456266607727edf",
     "instagram",
     "multicolumn-content"
