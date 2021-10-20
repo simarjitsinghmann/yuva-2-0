@@ -500,7 +500,7 @@ $(document).on('click', '.quickView', function(evt) {
 		type:'GET',
 		success: function(data){
 			$('#ProductQuickView').html(data);
-			$('.Quick_loader').hide();
+			$('.Quick_loader').fadeOut('fast');
 			$('#ProductQuickView').fadeIn('slow');
 			productVariants();
 		}
