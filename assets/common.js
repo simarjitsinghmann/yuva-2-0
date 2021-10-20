@@ -493,15 +493,15 @@ $(document).on('click', '.quickView', function(evt) {
     evt.preventDefault();
   $('#ProductQuickView').hide();
 	var _url = $(this).data('href');
-	$('.Quick_loader').show();
+	$('.Quick_loader').fadeIn('slow');
   $('#qucikview').fadeIn('slow');
 	$.ajax({
 		url:_url+'?view=quick-view',
 		type:'GET',
 		success: function(data){
 			$('#ProductQuickView').html(data);
-			$('.Quick_loader').fadeOut('fast');
-			$('#ProductQuickView').fadeIn('slow');
+			$('.Quick_loader').hide();
+			$('#ProductQuickView').show();
 			productVariants();
 		}
 	 });
