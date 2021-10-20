@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div  id="banner-{{section.id}}" class="container-fluid">
     <div class="row">
         <div class="slider-list" >
             <div class="d-flex">
@@ -37,6 +37,53 @@
         </div>
     </div>
 </div>
+      <style>              
+        #banner-{{section.id}} .carousel-caption-title .top-title { 
+            {% if section.settings.h_bg != blank %}
+                background: {{ section.settings.h_bg }};
+            {% endif %}
+            {% if section.settings.h_text != blank %}
+                color: {{ section.settings.h_text }};
+            {% endif %}
+        }             
+        #banner-{{section.id}} .carousel-caption-title .smaller-heading { 
+            {% if section.settings.sh_bg != blank %}
+                background: {{ section.settings.sh_bg }};
+            {% endif %}
+            {% if section.settings.sh_text != blank %}
+                color: {{ section.settings.sh_text }};
+            {% endif %}
+        }               
+        #banner-{{section.id}} .carousel-caption-title .bigger-heading { 
+            {% if section.settings.sale_bg != blank %}
+                background: {{ section.settings.sale_bg }};
+            {% endif %}
+            {% if section.settings.sale_text != blank %}
+                color: {{ section.settings.sale_text }};
+            {% endif %}
+        }          
+        #banner-{{section.id}} .carousel-caption-title .bottom-title { 
+            {% if section.settings.c_bg != blank %}
+                background: {{ section.settings.c_bg }};
+            {% endif %}
+            {% if section.settings.c_text != blank %}
+                color: {{ section.settings.c_text }};
+            {% endif %}
+        }        
+        #banner-{{section.id}} .carousel-caption-title a.button { 
+            {% if section.settings.btn_text != blank %}
+                color: {{ section.settings.btn_text }};
+            {% endif %}
+            background-image: linear-gradient(
+                90deg,{{ section.settings.btn_h_bg }} 0,{{ section.settings.btn_h_bg }} 50%,{{ section.settings.btn_bg }} 50%,{{ section.settings.btn_bg }} 100%);
+        }
+               
+        #banner-{{section.id}} .carousel-caption-title a.button:hover { 
+            {% if section.settings.btn_h_text != blank %}
+                color: {{ section.settings.btn_h_text }};
+            {% endif %}
+        }
+    </style>
 {% schema %}
 {
   "name": "t:sections.banner-section.name",
