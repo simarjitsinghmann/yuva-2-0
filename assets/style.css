@@ -664,7 +664,14 @@ ul.gallery-item li a > img {background: #f6f4f3;}
 .ratingbox .star-rating { text-align: left; margin-bottom: 17px; } .ratingbox .star-rating .fa-star { font-size: 15px; } 
 .ratingbox span.spr-badge-caption { font-size:var(--extra-small); color: var(--color-gray); padding-left: 7px; } 
 .prizebox #get_price .main-price { color: #8d8d8d; font-size: 20px; line-height: 20px; font-weight: 400; margin: 0 16px 0 21px; } 
-.prizebox #get_price { color: var(--product-heading); font-weight: bold; line-height: normal; align-items: center; display: flex; } 
+.prizebox #get_price { color: var(--product-heading); font-weight: bold; line-height: normal; align-items: center; display: flex;font-size: 30px; } 
+.prizebox #get_price span[data-compare-price] {
+	font-size: 16px;
+	font-weight: var(--normal);
+	color: rgba(0, 0, 0, 0.6);
+	margin-left: 20px;
+	text-transform: ;
+}
 .prizebox { width: 100%; display: flex; align-items: center; margin-bottom: 19px; } 
 .prizebox .percent-off { line-height: 20px; color: var(--color-theme-text); font-weight: 600; font-size: 20px; } 
 .size_title { color: var(--product-heading); font-weight: var(--medium); margin-bottom: 13px; text-transform:uppercase; } 
