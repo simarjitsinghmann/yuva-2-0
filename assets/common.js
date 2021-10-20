@@ -504,7 +504,7 @@ $(document).on('click', '.quickView', function(evt) {
 			$('.Quick_loader').hide();
 			$('#ProductQuickView').show();
 			productVariants();
-            },300)
+            },500)
 		}
 	 });
 });
