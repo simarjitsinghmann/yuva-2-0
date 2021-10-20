@@ -277,152 +277,143 @@ $('.toggle-level').click(function(){
 //count timer//
 
 (function () {
-	function pad2(number) {
-		return (number < 10 ? '0' : '') + number
-	 }
-	const second = 1000,
-		minute = second * 60,
-		hour = minute * 60,
-		day = hour * 24;
+  function pad2(number) {
+    return (number < 10 ? '0' : '') + number
+  }
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
 
-		var eventdate = document.getElementById("eventDate");
-		if(eventdate) {
-			const myArr = eventdate.value.split("/");
-			let _day = myArr[0];
-			let _month = myArr[1];
-			let _year = myArr[2];
-			let _date = _month+" "+_day+","+_year+" 00:00:00";
-			countDown = new Date(_date).getTime();
-			if(isNaN(countDown)){
-				if(Shopify.designMode){
-					alert('Incorrect Date or Date Format');
-				}
-				return false;
-			}
-			x = setInterval(function() {    
-
-				let now = new Date().getTime(),
-				distance = countDown - now;
-				if(distance > 0){
-					document.getElementsByClassName("announcement-bar")[0].classList.remove('hidden');
-					var leftDays = Math.floor(distance / (day));
-					if(leftDays > 0){
-						document.getElementById("dayHours").textContent= 'Days';
-					}
-					else{
-						document.getElementById("dayHours").textContent = 'Hours';
-					}
-					document.getElementById("days").innerText = pad2(leftDays),
-					document.getElementById("hours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
-					document.getElementById("minutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
-					document.getElementById("seconds").innerText = pad2(Math.floor((distance % (minute)) / second));
-				}
-				else{
-					document.getElementsByClassName("announcement-bar")[0].classList.add('hidden');
-					document.getElementsByTagName('body')[0].classList.remove('announcement_open');
-					clearInterval(x);
-				}
-			}, 0)
-		}
-	productVariants=function() {
-		var productOptions = document.getElementsByClassName('productOption');
-		if(productOptions){
-		var options=[];
-		Array.from(productOptions).forEach(function(productOption) {
-			productOption.addEventListener("click", ()=>{	
-				var _productParent = productOption.closest('.product_content_section');
-				setTimeout(function(){
-					const fieldsets = Array.from(_productParent.querySelectorAll('.product-loop-variants'));
-					options=fieldsets.map((fieldset) => {
-						return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
-					});
-					var getVariant = variantChange(options,_productParent);
-                  	
-					if(getVariant != undefined){
-                      var image= getVariant.featured_media['preview_image']['src'];
-                      image= image.replace("https:", "");                       
-						_productParent.querySelectorAll('[name="id"]')[0].value = getVariant.id;
-                      	var imageSource = _productParent.querySelectorAll(".owl-thumb-item img[src='"+image+"']")[0];
-                      if(imageSource){
-                        imageSource.click();
-                      }
-						if(getVariant.available == true){
-							_productParent.querySelectorAll('.Sd_addProduct')[0].removeAttribute("disabled");
-							_productParent.querySelectorAll('.Sd_addProduct')[0].innerHTML  = "Add to Cart";
-							_productParent.querySelectorAll('.shopify-payment-button')[0].style.display = "block";
-						}else{
-							_productParent.querySelectorAll('.Sd_addProduct')[0].setAttribute("disabled", true);
-							_productParent.querySelectorAll('.Sd_addProduct')[0].innerHTML  = "Sold Out";
-							_productParent.querySelectorAll('.shopify-payment-button')[0].style.display = "none";
-						}
-					}
-					else{
-						_productParent.querySelectorAll('.Sd_addProduct')[0].setAttribute("disabled", true);
-						_productParent.querySelectorAll('.Sd_addProduct')[0].innerHTML  = "Unavailable";
-						_productParent.querySelectorAll('.shopify-payment-button')[0].style.display = "none";
-					}
-				},200)
-			})
-		});
-
-		}
-		function variantChange(options,selector){
-		var variantData = JSON.parse(selector.querySelector('[type="application/json"][name="variant-json"]').textContent);
-		console.log(variantData);
-		return currentVariant = variantData.find((variant) => {
-			return !variant.options.map((option, index) => {
-				return options[index] === option;
-			}).includes(false);
-		});
-		}
-	}
- 
- showMultipleOptions = function(){
-	var showOptions = document.getElementsByClassName('showOptions');
-    if(showOptions){		
-      Array.from(showOptions).forEach(function(option) {
-        option.addEventListener("click", ()=>{	
-           hideOptions();
-			var product = option.getAttribute("data-product");
-        		document.getElementById(product).style.display="block";
-         });
-      });
+  var eventdate = document.getElementById("eventDate");
+  if(eventdate) {
+    const myArr = eventdate.value.split("/");
+    let _day = myArr[0];
+    let _month = myArr[1];
+    let _year = myArr[2];
+    let _date = _month+" "+_day+","+_year+" 00:00:00";
+    countDown = new Date(_date).getTime();
+    if(isNaN(countDown)){
+      if(Shopify.designMode){
+        alert('Incorrect Date or Date Format');
+      }
+      return false;
     }
-	
-	var closeOptions = document.getElementsByClassName('close-product-wrap');
-    if(closeOptions){		
-      Array.from(closeOptions).forEach(function(option) {
-        option.addEventListener("click", ()=>{
-			var product = option.getAttribute("data-product");
-        		document.getElementById(product).style.display="none";
-         });
-      });
-    }
-	
-	function hideOptions(){
-      var options = document.getElementsByClassName('product-wrap');
-		Array.from(options).forEach(function(option) {
-          option.style.display="none";
-        });
+    x = setInterval(function() {    
+
+      let now = new Date().getTime(),
+          distance = countDown - now;
+      if(distance > 0){
+        document.getElementsByClassName("announcement-bar")[0].classList.remove('hidden');
+        var leftDays = Math.floor(distance / (day));
+        if(leftDays > 0){
+          document.getElementById("dayHours").textContent= 'Days';
+        }
+        else{
+          document.getElementById("dayHours").textContent = 'Hours';
+        }
+        document.getElementById("days").innerText = pad2(leftDays),
+          document.getElementById("hours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
+          document.getElementById("minutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
+          document.getElementById("seconds").innerText = pad2(Math.floor((distance % (minute)) / second));
+      }
+      else{
+        document.getElementsByClassName("announcement-bar")[0].classList.add('hidden');
+        document.getElementsByTagName('body')[0].classList.remove('announcement_open');
+        clearInterval(x);
+      }
+    }, 0)
+  }
+  
+  
+//   Variant Change
+  
+  productVariants=function() {
+    var productOptions = document.getElementsByClassName('productOption');
+    if(productOptions){
+      var options=[];
+      Array.from(productOptions).forEach(function(productOption) {
+        productOption.addEventListener("click", ()=>{	
+                                       var _productParent = productOption.closest('.product_content_section');
+        setTimeout(function(){
+          const fieldsets = Array.from(_productParent.querySelectorAll('.product-loop-variants'));
+          options=fieldsets.map((fieldset) => {
+            return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
+          });
+          var getVariant = variantChange(options,_productParent);
+
+          if(getVariant != undefined){
+            var image= getVariant.featured_media['preview_image']['src'];
+            image= image.replace("https:", "");                       
+            _productParent.querySelectorAll('[name="id"]')[0].value = getVariant.id;
+            var imageSource = _productParent.querySelectorAll(".owl-thumb-item img[src='"+image+"']")[0];
+            if(imageSource){
+              imageSource.click();
+            }
+            if(getVariant.available == true){
+              _productParent.querySelectorAll('.Sd_addProduct')[0].removeAttribute("disabled");
+              _productParent.querySelectorAll('.Sd_addProduct')[0].innerHTML  = "Add to Cart";
+              _productParent.querySelectorAll('.shopify-payment-button')[0].style.display = "block";
+            }else{
+              _productParent.querySelectorAll('.Sd_addProduct')[0].setAttribute("disabled", true);
+              _productParent.querySelectorAll('.Sd_addProduct')[0].innerHTML  = "Sold Out";
+              _productParent.querySelectorAll('.shopify-payment-button')[0].style.display = "none";
+            }
+          }
+          else{
+            _productParent.querySelectorAll('.Sd_addProduct')[0].setAttribute("disabled", true);
+            _productParent.querySelectorAll('.Sd_addProduct')[0].innerHTML  = "Unavailable";
+            _productParent.querySelectorAll('.shopify-payment-button')[0].style.display = "none";
+          }
+        },200)
+      })
+    });
+
+  }
+  function variantChange(options,selector){
+    var variantData = JSON.parse(selector.querySelector('[type="application/json"][name="variant-json"]').textContent);
+    console.log(variantData);
+    return currentVariant = variantData.find((variant) => {
+      return !variant.options.map((option, index) => {
+        return options[index] === option;
+      }).includes(false);
+    });
   }
 }
-	productVariants();
+
+ showMultipleOptions = function(){
+  var showOptions = document.getElementsByClassName('showOptions');
+  if(showOptions){		
+    Array.from(showOptions).forEach(function(option) {
+      option.addEventListener("click", ()=>{	
+                              hideOptions();
+      var product = option.getAttribute("data-product");
+      document.getElementById(product).style.display="block";
+    });
+  });
+}
+
+var closeOptions = document.getElementsByClassName('close-product-wrap');
+if(closeOptions){		
+  Array.from(closeOptions).forEach(function(option) {
+    option.addEventListener("click", ()=>{
+                            var product = option.getAttribute("data-product");
+    document.getElementById(product).style.display="none";
+  });
+});
+}
+
+function hideOptions(){
+  var options = document.getElementsByClassName('product-wrap');
+  Array.from(options).forEach(function(option) {
+    option.style.display="none";
+  });
+}
+}
+productVariants();
 showMultipleOptions();
 }());
 
-// $(document).on("click", function(event){
-// 	var $trigger = $(".quality-select");
-// 	if($trigger !== event.target && !$trigger.has(event.target).length){
-// 		$(".quality-menu").slideUp("fast");
-// 	}          				
-// });
-
-// $('.dropdown-menu li').on('click', function() {
-// 	var getValue = $(this).text();
-// 	$('.dropdown-select').text(getValue);
-// 	$(this).closest('.select__quantity').find('input[name=quantity]').val(getValue);
-// 	$('.dropdown-menu').slideUp("fast");
-// });
 $('.announce_close').click(function(){
 	$('.announcement-bar').slideToggle();
 	$('body').removeClass('announcement_open');
