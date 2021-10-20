@@ -1111,7 +1111,12 @@ section.feature-section { padding: 70px 0; background-color: #f8f8f8; margin-top
  .product-add-to-cart-right .form-group .quantity { margin: 0 0 35px 0; width: 100%;display: flex;align-items:center; } 
  .swatch-element.color { margin: 0 6px 6px 0; } .swatch .swatch-element .crossed-out { display: none; } 
  .crossed-out { position: absolute; width: 100%; height: 100%; left: 0; top: 0; } 
- .quantity .quantity_container { position: relative; left: -4px; display: inline-block; } 
+ .quantity .quantity_container { position: relative; left: -4px; display: inline-block; }
+.feature-section h4 {
+    text-align: center;
+    font-weight: var(--semibold);
+    padding-bottom: 28px;
+}
 .quantity input {
     padding: 2px 24px 0;
     color: #000;
