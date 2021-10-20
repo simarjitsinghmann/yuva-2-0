@@ -494,7 +494,7 @@ $(document).on('click', '.quickView', function(evt) {
   $('#ProductQuickView').hide();
 	var _url = $(this).data('href');
 	$('.Quick_loader').show();
-  $('#qucikview').show();
+  $('#qucikview').fadeIn('slow');
 	$.ajax({
 		url:_url+'?view=quick-view',
 		type:'GET',
