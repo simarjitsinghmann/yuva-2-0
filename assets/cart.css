@@ -185,16 +185,17 @@
       background: #f6f6f6;
       border: 1px solid #e2e2e2;
       border-radius: 5px;
-    margin: 0 0 30px;
-  }
-  .cstm-cart-sec .inner-box.price-details .seller-box span {
-      line-height: 1;
+      line-height: normal;
       font-size: 13px;
       color: #858585;
       font-weight: 400;
       font-family: 'Spartan', sans-serif;
       letter-spacing: normal;
+    margin: 0 0 30px;
+    resize: none;
+    width: 100%;
   }
+
   .cstm-cart-sec .inner-box.price-details ul li {
       display: flex;
       align-items: center;

@@ -455,9 +455,16 @@ div.lower-nav .nav-item .userful__links {
 .style5 .top__header .web_title { font-size: 13px; color: #777; } #nav_style_5 .header__heading-link { margin-left: 0; margin-right: 0; } 
 .style5 .search-form .btn.icon-search svg, .style5 .header__icons svg  { width: 15px; line-height: 1; } 
 .style5 .header__icons .wrapper-top-cart span.cartCount { width: 14px; height: 14px; font-size: 9px; } 
-.style5 .currency-block label.dropdown-toggle::after { border-top: 1px solid #777; border-left: 1px solid #777; width: 6px; height: 6px; top: 6px; } 
+.style5 .currency-block label.dropdown-toggle::after {
+	border-top: 1px solid #777;
+	border-left: 1px solid #777;
+	width: 6px;
+	height: 6px;
+	top: 11px;
+	right: 8px;
+}
 .style5 .header__icons .wrapper-top-cart, .style5 .nav-wishlist, .style5 .search-form, .style5 .customer-links{line-height:1;padding:0 16px 0 16px;} 
-.style5 .currency-block label.dropdown-toggle { padding-right: 14px; color: #777; font-size: 13px; font-weight: 400; padding-bottom:0; } 
+.style5 .currency-block label.dropdown-toggle { padding-right: 20px; color: #777; font-size: 13px; font-weight: 400; padding-bottom:0; } 
 .style5 .header__icons .customer-links { padding: 0 50px 0 16px; } 
 #nav_style_5 .navbar-nav .nav-item { padding: 0 22px; } 
 .collapse.right-sided { justify-content: flex-end; } 
