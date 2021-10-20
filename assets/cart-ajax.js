@@ -1,3 +1,175 @@
+jQuery.getJSON('/cart.js', function (cart, textStatus) {
+    buildCart(cart);
+});
+
+// POST to cart/change.js returns the cart in JSON
+changeItem = function(line, quantity, callback) {
+    var $body = $(document.body),
+    params = {
+    type: 'POST',
+    url: '/cart/change.js',
+    data: 'quantity=' + quantity + '&line=' + line,
+    dataType: 'json',
+    success: function(cart) {
+        jQuery.getJSON('/cart.js', function (cart, textStatus) {
+            callback(cart); 
+        });
+    },
+    error: function(XMLHttpRequest, textStatus) {
+        console.log(XMLHttpRequest, textStatus);
+    }
+    };
+    jQuery.ajax(params);
+};
+
+// POST to cart/add.js returns the cart in JSON
+$(document).on('submit','[action="/cart/add"]', function(evt) {
+    evt.preventDefault();
+    params = {
+        type: 'POST',
+        url: '/cart/add.js',
+        data: jQuery(this).serialize(),
+        dataType: 'json',
+        // beforeSend: function(jqxhr, settings) {
+        //   $body.trigger('beforeAddItem.ajaxCart', form);
+        // },
+        success: function(line_item) {    
+            $('#qucikview').hide();            
+            jQuery.getJSON('/cart.js', function (cart, textStatus) {
+                buildCart(cart,true); 
+            });
+        },
+        error: function(XMLHttpRequest, textStatus) {
+            if ((typeof errorCallback) === 'function') {
+            errorCallback(XMLHttpRequest, textStatus);
+            }
+            else {
+                console.log(XMLHttpRequest, textStatus);
+            }
+        }
+        };
+        jQuery.ajax(params);
+});
+
+// Update quantity based on input on change
+
+$(document).on('click', '.quantity-button', function(evt) {
+    evt.preventDefault();
+    var $el = $(this),
+        line = $el.data('line'),
+        $qtySelector = $el.closest('.quantity').find('.ajaxcart__qty-num'),
+        qty = parseInt($qtySelector.val().replace(/\D/g, ''));
+
+    var qty = validateQty(qty);
+
+    // Add or subtract from the current quantity
+    if ($el.hasClass('ajaxcart__qty--plus')) {
+        qty += 1;
+    } else {
+        qty -= 1;
+        if (qty <= 0) qty = 0;
+    }
+    $qtySelector.val(qty);
+    if (line) {
+        updateQuantity(line, qty,buildCart);
+    } 
+});
+
+// Update quantity based on input on change
+$(document).on('change', '.ajaxcart__qty-num', function(evt) {
+    evt.preventDefault();
+    var $el = $(this),
+        line = $el.data('line'),
+        qty = parseInt($el.val().replace(/\D/g, ''));
+
+    var qty = validateQty(qty);
+
+    // If it has a data-line, update the cart
+    if (line) {
+        updateQuantity(line, qty,buildCart);
+    }
+});
+
+changeCartItem = function(line, quantity) {    
+    var  params = {
+        type: 'POST',
+        url: '/cart/change.js',
+        data: 'quantity=' + quantity + '&line=' + line,
+        dataType: 'json',
+        success: function(cart) {
+            jQuery.getJSON('/cart.js', function (cart, textStatus) {
+                if(quantity == 0 ){ 
+                    $('[name="item_quantity"][data-line="'+line+'"]').closest('tr').remove();
+                }
+                if(cart.item_count == 0 ){
+                    $('#cart[cart-form]').hide();
+                    $('[cart-empty]').show();                    
+                    $('[data-cart-count]').hide().text('');
+                }
+                else{ 
+                    $('[data-cart-count]').show().text(cart.item_count);
+                    var item = cart.items[line-1];
+                    $('[name="item_quantity"][data-line="'+line+'"]').val(item.quantity);
+                    cartPageUpdate(cart);
+                }
+            });
+        },
+        error: function(XMLHttpRequest, textStatus) {
+        }
+    };
+    jQuery.ajax(params);
+};
+$(document).on('click', '.line_item_change', function(evt) {
+    evt.preventDefault();
+    var $el = $(this),
+        line = $el.data('line'),
+        $qtySelector = $el.siblings('input[name="item_quantity"]'),
+        qty = parseInt($qtySelector.val().replace(/\D/g, ''));
+
+    var qty = validateQty(qty);
+    // Add or subtract from the current quantity
+    if ($el.hasClass('plus')) {
+        qty += 1;
+    } else {
+        qty -= 1;
+        if (qty <= 0) qty = 0;
+    }
+    $qtySelector.val(qty);
+    if (line) {
+        changeCartItem(line, qty);
+    } 
+});
+
+$(document).on('change', '[name="item_quantity"]', function(evt) {
+    evt.preventDefault();
+    var $el = $(this),
+        line = $el.data('line'),
+        qty = parseInt($el.val().replace(/\D/g, ''));
+
+    var qty = validateQty(qty);
+    // Add or subtract from the current quantity
+    
+    if (line) {
+        changeCartItem(line, qty);
+    } 
+});
+
+$(document).on('click', '.line_item_remove', function(evt) {
+    evt.preventDefault();
+      var $el = $(this),
+          line = $el.data('line');
+      // If it has a data-line, update the cart
+      if (line) {
+        changeCartItem(line, 0);
+      }
+  })
+
+updateQuantity = function(line, qty,callback) {
+    isUpdating = true;
+    setTimeout(function() {
+        changeItem(line, qty,callback);
+    }, 250);
+}
 
 buildCart = function (cart,showCart) {
     if (cart.item_count === 0) {
@@ -64,103 +236,6 @@ buildCart = function (cart,showCart) {
     }
 
 };
-jQuery.getJSON('/cart.js', function (cart, textStatus) {
-    buildCart(cart);
-});
-
-// POST to cart/change.js returns the cart in JSON
-function changeItem(line, quantity, callback) {
-    var $body = $(document.body),
-    params = {
-    type: 'POST',
-    url: '/cart/change.js',
-    data: 'quantity=' + quantity + '&line=' + line,
-    dataType: 'json',
-    success: function(cart) {
-        jQuery.getJSON('/cart.js', function (cart, textStatus) {
-            buildCart(cart); 
-        });
-    },
-    error: function(XMLHttpRequest, textStatus) {
-        console.log(XMLHttpRequest, textStatus);
-    }
-    };
-    jQuery.ajax(params);
-};
-
-// POST to cart/add.js returns the cart in JSON
-$(document).on('submit','[action="/cart/add"]', function(evt) {
-    evt.preventDefault();
-    params = {
-        type: 'POST',
-        url: '/cart/add.js',
-        data: jQuery(this).serialize(),
-        dataType: 'json',
-        // beforeSend: function(jqxhr, settings) {
-        //   $body.trigger('beforeAddItem.ajaxCart', form);
-        // },
-        success: function(line_item) {                
-            jQuery.getJSON('/cart.js', function (cart, textStatus) {
-                buildCart(cart,true); 
-            });
-        },
-        error: function(XMLHttpRequest, textStatus) {
-            if ((typeof errorCallback) === 'function') {
-            errorCallback(XMLHttpRequest, textStatus);
-            }
-            else {
-                console.log(XMLHttpRequest, textStatus);
-            }
-        }
-        };
-        jQuery.ajax(params);
-});
-
-// Update quantity based on input on change
-
-$(document).on('click', '.quantity-button', function(evt) {
-    evt.preventDefault();
-    var $el = $(this),
-        line = $el.data('line'),
-        $qtySelector = $el.closest('.quantity').find('.ajaxcart__qty-num'),
-        qty = parseInt($qtySelector.val().replace(/\D/g, ''));
-
-    var qty = validateQty(qty);
-
-    // Add or subtract from the current quantity
-    if ($el.hasClass('ajaxcart__qty--plus')) {
-        qty += 1;
-    } else {
-        qty -= 1;
-        if (qty <= 0) qty = 0;
-    }
-    $qtySelector.val(qty);
-    if (line) {
-        updateQuantity(line, qty);
-    } 
-});
-
-// Update quantity based on input on change
-$(document).on('change', '.ajaxcart__qty-num', function(evt) {
-    evt.preventDefault();
-    var $el = $(this),
-        line = $el.data('line'),
-        qty = parseInt($el.val().replace(/\D/g, ''));
-
-    var qty = validateQty(qty);
-
-    // If it has a data-line, update the cart
-    if (line) {
-        updateQuantity(line, qty);
-    }
-});
-
-function updateQuantity(line, qty) {
-    isUpdating = true;
-    setTimeout(function() {
-        changeItem(line, qty);
-    }, 250);
-}
 
 
 $(document).on('click', '.sd_mini_removeproduct', function(evt) {
@@ -168,12 +243,10 @@ $(document).on('click', '.sd_mini_removeproduct', function(evt) {
     var $el = $(this),
         parent = $el.closest('.media-link'),
         line = $el.attr('line');
-	console.log($el)
-	
     // If it has a data-line, update the cart
     if (line) {
       parent.remove();
-        updateQuantity(line, 0);
+        updateQuantity(line, 0,buildCart);
     }
 })
 
@@ -186,3 +259,20 @@ validateQty = function (qty) {
     }
     return qty;
 };
+
+cartPageUpdate = function(cart){
+    $('[data-cart-item-count]').text(cart.item_count);
+    $('[data-cart-original-price]').text(Shopify.formatMoney(cart.original_total_price, moneyFormat));
+    $('[data-cart-total-price]').text(Shopify.formatMoney(cart.total_price, moneyFormat));
+    if(cart.cart_level_discount_applications.length > 0){
+        var discounts = '';
+        $.each(cart.cart_level_discount_applications,function(index,discount){
+            discounts += '<li data-cart-discount>Discount['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
+        })
+        $('li[data-cart-discount]').remove();
+        $(discounts).insertAfter('li[data-cart-original]')
+    }
+    else{
+        $('li[data-cart-discount]').remove();
+    }
+}

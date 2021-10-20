@@ -325,7 +325,11 @@ $('.toggle-level').click(function(){
     }, 0)
   }
   
-  
+  setTimeout(function(){
+  var headerHeight = document.getElementById('headerSection').offsetHeight;
+  console.log(headerHeight)
+  document.getElementsByTagName('body')[0].style['padding-top'] = headerHeight+'px';
+},200)
 //   Variant Change
   
   productVariants=function() {
@@ -417,6 +421,10 @@ showMultipleOptions();
 $('.announce_close').click(function(){
 	$('.announcement-bar').slideToggle();
 	$('body').removeClass('announcement_open');
+  setTimeout(function(){
+    var headerHeight = document.getElementById('headerSection').offsetHeight;
+    document.getElementsByTagName('body')[0].style['padding-top'] = headerHeight+'px';
+  },500)
 });
 
 $(document).on("click", function(event){

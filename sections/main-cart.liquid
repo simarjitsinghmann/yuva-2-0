@@ -1,15 +1,15 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
 <div class="container">
-  {% if cart.item_count == 0 %}
-  <div class="continue-shopping">
+  
+  <div class="continue-shopping"{% if cart.item_count > 0 %}style="display:none"{% endif %} cart-empty>
      <h2>Your Cart is Empty</h2>
      <a href="/collections/all" class="button">continue shopping</a>
   </div>
-  {% else %}
-  <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart">
+  {% if cart.item_count > 0 %}
+  <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
   <div class="row">    
      <div class="col-md-8">
-        <h3>Shopping Cart <span>In your bag {{cart.item_count}} items</span></h3>
+        <h3>Shopping Cart <span>In your bag <span data-cart-item-count>{{cart.item_count}}</span> items</span></h3>
         <div class="inner-box">
            <table>
               <tbody>
@@ -25,7 +25,7 @@
                        {% if item.sku != blank %}
                        <span>SKU: {{item.sku}}</span>
                        {% endif %}
-                       {% unless item.variant.title == null %}
+                       {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
                        {% for option in item.options_with_values %}
                        <span>{{option.name}}: {{option.value}}</span>
                        {% endfor %}
@@ -33,19 +33,21 @@
                     </td>
                     <td class="cart-qty">
                        <div class="qty">
-                          <button class="minus">-</button>
-                          <input type="number" value="{{item.quantity}}">
-                          <button class="plus">+</button>
+                          <button class="minus line_item_change"  data-line="{{forloop.index}}">-</button>
+                          <input type="number" name="item_quantity" initial="{{item.quantity}}" data-line="{{forloop.index}}" value="{{item.quantity}}">
+                          <button class="plus line_item_change" data-line="{{forloop.index}}">+</button>
                        </div>
                     </td>
                     <td class="cart-price">
                        <div class="price">
-                          Rs. 447.00
+                          {{item.original_price | money}}
                        </div>
                     </td>
                     <td class="cart-remove">
-                       <div class="remove">
-                          <img src="assets/images/cart-cross.png" alt="">
+                       <div class="remove line_item_remove" data-line="{{forloop.index}}">
+                        <svg line="1" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
+                          <path id="Forma_1" data-name="Forma 1" d="M1873.46,42.5l4.32-4.328a0.687,0.687,0,1,0-.97-0.973l-4.32,4.328-4.32-4.328a0.687,0.687,0,1,0-.97.973l4.32,4.328-4.32,4.329a0.688,0.688,0,0,0,.49,1.175,0.674,0.674,0,0,0,.48-0.2l4.32-4.329,4.32,4.329a0.7,0.7,0,0,0,.49.2,0.674,0.674,0,0,0,.48-0.2,0.686,0.686,0,0,0,0-.973Z" transform="translate(-1867 -37)"></path>
+                        </svg>
                        </div>
                     </td>
                  </tr>
@@ -64,16 +66,16 @@
         <div class="inner-box price-details">
            <textarea class="seller-box" name="note" id="Cart-note" placeholder="Special instructions for seller">{{ cart.note }}</textarea>
            <ul>
-              <li>Total <strong>{{cart.original_total_price | money}}</strong></li>
+              <li data-cart-original>Total <strong data-cart-original-price>{{cart.original_total_price | money}}</strong></li>
               {%- if cart.cart_level_discount_applications.size > 0 -%}
               {%- for discount in cart.cart_level_discount_applications -%}
-              <li>Discount['{{ discount.title }}'] <strong>-{{discount.total_allocated_amount | money}}</strong></li>
+              <li data-cart-discount>Discount['{{ discount.title }}'] <strong>-{{discount.total_allocated_amount | money}}</strong></li>
               {%- endfor -%}
               {% endif %}
               <!-- <li>Convenience Fee Know More<strong>49FREE</strong></li> -->
-              <li class="total">
+              <li class="total" data-cart-total>
                  <p>Total Amount</p>
-                 <strong>{{cart.total_price | money}}</strong>
+                 <strong data-cart-total-price>{{cart.total_price | money}}</strong>
               </li>
            </ul>
            <div class="cart-btn">
