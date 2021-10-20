@@ -177,13 +177,7 @@ div#banner-slide > img { width: 100%;}
 .collection__right__list .grid__item__list { padding-bottom: 15px; } 
 .collection__right__list .grid__item__list:last-child { padding-bottom: 0px; } 
 .collection-image img { width: 100%; }
-.collection__right__list .card__warpper__detail {
-	min-height: 265px;
-}
-.collection__right__list .card__warpper__detail .collection-image img {
-	object-fit: cover;
-	height: 100%;
-}
+
 .card-wrapper.left-sided .collection-image img {
     height: 100%;
     object-fit: cover;
@@ -1116,6 +1110,9 @@ section.feature-section { padding: 70px 0; background-color: #f8f8f8; margin-top
     text-align: center;
     font-weight: var(--semibold);
     padding-bottom: 28px;
+}
+.product-image-left .item img {
+    width: 100%;
 }
 .quantity input {
     padding: 2px 24px 0;
