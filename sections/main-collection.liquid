@@ -31,7 +31,9 @@
                              {%- endif -%}
                              {% endif %}
                              {%- endfor -%}
+                             {% if active > 0 %}
                              <a href="{{ collection.url }}?sort_by={{ sort_by }}" class="filter-clean text-primary">Clean All</a>
+                             {% endif %}
                            </div>
                         </div>
                      </div>
