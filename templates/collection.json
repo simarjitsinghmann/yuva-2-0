@@ -1,14 +1,18 @@
 {
   "sections": {
     "banner": {
-      "type": "main-collection-banner"
+      "type": "collection-banner",
+      "settings": {
+      }
     },
-    "product-grid": {
-      "type": "main-collection-product-grid"
+    "main-collection": {
+      "type": "main-collection",
+      "settings": {
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "main-collection"
   ]
 }
