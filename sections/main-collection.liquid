@@ -14,6 +14,24 @@
                               <a class="select-item" href="javascript:void(0)">CASUAL SHOES<i class="fas fa-times-circle"></i></a>
                               <a class="select-item" href="javascript:void(0)">SHOES<i class="fas fa-times-circle"></i></a>
                               <a href="javascript:void(0)" class="filter-clean text-primary">Clean All</a>
+                             {%- for filter in collection.filters -%}
+                             {%- for value in filter.active_values -%}
+                             <a class="active-facets__button active-facets__button--light button button--tertiary js-facet-remove" href="{{ value.url_to_remove }}">
+                               {{ value.label | escape }}
+                               <i class="fas fa-times-circle">
+                             </a>
+                             {%- endfor -%}
+
+                             {% if filter.type == "price_range" %}
+                             {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
+                             <a class="active-facets__button active-facets__button--light button button--tertiary js-facet-remove" href="{{ filter.url_to_remove }}">
+                               {%- if filter.min_value.value -%}{{ filter.min_value.value | money }}{%- else -%}{{ 0 | money }}{%- endif -%}-{%- if filter.max_value.value -%}{{ filter.max_value.value | money }}{%- else -%}{{ filter.range_max | money }}{%- endif -%}
+                               <i class="fas fa-times-circle">
+                             </a>
+                             {%- endif -%}
+                             {% endif %}
+                             {%- endfor -%}
+                             <a href="{{ collection.url }}?sort_by={{ sort_by }}" class="filter-clean text-primary">Clean All</a>
                            </div>
                         </div>
                      </div>
