@@ -32,6 +32,30 @@
       </div>
     </div>
   </div>
+  {% when 'price-range' %}
+  <div class="widget sidebar-widget-product">
+    <div class="widget-title">
+      <h6 class="sidebar-title">
+        <span>{{ filter.label | escape }}</span>
+      </h6>
+      <div class="widget-content">
+        <ul class="list-tags">
+          {%- for value in filter.values -%}
+          <li>
+            <input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" id="Filter-{{ filter.label | escape }}-{{ forloop.index }}"
+                   {% if value.active %}checked{% endif %}
+                   {% if value.count == 0 and value.active == false %}disabled{% endif %}
+                   >
+            <span class="checkmark"></span>
+            <label>
+              {{ value.label | escape }} ({{ value.count }})
+            </label>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
   {% endcase %}
   {% endfor %}
 </div>
