@@ -324,19 +324,14 @@ background-image: linear-gradient(90deg,var(--bg-theme) 0,var(--bg-theme) 50%,#f
 font-weight: var(--semibold);
 letter-spacing: 1.2px;	
 }
-.shopify-payment-button__button {
-background-image: -moz-linear-gradient(90deg,#fff 0,#fff 50%,(--bg-theme) 50%,(--bg-theme) 100%);
-background-image: -webkit-linear-gradient(90deg,#fff 0,#fff) 50%,(--bg-theme) 50%,(--bg-theme)100%);
-background-image: linear-gradient(90deg,#fff 0,#fff 50%,(--bg-theme) 50%,(--bg-theme) 100%);	
-	
-}
+
 .feature-product .product-add-to-cart-right .form-group #Sd_addProduct:hover {
     border: 2px solid var(--bg-theme);
 color: var(--color-secondary);
 }
 .shopify-payment-button__button:hover {
-    border: 2px solid var(--color-primary);
-color: var(--color-primary);	
+opacity:0.8;
+background-color: #000!important;
 	
 }
 .feature-product .product-loop-variants.circle .color_option {
