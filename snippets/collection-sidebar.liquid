@@ -39,6 +39,7 @@
       <h6 class="sidebar-title">
         <span>{{ filter.label | escape }}</span>
       </h6>
+      {{filter.range_max}}
        {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
       <span class="widget__selected">{{ "sections.collection_template.max_price" | t: price: max_price_amount }}</span>
       <div class="widget-content">
