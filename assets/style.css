@@ -416,32 +416,6 @@ a.wishlist-view .fas { display: none; }
 .daily-offer-here .detail-offer { letter-spacing: 0.2px; margin-bottom: 31px; color: var(--color-secondary); } 
 .daily-offer-here h6 {color: var(--color-secondary); margin-bottom: 20px;}
 .daily-offer-here h6.offer-title {font-weight: 600;}
-.banner-section .carousel-caption-title.style2 h6.top-title {
-    color: var(--color-secondary);
-    text-transform: uppercase;
-    font-weight: var(--medium);
-}
-.banner-section .carousel-caption-title.style2 h2.smaller-heading {
-    font-weight: var(--bold);
-    font-size: 55px;
-    padding: 8px 17px;
-    background: #fff;
-    margin: 15px 0 18px;
-}
-.banner-section .carousel-caption-title.style2 h2.bigger-heading {
-    font-weight: var(--bold);
-    font-size: 55px;
-    margin-bottom: 5px;
-}
-.banner-section .carousel-caption-title.style2 .bottom-title {
-    font-weight: var(--medium);
-    color: var(--color-secondary);
-    margin-bottom: 28px;
-}
-.banner-section .item img {
-    display: block;
-    width: 100%;
-}
 /***daily-offer-end***/ 
 
 /**blog-post-start**/ 
@@ -1378,3 +1352,36 @@ section.feature-section { padding: 70px 0; background-color: #fff; margin-top: 0
 .shopify-section.category-section {
 	background-color: #efedeb!important;
 }
+
+/**banner-section**/
+.banner-section .item {
+	position: relative;
+}
+.banner-section .banner-caption-title.style2 h6.top-title {
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    font-weight: var(--medium);
+}
+.banner-section .banner-caption-title.style2 h2.smaller-heading {
+    font-weight: var(--bold);
+    font-size: 55px;
+    padding: 8px 17px;
+    background: #fff;
+    margin: 15px 0 18px;
+}
+.banner-section .banner-caption-title.style2 h2.bigger-heading {
+    font-weight: var(--bold);
+    font-size: 55px;
+    margin-bottom: 5px;
+}
+.banner-section .banner-caption-title.style2 .bottom-title {
+    font-weight: var(--medium);
+    color: var(--color-secondary);
+    margin-bottom: 28px;
+}
+.banner-section .item img {
+    display: block;
+    width: 100%;
+}
+
+/**banner-section-end**/
