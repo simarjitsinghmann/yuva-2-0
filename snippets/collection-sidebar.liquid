@@ -8,10 +8,11 @@
   
   {%- for filter in collection.filters -%}
    {% case filter.type %}
+  {% when 'list' %}
   <div class="widget sidebar-widget-product">
     <div class="widget-title">
       <h6 class="sidebar-title">
-        <span>Categories</span>
+        <span>{{ filter.label | escape }}</span>
       </h6>
       <div class="widget-content">
         <ul class="list-tags">
