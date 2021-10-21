@@ -35,14 +35,9 @@
                         <label>Sort by:</label>
                   {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
                         <select name="sort_by" class="form-control" id="SortBy" data-default-sortby="title-ascending" form="CollectionFiltersForm">
-                           <option value="manual">Featured</option>
-                           <option value="best-selling">Best selling</option>
-                           <option value="title-ascending" selected="selected">Alphabetically, A-Z</option>
-                           <option value="title-descending">Alphabetically, Z-A</option>
-                           <option value="price-ascending">Price, low to high</option>
-                           <option value="price-descending">Price, high to low</option>
-                           <option value="created-ascending">Date, old to new</option>
-                           <option value="created-descending">Date, new to old</option>
+                          {%- for option in collection.sort_options -%}
+                          <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
+                          {%- endfor -%}
                         </select>
                      </div>
                   </div>
