@@ -562,8 +562,8 @@ object-fit: cover; }
 .testimonial-slide .owl-item  .slider-caption p { line-height: 24px; letter-spacing: 0.4px;max-width: 310px;margin: 0 auto;font-size: var(--small-size);letter-spacing: 0.5px; } 
 .testimonial-slide .owl-item .slider-caption .author { font-weight: var(--medium); color: var(--color-primary); padding-top: 23px;font-size: 16px; } 
 .testimonial-slide .owl-item .slider-caption span { font-size: var(--small-font); font-weight: var(--medium); color: var(--color-gray); margin-top: 5px; display: block; margin-bottom: 5px; } 
-.testimonial-slide .owl-nav .owl-prev { position: absolute; top: 50%; -moz-transform: translateY(-50%); -webkit-transform: translateY(-50%); -o-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); left: -7px; background: transparent !important; } 
-.testimonial-slide .owl-nav .owl-next { position: absolute; top: 50%; -moz-transform: translateY(-50%); -webkit-transform: translateY(-50%); -o-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); right: -7px; background: transparent !important; } 
+.testimonial-slide .owl-nav .owl-prev { position: absolute; top: 44%; -moz-transform: translateY(-50%); -webkit-transform: translateY(-50%); -o-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); left: -7px; background: transparent !important; } 
+.testimonial-slide .owl-nav .owl-next { position: absolute; top: 44%; -moz-transform: translateY(-50%); -webkit-transform: translateY(-50%); -o-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); right: -7px; background: transparent !important; } 
 .testimonial-slider .owl-nav button {
 	padding: 10px !important;
 	width: 55px;
@@ -578,9 +578,6 @@ object-fit: cover; }
 
 .testimonial .testimonial-slider .owl-nav button{
 	background: #ffffff !important;
-}
-.testimonial .testimonial-slider .owl-nav button:hover {
-	background: #5b5b5b !important;
 }
 .testimonial .testimonial-slider .owl-nav button.owl-prev svg {
 	-moz-transform: rotate(180deg);
