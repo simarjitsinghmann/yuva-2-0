@@ -6,6 +6,7 @@
     <p>FILTER BY</p>
   </div>
   
+  <form id="CollectionFiltersForm" class="collectionFilters__form">
   {%- for filter in collection.filters -%}
    {% case filter.type %}
   {% when 'lists' %}
@@ -80,4 +81,5 @@
   </div>
   {% endcase %}
   {% endfor %}
+  </form>
 </div>
