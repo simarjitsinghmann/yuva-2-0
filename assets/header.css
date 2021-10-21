@@ -540,7 +540,7 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 .header__icons .wrapper-top-cart span.cartCount { background:var(--bg-top-header); width: 17px; height: 17px; color: var(--color-secondary); font-size: var(--extra-small); position: absolute; text-align: center; border-radius: 50%;line-height: normal; right: -7px; top: -10px;font-size: 10px; } 
 .header__icons .wrapper-top-cart a.cart-icon { text-decoration: none; position: relative; } 
 .search-bar-container { z-index: 99999; background-color: var(--bg-white); position: fixed; width: 100%; top:0; transition: 0.5s; transform:translateY(-100%); } 
-.addsearch .search-bar-container {transition: 0.8s; transform:translateY(0%);-webkit-box-shadow:0 2px 3px 0 rgba(0, 0, 0, 0.15)box-shadow:0 2px 3px 0 rgba(0, 0, 0, 0.15); }
+.addsearch .search-bar-container {transition: 0.8s; transform:translateY(0%);-webkit-box-shadow:0 2px 3px 0 rgba(0, 0, 0, 0.15);box-shadow:0 2px 3px 0 rgba(0, 0, 0, 0.15); }
 .search-bar-box.search-box {
 	border-bottom: 1px solid #d8dee3;
 	box-shadow: 0 0 3px #ebeef1;
