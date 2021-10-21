@@ -120,6 +120,7 @@
                                                    {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
                                                    {% for variant in variantsList %}
                                                       {% if variant.featured_image != blank %}
+                                         					{% assign variantImage = variant.featured_image %}
                                                          {% break %}
                                                       {% endif %}
                                                    {% endfor %}
