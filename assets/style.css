@@ -1160,6 +1160,15 @@ section.feature-section { padding: 70px 0; background-color: #fff; margin-top: 0
     font-weight: var(--semibold);
     padding-bottom: 28px;
 }
+.product-add-to-cart-right .select__size .product-loop-variants.size .size_option input:checked + span.option {
+	background: #f6f4f2;
+	border: 2px solid #ee9191;
+}
+.product-add-to-cart-right .size_option .option {
+	border: 2px solid #f6f4f2;
+    background: #f6f4f2;
+    border-radius: 0;;
+}
 .feature-product .quantity a#quantity_minus {
     font-size: 50px;
     line-height: 39px;
