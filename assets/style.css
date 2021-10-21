@@ -11,7 +11,7 @@
 .offer-box { margin-bottom: 33px; }
 .button .fa-arrow-right { margin-left: 20px; } 
 .carousel-caption h5.bottom-title { padding-top: 14px; padding-bottom: 40px; } 
-.button {font-weight: var(--medium);font-family: var(--font-family); color: var(--color-secondary); text-decoration: none; padding: 16px 12px; min-width: 195px; text-align: center; background-color: #1e5799; background-image: -moz-linear-gradient(90deg, #000000 0%, #000000 50%, #939393 50%, #939393 100%); background-image: -webkit-linear-gradient(90deg, #000000 0%, #000000 50%, #939393 50%, #939393 100%); background-image: linear-gradient(90deg, #000000 0%, #000000 50%, #939393 50%, #939393 100%); background-repeat: no-repeat; background-size: 200% 100%; background-position: right bottom; transition: background-position 0.25s ease-out; font-size:var(--extra-small); min-height: initial; line-height: 16px; letter-spacing: .2px;font-weight: var(--medium); } 
+.button {font-weight: var(--medium);font-family: var(--font-family); color: var(--color-secondary); text-decoration: none; padding: 16px 12px; min-width: 195px; text-align: center; background-color: #1e5799; background-image: -moz-linear-gradient(90deg, #000000 0%, #000000 50%, #939393 50%, #939393 100%); background-image: -webkit-linear-gradient(90deg, #000000 0%, #000000 50%, #939393 50%, #939393 100%); background-image: linear-gradient(90deg, #000000 0%, #000000 50%, #939393 50%, #939393 100%); background-repeat: no-repeat; background-size: 200% 100%; background-position: right bottom; transition: background-position 0.25s ease-out; font-size:var(--small-font); min-height: initial; line-height: 16px; letter-spacing: 1.2px;font-weight: var(--medium); } 
 .button:hover { background-position: left bottom; } 
 .black-btn{font-family: var(--font-family); background-image: -moz-linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #000000 50%, #000000 100%); background-image: -webkit-linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #000000 50%, #000000 100%); background-image: linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #000000 50%, #000000 100%); }
 .orange-btn{ background-color: var(--bg-theme); background-image: -moz-linear-gradient(90deg, #000000 0%, #000000 50%, var(--bg-theme)50%, var(--bg-theme) 100%); background-image: -webkit-linear-gradient(90deg, var(--bg-theme) 0%, #000000 50%, #000000 50%, var(--bg-theme) 100%); background-image: linear-gradient(90deg, #000000 0%, #000000 50%, var(--bg-theme) 50%, var(--bg-theme) 100%); }
@@ -27,9 +27,16 @@
 .slider-list .top-title {
 	margin-bottom: 10px;
 }
-.carousel-caption .style2 h1.smaller-heading { line-height:1.2;font-family: var(--font-family); color: var(--color-secondary); background: var(--bg-primary); display: inline-block;font-weight:var(--normal)} 
+.carousel-caption .style2 h1.smaller-heading { line-height:1.2;font-family: var(--font-family); color: var(--color-secondary); background: var(--bg-primary); display: inline-block;font-weight:var(--normal);letter-spacing: 1.2px;} 
 .carousel-caption .style2 h1.bigger-heading { text-shadow: 0px 1px 1px rgb(0 0 0 / 28%);text-transform: capitalize; color: var(--color-theme-text);padding-top: 2px; } 
-.carousel-caption .style2 h5.bottom-title { color: var(--color-primary); padding-top: 8px; padding-bottom: 37px;font-weight:var(--medium);letter-spacing: -0.3px; font-size: 18px; } 
+.carousel-caption .style2 h5.bottom-title {
+	color: var(--color-primary);
+	padding-top: 8px;
+	padding-bottom: 37px;
+	font-weight: var(--medium);
+	letter-spacing: 1.3px;
+	font-size: 20px;
+}
 .carousel-caption-title a.black-btn.button {text-transform: uppercase;font-weight: var(--medium);}
 /*.slider-list .owl-stage, .slider-list .owl-item { display: flex; width:100%;}*/
 .banner.banner-section.item { width: 100%; } 
