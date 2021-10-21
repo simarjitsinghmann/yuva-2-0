@@ -6,12 +6,12 @@
 .carousel-caption h5 { color: var(--color-secondary); margin:0; letter-spacing: 0.4px; } 
 .carousel-caption h5.top-title { font-weight: var(--medium); text-transform: uppercase; padding: 0 0 21px; color: var(--color-secondary); } 
 .carousel-caption h1.smaller-heading { font-weight:var(--bold); color: var(--color-secondary); font-family:var(--font-family2); } 
-.carousel-caption h1.bigger-heading { font-weight: bold; line-height: 1.01; color: var(--color-secondary);text-transform:uppercase; } 
+.carousel-caption h1.bigger-heading { font-weight: var(--semibold); line-height: 1.01; color: var(--color-secondary); } 
 .carousel-caption h3.top-title { font-weight: 300; color: var(--color-secondary); text-transform: uppercase; letter-spacing: 30px; padding: 10px 0 40px; } 
 .offer-box { margin-bottom: 33px; }
 .button .fa-arrow-right { margin-left: 20px;margin-top: -3px; } 
 .carousel-caption h5.bottom-title { padding-top: 14px; padding-bottom: 40px; } 
-.button {font-weight: var(--medium);font-family: var(--font-family); color: var(--color-secondary); text-decoration: none; padding: 18px 12px 14px; min-width: 195px; text-align: center; background-color: #1e5799; background-image: -moz-linear-gradient(90deg, #000000 0%, #000000 50%, #939393 50%, #939393 100%); background-image: -webkit-linear-gradient(90deg, #000000 0%, #000000 50%, #939393 50%, #939393 100%); background-image: linear-gradient(90deg, #000000 0%, #000000 50%, #939393 50%, #939393 100%); background-repeat: no-repeat; background-size: 200% 100%; background-position: right bottom; transition: background-position 0.25s ease-out; font-size:var(--extra-small); min-height: initial; line-height: 16px; letter-spacing: .2px;font-weight: var(--medium); } 
+.button {font-weight: var(--medium);font-family: var(--font-family); color: var(--color-secondary); text-decoration: none; padding: 18px 12px 14px; min-width: 195px; text-align: center; background-color: #1e5799; background-image: -moz-linear-gradient(90deg, #000000 0%, #000000 50%, #939393 50%, #939393 100%); background-image: -webkit-linear-gradient(90deg, #000000 0%, #000000 50%, #939393 50%, #939393 100%); background-image: linear-gradient(90deg, #000000 0%, #000000 50%, #939393 50%, #939393 100%); background-repeat: no-repeat; background-size: 200% 100%; background-position: right bottom; transition: background-position 0.25s ease-out; font-size:var(var(--small-font)); min-height: initial; line-height: 16px; letter-spacing: 1.4px;font-weight: var(--medium); } 
 .button:hover { background-position: left bottom; } 
 .black-btn{font-family: var(--font-family); background-image: -moz-linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #000000 50%, #000000 100%); background-image: -webkit-linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #000000 50%, #000000 100%); background-image: linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #000000 50%, #000000 100%); }
 .orange-btn{ background-color: var(--bg-theme); background-image: -moz-linear-gradient(90deg, #000000 0%, #000000 50%, var(--bg-theme)50%, var(--bg-theme) 100%); background-image: -webkit-linear-gradient(90deg, var(--bg-theme) 0%, #000000 50%, #000000 50%, var(--bg-theme) 100%); background-image: linear-gradient(90deg, #000000 0%, #000000 50%, var(--bg-theme) 50%, var(--bg-theme) 100%); }
@@ -26,11 +26,29 @@
 .style2 h4.top-title {
 	font-weight: var(--medium);
 	letter-spacing: 0.4px;
-	font-family: var(--font-family);
+    font-family: var(--font-family);
+    line-height: 63px;
 }
-.carousel-caption .style2 h1.smaller-heading { line-height:1.2;font-family: var(--font-family); color: var(--color-secondary); background: var(--bg-primary); display: inline-block; margin-bottom: 4px; } 
-.carousel-caption .style2 h1.bigger-heading { text-shadow: 0px 1px 1px rgb(0 0 0 / 28%);text-transform: capitalize; color: var(--color-theme-text);padding-top: 18px; } 
-.carousel-caption .style2 h5.bottom-title { color: var(--color-primary); padding-top: 8px; padding-bottom: 37px;font-weight:var(--medium);letter-spacing: -0.3px; font-size: 18px; } 
+.carousel-caption .style2 h1.smaller-heading {
+	line-height: 1.2;
+	font-family: var(--font-family);
+	color: var(--color-secondary);
+	background: var(--bg-primary);
+	display: inline-block;
+	margin-bottom: 4px;
+	font-weight: var(--normal);
+	font-size: 75px;
+	letter-spacing: 0.25rem;
+}
+.carousel-caption .style2 h1.bigger-heading { text-shadow: 0px 1px 1px rgb(0 0 0 / 28%);text-transform: capitalize; color: var(--color-theme-text);padding-top: 2px; } 
+.carousel-caption .style2 h5.bottom-title {
+	color: var(--color-primary);
+	padding-top: 11px;
+	padding-bottom: 27px;
+	font-weight: var(--medium);
+	letter-spacing: 0.8px;
+	font-size: 20px;
+} 
 .carousel-caption-title a.black-btn.button {text-transform: uppercase;font-weight: var(--medium);}
 /*.slider-list .owl-stage, .slider-list .owl-item { display: flex; width:100%;}*/
 .banner.banner-section.item { width: 100%; } 
