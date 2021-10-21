@@ -11,9 +11,6 @@
                      <div class="toolbox-item toolbox-layout">
                         <div class="filter-actions">
                            <div class="select-items">
-                              <a class="select-item" href="javascript:void(0)">CASUAL SHOES<i class="fas fa-times-circle"></i></a>
-                              <a class="select-item" href="javascript:void(0)">SHOES<i class="fas fa-times-circle"></i></a>
-                              <a href="javascript:void(0)" class="filter-clean text-primary">Clean All</a>
                              {%- for filter in collection.filters -%}
                              {%- for value in filter.active_values -%}
                              <a class="select-item" href="{{ value.url_to_remove }}">
