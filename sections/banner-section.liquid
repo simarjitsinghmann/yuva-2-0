@@ -1,18 +1,14 @@
-<div id="banner-{{section.id}}" class="container-fluid">
-    <div class="row">
-        <div class="slider-list" >
-            <div class="d-flex">
-                  <div class="loop ">
+<div id="banner-{{section.id}}">
                     <div class="item">
                         {% if section.settings.image != blank %}
                         <img src="{{section.settings.image | img_url:'master'}}" alt="">
                         {%else%}
                         {% include 'banner-placeholder'%}
                         {% endif %} 
-                        <div class="carousel-caption">
+                        <div class="banner-caption">
                             <div class="container">
                                 <div class="row">
-                                    <div class="carousel-caption-title style2 {{section.settings.info_position}} text__{{section.settings.info_alignment}}">
+                                    <div class="banner-caption-title style2 {{section.settings.info_position}} text__{{section.settings.info_alignment}}">
                                         {% if section.settings.heading != blank %}
                                         <h6 class="top-title">{{section.settings.heading}}</h6>
                                         {% endif %}
@@ -33,10 +29,8 @@
                             </div>
                         </div>
                   </div>
-            </div>
-        </div>
     </div>
-</div>
+
       <style>              
         #banner-{{section.id}} .carousel-caption-title .top-title { 
             {% if section.settings.h_bg != blank %}
