@@ -5,6 +5,8 @@
     </svg>
     <p>FILTER BY</p>
   </div>
+  
+  {%- for filter in collection.filters -%}
   <div class="widget sidebar-widget-product">
     <div class="widget-title">
       <h6 class="sidebar-title">
@@ -179,4 +181,5 @@
       </div>
     </div>
   </div>
+  {% endfor %}
 </div>
