@@ -1163,6 +1163,10 @@ section.store__support { background: var(--bg-gray); padding: 50px 0; }
     object-fit: contain;
     margin-right: 19px;
 }
+.feature__product .item {
+	max-height: 630px;
+	overflow: hidden;
+}
 /***Support section end***/
 
 /**Join Our Newsletter**/
