@@ -227,13 +227,17 @@ buildCart = function (cart,showCart) {
 
         items.push(item);
     });
-
+  var shippPending = 0;
+  if(cart.total_price < shipping){
+  	shippPending = Shopify.formatMoney((cart.total_price-shipping), moneyFormat);
+  }
     // Gather all cart data and add to DOM
     data = {
         items: items,
         count:cart.item_count,
         note: cart.note,
       shipping:shipping,
+      shippPending:shippPending,
       total:cart.total_price, 
         totalPrice: Shopify.formatMoney(cart.total_price, moneyFormat),
         // totalCartDiscount: cart.total_discount === 0 ? 0 : `"translation missing: en.cart.general.savings_html"`.replace('[savings]',),
