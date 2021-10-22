@@ -32,10 +32,10 @@
       .then(response => response.text())
       .then((responseText) => {
         const html = responseText;
-  		const innerHTML = new DOMParser().parseFromString(html, 'text/html');
-  		var itemResultCount = innerHTML.getElementsByClassName('filter-total-result');
+  		const resultData = new DOMParser().parseFromString(html, 'text/html');
+  		var itemResultCount = resultData.getElementsByClassName('filter-total-result');
         var _url = window.location.pathname+'?'+searchParameters;
-		document.getElementById('shopify-section-'+sectionId).innerHTML = innerHTML;
+		document.getElementById('shopify-section-'+sectionId).innerHTML = resultData.innerHTML;
         history.pushState({}, null, _url);
   		collectionFilters();
       });
