@@ -28,8 +28,8 @@
       const formData = new FormData(filterForm);
       var searchParameters = new URLSearchParams(formData).toString();
      const url = window.location.pathname+'?section_id='+sectionId+'&'+searchParameters;
-        var _url = window.location.pathname+'?'+searchParameters;
-     window.location.href=_url;
+//         var _url = window.location.pathname+'?'+searchParameters;
+//      window.location.href=_url;
 	fetch(url)
       .then(response => response.text())
       .then((responseText) => {
@@ -37,6 +37,8 @@
   		const resultData = new DOMParser().parseFromString(html, 'text/html');
   		var itemResultCount = resultData.getElementsByClassName('filter-total-result');
 		document.getElementById('shopify-section-'+sectionId).innerHTML = resultData.innerHTML;
+      var _url = window.location.pathname+'?'+searchParameters;
+     window.location.href=_url;
         history.pushState({}, null, _url);
   		collectionFilters();
       });
