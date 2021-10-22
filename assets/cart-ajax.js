@@ -52,7 +52,7 @@ $(document).on('submit','[action="/cart/add"]', function(evt) {
                 console.log(XMLHttpRequest, textStatus);
             }
           setTimeout(function(){
-            submit.addClass('is-loading');
+            submit.removeClass('is-loading');
           },1000)
         }
         };
