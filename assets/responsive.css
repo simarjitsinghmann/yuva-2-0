@@ -39,6 +39,9 @@
 	.navbar-nav .nav-item {
 		padding: 0 6px;
 	}
+	#dropdown-customer, .minicart-open #mini__cart, .show__similar__products #similar__product {
+		max-width: 350px;
+	}
 	.mini_cart .cart-item-container {
 		padding: 0 25px 0;
 	}
@@ -180,7 +183,6 @@
 	line-height: 18px;
 }
 .button {
-	padding: 14px 12px 10px;
 	min-width: 160px;
 }
 .client-say-left p {
