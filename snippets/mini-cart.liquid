@@ -14,7 +14,7 @@
 	</div>
      <form action=" {% endraw %}{{ routes.cart_url }} {% raw %}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
 	<div class="cart-item-container">	
-		 <p>Spend <strong>$20.01</strong> more and get free shipping!</p>
+		 <p>Spend <strong>{{{shippPending}}}</strong> more and get free shipping!</p>
 		 <div class="progress">
 		  <div class="progress-bar" role="progressbar"
 		  aria-valuemin="0" aria-valuemax="100" style="width:{{shipPendingPercentage}}">
