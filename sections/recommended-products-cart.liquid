@@ -10,7 +10,7 @@
                       {% for product in collections.all.products %}
                       {% for item in cart.items %}
                       {% if item.product_id != product.id %}
-                      {% include 'product-grid'%}
+                      {% include 'product-grid' hide_options:true%}
 
                       {% assign count = count | plus:1 %}
                       {% break %}
