@@ -813,7 +813,7 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 .cart-btn-container .button {
 	min-width: initial;
 	width: 100%;
-	padding: 19px 12px;
+	padding: 17px 12px;
 	margin-bottom: 10px;
 	font-size: var(--extra-small);
 	text-transform: uppercase;
@@ -858,3 +858,42 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
     .top-header #nav_style_5.navbar div#navbarCollapse { max-width: calc(50% - 155px); }
 
 }
+
+
+/**progress-bar**/
+.progress {
+	height: 9px;
+	margin-bottom: 30px;
+	overflow: hidden;
+	background-color: #e9e9e9;
+	border-radius: 20px;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+	border:1px solid #dbdbdb;
+}
+.progress-bar {
+	float: left;
+	width: 0%;
+	height: 100%;
+	font-size: 12px;
+	line-height: 20px;
+	color: #fff;
+	text-align: center;
+	background-color: #ffb323;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+	-webkit-transition: width .6s ease;
+	-o-transition: width .6s ease;
+	transition: width .6s ease;
+}
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
+/**End progress-bar**/
