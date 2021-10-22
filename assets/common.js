@@ -327,7 +327,6 @@ $('.toggle-level').click(function(){
   
   setTimeout(function(){
   var headerHeight = document.getElementById('headerSection').offsetHeight;
-  console.log(headerHeight)
   document.getElementsByTagName('body')[0].style['padding-top'] = headerHeight+'px';
 },200)
 //   Variant Change
