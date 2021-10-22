@@ -6,10 +6,21 @@
             <div class="grid grid--4-col-desktop grid--3-col-tablet">
                 <div class="grid__item full__item products-grid ">
                     <div class="row column-5 d-flex justify-content-center">
-                        {% assign count = 0 %}
-                        {% for product in collections.all.products %}
-                        {% include 'product-grid'%}
-                        {% endfor %}
+                      {% assign count = 0 %}
+                      {% for product in collections.all.products %}
+                      {% for item in cart.items %}
+                      {% if item.product_id != product.id %}
+                      {% include 'product-grid'%}
+
+                      {% assign count = count | plus:1 %}
+                      {% break %}
+                      {% endif %}
+                      {% endfor %}
+
+                      {% if count == 5 %}
+                      {% break %}
+                      {% endif %}
+                      {% endfor %}
                     </div>
                 </div>
             </div>
