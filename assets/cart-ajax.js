@@ -227,7 +227,7 @@ buildCart = function (cart,showCart) {
 
         items.push(item);
     });
-    var shippPending = 0;
+    var shippPending ='';
   	var shipPendingPercentage = '100%';
     if(cart.total_price < shipping){
       shippPending = Shopify.formatMoney((shipping - cart.total_price), moneyFormat);
