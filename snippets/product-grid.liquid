@@ -169,8 +169,8 @@
                           {% if product.compare_at_price_max > product.price %}
                           <span data-compare-price>
                             <s>{% if current_variant.compare_at_price > current_variant.price %}
-                              {{ current_variant.compare_at_price | money }}</s>
-                            {% endif %}
+                              {{ current_variant.compare_at_price | money }}
+                            {% endif %}</s>
                           </span>
                           {% endif %}
                         </span>
