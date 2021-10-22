@@ -25,6 +25,8 @@ changeItem = function(line, quantity, callback) {
 // POST to cart/add.js returns the cart in JSON
 $(document).on('submit','[action="/cart/add"]', function(evt) {
     evt.preventDefault();
+  	var submit = $(this).find('[type="submit"]');
+  submit.addClass('is-loading');
     params = {
         type: 'POST',
         url: '/cart/add.js',
@@ -36,7 +38,10 @@ $(document).on('submit','[action="/cart/add"]', function(evt) {
         success: function(line_item) {    
             $('#qucikview').hide();            
             jQuery.getJSON('/cart.js', function (cart, textStatus) {
-                buildCart(cart,true); 
+                buildCart(cart,true);
+              setTimeout(function(){
+              	submit.addClass('is-loading');
+              },1000)
             });
         },
         error: function(XMLHttpRequest, textStatus) {
@@ -46,6 +51,9 @@ $(document).on('submit','[action="/cart/add"]', function(evt) {
             else {
                 console.log(XMLHttpRequest, textStatus);
             }
+          setTimeout(function(){
+            submit.addClass('is-loading');
+          },1000)
         }
         };
         jQuery.ajax(params);
