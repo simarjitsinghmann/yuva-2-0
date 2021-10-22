@@ -318,6 +318,12 @@ div#banner-slide > img { width: 100%;}
 }
 .feature-product .product-add-to-cart-right .form-group .btn-box {
 	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.feature-product .product-add-to-cart-right .form-group .btn-box .button, .feature-product .product-add-to-cart-right .form-group .btn-box .shopify-payment-button {
+	max-width: 70%;
+	width: 100%;
 }
 .feature-product .product-add-to-cart-right .form-group #Sd_addProduct, .cart-btn-container .button.checkout-btn {
     margin: 0 0 13px;
