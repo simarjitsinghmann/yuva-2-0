@@ -1,35 +1,35 @@
 <div id="banner-{{section.id}}">
-                    <div class="item">
-                        {% if section.settings.image != blank %}
-                        <img src="{{section.settings.image | img_url:'master'}}" alt="">
-                        {%else%}
-                        {% include 'banner-placeholder'%}
-                        {% endif %} 
-                        <div class="banner-caption">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="banner-caption-title style2 {{section.settings.info_position}} text__{{section.settings.info_alignment}}">
-                                        {% if section.settings.heading != blank %}
-                                        <h6 class="top-title">{{section.settings.heading}}</h6>
-                                        {% endif %}
-                                        {% if section.settings.subheading != blank %}
-                                        <h2 class="smaller-heading">{{section.settings.subheading}}</h2>
-                                        {% endif %}
-                                        {% if section.settings.sale != blank %}
-                                        <h2 class="bigger-heading">{{section.settings.sale}}</h2>
-                                        {% endif %}
-                                        {% if section.settings.content != blank %}
-                                        <h6 class="bottom-title">{{section.settings.content}}</h6>
-                                        {% endif %}
-                                        {% if section.settings.btn != blank %}
-                                        <a href="{{section.settings.link}}" class="black-btn button">{{section.settings.btn}}<i class="fas fa-arrow-right"></i></a>
-                                        {% endif %}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                  </div>
+  <div class="item">
+    {% if section.settings.image != blank %}
+    <img src="{{section.settings.image | img_url:'master'}}" alt="">
+    {%else%}
+    {% include 'banner-placeholder'%}
+    {% endif %} 
+    <div class="banner-caption">
+      <div class="container">
+        <div class="row">
+          <div class="banner-caption-title style2 {{section.settings.info_position}} text__{{section.settings.info_alignment}}">
+            {% if section.settings.heading != blank %}
+            <h6 class="top-title">{{section.settings.heading}}</h6>
+            {% endif %}
+            {% if section.settings.subheading != blank %}
+            <h2 class="smaller-heading">{{section.settings.subheading}}</h2>
+            {% endif %}
+            {% if section.settings.sale != blank %}
+            <h2 class="bigger-heading">{{section.settings.sale}}</h2>
+            {% endif %}
+            {% if section.settings.content != blank %}
+            <h6 class="bottom-title">{{section.settings.content}}</h6>
+            {% endif %}
+            {% if section.settings.btn != blank %}
+            <a href="{{section.settings.link}}" class="black-btn button">{{section.settings.btn}}<i class="fas fa-arrow-right"></i></a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
 
       <style>              
         #banner-{{section.id}} .banner-caption-title .top-title { 
