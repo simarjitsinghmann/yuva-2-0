@@ -807,9 +807,32 @@ padding: 10px;
 line-height: 34px;} 
 .add_to_cart.button { min-width: 295px; } 
 .product_button .shopify-payment-button__button {
-	min-width: 208px;	padding: 19px 12px;background-image: -moz-linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #333333 50%, #333333 100%);
-	background-image: -webkit-linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #333333 50%, #333333 100%);background-image: linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #333333 50%, #333333 100%);
-	background-repeat: no-repeat;background-size: 200% 100%;	background-position: right bottom;transition: background-position 0.25s ease-out;font-size: var(--small-font);min-height: initial;line-height: 16px;text-transform: uppercase;letter-spacing: 0.2px;color: var(--color-secondary);text-decoration: none;text-align: center;	border-radius: 4px;	font-weight: 600;
+	min-width: 208px;
+	padding: 17px 12px;
+	background-image: -moz-linear-gradient(90deg,#000 0,#000 50%,#fff 50%,#fff 100%);
+	background-image: -webkit-linear-gradient(90deg,#000 0,#000 50%,#fff 50%,#fff 100%);
+	background-image: linear-gradient(90deg,#000 0,#000 50%,#fff 50%,#fff 100%);
+	background-repeat: no-repeat;
+	background-size: 200% 100%;
+	background-position: right bottom;
+	transition: background-position .25s ease-out;
+	font-size: var(--small-font);
+	min-height: initial;
+	line-height: 16px;
+	text-transform: uppercase;
+	letter-spacing: .2px;
+	color: var(--color-primary);
+	text-decoration: none;
+	text-align: center;
+	border-radius: 0;
+	font-weight: 600;
+	margin: 0;
+	letter-spacing: 1.2px;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+.product_button .shopify-payment-button__button:hover {
+	background-position: left bottom!important;
 }
 .buy_now.button{min-width: 208px; background-color: #333333; padding: 19px 12px; background-image: -moz-linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #333333 50%, #333333 100%); background-image: -webkit-linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #333333 50%, #333333 100%); background-image: linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #333333 50%, #333333 100%); } 
 .dropdown.quality-select, .dropdown.productOptionSelect  { position: relative; display: inline-block; } 
