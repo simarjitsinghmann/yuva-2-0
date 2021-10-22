@@ -355,13 +355,13 @@ $('.toggle-level').click(function(){
             }
             var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
             if(getVariant.available == true){
-              _productParent.querySelectorAll('.Sd_addProduct span')[0].removeAttribute("disabled");
+              _productParent.querySelectorAll('.Sd_addProduct')[0].removeAttribute("disabled");
               _productParent.querySelectorAll('.Sd_addProduct span')[0].innerHTML  = "Add to Cart";
               if(advancePayment){
                 advancePayment.style.display = "block";
               }
             }else{
-              _productParent.querySelectorAll('.Sd_addProduct span')[0].setAttribute("disabled", true);
+              _productParent.querySelectorAll('.Sd_addProduct')[0].setAttribute("disabled", true);
               _productParent.querySelectorAll('.Sd_addProduct span')[0].innerHTML  = "Sold Out";              
               if(advancePayment){
                 advancePayment.style.display = "none";
@@ -369,7 +369,7 @@ $('.toggle-level').click(function(){
             }
           }
           else{
-            _productParent.querySelectorAll('.Sd_addProduct span')[0].setAttribute("disabled", true);
+            _productParent.querySelectorAll('.Sd_addProduct')[0].setAttribute("disabled", true);
             _productParent.querySelectorAll('.Sd_addProduct span')[0].innerHTML  = "Unavailable";            
               if(advancePayment){
                 advancePayment.style.display = "none";
