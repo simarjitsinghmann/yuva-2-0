@@ -40,12 +40,14 @@ function fetchFilterData(url){
 //         var _url = window.location.pathname+'?'+searchParameters;
 //      window.location.href=_url;
 		const html = fetchFilterData(url);
+     if(html){
   		const resultData = new DOMParser().parseFromString(html, 'text/html');
   		var itemResultCount = resultData.getElementsByClassName('filter-total-result');
 		document.getElementById('shopify-section-'+sectionId).innerHTML = resultData.getElementById('shopify-section-'+sectionId).innerHTML;
       var _url = window.location.pathname+'?'+searchParameters;
         history.pushState({}, null, _url);
   		collectionFilters();
+     }
     }
   collectionFilters();
 }());
