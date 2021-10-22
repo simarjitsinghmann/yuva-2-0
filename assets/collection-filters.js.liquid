@@ -5,7 +5,9 @@
     const formData = new FormData(filterForm);
     var searchParameters = new URLSearchParams(formData).toString();
     
-    console.log(filterForm,sectionId,searchParameters,window.location.pathname)
+    var inputs = filterForm.querySelectorAll('input[type:checkbox]')
+    
+    
   }
   collectionFilters();
 }());
