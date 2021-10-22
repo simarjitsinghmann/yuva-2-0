@@ -230,7 +230,7 @@ buildCart = function (cart,showCart) {
     var shippPending = 0;
   	var shipPendingPercentage = '100%';
     if(cart.total_price < shipping){
-      shippPending = Shopify.formatMoney((cart.total_price-shipping), moneyFormat);
+      shippPending = Shopify.formatMoney((shipping - cart.total_price), moneyFormat);
       shipPendingPercentage = ((cart.total_price /shipping)*100)+'%';
     }
   
