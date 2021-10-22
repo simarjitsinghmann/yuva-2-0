@@ -32,7 +32,8 @@ fetch(url)
       .then(response => response.text())
       .then((responseText) => {
         const html = responseText;
-  		
+  		var itemResultCount = html.querySelectorAll('.filter-total-result');
+  console.log(itemResultCount)
       });
      var _url = window.location.pathname+'?'+searchParameters;
 
