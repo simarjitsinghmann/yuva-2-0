@@ -1,19 +1,20 @@
 (function () {
     
+  function collectionFilters(){  
+    
   var section = document.getElementById('CollectionProductsContainer')
   var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
-  function collectionFilters(){   
   const filterForm = document.getElementById('CollectionFiltersForm'); 
     var inputs = filterForm.querySelectorAll('input[type=checkbox]');
     Array.from(inputs).forEach(function(input) {
       input.addEventListener("click", ()=>{	
-                             getFilterData(filterForm,input)
+                             getFilterData(filterForm,input,sectionId)
       });
     });  
   var prices = filterForm.querySelectorAll('input[type=number]');
     Array.from(prices).forEach(function(price) {
       price.addEventListener("change", ()=>{	
-                             getFilterData(filterForm,price)
+                             getFilterData(filterForm,price,sectionId)
       });
     });   
     
@@ -21,11 +22,11 @@
     Array.from(sortBy).forEach(function(sort) {
       sort.addEventListener("change", ()=>{	
                              
-                             getFilterData(filterForm,sort);
+                             getFilterData(filterForm,sort,sectionId);
       });
     });   
 }
-   function getFilterData(filterForm,input){    	
+   function getFilterData(filterForm,input,sectionId){    	
       const formData = new FormData(filterForm);
       var searchParameters = new URLSearchParams(formData).toString();
      const url = window.location.pathname+'?section_id='+sectionId+'&'+searchParameters;
