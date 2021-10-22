@@ -11,16 +11,17 @@
       });
     });  
   var prices = filterForm.querySelectorAll('input[type=number]');
-    Array.from(prices).forEach(function(input) {
-      input.addEventListener("change", ()=>{	
-                             getFilterData(filterForm,input)
+    Array.from(prices).forEach(function(price) {
+      price.addEventListener("change", ()=>{	
+                             getFilterData(filterForm,price)
       });
     });   
     
   var sortBy = section.querySelectorAll('select[name="sort_by"]');
-    Array.from(sortBy).forEach(function(input) {
-      input.addEventListener("change", ()=>{	
-                             getFilterData(filterForm,input);
+    Array.from(sortBy).forEach(function(sort) {
+      sort.addEventListener("change", ()=>{	
+                             
+                             getFilterData(filterForm,sort);
       });
     });   
 }
