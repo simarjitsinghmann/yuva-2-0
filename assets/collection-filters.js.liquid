@@ -1,7 +1,7 @@
 (function () {
   
-  	var filterForm=document.getElementById('CollectionFiltersForm');
-    var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
+  var filterForm=document.getElementById('CollectionFiltersForm');
+  var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
   function collectionFilters(){
     const formData = new FormData(filterForm);
     var searchParameters = new URLSearchParams(formData).toString();
@@ -12,7 +12,9 @@
                                        
                                        });
      });    
-    
+    function getFilterData(){
+    	
+    }
   }
   collectionFilters();
 }());
