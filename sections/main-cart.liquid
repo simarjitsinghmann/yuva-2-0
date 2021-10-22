@@ -1,68 +1,113 @@
-<script src="{{'cart-ajax.js' | asset_url}}" defer="defer"></script> 
-<div id="mini__cart" class="mini_cart">  
+{{ 'cart.css' | asset_url | stylesheet_tag }}
+<div class="container">
+  
+  <div class="continue-shopping"{% if cart.item_count > 0 %}style="display:none"{% endif %} cart-empty>
+     <h2>Your Cart is Empty</h2>
+     <a href="/collections/all" class="button">continue shopping</a>
+  </div>
+  {% if cart.item_count > 0 %}
+  <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
+  <div class="row">    
+     <div class="col-md-8">
+        <h3>Shopping Cart <span>In your bag <span data-cart-item-count>{{cart.item_count}}</span> items</span></h3>
+        <div class="inner-box">
+           <table>
+              <tbody>
+                {% for item in cart.items %}
+                 <tr>
+                    <td class="cart-img">
+                      <a href="{{item.url}}">
+                          <img src="{{item.image | img_url:'100x'}}" alt="">
+                      </a>
+                    </td>
+                    <td class="cart-prd-details">
+                       <h5>{{item.product.title}}</h5>
+                       {% if item.sku != blank %}
+                       <span>SKU: {{item.sku}}</span>
+                       {% endif %}
+                       {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
+                       {% for option in item.options_with_values %}
+                       <span>{{option.name}}: {{option.value}}</span>
+                       {% endfor %}
+                       {% endunless %}
+                    </td>
+                    <td class="cart-qty">
+                       <div class="qty">
+                          <button class="minus line_item_change"  data-line="{{forloop.index}}">-</button>
+                          <input type="number" name="item_quantity" initial="{{item.quantity}}" data-line="{{forloop.index}}" value="{{item.quantity}}">
+                          <button class="plus line_item_change" data-line="{{forloop.index}}">+</button>
+                       </div>
+                    </td>
+                    <td class="cart-price">
+                       <div class="price">
+                          {{item.original_price | money}}
+                       </div>
+                    </td>
+                    <td class="cart-remove">
+                       <div class="remove line_item_remove" data-line="{{forloop.index}}">
+                        <svg line="1" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
+                          <path id="Forma_1" data-name="Forma 1" d="M1873.46,42.5l4.32-4.328a0.687,0.687,0,1,0-.97-0.973l-4.32,4.328-4.32-4.328a0.687,0.687,0,1,0-.97.973l4.32,4.328-4.32,4.329a0.688,0.688,0,0,0,.49,1.175,0.674,0.674,0,0,0,.48-0.2l4.32-4.329,4.32,4.329a0.7,0.7,0,0,0,.49.2,0.674,0.674,0,0,0,.48-0.2,0.686,0.686,0,0,0,0-.973Z" transform="translate(-1867 -37)"></path>
+                        </svg>
+                       </div>
+                    </td>
+                 </tr>
+                 {% endfor %}
+              </tbody>
+           </table>
+        </div>
+        <div class="go-to-back">
+           <script>
+            document.write('<a href="' + document.referrer + '">Go to Product</a>');
+          </script>
+        </div>
+     </div>
+     <div class="col-md-4">
+        <h3>Price Details</h3>
+        <div class="inner-box price-details">
+           <textarea class="seller-box" name="note" id="Cart-note" placeholder="Special instructions for seller">{{ cart.note }}</textarea>
+           <ul>
+              <li data-cart-original>Total <strong data-cart-original-price>{{cart.original_total_price | money}}</strong></li>
+              {%- if cart.cart_level_discount_applications.size > 0 -%}
+              {%- for discount in cart.cart_level_discount_applications -%}
+              <li data-cart-discount>Discount['{{ discount.title }}'] <strong>-{{discount.total_allocated_amount | money}}</strong></li>
+              {%- endfor -%}
+              {% endif %}
+              <!-- <li>Convenience Fee Know More<strong>49FREE</strong></li> -->
+              <li class="total" data-cart-total>
+                 <p>Total Amount</p>
+                 <strong data-cart-total-price>{{cart.total_price | money}}</strong>
+              </li>
+           </ul>
+           <div class="cart-btn">
+              <button type="submit" name="checkout" id="cartCheckout" form="cart">Add to cart</button>
+              <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
+                {{ content_for_additional_checkout_buttons }}
+              </div>
+           </div>
+           <p class="checkout-text">Shipping &amp; taxes calculated at checkout</p>
+        </div>
+     </div>
+  </div>
+</form>
+  {% endif %}
 </div>
-<script id="CartTemplate" type="text/template">
-    {% raw %}
-	<div class="cart-product-title">
-		<a href="javascript:void(0)" title="translation missing: en.cart.general.close_cart" class="close-customer close" aria-describedby="a11y-external-message">
-			<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 40 40"><path d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z" class="layer"></path></svg>
-		</a>
-		<h5>
-			<!--{{count}} item in your cart-->
-			Cart
-		</h5>
-        
-	</div>
-	<div class="cart-item-container">		
-		{{#items}}
-		<div class="media-link" data-line="{{line}}">
-			<img src="{{img}}" alt="Sports Shoes Footwear Fashion" width="65" height="73">
-			<div class="media-body">
-				<h5 class="cart-item-link">
-					<a href="{{url}}">{{name}}</a>
-				</h5>
-				<!--{{#if variation}}
-				<span class="variant_title">{{variation}}</span>
-				{{/if}}-->
-				<h6 class="product__price">$ 450.00</h6>
-				<h6>{{{linePrice}}}</h6>
-				<div class="right-media-cart">
-					<div class="quantity">
-						<input type="number" class="ajaxcart__qty-num" name="updates[]" min="1" max="9" step="1" value="{{itemQty}}" data-id="{{key}}" data-line="{{line}}">
-						<div class="quantity-nav">
-							<div class="quantity-button quantity-up ajaxcart__qty--plus"  data-id="{{key}}" data-line="{{line}}" data-qty="{{itemAdd}}"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102 99" style="enable-background:new 0 0 102 99;" xml:space="preserve"><polygon points="100.1,37.2 63.5,37.2 63.5,0.5 39.1,0.5 39.1,37.2 2.4,37.2 2.4,61.6 39.1,61.6 39.1,98.3 63.5,98.3 63.5,61.6 100.1,61.6 "></polygon></svg></div>
-							<div class="quantity-button quantity-down ajaxcart__qty--minus" data-id="{{key}}" data-line="{{line}}" data-qty="{{itemMinus}}"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102 99" style="enable-background:new 0 0 102 99;" xml:space="preserve"><polyline points="63.3,61.6 102,61.6 102,37.2 63.3,37.2 "></polyline><polyline points="78.7,37.2 0.1,37.2 0.1,61.6 78.7,61.6 "></polyline></svg></div>
-						</div>
-					</div>
-					<h6>{{{linePrice}}}</h6>
-					<div class="sd_mini_removeproduct">Remove</div>
-				</div>
-			</div>
-			
-			<!--<svg class="sd_mini_removeproduct" line="1" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
-				<path id="Forma_1" data-name="Forma 1" d="M1873.46,42.5l4.32-4.328a0.687,0.687,0,1,0-.97-0.973l-4.32,4.328-4.32-4.328a0.687,0.687,0,1,0-.97.973l4.32,4.328-4.32,4.329a0.688,0.688,0,0,0,.49,1.175,0.674,0.674,0,0,0,.48-0.2l4.32-4.329,4.32,4.329a0.7,0.7,0,0,0,.49.2,0.674,0.674,0,0,0,.48-0.2,0.686,0.686,0,0,0,0-.973Z" transform="translate(-1867 -37)"></path>
-			</svg>-->
-		</div>
-		{{/items}}	
-	</div>
-	<div class="bottom-cart-box">
-		<div class="leave-order-note">
-			<span>Leave a Note with Order</span>
-			<form role = "form">
-				<textarea class="form-control" rows = "3"></textarea>
-			</form>
-		</div>
-		<ul>
-			<li class="totle-title">Subtotal</li>
-			<li class="totle-price">{{{totalPrice}}}</li>
-		</ul>
-		<p class="bottom-p">Shipping & taxes calculated at checkout</p>
-		<div class="cart-btn-container">
-			<a href="/cart" class="view-cart-btn button black-btn">View Cart</a>
-			<a href="/checkout" class="checkout-btn button black-btn">Checkout</a>
-		</div>
-			<a class="shopping_cont">Continue Shopping</a>
-		</div>
-	</div>
-{% endraw %}
-</script>
+
+{% schema %}
+{
+  "name": "t:sections.main-cart-footer.name",
+  "class": "cart__footer-wrapper cstm-cart-sec",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_cart_note",
+      "default": false,
+      "label": "t:sections.main-cart-footer.settings.show_cart_note.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ]
+}
+{% endschema %}
