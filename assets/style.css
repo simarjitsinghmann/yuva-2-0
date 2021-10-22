@@ -287,6 +287,29 @@ cursor: not-allowed;
 	margin-left: 10px;
 	font-size: var(--small-font);
 }
+.product__view__option li button svg.svg-loader {
+    visibility: visible;
+    width: 18px;
+    height: 18px;
+    opacity: 1;
+    transition: all .3s;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.svg-loader circle {
+    stroke-width: 1;
+    stroke: var(--color-theme);
+    fill: none;
+}
+.svg-loader circle~circle {
+    stroke: var(--color-primary);
+    stroke-dashoffset: 88;
+    animation: animate-svg 1s linear infinite;
+    animation-play-state: paused;
+}
+@keyframes animate-svg{0%{stroke-dashoffset:88}to{stroke-dashoffset:0}}
 /*.product-variants-wrapper .product-loop-variants .color_option span { font-size: 0px; width: 15px; height: 15px; color: inherit; display: inline-block; border-radius: 50%; float: left; cursor:pointer; }*/ 
 .product-loop-variants.circle, .product-loop-variants.square { display: flex; } 
 .select__color .product-loop-variants.square .color_option, .product-loop-variants.circle .color_option  {
