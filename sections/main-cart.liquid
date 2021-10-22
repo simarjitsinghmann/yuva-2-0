@@ -66,7 +66,9 @@
      <div class="col-md-4">
         <h3>Price Details</h3>
         <div class="inner-box price-details">
+          {% if section.settings.show_cart_note %}
            <textarea class="seller-box" name="note" id="Cart-note" placeholder="Special instructions for seller">{{ cart.note }}</textarea>
+          {% endif %}
            <ul>
               <li data-cart-original>Total <strong data-cart-original-price>{{cart.original_total_price | money}}</strong></li>
               {%- if cart.cart_level_discount_applications.size > 0 -%}
@@ -102,7 +104,7 @@
     {
       "type": "checkbox",
       "id": "show_cart_note",
-      "default": false,
+      "default": true,
       "label": "t:sections.main-cart.settings.show_cart_note.label"
     }
   ],
