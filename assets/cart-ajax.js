@@ -40,8 +40,8 @@ $(document).on('submit','[action="/cart/add"]', function(evt) {
             jQuery.getJSON('/cart.js', function (cart, textStatus) {
                 buildCart(cart,true);
               setTimeout(function(){
-              	submit.addClass('is-loading');
-              },500)
+              	submit.removeClass('is-loading');
+              },1000)
             });
         },
         error: function(XMLHttpRequest, textStatus) {
@@ -53,7 +53,7 @@ $(document).on('submit','[action="/cart/add"]', function(evt) {
             }
           setTimeout(function(){
             submit.addClass('is-loading');
-          },500)
+          },1000)
         }
         };
         jQuery.ajax(params);
