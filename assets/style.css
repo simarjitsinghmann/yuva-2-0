@@ -875,7 +875,7 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 	float: left;
 	width: 0%;
 	height: 100%;
-	font-size: 12px;
+	font-size: var(--extra-small);
 	line-height: 20px;
 	color: #fff;
 	text-align: center;
@@ -898,7 +898,7 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 	font-weight: var(--semibold);
 }
 .cart-item-container > p {
-	font-size: 14px;
+	font-size: var(--font-normal);
 	text-align: center;
 	font-weight: var(--light);
 	letter-spacing: 0.6px;
