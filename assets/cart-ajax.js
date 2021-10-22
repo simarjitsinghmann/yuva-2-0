@@ -41,7 +41,7 @@ $(document).on('submit','[action="/cart/add"]', function(evt) {
                 buildCart(cart,true);
               setTimeout(function(){
               	submit.addClass('is-loading');
-              },1000)
+              },500)
             });
         },
         error: function(XMLHttpRequest, textStatus) {
@@ -53,7 +53,7 @@ $(document).on('submit','[action="/cart/add"]', function(evt) {
             }
           setTimeout(function(){
             submit.addClass('is-loading');
-          },1000)
+          },500)
         }
         };
         jQuery.ajax(params);
