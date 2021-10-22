@@ -39,7 +39,6 @@
       console.log(document.getElementById('shopify-section-'+sectionId),resultData.getElementById('shopify-section-'+sectionId))
 		document.getElementById('shopify-section-'+sectionId).innerHTML = resultData.innerHTML;
       var _url = window.location.pathname+'?'+searchParameters;
-     window.location.href=_url;
         history.pushState({}, null, _url);
   		collectionFilters();
       });
