@@ -1255,7 +1255,7 @@ section.feature-section { padding: 100px 0 61px; background-color: #fff; margin-
 .quantity input {
     padding: 2px 24px 0;
     color: #000;
-    font-size: 20px;
+    font-size: 18px;
     background: #fff;
     width: 170px;
     height: 50px;
@@ -1275,9 +1275,9 @@ section.feature-section { padding: 100px 0 61px; background-color: #fff; margin-
 .quantity a {
     margin: 0;
     cursor: pointer;
-    display: block;
+    display: flex;
     height: 50px;
-    padding: 0 22px;
+    padding: 0 5px;
     color: #000;
     position: absolute;
     top: 50%;
@@ -1285,6 +1285,9 @@ section.feature-section { padding: 100px 0 61px; background-color: #fff; margin-
     -moz-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+	margin: 0 10px;
+align-items: center;
+justify-content: center
 } 
 .quantity .q_down {
 	line-height: 50px;
