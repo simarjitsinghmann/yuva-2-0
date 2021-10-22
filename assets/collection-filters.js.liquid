@@ -28,7 +28,7 @@
       const formData = new FormData(filterForm);
       var searchParameters = new URLSearchParams(formData).toString();
      const url = window.location.pathname+'?section_id='+sectionId+'&'+searchParameters;
-fetch(url)
+	fetch(url)
       .then(response => response.text())
       .then((responseText) => {
         const html = responseText;
