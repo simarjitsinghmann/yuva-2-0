@@ -26,6 +26,13 @@
       });
     });   
 }
+fetchFilterData(url){
+  fetch(url)
+  .then(response => response.text())
+  .then((responseText) => {
+    return responseText;
+  })
+}
    function getFilterData(filterForm,input,sectionId){    	
       const formData = new FormData(filterForm);
       var searchParameters = new URLSearchParams(formData).toString();
@@ -35,13 +42,7 @@
 	fetch(url)
       .then(response => response.text())
       .then((responseText) => {
-        const html = responseText;
-  		const resultData = new DOMParser().parseFromString(html, 'text/html');
-  		var itemResultCount = resultData.getElementsByClassName('filter-total-result');
-		document.getElementById('shopify-section-'+sectionId).innerHTML = resultData.getElementById('shopify-section-'+sectionId).innerHTML;
-      var _url = window.location.pathname+'?'+searchParameters;
-        history.pushState({}, null, _url);
-  		collectionFilters();
+       
       });
     }
   collectionFilters();
