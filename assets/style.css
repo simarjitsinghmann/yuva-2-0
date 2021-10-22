@@ -35,7 +35,6 @@
 	padding-bottom: 37px;
 	font-weight: var(--medium);
 	letter-spacing: 1.3px;
-	font-size: 20px;
 }
 .carousel-caption-title a.black-btn.button {text-transform: uppercase;font-weight: var(--medium);}
 /*.slider-list .owl-stage, .slider-list .owl-item { display: flex; width:100%;}*/
@@ -268,6 +267,11 @@ div#banner-slide > img { width: 100%;}
 	padding-top: 16px;
 	padding-bottom: 4px;
 	font-weight: var(--normal);
+}
+.product__view__option li button:disabled {
+opacity: 0.3;
+pointer-events: none !important;
+cursor: not-allowed;
 }
 .product-information__wrapper .price-item {
 	font-size: var(--font-normal);
