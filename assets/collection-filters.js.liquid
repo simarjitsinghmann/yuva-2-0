@@ -37,9 +37,9 @@
   		const resultData = new DOMParser().parseFromString(html, 'text/html');
   		var itemResultCount = resultData.getElementsByClassName('filter-total-result');
 		document.getElementById('shopify-section-'+sectionId).innerHTML = resultData.getElementById('shopify-section-'+sectionId).innerHTML;
-  		collectionFilters();
       var _url = window.location.pathname+'?'+searchParameters;
         history.pushState({}, null, _url);
+  		collectionFilters();
       });
     }
   collectionFilters();
