@@ -2,7 +2,7 @@
   function collectionFilters(){
   	var filterForm=document.getElementById('CollectionFiltersForm');
     var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
-    var searchParameters = new URLSearchParams(formData).toString();
+    var searchParameters = new URLSearchParams(filterForm).toString();
     console.log(filterForm,sectionId,searchParameters)
   }
   collectionFilters();
