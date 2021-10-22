@@ -210,7 +210,7 @@ buildCart = function (cart,showCart) {
             itemQty: cartItem.quantity,
             // price: Shopify.formatMoney(cartItem.price, settings.moneyFormat),
             vendor: cartItem.vendor,
-            // linePrice: Shopify.formatMoney(cartItem.line_price, settings.moneyFormat),
+            linePrice: Shopify.formatMoney(cartItem.line_price, moneyFormat),
             // originalLinePrice: Shopify.formatMoney(cartItem.original_line_price, settings.moneyFormat),
             discounts: cartItem.discounts,
             discountsApplied: cartItem.line_price === cartItem.original_line_price ? false : true
