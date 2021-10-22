@@ -677,7 +677,8 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 }
 .leave-order-note textarea {
 	border: 1px solid #eaeaea;
-	min-height: 80px;
+	height: 80px;
+	padding: 10px;
 }
 .cart-item-container .media-link .media-body .cart-item-link a { text-decoration: none; font-size: var(--small-font); font-weight: var(--normal); color: var(--color-primary);line-height: 37px;letter-spacing: 0.9px; } 
 .cart-item-container .media-link .media-body .variant_title { font-size: var(--extra-small); font-weight: var(--medium); color: var(--color-gray); } 
@@ -802,7 +803,13 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 	letter-spacing: -0.4px;
 	margin: 10px 0 8px;
 }
-.mini_cart .bottom-cart-box .cart-btn-container { text-align: center; margin: 25px 0 0; padding: 0 0px; display: flex; align-items: center; justify-content: space-between; } 
+.mini_cart .bottom-cart-box .cart-btn-container {
+	text-align: center;
+	margin: 19px 0 0;
+	padding: 0 0;
+	display: flex;
+	flex-direction: column;
+}
 .cart-btn-container .button {
 	min-width: initial;
 	width: 100%;
