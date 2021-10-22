@@ -180,6 +180,7 @@ updateQuantity = function(line, qty,callback) {
 }
 
 buildCart = function (cart,showCart) {
+  var shipping = $('#mini__cart').data('shipping');
     if (cart.item_count === 0) {
         $('[data-cart-count]').hide();
         $('#mini__cart').html(`<div class="emptySideCart">
@@ -232,6 +233,8 @@ buildCart = function (cart,showCart) {
         items: items,
         count:cart.item_count,
         note: cart.note,
+      shipping:shipping,
+      total:cart.total_price, 
         totalPrice: Shopify.formatMoney(cart.total_price, moneyFormat),
         // totalCartDiscount: cart.total_discount === 0 ? 0 : `"translation missing: en.cart.general.savings_html"`.replace('[savings]',),
         totalCartDiscountApplied: cart.total_discount === 0 ? false : true
