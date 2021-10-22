@@ -166,11 +166,10 @@
                     <div class="price__regular">
                         <span class="price-item price-item--regular">
                             {{current_variant.price | money}}
-                          {% if product.compare_at_price_max > product.price %}
+                           {% if current_variant.compare_at_price > current_variant.price %}
                           <span data-compare-price>
-                            <s>{% if current_variant.compare_at_price > current_variant.price %}
-                              {{ current_variant.compare_at_price | money }}
-                            {% endif %}</s>
+                               <s>{{ current_variant.compare_at_price | money }}
+                            </s>
                           </span>
                           {% endif %}
                         </span>
