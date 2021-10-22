@@ -42,7 +42,11 @@ function fetchFilterData(url){
    function getFilterData(filterForm,input,sectionId,_url){    	
       const formData = new FormData(filterForm);
       var searchParameters = new URLSearchParams(formData).toString();
-     const url = window.location.pathname+'?section_id='+sectionId+'&'+searchParameters;
+     
+     var url = window.location.pathname+'?section_id='+sectionId+'&'+searchParameters;
+     if(_url){
+     url =_url;
+     }
 //         var _url = window.location.pathname+'?'+searchParameters;
 //      window.location.href=_url;
 		const html = fetchFilterData(url).
