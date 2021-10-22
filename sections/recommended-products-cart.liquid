@@ -3,19 +3,16 @@
         <div class="best__for__you shopify__top__section text__center">
             <small>All Products</small>
             <h4>See the latest!</h4>
-            {% if section.settings.collection != blank %}
-            {% assign collection = section.settings.collection %}
             <div class="grid grid--4-col-desktop grid--3-col-tablet">
                 <div class="grid__item full__item products-grid ">
-                    <div class="row column-{{section.settings.col_size}} d-flex justify-content-center">
-                        {% assign limit = section.settings.col_size | times : section.settings.row_size%}
+                    <div class="row column-5 d-flex justify-content-center">
+                        {% assign count = 0 %}
                         {% for product in collections.all.products %}
                         {% include 'product-grid'%}
                         {% endfor %}
                     </div>
                 </div>
             </div>
-            {% endif%}
         </div>
     </div>
 </div>
