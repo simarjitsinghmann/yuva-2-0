@@ -30,7 +30,8 @@
     Array.from(removeFilters).forEach(function(removeFilter) {
       removeFilter.addEventListener("click", (e)=>{	
                              e.preventDefault();
-                             getFilterData(filterForm,removeFilter,sectionId);
+        					var _url = removeFilter.getAttribute('href');
+                             getFilterData(filterForm,removeFilter,sectionId,_url);
       });
     }); 
 }
@@ -38,7 +39,7 @@ function fetchFilterData(url){
   return fetch(url)
   .then(response => response.text())
 }
-   function getFilterData(filterForm,input,sectionId){    	
+   function getFilterData(filterForm,input,sectionId,_url){    	
       const formData = new FormData(filterForm);
       var searchParameters = new URLSearchParams(formData).toString();
      const url = window.location.pathname+'?section_id='+sectionId+'&'+searchParameters;
