@@ -369,11 +369,7 @@ letter-spacing: 1.2px;
     border: 2px solid var(--bg-theme);
 color: var(--color-secondary);
 }
-.shopify-payment-button__button:hover {
-opacity:0.8;
-background-color: #000!important;
-	
-}
+
 .feature-product .product-loop-variants.circle .color_option {
     padding-top: 0px;
     margin-top:0;
@@ -833,6 +829,7 @@ line-height: 34px;}
 }
 .product_button .shopify-payment-button__button:hover {
 	background-position: left bottom!important;
+	color:var(--color-secondary);
 }
 .buy_now.button{min-width: 208px; background-color: #333333; padding: 19px 12px; background-image: -moz-linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #333333 50%, #333333 100%); background-image: -webkit-linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #333333 50%, #333333 100%); background-image: linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #333333 50%, #333333 100%); } 
 .dropdown.quality-select, .dropdown.productOptionSelect  { position: relative; display: inline-block; } 
