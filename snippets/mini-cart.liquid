@@ -8,8 +8,10 @@
 			<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 40 40"><path d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z" class="layer"></path></svg>
 		</a>
 		<h5>
-			{{count}} item in your cart
+			<!--{{count}} item in your cart-->
+			Cart
 		</h5>
+        
 	</div>
 	<div class="cart-item-container">		
 		{{#items}}
@@ -19,9 +21,11 @@
 				<h5 class="cart-item-link">
 					<a href="{{url}}">{{name}}</a>
 				</h5>
-				{{#if variation}}
+				<!--{{#if variation}}
 				<span class="variant_title">{{variation}}</span>
-				{{/if}}
+				{{/if}}-->
+				<h6 class="product__price">$ 450.00</h6>
+				<h6>{{{linePrice}}}</h6>
 				<div class="right-media-cart">
 					<div class="quantity">
 						<input type="number" class="ajaxcart__qty-num" name="updates[]" min="1" max="9" step="1" value="{{itemQty}}" data-id="{{key}}" data-line="{{line}}">
@@ -33,22 +37,30 @@
 					<h6>{{{linePrice}}}</h6>
 				</div>
 			</div>
-			<svg class="sd_mini_removeproduct" line="1" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
+			<div class="sd_mini_removeproduct">Remove</div>
+			<!--<svg class="sd_mini_removeproduct" line="1" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
 				<path id="Forma_1" data-name="Forma 1" d="M1873.46,42.5l4.32-4.328a0.687,0.687,0,1,0-.97-0.973l-4.32,4.328-4.32-4.328a0.687,0.687,0,1,0-.97.973l4.32,4.328-4.32,4.329a0.688,0.688,0,0,0,.49,1.175,0.674,0.674,0,0,0,.48-0.2l4.32-4.329,4.32,4.329a0.7,0.7,0,0,0,.49.2,0.674,0.674,0,0,0,.48-0.2,0.686,0.686,0,0,0,0-.973Z" transform="translate(-1867 -37)"></path>
-			</svg>
+			</svg>-->
 		</div>
 		{{/items}}	
 	</div>
 	<div class="bottom-cart-box">
+		<div class="leave-order-note">
+			<span>Leave a Note with Order</span>
+			<form role = "form">
+				<textarea class="form-control" rows = "3"></textarea>
+			</form>
+		</div>
 		<ul>
 			<li class="totle-title">Subtotal</li>
 			<li class="totle-price">{{{totalPrice}}}</li>
 		</ul>
+		<p class="bottom-p">Shipping & taxes calculated at checkout</p>
 		<div class="cart-btn-container">
 			<a href="/cart" class="view-cart-btn button black-btn">View Cart</a>
 			<a href="/checkout" class="checkout-btn button black-btn">Checkout</a>
 		</div>
-			<p class="bottom-p">Shipping & taxes calculated at checkout</p>
+			<p class="shopping_cont">Continue Shopping</p>
 		</div>
 	</div>
 {% endraw %}
