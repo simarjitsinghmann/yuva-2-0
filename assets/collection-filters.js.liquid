@@ -2,18 +2,16 @@
   
   var filterForm=document.getElementById('CollectionFiltersForm');
   var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
-  function collectionFilters(){
-    const formData = new FormData(filterForm);
-    var searchParameters = new URLSearchParams(formData).toString();
-    
+  function collectionFilters(){    
     var inputs = filterForm.querySelectorAll('input[type:checkbox]');
      Array.from(inputs).forEach(function(input) {
      	input.addEventListener("click", ()=>{	
                                        
                                        });
      });    
-    function getFilterData(){
-    	
+    function getFilterData(){    	
+      const formData = new FormData(filterForm);
+      var searchParameters = new URLSearchParams(formData).toString();
     }
   }
   collectionFilters();
