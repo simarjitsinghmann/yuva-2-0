@@ -24,7 +24,7 @@
                    {% if value.count == 0 and value.active == false %}disabled{% endif %}
                    >
             <span class="checkmark"></span>
-            <label>
+            <label for="Filter-{{ filter.label | escape }}-{{ forloop.index }}">
               {{ value.label | escape }} ({{ value.count }})
             </label>
           </li>
