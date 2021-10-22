@@ -27,8 +27,15 @@
    function getFilterData(input){    	
       const formData = new FormData(filterForm);
       var searchParameters = new URLSearchParams(formData).toString();
-      var _url = window.location.pathname+'?'+searchParameters;
-//       window.location.href = _url
+     const url = `${window.location.pathname}?section_id=${sectionId}&${searchParameters}`;
+fetch(url)
+      .then(response => response.text())
+      .then((responseText) => {
+        const html = responseText;
+  	console.log(html)
+      });
+     var _url = window.location.pathname+'?'+searchParameters;
+
      history.pushState({}, null, _url);
       console.log(filterForm,sectionId,searchParameters,window.location.pathname)
     }
