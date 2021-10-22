@@ -14,7 +14,7 @@
 	</div>
      <form action=" {% endraw %}{{ routes.cart_url }} {% raw %}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
 	<div class="cart-item-container">	
-    	{{#ifCond shippPending '===' 0 }}
+    	{{#ifCond shippPending '===' '0' }}
         freee
         {{#else}}
         pending
