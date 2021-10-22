@@ -8,7 +8,8 @@
      	input.addEventListener("click", ()=>{	
                                        getFilterData(input)
                                        });
-     });    
+     });   
+  } 
     function getFilterData(input){    	
       const formData = new FormData(filterForm);
       var searchParameters = new URLSearchParams(formData).toString();
@@ -16,6 +17,5 @@
       window.location.href = _url
     console.log(filterForm,sectionId,searchParameters,window.location.pathname)
     }
-  }
   collectionFilters();
 }());
