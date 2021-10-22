@@ -25,6 +25,14 @@
                              getFilterData(filterForm,sort,sectionId);
       });
     });   
+
+  var sortBy = section.querySelectorAll('a.select-item');
+    Array.from(sortBy).forEach(function(sort) {
+      sort.addEventListener("change", (e)=>{	
+                             e.preventDefault();
+                             getFilterData(filterForm,sort,sectionId);
+      });
+    }); 
 }
 function fetchFilterData(url){
   return fetch(url)
