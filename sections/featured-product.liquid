@@ -124,6 +124,10 @@
                   {% else %}
                   {{ 'products.product.sold_out' | t }}
                   {% endif %}
+                  <svg height="38" width="38" class="svg-loader" style="display:none;">
+                                          <circle r="7" cx="9" cy="9"></circle>
+                                          <circle stroke-dasharray="103.964594 87.96459430051421" r="13" cx="14" cy="20"></circle>
+                                        </svg>
                 </button>
 
                 {% if product.available %}
