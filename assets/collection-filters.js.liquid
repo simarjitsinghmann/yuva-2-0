@@ -28,7 +28,8 @@
       const formData = new FormData(filterForm);
       var searchParameters = new URLSearchParams(formData).toString();
       var _url = window.location.pathname+'?'+searchParameters;
-      window.location.href = _url
+//       window.location.href = _url
+     history.pushState({}, null, _url);
       console.log(filterForm,sectionId,searchParameters,window.location.pathname)
     }
   collectionFilters();
