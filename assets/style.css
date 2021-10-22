@@ -1428,15 +1428,14 @@ justify-content: center
 	align-content: center;
 	justify-content: center;
 	height: 100%;
+	
 }
 #mini__cart .emptySideCart a {
-	background: var(--bg-primary);
-	padding: 10px;
-	color: var(--color-secondary);
 	font-size: 15px;
-	padding: 12px 20px 12px;
+	padding: 14px 20px;
 	margin-top: 10px;
 	display: inline-block;
+	text-transform: uppercase;
 }
 #mini__cart .emptySideCart a:hover {
   background:var(--bg-theme)
