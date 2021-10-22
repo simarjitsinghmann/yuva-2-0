@@ -9,7 +9,7 @@
                              getFilterData(input)
       });
     });  
-  var prices = filterForm.querySelectorAll('input');
+  var prices = filterForm.querySelectorAll('input[type=number]');
     Array.from(prices).forEach(function(input) {
       input.addEventListener("change", ()=>{	
                              getFilterData(input)
@@ -17,6 +17,13 @@
     });   
 	}
     
+  var sortBy = filterForm.querySelectorAll('select');
+    Array.from(sortBy).forEach(function(input) {
+      input.addEventListener("change", ()=>{	
+                             getFilterData(input)
+      });
+    });   
+	}
    function getFilterData(input){    	
       const formData = new FormData(filterForm);
       var searchParameters = new URLSearchParams(formData).toString();
