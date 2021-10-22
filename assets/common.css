@@ -609,65 +609,65 @@ label {
 @media (min-width:1200px){
    
 .d-none{
-    display:none!important
+    display:none
 }
 .d-inline{
-    display:inline!important
+    display:inline
 }
 .d-inline-block{
-    display:inline-block!important
+    display:inline-block
 }
 .d-block{
-    display:block!important
+    display:block
 }
 .d-table{
-    display:table!important
+    display:table
 }
 .d-table-row{
-    display:table-row!important
+    display:table-row
 }
 .d-table-cell{
-    display:table-cell!important
+    display:table-cell
 }
 .d-flex{
-    display:-ms-flexbox!important;
-    display:flex!important
+    display:-ms-flexbox;
+    display:flex
 }
 .d-inline-flex{
-    display:-ms-inline-flexbox!important;
-    display:inline-flex!important
+    display:-ms-inline-flexbox;
+    display:inline-flex
 }
 .justify-content-start{
-    -ms-flex-pack:start!important;
-    justify-content:flex-start!important
+    -ms-flex-pack:start;
+    justify-content:flex-start
 }
 .justify-content-end{
-    -ms-flex-pack:end!important;
-    justify-content:flex-end!important
+    -ms-flex-pack:end;
+    justify-content:flex-end
 }
 .justify-content-center{
-    -ms-flex-pack:center!important;
-    justify-content:center!important
+    -ms-flex-pack:center;
+    justify-content:center
 }
 .justify-content-between{
-    -ms-flex-pack:justify!important;
-    justify-content:space-between!important
+    -ms-flex-pack:justify;
+    justify-content:space-between
 }
 .justify-content-around{
-    -ms-flex-pack:distribute!important;
-    justify-content:space-around!important
+    -ms-flex-pack:distribute;
+    justify-content:space-around
 }
 .align-items-start{
-    -ms-flex-align:start!important;
-    align-items:flex-start!important
+    -ms-flex-align:start;
+    align-items:flex-start
 }
 .align-items-end{
-    -ms-flex-align:end!important;
-    align-items:flex-end!important
+    -ms-flex-align:end;
+    align-items:flex-end
 }
 .align-items-center{
-    -ms-flex-align:center!important;
-    align-items:center!important
+    -ms-flex-align:center;
+    align-items:center
 }
 }
 /***End***/
@@ -839,8 +839,8 @@ padding-right: 15px;
   background-color: #ccc;
 }
 .ml-auto, .mx-auto {
-    margin-left: auto!important;
+    margin-left: auto;
 }
 .mr-auto, .mx-auto {
-    margin-right: auto!important;
+    margin-right: auto;
 }
