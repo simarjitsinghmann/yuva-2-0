@@ -125,6 +125,19 @@
   
   {% include 'product-quick-view' %}
   {% include 'mini-cart' %}
+    <style>
+      form button[type="submit"] {
+    position: relative;
+    padding: 0;
+}
+form button[type="submit"].is-loading svg, form button[type="submit"].is-loading span {
+    display: none;
+}
+form button[type="submit"].is-loading svg.svg-loader {
+    display: block !important;
+    margin-top: 0;
+}
+    </style>
   </body>
 
 </html>
