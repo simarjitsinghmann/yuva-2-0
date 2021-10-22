@@ -32,8 +32,8 @@ fetch(url)
       .then(response => response.text())
       .then((responseText) => {
         const html = responseText;
-  html = new DOMParser().parseFromString(html, 'text/html');
-  		var itemResultCount = html.getElementsByClassName('.filter-total-result');
+  const innerHTML = = new DOMParser().parseFromString(html, 'text/html');
+  		var itemResultCount = innerHTML.getElementsByClassName('.filter-total-result');
   console.log(itemResultCount)
       });
      var _url = window.location.pathname+'?'+searchParameters;
