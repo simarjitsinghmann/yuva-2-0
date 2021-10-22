@@ -7,24 +7,24 @@
     var inputs = filterForm.querySelectorAll('input[type=checkbox]');
     Array.from(inputs).forEach(function(input) {
       input.addEventListener("click", ()=>{	
-                             getFilterData(input)
+                             getFilterData(filterForm,input)
       });
     });  
   var prices = filterForm.querySelectorAll('input[type=number]');
     Array.from(prices).forEach(function(input) {
       input.addEventListener("change", ()=>{	
-                             getFilterData(input)
+                             getFilterData(filterForm,input)
       });
     });   
     
   var sortBy = section.querySelectorAll('select[name="sort_by"]');
     Array.from(sortBy).forEach(function(input) {
       input.addEventListener("change", ()=>{	
-                             getFilterData(input);
+                             getFilterData(filterForm,input);
       });
     });   
 }
-   function getFilterData(input){    	
+   function getFilterData(filterForm,input){    	
       const formData = new FormData(filterForm);
       var searchParameters = new URLSearchParams(formData).toString();
      const url = window.location.pathname+'?section_id='+sectionId+'&'+searchParameters;
