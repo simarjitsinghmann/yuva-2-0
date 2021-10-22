@@ -22,6 +22,7 @@
                     </td>
                     <td class="cart-prd-details">
                        <h5>{{item.product.title}}</h5>
+                      	<div class="cart-item-product-details">
                        {% if item.sku != blank %}
                        <span>SKU: {{item.sku}}</span>
                        {% endif %}
@@ -30,6 +31,7 @@
                        <span>{{option.name}}: {{option.value}}</span>
                        {% endfor %}
                        {% endunless %}
+                      </div>
                     </td>
                     <td class="cart-qty">
                        <div class="qty">
