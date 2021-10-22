@@ -277,6 +277,12 @@ div#banner-slide > img { width: 100%;}
 	letter-spacing: .2px;
 	margin-right: 11px;
 }
+.price__regular span[data-compare-price] {
+	font-weight: var(--normal);
+	color: rgba(7,7,7,.6);
+	margin-left: 10px;
+	font-size: var(--small-font);
+}
 /*.product-variants-wrapper .product-loop-variants .color_option span { font-size: 0px; width: 15px; height: 15px; color: inherit; display: inline-block; border-radius: 50%; float: left; cursor:pointer; }*/ 
 .product-loop-variants.circle, .product-loop-variants.square { display: flex; } 
 .select__color .product-loop-variants.square .color_option, .product-loop-variants.circle .color_option  {
