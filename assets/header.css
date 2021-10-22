@@ -840,6 +840,10 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 	margin-top: 8px;
 	margin-bottom: 20px;
 }
+.shopping_cont:hover {
+	color: var(--color-theme-text);
+	border-color:var(--color-theme-text);
+}
 .mini_cart .cart-item-container { height: calc(100% - 520px); overflow-y: auto; overflow-x: hidden; padding: 0 40px 0; } 
 .similar-product-title h5 { font-weight: var(--medium); color: var(--color-primary); }
 /**END Minicart**/
