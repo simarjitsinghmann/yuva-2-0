@@ -26,7 +26,7 @@
       });
     });   
 }
-fetchFilterData(url){
+function fetchFilterData(url){
   fetch(url)
   .then(response => response.text())
   .then((responseText) => {
