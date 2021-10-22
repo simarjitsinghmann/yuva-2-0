@@ -1,9 +1,9 @@
 (function () {
-  
-  var filterForm=document.getElementById('CollectionFiltersForm');  
+    
   var section = document.getElementById('CollectionProductsContainer')
   var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
-  function collectionFilters(){    
+  function collectionFilters(){   
+  var filterForm=document.getElementById('CollectionFiltersForm'); 
     var inputs = filterForm.querySelectorAll('input[type=checkbox]');
     Array.from(inputs).forEach(function(input) {
       input.addEventListener("click", ()=>{	
