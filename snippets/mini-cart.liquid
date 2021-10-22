@@ -14,11 +14,11 @@
 	</div>
      <form action=" {% endraw %}{{ routes.cart_url }} {% raw %}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
 	<div class="cart-item-container">	
-    	{{#if shippPending == '0' }}
+    	{{#ifCond shippPending '===' 0 }}
         freee
         {{#else}}
         pending
-        {{/if}}
+        {{/ifCond}}
 		 <p>Spend <strong>{{{shippPending}}}</strong> more and get free shipping!</p>
 		 <div class="progress">
 		  <div class="progress-bar" role="progressbar"
