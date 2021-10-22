@@ -33,7 +33,7 @@ fetch(url)
       .then((responseText) => {
         const html = responseText;
   const innerHTML = new DOMParser().parseFromString(html, 'text/html');
-  		var itemResultCount = innerHTML.getElementsByClassName('.filter-total-result');
+  		var itemResultCount = innerHTML.getElementsByClassName('filter-total-result');
   console.log(itemResultCount)
       });
      var _url = window.location.pathname+'?'+searchParameters;
