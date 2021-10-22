@@ -20,6 +20,7 @@
                 <img class="product-second-img" src="{{second_image}}" alt="">
             {% endif %} 
           
+          	{% unless hide_options %}
           {% unless has_only_default_variant or product.variants.size == 1 %}
           <div id="showProductWrap-{{product.id}}" class="product-wrap product_content_section">
             
@@ -138,6 +139,7 @@
                     </div> -->
                 
             </div>  
+          {% endunless %}
             {% unless hideRelated %}      
             <div class="similar_options" data-section="{{section.id}}" data-id="{{product.id}}">
                 <span class="vs-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.36 33"><defs></defs><g>
