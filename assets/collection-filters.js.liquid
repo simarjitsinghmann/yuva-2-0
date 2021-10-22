@@ -1,9 +1,10 @@
 (function () {
   function collectionFilters(){
   	var filterForm=document.getElementById('CollectionFiltersForm');
-    var sectionId = document.getElementById('CollectionProductsContainer');
+    var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
     console.log(filterForm,sectionId)
   }
+  
   setTimeout(function(){
   collectionFilters();
     },300)
