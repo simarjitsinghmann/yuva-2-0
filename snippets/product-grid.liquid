@@ -139,7 +139,6 @@
                     </div> -->
                 
             </div>  
-          {% endunless %}
             {% unless hideRelated %}      
             <div class="similar_options" data-section="{{section.id}}" data-id="{{product.id}}">
                 <span class="vs-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.36 33"><defs></defs><g>
@@ -149,6 +148,7 @@
                 <span class="text-nowrap similar">View Similar</span>
             </div>
             {% endunless %}
+          {% endunless %}
             {% if current_variant.compare_at_price > current_variant.price%}
                 <div class="product__on__sale">
                     Sale
