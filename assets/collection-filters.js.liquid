@@ -26,11 +26,11 @@
       });
     });   
 
-  var sortBy = section.querySelectorAll('a.select-item');
-    Array.from(sortBy).forEach(function(sort) {
-      sort.addEventListener("change", (e)=>{	
+  var removeFilters = section.querySelectorAll('a.select-item');
+    Array.from(removeFilters).forEach(function(removeFilter) {
+      removeFilter.addEventListener("click", (e)=>{	
                              e.preventDefault();
-                             getFilterData(filterForm,sort,sectionId);
+                             getFilterData(filterForm,removeFilter,sectionId);
       });
     }); 
 }
