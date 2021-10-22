@@ -37,7 +37,7 @@
   		const resultData = new DOMParser().parseFromString(html, 'text/html');
   		var itemResultCount = resultData.getElementsByClassName('filter-total-result');
       console.log(document.getElementById('shopify-section-'+sectionId),resultData.getElementById('shopify-section-'+sectionId))
-		document.getElementById('shopify-section-'+sectionId).innerHTML = resultData.innerHTML;
+// 		document.getElementById('shopify-section-'+sectionId).innerHTML = resultData.innerHTML;
       var _url = window.location.pathname+'?'+searchParameters;
         history.pushState({}, null, _url);
   		collectionFilters();
