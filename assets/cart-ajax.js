@@ -227,10 +227,10 @@ buildCart = function (cart,showCart) {
 
         items.push(item);
     });
-  var shippPending = 0;
-  if(cart.total_price < shipping){
-  	shippPending = Shopify.formatMoney((cart.total_price-shipping), moneyFormat);
-  }
+    var shippPending = 0;
+    if(cart.total_price < shipping){
+      shippPending = Shopify.formatMoney((cart.total_price-shipping), moneyFormat);
+    }
     // Gather all cart data and add to DOM
     data = {
         items: items,
