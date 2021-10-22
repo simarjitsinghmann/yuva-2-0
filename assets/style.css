@@ -1184,7 +1184,7 @@ section.store__support { background: var(--bg-gray); padding: 50px 0; }
 }
 .feature__product .owl-thumbs button.owl-thumb-item { width: 88px; height: auto; border: 1px solid #eff0f3; margin: 0 5px; }
 .feature__product .owl-thumbs button.owl-thumb-item.active {border: 1px solid var(--color-theme-text);}
-.feature__product .owl-thumbs button.owl-thumb-item img { width: 100%; background: #fff; } 
+.feature__product .owl-thumbs button.owl-thumb-item img { width: 100%; background: #fff;height:100%; object-fit:cover; } 
 .feature__product.owl-carousel .owl-item img { display: block; width: 100%; max-width: 382px; margin: 0 auto; } 
 .feature__product .owl-thumbs { margin: 0 auto 30px; display: flex; /* align-items: center; */ justify-content: center; } 
 .product-add-to-cart-right .ratingbox { display: flex; margin: 0 0 20px; } 
