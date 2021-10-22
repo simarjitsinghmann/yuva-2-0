@@ -126,7 +126,7 @@
   {% include 'product-quick-view' %}
   {% include 'mini-cart' %}
     <style>
-      form button[type="submit"] {
+      form button[type="submit"]:not([name="checkout"]) {
     position: relative;
     padding: 0;
 }
