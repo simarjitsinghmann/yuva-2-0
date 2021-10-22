@@ -4,7 +4,8 @@
     var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
     const formData = new FormData(filterForm);
     var searchParameters = new URLSearchParams(formData).toString();
-    console.log(filterForm,sectionId,searchParameters)
+    
+    console.log(filterForm,sectionId,searchParameters,window.location.pathname)
   }
   collectionFilters();
 }());
