@@ -15,12 +15,11 @@
                              getFilterData(input)
       });
     });   
-	}
     
   var sortBy = filterForm.querySelectorAll('select');
     Array.from(sortBy).forEach(function(input) {
       input.addEventListener("change", ()=>{	
-                             getFilterData(input)
+                             getFilterData(input);
       });
     });   
 }
