@@ -9,13 +9,14 @@
                              getFilterData(input)
       });
     });  
-  var prices = filterForm.querySelectorAll('input[type=number]');
+  var prices = filterForm.querySelectorAll('input');
     Array.from(prices).forEach(function(input) {
       input.addEventListener("change", ()=>{	
                              getFilterData(input)
       });
     });   
 	}
+    
    function getFilterData(input){    	
       const formData = new FormData(filterForm);
       var searchParameters = new URLSearchParams(formData).toString();
