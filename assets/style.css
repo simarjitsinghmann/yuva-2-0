@@ -332,7 +332,7 @@ font-weight: var(--semibold);
 letter-spacing: 1.2px;	
 }
 
-.feature-product .product-add-to-cart-right .form-group #Sd_addProduct:hover {
+.feature-product .product-add-to-cart-right .form-group #Sd_addProduct:hover, .cart-btn-container .button.checkout-btn:hover {
     border: 2px solid var(--bg-theme);
 color: var(--color-secondary);
 }
