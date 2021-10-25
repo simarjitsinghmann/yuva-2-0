@@ -23,7 +23,7 @@
       </a>
     </li>
   {% endunless %}
-  <li class="pagination__textsss">
+  <li class="pagination__text">
     {{ 'general.pagination.current_page' | t: current: paginate.current_page, total: paginate.pages }}
   </li>
   {% unless paginate.next.is_link %}
