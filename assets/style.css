@@ -403,7 +403,7 @@ color: var(--color-secondary);
 	border-radius: 50%;
 }
 .product-loop-variants.square .color_option span img, .product-loop-variants.circle .color_option span img {
-	width: 100%;
+	width: 100%;object-fit: cover;height: 100%;
 }
 .prd-variants .product-loop-variants.square .color_option input:checked + span.option, .product-loop-variants.square .color_option input:hover + span.option {
 	border: 2px solid var(--color-theme-text);
