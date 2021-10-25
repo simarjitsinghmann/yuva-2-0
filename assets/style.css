@@ -734,7 +734,7 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); li
 
 
 /**sidebar***/
-.sidebar.shop-sidebar { padding-top: 109px; } 
+.sidebar.shop-sidebar { padding-top: 99px; } 
 .aside-title { width: 100%; display: flex; align-items: center; flex-direction: row; } 
 .sidebar.shop-sidebar .aside-title svg { margin-right: 10px; } 
 .aside-title p { letter-spacing: 0.2px; font-weight: var(--medium); } 
@@ -1132,10 +1132,11 @@ clear:both;
     position: relative;
 }
 .single-detail-detail .left-product-images.has_slider { height: 100%; position: relative; align-items: center; } 
-.single-detail-detail .left-product-images.has_slider .ImageleftContainer { position: relative; display: flex; } 
+.single-detail-detail .left-product-images.has_slider .ImageleftContainer { position: relative; display: flex; justify-content:space-between;} 
 .single-detail-detail .left-product-images.has_slider .ImageleftContainer .slider-nav.slick-vertical { position: sticky; top: 110px; position: -webkit-sticky; position: -moz-sticky; position: -ms-sticky; position: -o-sticky; display: inline-block; vertical-align: top; margin-bottom: 80px; z-index: 3; margin-right: 15px; width: 80px; } 
 .slick-slide.slick-current img.product-single__thumbnail-image { border: 2px solid var(--bg-theme); } 
-.single-detail-detail .left-product-images.has_slider .main-container { width: calc(100% - 80px); }
+.left-product-images.has_slider .ImageleftContainer .nav-container {width: 80px;}
+.single-detail-detail .left-product-images.has_slider .main-container { width: calc(100% - 120px); }
 .single-detail-detail .left-product-images.has_slider .product-image-left { background: 0 0; width: calc(100% - 96px); float: right; margin-bottom: 20px; }
 .single-detail-detail .left-product-images.has_slider .main-container a.btn-gallery { position: absolute; bottom: 20px; left: 20px; z-index: 2; padding: 0; width: 40px; height: 40px; border-radius: 100%; line-height: 40px; display: inline-block; text-align: center; background: var(--bg-white); box-shadow: 0 2px 5px #c1c1c1; text-decoration: none; display: flex; justify-content: center; align-items: center; } 
 .single-detail-detail .left-product-images.has_slider .main-container a.btn-gallery i{ color:#15161d; } 
