@@ -35,10 +35,10 @@
       });
     }); 
 }
-function fetchFilterData(url){
-  return fetch(url)
-  .then(response => response.text())
-}
+  function fetchFilterData(url){
+    return fetch(url)
+    .then(response => response.text())
+  }
    function getFilterData(filterForm,input,sectionId,remove){    	
       const formData = new FormData(filterForm);
       var searchParameters = new URLSearchParams(formData).toString();
