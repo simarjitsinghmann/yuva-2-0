@@ -11,6 +11,15 @@
                              getFilterData(filterForm,input,sectionId)
     });
   });  
+  var accordions = filterForm.querySelectorAll('.sidebar-title');
+    Array.from(accordions).forEach(function(accordion) {
+      accordion.addEventListener("click", ()=>{	
+                                 var filterContent = accordion.nextSibling;
+                             console.log(filterContent)
+    });
+  });  
+  
+  
   var layouts = section.querySelectorAll('a.btn-layout');
     Array.from(layouts).forEach(function(layout) {
       layout.addEventListener("click", ()=>{	
