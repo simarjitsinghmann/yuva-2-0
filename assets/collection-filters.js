@@ -11,6 +11,12 @@
                              getFilterData(filterForm,input,sectionId)
     });
   });  
+  var layouts = section.querySelectorAll('input[type=checkbox]');
+    Array.from(inputs).forEach(function(input) {
+      input.addEventListener("click", ()=>{	
+                             getFilterData(filterForm,input,sectionId)
+    });
+  }); 
   var prices = filterForm.querySelectorAll('input[type=number]');
   Array.from(prices).forEach(function(price) {
     price.addEventListener("change", ()=>{	
