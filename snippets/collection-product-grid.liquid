@@ -219,9 +219,12 @@
                 	{{product.description | strip_html| truncatewords:100}}
                 </div>
                 <div class="product-grid-buttons">
+                  <button class="quickView btn" data-href="{{product.url}}">
+                    Quick View
+                  </button>
                   {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
                   <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
-                  <button type="submit" {% unless product.available %} disabled="disabled"{% endunless %}>
+                  <button type="submit btn" {% unless product.available %} disabled="disabled"{% endunless %}>
                     {% if product.available %}
                     {{ 'products.product.add_to_cart' | t }}
                     {% else %}
