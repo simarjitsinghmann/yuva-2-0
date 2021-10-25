@@ -39,25 +39,25 @@ function fetchFilterData(url){
   return fetch(url)
   .then(response => response.text())
 }
-   function getFilterData(filterForm,input,sectionId,_url){    	
+   function getFilterData(filterForm,input,sectionId,remove){    	
       const formData = new FormData(filterForm);
       var searchParameters = new URLSearchParams(formData).toString();
      
      var url = window.location.pathname+'?section_id='+sectionId+'&'+searchParameters;
-     if(_url){
-       url =_url;
+     if(remove){
+       url =remove;
      }
-//         var _url = window.location.pathname+'?'+searchParameters;
-//      window.location.href=_url;
-		const html = fetchFilterData(url).
-        then((responseText) => {
-         const resultData = new DOMParser().parseFromString(responseText, 'text/html');
-  		var itemResultCount = resultData.getElementsByClassName('filter-total-result');
-		document.getElementById('shopify-section-'+sectionId).innerHTML = resultData.getElementById('shopify-section-'+sectionId).innerHTML;
-      var _url = window.location.pathname+'?'+searchParameters;
-        history.pushState({}, null, _url);
-  		collectionFilters();
-        });
+     //         var _url = window.location.pathname+'?'+searchParameters;
+     //      window.location.href=_url;
+     const html = fetchFilterData(url).
+     then((responseText) => {
+       const resultData = new DOMParser().parseFromString(responseText, 'text/html');
+       var itemResultCount = resultData.getElementsByClassName('filter-total-result');
+       document.getElementById('shopify-section-'+sectionId).innerHTML = resultData.getElementById('shopify-section-'+sectionId).innerHTML;
+       var _url = window.location.pathname+'?'+searchParameters;
+       history.pushState({}, null, _url);
+       collectionFilters();
+     });
     }
   collectionFilters();
 }());
