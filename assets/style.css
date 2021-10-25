@@ -729,7 +729,7 @@ li.breadcrumb-item { display: inline-block; padding: 0 13px; position: relative;
 li.breadcrumb-item a { text-decoration: none; color: #969696; } 
 li.breadcrumb-item a:hover{ color:var(--color-theme-text); } 
 li.breadcrumb-item span { color: var(--color-primary); } 
-li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); line-height: 32px; letter-spacing: 0.2px; }
+li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); line-height: 32px; letter-spacing: 0.6px; }
 /**breadcrumb end**/
 
 
@@ -815,20 +815,15 @@ line-height: 34px;}
 	background-size: 200% 100%;
 	background-position: right bottom;
 	transition: background-position .25s ease-out;
-	font-size: var(--small-font);
 	min-height: initial;
 	line-height: 16px;
-	text-transform: uppercase;
-	letter-spacing: .2px;
-	color: var(--color-primary);
-	text-decoration: none;
 	text-align: center;
 	border-radius: 0;
-	font-weight: 600;
+	font-weight: var(--semibold);
 	margin: 0;
 	letter-spacing: 1.2px;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: var(--font-normal);
 }
 .product_button .shopify-payment-button__button:hover {
 	background-position: left bottom!important;
@@ -1595,3 +1590,6 @@ justify-content: center
 	margin-bottom: 10px;
 }
 /**banner-section-end**/
+.product-description.tab-content.resp-tab-content {
+	padding: 30px 0 15px;
+}
