@@ -11,9 +11,9 @@
                              getFilterData(filterForm,input,sectionId)
     });
   });  
-  var layouts = section.querySelectorAll('input[type=checkbox]');
-    Array.from(inputs).forEach(function(input) {
-      input.addEventListener("click", ()=>{	
+  var layouts = section.querySelectorAll('a.btn-layout');
+    Array.from(layouts).forEach(function(layout) {
+      layout.addEventListener("click", ()=>{	
                              getFilterData(filterForm,input,sectionId)
     });
   }); 
