@@ -15,7 +15,8 @@
     Array.from(accordions).forEach(function(accordion) {
       accordion.addEventListener("click", ()=>{	
                                  var filterContent = accordion.nextElementSibling;
-                             console.log(filterContent)
+                                 
+                             console.log(filterContent.classList.contains('active'))
     });
   });  
   
