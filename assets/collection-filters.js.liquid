@@ -14,7 +14,7 @@
   var accordions = filterForm.querySelectorAll('.sidebar-title');
     Array.from(accordions).forEach(function(accordion) {
       accordion.addEventListener("click", ()=>{	
-                                 var filterContent = accordion.nextSibling.innerHTML;
+                                 var filterContent = accordion.nextElementSibling;
                              console.log(filterContent)
     });
   });  
