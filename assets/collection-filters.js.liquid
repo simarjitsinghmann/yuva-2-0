@@ -14,7 +14,7 @@
   var layouts = section.querySelectorAll('a.btn-layout');
     Array.from(layouts).forEach(function(layout) {
       layout.addEventListener("click", ()=>{	
-                             getFilterData(filterForm,input,sectionId)
+                           
     });
   }); 
   var prices = filterForm.querySelectorAll('input[type=number]');
