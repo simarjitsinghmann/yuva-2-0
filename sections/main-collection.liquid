@@ -2,7 +2,7 @@
 <div class="CollectionProductGrid" id="CollectionProductsContainer" data-id="{{section.id}}" data-view="grid-layout">
    <div class="container">
       <div class="row">
-        <aside class="col-sm-3 col-md-3 col-lg-3 sidebar sidebar-fixed shop-sidebar sticky-sidebar-wrapper" style="overflow-y: auto;">
+        <aside class="col-sm-3 col-md-3 col-lg-3 sidebar sidebar-fixed shop-sidebar sticky-sidebar-wrapper">
           {% include 'collection-sidebar' %}
         </aside>
          <div class="col-lg-9 col-sm-9 col-md-9 main-content">
@@ -33,7 +33,7 @@
                              {% endif %}
                              {%- endfor -%}
                              {% if active > 0 %}
-                             <a href="{{ collection.url }}?sort_by={{ sort_by }}" class="select-item filter-clean text-primary">Clean All</a>
+                             <a href="{{ collection.url }}?sort_by={{ sort_by }}" class="filter-clean text-primary">Clean All</a>
                              {% endif %}
                            </div>
                         </div>
@@ -90,7 +90,7 @@
 {% schema %}
 {
   "name": "t:sections.main-collection-product-grid.name",
-  "class": "collection-grid-section",
+  "class": "spaced-section collection-grid-section",
   "settings": [
     {
       "type": "range",
