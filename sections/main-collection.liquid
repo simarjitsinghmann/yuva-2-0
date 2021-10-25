@@ -1,4 +1,4 @@
-
+{% paginate collection.products by 30 %}
 <div class="CollectionProductGrid" id="CollectionProductsContainer" data-id="{{section.id}}" data-view="grid-layout">
    <div class="container">
       <div class="row">
@@ -78,8 +78,12 @@
             </div>
          </div>
       </div>
+     {% if paginate.pages > 1 %}
+     {% include 'pagination' %}
+     {% endif %}
    </div>
 </div>
+{% endpaginate %}
 
 <script src="{{'collection-filters.js' | asset_url}}" defer="defer" ></script> 
 {% schema %}
