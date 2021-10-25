@@ -55,6 +55,7 @@ Array.from(removeFilters).forEach(function(removeFilter) {
        document.getElementById('shopify-section-'+sectionId).innerHTML = resultData.getElementById('shopify-section-'+sectionId).innerHTML;
        var _url = window.location.pathname+'?'+searchParameters;
        history.pushState({}, null, _url);
+       input.scrollIntoView()
        collectionFilters();
      });
     }
