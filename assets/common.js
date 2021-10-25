@@ -66,7 +66,7 @@ $(document).on("click", function(event){
 $(document).on("click", function(event){
   var $trigger = $(".toolbox-sort");
   if($trigger !== event.target && !$trigger.has(event.target).length){
-    $(".sort__list").slideUp("fast");
+    $("#sort__list").slideUp("fast");
   }          				
 });
 
@@ -178,7 +178,7 @@ $(document).ready(function(){
 	});
   $('.toolbox-sort').click(function(){
 		$(this).find(".sort__list").slideToggle("fast");
-		$('.sort__list').css({"display": "block"});
+		$('#sort__list').css({"display": "block"});
 	});
 
 	// var results = $(".card-wrapper-img").find(".fdsf");
