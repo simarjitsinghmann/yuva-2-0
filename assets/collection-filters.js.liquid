@@ -59,7 +59,7 @@ Array.from(removeFilters).forEach(function(removeFilter) {
      then((responseText) => {
        const resultData = new DOMParser().parseFromString(responseText, 'text/html');
        var itemResultCount = resultData.getElementsByClassName('filter-total-result');
-       document.getElementById('shopify-section-'+sectionId).innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
+       document.getElementById('CollectionProductsContainer').innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
        var _url = window.location.pathname+'?'+searchParameters;
        history.pushState({}, null, _url);
 //        var focusedElement =document.getElementById(input.getAttribute('id'));
