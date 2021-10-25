@@ -177,7 +177,7 @@ $(document).ready(function(){
 		$('.currency-menu').css({"display": "block"});
 	});
   $('.toolbox-sort').click(function(){
-		$(this).find(".sort__list").slideToggle("fast");
+		$(this).find("#sort__list").slideToggle("fast");
 		$('#sort__list').css({"display": "block"});
 	});
 
