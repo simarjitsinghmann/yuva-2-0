@@ -55,15 +55,11 @@
                      <div class="toolbox-item toolbox-sort select-box">
                         <label>Sort by:</label>
                   {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-                       <label for="SortBy">{{sort_by}}</label>
-                        <ul class="form-control" id="">
+                        <select name="sort_by" class="form-control" id="SortBy" data-default-sortby="title-ascending" form="CollectionFiltersForm">
                           {%- for option in collection.sort_options -%}
-                          <li class="{% if option.value == sort_by %}selected{% endif %}" value="{{ option.value | escape }}">
-                            <input type="radio" name="sort_by" value="{{ option.value | escape }}" form="CollectionFiltersForm" hidden/>
-                            {{ option.name | escape }}
-                          </li>
+                          <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
                           {%- endfor -%}
-                        </ul>
+                        </select>
                      </div>
                   </div>
                </nav>
