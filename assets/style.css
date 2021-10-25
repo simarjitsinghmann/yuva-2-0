@@ -833,7 +833,7 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); li
 .filter-total-result { padding-bottom: 11px; } .toolbox-right { display: flex; flex-direction: row; align-items: center; justify-content: center; } 
 .toolbox-right .toolbox-item.toolbox-sort.select-box #SortBy { float: left; display: inline-block; width: auto; border: 0; background: transparent; font-size: var(--small-font); color: var(--color-primary); padding: 8px 0; min-width: 138px; } 
 .toolbox-right .toolbox-item.toolbox-sort.select-box label { float: left; display: inline-block; padding: 0; font-size: var(--small-font); color: #969696; } 
-.toolbox-right .toolbox-item.toolbox-sort.select-box { float: left; border: 1px solid #d2cfd5; border-radius: 3px; padding: 0 6px 0 11px; align-items: center; justify-content: center; display: flex; font-size: var(--small-font); min-height: 35px;} .filter-actions .select-items .select-item i { position: absolute; top: -7px; color: #626262; font-size: var(--small-font); right: -7px; } .select-items .filter-clean { font-size:var(--extra-small); color: rgba(40, 40, 40, 0.7); letter-spacing: 0.1px; text-transform: uppercase;position:relative; } 
+.toolbox-right .toolbox-item.toolbox-sort.select-box { float: left; border: 1px solid #d2cfd5; border-radius: 3px; padding: 0 6px 0 11px; align-items: center; justify-content: center; display: flex; font-size: var(--small-font); min-height: 35px;position:relative;} .filter-actions .select-items .select-item i { position: absolute; top: -7px; color: #626262; font-size: var(--small-font); right: -7px; } .select-items .filter-clean { font-size:var(--extra-small); color: rgba(40, 40, 40, 0.7); letter-spacing: 0.1px; text-transform: uppercase; } 
 .select-items .filter-clean:hover, .filter-actions .select-items .select-item i:hover { color: var(--color-theme-text); } 
 .filter-actions .select-items .select-item { text-decoration: none; border: 1px solid #dbdbdb; border-radius: 3px; color: rgba(40, 40, 40, 0.7); font-size: 10px; font-weight: var(--normal); padding: 6px 17px 6px 13px; letter-spacing: 0.1px; position: relative; margin-right: 15px; box-shadow:0px 1px 1px #dbdbdb;font-size: var(--small-font); } 
 .toolbox-right .toolbox-item.toolbox-layout { float: left; padding-right: 26px; } 
@@ -1694,7 +1694,7 @@ justify-content: center
 	background-color: #f57e39;
 	left: 0;
 	top: 8px;
-}   
+}
 .product-description.tab-content ul li {
 	position: relative;
 	padding-left: 18px;
