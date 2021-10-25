@@ -15,6 +15,7 @@
     Array.from(layouts).forEach(function(layout) {
       layout.addEventListener("click", ()=>{	
                               var _thisLayout = layout.dataset.value;
+                              section.setAttribute('data-view',_thisLayout)
     });
   }); 
   var prices = filterForm.querySelectorAll('input[type=number]');
