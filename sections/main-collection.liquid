@@ -58,6 +58,7 @@
                         <select name="sort_by" class="form-control" id="SortBy" data-default-sortby="title-ascending" form="CollectionFiltersForm">
                           {%- for option in collection.sort_options -%}
                           <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
+                          <li class="{% if option.value == sort_by %}selected{% endif %}" value="{{ option.value | escape }}">{{ option.name | escape }}</li>
                           {%- endfor -%}
                         </select>
                      </div>
