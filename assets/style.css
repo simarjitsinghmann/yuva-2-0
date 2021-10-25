@@ -778,10 +778,26 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); li
 	border: 1px solid #dadada;
 	margin: 0 3px;
 	font-size: 12px;
+	width: 80px;
+}
+.collectionFilters__form .field {
+	display: flex;
+	align-items: center;
+	margin-right: 10px;
+}
+.collectionFilters__form .widget__price .field:last-child {
+	margin-right: 0;
 }
 .collectionFilters__form .widget__price .field__label {
 	position: static;
 	padding: 0;
+}
+.collectionFilters__form .widget__price .field-currency {
+	font-size: 12px;
+}
+
+.collectionFilters__form .widget__price .field:last-child .field__label {
+	display: none;
 }
 /***Sidebar-end**/
 /***product-list***/
