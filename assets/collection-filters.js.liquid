@@ -54,9 +54,9 @@ Array.from(removeFilters).forEach(function(removeFilter) {
   });
 }); 
 }
-function removeClassFromAll(classes){
-	Array.from(layouts).forEach(function(layout) {
-      accordion.classList.remove('active');
+function removeClassFromAll(array){
+	Array.from(array).forEach(function(value) {
+      value.classList.remove('active');
   }); 
 }
   function fetchFilterData(url){
