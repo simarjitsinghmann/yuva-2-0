@@ -125,17 +125,20 @@
                                                       {% endif %}
                                                    {% endfor %}
                                                 {% endif %}
-                                          <span class="option {% if option.selected_value == value %}selected{% endif %} {% unless block.settings.variant_image and variantImage != blank %}variantColorOption{% endunless %}" {% if downOption == 'color' or  downOption == 'colour'%}{% unless block.settings.variant_image and variantImage != blank %} style="background-color:{{value}};"{% endunless %}{% endif %}>
+                                         
                                              {% if downOption == 'color' or  downOption == 'colour'%}    
-                                                {% if block.settings.variant_image %}    
+                                          <span class="option {% if option.selected_value == value %}selected{% endif %} {% unless block.settings.variant_image and variantImage != blank %}variantColorOption{% endunless %}" {% if downOption == 'color' or  downOption == 'colour'%}{% unless block.settings.variant_image and variantImage != blank %} style="background-color:{{value}};"{% endunless %}{% endif %}>
+                                         {% if block.settings.variant_image %}    
                                                       {% if variantImage != blank %}
                                                          <img src="{{variantImage | img_url:"100x"}}">
                                                       {% endif %}
                                                 {% endif %}
-                                             {% else %}
-                                             {{value}}
-                                             {% endif%}
                                           </span>
+                                             {% else %}
+                                          <span class="option {% if option.selected_value == value %}selected{% endif %}" >
+                                             {{value}}
+                                         </span>
+                                             {% endif%}
                                        </li>
                                     {% endfor %}
                                     </ul> 
