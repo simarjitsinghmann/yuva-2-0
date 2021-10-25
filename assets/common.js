@@ -86,13 +86,13 @@ $(document).ready(function(){
 	
 	
 	///account-sidebar//
-	$('.acc-sign-in').click(function(){
-		$('body').toggleClass('customer-open');
-		$('.wrapper-overlay').css({"display": "block"});
-	});
-	$('.close-customer').click(function(){
-		$("body").removeClass("customer-open"), $(".wrapper-overlay").hide();
-	});
+// 	$('.acc-sign-in').click(function(){
+// 		$('body').toggleClass('customer-open');
+// 		$('.wrapper-overlay').css({"display": "block"});
+// 	});
+// 	$('.close-customer').click(function(){
+// 		$("body").removeClass("customer-open"), $(".wrapper-overlay").hide();
+// 	});
 	
 	///minicart//
 	$('.cart-icon').click(function(){
