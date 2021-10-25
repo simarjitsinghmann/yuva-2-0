@@ -54,6 +54,11 @@ Array.from(removeFilters).forEach(function(removeFilter) {
   });
 }); 
 }
+function removeClassFromAll(classes){
+	Array.from(layouts).forEach(function(layout) {
+      accordion.classList.remove('active');
+  }); 
+}
   function fetchFilterData(url){
     return fetch(url)
     .then(response => response.text())
