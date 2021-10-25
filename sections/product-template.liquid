@@ -183,7 +183,7 @@
                            {% when 'button' %}
                            {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                               <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                              <div class="product_button {% if product.has_only_default_variant %}no-variants{% endif %}">
+                              <div class="product_button {% if product.has_only_default_variant %}no-variantss{% endif %}">
                                  <div class="pdp-action-container">
                                     <div class="pdp-add-to-bag pdp-button pdp-flex pdp-center">
                                       <button type="submit" class="Sd_addProduct add_to_cart orange-btn button"><span>Add to Cart</span>
@@ -360,7 +360,7 @@ li.resp-tab-item.easy_tabs {
     padding-right: 7%;
 }
 ul.resp-tabs-list.easy_tabs {
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     display: flex;
 }
@@ -384,9 +384,10 @@ li.resp-tab-item.easy_tabs.active a:before {
     height: 2px;
 }
 .product-description.tab-content.resp-tab-content {
-    padding: 30px 0 20px;
+    padding: 10px 0 5px;
     width: 100%;
-    max-width: 1000px;
+    margin: 0 auto;
+    max-width: 890px;
     text-align: left;
 }
 .product-description.tab-content.resp-tab-content :empty {
