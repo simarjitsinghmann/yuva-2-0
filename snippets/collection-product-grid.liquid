@@ -216,7 +216,7 @@
               {% endunless %}
               <div class="product-content">
                 <div class="product-description">
-                	{{product.description | strip_html| truncatewords:100}}
+                	{{product.description | strip_html| truncatewords:50}}
                 </div>
                 <div class="product-grid-buttons">
                   <button class="quickView btn" data-href="{{product.url}}">
