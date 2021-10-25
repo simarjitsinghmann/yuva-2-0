@@ -165,20 +165,6 @@ $(document).ready(function(){
 	});
 	
 	
-	//product-grid//
-	$('.grid-layout').click(function(){
-		$('.product-collection').addClass('grid-view');
-		$('.product-collection').removeClass('list-view');
-		$('.products-grid').css({"display": "block"});
-		$('.products-list').css({"display": "none"});
-	});
-	$('.list-layout').click(function(){
-		$('.product-collection').removeClass('grid-view');
-		$('.product-collection').addClass('list-view');
-		$('.products-list').css({"display": "block"});
-		$('.products-grid').css({"display": "none"});
-	});
-	
 	//currency-dropdown//
 	$('.currency-dropdown').click(function(){
 		$(this).find(".currency-menu").slideToggle("fast");
