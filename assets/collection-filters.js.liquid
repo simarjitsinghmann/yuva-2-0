@@ -1,39 +1,38 @@
 (function () {
     
   function collectionFilters(){  
-    
-  var section = document.getElementById('CollectionProductsContainer')
-  var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
-  const filterForm = document.getElementById('CollectionFiltersForm'); 
+
+    var section = document.getElementById('CollectionProductsContainer')
+    var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
+    const filterForm = document.getElementById('CollectionFiltersForm'); 
     var inputs = filterForm.querySelectorAll('input[type=checkbox]');
     Array.from(inputs).forEach(function(input) {
       input.addEventListener("click", ()=>{	
                              getFilterData(filterForm,input,sectionId)
-      });
-    });  
+    });
+  });  
   var prices = filterForm.querySelectorAll('input[type=number]');
-    Array.from(prices).forEach(function(price) {
-      price.addEventListener("change", ()=>{	
-                             getFilterData(filterForm,price,sectionId)
-      });
-    });   
-    
-  var sortBy = section.querySelectorAll('select[name="sort_by"]');
-    Array.from(sortBy).forEach(function(sort) {
-      sort.addEventListener("change", ()=>{	
-                             
-                             getFilterData(filterForm,sort,sectionId);
-      });
-    });   
+  Array.from(prices).forEach(function(price) {
+    price.addEventListener("change", ()=>{	
+                           getFilterData(filterForm,price,sectionId)
+  });
+});   
 
-  var removeFilters = section.querySelectorAll('a.select-item');
-    Array.from(removeFilters).forEach(function(removeFilter) {
-      removeFilter.addEventListener("click", (e)=>{	
-                             e.preventDefault();
-        					var _url = removeFilter.getAttribute('href');
-                             getFilterData(filterForm,removeFilter,sectionId,_url);
-      });
-    }); 
+var sortBy = section.querySelectorAll('select[name="sort_by"]');
+Array.from(sortBy).forEach(function(sort) {
+  sort.addEventListener("change", ()=>{	
+                        getFilterData(filterForm,sort,sectionId);
+});
+});   
+
+var removeFilters = section.querySelectorAll('a.select-item');
+Array.from(removeFilters).forEach(function(removeFilter) {
+  removeFilter.addEventListener("click", (e)=>{	
+    e.preventDefault();
+    var _url = removeFilter.getAttribute('href');
+    getFilterData(filterForm,removeFilter,sectionId,_url);
+  });
+}); 
 }
   function fetchFilterData(url){
     return fetch(url)
