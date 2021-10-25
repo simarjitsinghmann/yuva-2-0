@@ -790,6 +790,26 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); li
 	align-items: center;
 	margin-right: 10px;
 }
+.toolbox-item.toolbox-sort.select-box ul li input {
+	display: none;
+}
+.toolbox-item.toolbox-sort.select-box ul li {
+	font-size: var(--font-normal);
+	font-weight: var(--normal);
+	padding: 3px 7px;
+	cursor: pointer;
+}
+.toolbox-item.toolbox-sort.select-box ul {
+	display: none;
+	position: absolute;
+	background: #fff;
+	border: 1px solid #d2cfd5;
+	z-index: 9;
+	padding: 0;
+	left: 0;
+	top: 100%;
+	width: 100%;
+}
 .collectionFilters__form .widget__price .field:last-child {
 	margin-right: 0;
 }
