@@ -13,10 +13,13 @@
   });  
   var accordions = filterForm.querySelectorAll('.sidebar-title');
     Array.from(accordions).forEach(function(accordion) {
-      accordion.addEventListener("click", ()=>{	
-                                 var filterContent = accordion.nextElementSibling;
-                                 
-                             console.log(filterContent.classList.contains('active'))
+      accordion.addEventListener("click", ()=>{	                                
+                                 if(accordion.classList.contains('active')){
+      				accordion.classList.remove('active');
+      }else{
+      	removeClassFromAll(accordions);
+        accordion.classList.add('active');
+      }
     });
   });  
   
