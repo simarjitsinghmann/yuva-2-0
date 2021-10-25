@@ -754,6 +754,35 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); li
 .list-tags .option { width: 15px; height: 15px; font-size: 0; display: inline-block; border-radius: 50%; float: left; margin: 6px 13px 0 0; } 
 .CollectionProductGrid .sidebar-fixed { height: 100vh; position: sticky; top: 0px; } 
 .CollectionProductGrid { padding: 0 0 45px; }
+.collectionFilters__form .widget__price {
+	display: flex;
+	align-items: center;
+}
+.collectionFilters__form .widget__selected {
+	font-size: 13px;
+	margin-bottom: 5px;
+	display: block;
+}
+.collectionFilters__form .widget__price {
+	display: flex;
+	align-items: center;
+}
+.collectionFilters__form  .field {
+	display: flex;
+	align-items: center;
+}
+.collectionFilters__form .widget__price .field__input {
+	padding: 5px 10px;
+	height: 34px;
+	line-height: 1;
+	border: 1px solid #dadada;
+	margin: 0 3px;
+	font-size: 12px;
+}
+.collectionFilters__form .widget__price .field__label {
+	position: static;
+	padding: 0;
+}
 /***Sidebar-end**/
 /***product-list***/
 .main-content .products-grid .grid-item{padding:0 15px;}
