@@ -178,8 +178,8 @@
         </div>
         <div class="product-information">
             <div class="product-information__wrapper">
-                <a href="{{product.url}}"><div class="caption-with-letter-spacing light">{{product.title}}</div></a>
-                <div class="price">
+              <a href="{{product.url}}"><div class="caption-with-letter-spacing light">{{product.title}}</div></a>
+              <div class="price">
                     <div class="price__regular">
                         <span class="price-item price-item--regular">
                             {{current_variant.price | money}}
@@ -193,27 +193,48 @@
                     </div>
                 </div>
               {% unless has_only_default_variant or product.variants.size == 1 %}
-                {% for option in product.options_with_values%}
-                {% assign opName = option.name | downcase %}
-                {% assign opIndex = forloop.index%}
-                {% if opName == 'color' or opName == 'colour'%}
-                    <div class="product-variants-wrapper">
-                    <div class="prd-variants">
-                        <div class="prd--option1">
-                            <ul class="product-loop-variants variants circle _small list-unstyled">
-                                {% for value in option.values%}
-                                <li class="color_option">
-                                    <input type="radio" name="option-{{opIndex}}" value="{{value}}">
-                                    <span class="option" style="background-color:{{value}};">{{value}}</span>
-                                </li>
-                            {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
+              {% for option in product.options_with_values%}
+              {% assign opName = option.name | downcase %}
+              {% assign opIndex = forloop.index%}
+              {% if opName == 'color' or opName == 'colour'%}
+              <div class="product-variants-wrapper">
+                <div class="prd-variants">
+                  <div class="prd--option1">
+                    <ul class="product-loop-variants variants circle _small list-unstyled">
+                      {% for value in option.values%}
+                      <li class="color_option">
+                        <input type="radio" name="option-{{opIndex}}" value="{{value}}">
+                        <span class="option" style="background-color:{{value}};">{{value}}</span>
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
                 </div>
-            {% endif %}
-            {% endfor %}
+              </div>
+              {% endif %}
+              {% endfor %}
               {% endunless %}
+              <div class="product-content">
+                <div class="product-description">
+                	{{product.description | stri[}}
+                </div>
+                <div class="product-grid-buttons">
+                  {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
+                  <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
+                  <button type="submit" {% unless product.available %} disabled="disabled"{% endunless %}>
+                    {% if product.available %}
+                    {{ 'products.product.add_to_cart' | t }}
+                    {% else %}
+                    {{ 'products.product.sold_out' | t }}
+                    {% endif %}
+                    <svg height="18" width="18" class="svg-loader" style="display:none;">
+                      <circle r="7" cx="9" cy="9"></circle>
+                      <circle stroke-dasharray="87.96459430051421 87.96459430051421" r="7" cx="9" cy="9"></circle>
+                    </svg>
+                  </button>
+                  {% endform %}
+                </div>
+              </div>
             </div>
             
         </div>
