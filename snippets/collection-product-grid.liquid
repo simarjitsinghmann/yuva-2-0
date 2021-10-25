@@ -216,7 +216,7 @@
               {% endunless %}
               <div class="product-content">
                 <div class="product-description">
-                	{{product.description | strip_html| truncatewords:75}}
+                	{{product.description | strip_html| truncatewords:100}}
                 </div>
                 <div class="product-grid-buttons">
                   {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
