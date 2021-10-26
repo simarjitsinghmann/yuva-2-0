@@ -17,8 +17,10 @@
                                  if(accordion.classList.contains('hide')){
       				accordion.classList.remove('hide');
         accordion.classList.add('show');
-      }else
-        accordion.classList.remove('show');{
+        accordion.previousSibling.classList.add('show')
+      }else{
+        accordion.classList.remove('show');
+        accordion.previousSibling.classList.remove('show')
         accordion.classList.add('hide');
       }
     });
