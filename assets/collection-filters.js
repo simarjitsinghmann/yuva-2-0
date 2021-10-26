@@ -19,8 +19,8 @@
                                 console.log('aaa',accordion)
         accordion.classList.remove('show');
         accordion.previousSibling.classList.remove('show')
-        accordion.classList.add('hide'); 
         accordion.innerHTML='<i class="fa fa-plus"></i> Show more';
+        accordion.classList.add('hide'); 
                                  console.log(accordion.classList)
       }else{
       	console.log('11',accordion)		
