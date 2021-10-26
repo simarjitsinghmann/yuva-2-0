@@ -16,7 +16,7 @@
                     <h4 class="custom-title">{{article.published_at | date: "%d" }} {{article.published_at | date: " %b %Y" }} </h4>
                 </div>
                 <div class="post-name">
-                  <p><a href="{{article.url}}">{{article.title}}</a></p>
+                  <p><a href="{{article.url}}">{{article.title| truncatewords: 6}}</a></p>
                   <p>{{article.excerpt_or_content | strip_html | truncatewords: 6}}</p>
               </div>
             </div>
