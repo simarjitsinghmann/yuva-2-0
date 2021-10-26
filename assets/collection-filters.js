@@ -15,7 +15,7 @@
     Array.from(accordions).forEach(function(accordion) {
       accordion.addEventListener("click", ()=>{	   
                                 
-                                 if(accordion.classList.contains('hide')){
+                                 if(accordion.classList.contains('show')){
       				accordion.classList.remove('hide');
         accordion.classList.add('show');
         accordion.previousSibling.classList.add('show')
