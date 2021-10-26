@@ -13,10 +13,8 @@
   });  
   var accordions = filterForm.querySelectorAll('.br_more_filter');
     Array.from(accordions).forEach(function(accordion) {
-                                 console.log(accordion.classList)
       accordion.addEventListener("click", ()=>{	   
                                  if(accordion.classList.contains('show')){
-                                console.log('aaa',accordion)
         accordion.classList.remove('show');
         accordion.previousSibling.classList.remove('show')
         accordion.innerHTML='<i class="fa fa-plus"></i> Show more';
