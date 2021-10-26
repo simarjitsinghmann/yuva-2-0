@@ -622,12 +622,12 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 .search-bar-container .search-bar-box svg.HeaderProClose path {
 	fill: #6b6b6b;
 }
-.results-box .result-list a.searc-item-box:hover .img {
+/* .results-box .result-list a.searc-item-box:hover .img {
 	box-shadow: 2px 2px 9px 1px #e8e8e8;
-}
-.results-box .result-list a.searc-item-box:hover .d-title, .results-box .result-list a.searc-item-box:hover .d-price {
+} */
+/* .results-box .result-list a.searc-item-box:hover .d-title, .results-box .result-list a.searc-item-box:hover .d-price {
 	color:var(--color-theme-text);
-}
+} */
 .addsearch{ position:fixed;width:100%; } 
 .addsearch::after { content: ""; position: absolute; height: 100%; background: #00000052; bottom: 0; top: 0; left: 0; right: 0; width: 100%; z-index: 1; transition: 0.8s; }
 .search-bar-container .search-bar-box .AjaxSearchResponse { background: var(--bg-white); width: 100%; max-width: 100%; margin: 0 auto; align-items: flex-start; display: flex; flex-wrap: wrap; justify-content: start; padding: 0; border-radius: 0; overflow: hidden; } 
