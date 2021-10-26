@@ -550,8 +550,9 @@ object-fit: cover; }
     margin: 0;
     font-weight: var(--normal);
     letter-spacing: .4px;
+    display:inline-block;
 }
-.post-information__wrapper .post-date .custom-title span { font-size: 10px; color: #999999; font-weight: var(--medium); line-height: 14px; }
+.post-information__wrapper .post-date .custom-title span { font-size: 10px; color: #000; font-weight: var(--medium); line-height: 14px; }
 .post-information__wrapper .post-name p a{ color: var(--color-primary); line-height: 26px; text-decoration:none;font-weight: var(--semibold);font-size: var(--font-size); } 
 .style1 .post-information__wrapper .post-name p a {
 	color: var(--color-primary);
