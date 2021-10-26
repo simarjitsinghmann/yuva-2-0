@@ -11,17 +11,17 @@
                              getFilterData(filterForm,input,sectionId)
     });
   });  
-//   var accordions = filterForm.querySelectorAll('.sidebar-title');
-//     Array.from(accordions).forEach(function(accordion) {
-//       accordion.addEventListener("click", ()=>{	                                
-//                                  if(accordion.classList.contains('active')){
-//       				accordion.classList.remove('active');
-//       }else{
-//       	removeClassFromAll(accordions);
-//         accordion.classList.add('active');
-//       }
-//     });
-//   });  
+  var accordions = filterForm.querySelectorAll('.br_more_filter');
+    Array.from(accordions).forEach(function(accordion) {
+      accordion.addEventListener("click", ()=>{	                                
+                                 if(accordion.classList.contains('active')){
+      				accordion.classList.remove('active');
+      }else{
+      	removeClassFromAll(accordions);
+        accordion.classList.add('active');
+      }
+    });
+  });  
   
   
   var layouts = section.querySelectorAll('a.btn-layout');
