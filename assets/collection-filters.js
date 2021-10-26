@@ -15,18 +15,21 @@
     Array.from(accordions).forEach(function(accordion) {
       accordion.addEventListener("click", ()=>{	   
                                  console.log(accordion.classList)
-                                 if(accordion.classList.contains('hide')){
+                                 if(accordion.classList.contains('')){
                                 console.log('aaa',accordion)
         accordion.classList.remove('show');
         accordion.previousSibling.classList.remove('show')
         accordion.classList.add('hide'); 
         accordion.innerHTML='<i class="fa fa-plus"></i> Show more';
+                                 console.log(accordion.classList)
       }else{
       	console.log('11',accordion)		
         accordion.classList.remove('hide');
         accordion.classList.add('show');
         accordion.previousSibling.classList.add('show')
         accordion.innerHTML='<i class="fa fa-minus"></i> Show less';
+                                 console.log(accordion.classList)
+                                 console.log(accordion.classList)
       }
     });
   });  
