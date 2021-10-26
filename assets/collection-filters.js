@@ -19,10 +19,12 @@
       				accordion.classList.remove('hide');
         accordion.classList.add('show');
         accordion.previousSibling.classList.add('show')
+        accordion.innerHTML='<i class="fa fa-minus"></i> Show less';
       }else{
         accordion.classList.remove('show');
         accordion.previousSibling.classList.remove('show')
-        accordion.classList.add('hide');
+        accordion.classList.add('hide'); 
+        accordion.innerHTML='<i class="fa fa-plus"></i> Show more';
       }
     });
   });  
