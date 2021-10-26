@@ -1777,3 +1777,7 @@ justify-content: center
   	color: var(--bg-theme);
     font-weight: 600;
 }
+.shop-sidebar-inside .sidebar-widget-product li:hover input~.checkmark {
+    background-color: #fff;
+    border-color: #d2cfd5;
+}
