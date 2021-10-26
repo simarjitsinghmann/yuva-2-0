@@ -17,7 +17,6 @@
                                  if(accordion.classList.contains('active')){
       				accordion.classList.remove('active');
       }else{
-      	removeClassFromAll(accordions);
         accordion.classList.add('active');
       }
     });
