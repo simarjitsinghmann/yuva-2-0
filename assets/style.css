@@ -487,6 +487,12 @@ padding-top: 0; }  */
 #CollectionProductsContainer[data-view="list-layout"] .products-grid .product-content {
 	display: block;
 } */
+#CollectionProductsContainer[data-view="list-layout"] .products-grid .product_columns .grid-item {
+    flex: 0 0 33%;
+    width: 33%;
+    padding: 0 15px;
+    overflow: hidden;
+}
 #CollectionProductsContainer[data-view="grid-layout"] .products-grid .product-content {
 	display: none;
 }
