@@ -568,6 +568,12 @@ object-fit: cover; }
     font-size: 15px;
     margin: 0;
 }
+.style1 .post-information__wrapper .post-name h6 a {
+    color: var(--color-primary);
+    line-height: 24px;
+    font-weight: 600;
+    font-size: 17px;
+}
 .post-information__wrapper .post-name { width: calc(100% - 190px); }
 .post-information-image img { width: 100%; } 
 .blog-post .shopify__top__section small { margin-bottom: 2px; } 
