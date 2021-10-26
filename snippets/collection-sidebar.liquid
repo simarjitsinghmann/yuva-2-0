@@ -10,6 +10,7 @@
   {%- for filter in collection.filters -%}
    {% case filter.type %}
   {% when 'list' %}
+    {{filter.values.size}}
     {% if filter.values.size > 0 %}
   <div class="widget sidebar-widget-product">
     <div class="widget-title">
