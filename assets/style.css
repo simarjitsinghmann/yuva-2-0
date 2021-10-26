@@ -1754,3 +1754,14 @@ justify-content: center
 .sidebar-widget-product ul.list-tags.show li.hideOptions {
     display: block !important;
 }
+.sidebar-widget-product span.br_more_filter i {
+    margin-right: 10px;
+}
+
+.sidebar-widget-product span.br_more_filter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 13px;
+    margin-top: 10px;
+}
