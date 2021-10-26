@@ -542,15 +542,15 @@ object-fit: cover; }
 .post-information__wrapper { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; flex-direction: row; padding-top: 20px; align-items: flex-start; border: 1px solid #d3d3d3; padding: 25px 30px 30px; }
 .post-information__wrapper .post-date { flex: 0 0 74px; -ms-flex: 0 0 74px; margin-right: 18px; } 
 .post-information__wrapper .post-date .custom-title {
-	font-size: 20px;
-	color: var(--color-primary);
-	text-align: center;
-	background: #f6f4f2;
-	padding: 12px 4px;
-	margin: 0;
-	font-weight: var(--normal);
-	letter-spacing: 0.4px;
-} 
+    font-size: 13px;
+    color: var(--color-primary);
+    text-align: center;
+    background: #f6f4f2;
+    padding: 3px 7px;
+    margin: 0;
+    font-weight: var(--normal);
+    letter-spacing: .4px;
+}
 .post-information__wrapper .post-date .custom-title span { display: block; font-size: 10px; color: #999999; font-weight: var(--medium); line-height: 14px; }
 .post-information__wrapper .post-name p a{ color: var(--color-primary); line-height: 26px; text-decoration:none;font-weight: var(--semibold);font-size: var(--font-size); } 
 .style1 .post-information__wrapper .post-name p a {
