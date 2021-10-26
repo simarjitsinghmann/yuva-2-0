@@ -14,17 +14,15 @@
   var accordions = filterForm.querySelectorAll('.br_more_filter');
     Array.from(accordions).forEach(function(accordion) {
       accordion.addEventListener("click", ()=>{	   
-                                 var prev =accordion.previousSibling;
-                                var moreItems = prev.querySelectorAll('.hideOptions');
-      console.log(prev,moreItems)
+                                
                                  if(accordion.classList.contains('hide')){
       				accordion.classList.remove('hide');
         accordion.classList.add('show');
-                                   moreItems.style.display='block';
+        accordion.previousSibling.classList.add('show')
         accordion.innerHTML='<i class="fa fa-minus"></i> Show less';
       }else{
         accordion.classList.remove('show');
-        moreItems.style.display='none';
+        accordion.previousSibling.classList.remove('show')
         accordion.classList.add('hide'); 
         accordion.innerHTML='<i class="fa fa-plus"></i> Show more';
       }
