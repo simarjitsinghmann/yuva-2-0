@@ -10,6 +10,7 @@
   {%- for filter in collection.filters -%}
    {% case filter.type %}
   {% when 'list' %}
+    {% if filter.values.size > 0 %}
   <div class="widget sidebar-widget-product">
     <div class="widget-title">
       <h6 class="sidebar-title">
@@ -35,6 +36,7 @@
       </div>
     </div>
   </div>
+    {% endif %}
   {% when 'price_range' %}
   <div class="widget sidebar-widget-product">
     <div class="widget-title">
