@@ -25,10 +25,9 @@
       }else{
       	console.log('11',accordion)		
         accordion.classList.remove('hide');
-        accordion.classList.add('show');
         accordion.previousSibling.classList.add('show')
         accordion.innerHTML='<i class="fa fa-minus"></i> Show less';
-                                 console.log(accordion.classList)
+        accordion.classList.add('show');
                                  console.log(accordion.classList)
       }
     });
