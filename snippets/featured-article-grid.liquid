@@ -17,7 +17,7 @@
                 </div>
                 <div class="post-name">
                   <p><a href="{{article.url}}">{{article.title}}</a></p>
-                  <p>{{article.excerpt_or_content | truncatewords: 6}}</p>
+                  <p>{{article.excerpt_or_content | strip_html | truncatewords: 6}}</p>
               </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
             <p>{{article.published_at | date: "%d %b %Y" }}</p>
           </div>
           <h5>{{article.title | truncatewords: 6}}</h5>
-          <div class="post-name"><p><a href="javascript:void(0)">{{article.excerpt_or_content | truncatewords: 6}}</a></p></div>
+          <div class="post-name"><p><a href="javascript:void(0)">{{article.excerpt_or_content | strip_html | truncatewords: 6}}</a></p></div>
         </div>
       </div>
     </div>
