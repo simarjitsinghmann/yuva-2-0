@@ -53,7 +53,6 @@
                         </a>
                      </div>
                      <div class="toolbox-item toolbox-sort select-box">
-                        <label>Sort by:</label>
                   {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
                         <ul class="form-control" id="sort__list">
                           {%- for option in collection.sort_options -%}
@@ -63,6 +62,7 @@
                           </li>
                           {%- endfor -%}
                         </ul>
+                        <label>Sort by:</label>
                        <label for="SortBy">{{sort_name}}</label>
                      </div>
                   </div>
