@@ -70,8 +70,8 @@ div#banner-slide > img { width: 100%;}
 .shopify__top__section small {display: block; letter-spacing: 1px; margin-bottom: 0px; text-transform: uppercase; font-weight: var(--medium);font-size:var(--small-font);line-height:32px; color:#555555;} 
 .card-information .card-information__wrapper .offer-name span { font-family: var(--font-family); color: var(--color-theme-text); font-weight: bold; font-size: 50px; line-height: 21px; margin-right: 7px; } 
 .card-information .card-information__wrapper .offer-name { font-family: var(--font-family); font-size: var(--font-size); color: var(--color-primary); margin: 4px 0 1px; text-transform: capitalize; font-weight: var(--medium); } 
-.card-information__wrapper { position: absolute; width: 195px;  margin: 0 auto;  background: var(--bg-white);  padding: 17px 19px; outline: 2px dashed #c4c4c4; outline-offset: -8px; } 
-.shopify__top__section .card-information__wrapper h5 {text-align:left; line-height: 22px; letter-spacing: 0px; font-weight: var(--semibold);color:var(--color-primary); margin-bottom: 5px; } 
+.card-information__wrapper { position: absolute; width: 195px;  margin: 0 auto;  background: var(--bg-white);  padding: 24px; outline: 2px dashed #c4c4c4; outline-offset: -8px; } 
+.shopify__top__section .card-information__wrapper h5 {text-align:left; line-height: 22px; letter-spacing: 0px; font-weight: 400;color:var(--color-primary); margin-bottom: 5px; } 
 .card-information__wrapper p.category-name { font-family: var(--font-family); font-weight: var(--medium); margin: 17px 0 18px; color: rgba(0, 0, 0, 0.6); } 
 .category-list h3 { padding-bottom: 25px;font-weight: var(--bold); } 
 .card-information { position: relative; }
@@ -127,7 +127,6 @@ div#banner-slide > img { width: 100%;}
     padding-bottom: 100px;
 }
 .grid__item .card-information__wrapper p {
-    margin-bottom: 5px;
     font-size: 16px;
     padding: 0;
     font-weight: var(--normal);
