@@ -13,7 +13,8 @@
   });  
   var accordions = filterForm.querySelectorAll('.br_more_filter');
     Array.from(accordions).forEach(function(accordion) {
-      accordion.addEventListener("click", ()=>{	                                
+      accordion.addEventListener("click", ()=>{	   
+                                 console.log(accordion.previousSibling)
                                  if(accordion.classList.contains('hide')){
       				accordion.classList.remove('hide');
         accordion.classList.add('show');
