@@ -1422,9 +1422,10 @@ section.feature-section { padding: 100px 0 61px; background-color: #fff; margin-
 	margin-bottom: 4px;
 	letter-spacing: 0.4px;
 }
-.product-add-to-cart-right .select__size .product-loop-variants.size .size_option input:checked + span.option {
-	background: #f6f4f2;
-	border: 2px solid #ee9191;
+.product-add-to-cart-right .select__size .product-loop-variants.size .size_option input:checked+span.option {
+    background: #000;
+    border-color: #000;
+    color: #fff;
 }
 .product-add-to-cart-right .size_option .option {
 	border: 1px solid #7b7b7b;
