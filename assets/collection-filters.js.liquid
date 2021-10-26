@@ -21,15 +21,14 @@
         accordion.previousSibling.classList.remove('show')
         accordion.innerHTML='<i class="fa fa-plus"></i> Show more';
         accordion.classList.add('hide'); 
-                                 console.log(accordion.classList)
       }else{
       	console.log('11',accordion)		
         accordion.classList.remove('hide');
         accordion.previousSibling.classList.add('show')
         accordion.innerHTML='<i class="fa fa-minus"></i> Show less';
         accordion.classList.add('show');
-                                 console.log(accordion.classList)
       }
+      collectionFilters()
     });
   });  
   
