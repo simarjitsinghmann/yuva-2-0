@@ -14,8 +14,8 @@
   var accordions = filterForm.querySelectorAll('.br_more_filter');
     Array.from(accordions).forEach(function(accordion) {
       accordion.addEventListener("click", ()=>{	   
-                                console.log('aaa')
                                  if(accordion.classList.contains('hide')){
+                                console.log('aaa')
         accordion.classList.remove('show');
         accordion.previousSibling.classList.remove('show')
         accordion.classList.add('hide'); 
