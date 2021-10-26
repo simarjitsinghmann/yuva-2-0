@@ -38,9 +38,9 @@
   });
 });   
 
-var sortBy = section.querySelectorAll('select[name="sort_by"]');
+var sortBy = section.querySelectorAll('[name="sort_by"]');
 Array.from(sortBy).forEach(function(sort) {
-  sort.addEventListener("change", ()=>{	
+  sort.addEventListener("click", ()=>{	
                         getFilterData(filterForm,sort,sectionId);
 });
 });   
