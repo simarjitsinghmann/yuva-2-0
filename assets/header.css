@@ -663,6 +663,10 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
     /* transform: translateX(-50%); */
     border-top: 1px solid #e7e7e7;
 }
+.search-bar-container .results-box .note:hover {
+  color: var(--color-theme-text)
+    border-bottom:1px solid var(--color-theme-text)
+}
 .results-box {width:100%;}
 .results-box .result-list{margin:0 -20px;}
 .results-box .result-list a.searc-item-box { float: left; text-align: left; margin: 0 0px 20px; align-items: center; flex-wrap: wrap; width: 16.66%; padding: 0 20px; text-decoration:none; } 
