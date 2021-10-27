@@ -337,8 +337,7 @@
   margin-top: 0;
 }
 
-#recover,
-#recover + div {
+#recover {
   display: none;
 }
 
@@ -346,12 +345,9 @@
   display: inline;
 }
 
-#recover:target + div {
-  display: block;
-}
 
 #recover:target ~ #login,
-#recover:target ~ #login + div {
+#recover:target ~ #login {
   display: none;
 }
 
