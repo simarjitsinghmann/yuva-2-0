@@ -68,6 +68,14 @@
                   </div>
                </nav>
                <div class="filter-total-result">
+                 {% if paginate.next.is_link %}
+Showing products {{ paginate.current_offset | plus: 1 }} - {{ paginate.current_offset | plus: paginate.page_size }} of {{ collection.all_products_count }}
+{% else %}
+{% capture itemsOnCurrentPage %}
+{{ collection.all_products_count | minus: paginate.current_offset }}
+{% endcapture %}
+Showing products {{ paginate.current_offset | plus: 1 }} - {{ paginate.current_offset | plus: itemsOnCurrentPage }} of {{ collection.all_products_count }}
+{% endif %}
                   {% assign productCount = collection.all_products_count | minus: paginate.current_offset %}
                   <h6>{{collection.title}} - {{ productCount}} {{ productCount | pluralize: 'item', 'items' }}</h6>
                </div>
