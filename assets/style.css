@@ -878,7 +878,25 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); li
 .filter-total-result { padding-bottom: 11px; } .toolbox-right { display: flex; flex-direction: row; align-items: center; justify-content: center; } 
 .toolbox-right .toolbox-item.toolbox-sort.select-box #SortBy { float: left; display: inline-block; width: auto; border: 0; background: transparent; font-size: var(--small-font); color: var(--color-primary); padding: 8px 0; min-width: 138px; } 
 .toolbox-right .toolbox-item.toolbox-sort.select-box label { float: left; display: inline-block; padding: 0; font-size: var(--small-font); color: #969696; } 
-.toolbox-right .toolbox-item.toolbox-sort.select-box { float: left; border-radius: 3px; padding: 0 6px 0 11px; align-items: center; justify-content: center; display: flex; font-size: var(--small-font); min-height: 35px;position:relative;} .filter-actions .select-items .select-item i { position: absolute; top: -7px; color: #626262; font-size: var(--small-font); right: -7px; } .select-items .filter-clean { font-size:var(--extra-small); color: rgba(40, 40, 40, 0.7); letter-spacing: 0.1px; text-transform: uppercase; } 
+.toolbox-right .toolbox-item.toolbox-sort.select-box { float: left; border-radius: 3px; padding: 0 6px 0 11px; align-items: center; justify-content: center; display: flex; font-size: var(--small-font); min-height: 35px;position:relative;} 
+/* .filter-actions .select-items .select-item i { position: absolute; top: -7px; color: #626262; font-size: var(--small-font); right: -7px; }  */
+.filter-actions .select-items .select-item i {
+    position: absolute;
+    top: -7px;
+    color: #fff;
+    font-size: 8px;
+    right: -8px;
+    border: 1px solid #fff;
+    background: #000;
+    width: 13px;
+    height: 13px;
+    /* border-radius: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 20%);
+}
+.select-items .filter-clean { font-size:var(--extra-small); color: rgba(40, 40, 40, 0.7); letter-spacing: 0.1px; text-transform: uppercase; } 
 .select-items .filter-clean:hover, .filter-actions .select-items .select-item i:hover { color: var(--color-theme-text); } 
 .filter-actions .select-items .select-item { text-decoration: none; border: 0; border-radius: 0; color: #fff; font-weight: 300; padding: 3px 12px; letter-spacing: .1px; position: relative; margin-right: 15px; box-shadow: 0 1px 1px #dbdbdb; font-size: 13px; background: #000; text-transform: capitalize;}
 .toolbox-right .toolbox-item.toolbox-layout { float: left; padding-right: 20px; } 
