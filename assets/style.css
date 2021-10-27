@@ -446,7 +446,7 @@ letter-spacing: 1.2px;
 .shop__options .add-to-cart button{ transition: background-position 0.25s ease-out; background-repeat: no-repeat; background-size: 200% 100%; background-color: var(--bg-primary); background-image: -moz-linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #000000 50%, #000000 100%); background-image: -webkit-linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 0 50%, #000000 50%, #000000 100%); background-image: linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #000000 50%, #000000 100%); background-position: right bottom; color:var(--color-secondary); width: 100%; font-size: var(--small-font); font-weight: var(--medium); font-family: 'Celias'; padding: 9px; } 
 .shop__options .add-to-cart button:hover { background-position: left bottom; } 
 .product__view__option ul { display: flex; justify-content: center; align-content: center; } 
-.shop__options .product__view__option ul li { background: var(--bg-white); display: inline-block; width: 43px; height: 43px; text-align: center; display: flex; justify-content: center; align-items: center; margin: 0 5px; cursor:pointer; } 
+.shop__options .product__view__option ul li { background: var(--bg-white); display: inline-block; width: 35px; height: 35px; text-align: center; display: flex; justify-content: center; align-items: center; margin: 0 5px; cursor:pointer; } 
 .shop__options .product__view__option ul li:hover { background: var(--bg-theme); } 
 .shop__options .product__view__option ul li:hover svg{ fill:var(--color-secondary); } 
 .shop__options .product__view__option ul li:hover i{ color:var(--color-secondary); } 
