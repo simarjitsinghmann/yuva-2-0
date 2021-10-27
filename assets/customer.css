@@ -67,6 +67,7 @@
     text-transform: uppercase;
     font-weight: var(--semibold);
     font-size: 12px;
+      transition: background-position .25s ease-out;
 }
 .customer button:hover {
     background-position: left bottom;
