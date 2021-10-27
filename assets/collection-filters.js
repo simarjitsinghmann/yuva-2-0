@@ -68,7 +68,9 @@ class dualRangeSlider {
     this.range = rangeElement
     this.min = Number(rangeElement.dataset.min)
     this.max = Number(rangeElement.dataset.max)
-    this.handles = [...this.range.querySelectorAll(".handle")]
+    this.handles = [...this.range.querySelectorAll(".handle")])
+    this.handlesLeft = [...this.range.querySelectorAll(".handle.left")])
+    this.handlesRight = [...this.range.querySelectorAll(".handle.right")]
     this.startPos = 0;
     this.activeHandle;
     this.handles.forEach(handle => {
