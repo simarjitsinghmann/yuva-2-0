@@ -1419,10 +1419,26 @@
     "product-variant": {
       "name": "Product Variant",
       "option_style": {
-        "label": "Option Style"
+        "label": "Option Style",
+        "options": {
+          "dropdown": {
+            "label": "Dropdown"
+          },
+          "swatch": {
+            "label": "Color Swatch"
+          }
+        }
       },
       "color_swatch_style": {
-        "label": "Color Swatch Style"
+        "label": "Color Swatch Style",
+        "options": {
+          "circle": {
+            "label": "Circle"
+          },
+          "sqaure": {
+            "label": "Square"
+          }
+        }
       },
       "variant_image": {
         "label": "Show Variant Image as Color"
