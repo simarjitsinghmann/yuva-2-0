@@ -53,6 +53,9 @@
       >
     </div>
     <div class="field">
+      <label for="RegisterForm-LastName">
+        {{ 'customer.register.last_name' | t }}
+      </label>
       <input
         type="text"
         name="customer[last_name]"
@@ -61,11 +64,11 @@
         autocomplete="family-name"
         placeholder="{{ 'customer.register.last_name' | t }}"
       >
-      <label for="RegisterForm-LastName">
-        {{ 'customer.register.last_name' | t }}
-      </label>
     </div>
-    <div class="field">      
+    <div class="field">  
+      <label for="RegisterForm-email">
+        {{ 'customer.register.email' | t }}
+      </label>    
       <input
         type="email"
         name="customer[email]"
@@ -81,9 +84,6 @@
         {% endif %}
         placeholder="{{ 'customer.register.email' | t }}"
       >
-      <label for="RegisterForm-email">
-        {{ 'customer.register.email' | t }}
-      </label>
     </div>
     {%- if form.errors contains 'email' -%}
       <span id="RegisterForm-email-error" class="form__message">
