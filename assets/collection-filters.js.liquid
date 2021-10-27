@@ -71,6 +71,8 @@ class dualRangeSlider {
     this.handles = [...this.range.querySelectorAll(".handle")]
     this.handlesLeft = [...this.range.querySelectorAll(".handle.left")[0].dataset.value]
     this.handlesRight = [...this.range.querySelectorAll(".handle.right")[0].dataset.value]
+    
+    console.log(this.min,this.max,Number(this.handlesLeft),Number(this.handlesRight))
     if(this.handlesLeft){
     this.min =Number(this.handlesLeft)
     }
