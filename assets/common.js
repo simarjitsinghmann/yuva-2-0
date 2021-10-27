@@ -501,25 +501,25 @@ $(document).ready(function()
 });
 
 $(document).on('click', '.quickView', function(evt) {
-    evt.preventDefault();
+  evt.preventDefault();
   $('#ProductQuickView').hide();
-	var _url = $(this).data('href');
-	$('.Quick_loader').fadeIn('slow');
+  var _url = $(this).data('href');
+  $('.Quick_loader').fadeIn('slow');
   $('#qucikview').fadeIn('slow');
-	$.ajax({
-		url:_url+'?view=quick-view',
-		type:'GET',
-		success: function(data){
-          setTimeout(function(){
-			$('#ProductQuickView').html(data);
-			$('.Quick_loader').hide();
-			$('#ProductQuickView').show();
-			productVariants();
-            },500)
-		}
-	 });
+  $.ajax({
+    url:_url+'?view=quick-view',
+    type:'GET',
+    success: function(data){
+      setTimeout(function(){
+        $('#ProductQuickView').html(data);
+        $('.Quick_loader').hide();
+        $('#ProductQuickView').show();
+        productVariants();
+      },500)
+    }
+  });
 });
 $(document).on('click', '.quickViewClose',function(evt) {
-    evt.preventDefault();
-	$('#qucikview').hide();
+  evt.preventDefault();
+  $('#qucikview').hide();
 })
