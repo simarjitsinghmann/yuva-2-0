@@ -831,4 +831,8 @@ li[data-address] > h2 {
   .login a.cancel_recover, .new__customer a.button.create__acount {
     margin-top: 20px;
 }
+  .customer.login .grid__item, .customer.register .grid__item {
+    width: 100%;
+    max-width: 100%;
+}
 }
