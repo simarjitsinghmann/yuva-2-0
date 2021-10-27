@@ -521,5 +521,5 @@ $(document).on('click', '.quickView', function(evt) {
 });
 $(document).on('click', '.quickViewClose',function(evt) {
   evt.preventDefault();
-  $('#qucikview').hide();
+  $('body').removeClass('quickview-open');
 })
