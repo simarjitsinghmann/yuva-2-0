@@ -35,15 +35,15 @@
       {
         "type": "select",
         "id": "option_style",
-        "label": "option_style",
+        "label": "t:settings_schema.product-variants.option_style.label",
         "options": [
           {
             "value": "dropdown",
-            "label": "Dropdown"
+            "label": "t:settings_schema.product-variants.option_style.options.dropdown.label"
           },
           {
             "value": "swatch",
-            "label": "Color Swatch"
+            "label": "t:settings_schema.product-variants.option_style.options.swatch.label"
           }
         ],
         "default": "dropdown"
