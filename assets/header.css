@@ -872,12 +872,8 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 .mini_cart .cart__contents{ height: calc(100% - 530px); overflow-y: auto; overflow-x: hidden; padding: 0 40px 0; } 
 .similar-product-title h5 { font-weight: var(--medium); color: var(--color-primary); }
 /**END Minicart**/
-.quick_view .feature__product .owl-thumbs button.owl-thumb-item img {
-    background: #ececec;
-    object-fit: contain;
-}
-.quick_view .product-add-to-cart-right {
-    padding: 0 40px;
+.quick_view .quickviewcontent {
+    padding: 40px;
 }
 /**Header-menu-end**/
 
