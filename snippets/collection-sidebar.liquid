@@ -42,11 +42,11 @@
       <h6 class="sidebar-title">
         <span>{{ filter.label | escape }}</span>
       </h6>
-      <div class="center">
+      <div class="center">{{filter.max_value.value}}
         <div class="dual-range" data-min="0" data-max="{{filter.range_max}}">
           <span class="handle left" data-value="{{ filter.min_value.value}}"></span>
           <span class="highlight"></span>
-          <span class="handle right" data-value="{{ filter.max_value.value}}">{{filter.max_value.value}}</span>
+          <span class="handle right" data-value="{{ filter.max_value.value}}"></span>
         </div>
       </div>
       <div class="widget-content">
