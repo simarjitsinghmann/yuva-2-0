@@ -1,5 +1,5 @@
-{% assign collection = collections[collection.handle] %}
-{% paginate collection.products by 24 %}
+{% assign customcollection = collections[collection.handle] %}
+{% paginate customcollection.products by 24 %}
 <div class="CollectionProductGrid" id="CollectionProductsContainer" data-id="{{section.id}}" data-view="grid-layout">
    <div class="container">
       <div class="row">
@@ -54,9 +54,9 @@
                         </a>
                      </div>
                      <div class="toolbox-item toolbox-sort select-box">
-                  {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+                  {%- assign sort_by = customcollection.sort_by | default: collection.default_sort_by -%}
                         <ul class="form-control" id="sort__list">
-                          {%- for option in collection.sort_options -%}
+                          {%- for option in customcollection.sort_options -%}
                           <li class="{% if option.value == sort_by %}selected{%- assign sort_name = option.name | escape  -%}{% endif %}" value="{{ option.name | escape }}">
                             <input type="radio" name="sort_by" value="{{ option.value | escape }}" data-name="{{ option.name | escape }}" form="CollectionFiltersForm"{% if option.value == sort_by %}checked{% endif %} hidden/>
                             {{ option.name | escape }}
@@ -69,12 +69,12 @@
                   </div>
                </nav>
                <div class="filter-total-result">
-                  <h6>{{collection.title}} - {{ collection.products_count}} {{ collection.products_count | pluralize: 'item', 'items' }}</h6>
+                  <h6>{{customcollection.title}} - {{ customcollection.products_count}} {{ customcollection.products_count | pluralize: 'item', 'items' }}</h6>
                </div>
                <div class="product-collection grid-view">
                   <div class="products-grid" style="display:block">
                      <div class="row product_columns">
-                         {% for product in collection.products %}
+                         {% for product in customcollection.products %}
                          {% render 'collection-product-grid',product: product %}
                         {% endfor %}
                      </div>
