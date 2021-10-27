@@ -42,10 +42,6 @@
       <h6 class="sidebar-title">
         <span>{{ filter.label | escape }}</span>
       </h6>
-      <div class="range-slider">
-        <input class="range-slider__range" type="range" value="15" min="0" max="100">
-        <p class="text-right black-text medFont w-600">$<span class="range-slider__value">15.00</span></p>
-      </div>
       <div class="widget-content">
        {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
       <span class="widget__selected">{{ "sections.collection_template.max_price" | t: price: max_price_amount }}</span>
