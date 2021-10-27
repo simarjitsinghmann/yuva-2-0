@@ -51,15 +51,15 @@
       {
         "type": "select",
         "id": "color_swatch_style",
-        "label": "Color Swatch Style",
+        "label": "t:settings_schema.product-variants.color_swatch_style.label",
         "options": [
           {
             "value": "circle",
-            "label": "Circle"
+            "label": "t:settings_schema.product-variants.color_swatch_style.options.circle.label"
           },
           {
             "value": "square",
-            "label": "Square"
+            "label": "t:settings_schema.product-variants.color_swatch_style.options.square.label"
           }
         ],
         "default": "circle"
@@ -67,7 +67,7 @@
       {
         "type": "checkbox",
         "id": "variant_image",
-        "label": "Swatch with Variant Image ",
+        "label": "t:settings_schema.product-variants.variant_image.label",
         "default": false
       }
     ]
