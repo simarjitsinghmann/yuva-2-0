@@ -897,9 +897,12 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
     font-size: 12px;
     line-height: 23px;
 }
-.quick_view .quickviewcontent .product-loop-variants.circle .color_option span.option {
+.quick_view .quickviewcontent #ProductQuickView .product-loop-variants.circle .color_option span.option {
     width: 22px;
     height: 22px;
+}
+.quick_view .quickviewcontent .product-add-to-cart-right p.vendor_name {
+    margin: 0px 0 5px;
 }
 /**Header-menu-end**/
 
