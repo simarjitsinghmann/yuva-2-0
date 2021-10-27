@@ -1447,16 +1447,17 @@ section.feature-section { padding: 100px 0 61px; background-color: #fff; margin-
 	margin-bottom: 4px;
 	letter-spacing: 0.4px;
 }
-.product-add-to-cart-right .select__size .product-loop-variants.size .size_option input:checked+span.option {
-    background: #000;
-    border-color: #000;
-    color: #fff;
-}
+
 .size_option .option {
 	border: 1px solid #000;
     background: transparent;
     border-radius: 0;
 	font-weight: var(--normal);
+}
+.select__size .product-loop-variants.size .size_option input:checked+span.option {
+    background: #000;
+    border-color: #000;
+    color: #fff;
 }
 .feature-product .quantity a#quantity_minus {
     font-size: 50px;
