@@ -842,12 +842,6 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); li
 .toolbox-item.toolbox-sort.select-box ul li input {
 	display: none;
 }
-.toolbox-item.toolbox-sort.select-box ul li {
-	font-size: var(--font-normal);
-	font-weight: var(--normal);
-	padding: 3px 7px;
-	cursor: pointer;
-}
 .toolbox-item.toolbox-sort.select-box ul {
     display: none;
     position: absolute;
@@ -859,6 +853,13 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); li
     top: 100%;
     width: 100%;
     box-shadow: 0px 0px 4px #0000002e;
+}
+.toolbox-item.toolbox-sort.select-box ul li {
+    font-size: 13px;
+    font-weight: var(--light);
+    padding: 5px 12px;
+    cursor: pointer;
+    /* border-bottom: 1px solid #eee; */
 }
 .collectionFilters__form .widget__price .field:last-child {
 	margin-right: 0;
