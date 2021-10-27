@@ -4,8 +4,8 @@
     "theme_name": "Yuva Theme",
     "theme_version": "2.0",
     "theme_author": "Shopify",
-    "theme_documentation_url": "https://shinedezigninfonet.com",
-    "theme_support_url": "https://shinedezigninfonet.com/about"
+    "theme_documentation_url": "https:\/\/shinedezigninfonet.com",
+    "theme_support_url": "https:\/\/shinedezigninfonet.com\/about"
   },
   {
     "name": "t:settings_schema.search.name",
@@ -16,16 +16,59 @@
         "default": "full",
         "label": "t:settings_schema.search.settings.search_style.label",
         "info": "t:settings_schema.search.settings.search_style.info",
-        "options":[
+        "options": [
           {
-            "value":"full",
-            "label":"t:settings_schema.search.settings.search_style.full.label"
+            "value": "full",
+            "label": "t:settings_schema.search.settings.search_style.full.label"
           },
           {
-            "value":"auto",
-            "label":"t:settings_schema.search.settings.search_style.auto.label"
+            "value": "auto",
+            "label": "t:settings_schema.search.settings.search_style.auto.label"
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.product-variants.name",
+    "settings": [
+      {
+        "type": "select",
+        "id": "option_style",
+        "label": "option_style",
+        "options": [
+          {
+            "value": "dropdown",
+            "label": "Dropdown"
+          },
+          {
+            "value": "swatch",
+            "label": "Color Swatch"
+          }
+        ],
+        "default": "dropdown"
+      },
+      {
+        "type": "select",
+        "id": "color_swatch_style",
+        "label": "Color Swatch Style",
+        "options": [
+          {
+            "value": "circle",
+            "label": "Circle"
+          },
+          {
+            "value": "square",
+            "label": "Square"
+          }
+        ],
+        "default": "circle"
+      },
+      {
+        "type": "checkbox",
+        "id": "variant_image",
+        "label": "Swatch with Variant Image ",
+        "default": false
       }
     ]
   },
