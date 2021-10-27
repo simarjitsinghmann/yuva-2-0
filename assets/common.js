@@ -136,7 +136,6 @@ $(document).ready(function(){
 			.then((text) => {
 				const html = document.createElement('div');
 				html.innerHTML = text;
-      	console.log(text)
 				const recommendations = html.querySelector('.similarItemContainer');		
 				if (recommendations && recommendations.innerHTML.trim().length) {
 					document.querySelector('.results-similarItemContainer').innerHTML = recommendations.innerHTML;
