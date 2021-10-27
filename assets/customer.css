@@ -4,7 +4,28 @@
   padding: 0 1.5rem;
   text-align: center;
 }
-
+.customer.login {
+    margin: 0 auto;
+    max-width: 985px;
+    padding: 0;
+}
+.content-for-layout {
+    background: #efedeb;
+}
+.customer .field input:-webkit-autofill, .customer .field input:focus, .customer .field input:not(:placeholder-shown), .field__input:-webkit-autofill, .field__input:focus, .field__input:not(:placeholder-shown) {
+    padding: 10px 15px;
+}
+.customer .field input {
+    padding: 10px 15px;
+    border: 1px solid #cccccc;
+    height: 51px;
+    font-size: 13px;
+    line-height: normal;
+}
+.customer .field input:-webkit-autofill~label, .customer .field input:focus~label, .customer .field input:not(:placeholder-shown)~label, .field__input:-webkit-autofill~.field__label, .field__input:focus~.field__label, .field__input:not(:placeholder-shown)~.field__label {
+    top: 2px;
+    background: #fff;
+}
 @media screen and (min-width: 750px) {
   .customer:not(.account, .order) {
     max-width: 47.8rem;
