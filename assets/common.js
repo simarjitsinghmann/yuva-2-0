@@ -486,7 +486,7 @@ var mouse_is_inside = false;
 
 $(document).ready(function()
 {
-    $('.search-bar-container,.search-form,#mini__cart,#dropdown-customer,.newsletter-popup-inner,#similar__product,.side-menu').hover(function(){ 
+    $('#,quick_view .search-bar-container,.search-form,#mini__cart,#dropdown-customer,.newsletter-popup-inner,#similar__product,.side-menu').hover(function(){ 
         mouse_is_inside=true; 
     }, function(){ 
         mouse_is_inside=false; 
@@ -494,7 +494,7 @@ $(document).ready(function()
 	
     $("body").mouseup(function(){ 
         if(! mouse_is_inside) {
-			$('body').removeClass('nav-open').removeClass('addsearch').removeClass('small_search').removeClass('minicart-open').removeClass('customer-open').removeClass('NewsletterActive').removeClass('show__similar__products');
+			$('body').removeClass('quickview-open').removeClass('nav-open').removeClass('addsearch').removeClass('small_search').removeClass('minicart-open').removeClass('customer-open').removeClass('NewsletterActive').removeClass('show__similar__products');
 			$('.newsletter-popup,.wrapper-overlay').hide();
 		}
     });
