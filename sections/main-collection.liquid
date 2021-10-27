@@ -73,9 +73,8 @@
                <div class="product-collection grid-view">
                   <div class="products-grid" style="display:block">
                      <div class="row product_columns">
-                         {% for product in collection.products %}
-                       asdasda
-                         {% render 'collection-product-grid',product: product %}
+                         {% for product in collection.products %}                       
+                         {% include 'collection-product-grid',product: product %}
                         {% endfor %}
                      </div>
                   </div>
