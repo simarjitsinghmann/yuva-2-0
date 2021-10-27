@@ -935,6 +935,14 @@ position:relative;
 .quick_view .quickviewcontent .size_title, .quick_view .quickviewcontent .size_title.small-size {
     margin-bottom: 0;
 }
+.quick_view .quickviewcontent .feature__product .item {
+    max-height: 500px;
+    overflow: hidden;
+    background: #ececec;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /**Header-menu-end**/
 
 .top-header .navbar#nav_style_2 form .header__icons { justify-content: flex-end; } 
