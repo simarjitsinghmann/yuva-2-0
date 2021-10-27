@@ -820,3 +820,12 @@ li[data-address] > h2 {
     padding: 30px 30px;
 }
 }
+@media only screen and (max-width:767px){
+.customer.login, .customer.register {
+    max-width: calc(100% - 30px);
+    padding: 40px 0;
+}
+.new__customer {
+    padding: 25px 0 0;
+} 
+}
