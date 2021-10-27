@@ -932,6 +932,9 @@ position:relative;
 .quick_view .quickviewcontent .feature__product .owl-thumbs button.owl-thumb-item {
     height: 60px;
 }
+.quick_view .quickviewcontent .size_title, .quick_view .quickviewcontent .size_title.small-size {
+    margin-bottom: 0;
+}
 /**Header-menu-end**/
 
 .top-header .navbar#nav_style_2 form .header__icons { justify-content: flex-end; } 
