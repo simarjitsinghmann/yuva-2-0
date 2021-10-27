@@ -78,6 +78,7 @@ class dualRangeSlider {
     this.max = Number(this.handlesRight)
     
     }
+    console.log(this.min,this.max,Number(this.handlesLeft),Number(this.handlesRight))
     this.startPos = 0;
     this.activeHandle;
     this.handles.forEach(handle => {
