@@ -143,7 +143,7 @@
             </div>
             {% when 'description' %}
             <div class="rte">
-              {{product.description}}
+              {{product.description | truncatewords:100}}
             </div>
             {% when 'button' %}
             {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
@@ -164,74 +164,6 @@
               </div>
             </div>
             {% endform %}
-            {% when 'description_tab' %}
-            {% if block.settings.width == 'half' %}
-            <div class="product-detail">
-              <div class="accordion-container">
-                <div class="set">
-                  <h4 class="panel-title">
-                    <a href="javascript:void(0)">
-                      Description
-                      <i class="fa fa-plus"></i>
-                    </a>
-                  </h4>
-                  <div class="content" style="display:none;">
-                    <div class="panel-body">
-                      {{product.description}}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% else %}
-            {% assign full_width_tabs = true %}
-            {% endif %}
-            {% when 'reviews_tab' %}
-            {% if block.settings.width == 'half' %}
-            <div class="product-detail">
-              <div class="accordion-container">
-                <div class="set">
-                  <h4 class="panel-title">
-                    <a href="javascript:void(0)">
-                      Reviews
-                      <i class="fa fa-plus"></i>
-                    </a>
-                  </h4>
-                  <div class="content" style="display:none;">
-                    <div class="panel-body">
-                      <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% else %}
-            {% assign full_width_tabs = true %}
-            {% endif %}
-            {% when 'accordion' %}
-            {% if block.settings.width == 'half' %}
-            {% if block.settings.heading != blank %}
-            <div class="product-detail">
-              <div class="accordion-container">
-                <div class="set">
-                  <h4 class="panel-title">
-                    <a href="javascript:void(0)">
-                      {{block.settings.heading}}
-                      <i class="fa fa-plus"></i>
-                    </a>
-                  </h4>
-                  <div class="content" style="display:none;">
-                    <div class="panel-body">
-                      {{block.settings.content}}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {% endif %}
-            {% else %}
-            {% assign full_width_tabs = true %}
-            {% endif %}
             {% endcase %}
             {% endfor %}
           </div>
