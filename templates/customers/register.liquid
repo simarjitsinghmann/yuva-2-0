@@ -4,6 +4,7 @@
   
   <div class="grid grid--2-col">
   <div class="grid__item">
+    <div id="registerForm">
   <svg style="display: none">
     <symbol id="icon-error" viewBox="0 0 13 13">
       <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
@@ -12,9 +13,9 @@
       <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
     </symbol>
   </svg>
-  <h1>
-    {{ 'customer.register.title' | t }}
-  </h1>
+    <h6 class="form_title" tabindex="-1">
+              {{ 'customer.register.title' | t }}
+          </h6> 
   {%- form 'create_customer', novalidate: 'novalidate' -%}
     {%- if form.errors -%}
       <h2 class="form__message" tabindex="-1" autofocus>
@@ -120,6 +121,7 @@
       {{ 'customer.register.submit' | t }}
     </button>
   {%- endform -%}
+    </div>
     </div>
   <div class="grid__item">
             <div class="new__customer">
