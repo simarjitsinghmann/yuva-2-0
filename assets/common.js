@@ -131,6 +131,7 @@ $(document).ready(function(){
 
 		var getID = $(this).attr('data-id'); 
 		var getSection = $(this).attr('data-section'); 
+      	console.log('id',getID,'section',getSection)
 		fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
 			.then(response => response.text())
 			.then((text) => {
