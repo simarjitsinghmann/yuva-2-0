@@ -1038,6 +1038,70 @@
           "info": "Install the free Shopify [Product Reviews](https:\/\/apps.shopify.com\/product-reviews) app to add product reviews"
         }
       },
+      "blocks": {
+        "title": {
+          "name": "Title"
+        },
+        "text": {
+          "name": "Text",
+          "settings": {
+            "text": {
+              "label": "Text"
+            }
+          }
+        },
+        "price": {
+          "name": "Price"
+        },
+        "review-star": {
+          "name": "Review Rating"
+        },
+        "variant": {
+          "name": "Variant Picker"
+        },
+        "quantity": {
+          "name": "Quantity Picker"
+        },
+        "button": {
+          "name": "Buy Buttons",
+          "settings": {
+            "dynamic_checkout_btn": {
+              "label": "Show Dynamic Checkout Button"
+            }
+          }
+        },
+        "description": {
+          "name": "Product Description"
+        },
+        "description_tab": {
+          "name": "Product Description as Tab"
+        },
+        "reviews_tab": {
+          "name": "Reviews Tab"
+        },
+        "accordion": {
+          "name": "Content Tabs",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "content": {
+              "label": "Content"
+            },
+            "width": {
+              "label": "Position",
+              "options": {
+                "half": {
+                  "label": "Show in Sidebar"
+                },
+                "full": {
+                  "label": "Show Full Width"
+                }
+              }
+            }
+          }
+        }
+      },
       "presets": {
         "name": "Featured Product"
       }
