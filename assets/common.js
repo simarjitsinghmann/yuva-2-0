@@ -342,12 +342,14 @@ $('.toggle-level').click(function(){
           var getVariant = variantChange(options,_productParent);
 
           if(getVariant != undefined){
-            var image= getVariant.featured_media['preview_image']['src'];
-            image= image.replace("https:", "");                       
-            _productParent.querySelectorAll('[name="id"]')[0].value = getVariant.id;
-            var imageSource = _productParent.querySelectorAll(".owl-thumb-item img[src='"+image+"']")[0];
-            if(imageSource){
-              imageSource.click();
+            if(getVariant.featured_media != null){
+              var image= getVariant.featured_media['preview_image']['src'];
+              image= image.replace("https:", "");                       
+              _productParent.querySelectorAll('[name="id"]')[0].value = getVariant.id;
+              var imageSource = _productParent.querySelectorAll(".owl-thumb-item img[src='"+image+"']")[0];
+              if(imageSource){
+                imageSource.click();
+              }
             }
             var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
             if(getVariant.available == true){
