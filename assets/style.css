@@ -864,6 +864,10 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); li
 .collectionFilters__form .widget__price .field:last-child .field__label {
 	display: none;
 }
+.collectionFilters__form .sidebar-widget-product li input:checked~.checkmark {
+    background-color: #000;
+    border-color: #000;
+}
 /***Sidebar-end**/
 /***product-list***/
 .main-content .products-grid .grid-item{padding:0 15px;}
