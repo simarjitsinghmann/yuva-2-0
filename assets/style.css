@@ -249,8 +249,6 @@ div#banner-slide > img { width: 100%;}
     font-weight: var(--semibold);
 }
 /***END***/
-
-
 /***sale section ***/
 .latest__sale { background: var(--bg-white); padding: 49px 0 5px; }
 .shopify__top__section { width: 100%; } 
@@ -710,7 +708,7 @@ transform: scale(0.9);
 .testimonial-slider .owl-carousel .active.center {
 	left: 0;
 	right: 0;
-	box-shadow: 0 31px 14px -25px #dadada;
+/* 	box-shadow: 0 31px 14px -25px #dadada; */
 	padding: 45px 29px;
 	top: -25px;
 }
