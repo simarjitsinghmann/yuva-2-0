@@ -98,3 +98,82 @@
     </noscript>
   </form>
 </div>
+<style>
+  *,*::before,*::after {
+    box-sizing: border-box;
+	font-family:helvetica;
+}
+
+.center {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	min-height:100vh;
+	flex-direction:column;
+}
+
+:root {
+    --clr-prim:#1B984D;
+    --clr-prim-h:#178242;
+    --clr-bad:#D91E18;
+    --clr-box:#F9F9F9;
+    --clr-box-dark:#f2f2f2;
+    --clr-border:#D9D9D9;
+    --txt-clr:#333333;
+    --shadow:0px 3px 6px 0px rgba(0,0,0,0.1);
+    --cubic:cubic-bezier(0.11, 0.54, 0.33, 1.01);
+}
+
+.dual-range {
+	--range-size:20px;
+	--range-width:150px;
+	--handle-size:1.3;
+	height:var(--range-size);
+	width:var(--range-width);
+	background:var(--clr-box-dark);
+	border-radius:50px;
+	position:relative;
+	user-select:none;
+	.highlight {
+		position:absolute;
+		height:var(--range-size);
+		width:calc(calc(var(--x-2) - var(--x-1)) + calc(var(--range-size) * var(--handle-size)));
+		left:var(--x-1);
+		background:var(--clr-prim);
+		z-index:1;
+		border-radius:50px;
+	}
+	
+	.handle {
+		width:calc(var(--range-size) * var(--handle-size));
+		height:calc(var(--range-size) * var(--handle-size));
+		background:#fff;
+		position:absolute;
+		box-shadow:var(--shadow);
+		border-radius:50%;
+		top:50%;
+		transform:translateY(-50%);
+		z-index:2;
+		cursor:grab;
+		&:active {
+			cursor:grabbing;
+		}
+		
+		&.left {
+			left:var(--x-1);
+		}
+		
+		&.right {
+			left:var(--x-2);
+		}
+		
+		&::after {
+			content:'$'attr(data-value);
+			position:absolute;
+			top:100%;
+			left:50%;
+			transform:translateX(-50%);
+		}
+	}
+}
+</style>
