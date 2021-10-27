@@ -67,7 +67,7 @@
                      </div>
                   </div>
                </nav>
-               <div class="filter-total-result">{{collection.all_products_count}} {{ paginate.current_offset}}
+               <div class="filter-total-result">
                   {% assign productCount = collection.all_products_count | minus: paginate.current_offset %}
                   <h6>{{collection.title}} - {{ productCount}} {{ productCount | pluralize: 'item', 'items' }}</h6>
                </div>
