@@ -353,8 +353,14 @@ div#recover .form_title, div#login .form_title {
   margin-right: 0;
 }
 
-.login .field + a {
-  margin-top: 1rem;
+.login .field+a {
+    margin-top: 19px;
+    color: #989898;
+    font-size: 12px;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 .login p {
