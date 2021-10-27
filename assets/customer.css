@@ -804,3 +804,16 @@ li[data-address] > h2 {
 .addresses form > div:nth-of-type(7) + div[id] {
   margin-top: 1.5rem;
 }
+
+
+@media only screen and (max-width:1199px){
+.new__customer {
+    margin-left: 0;
+    max-width: 100%;
+    padding-left: 20px;
+}
+  .customer.login, .customer.register {
+    max-width: calc(100% - 60px);
+    padding: 70px 0 70px;
+}
+}
