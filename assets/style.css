@@ -341,8 +341,8 @@ cursor: not-allowed;
 	height: 100%;
 }
 .select__color .product-loop-variants .color_option span {
-	width: 44px;
-	height: 44px;
+	width: 25px;
+	height: 25px;
 	border: 1px solid #cdcdcd;
 }
 /* .feature-product .select__color .product-loop-variants .color_option span {
@@ -376,7 +376,7 @@ letter-spacing: 1.2px;
 	color: var(--color-secondary);
 }
 
-.feature-product .product-loop-variants.circle .color_option {
+/* .feature-product .product-loop-variants.circle .color_option {
     padding-top: 0px;
     margin-top:0;
 }
@@ -387,7 +387,7 @@ letter-spacing: 1.2px;
 	width: 35px;
 	height: 35px;
 	border: 1px solid transparent;
-}
+} */
 .select__color .product-loop-variants.circle .color_option input:checked + span.option, .select__color .product-loop-variants.circle .color_option:hover span.option {
 	padding: 2px;
 }
