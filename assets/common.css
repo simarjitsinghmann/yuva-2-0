@@ -711,7 +711,7 @@ header button.navbar-toggler:hover .span.navbar-toggler-icon:after {
 }
 }
 @media only screen and (min-width:992px){
-.container {
+.container, .custom-container {
     width: 970px;
 }
 .title, .title-wrapper-with-link {
@@ -719,7 +719,7 @@ header button.navbar-toggler:hover .span.navbar-toggler-icon:after {
 }
 }
 @media only screen and (min-width:1200px){
-.container {
+.container, .custom-container {
     width: 1140px;
 }
 }
