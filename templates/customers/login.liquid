@@ -154,6 +154,42 @@
     </div>
         </div>
 </div>
+    
+    
+    <div class="customer login">
+  <div class="grid grid--2-col">
+  	<div class="grid__item">
+      <div class="login__form">
+      <h6 class="form_title">Login</h6>
+        <form method="post" action="/account/login" id="customer_login" accept-charset="UTF-8" novalidate="novalidate" onsubmit="window.Shopify.recaptchaV3.addToken(this, &quot;customer_login&quot;); return false;">
+          <input type="hidden" name="form_type" value="customer_login">
+          <input type="hidden" name="utf8" value="✓">
+          <div class="field">        
+        	<input type="email" name="customer[email]" id="CustomerEmail" autocomplete="email" autocorrect="off" autocapitalize="off" placeholder="Email">
+      		<label for="CustomerEmail">Email</label>
+      	  </div>
+          <div class="field">          
+          <input type="password" value="" name="customer[password]" id="CustomerPassword" autocomplete="current-password" placeholder="Password">
+          <label for="CustomerPassword">
+            Password
+          </label>
+        </div>
+		<div class="remember">
+            <input type="checkbox" id="remember-dialog" name="remember-dialog">
+            <label for="remember-detail">Remember</label>
+         </div>
+        <a href="#recover">
+          Forgotten your password?
+        </a>
+          <button>Log In</button>
+      </form>
+    </div>     
+    </div>
+    <div class="grid__item">
+      
+    </div>
+   </div>
+    </div>
 <style>
   #recover:target {
     display: inline;
