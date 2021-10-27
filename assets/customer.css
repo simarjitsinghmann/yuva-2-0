@@ -72,7 +72,7 @@ div#recover .form_title, div#login .form_title, .new__customer h6 {
     font-size: 15px;
     letter-spacing: 0.5px;
 }
-.new__customer a.button.create__acount {
+.new__customer a.button.create__acount, .login a.cancel_recover {
     width: 100%;
     text-transform: uppercase;
     font-weight: var(--semibold);
@@ -81,6 +81,13 @@ div#recover .form_title, div#login .form_title, .new__customer h6 {
     border: 1px solid var(--color-primary);
     background: var(--bg-white);
     margin-top: 47px;
+}
+.login a.cancel_recover {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 10px;
+    min-height: 61px;
+    line-height: 37px;
 }
 .customer ul {
   line-height: 1.6;
