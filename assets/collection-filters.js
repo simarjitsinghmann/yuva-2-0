@@ -71,7 +71,7 @@ class dualRangeSlider {
     this.handles = [...this.range.querySelectorAll(".handle")]
     this.handlesLeft = [...this.range.querySelectorAll(".handle.left")]
     this.handlesRight = [...this.range.querySelectorAll(".handle.right")]
-    console.log(this.handlesLeft,this.handlesright);
+    console.log(this.handlesLeft,this.handlesRight);
     this.startPos = 0;
     this.activeHandle;
     this.handles.forEach(handle => {
