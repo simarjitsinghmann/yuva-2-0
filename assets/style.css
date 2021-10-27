@@ -928,7 +928,16 @@ ul.gallery-item li a > img {background: #f6f4f3;}
 }
 .prizebox { width: 100%; display: flex; align-items: center; margin-bottom: 19px; } 
 .prizebox .percent-off { line-height: 20px; color: var(--color-theme-text); font-weight: 600; font-size: 20px; } 
-.size_title { color: var(--product-heading); font-weight: var(--medium); margin-bottom: 13px; text-transform:uppercase; } 
+.size_title {
+    color: var(--product-heading);
+    font-weight: var(--medium);
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: var(--medium);
+    color: #282c3f;
+    margin-bottom: 9px;
+    letter-spacing: .4px;
+}
 .product-loop-variants .color_option span { font-size: 0px; width: 22px; height: 22px; color: inherit; display: inline-block; float: left; cursor: pointer; background-clip: content-box; padding: 2px; } 
 .prd--option1 .product-loop-variants.circle .color_option span { width: 22px; height: 22px; } 
 .select__size .product-loop-variants.size .size_option input { opacity: 0; position: absolute; cursor: pointer; z-index: 9; width: 100%; height: 100%; } 
