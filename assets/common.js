@@ -493,7 +493,9 @@ $(document).ready(function()
     });
   $(document).on('hover','#quick_view',function(){
     mouse_is_inside=true; 
+    console.log('inside')
     }, function(){ 
+    console.log('outside')
         mouse_is_inside=false; 
     })
     $("body").mouseup(function(){ 
