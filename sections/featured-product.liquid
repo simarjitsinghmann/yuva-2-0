@@ -186,82 +186,82 @@
 </script>
 {% endcomment %}
 {% schema %}
-   {
-    "name": "t:sections.featured-product.name",
-    "tag": "section",
-    "class":"feature-section",
-    "settings": [
-      {
-        "type": "product",
-        "id": "product",
-        "label": "t:sections.featured-product.settings.product.label"
-      }
-    ],
-    "blocks": [
-        {
-            "type": "@app"
-        },
-        {
-            "type": "title",
-            "name": "t:sections.featured-product.blocks.title.name",
-            "limit":1
-        },
-        {
-            "type": "text",
-            "name": "t:sections.featured-product.blocks.text.name",
-            "settings": [
-              {
-                "type": "text",
-                "id": "text",
-                "label": "t:sections.featured-product.blocks.text.settings.text.label"
-              }
-            ]
-        },
-        {
-            "type": "price",
-            "name": "t:sections.featured-product.blocks.price.name",
-            "limit":1
-        },
-        {
-            "type": "review-star",
-            "name": "t:sections.featured-product.blocks.review-star.name",
-            "limit":1
-        },
-        {
-            "type": "variant",
-            "name": "t:sections.product-template.blocks.variant.name",
-            "limit":1,
-            "settings":[]
-        },
-        {
-            "type": "quantity",
-            "name": "t:sections.featured-product.blocks.quantity.name",
-            "limit":1
-        },
-        {
-            "type": "button",
-            "name": "t:sections.featured-product.blocks.button.name",
-            "limit":1,
-            "settings": [
-            {
-                "type": "checkbox",
-                "id": "dynamic_checkout_btn",
-                "default":true,
-                "label": "t:sections.featured-product.blocks.button.settings.dynamic_checkout_btn.label"
-            }
-            ]
-        },
-        {
-            "type": "description",
-            "name": "t:sections.featured-product.blocks.description.name",
-            "limit":1
-        }
-    ],
-        "presets": [
-            {
-                "name": "t:sections.featured-product.presets.name",
-                "category": "Product"
-            }
-        ]
+
+{
+  "name": "t:sections.featured-product.name",
+  "tag": "section",
+  "class":"feature-section",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "t:sections.featured-product.settings.product.label"
     }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "title",
+      "name": "t:sections.featured-product.blocks.title.name",
+      "limit":1
+    },
+    {
+      "type": "text",
+      "name": "t:sections.featured-product.blocks.text.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "t:sections.featured-product.blocks.text.settings.text.label"
+        }
+      ]
+    },
+    {
+      "type": "price",
+      "name": "t:sections.featured-product.blocks.price.name",
+      "limit":1
+    },
+    {
+      "type": "review-star",
+      "name": "t:sections.featured-product.blocks.review-star.name",
+      "limit":1
+    },
+    {
+      "type": "variant",
+      "name": "t:sections.product-template.blocks.variant.name",
+      "limit":1
+    },
+    {
+      "type": "quantity",
+      "name": "t:sections.featured-product.blocks.quantity.name",
+      "limit":1
+    },
+    {
+      "type": "button",
+      "name": "t:sections.featured-product.blocks.button.name",
+      "limit":1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "dynamic_checkout_btn",
+          "default":true,
+          "label": "t:sections.featured-product.blocks.button.settings.dynamic_checkout_btn.label"
+        }
+      ]
+    },
+    {
+      "type": "description",
+      "name": "t:sections.featured-product.blocks.description.name",
+      "limit":1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.featured-product.presets.name",
+      "category": "Product"
+    }
+  ]
+}
 {% endschema %}
