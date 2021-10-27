@@ -287,7 +287,12 @@ div#recover .form_title, div#login .form_title {
     margin-bottom: 10rem;
   }
 }
-
+.customer input:-webkit-autofill,
+.customer input:-webkit-autofill:hover, 
+.customer input:-webkit-autofill:focus, 
+.customer input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
 .customer .pagination ul {
   display: flex;
   justify-content: center;
