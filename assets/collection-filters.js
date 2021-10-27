@@ -1,7 +1,7 @@
 (function () {
 
   function collectionFilters(){  
-
+new dualRangeSlider();
     var section = document.getElementById('CollectionProductsContainer')
     var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
     const filterForm = document.getElementById('CollectionFiltersForm'); 
