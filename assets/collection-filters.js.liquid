@@ -71,7 +71,6 @@ class dualRangeSlider {
     this.handles = [...this.range.querySelectorAll(".handle")]
     this.startPos = 0;
     this.activeHandle;
-	console.log('help')
     this.handles.forEach(handle => {
       handle.addEventListener("mousedown", this.startMove.bind(this))
       handle.addEventListener("touchstart", this.startMoveTouch.bind(this))
