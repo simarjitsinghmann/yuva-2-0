@@ -43,7 +43,7 @@
         <span>{{ filter.label | escape }}</span>
       </h6>
       <div class="center">
-        <div class="dual-range" data-min="0" data-max="{{filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}">
+        <div class="dual-range" data-min="0" data-max="{{filter.range_max | money_without_currency  }}">
           <span class="handle left" data-value="{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"></span>
           <span class="highlight"></span>
           <span class="handle right" data-value="{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"></span>
