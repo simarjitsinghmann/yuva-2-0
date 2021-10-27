@@ -883,6 +883,20 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
     margin-bottom: 3px;
     text-transform: capitalize;
 }
+.quick_view .quickviewcontent .prizebox #get_price {
+    color: #070707;
+    font-weight: 700;
+    line-height: normal;
+    align-items: center;
+    display: flex;
+    font-size: 24px;
+    letter-spacing: .3px;
+}
+.quick_view .quickviewcontent .size_option .option {
+    min-width: 30px;
+    font-size: 12px;
+    line-height: 23px;
+}
 /**Header-menu-end**/
 
 .top-header .navbar#nav_style_2 form .header__icons { justify-content: flex-end; } 
