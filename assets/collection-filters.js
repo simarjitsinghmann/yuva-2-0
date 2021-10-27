@@ -60,8 +60,8 @@ Array.from(removeFilters).forEach(function(removeFilter) {
 }); 
 }
 	
-	    window.addEventListener('DOMContentLoaded', () => {
-	new dualRangeSlider(document.querySelector(".dual-range"))
+window.addEventListener('DOMContentLoaded', () => {
+                        new dualRangeSlider(document.querySelector(".dual-range"))
 })
 class dualRangeSlider {
   constructor(rangeElement) {
@@ -71,7 +71,7 @@ class dualRangeSlider {
     this.handles = [...this.range.querySelectorAll(".handle")]
     this.startPos = 0;
     this.activeHandle;
-
+	console.log('help')
     this.handles.forEach(handle => {
       handle.addEventListener("mousedown", this.startMove.bind(this))
       handle.addEventListener("touchstart", this.startMoveTouch.bind(this))
