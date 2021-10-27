@@ -60,7 +60,22 @@ div#recover .form_title, div#login .form_title {
     font-weight: var(--semibold);
     font-size: 12px;
 }
-
+.new__customer__signup p {
+    color: var(--color-primary);
+    line-height: 25px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+.new__customer a.button.create__acount {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: var(--semibold);
+    font-size: 12px;
+    text-decoration: none;
+    border: 1px solid var(--color-primary);
+    background: var(--bg-white);
+    margin-top: 47px;
+}
 .customer ul {
   line-height: 1.6;
   padding-left: 4.4rem;
