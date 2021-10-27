@@ -72,10 +72,11 @@ class dualRangeSlider {
     this.handlesLeft = [...this.range.querySelectorAll(".handle.left")[0].dataset.value]
     this.handlesRight = [...this.range.querySelectorAll(".handle.right")[0].dataset.value]
     if(this.handlesLeft){
-    this.min =this.handlesLeft
+    this.min =Number(this.handlesLeft)
     }
     if(this.handlesRight){
-    this.max = this.handlesRight
+    this.max = Number(this.handlesRight)
+    
     }
     this.startPos = 0;
     this.activeHandle;
