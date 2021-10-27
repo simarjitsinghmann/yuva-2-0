@@ -4,6 +4,17 @@
   padding: 0 1.5rem;
   text-align: center;
 }
+div#recover, div#login {
+    border: 1px solid #dbdbdb;
+    background: var(--bg-white);
+    padding: 40px 45px;
+    text-align: left;
+}
+div#recover .form_title, div#login .form_title {
+    font-weight: var(--bold);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
 .customer.login {
     margin: 0 auto;
     max-width: 985px;
