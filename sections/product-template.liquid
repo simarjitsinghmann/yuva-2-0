@@ -74,7 +74,7 @@
                      {% for block in section.blocks %}
                         {% case block.type %}
                            {% when 'title' %}
-                           <h4>{{product.title}}</h4>
+                           <h2>{{product.title}}</h2>
                            {% when 'text' %}
                            <p class="single__product_sub_title">{{block.settings.text}}</p>
                            {% when 'review-star' %}
