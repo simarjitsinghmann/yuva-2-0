@@ -26,7 +26,7 @@
         </div>
 
         <div class="col-md-5 euqal-height right__side_bg">
-
+          {% unless section.settings.product == blank %}
           <div class="product-add-to-cart-right">
             {%- assign product_form_id = 'product-form-' | append: section.id -%}
             {% for block in section.blocks %}
@@ -164,7 +164,7 @@
             {% endcase %}
             {% endfor %}
           </div>
-          
+          {% endunless %}
         </div>
       </div>
     </div>
