@@ -1,6 +1,9 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
 <div class="customer register">
+  
+  <div class="grid .grid--2-col">
+  <div class="grid__item">
   <svg style="display: none">
     <symbol id="icon-error" viewBox="0 0 13 13">
       <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
@@ -117,4 +120,8 @@
       {{ 'customer.register.submit' | t }}
     </button>
   {%- endform -%}
+    </div>
+  <div class="grid__item">
+    </div>
+    </div>
 </div>
