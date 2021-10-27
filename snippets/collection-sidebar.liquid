@@ -130,7 +130,8 @@
 	border-radius:50px;
 	position:relative;
 	user-select:none;
-	.highlight {
+      }
+	.dual-range .highlight {
 		position:absolute;
 		height:var(--range-size);
 		width:calc(calc(var(--x-2) - var(--x-1)) + calc(var(--range-size) * var(--handle-size)));
@@ -151,25 +152,25 @@
 		transform:translateY(-50%);
 		z-index:2;
 		cursor:grab;
-		&:active {
+          }
+		.handle:active {
 			cursor:grabbing;
 		}
 		
-		&.left {
+		.handle.left {
 			left:var(--x-1);
 		}
 		
-		&.right {
+		.handle.right {
 			left:var(--x-2);
 		}
 		
-		&::after {
+		.handle::after {
 			content:'$'attr(data-value);
 			position:absolute;
 			top:100%;
 			left:50%;
 			transform:translateX(-50%);
 		}
-	}
 }
 </style>
