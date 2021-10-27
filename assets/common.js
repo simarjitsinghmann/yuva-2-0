@@ -519,7 +519,7 @@ $(document).on('click', '.quickView', function(evt) {
     }
   });
 });
-// $(document).on('click', '.quickViewClose',function(evt) {
-//   evt.preventDefault();
-//   $('body').removeClass('quickview-open');
-// })
+$(document).on('click', '.quickViewClose',function(evt) {
+  evt.preventDefault();
+  $('body').removeClass('quickview-open');
+})
