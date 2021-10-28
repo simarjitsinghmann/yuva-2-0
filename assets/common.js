@@ -506,20 +506,26 @@ $(document).on('click', '.quickView', function(evt) {
   var _url = $(this).data('href');
   $('.Quick_loader').fadeIn('slow');
   $('body').addClass('quickview-open');
-  $('#ProductQuickView').load(_url+'?view=quick-view #quickViewProduct', function() {
-      setTimeout(function(){
-  $('.Quick_loader').hide();
-        $('#ProductQuickView').show();
-        productVariants();
-      },500)  
-});
+//   $('#ProductQuickView').load(_url+'?view=quick-view #quickViewProduct', function() {
+//       setTimeout(function(){
+//   $('.Quick_loader').hide();
+//         $('#ProductQuickView').show();
+//         productVariants();
+//       },500)  
+// });
   fetch(_url+'?view=quick-view&section_id=quick-view-template')
 
   .then(response => response.text())
   .then(function(html) {
           // Convert the HTML string into a document object
           var parser = new DOMParser();
-     console.log(parser)     
+     
+      setTimeout(function(){
+        $('#ProductQuickView').html(parser);
+        $('.Quick_loader').hide();
+        $('#ProductQuickView').show();
+        productVariants();
+      },500)     
   });
 
  
@@ -529,3 +535,27 @@ $(document).on('click', '.quickViewClose',function(evt) {
   $('body').removeClass('quickview-open');
 })
 // shopify-section-quick-view-template
+
+$(document).on('click', '.quickView', function(evt) {
+  evt.preventDefault();
+  $('#ProductQuickView').hide();
+  var _url = $(this).data('href');
+  $('.Quick_loader').fadeIn('slow');
+  $('body').addClass('quickview-open');
+  $.ajax({
+    url:_url+'?view=quick-view',
+    type:'GET',
+    success: function(data){
+      setTimeout(function(){
+        $('#ProductQuickView').html(data);
+        $('.Quick_loader').hide();
+        $('#ProductQuickView').show();
+        productVariants();
+      },500)
+    }
+  });
+});
+$(document).on('click', '.quickViewClose',function(evt) {
+  evt.preventDefault();
+  $('body').removeClass('quickview-open');
+})
