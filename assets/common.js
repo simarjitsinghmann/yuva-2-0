@@ -512,35 +512,37 @@ $(document).ready(function()
 			$('.newsletter-popup,.wrapper-overlay').hide();
 		}
     });
+  $(document).on('click', '.quickView', function(evt) {
+    evt.preventDefault();
+    $('#ProductQuickView').hide();
+    var _url = $(this).data('href');
+    $('.Quick_loader').fadeIn('slow');
+    $('body').addClass('quickview-open');
+    $('#ProductQuickView').load(_url+'?view=quick-view', function() {
+      //     setTimeout(function(){
+      //       $('.Quick_loader').hide();
+      //       $('#ProductQuickView').show();
+      //       productVariants();
+      //     },500)
+    });
+    //   $.ajax({
+    //     url:_url+'?view=quick-view',
+    //     type:'GET',
+    //     success: function(data){
+    //       setTimeout(function(){
+    //         $('#ProductQuickView').html(data);
+    //         $('.Quick_loader').hide();
+    //         $('#ProductQuickView').show();
+    //         productVariants();
+    //       },500)
+    //     }
+    //   });
+  });
+  $(document).on('click', '.quickViewClose',function(evt) {
+    evt.preventDefault();
+    $('body').removeClass('quickview-open');
+  })
 });
 
-$(document).on('click', '.quickView', function(evt) {
-  evt.preventDefault();
-  $('#ProductQuickView').hide();
-  var _url = $(this).data('href');
-  $('.Quick_loader').fadeIn('slow');
-  $('body').addClass('quickview-open');
-  $('#ProductQuickView').load(_url+'?view=quick-view', function() {
-//     setTimeout(function(){
-//       $('.Quick_loader').hide();
-//       $('#ProductQuickView').show();
-//       productVariants();
-//     },500)
-  });
-//   $.ajax({
-//     url:_url+'?view=quick-view',
-//     type:'GET',
-//     success: function(data){
-//       setTimeout(function(){
-//         $('#ProductQuickView').html(data);
-//         $('.Quick_loader').hide();
-//         $('#ProductQuickView').show();
-//         productVariants();
-//       },500)
-//     }
-//   });
-});
-$(document).on('click', '.quickViewClose',function(evt) {
-  evt.preventDefault();
-  $('body').removeClass('quickview-open');
-})
+
+
