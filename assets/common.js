@@ -513,7 +513,7 @@ $(document).on('click', '.quickView', function(evt) {
         productVariants();
       },500)  
 });
-  fetch(_url+'?view=quick-view&section_id=shopify-section-quick-view-template')
+  fetch(_url+'?view=quick-view&section_id=quick-view-template')
 
   .then(response => response.text())
 .then(data => console.log(data));
