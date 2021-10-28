@@ -343,13 +343,13 @@
                  <ul class="resp-tabs-list easy_tabs">    
                   {% for block in section.blocks %}                  
                   {% if block.type == 'description_tab' and block.settings.width == 'full' %}  
-                   <li class="resp-tab-item easy_tabs" content="tabContent{{forloop.index}}"><a>Description</a></li> 
+                   <li class="resp-tab-item resp-tab-itemProduct easy_tabs" content="tabContent{{forloop.index}}"><a>Description</a></li> 
                    {% endif %}                   
                   {% if block.type == 'reviews_tab' and block.settings.width == 'full' %}   
-                  <li class="resp-tab-item easy_tabs" content="tabContent{{forloop.index}}"><a>Reviews</a></li> 
+                  <li class="resp-tab-item resp-tab-itemProduct easy_tabs" content="tabContent{{forloop.index}}"><a>Reviews</a></li> 
                   {% endif %}
                   {% if block.type == 'accordion' and block.settings.width == 'full' %}   
-                   <li class="resp-tab-item easy_tabs" content="tabContent{{forloop.index}}"><a>{{block.settings.heading}}</a></li> 
+                   <li class="resp-tab-item resp-tab-itemProduct easy_tabs" content="tabContent{{forloop.index}}"><a>{{block.settings.heading}}</a></li> 
                    {% endif %}
                    {% endfor %}
                  </ul>
@@ -359,17 +359,17 @@
                <div class="row">
                {% for block in section.blocks %}
                   {% if block.type == 'description_tab' and block.settings.width == 'full' %}   
-                     <div class="product-description tab-content resp-tab-content easy_tabs" id="tabContent{{forloop.index}}" aria-labelledby="easy_tabs_tab_item-2" style="display: none;">
+                     <div class="product-description tab-content resp-tab-content resp-tab-contentProduct easy_tabs" id="tabContent{{forloop.index}}" aria-labelledby="easy_tabs_tab_item-2" style="display: none;">
                         {{product.description}}             
                      </div>   
                   {% endif %}
                   {% if block.type == 'reviews_tab' and block.settings.width == 'full' %}   
-                     <div class="product-description tab-content resp-tab-content easy_tabs" id="tabContent{{forloop.index}}" aria-labelledby="easy_tabs_tab_item-2" style="display: none;">
+                     <div class="product-description tab-content resp-tab-content resp-tab-contentProduct easy_tabs" id="tabContent{{forloop.index}}" aria-labelledby="easy_tabs_tab_item-2" style="display: none;">
                         <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>           
                      </div> 
                   {% endif %}
                   {% if block.type == 'accordion' and block.settings.width == 'full' %}   
-                     <div class="product-description tab-content resp-tab-content easy_tabs" id="tabContent{{forloop.index}}" aria-labelledby="easy_tabs_tab_item-2" style="display: none;">
+                     <div class="product-description tab-content resp-tab-content resp-tab-contentProduct easy_tabs" id="tabContent{{forloop.index}}" aria-labelledby="easy_tabs_tab_item-2" style="display: none;">
                         {{block.settings.content}}            
                      </div> 
                   {% endif %}
