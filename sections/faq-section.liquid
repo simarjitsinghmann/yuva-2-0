@@ -1,7 +1,184 @@
+
+  <div class="container">
+    <div class="row">
+
+      <div class="faq-detail">
+        <h5>Frequently Asked Questions</h5>
+        <div class="accordion-container">
+          <div class="set">
+            <h6 class="panel-title">
+              <a href="javascript:void(0)">
+                How long will my items take to ship?
+                <i class="fa fa-plus"></i>
+              </a>
+            </h6>
+            <div class="content" style="display:none;">
+              <div class="panel-body">
+                <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p> 
+                <p>I’m a great place for you to tell a story and let your users know a little more about you.</p>
+              </div>
+            </div>
+          </div>
+          <div class="set">
+            <h6 class="panel-title">
+              <a href="javascript:void(0)">
+                Where do I find my tracking number?
+                <i class="fa fa-plus"></i>
+              </a>
+            </h6>
+            <div class="content" style="display:none;">
+              <div class="panel-body">
+                <p>This top-notch T-shirt from Roadster will have you looking fresh all year long. This white piece is incredibly versatile and can be matched with dark or light denim for an evening.</p>
+                <ul>
+                  <li>100% Original Products</li>
+                  <li>Pay on delivery might be available</li>
+                  <li>Easy 30 days returns and exchanges</li>
+                  <li>Try &amp; Buy might be available</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="set">
+            <h6 class="panel-title">
+              <a href="javascript:void(0)">
+                Do you provide International delivery?
+                <i class="fa fa-plus"></i>
+              </a>
+            </h6>
+            <div class="content" style="display:none;">
+              <div class="panel-body">
+                <p>This top-notch T-shirt from Roadster will have you looking fresh all year long. This white piece is incredibly versatile and can be matched with dark or light denim for an evening.</p>
+                <ul>
+                  <li>100% Original Products</li>
+                  <li>Pay on delivery might be available</li>
+                  <li>Easy 30 days returns and exchanges</li>
+                  <li>Try &amp; Buy might be available</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="set">
+            <h6 class="panel-title">
+              <a href="javascript:void(0)">
+                What are your delivery options?
+                <i class="fa fa-plus"></i>
+              </a>
+            </h6>
+            <div class="content" style="display:none;">
+              <div class="panel-body">
+                <p>This top-notch T-shirt from Roadster will have you looking fresh all year long. This white piece is incredibly versatile and can be matched with dark or light denim for an evening.</p>
+                <ul>
+                  <li>100% Original Products</li>
+                  <li>Pay on delivery might be available</li>
+                  <li>Easy 30 days returns and exchanges</li>
+                  <li>Try &amp; Buy might be available</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="set">
+            <h6 class="panel-title">
+              <a href="javascript:void(0)">
+                What is your returns policy?
+                <i class="fa fa-plus"></i>
+              </a>
+            </h6>
+            <div class="content" style="display:none;">
+              <div class="panel-body">
+                <p>This top-notch T-shirt from Roadster will have you looking fresh all year long. This white piece is incredibly versatile and can be matched with dark or light denim for an evening.</p>
+                <ul>
+                  <li>100% Original Products</li>
+                  <li>Pay on delivery might be available</li>
+                  <li>Easy 30 days returns and exchanges</li>
+                  <li>Try &amp; Buy might be available</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Contact us",
+	"templates":["page"],
+	"tag":"section",
+	"class":"contact-page-form-section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "banner",
+        "label": "t:sections.contact-page-template.settings.banner.label"
+      },
+      {
+        "type": "header",
+        "content": "Contact Details"
+      },
+      {
+        "type": "text",
+        "id": "contact_heading",
+        "default": "Customer Service",
+        "label": "t:sections.contact-page-template.settings.contact_heading.label"
+      },
+      {
+        "type": "text",
+        "id": "phone_heading",
+        "default": "PHONE US",
+        "label": "t:sections.contact-page-template.settings.phone_heading.label"
+      },
+      {
+        "type": "text",
+        "id": "phone_number",
+        "default": "+1234567890",
+        "label": "t:sections.contact-page-template.settings.phone_number.label"
+      },
+      {
+        "type": "text",
+        "id": "email_heading",
+        "default": "EMAIL",
+        "label": "t:sections.contact-page-template.settings.email_heading.label"
+      },
+      {
+        "type": "text",
+        "id": "email",
+        "default": "info@yuva.com",
+        "label": "t:sections.contact-page-template.settings.email_number.label"
+      },
+      {
+        "type": "text",
+        "id": "address_heading",
+        "default": "ADDRESS",
+        "label": "t:sections.contact-page-template.settings.address_heading.label"
+      },
+      {
+        "type": "text",
+        "id": "address",
+        "default": "#123 abc main city",
+        "label": "t:sections.contact-page-template.settings.address_number.label"
+      },
+      {
+        "type": "header",
+        "content": "Contact Form"
+      },
+      {
+        "type": "text",
+        "id": "form_heading",
+        "default": "Get In Touch",
+        "label": "t:sections.contact-page-template.settings.form_heading.label"
+      },
+      {
+        "type": "text",
+        "id": "form_button",
+        "default": "SEND MESSAGE",
+        "label": "t:sections.contact-page-template.settings.form_button.label"
+      },
+      {
+        "type": "richtext",
+        "id": "form_info",
+        "label": "t:sections.contact-page-template.settings.form_info.label"
+      }
+    ]
   }
 {% endschema %}
 
