@@ -16,7 +16,7 @@
     <div class="product-add-to-cart-right">
                   
       <div class="clearfix"> </div>
-      <h2>{{ product.title | default: 'Example Product Title' }}</h2>
+      <h2><a href="{{product.url}}">{{ product.title | default: 'Example Product Title' }}</a></h2>
       <p class="vendor_name">{{product.vendor}}</p>
       <div class="ratingbox">
         <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
