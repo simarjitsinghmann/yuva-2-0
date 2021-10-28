@@ -26,7 +26,7 @@ changeItem = function(line, quantity, callback) {
 $(document).on('submit','[action="/cart/add"]', function(evt) {
     evt.preventDefault();
   	var submit = $(this).find('[type="submit"]');
-  submit.addClass('is-loading');
+  	submit.addClass('is-loading');
     params = {
         type: 'POST',
         url: '/cart/add.js',
