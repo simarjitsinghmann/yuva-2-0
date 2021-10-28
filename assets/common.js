@@ -520,7 +520,7 @@ $(document).on('click', '.quickView', function(evt) {
           // Convert the HTML string into a document object
           var parser = new DOMParser();
           var doc = parser.parseFromString(html, 'text/html');    
-          var div = doc.querySelector('.product-section[data-product-handle="'+data.handle+'"]');
+          var div = doc.querySelector('#shopify-section-quick-view-template');
      	console.log(html)
       setTimeout(function(){
         $('#ProductQuickView').html(doc);
@@ -538,26 +538,26 @@ $(document).on('click', '.quickViewClose',function(evt) {
 })
 // shopify-section-quick-view-template
 
-$(document).on('click', '.quickView', function(evt) {
-  evt.preventDefault();
-  $('#ProductQuickView').hide();
-  var _url = $(this).data('href');
-  $('.Quick_loader').fadeIn('slow');
-  $('body').addClass('quickview-open');
-  $.ajax({
-    url:_url+'?view=quick-view',
-    type:'GET',
-    success: function(data){
-      setTimeout(function(){
-        $('#ProductQuickView').html(data);
-        $('.Quick_loader').hide();
-        $('#ProductQuickView').show();
-        productVariants();
-      },500)
-    }
-  });
-});
-$(document).on('click', '.quickViewClose',function(evt) {
-  evt.preventDefault();
-  $('body').removeClass('quickview-open');
-})
+// $(document).on('click', '.quickView', function(evt) {
+//   evt.preventDefault();
+//   $('#ProductQuickView').hide();
+//   var _url = $(this).data('href');
+//   $('.Quick_loader').fadeIn('slow');
+//   $('body').addClass('quickview-open');
+//   $.ajax({
+//     url:_url+'?view=quick-view',
+//     type:'GET',
+//     success: function(data){
+//       setTimeout(function(){
+//         $('#ProductQuickView').html(data);
+//         $('.Quick_loader').hide();
+//         $('#ProductQuickView').show();
+//         productVariants();
+//       },500)
+//     }
+//   });
+// });
+// $(document).on('click', '.quickViewClose',function(evt) {
+//   evt.preventDefault();
+//   $('body').removeClass('quickview-open');
+// })
