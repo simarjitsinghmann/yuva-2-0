@@ -519,3 +519,4 @@ $(document).on('click', '.quickViewClose',function(evt) {
   evt.preventDefault();
   $('body').removeClass('quickview-open');
 })
+// shopify-section-quick-view-template
