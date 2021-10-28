@@ -522,22 +522,14 @@ $(document).ready(function()
     }
     $('.Quick_loader').fadeIn('slow');
     $('body').addClass('quickview-open');
-//     $('#ProductQuickView').load(_url+'?view=quick-view', function() {
-//           setTimeout(function(){
-//             $('.Quick_loader').hide();
-//             $('#ProductQuickView').show();
-//             productVariants();
-//           },500)
-//     });
-    $.ajax(_url+'?view=quick-view', {
-    success: function(response) {
-      $('#ProductQuickView').html(response);
+    $('#ProductQuickView').load(_url+'?view=quick-view', function() {
+          setTimeout(function(){
             $('.Quick_loader').hide();
             $('#ProductQuickView').show();
             productVariants();
-      document.addEventListener("DOMContentLoaded",$('#ProductQuickView'));
-    }
-  });
+          },500)
+    });
+
     //   $.ajax({
     //     url:_url+'?view=quick-view',
     //     type:'GET',
