@@ -35,8 +35,8 @@ $(document).on('submit','[action="/cart/add"]', function(evt) {
         // beforeSend: function(jqxhr, settings) {
         //   $body.trigger('beforeAddItem.ajaxCart', form);
         // },
-        success: function(line_item) {    
-            $('#qucikview').hide();            
+        success: function(line_item) {           
+          $('body').removeClass('quickview-open');            
             jQuery.getJSON('/cart.js', function (cart, textStatus) {
                 buildCart(cart,true);
               setTimeout(function(){
