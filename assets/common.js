@@ -521,9 +521,9 @@ $(document).on('click', '.quickView', function(evt) {
           var parser = new DOMParser();
           var doc = parser.parseFromString(html, 'text/html');    
           var div = doc.querySelector('#shopify-section-quick-view-template');
-     	console.log(html)
+     	console.log(div)
       setTimeout(function(){
-        $('#ProductQuickView').html(doc);
+        $('#ProductQuickView').html(div);
         $('.Quick_loader').hide();
         $('#ProductQuickView').show();
         productVariants();
