@@ -1185,8 +1185,8 @@ clear:both;
     margin-top: 12px;
 }
 .single__product__right .askmeMain .askmecontainer .productheading {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 .single__product__right .askmeMain .askmecontainer form#contact_form {
@@ -1938,4 +1938,7 @@ button.is-loading {font-size:0;}
     border-radius: 0;
     appearance: none;
     box-shadow: none;
+}
+button.shopify-payment-button__more-options[aria-disabled="true"] {
+display: none;
 }
