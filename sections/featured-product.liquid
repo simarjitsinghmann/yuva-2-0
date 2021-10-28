@@ -140,7 +140,7 @@
             </div>
                      {% when 'social-icons' %}
                      <div class="social-icons">
-                      {% include 'social-sharing' %}
+                      {% include 'social-sharing' , share_title: product.title, share_permalink: product.url, share_image: product%}
                      </div>
                      {% when 'contact-form' %}
                      <div class="product-contact-form">
