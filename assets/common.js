@@ -523,8 +523,8 @@ $(document).ready(function()
     $('.Quick_loader').fadeIn('slow');
     $('body').addClass('quickview-open');
     $('#ProductQuickView').load(_url+'?view=quick-view', function() {
-     
-      var url = $('#ProductQuickView').find('.product-recommendations').attr('data-url');
+     var recommended = $('#ProductQuickView').find('.product-recommendations');
+      var url = recommended.attr('data-url');
       fetch(url)
       .then(response => response.text())
       .then((text) => {
