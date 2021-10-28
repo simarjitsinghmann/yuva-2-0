@@ -1,9 +1,52 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
-{% endschema %}
+<div class="container product-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=1">
+  <div class="row">
+    {%- if recommendations.performed and recommendations.products_count > 0 -%}
+    <div id="SimilarProductsMain" class="recent-product">
+      <div class="recent-product-header shopify__top__section">
+        <h4>Recent Product</h4>
+      </div>
+      <div class="recent-product-slide owl-carousel owl-theme">
+        {%- for product in recommendations.products -%}
+        <div class="item">
+          <div class="slider-content">
+            {% include 'product-grid' hideRelated:true,hideQuickView:true %}
+          </div>
+        </div>
+      {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+  </div>
+
+</div>
+  <script>
+    $(document).ready(function(){
+      var recomend = setInterval(function(){
+        if($('.recent-product-slide').length > 0 ){
+          $('.recent-product-slide').owlCarousel({
+            center: false,
+            items: 6,
+            loop: false,
+            margin: 26,
+            dots:false,
+            slideSpeed: 1200,
+            paginationSpeed: 500,
+            responsiveClass:true
+          });
+          clearInterval(recomend);
+        }
+      },100)
+    })
+    </script>
+  {% schema %}
+    {
+      "name": "Product recommendations",
+      "tag":"section",
+      "settings": []
+    }
+  {% endschema %}
+  
+
 
 {% stylesheet %}
 {% endstylesheet %}
