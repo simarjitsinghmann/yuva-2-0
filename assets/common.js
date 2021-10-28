@@ -516,8 +516,8 @@ $(document).ready(function()
     evt.preventDefault();
     $('#ProductQuickView').hide();
     var _url = $(this).data('href');
-    if(_url.indexOf('?pr_prod_strat') > -1){
-      _url = _url.split("?pr_prod_strat");
+    if(_url.indexOf('?') > -1){
+      _url = _url.split("?");
       _url = _url[0]
     }
     $('.Quick_loader').fadeIn('slow');
