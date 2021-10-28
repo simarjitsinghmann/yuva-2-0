@@ -354,7 +354,7 @@ $('.toggle-level').click(function(){
               }
             }
             var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
-            if(getVariant.available == true){";
+            if(getVariant.available == true){
               if(advancePayment){
               paymentButtonWrapper.removeAttribute("disabled");
               }
