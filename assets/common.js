@@ -355,20 +355,20 @@ $('.toggle-level').click(function(){
             }
             var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
             if(getVariant.available == true){
-              if(advancePayment){
+              if(paymentButtonWrapper){
               paymentButtonWrapper.removeAttribute("disabled");
               }
-              if(advancePayment){
+              if(paymentButton){
               paymentButton.innerHTML  = "Add to Cart";
               }
               if(advancePayment){
                 advancePayment.style.display = "block";
               }
             }else{
-              if(advancePayment){
+              if(paymentButtonWrapper){
               paymentButtonWrapper.setAttribute("disabled", true);
               }
-              if(advancePayment){
+              if(paymentButton){
               paymentButton.innerHTML  = "Sold Out";  
               }            
               if(advancePayment){
@@ -377,10 +377,10 @@ $('.toggle-level').click(function(){
             }
           }
           else{
-              if(advancePayment){
+              if(paymentButtonWrapper){
             paymentButtonWrapper.setAttribute("disabled", true);
               }
-              if(advancePayment){
+              if(paymentButton){
             paymentButton.innerHTML  = "Unavailable"; 
               }           
               if(advancePayment){
