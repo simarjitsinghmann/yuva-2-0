@@ -530,7 +530,7 @@ $(document).ready(function()
       .then((text) => {
         const html = document.createElement('div');
         html.innerHTML = text;
-        recommended.find('.row').html(html)
+        recommended.html(html)
       setTimeout(function(){
         $('.Quick_loader').hide();
         $('#ProductQuickView').show();
