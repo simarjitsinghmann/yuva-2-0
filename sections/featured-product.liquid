@@ -35,6 +35,12 @@
             <h2>{{product.title}}</h2>
             {% when 'text' %}
             <p class="vendor_name">{{block.settings.text}}</p>
+            {% when 'inventory' %}            
+              {% if current_variant.available %}
+              <span id="variant-inventory" class="product-instock product-stock">{{ 'products.product.in_stock' | t }}</span>
+              {% else %}
+              <span id="variant-inventory" class="product-outstock product-stock">{{ 'products.product.out_stock' | t }}</span>
+              {% endif %}
             {% when 'review-star' %}
             <div class="ratingbox">
               <div class="star-rating">
