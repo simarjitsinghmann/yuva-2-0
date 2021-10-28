@@ -1826,3 +1826,17 @@ justify-content: center
     justify-content: center;
     align-items: center;
 }
+.list--inline.pagination a {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-color: #cecece;
+    border-radius: 100%;
+}
+.list--inline.pagination a span {
+	display:block;
+  	width:100%
+}
+.list--inline.pagination a img {
+  max-width:100%;
+}
