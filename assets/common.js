@@ -506,13 +506,13 @@ $(document).on('click', '.quickView', function(evt) {
   var _url = $(this).data('href');
   $('.Quick_loader').fadeIn('slow');
   $('body').addClass('quickview-open');
-//   $('#ProductQuickView').load(_url+'?view=quick-view #quickViewProduct', function() {
-//       setTimeout(function(){
-//   $('.Quick_loader').hide();
-//         $('#ProductQuickView').show();
-//         productVariants();
-//       },500)
-  fetch('/products/product-handle?section_id=product-template')
+  $('#ProductQuickView').load(_url+'?view=quick-view #quickViewProduct', function() {
+      setTimeout(function(){
+  $('.Quick_loader').hide();
+        $('#ProductQuickView').show();
+        productVariants();
+      },500)
+  fetch(_url+'?view=quick-view&section_id=shopify-section-quick-view-template')
 
   .then(response => response.text())
 
