@@ -516,7 +516,11 @@ $(document).on('click', '.quickView', function(evt) {
   fetch(_url+'?view=quick-view&section_id=quick-view-template')
 
   .then(response => response.text())
-.then(data => console.log(data));
+  .then(function(html) {
+          // Convert the HTML string into a document object
+          var parser = new DOMParser();
+     console.log(parser)     
+  });
 
  
 });
