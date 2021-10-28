@@ -511,12 +511,12 @@ $(document).on('click', '.quickView', function(evt) {
   $('.Quick_loader').hide();
         $('#ProductQuickView').show();
         productVariants();
-      },500)
+      },500)  .then(data => console.log(data));
+
   fetch(_url+'?view=quick-view&section_id=shopify-section-quick-view-template')
 
   .then(response => response.text())
 
-  .then(data => console.log(data));
 });
  
 });
