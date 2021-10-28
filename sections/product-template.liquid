@@ -201,9 +201,9 @@
                                     {{ form | payment_button }}
                                     {% endif %}
                                  </div>
-                              </div>
-                           {% endform %}
-                     		{% when 'social-icons' %}
+                     </div>
+                     {% endform %}
+                     {% when 'social-icons' %}
                      <div class="social-icons">
                        <ul class="share-icons">
                          <li> <a target="_blank" href="#">
@@ -219,12 +219,12 @@
                            </a> 
                          </li>
                        </ul>
-                       </div>
+                     </div>
                      {% when 'contact-form' %}
                      <div class="product-contact-form">
                        <div class="ask_about"> 
                          <a href="javascript:;" class="ask_this_product" data-name="{{product.title}}"> 
-                           <i class="far fa-envelope"></i> Ask about this product</a>
+                           <i class="far fa-envelope"></i> {{block.settings.text}}</a>
                        </div>
                        <div class="askmeMain" style="display: none;">
                          <div class="askmecontainer">   
@@ -248,35 +248,35 @@
                            {%- form 'contact', id: 'ContactForm' -%}
 
 
-                             <input type="hidden" name="contact[product]" id="ContactFormProduct" placeholder="Product:" value="{{product.title}}">
-                             <div class="form-group">
-                               <label for="ContactFormName">Name</label>
-                               <input class="ask-me-form-control " type="text" name="contact[name]" id="ContactFormName" placeholder="Name" value="" required="">
-                             </div>    
-                             <div class="form-group">
-                               <div class="row">
-                                 <div class="col-md-6 width-50">
-                                   <label for="ContactFormEmail">Email</label>
-                                   <input class="ask-me-form-control " type="email" name="contact[email]" id="ContactFormEmail" placeholder="Email" value="" spellcheck="false" autocomplete="off" autocapitalize="off" required="">
+                           <input type="hidden" name="contact[product]" id="ContactFormProduct" placeholder="Product:" value="{{product.title}}">
+                           <div class="form-group">
+                             <label for="ContactFormName">Name</label>
+                             <input class="ask-me-form-control " type="text" name="contact[name]" id="ContactFormName" placeholder="Name" value="" required="">
+                           </div>    
+                           <div class="form-group">
+                             <div class="row">
+                               <div class="col-md-6 width-50">
+                                 <label for="ContactFormEmail">Email</label>
+                                 <input class="ask-me-form-control " type="email" name="contact[email]" id="ContactFormEmail" placeholder="Email" value="" spellcheck="false" autocomplete="off" autocapitalize="off" required="">
 
-                                 </div>
-                                 <div class="col-md-6 width-50">
-                                   <input class="ask-me-form-control " type="tel" name="contact[phone]" id="ContactFormPhone" placeholder="Phone Number" value="" pattern="[0-9\-]*">
-                                 </div>
+                               </div>
+                               <div class="col-md-6 width-50">
+                                 <input class="ask-me-form-control " type="tel" name="contact[phone]" id="ContactFormPhone" placeholder="Phone Number" value="" pattern="[0-9\-]*">
                                </div>
                              </div>
-                             <div class="form-group">
-                               <label for="ContactFormMessage">Message</label>
-                               <textarea class="ask-me-form-control " rows="10" name="contact[body]" id="ContactFormMessage" placeholder="Message" required=""></textarea>
-                             </div>
-                             <input type="submit" class="button submit-button" value="Send">
+                           </div>
+                           <div class="form-group">
+                             <label for="ContactFormMessage">Message</label>
+                             <textarea class="ask-me-form-control " rows="10" name="contact[body]" id="ContactFormMessage" placeholder="Message" required=""></textarea>
+                           </div>
+                           <input type="submit" class="button submit-button" value="Send">
                            {% endform %}
                          </div>
                        </div>
 
 
                      </div>
-                           {% when 'description_tab' %}
+                     {% when 'description_tab' %}
                               {% if block.settings.width == 'half' %}
                                  <div class="product-detail">
                                     <div class="accordion-container">
@@ -523,6 +523,24 @@ li.resp-tab-item.easy_tabs.active a:before {
             "type": "review-star",
             "name": "t:sections.product-template.blocks.review-star.name",
             "limit":1
+        },
+        {
+            "type": "social-icons",
+            "name": "t:sections.product-template.blocks.social-icons.name",
+            "limit":1
+        },
+        {
+            "type": "contact-form",
+            "name": "t:sections.product-template.blocks.contact-form.name",
+            "limit":1,
+			"settings":[
+				{
+                  "type": "text",
+                  "id": "text",
+                  "default":"Ask about this product",
+                  "label": "t:sections.product-template.blocks.contact-form.settings.text.label"
+				}
+			]
         },
         {
             "type": "variant",
