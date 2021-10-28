@@ -1919,15 +1919,16 @@ li.resp-tab-item.easy_tabs.active a:before {
 }
 button.is-loading {font-size:0;}
 .askmecontainer .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
-.ask-me-form-control  {
-    height: 50px;
+.ask-me-form-control {
+    height: 51px;
     padding: 5px 20px;
     color: #000;
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #000;
     font-size: 13px;
     border-radius: 0;
     appearance: none;
+    box-shadow: none;
 }
