@@ -340,7 +340,9 @@ $('.toggle-level').click(function(){
             return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
           });
           var getVariant = variantChange(options,_productParent);
-
+			
+            var paymentButtonWrapper = _productParent.querySelectorAll('.Sd_addProduct')[0]
+            var paymentButton = _productParent.querySelectorAll('.Sd_addProduct span')[0]
           if(getVariant != undefined){
             if(getVariant.featured_media != null){
               var image= getVariant.featured_media['preview_image']['src'];
@@ -352,23 +354,35 @@ $('.toggle-level').click(function(){
               }
             }
             var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
-            if(getVariant.available == true){
-              _productParent.querySelectorAll('.Sd_addProduct')[0].removeAttribute("disabled");
-              _productParent.querySelectorAll('.Sd_addProduct span')[0].innerHTML  = "Add to Cart";
+            if(getVariant.available == true){";
+              if(advancePayment){
+              paymentButtonWrapper.removeAttribute("disabled");
+              }
+              if(advancePayment){
+              paymentButton.innerHTML  = "Add to Cart";
+              }
               if(advancePayment){
                 advancePayment.style.display = "block";
               }
             }else{
-              _productParent.querySelectorAll('.Sd_addProduct')[0].setAttribute("disabled", true);
-              _productParent.querySelectorAll('.Sd_addProduct span')[0].innerHTML  = "Sold Out";              
+              if(advancePayment){
+              paymentButtonWrapper.setAttribute("disabled", true);
+              }
+              if(advancePayment){
+              paymentButton.innerHTML  = "Sold Out";  
+              }            
               if(advancePayment){
                 advancePayment.style.display = "none";
               }
             }
           }
           else{
-            _productParent.querySelectorAll('.Sd_addProduct')[0].setAttribute("disabled", true);
-            _productParent.querySelectorAll('.Sd_addProduct span')[0].innerHTML  = "Unavailable";            
+              if(advancePayment){
+            paymentButtonWrapper.setAttribute("disabled", true);
+              }
+              if(advancePayment){
+            paymentButton.innerHTML  = "Unavailable"; 
+              }           
               if(advancePayment){
                 advancePayment.style.display = "none";
               }
