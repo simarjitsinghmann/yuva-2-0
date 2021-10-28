@@ -513,13 +513,14 @@ $(document).on('click', '.quickView', function(evt) {
 //         productVariants();
 //       },500)  
 // });
-  fetch(_url+'?view=quick-view&section_id=quick-view-template')
+  fetch(_url+'?view=quick-view')
 
   .then(response => response.text())
   .then(function(html) {
           // Convert the HTML string into a document object
           var parser = new DOMParser();
-          var doc = parser.parseFromString(html, 'text/html');
+          var doc = parser.parseFromString(html, 'text/html');    
+          var div = doc.querySelector('.product-section[data-product-handle="'+data.handle+'"]');
      	console.log(html)
       setTimeout(function(){
         $('#ProductQuickView').html(doc);
