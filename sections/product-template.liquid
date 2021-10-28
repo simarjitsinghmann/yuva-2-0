@@ -220,8 +220,12 @@
                          </li>
                        </ul>
                        </div>
+                     {% when 'contact-form' %}
                      <div class="product-contact-form">
-                       <div class="ask_about"> <a href="javascript:;" class="ask_this_product" data-name="Women luggage bag"> <i class="far fa-envelope"></i> Ask about this product</a></div>
+                       <div class="ask_about"> 
+                         <a href="javascript:;" class="ask_this_product" data-name="{{product.title}}"> 
+                           <i class="far fa-envelope"></i> Ask about this product</a>
+                       </div>
                        <div class="askmeMain" style="display: none;">
                          <div class="askmecontainer">   
                            <a href="javascript:;" class="ask_cross">
@@ -238,7 +242,7 @@
                                <path d="M1235.63,300.5l5.11-5.115a0.813,0.813,0,0,0-1.15-1.15l-5.11,5.115-5.12-5.115a0.813,0.813,0,1,0-1.15,1.15l5.12,5.115-5.12,5.116a0.809,0.809,0,0,0,0,1.15,0.82,0.82,0,0,0,.58.238,0.8,0.8,0,0,0,.57-0.238l5.12-5.115,5.11,5.115a0.814,0.814,0,0,0,1.15,0,0.809,0.809,0,0,0,0-1.15Z" transform="translate(-1228 -294)"></path>
                              </svg>    
                            </a>
-                           <h3 class="productheading">Women luggage bag</h3>    
+                           <h3 class="productheading">{{product.title}}</h3>    
 
 
                            {%- form 'contact', id: 'ContactForm' -%}
