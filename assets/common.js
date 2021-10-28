@@ -531,14 +531,12 @@ $(document).ready(function()
         const html = document.createElement('div');
         html.innerHTML = text;
         
-       console.log($('#ProductQuickView').find('.product-recommendations'),text)
-      });
-      return false;
       setTimeout(function(){
         $('.Quick_loader').hide();
         $('#ProductQuickView').show();
         productVariants();
       },500)
+      });
     });
   });
   $(document).on('click', '.quickViewClose',function(evt) {
