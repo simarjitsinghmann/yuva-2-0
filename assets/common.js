@@ -524,9 +524,8 @@ $(document).ready(function()
     $('body').addClass('quickview-open');
     $('#ProductQuickView').load(_url+'?view=quick-view', function() {
      
-      var getID = $('#ProductQuickView').find('.product-recommendations').attr('data-id'); 
-      var getSection = $('#ProductQuickView').find('.product-recommendations').attr('data-section'); 
-      fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
+      var url = $('#ProductQuickView').find('.product-recommendations').attr('data-url');
+      fetch(url)
       .then(response => response.text())
       .then((text) => {
         const html = document.createElement('div');
