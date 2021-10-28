@@ -464,59 +464,6 @@
 }
 </script>
 
-   <style>
-      li.resp-tab-item.easy_tabs a {
-    color: #757575;
-    font-size: 15px;
-    text-transform: uppercase;
-    line-height: 30px;
-    font-weight: 500;
-    padding: 15px 0;
-    display: inline-block;
-    position: relative;
-    margin-left: 0;
-    cursor: pointer;
-}
-li.resp-tab-item.easy_tabs {
-    list-style: none;
-    width: auto;
-    text-align: left;
-    padding-right: 7%;
-}
-ul.resp-tabs-list.easy_tabs {
-    justify-content: flex-start;
-    align-items: center;
-    display: flex;
-}
-.Specification-tabs {
-    text-align: center;
-    border-top: 1px solid #eff0f3;
-    border-bottom: 1px solid #eff0f3;
-    margin-top: 0;
-}
-li.resp-tab-item.easy_tabs.active a {
-    color: #000;
-    position: relative;
-}
-li.resp-tab-item.easy_tabs.active a:before {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: '';
-    background-color: #000;
-    width: 100%;
-    height: 2px;
-}
-.product-description.tab-content.resp-tab-content {
-    padding: 40px 0 25px;
-    width: 100%;
-    max-width: 950px;
-    text-align: left;
-}
-.product-description.tab-content.resp-tab-content :empty {
-   display:inline-block;
-}
-   </style>
 {{'slider.js' | asset_url | script_tag}}
 {% schema %}
 {
