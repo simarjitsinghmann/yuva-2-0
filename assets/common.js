@@ -518,8 +518,8 @@ $(document).on('click', '.quickView', function(evt) {
   .then(response => response.text())
   .then(function(html) {
           // Convert the HTML string into a document object
-          var parser = new DOMParser();
-     
+          var parser = new DOMParser(html);
+     	
       setTimeout(function(){
         $('#ProductQuickView').html(parser);
         $('.Quick_loader').hide();
