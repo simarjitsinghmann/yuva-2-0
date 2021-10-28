@@ -887,7 +887,7 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); li
 }
 .select-items .filter-clean { font-size:var(--extra-small); color: rgba(40, 40, 40, 0.7); letter-spacing: 0.1px; text-transform: uppercase; } 
 .select-items .filter-clean:hover, .filter-actions .select-items .select-item i:hover { color: var(--color-theme-text); } 
-.filter-actions .select-items .select-item { margin-top:10px; text-decoration: none; border: 0; border-radius: 0; color: #fff; font-weight: 300; padding: 3px 12px; letter-spacing: .1px; position: relative; margin-right: 15px; box-shadow: 0 1px 1px #dbdbdb; font-size: 13px; background: #000; text-transform: capitalize;}
+.filter-actions .select-items .select-item { margin-top:10px; text-decoration: none; border: 0; border-radius: 0; color: #fff; font-weight: 300; padding: 3px 12px; letter-spacing: .1px; position: relative; margin-right: 9px; display:inline-block; box-shadow: 0 1px 1px #dbdbdb; font-size: 13px; background: #000; text-transform: capitalize;}
 .toolbox-right .toolbox-item.toolbox-layout { float: left; padding-right: 20px; } 
 .toolbox-right .toolbox-item.toolbox-layout .btn-layout { text-decoration: none; margin: 0 5px; } 
 .filter-total-result h6 { font-size:var(--extra-small); line-height: 25px; color: #7e7e7e; letter-spacing: 0.4px; } 
