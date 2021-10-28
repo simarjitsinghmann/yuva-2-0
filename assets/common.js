@@ -511,13 +511,13 @@ $(document).on('click', '.quickView', function(evt) {
   $('.Quick_loader').hide();
         $('#ProductQuickView').show();
         productVariants();
-      },500)  .then(data => console.log(data));
-
+      },500)  
+});
   fetch(_url+'?view=quick-view&section_id=shopify-section-quick-view-template')
 
   .then(response => response.text())
+.then(data => console.log(data));
 
-});
  
 });
 $(document).on('click', '.quickViewClose',function(evt) {
