@@ -531,6 +531,7 @@ $(document).ready(function()
             $('.Quick_loader').hide();
             $('#ProductQuickView').show();
             productVariants();
+      document.addEventListener("DOMContentLoaded");
     }
   });
     //   $.ajax({
