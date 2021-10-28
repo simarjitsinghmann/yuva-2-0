@@ -1080,7 +1080,7 @@ ul.gallery-item li a > img {background: #f6f4f3;}
 
 .single__product__right .social-icons {
     display: inline-block;
-    float: left;
+/*     float: left; */
     width: 100%;
     align-items: flex-start;
     justify-content: flex-start;
@@ -1123,7 +1123,7 @@ ul.gallery-item li a > img {background: #f6f4f3;}
 }
 .single__product__right .social-icons .share-icons li a:hover, .single__product__right .social-icons .share-icons li a:hover svg {
     color: var(--color-primary);
-     fill: var(--color-primary);
+     fill: #fff;
 }
 .single__product__right .social-icons .share-icons li:last-child {
     margin-right: 0;
