@@ -523,6 +523,20 @@ $(document).ready(function()
     $('.Quick_loader').fadeIn('slow');
     $('body').addClass('quickview-open');
     $('#ProductQuickView').load(_url+'?view=quick-view', function() {
+      var getID = $(this).attr('data-id'); 
+      var getSection = $(this).attr('data-section'); 
+      fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
+      .then(response => response.text())
+      .then((text) => {
+        const html = document.createElement('div');
+        html.innerHTML = text;
+        const recommendations = html.querySelector('.similarItemContainer');		
+        if (recommendations && recommendations.innerHTML.trim().length) {
+          document.querySelector('.results-similarItemContainer').innerHTML = recommendations.innerHTML;
+          $('.sp-loader').hide();
+          $('.results-similarItemContainer').show();
+        }
+      });
       setTimeout(function(){
         $('.Quick_loader').hide();
         $('#ProductQuickView').show();
