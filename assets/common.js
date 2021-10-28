@@ -523,6 +523,8 @@ $(document).ready(function()
     $('.Quick_loader').fadeIn('slow');
     $('body').addClass('quickview-open');
     $('#ProductQuickView').load(_url+'?view=quick-view', function() {
+      console.log($('#ProductQuickView').find('.product-recommendations'))
+      return false;
       var getID = $(this).attr('data-id'); 
       var getSection = $(this).attr('data-section'); 
       fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
