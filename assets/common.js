@@ -523,8 +523,7 @@ $(document).ready(function()
     $('.Quick_loader').fadeIn('slow');
     $('body').addClass('quickview-open');
     $('#ProductQuickView').load(_url+'?view=quick-view', function() {
-      console.log($('#ProductQuickView').find('.product-recommendations'))
-      return false;
+     
       var getID = $('#ProductQuickView').find('.product-recommendations').attr('data-id'); 
       var getSection = $('#ProductQuickView').find('.product-recommendations').attr('data-section'); 
       fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
@@ -532,13 +531,10 @@ $(document).ready(function()
       .then((text) => {
         const html = document.createElement('div');
         html.innerHTML = text;
-        const recommendations = html.querySelector('.similarItemContainer');		
-        if (recommendations && recommendations.innerHTML.trim().length) {
-          document.querySelector('.results-similarItemContainer').innerHTML = recommendations.innerHTML;
-          $('.sp-loader').hide();
-          $('.results-similarItemContainer').show();
-        }
+        
       });
+       console.log($('#ProductQuickView').find('.product-recommendations'))
+      return false;
       setTimeout(function(){
         $('.Quick_loader').hide();
         $('#ProductQuickView').show();
