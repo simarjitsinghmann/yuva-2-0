@@ -520,13 +520,13 @@ $(document).on('click', '.quickView', function(evt) {
   var _url = $(this).data('href');
   $('.Quick_loader').fadeIn('slow');
   $('body').addClass('quickview-open');
-//   $('#ProductQuickView').load(_url+'?view=quick-view', function() {
+  $('#ProductQuickView').load(_url+'?view=quick-view', function() {
 //     setTimeout(function(){
 //       $('.Quick_loader').hide();
 //       $('#ProductQuickView').show();
 //       productVariants();
 //     },500)
-//   });
+  });
 //   $.ajax({
 //     url:_url+'?view=quick-view',
 //     type:'GET',
