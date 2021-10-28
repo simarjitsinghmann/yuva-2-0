@@ -532,8 +532,8 @@ $(document).ready(function()
         const html = document.createElement('div');
         html.innerHTML = text;
         
+       console.log($('#ProductQuickView').find('.product-recommendations'),text)
       });
-       console.log($('#ProductQuickView').find('.product-recommendations'))
       return false;
       setTimeout(function(){
         $('.Quick_loader').hide();
