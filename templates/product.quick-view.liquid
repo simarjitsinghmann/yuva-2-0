@@ -5,8 +5,15 @@
     <div class="product-image-left">    
       <div id="feature__product-{{product.id}}" class="feature__product owl-carousel" data-slider-id="1">
           {% for image in product.images %}
-          <div class="item" data-thumb="{{image | img_url:'master'}}" >
+          <div class="item" >
               <img src="{{image | img_url:'master'}}" alt="">
+          </div>
+          {% endfor %}
+      </div> 
+      <div id="feature__product-{{product.id}}" class="feature__product owl-carousel" data-slider-id="1">
+          {% for image in product.images %}
+          <div class="item" >
+              <img src="{{image | img_url:'500x'}}" alt="">
           </div>
           {% endfor %}
       </div> 
