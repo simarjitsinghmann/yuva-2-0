@@ -499,49 +499,36 @@ jQuery('.quantity').each(function() {
 var mouse_is_inside = false;
 
 $(document).ready(function()
-{
-    $('#quick_view,.search-bar-container,.search-form,#mini__cart,#dropdown-customer,.newsletter-popup-inner,#similar__product,.side-menu').hover(function(){ 
-        mouse_is_inside=true; 
-    }, function(){ 
-        mouse_is_inside=false; 
-    });
+                  {
+  $('#quick_view,.search-bar-container,.search-form,#mini__cart,#dropdown-customer,.newsletter-popup-inner,#similar__product,.side-menu').hover(function(){ 
+    mouse_is_inside=true; 
+  }, function(){ 
+    mouse_is_inside=false; 
+  });
 
-    $("body").mouseup(function(){ 
-        if(! mouse_is_inside) {
-			$('body').removeClass('quickview-open').removeClass('nav-open').removeClass('addsearch').removeClass('small_search').removeClass('minicart-open').removeClass('customer-open').removeClass('NewsletterActive').removeClass('show__similar__products');
-			$('.newsletter-popup,.wrapper-overlay').hide();
-		}
-    });
+  $("body").mouseup(function(){ 
+    if(! mouse_is_inside) {
+      $('body').removeClass('quickview-open').removeClass('nav-open').removeClass('addsearch').removeClass('small_search').removeClass('minicart-open').removeClass('customer-open').removeClass('NewsletterActive').removeClass('show__similar__products');
+      $('.newsletter-popup,.wrapper-overlay').hide();
+    }
+  });
   $(document).on('click', '.quickView', function(evt) {
     evt.preventDefault();
     $('#ProductQuickView').hide();
     var _url = $(this).data('href');
     if(_url.indexOf('?pr_prod_strat') > -1){
-    	_url = _url.split("?pr_prod_strat");
-      	_url = _url[0]
+      _url = _url.split("?pr_prod_strat");
+      _url = _url[0]
     }
     $('.Quick_loader').fadeIn('slow');
     $('body').addClass('quickview-open');
     $('#ProductQuickView').load(_url+'?view=quick-view', function() {
-          setTimeout(function(){
-            $('.Quick_loader').hide();
-            $('#ProductQuickView').show();
-            productVariants();
-          },500)
+      setTimeout(function(){
+        $('.Quick_loader').hide();
+        $('#ProductQuickView').show();
+        productVariants();
+      },500)
     });
-
-    //   $.ajax({
-    //     url:_url+'?view=quick-view',
-    //     type:'GET',
-    //     success: function(data){
-    //       setTimeout(function(){
-    //         $('#ProductQuickView').html(data);
-    //         $('.Quick_loader').hide();
-    //         $('#ProductQuickView').show();
-    //         productVariants();
-    //       },500)
-    //     }
-    //   });
   });
   $(document).on('click', '.quickViewClose',function(evt) {
     evt.preventDefault();
