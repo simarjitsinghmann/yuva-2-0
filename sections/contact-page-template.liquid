@@ -385,8 +385,15 @@
     </style>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Contact us",
+	"templates":["page"],
+    "settings": [
+      {
+        "type": "text",
+        "id": "product",
+        "label": "t:sections.featured-product.settings.product.label"
+      }
+    ]
   }
 {% endschema %}
 
