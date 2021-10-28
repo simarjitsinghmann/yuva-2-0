@@ -387,7 +387,7 @@ $('.toggle-level').click(function(){
                 advancePayment.style.display = "none";
               }
           }
-        },200)
+        },100)
       })
     });
 
