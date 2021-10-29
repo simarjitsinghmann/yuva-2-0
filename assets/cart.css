@@ -14,11 +14,13 @@
     margin: 0 0 15px;
   }
   .cstm-cart-sec h3 span {
-    margin-left: 20px;
+    margin-left: 0;
     color: #7c7c7c;
     font-size: var(--reg-text);
     font-weight: 400;
   }
+.cstm-cart-sec h3 >span {
+margin-left:10px}
   .cstm-cart-sec .inner-box {
     border: 1px solid #e8e8e8;
     padding: 10px 30px;
