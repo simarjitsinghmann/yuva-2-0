@@ -185,7 +185,7 @@ div#banner-slide > img { width: 100%;}
 .title { font-family: var(--font-family);color: var(--black); line-height: 45px; text-align: left; font-weight: var(--semibold); margin:0;font-size:28px;} 
 .collection-detail h4{ font-family: var(--font-family); line-height: 45px; color: var(--black); font-weight: var(--medium); padding: 21px 0 10px; letter-spacing: 0.2px; } 
 
-.collection-detail small { font-family: var(--font-family);font-weight: var(--normal); color: var(--dark-gray); font-size:var(--font-normal); line-height: 20px; width: 100%; display: block; margin: 0 auto 13px; letter-spacing: 0; letter-spacing: 0.2px;max-width: 315px; } 
+.collection-detail small { font-family: var(--font-family);font-weight: var(--normal); color: var(--dark-gray); font-size:var(--reg-text); line-height: 20px; width: 100%; display: block; margin: 0 auto 13px; letter-spacing: 0; letter-spacing: 0.2px;max-width: 315px; } 
 .view-all { font-size: var(--small-text); line-height: 15px; color: var(--dark-gray); letter-spacing: 0.2px; text-decoration: none; border-bottom: 1px solid #a1a1a1;font-weight: var(--normal); } 
 .view-all:hover { color: var(--theme-color); border-color: var(--theme-color); } 
 .view-all.corner-view {
@@ -219,7 +219,7 @@ div#banner-slide > img { width: 100%;}
 .card__warpper__detail.left__sided { padding-right: 15px; } 
 .card__warpper__detail.left__sided .collection-image { width: 100%; } 
 .collection-detail-right h5 { color: var(--black); line-height: 45px; font-weight: var(--medium); letter-spacing: 0.2px; font-size:20px;} 
-.collection-detail-right small { font-size:var(--font-normal); color: var(--dark-gray); line-height: 22px; letter-spacing: 0.3px; margin-bottom: 15px;font-weight: var(--normal);} 
+.collection-detail-right small { font-size:var(--reg-text); color: var(--dark-gray); line-height: 22px; letter-spacing: 0.3px; margin-bottom: 15px;font-weight: var(--normal);} 
 .collection-detail-right a{ color: var(--theme-color); font-size: var(--extra-small); text-decoration: none; font-weight: var(--normal); } 
 .collection-detail-right a svg { fill: var(--theme-color); font-size: var(--small-text); width: 12px; height: 12px; position: relative; top: 1px; } 
 .collection__right__list .grid__item__list { padding-bottom: 15px; } 
@@ -301,7 +301,7 @@ pointer-events: none !important;
 cursor: not-allowed;
 }
 .product-information__wrapper .price-item {
-	font-size: var(--font-normal);
+	font-size: var(--reg-text);
 	font-weight: var(--semibold);
 	color: var(--black);
 	line-height: 20px;
@@ -615,7 +615,7 @@ object-fit: cover; }
     line-height: 26px;
     text-decoration: none;
     font-weight: var(--medium);
-    font-size: var(--font-normal);
+    font-size: var(--reg-text);
 }
 .blog-variation2  .post-information__wrapper .post-name {
     width: 100%;
@@ -767,7 +767,7 @@ transform: scale(0.9);
 .instagram-post-detail:hover .insta-icon { opacity:1; visibility:visible; transition: 2s; } 
 .instagram-post-detail:hover img {transform: scale(1.2);transition: 2s;}
 .instagram-post { padding: 55px 0 60px; } 
-.shopify__top__section h6 span { color: var(--theme-color); font-weight: var(--normal);font-size: var(--font-normal);letter-spacing: 0.3px; } 
+.shopify__top__section h6 span { color: var(--theme-color); font-weight: var(--normal);font-size: var(--reg-text);letter-spacing: 0.3px; } 
 .instagram-post .shopify__top__section h4 { margin-bottom: 0px; } 
 .instagram-post .shopify__top__section h6 { margin-bottom: 30px; text-align:center;margin-top:3px;} 
 .instagram-post-list{width:100%;}
@@ -1101,7 +1101,7 @@ ul.gallery-item li a > img {background: #f6f4f3;}
 .shopify-payment-button { padding-right: 14px; width: 70%; margin-bottom: 15px;} 
 .product_button .pdp-action-container { display: flex; flex-wrap:wrap; } 
 .accordion-container .panel-title a { color: var(--product-heading); font-size:var(--font-size); line-height: 35px; text-decoration: none; font-weight: 600; letter-spacing: 0.2px; text-transform: uppercase; text-decoration:none; } 
-.accordion-container .panel-body p { font-size:var(--font-normal); line-height: 22px; color: var(--dark-gray); margin-bottom: 10px; } 
+.accordion-container .panel-body p { font-size:var(--reg-text); line-height: 22px; color: var(--dark-gray); margin-bottom: 10px; } 
 .single__product__right h4.panel-title { margin-top: 0px; position: relative; padding-right: 22px; } 
 .accordion-container .panel-body li, .accordion-container .panel-body li a { letter-spacing: 0.2px; font-size:var(--small-text); line-height: 29px; color: var(--dark-gray); text-decoration:none; } .single__product__right .set h4.panel-title { border-bottom: 1px solid #f0f0f0; padding: 10px 0px 13px; } 
 .set .content { border-bottom: 1px solid #f0f0f0; padding: 10px 0 22px; } 
