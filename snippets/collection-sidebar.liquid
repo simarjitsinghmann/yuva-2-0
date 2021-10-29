@@ -185,7 +185,7 @@
         }
 
         function rangeInputChangeEventHandler(e){
-          console.log($(this))
+          console.log($(this).context)
             var rangeGroup = $(this).attr('name'),
                 minBtn = $(this).parent().children('.min'),
                 maxBtn = $(this).parent().children('.max'),
