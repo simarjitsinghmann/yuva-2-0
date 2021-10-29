@@ -6,7 +6,7 @@
 }
 #recover, #login, #registerForm {
     border: 1px solid #dbdbdb;
-    background: var(--bg-white);
+    background: var(--white);
     padding: 40px 45px;
     text-align: left;
 }
@@ -43,7 +43,7 @@
 }
 .customer .field input:-webkit-autofill~label, .customer .field input:focus~label, .customer .field input:not(:placeholder-shown)~label, .field__input:-webkit-autofill~.field__label, .field__input:focus~.field__label, .field__input:not(:placeholder-shown)~.field__label {
     top: 0px;
-    background: var(--bg-white);
+    background: var(--white);
   	padding: 0px 3px;
 }
 
@@ -90,7 +90,7 @@
     font-size: 12px;
     text-decoration: none;
     border: 1px solid var(--color-primary);
-    background: var(--bg-white);
+    background: var(--white);
     margin-top: 47px;
       letter-spacing: .1rem;
 }
