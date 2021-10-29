@@ -74,10 +74,10 @@ function rangeInputChangeEventHandler(e){
 
   var minBtn = e.closest('.rangeslider').querySelectorAll('.min'),
       maxBtn = e.closest('.rangeslider').querySelectorAll('.max'),
-      minVal = parseInt(minBtn.getAttribute('value')),
-      maxVal = parseInt(maxBtn.getAttribute('value')),
+//       minVal = parseInt(minBtn.getAttribute('value')),
+//       maxVal = parseInt(maxBtn.getAttribute('value')),
       origin = e.getAttribute('class');
- console.log(minBtn,maxBtn,minVal,maxVal,origin)
+ console.log(minBtn,maxBtn,origin)
   if(origin === 'min' && minVal > maxVal-5){
     $(minBtn).val(maxVal-5);
   }
