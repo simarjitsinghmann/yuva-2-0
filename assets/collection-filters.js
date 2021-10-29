@@ -80,15 +80,16 @@ function rangeInputChangeEventHandler(e,section){
   if(origin === 'min' && minVal > maxVal-5){
     minBtn.value = maxVal-5;
   }
-  var minVal =  parseInt(minBtn.value);
-  section.querySelectorAll('input[name="filter.v.price.gte"]').value = minVal;
 
 
   if(origin === 'max' && maxVal-5 < minVal){
     maxBtn.value = 5+ minVal;
   }
+  var minVal =  parseInt(minBtn.value);
+  section.querySelectorAll('input[name="filter.v.price.gte"]').value = minVal;
   var maxVal =  parseInt(maxBtn.value);
   section.querySelectorAll('input[name="filter.v.price.lte"]').value = maxVal;
+  console.log(section, section.querySelectorAll('input[name="filter.v.price.gte"]'), section.querySelectorAll('input[name="filter.v.price.lte"]'))
 }
 
   function fetchFilterData(url){
