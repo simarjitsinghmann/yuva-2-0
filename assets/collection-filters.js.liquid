@@ -72,9 +72,8 @@ Array.from(priceRange).forEach(function(price) {
 
 function rangeInputChangeEventHandler(e){
 
-  var rangeGroup = $(this).attr('name'),
-      minBtn = $(this).parent().children('.min'),
-      maxBtn = $(this).parent().children('.max'),
+  var minBtn = e.closest('rangeslider').querySelectorAll('.min'),
+      maxBtn = e.closest('rangeslider').querySelectorAll('.max'),
       range_min = $(this).parent().children('.range_min'),
       range_max = $(this).parent().children('.range_max'),
       minVal = parseInt($(minBtn).val()),
