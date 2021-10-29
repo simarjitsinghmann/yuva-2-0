@@ -4,7 +4,9 @@
             
             <small>{{section.settings.heading}}</small>
             <h4>{{section.settings.subheading}} 
-          <a class="view-all corner-view" href="">View all</a>    
+              {% if section.settings.view_all_btn and section.settings.collection != blank %}
+          <a class="view-all corner-view" href="{{section.settings.collection.url}}">{{section.settings.view_all_btn_text}}</a>    
+              {% endif %}
           </h4>
             {% if section.settings.collection != blank %}
             {% assign collection = section.settings.collection %}
