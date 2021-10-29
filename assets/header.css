@@ -528,12 +528,12 @@ visibility: visible;
 .customer-note p { letter-spacing: .04em; font-size: var(--med-text); line-height: 18px; color: var(--color-black); padding: 13px 0 25px; } 
 .customer-content .ct-login label span { font-size: var(--med-text); letter-spacing: .04em; font-weight:var(--normal); color: var(--color-primary); } 
 .customer-content .ct-login .form-group { margin-bottom: 15px; } 
-.customer-content .ct-login input { font-size:var(--small-font); border: 1px solid var(--color-primary); background-color: var(--color_text_field); color: var(--color_text_field_text); border-radius: 0; height: auto; max-width: 100%; line-height: 40px; padding: 0 15px; max-height: 35px; background-clip: unset; }
+.customer-content .ct-login input { font-size:var(--small-text); border: 1px solid var(--color-primary); background-color: var(--color_text_field); color: var(--color_text_field_text); border-radius: 0; height: auto; max-width: 100%; line-height: 40px; padding: 0 15px; max-height: 35px; background-clip: unset; }
 .customer-title .close-customer .icon, .cart-product-title .close-customer .icon, .side-menu .icon { width: 15px; fill:var(--color-primary); color:var(--color-primary); opacity:1; } 
 .side-menu .icon{ font-size:18px;margin-right:18px;width: 18px;margin-top: -5px;}
 .customer-title .close-customer .icon:hover, .cart-product-title .close-customer .icon:hover, .side-menu .close-btn:hover .icon,media-link{ fill:var(--theme-color); color:var(--theme-color); }
 .customer-content .ct-login .action-btn .forgot-password { margin: 0 0 15px; display: inline-block; text-decoration: none; } 
-.customer-content .ct-login .action-btn .forgot-password span { font-size: var(--small-font); line-height: 18px; letter-spacing: .04em; color: var(--color-black); border-bottom: 1px solid var(--color-black); } 
+.customer-content .ct-login .action-btn .forgot-password span { font-size: var(--small-text); line-height: 18px; letter-spacing: .04em; color: var(--color-black); border-bottom: 1px solid var(--color-black); } 
 .customer-content  .ct-login .btn-login, .customer-content  .ct-register .btn { max-width: 100%; color: var(--white); line-height: normal; padding: 10px; background-repeat: no-repeat; background-size: 200% 100%; background-position: right bottom; transition: background-position 0.25s ease-out; font-size: var(--med-text); min-height: initial; max-height: inherit; text-transform: uppercase; letter-spacing: 0.2px; border:0; } 
 .customer-content  .ct-login .btn-login { background-color: var(--black); font-family:var(--font-family);background-image: -moz-linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #000000 50%, #000000 100%); background-image: -webkit-linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 0 50%, #000000 50%, #000000 100%); background-image: linear-gradient(90deg, var(--bg-theme) 0%, var(--bg-theme) 50%, #000000 50%, #000000 100%); } 
 .customer-content  .ct-register .btn{ background-color: var(--bg-theme); background-image: -moz-linear-gradient(90deg, #000000 0%, #000000 50%, var(--bg-theme) 50%, var(--bg-theme) 100%); background-image: -webkit-linear-gradient(90deg, #000000 0%, #000000 50%, var(--bg-theme) 50%, var(--bg-theme) 100%); background-image: linear-gradient(90deg, #000000 0%, #000000 50%, var(--bg-theme) 50%, var(--theme-color) 100%); display: inline-block; text-align: center; text-decoration: none; margin-top: 14px; } 
@@ -703,7 +703,7 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 	line-height:1.2;
 }
 .leave-order-note span {
-	font-size: var(--small-font);
+	font-size: var(--small-text);
 	color: var(--color-primary);
 	letter-spacing: 0.9px;
 	text-transform: uppercase;
@@ -714,7 +714,7 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 	height: 80px;
 	padding: 10px;
 }
-.cart-item-container .media-link .media-body .cart-item-link a { text-decoration: none; font-size: var(--small-font); font-weight: var(--normal); color: var(--color-primary);line-height: 37px;letter-spacing: 0.9px; } 
+.cart-item-container .media-link .media-body .cart-item-link a { text-decoration: none; font-size: var(--small-text); font-weight: var(--normal); color: var(--color-primary);line-height: 37px;letter-spacing: 0.9px; } 
 .cart-item-container .media-link .media-body .variant_title { font-size: var(--extra-small); font-weight: var(--medium); color: var(--color-gray); } 
 .cart-product-title, .bottom-cart-box { padding: 15px 40px; clear: both; float: left; width: 100%;position:relative } 
 .media-link .media-body h5.cart-item-link { line-height: normal; margin-top: -9px; } 
