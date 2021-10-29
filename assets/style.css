@@ -823,10 +823,11 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); li
 	padding: 5px 10px;
 	height: 34px;
 	line-height: 1;
-	border: 1px solid #dadada;
+	border: 1px solid var(--black);
 	margin: 0 3px;
 	font-size: 12px;
 	width: 80px;
+   	border-radius: 3px ;
 }
 .collectionFilters__form .field {
 	display: flex;
