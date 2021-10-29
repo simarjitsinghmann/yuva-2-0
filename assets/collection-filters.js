@@ -110,8 +110,7 @@ function rangeInputChangeEventHandler(e){
        document.getElementById('CollectionProductsContainer').innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
        var _url = window.location.pathname+'?'+searchParameters;
        
-     console.log(_url)
-       history.pushState({}, null, _url);
+       history.pushState({}, null, url);
 //        var focusedElement =document.getElementById(input.getAttribute('id'));
 //        focusedElement.scrollIntoView()
        collectionFilters();
