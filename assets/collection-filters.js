@@ -81,14 +81,14 @@ function rangeInputChangeEventHandler(e){
     minBtn.value = maxVal-5;
   }
   var minVal = parseInt($(minBtn).val());
-  $('input[name="filter.v.price.gte"]').val(minVal);
+  document.querySelectorAll('input[name="filter.v.price.gte"]').value = minVal;
 
 
   if(origin === 'max' && maxVal-5 < minVal){
     maxBtn.value = 5+ minVal;
   }
   var maxVal = parseInt($(maxBtn).val());
-  $('input[name="filter.v.price.lte"]').val(maxVal)
+  document.querySelectorAll('input[name="filter.v.price.lte"]').value = maxVal;
 }
 
   function fetchFilterData(url){
