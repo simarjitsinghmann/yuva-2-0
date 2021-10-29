@@ -297,4 +297,23 @@
       margin: 0 auto;
       letter-spacing: 0.5px;
   }
+  /* width */
+  .mini_cart .cart__contents::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  .mini_cart .cart__contents::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  .mini_cart .cart__contents::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  .mini_cart .cart__contents::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
   /* cart page css */
