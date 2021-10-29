@@ -105,6 +105,7 @@ function rangeInputChangeEventHandler(e){
      if(remove){
        url =remove;
      }
+     console.log(url)
      //         var _url = window.location.pathname+'?'+searchParameters;
      //      window.location.href=_url;
      const html = fetchFilterData(url).
