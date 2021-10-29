@@ -47,13 +47,13 @@
         {% assign max_value = filter.range_max |money_without_currency %} 
         {% assign min_value = filter.range_min |money_without_currency %}
         {%- if filter.max_value.value -%} 
-        {% assign max_value = filter.max_value.value |money_without_currency %} 
+        {% assign max_value = filter.max_value.value |money_without_currency  %} 
         {%- endif -%}
         {%- if filter.min_value.value -%}
         {% assign min_value = filter.min_value.value |money_without_currency %}
         {%- endif -%}
-        <input class="min" name="range_1" type="range" min="0" max="{{filter.range_max |money_without_currency }}" value="{{min_value}}" />
-        <input class="max" name="range_1" type="range" min="0" max="{{filter.range_max |money_without_currency }}" value="{{max_value}}" />
+        <input class="min" name="range_1" type="range" min="0" max="{{filter.range_max |money_without_currency }}" value="{{min_value | replace:',','' | floor}}" />
+        <input class="max" name="range_1" type="range" min="0" max="{{filter.range_max |money_without_currency }}" value="{{max_value| replace:',','' | floor}}" />
         <span class="range_min light left">{{filter.min_value.value |money}}</span>
         <span class="range_max light right">{{filter.max_value.value |money}}</span>
       </div>
