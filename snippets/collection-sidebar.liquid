@@ -58,7 +58,7 @@
       </div>
       <div class="widget-content">
         <div class="widget__price">
-          <span class="field-currency">{{ cart.currency.symbol }}</span>
+        
           
           <div class="field">
             <input class="field__input"
@@ -72,9 +72,9 @@
                    min="0"
                    {%- if uses_comma_decimals -%}max="{{ filter.range_max | money_without_currency  | replace: ',', '.' | floor}}"{%- else -%}max="{{ filter.range_max | money_without_currency | replace: ',', '' | floor}}"{% endif %}
                    >
-          <label class="field__label" for="Filter-{{ filter.label | escape }}-GTE">{{ 'sections.collection_template.from' | t }}</label>
+          
         </div>
-        <span class="field-currency">{{ cart.currency.symbol }}</span>
+        
         <div class="field">
           <input class="field__input"
                  name="{{ filter.max_value.param_name }}"
@@ -91,7 +91,7 @@
                  max="{{ filter.range_max | money_without_currency | replace: ',', '' |floor }}"
                  {% endif %}
                  >
-        <label class="field__label" for="Filter-{{ filter.label | escape }}-LTE">{{ 'sections.collection_template.to' | t }}</label>
+        
       </div>
     </div>
         
