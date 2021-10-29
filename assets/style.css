@@ -896,6 +896,7 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); li
     line-height: 25px;
     margin-left: 9px;
     position:relative;
+    padding-right: 10px;
 }
 .toolbox-right .toolbox-item.toolbox-sort.select-box label:after {
     border-top: 1px solid #000;
@@ -906,8 +907,8 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); li
     display: inline-block;
     transform: rotate(225deg);
     position: absolute;
-    right: 12px;
-    top: 10px;
+    right: 0px;
+    top: 8px;
 }
 .toolbox-right .toolbox-item.toolbox-sort.select-box { float: left; border-radius: 3px; padding: 0 6px 0 11px; align-items: center; justify-content: center; display: flex; font-size: var(--small-font); min-height: 28px;position:relative;} 
 /* .filter-actions .select-items .select-item i { position: absolute; top: -7px; color: #626262; font-size: var(--small-font); right: -7px; }  */
