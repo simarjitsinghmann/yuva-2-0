@@ -103,15 +103,14 @@ function rangeInputChangeEventHandler(e){
      if(remove){
        url =remove;
      }
-     console.log(url)
-     //         var _url = window.location.pathname+'?'+searchParameters;
-     //      window.location.href=_url;
      const html = fetchFilterData(url).
      then((responseText) => {
        const resultData = new DOMParser().parseFromString(responseText, 'text/html');
        var itemResultCount = resultData.getElementsByClassName('filter-total-result');
        document.getElementById('CollectionProductsContainer').innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
        var _url = window.location.pathname+'?'+searchParameters;
+       
+     console.log(_url)
        history.pushState({}, null, _url);
 //        var focusedElement =document.getElementById(input.getAttribute('id'));
 //        focusedElement.scrollIntoView()
