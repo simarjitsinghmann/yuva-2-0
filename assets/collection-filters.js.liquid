@@ -71,7 +71,7 @@ Array.from(priceRange).forEach(function(price) {
 }
 
 function rangeInputChangeEventHandler(e,section){
-
+console.log('aaa')
   var minBtn = e.closest('.rangeslider').querySelectorAll('.min')[0],
       maxBtn = e.closest('.rangeslider').querySelectorAll('.max')[0],
       minVal = parseInt(minBtn.value),
