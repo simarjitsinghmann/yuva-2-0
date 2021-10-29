@@ -63,6 +63,10 @@ Array.from(priceRange).forEach(function(price) {
     e.preventDefault();
     rangeInputChangeEventHandler(price,section)
     
+  });
+  price.addEventListener("change", (e)=>{	
+    e.preventDefault();
+    
     getFilterData(filterForm,price,sectionId);
   });
 });
