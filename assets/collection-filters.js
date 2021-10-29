@@ -72,12 +72,12 @@ Array.from(priceRange).forEach(function(price) {
 
 function rangeInputChangeEventHandler(e){
 
-  var minBtn = e.closest('.rangeslider').querySelectorAll('.min'),
-      maxBtn = e.closest('.rangeslider').querySelectorAll('.max'),
-//       minVal = parseInt(minBtn.getAttribute('value')),
-//       maxVal = parseInt(maxBtn.getAttribute('value')),
+  var minBtn = e.closest('.rangeslider').querySelectorAll('.min')[0],
+      maxBtn = e.closest('.rangeslider').querySelectorAll('.max')[0],
+      minVal = parseInt(minBtn.value),
+      maxVal = parseInt(maxBtn.value),
       origin = e.getAttribute('class');
- console.log(minBtn,maxBtn,origin)
+ console.log(minBtn,maxBtn,minVal,maxVal,origin)
   if(origin === 'min' && minVal > maxVal-5){
     $(minBtn).val(maxVal-5);
   }
