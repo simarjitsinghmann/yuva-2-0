@@ -63,7 +63,7 @@ Array.from(priceRange).forEach(function(price) {
     e.preventDefault();
     rangeInputChangeEventHandler(price)
     
-//     getFilterData(filterForm,price,sectionId);
+    getFilterData(filterForm,price,sectionId);
   });
 });
 
@@ -77,7 +77,6 @@ function rangeInputChangeEventHandler(e){
       minVal = parseInt(minBtn.value),
       maxVal = parseInt(maxBtn.value),
       origin = e.getAttribute('class');
- console.log(minBtn,maxBtn,minVal,maxVal,origin)
   if(origin === 'min' && minVal > maxVal-5){
     $(minBtn).val(maxVal-5);
   }
