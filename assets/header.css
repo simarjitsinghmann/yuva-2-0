@@ -1023,4 +1023,23 @@ position:relative;
 	letter-spacing: 0.6px;
 	margin: 21px 0 11px;
 }
+  /* width */
+  .cart__contents::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  .cart__contents::-webkit-scrollbar-track {
+    background: red;
+  }
+
+  /* Handle */
+  .cart__contents::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  .cart__contents::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 /**End progress-bar**/
