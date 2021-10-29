@@ -142,10 +142,10 @@
 .fixed-top { position: fixed; top: 0; right: 0; left: 0; z-index: 1030; }
 .nav-open .side-menu {left: 0;}
 .site-nav-dropdown a > span.sale_on {
-	background: var(--sale-badges);
+	background: var(--green);
 }
 .site-nav-dropdown a > span.new_arrival {
-	background: var(--new-arrival-badges);
+	background: var(--red);
 }
 .site-nav-dropdown a > span.sale_on, .site-nav-dropdown a > span.new_arrival {
     color: var(--white);
