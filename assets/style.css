@@ -91,7 +91,7 @@ div#banner-slide > img { width: 100%;}
  #product-slider .slider-item .item > img { -webkit-transition: all 5s; -moz-transition: all 5s; -ms-transition: all 5s; -o-transition: all 5s; transition: all 5s; -webkit-transform: scale(1.05,1.05); -ms-transform: scale(1.05,1.05); transform: scale(1.05,1.05); }
 /***END***/
 /***category-section***/
-.shopify-section:not(.shopify-section-slider, .shopify-section-announcement-bar, .shopify-section-main-header) {
+.shopify-section:not(.shopify-section-slider, .shopify-section-announcement-bar, .shopify-section-main-header, #shopify-section-footer) {
 	padding-top:45px;
 }
 .category-section { background: var(--gray); padding: 45px 0 45px; } 
