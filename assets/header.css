@@ -1031,16 +1031,16 @@ position:relative;
 
   /* Track */
   .cart__contents::-webkit-scrollbar-track {
-    background: red;
+    background: var(--dark-gray);
   }
 
   /* Handle */
   .cart__contents::-webkit-scrollbar-thumb {
-    background: #888;
+    background: var(--gray);
   }
 
   /* Handle on hover */
   .cart__contents::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: var(--gray);
   }
 /**End progress-bar**/
