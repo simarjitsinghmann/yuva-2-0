@@ -34,9 +34,9 @@ footer .grid__item:nth-last-child(2) { position: relative; }
 .list-payment li a{ line-height: 0; } 
 .list-payment li:last-child{ padding-right: 0 ; } 
 small.copyright__content { color: #999; letter-spacing: 0.2px; font-size:15px; font-weight:var(--normal); } 
-.footer__content-bottom:before{ position: absolute; content: ""; border-top: 1px solid #999; top: 0; width: calc(100vw + 50%); } 
+.footer__content-bottom:before{ position: absolute; content: ""; top: 0; width: calc(100vw + 50%); } 
 .footer__content-top{ position: relative;padding-bottom:65px;} 
-.footer__content-bottom { position: relative; padding: 39px 0 23px;width: 100%;}
+.footer__content-bottom { position: relative; padding: 39px 0 23px;width: 100%; border-top: 1px solid #242424;}
 .social-links li a {font-size: 13px;}
 footer ul li a {
   display:inline-block;
