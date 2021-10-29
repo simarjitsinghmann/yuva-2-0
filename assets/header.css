@@ -546,7 +546,7 @@ visibility: visible;
 .site-nav-dropdown .inner.dropdown .sub-menu-list.no_space_around_image {
     margin-left: auto;flex: 0 0 33.33%;-ms-flex: 0 0 33.33%;display: flex;justify-content: flex-end;}
 .site-nav-dropdown .inner.dropdown .sub-menu-list.spacing_around_image img{width:100%}
- .list-menu--inline .nav-item:hover>.sub-menu { opacity: 1; visibility: visible; pointer-events: auto;top: 100%;/*border-top: 1px solid #d3d9e0;*/ } 
+ .list-menu--inline .nav-item:hover>.sub-menu { opacity: 1; visibility: visible; pointer-events: auto;top: 100%;    border-top: 1px solid #ececec; } 
 .customer-open #dropdown-customer { right: 0; } 
 .custom_login { padding: 30px 30px;}
 .minicart-open #mini__cart, .show__similar__products #similar__product, .quickview-open .quick_view { right: 0;} 
