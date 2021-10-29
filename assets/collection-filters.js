@@ -80,7 +80,7 @@ function rangeInputChangeEventHandler(e){
       minVal = parseInt($(minBtn).val()),
       maxVal = parseInt($(maxBtn).val()),
       origin = $(this).attr('class');
- console.log(rangeGroup,minBtn,maxBtn,range_min,range_max,minVal)
+ console.log(rangeGroup,minBtn,maxBtn,range_min,range_max,minVal,maxVal,origin)
   if(origin === 'min' && minVal > maxVal-5){
     $(minBtn).val(maxVal-5);
   }
