@@ -23,9 +23,10 @@
     $(document).ready(function(){
       var recomend = setInterval(function(){
         if($('.recent-product-slide').length > 0 ){
+          setTimeout(function(){
           $('.recent-product-slide').owlCarousel({
             center: false,
-            items: 6,
+            items: 4,
             loop: false,
             margin: 26,
             dots:false,
@@ -34,6 +35,7 @@
             responsiveClass:true
           });
           clearInterval(recomend);
+            },200)
         }
       },100)
     })
