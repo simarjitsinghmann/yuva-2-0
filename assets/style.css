@@ -512,12 +512,14 @@ a.wishlist-view .fas { display: none; }
 	display: none;
 }
 .card.card--product .product__on__sale { top: 0px;
-left: 0;
-background: var(--black);
-color: var(--white);
-padding: 2px 12px;
-text-transform: uppercase;
-font-size: var(--extra-small); } 
+    left: 0;
+    background: var(--black);
+    color: var(--white);
+    padding: 2px 12px;
+    text-transform: uppercase;
+    font-size: var(--extra-small); 
+    line-height: 16px;
+} 
 /* #CollectionProductsContainer[data-view="list-layout"] .product-information__wrapper .price-item { font-size: var(--font-size); } */
 #ProductQuickView .product_content_section {
     max-height: 600px;
