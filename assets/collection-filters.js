@@ -80,14 +80,14 @@ function rangeInputChangeEventHandler(e){
   if(origin === 'min' && minVal > maxVal-5){
     minBtn.value = maxVal-5;
   }
-  var minVal = parseInt($(minBtn).val());
+  var minVal =  parseInt(minBtn.value);
   document.querySelectorAll('input[name="filter.v.price.gte"]').value = minVal;
 
 
   if(origin === 'max' && maxVal-5 < minVal){
     maxBtn.value = 5+ minVal;
   }
-  var maxVal = parseInt($(maxBtn).val());
+  var maxVal =  parseInt(maxBtn.value);
   document.querySelectorAll('input[name="filter.v.price.lte"]').value = maxVal;
 }
 
