@@ -70,7 +70,7 @@ Array.from(priceRange).forEach(function(price) {
    
 }
 
-function rangeInputChangeEventHandler(e){
+function rangeInputChangeEventHandler(e,section){
 
   var minBtn = e.closest('.rangeslider').querySelectorAll('.min')[0],
       maxBtn = e.closest('.rangeslider').querySelectorAll('.max')[0],
@@ -81,14 +81,14 @@ function rangeInputChangeEventHandler(e){
     minBtn.value = maxVal-5;
   }
   var minVal =  parseInt(minBtn.value);
-  document.querySelectorAll('input[name="filter.v.price.gte"]').value = minVal;
+  section.querySelectorAll('input[name="filter.v.price.gte"]').value = minVal;
 
 
   if(origin === 'max' && maxVal-5 < minVal){
     maxBtn.value = 5+ minVal;
   }
   var maxVal =  parseInt(maxBtn.value);
-  document.querySelectorAll('input[name="filter.v.price.lte"]').value = maxVal;
+  section.querySelectorAll('input[name="filter.v.price.lte"]').value = maxVal;
 }
 
   function fetchFilterData(url){
