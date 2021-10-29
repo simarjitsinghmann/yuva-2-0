@@ -57,9 +57,10 @@ Array.from(removeFilters).forEach(function(removeFilter) {
     getFilterData(filterForm,removeFilter,sectionId,_url);
   });
 }); 
-}
 
      $('input[type="range"]').on( 'input', rangeInputChangeEventHandler);
+}
+
 function rangeInputChangeEventHandler(e){
   var rangeGroup = $(this).attr('name'),
       minBtn = $(this).parent().children('.min'),
