@@ -57,8 +57,16 @@ Array.from(removeFilters).forEach(function(removeFilter) {
     getFilterData(filterForm,removeFilter,sectionId,_url);
   });
 }); 
+var priceRange = section.querySelectorAll('input[type="range"]');
+Array.from(priceRange).forEach(function(price) {
+  price.addEventListener("change", (e)=>{	
+    e.preventDefault();
+    rangeInputChangeEventHandler(price)
+    getFilterData(filterForm,price,sectionId,_url);
+  });
+});
 
-     $('input[type="range"]').on( 'input', rangeInputChangeEventHandler);
+   
 }
 
 function rangeInputChangeEventHandler(e){
