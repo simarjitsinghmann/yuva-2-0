@@ -100,17 +100,19 @@ function rangeInputChangeEventHandler(e){
       var searchParameters = new URLSearchParams(formData).toString();
      
      var url = window.location.pathname+'?section_id='+sectionId+'&'+searchParameters;
+     var _updateUrl = window.location.pathname+'?'+searchParameters;
      if(remove){
        url =remove;
+       _updateUrl = remove;
      }
      const html = fetchFilterData(url).
      then((responseText) => {
        const resultData = new DOMParser().parseFromString(responseText, 'text/html');
        var itemResultCount = resultData.getElementsByClassName('filter-total-result');
        document.getElementById('CollectionProductsContainer').innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
-       var _url = url.replace('?section_id='+sectionId, "");
        
-       history.pushState({}, null, _url);
+       
+       history.pushState({}, null, _updateUrl);
 //        var focusedElement =document.getElementById(input.getAttribute('id'));
 //        focusedElement.scrollIntoView()
        collectionFilters();
