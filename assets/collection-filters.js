@@ -85,11 +85,10 @@ function rangeInputChangeEventHandler(e){
   var maxVal = parseInt($(maxBtn).val());
   $(range_max).html(maxVal);
   $('input[name="filter.v.price.lte"]').val(maxVal)
-  if(origin == 'min'){
-  $('input[name="filter.v.price.gte"]').trigger('change');
-  }else{
-  $('input[name="filter.v.price.lte"]').trigger('change');
-  }
+   var section = document.getElementById('CollectionProductsContainer');
+    var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
+    const filterForm = document.getElementById('CollectionFiltersForm'); 
+ getFilterData(filterForm,sort,sectionId);
 }
 
   function fetchFilterData(url){
