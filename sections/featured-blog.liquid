@@ -2,7 +2,7 @@
     <div class="row">
         <div class="shopify__top__section text__center">
             <small>{{section.settings.heading}}</small>
-            <h4>{{section.settings.subheading}}</h4>
+            <h4>{{section.settings.subheading}} <a class="view-all corner-view" href="">View all</a></h4>
             {% assign main_articles = section.settings.blog.articles %}
             {% if main_articles.size > 0 or section.settings.custom %}
             <div class="blog-multi-slide " role="list">  
