@@ -78,14 +78,14 @@ function rangeInputChangeEventHandler(e){
       maxVal = parseInt(maxBtn.value),
       origin = e.getAttribute('class');
   if(origin === 'min' && minVal > maxVal-5){
-    $(minBtn).val(maxVal-5);
+    minBtn.value = maxVal-5;
   }
   var minVal = parseInt($(minBtn).val());
   $('input[name="filter.v.price.gte"]').val(minVal);
 
 
   if(origin === 'max' && maxVal-5 < minVal){
-    $(maxBtn).val(5+ minVal);
+    maxBtn.value = 5+ minVal;
   }
   var maxVal = parseInt($(maxBtn).val());
   $('input[name="filter.v.price.lte"]').val(maxVal)
