@@ -192,9 +192,8 @@
                 range_max = $(this).parent().children('.range_max'),
                 minVal = parseInt($(minBtn).val()),
                 maxVal = parseInt($(maxBtn).val()),
-                origin = e.originalEvent.target.className;
+                origin = $(this).attr('class');
 
-          console.log($(this).attr('class'),origin)
             if(origin === 'min' && minVal > maxVal-5){
                 $(minBtn).val(maxVal-5);
             }
