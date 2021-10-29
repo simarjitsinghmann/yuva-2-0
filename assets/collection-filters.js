@@ -81,13 +81,13 @@ console.log('aaa')
       minVal = parseInt(minBtn.value),
       maxVal = parseInt(maxBtn.value),
       origin = e.getAttribute('class');
-  if(origin === 'min' && minVal > maxVal-5){
-    minBtn.value = maxVal-5;
+  if(origin === 'min' && minVal > maxVal-15){
+    minBtn.value = maxVal-15;
   }
 
 
-  if(origin === 'max' && maxVal-5 < minVal){
-    maxBtn.value = 5+ minVal;
+  if(origin === 'max' && maxVal-15 < minVal){
+    maxBtn.value = 15+ minVal;
   }
   var minVal =  parseInt(minBtn.value);
   section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = minVal;
