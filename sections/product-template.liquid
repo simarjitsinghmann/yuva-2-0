@@ -3,10 +3,10 @@
        <div class="row">
           <div class="single-detail-detail ">
              <div class="row product_content_section">
-                <div class="col-sm-7 col-md-7 {% if product.media.size == 1 %} productImageContainer-fullWidth {% endif %}">
+                <div class="col-sm-7 col-md-7 ">
                     {% if product.media.size > 0 %}
                      {% if section.settings.gallery_style == 'stacked'%}
-                     <div class="left-product-images has_slider">
+                     <div class="left-product-images has_slider {% if product.media.size == 1 %} productImageContainer-fullWidth {% endif %}">
                         <div class="ImageleftContainer">
                            <div class="nav-container">
                               <div class="slider-nav">
