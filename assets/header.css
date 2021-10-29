@@ -1,9 +1,10 @@
 /***top announcement_bar***/  
-.announcement-bar__message {text-align: center; padding: 7px 10px; margin: 0; letter-spacing: 1px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center;font-weight: var(--medium);}
+.announcement-bar__message {text-align: center; padding: 7px 10px; margin: 0; letter-spacing: 1px; display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: center;font-weight: var(--medium);}
 .announcement-bar__message p {text-align: center;margin: 0;color: var(--color-secondary);font-weight: var(--normal); } 
-.announcement-bar__message a{font-weight: var(--medium);text-decoration:none;color: var(--color-secondary);border-bottom:1px solid var(--border-light-theme); }
-.announcement-bar .border-bg {border: 1px solid var(--border-white);}
-.announcement-bar .fill-bg {border: 1px solid var(--border-white);}
+.announcement-bar__message a{font-weight: var(--medium);text-decoration:none;color: var(--white);border-bottom:1px solid var(--border-light-theme); }
+.announcement-bar .border-bg {border: 1px solid var(--white);}
+.announcement-bar .fill-bg {border: 1px solid var(--white);}
 .announcement-bar .announce-btn {padding: 5px 10px;letter-spacing:0;text-transform: uppercase;color: var(--color-secondary);font-size: var(--extra-small);display: inline-block;margin-left: 16px;}
 .announcement-bar.style-3{ background: -moz-linear-gradient(left, #fd5392 0%, #f86f64 33%, #f8ad64 66%, #f8ad64 100%); background: -webkit-linear-gradient(left, #fd5392 0%,#f86f64 33%,#f8ad64 66%,#f8ad64 100%); background: linear-gradient(to right, #fd5392 0%,#f86f64 33%,#f8ad64 66%,#f8ad64 100%); }
 .announcement-bar span.announcement_icon i {display: inline-block;margin-right: 12px;}
