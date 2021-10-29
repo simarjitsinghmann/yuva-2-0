@@ -88,7 +88,7 @@ function rangeInputChangeEventHandler(e){
    var section = document.getElementById('CollectionProductsContainer');
     var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
     const filterForm = document.getElementById('CollectionFiltersForm'); 
- getFilterData(filterForm,sort,sectionId);
+ getFilterData(filterForm,$(this),sectionId);
 }
 
   function fetchFilterData(url){
