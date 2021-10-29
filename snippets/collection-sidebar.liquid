@@ -47,7 +47,7 @@
         <input class="min" name="range_1" type="range" min="0" max="{{filter.range_max |money_without_currency }}" value="{{filter.min_value.value | money_without_currency}}" />
         <input class="max" name="range_1" type="range" min="0" max="{{filter.range_max |money_without_currency }}" value="{{filter.max_value.value | money_without_currency}}" />
         <span class="range_min light left">{{filter.min_value.value |money}}</span>
-        <span class="range_max light right">{{filter.min_value.value |money}}</span>
+        <span class="range_max light right">{{filter.max_value.value |money}}</span>
       </div>
       <div class="widget-content">
       <span class="widget__selected">{{ "sections.collection_template.max_price" | t: price: max_price_amount }}</span>

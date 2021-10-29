@@ -5,11 +5,7 @@
 .announcement-bar .border-bg {border: 1px solid var(--border-white);}
 .announcement-bar .fill-bg {border: 1px solid var(--border-white);}
 .announcement-bar .announce-btn {padding: 5px 10px;letter-spacing:0;text-transform: uppercase;color: var(--color-secondary);font-size: var(--extra-small);display: inline-block;margin-left: 16px;}
-.announcement-bar.style-3{
-background: -moz-linear-gradient(left, #fd5392 0%, #f86f64 33%, #f8ad64 66%, #f8ad64 100%);
-background: -webkit-linear-gradient(left, #fd5392 0%,#f86f64 33%,#f8ad64 66%,#f8ad64 100%);
-background: linear-gradient(to right, #fd5392 0%,#f86f64 33%,#f8ad64 66%,#f8ad64 100%);
-}
+.announcement-bar.style-3{ background: -moz-linear-gradient(left, #fd5392 0%, #f86f64 33%, #f8ad64 66%, #f8ad64 100%); background: -webkit-linear-gradient(left, #fd5392 0%,#f86f64 33%,#f8ad64 66%,#f8ad64 100%); background: linear-gradient(to right, #fd5392 0%,#f86f64 33%,#f8ad64 66%,#f8ad64 100%); }
 .announcement-bar span.announcement_icon i {display: inline-block;margin-right: 12px;}
 .announcement-bar a.close .icon-close {fill:var(--color-secondary);width: 12px;line-height: 1;font-size: inherit;}
 .announcement-bar.style-4  span.announcement_icon i {font-size: 20px;}
@@ -37,8 +33,7 @@ background: linear-gradient(to right, #fd5392 0%,#f86f64 33%,#f8ad64 66%,#f8ad64
 }
 .announcement-bar__message ul li span {
     background: #282828;
-    color: var(--color-secondary);
-    font-size: var(--font-normal);
+    color: var(--white);
     font-weight: var(--normal);
     padding: 4px 2px;
     margin: 0 1px;
