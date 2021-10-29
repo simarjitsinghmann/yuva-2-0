@@ -207,6 +207,8 @@
             }
             var minVal = parseInt($(minBtn).val());
             $(range_min).html(minVal);
+          
+            $('input[name="filter.v.price.gte"]').val(maxVal-5);
 
 
             if(origin === 'max' && maxVal-5 < minVal){
@@ -214,6 +216,7 @@
             }
             var maxVal = parseInt($(maxBtn).val());
             $(range_max).html(maxVal);
+            $('input[name="filter.v.price.lte"]').val(maxVal-5).trigger('input');
         }
 
      $('input[type="range"]').on( 'input', rangeInputChangeEventHandler);
