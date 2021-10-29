@@ -1,8 +1,8 @@
 <div class="container">
     <div class="row">
-        <div class="shopify__top__section text__center">
-            <h4>{{section.settings.title}}</h4>
-            <h6><span>{{section.settings.handle}}</span></h6>
+        <div class="shopify__top__section section-heading-box text__center">
+            <h2>{{section.settings.title}}</h2>
+            <p class="instagramUserName">{{section.settings.handle}}</p>
         </div>
         {% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
           <div class="instagram-post-list" id="instafeed"></div>
