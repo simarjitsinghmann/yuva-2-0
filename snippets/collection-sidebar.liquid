@@ -57,7 +57,6 @@
    
       </div>
       <div class="widget-content">
-      <span class="widget__selected">{{ "sections.collection_template.max_price" | t: price: max_price_amount }}</span>
         <div class="widget__price">
           <span class="field-currency">{{ cart.currency.symbol }}</span>
           
@@ -95,6 +94,8 @@
         <label class="field__label" for="Filter-{{ filter.label | escape }}-LTE">{{ 'sections.collection_template.to' | t }}</label>
       </div>
     </div>
+        
+      <span class="widget__selected">{{ "sections.collection_template.max_price" | t: price: max_price_amount }}</span>
       </div>
     </div>
   </div>
