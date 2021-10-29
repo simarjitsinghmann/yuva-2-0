@@ -44,8 +44,8 @@
       </h6>
        {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
       <div class="rangeslider">
-        <input class="min" name="range_1" type="range" min="{{filter.range_min |money_without_currency }}" max="{{filter.range_max |money_without_currency }}" value="{{filter.min_value.value | money_without_currency}}" />
-        <input class="max" name="range_1" type="range" min="{{filter.range_min |money_without_currency }}" max="{{filter.range_max |money_without_currency }}" value="{{filter.max_value.value | money_without_currency}}" />
+        <input class="min" name="range_1" type="range" min="0" max="{{filter.range_max |money_without_currency }}" value="{{filter.min_value.value | money_without_currency}}" />
+        <input class="max" name="range_1" type="range" min="0" max="{{filter.range_max |money_without_currency }}" value="{{filter.max_value.value | money_without_currency}}" />
         <span class="range_min light left">{{filter.min_value.value |money}}</span>
         <span class="range_max light right">{{filter.min_value.value |money}}</span>
       </div>
