@@ -86,10 +86,8 @@ function rangeInputChangeEventHandler(e){
   var maxVal = parseInt($(maxBtn).val());
   $(range_max).html(maxVal);
   $('input[name="filter.v.price.lte"]').val(maxVal)
-   var section = document.getElementById('CollectionProductsContainer');
-    var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
-    const filterForm = document.getElementById('CollectionFiltersForm'); 
- getFilterData(filterForm,$(this),sectionId);
+  $('input[name="filter.v.price.gte"]').trigger('change')
+  $('input[name="filter.v.price.lte"]').trigger('change')
 }
 
   function fetchFilterData(url){
