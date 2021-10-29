@@ -59,7 +59,7 @@ Array.from(removeFilters).forEach(function(removeFilter) {
 }); 
 var priceRange = section.querySelectorAll('input[type="range"]');
 Array.from(priceRange).forEach(function(price) {
-  price.addEventListener("change", (e)=>{	
+  price.addEventListener("input", (e)=>{	
     e.preventDefault();
     rangeInputChangeEventHandler(price,section)
     
