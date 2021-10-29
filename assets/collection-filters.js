@@ -63,7 +63,7 @@ Array.from(priceRange).forEach(function(price) {
     e.preventDefault();
     rangeInputChangeEventHandler(price,section)
     
-//     getFilterData(filterForm,price,sectionId);
+    getFilterData(filterForm,price,sectionId);
   });
 });
 
