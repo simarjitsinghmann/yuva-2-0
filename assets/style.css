@@ -886,7 +886,17 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); li
 /* .filter-total-result { padding-bottom: 11px; }  */
 .toolbox-right { display: flex; flex-direction: row; align-items: center; justify-content: center; } 
 .toolbox-right .toolbox-item.toolbox-sort.select-box #SortBy { float: left; display: inline-block; width: auto; border: 0; background: transparent; font-size: var(--small-font); color: var(--color-primary); padding: 8px 0; min-width: 138px; } 
-.toolbox-right .toolbox-item.toolbox-sort.select-box label { float: left; display: inline-block; padding: 0; font-size: var(--small-font); color: #969696; } 
+.toolbox-right .toolbox-item.toolbox-sort.select-box label {
+    float: left;
+    display: inline-block;
+    padding: 0;
+    font-size: var(--small-font);
+    color: #000000;
+    font-weight: 500;
+    line-height: 25px;
+    margin-left: 9px;
+}
+
 .toolbox-right .toolbox-item.toolbox-sort.select-box { float: left; border-radius: 3px; padding: 0 6px 0 11px; align-items: center; justify-content: center; display: flex; font-size: var(--small-font); min-height: 28px;position:relative;} 
 /* .filter-actions .select-items .select-item i { position: absolute; top: -7px; color: #626262; font-size: var(--small-font); right: -7px; }  */
 .filter-actions .select-items .select-item span.close {
