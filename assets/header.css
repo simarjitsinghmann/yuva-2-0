@@ -800,15 +800,7 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 .right-media-cart input[type=number] { -moz-appearance: textfield; } 
 .right-media-cart .quantity input {
 	width: 102px;
-	height: auto;
-	line-height: 1.6;
-	padding: 6px 10px;
-	border: 1px solid #e2e2e2;
-	text-align: center;
-	font-family: var(--font-family);
-	color: var(--black);
-	font-size: var(--reg-text);
-	font-weight: var(--normal);
+	height: 36px;
 } 
 .right-media-cart .quantity input:focus { outline: 0; } 
 .right-media-cart .quantity-button { cursor: pointer; text-align: center; color: var(--black); font-size: 24px; line-height: 1; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; padding: 2px 5px; margin: 0 10px;top: 0px; height: 100%; position: absolute; display: flex; align-items: center; } 
