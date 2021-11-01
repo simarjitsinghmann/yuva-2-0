@@ -39,11 +39,17 @@
             });
          }
          Array.from(tabHead).forEach(function(btn) {
-            btn.addEventListener("click", ()=>{ 
-               clearActive();
-               btn.classList.add("active");
-               var _value = btn.getAttribute("content");
-               document.getElementById(_value).style.display = "block";
+           btn.addEventListener("click", ()=>{
+                                if(btn.classList.contains('active')){
+
+             clearActive();
+           }
+           else{
+             clearActive();
+             btn.classList.add("active");
+             var _value = btn.getAttribute("content");
+             document.getElementById(_value).style.display = "block";
+           }
             });
          });
       }
