@@ -11,13 +11,13 @@
   {% unless paginate.previous.is_link %}
     <li aria-hidden="true">
       <button class="btn btn--tertiary btn--narrow" disabled>
-        <span class="icon__fallback-text"><img src={{'carousel-left-arrow.svg' | asset_url}} alt='right-arrow'></span>
+        <span class="icon__fallback-text">{% render 'icon-left-arrow'%}</span>
       </button>
     </li>
     {% else %}
     <li>
       <a href="{{ paginate.previous.url }}" class="btn btn--tertiary btn--narrow">
-        <span class="icon__fallback-text"><img src={{'carousel-left-arrow.svg' | asset_url}} alt='right-arrow'></span>
+        <span class="icon__fallback-text">{% render 'icon-left-arrow'%}</span>
       </a>
     </li>
   {% endunless %}
@@ -27,13 +27,15 @@
   {% unless paginate.next.is_link %}
     <li aria-hidden="true">
       <button class="btn btn--tertiary btn--narrow" disabled>
-        <span class="icon__fallback-text"><img src={{'carousel-left-arrow.svg' | asset_url}} alt='left-arrow'></span>
+        <span class="icon__fallback-text">
+          {% render 'icon-right-arrow'%}
+        </span>
       </button>
     </li>
   {% else %}
     <li>
       <a href="{{ paginate.next.url }}" class="btn btn--tertiary btn--narrow">
-        <span class="icon__fallback-text"><img src={{'carousel-right-arrow.svg' | asset_url}} alt='right-arrow'></span>
+        <span class="icon__fallback-text">{% render 'icon-right-arrow'%}</span>
       </a>
     </li>
   {% endunless %}
