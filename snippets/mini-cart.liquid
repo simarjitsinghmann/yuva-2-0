@@ -1,5 +1,5 @@
 
-<div id="mini__cart" class="mini_cart" data-shipping="200000">  
+<div id="mini__cart" class="mini_cart" {% if settings.enable_shipping and settings.shipping_rate != blank %}data-shipping="{{settings.shipping_rate | times:100}}"{% endif %}>  
   
 	<div class="cart-product-title">
 		<a href="javascript:void(0)" title="translation missing: en.cart.general.close_cart" class="close-customer close" aria-describedby="a11y-external-message">
@@ -18,11 +18,17 @@
     {% raw %}
      <form action=" {% endraw %}{{ routes.cart_url }} {% raw %}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
 	<div class="cart-item-container">	
+    	{% endraw %}
+        {% if settings.enable_shipping and settings.shipping_rate != blank %}
+        {% raw %}
     	{{#if shippPending }}     
 		 <p>Spend <strong>{{{shippPending}}}</strong> more and get free shipping!</p>
          {{else}}
           <p><strong> You get free shipping!</strong></p>
         {{/if}}
+        {% endraw %}
+        {% endif %}
+        {% raw %}
 		 <div class="progress">
 		  <div class="progress-bar" role="progressbar"
 		  aria-valuemin="0" aria-valuemax="100" style="width:{{shipPendingPercentage}}">
