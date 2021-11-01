@@ -10,6 +10,7 @@
                       {% for product in collections.all.products %}
                       {% if cart.items > 0 %}
                       {% for item in cart.items %}
+                      {{item.product_id}}--{{product.id}}<br>
                       {% if item.product_id != product.id %}
                       {% include 'product-grid' hide_options:true%}
 
