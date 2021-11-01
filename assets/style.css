@@ -1885,13 +1885,12 @@ justify-content: center
 }
 .list--inline.pagination a,
 .list--inline.pagination button {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     display: flex;
   	justify-content:center;
   	align-items:center;
-    background-color: #000;
-  	border:1px solid #000;
+    background-color: var(--gray);
     border-radius: 100%;
 }
 .list--inline.pagination a span,
@@ -1900,11 +1899,13 @@ justify-content: center
   	justify-content:center;
   	width:100%
 }
-.list--inline.pagination a img,
-.list--inline.pagination button img{
-    max-width: 6px;
-    width: 100%;
-    display: inline;
+.list--inline.pagination a svg,
+.list--inline.pagination button svg{
+    width: 7px;
+}
+.list--inline.pagination a svg path,
+.list--inline.pagination button svg path{
+    fill:var(--black);
 }
  li.resp-tab-item.easy_tabs a {
     color: #757575;
