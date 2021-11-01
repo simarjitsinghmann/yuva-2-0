@@ -185,7 +185,7 @@ buildCart = function (cart,showCart) {
         $('[data-cart-count]').hide();
         $('#mini__cart').html(`<div class="emptySideCart">
 								<p>Your Cart is Empty</p>
-                                <h6><a class="button" href="/">Continue Shopping</a></h6>
+                                <h6><a class="button black-btn" href="/">Continue Shopping</a></h6>
                           </div>`);
         return;
     }
