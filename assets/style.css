@@ -932,7 +932,13 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); li
 .select-items .filter-clean:hover, .filter-actions .select-items .select-item i:hover { color: var(--theme-color); } 
 .filter-actions .select-items .select-item { margin-top:10px; text-decoration: none; border: 0; border-radius: 0; color: #000; font-weight: 400; padding: 3px 12px; letter-spacing: .1px; position: relative; margin-right: 9px; display:inline-block; box-shadow: 0 1px 1px #dbdbdb; font-size: 13px; background: #ececec; text-transform: capitalize;}
 .toolbox-right .toolbox-item.toolbox-layout { float: left; padding-right: 20px; } 
-.toolbox-right .toolbox-item.toolbox-layout .btn-layout { text-decoration: none; margin: 0 5px; } 
+.toolbox-right .toolbox-item.toolbox-layout .btn-layout {
+    text-decoration: none;
+    margin: 6px 5px;
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+}
 .filter-total-result h6 { font-size:var(--extra-small); line-height: 25px; color: #7e7e7e; letter-spacing: 0.4px; } 
 .product-collection.list-view { width: 100%; }
 /***product-list end***/
