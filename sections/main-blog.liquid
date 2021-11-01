@@ -1,8 +1,10 @@
+
+{%- paginate blog.articles by 6 -%}
 <div class="top_page_title" style="">
   <div class="container">
     <div class="contact-banner-text">
       <div class="banner_title">
-        <h1>Our Blogs</h1>
+        <h1>{{ blog.title | escape }}</h1>
       </div>
     </div>
   </div>
@@ -10,33 +12,22 @@
 <section class="blog-listing">
   	<div class="container">
       <div class="row">
+      {%- for article in blog.articles -%}
         <div class="col-12 col-sm-12 col-md-6"> 
           <div class="blog-card">
-            <div class="blog-img">
-            	<img src="" alt="blog image"/>
+            <div>
+            	<img src="{{article.image |img_url :'master'}}" alt="blog image"/>
             </div>
-            <h3 class="blog-title">A team of designers that make dreams come true</h3>
-            <p class="blog-desc">The Valise Creative Consultancy returns with a co-retail experience 
-highlighting outstanding hand-picked & curated lifestyle...</p>
-            <a href="" class="read-more">Read More</a>
+            <h3 class="blog-title">{{article.title}}</h3> 
+            <p class="blog-desc">{{article.content | truncatewords:75}}</p>
+            <a href="{{article.url}}" class="read-more">Read More</a>
           </div>
         </div>
-        <div class="col-12 col-sm-12 col-md-6"> 
-          <div class="blog-card">
-            <div class="blog-img">
-            	<img src="" alt="blog image"/>
-            </div>
-            <h3 class="blog-title">A team of designers that make dreams come true</h3>
-            <p class="blog-desc">The Valise Creative Consultancy returns with a co-retail experience 
-highlighting outstanding hand-picked & curated lifestyle...</p>
-            <a href="" class="read-more">Read More</a>
-          </div>
-        </div>
+      {%- endfor -%}
       </div>
   </div>
 </section>
 
-{%- paginate blog.articles by 6 -%}
 
   <div class="main-blog page-width">
     <h1 class="title--primary">{{ blog.title | escape }}</h1>
@@ -49,10 +40,11 @@ highlighting outstanding hand-picked & curated lifestyle...</p>
       {%- endfor -%}
     </div>
 
+  </div>
+
     {%- if paginate.pages > 1 -%}
       {%- render 'pagination', paginate: paginate -%}
     {%- endif -%}
-  </div>
 {%- endpaginate -%}
 
 {% schema %}
