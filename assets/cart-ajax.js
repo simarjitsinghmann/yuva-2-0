@@ -180,10 +180,10 @@ updateQuantity = function(line, qty,callback) {
 }
 
 buildCart = function (cart,showCart) {
-  var shipping = parseInt($('#mini__cart').data('shipping'));
+  var shipping = parseInt($('#mini__cartForm').data('shipping'));
     if (cart.item_count === 0) {
         $('[data-cart-count]').hide();
-        $('#mini__cart').html(`<div class="emptySideCart">
+        $('#mini__cartForm').html(`<div class="emptySideCart">
 								<p>Your Cart is Empty</p>
                                 <h6><a class="button black-btn" href="/">Continue Shopping</a></h6>
                           </div>`);
@@ -251,7 +251,7 @@ buildCart = function (cart,showCart) {
         totalCartDiscountApplied: cart.total_discount === 0 ? false : true
     }
     $('[data-cart-count]').text(cart.item_count).show();
-    $('#mini__cart').html(template(data));
+    $('#mini__cartForm').html(template(data));
     if(showCart){
         $('body').addClass('minicart-open');
         $('.wrapper-overlay').css({"display": "block"});
