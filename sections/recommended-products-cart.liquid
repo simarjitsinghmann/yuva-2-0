@@ -5,7 +5,7 @@
             <h4>{{section.settings.subheading}}</h4>
             <div class="grid grid--4-col-desktop grid--3-col-tablet">
                 <div class="grid__item full__item products-grid ">
-                    <div class="row column-5 d-flex justify-content-center cart-recommendation">
+                    <div class="row column-5 d-flex justify-content-center cart-recommendation owl-carousel">
                       {% assign count = 0 %}
                       {% for product in collections.all.products %}
                       {% if cart.item_count > 0 %}
