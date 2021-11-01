@@ -45,7 +45,7 @@
   background-image: linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%); }
 .orange-btn:hover,
 .black-btn:hover,
-.button {
+.button:hover {
   color: #000;
   border-color: #000;
 }
@@ -2097,9 +2097,7 @@ display: none;
     min-height: 158px;
 }
 .get_in_touch input.btn.button {
-    text-transform: uppercase;
     padding: 20px 12px;
-    background-image: linear-gradient(90deg, #939393 0%, #939393 50%, #000000 50%, #000000 100%);
 }
 .customer__service h5 {
     margin-bottom: 13px;
