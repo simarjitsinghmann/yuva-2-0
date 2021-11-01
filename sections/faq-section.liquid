@@ -13,7 +13,7 @@
                 <i class="fa fa-plus"></i>
               </a>
             </h6>
-            <div class="content faq-content" id="faq-content-{{block.id}}" style="display:none;">
+            <div class="content faqSection-content" id="faq-content-{{block.id}}" style="display:none;">
               <div class="panel-body">
                 {{block.settings.answer}}
               </div>
@@ -29,7 +29,7 @@
  <script>
       var tabHead = document.getElementsByClassName('faq-{{section.id}}');
       if(tabHead.length > 0 ){
-         var tabContent =  document.getElementsByClassName('faq-content-{{section.id}}');
+         var tabContent =  document.getElementsByClassName('faqSection-content');
          function clearActive(){
             Array.from(tabHead).forEach(function(item) {
                item.classList.remove('active');
