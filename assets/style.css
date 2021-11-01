@@ -2024,25 +2024,23 @@ display: none;
 	fill: var(--black);
 }
 /* =========== contact page css start ============== */
-
-  .contact-banner-text{
+.contact-banner-text{
   	justify-content:center;
-  }
-    .top_page_title {
+}
+.top_page_title {
     padding: 80px 10px;
     min-height: 388px;
     background-size: cover;
     display: flex;
     align-items: center;
 }
-.top_page_title .page_title {
+.top_page_title .banner_title {
     text-align: center;
     width: 100%;
 }
 
-.top_page_title .page_title h2 {
-    font-size: 55px;
-    color: var(--color-secondary);
+.top_page_title .banner_title h1 {
+    color: var(--white);
     font-weight: var(--semibold);
 }
 
@@ -2051,10 +2049,10 @@ display: none;
     margin: 0 auto;
 }
 
-.customer__service h5, .contact__form__title h5, .contact-details h5 {
+.customer__service h2, .contact__form__title h2, .contact-details h2 {
     font-weight: var(--semibold);
     line-height: 35px;
-    color: var(--color-primary);
+    color: var(--black);
 }
 
 .contact__us__section .tt-contact-info {
@@ -2100,8 +2098,8 @@ display: none;
     min-height: 158px;
 }
 .get_in_touch label {
-    color: var(--color-primary);
-    font-size: var(--small-size);
+    color: var(--black);
+    font-size: var(--small-text);
 }
 .get_in_touch input.btn.button {
     text-transform: uppercase;
