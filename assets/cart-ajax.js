@@ -180,7 +180,7 @@ updateQuantity = function(line, qty,callback) {
 }
 
 buildCart = function (cart,showCart) {
-  var shipping = parseInt($('#mini__cartForm').data('shipping'));
+  var shipping = parseInt($('#mini__cart').data('shipping'));
     if (cart.item_count === 0) {
         $('[data-cart-count]').hide();
         $('#mini__cartForm').html(`<div class="emptySideCart">
