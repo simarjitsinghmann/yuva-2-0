@@ -2,22 +2,25 @@
   <div class="container">
     <div class="row">
       <div class="faq-detail">
-        <h5>Frequently Asked Questions</h5>
+        <h5>{{section.settings.heading}}</h5>
         <div class="accordion-container">
+          {% for block in section.blocks %}
+          {% if block.settings.heading != blank or block.settings.answer != blank%}
           <div class="set">
             <h6 class="panel-title">
               <a href="javascript:void(0)">
-                How long will my items take to ship?
+                {{block.settings.heading }}
                 <i class="fa fa-plus"></i>
               </a>
             </h6>
             <div class="content" style="display:none;">
               <div class="panel-body">
-                <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p> 
-                <p>I’m a great place for you to tell a story and let your users know a little more about you.</p>
+                {{block.settings.answer}}
               </div>
             </div>
           </div>
+          {% endif %}
+          {% endfor %}
         </div>
       </div>
     </div>
