@@ -30,6 +30,23 @@
     ]
   },
   {
+    "name": "t:settings_schema.cartDrawer.name",
+    "settings": [
+      {
+        "type": "text",
+        "id": "shipping_rate",
+        "default": "2000",
+        "label": "t:settings_schema.search.settings.search_style.label"
+      },
+      {
+        "type": "text",
+        "id": "shipping_message",
+        "default": "2000",
+        "label": "t:settings_schema.search.settings.search_style.label"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.product-variants.name",
     "settings": [
       {
