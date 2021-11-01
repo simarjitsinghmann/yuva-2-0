@@ -81,26 +81,26 @@
           {% endfor %}
         </div>
 			</div>
-			<div class="footer__content-bottom">
-				<div class="footer__content-bottom-wrapper page-width">
-				  <div class="footer__column footer__column--info d-flex justify-content-between align-items-center">
-						<div class="footer__copyright">
-							<small class="copyright__content">© 2019. All Rights Reserved</small>
-						</div>
-            {%- if section.settings.payment_enable -%}
-						<div class="footer__payment">
-							<span class="visually-hidden">Payment methods</span>
-							<ul class="list list-payment" role="list">
-								{%- for type in shop.enabled_payment_types -%}
-                  <li class="list-payment__item">
-                    {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                  </li>
-                {%- endfor -%}
-							</ul>
-					  </div>
-          {%- endif -%}
-          </div>
-				</div>
+          <div class="footer__content-bottom">
+            <div class="footer__content-bottom-wrapper page-width">
+              <div class="footer__column footer__column--info d-flex justify-content-between align-items-center">
+                <div class="footer__copyright">
+                  <small class="copyright__content">© 2019. All Rights Reserved</small>
+                </div>
+                {%- if section.settings.payment_enable -%}
+                <div class="footer__payment">
+                  <span class="visually-hidden">Payment methods</span>
+                  <ul class="list list-payment" role="list">
+                    {%- for type in shop.enabled_payment_types -%}
+                    <li class="list-payment__item">
+                      {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                    </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+                {%- endif -%}
+              </div>
+            </div>
 		  </div>
 		</div>
 	</div>
