@@ -918,10 +918,10 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); li
     top: -1px;
     right: 10px;
 }
-.filter-actions .select-items .select-item span.close svg{
+.filter-actions .select-items .select-item span.close #iconCross{
     width: 7px;
 }
-.filter-actions .select-items .select-item span.close svg path {
+.filter-actions .select-items .select-item span.close #iconCross path {
 	fill: var(--black);
 }
 .select-items .filter-clean { font-size:var(--extra-small); color: rgba(40, 40, 40, 0.7); letter-spacing: 0.1px; text-transform: uppercase; } 
