@@ -9,16 +9,21 @@
                       {% assign count = 0 %}
                       {% for product in collections.all.products %}
                       asdasd
+                      {% if cart.items > 0 %}
                       {% for item in cart.items %}
                       {% if item.product_id != product.id %}
-                      sdddddddddd
                       {% include 'product-grid' hide_options:true%}
 
                       {% assign count = count | plus:1 %}
                       {% break %}
                       {% endif %}
                       {% endfor %}
-
+                      {% else %}
+                        {% include 'product-grid' hide_options:true%}
+                       {% assign count = count | plus:1 %}
+                      
+                      {% endif %}
+							
                       {% if count == 5 %}
                       {% break %}
                       {% endif %}
