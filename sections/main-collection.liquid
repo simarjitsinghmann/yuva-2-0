@@ -1,4 +1,5 @@
 {% paginate collection.products by 16%}
+                  {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
 <div class="CollectionProductGrid" id="CollectionProductsContainer" data-id="{{section.id}}" data-view="grid-layout-4">
    <div class="container">
       <div class="row">
@@ -84,7 +85,6 @@
                         </a>
                      </div>
                      <div class="toolbox-item toolbox-sort select-box">
-                  {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
                         <ul class="form-control" id="sort__list">
                           {%- for option in collection.sort_options -%}
                           <li class="{% if option.value == sort_by %}selected{%- assign sort_name = option.name | escape  -%}{% endif %}" value="{{ option.name | escape }}">
