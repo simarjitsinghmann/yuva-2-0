@@ -3,7 +3,7 @@
   
   <div class="continue-shopping"{% if cart.item_count > 0 %}style="display:none"{% endif %} cart-empty>
      <h2>Your Cart is Empty</h2>
-     <a href="/collections/all" class="button">continue shopping</a>
+     <a href="/collections/all" class="button black-btn">continue shopping</a>
   </div>
   {% if cart.item_count > 0 %}
   <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
@@ -83,7 +83,7 @@
               </li>
            </ul>
            <div class="cart-btn">
-              <button type="submit" name="checkout" id="cartCheckout" form="cart">Checkout</button>
+              <button type="submit" class="button black-btn" name="checkout" id="cartCheckout" form="cart">Checkout</button>
               <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
                 {{ content_for_additional_checkout_buttons }}
               </div>
