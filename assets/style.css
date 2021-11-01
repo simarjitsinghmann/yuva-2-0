@@ -934,10 +934,11 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--extra-small); li
 .toolbox-right .toolbox-item.toolbox-layout { float: left; padding-right: 20px; } 
 .toolbox-right .toolbox-item.toolbox-layout .btn-layout {
     text-decoration: none;
-    margin: 2px 5px 0;
+    margin: -1px 5px 0;
     width: 19px;
     height: 19px;
     display: inline-block;
+  	vertical-align:middle;
 }
 .filter-total-result h6 { font-size:var(--extra-small); line-height: 25px; color: #7e7e7e; letter-spacing: 0.4px; } 
 .product-collection.list-view { width: 100%; }
