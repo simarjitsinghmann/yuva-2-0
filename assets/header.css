@@ -927,13 +927,15 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 .quick_view .quickviewcontent .select__size {
     margin-bottom: 16px;
 }
-.quickview-open {
-position:relative;
+.quickview-open,
+.minicart-open{
+	position:relative;
 }
 .quick_view .quickviewcontent .product-image-left {
     padding: 0 10px 0 10px;
 }
-.quickview-open:after {
+.quickview-open:after,
+.minicart-open:after{
     position: absolute;
     content: "";
     width: 100%;
