@@ -186,7 +186,7 @@ buildCart = function (cart,showCart) {
         $('#mini__cartForm').html(`<div class="emptySideCart">
 								<img class="emptyCartIcon" src="//cdn.shopify.com/s/files/1/0597/9668/5009/t/6/assets/cart.svg">
 								<p>Your Cart is Empty</p>
-                                <h6><a class="button black-btn" href="/">Continue Shopping</a></h6>
+                                <a class="button black-btn" href="/">Continue Shopping</a>
                           </div>`);
         return;
     }
