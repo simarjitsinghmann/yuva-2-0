@@ -41,6 +41,7 @@
          Array.from(tabHead).forEach(function(btn) {
            btn.addEventListener("click", ()=>{
                                 let icon = btn.querySelectorAll('.fa');
+           				console.log(icon)
                                 if(btn.classList.contains('active')){
 icon.classList.remove('fa-minus');
                                   icon.classList.add('fa-plus');
