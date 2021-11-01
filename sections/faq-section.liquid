@@ -7,7 +7,7 @@
           {% for block in section.blocks %}
           {% if block.settings.heading != blank or block.settings.answer != blank%}
           <div class="set">
-            <h6 class="panel-title">
+            <h6 class="panel-title faq-{{section.id}}">
               <a href="javascript:void(0)">
                 {{block.settings.heading }}
                 <i class="fa fa-plus"></i>
@@ -27,7 +27,7 @@
   </div> 
 {% endif %}
  <script>
-      var tabHead = document.getElementsByClassName('resp-tab-item');
+      var tabHead = document.getElementsByClassName('faq-{{section.id}}');
       if(tabHead.length > 0 ){
          tabHead[0].classList.add('active');
          var tabContent =  document.getElementsByClassName('resp-tab-content');
