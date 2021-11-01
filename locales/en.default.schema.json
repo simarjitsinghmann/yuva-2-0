@@ -1387,6 +1387,29 @@
           "label": "Show payment icons"
         }
       }
+    },
+    "faq-section": {
+      "name": "Faqs Section",
+      "blocks": {
+        "faq": {
+          "name": "Faq",
+          "settings": {
+            "heading": {
+              "label": "Heading",
+              "info": "A heading is required to display the menu."
+            },
+            "menu": {
+              "label": "Menu",
+              "info": "Displays only top-level menu items."
+            }
+          }
+        }
+      },
+      "settings": {
+        "heading": {
+          "content": "Heading"
+        }
+      }
     }
   },
   "settings_schema": {
