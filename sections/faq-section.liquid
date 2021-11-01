@@ -40,22 +40,22 @@
          }
          Array.from(tabHead).forEach(function(btn) {
            btn.addEventListener("click", ()=>{
-                                let icon = btn.querySelectorAll('.fa')[0];
-                                if(btn.classList.contains('active')){
-icon.classList.remove('fa-minus');
-                                  icon.classList.add('fa-plus');
+			let icon = btn.querySelectorAll('.fa')[0];
+           if(btn.classList.contains('active')){
+             icon.classList.remove('fa-minus');
+             icon.classList.add('fa-plus');
              clearActive();
-             
+
            }
            else{
              clearActive();
              btn.classList.add("active");
              var _value = btn.getAttribute("content");
-icon.classList.remove('fa-plus');
-                                  icon.classList.add('fa-minus');
+             icon.classList.remove('fa-plus');
+             icon.classList.add('fa-minus');
              document.getElementById(_value).style.display = "block";
            }
-            });
+         });
          });
       }
    </script>
