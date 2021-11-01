@@ -184,6 +184,7 @@ buildCart = function (cart,showCart) {
     if (cart.item_count === 0) {
         $('[data-cart-count]').hide();
         $('#mini__cartForm').html(`<div class="emptySideCart">
+								<img class="emptyCartIcon" src="//cdn.shopify.com/s/files/1/0597/9668/5009/t/6/assets/cart.svg">
 								<p>Your Cart is Empty</p>
                                 <h6><a class="button black-btn" href="/">Continue Shopping</a></h6>
                           </div>`);
