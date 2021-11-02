@@ -26,15 +26,15 @@
          {{else}}
           <p><strong> You get free shipping!</strong></p>
         {{/if}}
-        {% endraw %}
-        {% endif %}
-        {% raw %}
 		 <div class="progress">
 		  <div class="progress-bar" role="progressbar"
 		  aria-valuemin="0" aria-valuemax="100" style="width:{{shipPendingPercentage}}">
 			<span class="sr-only">{{shipPendingPercentage}} Complete</span>
 		  </div>
-		</div> 	
+		</div>
+        {% endraw %}
+        {% endif %}
+        {% raw %} 	
 		{{#items}}
 		<div class="media-link" data-line="{{line}}">
 			<img src="{{img}}" alt="Sports Shoes Footwear Fashion" width="65" height="73">
