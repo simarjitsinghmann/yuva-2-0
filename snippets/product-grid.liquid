@@ -201,7 +201,7 @@
                     <div class="product-variants-wrapper">
                     <div class="prd-variants">
                         <div class="prd--option1">
-                            <ul class="product-loop-variants variants circle _small list-unstyled">
+                            <ul class="product-loop-variants variants {{ settings.color_swatch_style}} _small list-unstyled">
                                 {% for value in option.values%}
                                 <li class="color_option">
                                     <input type="radio" name="option-{{opIndex}}" value="{{value}}">
