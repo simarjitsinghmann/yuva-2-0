@@ -2034,6 +2034,15 @@ display: none;
     margin-left: auto;
     margin-right: 55px;
 }
+.quick-view-product-recommendations .card-wrapper-img {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--gray);
+    max-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* =========== contact page css start ============== */
 .contact-banner-text{
   	justify-content:center;
