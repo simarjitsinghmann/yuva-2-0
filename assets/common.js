@@ -112,13 +112,14 @@ $(document).ready(function(){
 	///ask-about-product//
 	$('.ask_this_product').click(function(){
 		$('body').toggleClass('active_askme');
+		$('body').addClass('scrollHidden');
 		$('.askmeMain').toggleClass('slideAskme');
 		$('.askmeMain').css({"display": "none"});
 		$('.askmeMain.slideAskme').css({"display": "block"});
 		
 	});
 	$('.ask_cross').click(function(){
-		$("body").removeClass("active_askme"),$(".askmeMain").removeClass("slideAskme"),$('.askmeMain').css({"display": "none"});
+		$("body").removeClass('scrollHidden').removeClass("active_askme"),$(".askmeMain").removeClass("slideAskme"),$('.askmeMain').css({"display": "none"});
 	});
 	
 	
