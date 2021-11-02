@@ -152,7 +152,9 @@
                                    margin:10,
                                    autoplay:true,
                                    autoplayTimeout:6000,
-                                   autoplayHoverPause:false
+                                   autoplayHoverPause:false,
+                                   nav: false,
+                                   dots: false
                                  }).on('changed.owl.carousel', syncPosition);
 
                                  function syncPosition(el) {
@@ -194,6 +196,8 @@
                                    loop:false,
                                    margin:10,
                                    autoplay:false,
+                                   nav: false,
+                                   dots: false,
                                    onInitialized: function (e) {
                                      var thumbnailCurrentItem =  $(e.target).find(thumbnailItemClass).eq(this._current);
                                      thumbnailCurrentItem.addClass('synced');
