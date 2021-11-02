@@ -3,14 +3,14 @@
     "main-cart": {
       "type": "main-cart",
       "settings": {
+        "show_cart_note": true
       }
     },
     "featured-products": {
-      "type": "featured-collection",
+      "type": "recommended-products-cart",
       "settings": {
-        "collection": "all",
-        "col_size": 5,
-        "row_size": 1
+        "heading": "",
+        "subheading": "You may also like"
       }
     }
   },
