@@ -11,14 +11,14 @@
 </div>
 <section class="blog-listing">
   	<div class="container">
+      <div class="blog-outer-box">
+        
       <div class="row">
       {%- for article in blog.articles -%}
         <div class="col-12 col-sm-12 col-md-6"> 
           <div class="blog-card">
             <div class="blog-img">
-              <a href="{{article.url}}">
             	<img src="{{article.image |img_url :'master'}}" alt="blog image"/>
-              </a>
             </div>
             <h3 class="blog-title">{{article.title}}</h3> 
             <p class="blog-desc">{{article.content | truncatewords:75}}</p>
@@ -29,7 +29,7 @@
       </div>
   </div>
 </section>
-{% comment %}
+
 
   <div class="main-blog page-width">
     <h1 class="title--primary">{{ blog.title | escape }}</h1>
@@ -43,7 +43,7 @@
     </div>
 
   </div>
-{% endcomment %}
+
     {%- if paginate.pages > 1 -%}
       {%- render 'pagination', paginate: paginate -%}
     {%- endif -%}
