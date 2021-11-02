@@ -11,24 +11,23 @@
 </div>
 <section class="blog-listing">
   	<div class="container">
-      <div class="blog-outer-box">
-        
-      <div class="row">
-      {%- for article in blog.articles -%}
-        <div class="col-12 col-sm-12 col-md-6"> 
-          <div class="blog-card">
-            <div class="blog-img">
-            	<img src="{{article.image |img_url :'master'}}" alt="blog image"/>
-            </div>
-            <h3 class="blog-title">{{article.title}}</h3> 
-            <p class="blog-desc">{{article.content | truncatewords:75}}</p>
-            <a href="{{article.url}}" class="read-more">Read More</a>
-          </div>
+      	<div class="blog-outer-box">  
+        	<div class="row">
+              {%- for article in blog.articles -%}
+                <div class="col-12 col-sm-12 col-md-6"> 
+                  <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="{{article.image |img_url :'master'}}" alt="blog image"/>
+                    </div>
+                    <h3 class="blog-title">{{article.title}}</h3> 
+                    <p class="blog-desc">{{article.content | truncatewords:75}}</p>
+                    <a href="{{article.url}}" class="read-more">Read More</a>
+                  </div>
+                </div>
+              {%- endfor -%}
         </div>
-      {%- endfor -%}
-      </div>
-  </div>
-  </div>
+  		</div>
+  	</div>
 </section>
 
 
