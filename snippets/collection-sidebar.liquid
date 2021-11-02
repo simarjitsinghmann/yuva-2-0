@@ -40,7 +40,10 @@
           {% endfor %}
         </ul>
           {%- if filter.values.size > 5 -%}
-         <span class="br_more_filter hide"><i class="fa fa-plus"></i> Show more</span>
+         <div class="br_more_filter hide">
+           <div class="showMore">{% render 'icon-plus' %} Show More</div>
+           <div class="showLess hide">{% render 'icon-minus' %} Show Less</div>
+        </div>
         {%-endif-%}
       </div>
     </div>
