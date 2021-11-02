@@ -77,7 +77,7 @@
         var getnew_Pop = Cookies.get('Newsletter_closed');
         if(getnew_Pop!="Newsletter_closed_val"){
             $('.newsletter-popup').fadeIn('slow');  
-            $('body').addClass('NewsletterActive'); 
+            $('body').addClass('NewsletterActive').addClass('scrollHidden'); 
         }else{
         }
         $("body").on('click', '.newsletter-popup .pop_cross,.newsletter-popup .popclose', function (e) {
