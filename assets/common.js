@@ -501,7 +501,7 @@ var mouse_is_inside = false;
 
 $(document).ready(function()
                   {
-  $('#quick_view,.search-bar-container,.search-form,#mini__cart,#dropdown-customer,.newsletter-popup-inner,#similar__product,.side-menu').hover(function(){ 
+  $('.askmecontainer,#quick_view,.search-bar-container,.search-form,#mini__cart,#dropdown-customer,.newsletter-popup-inner,#similar__product,.side-menu').hover(function(){ 
     mouse_is_inside=true; 
   }, function(){ 
     mouse_is_inside=false; 
