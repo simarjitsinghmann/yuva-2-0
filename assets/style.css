@@ -857,7 +857,8 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--small-font); lin
     /* border-bottom: 1px solid #eee; */
 }
 .toolbox-item.toolbox-sort.select-box ul li:hover {
-	color: var(--black)
+	color: var(--black);
+      font-weight: 400;
 }
 .collectionFilters__form .widget__price .field:last-child {
 	margin-right: 0;
