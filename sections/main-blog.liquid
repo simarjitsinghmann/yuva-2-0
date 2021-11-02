@@ -27,7 +27,7 @@
       </div>
   </div>
 </section>
-
+{% comment %}
 
   <div class="main-blog page-width">
     <h1 class="title--primary">{{ blog.title | escape }}</h1>
@@ -41,7 +41,7 @@
     </div>
 
   </div>
-
+{% endcomment %}
     {%- if paginate.pages > 1 -%}
       {%- render 'pagination', paginate: paginate -%}
     {%- endif -%}
