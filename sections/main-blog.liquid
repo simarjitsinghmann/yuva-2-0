@@ -15,7 +15,7 @@
       {%- for article in blog.articles -%}
         <div class="col-12 col-sm-12 col-md-6"> 
           <div class="blog-card">
-            <div>
+            <div class="blog-img">
             	<img src="{{article.image |img_url :'master'}}" alt="blog image"/>
             </div>
             <h3 class="blog-title">{{article.title}}</h3> 
