@@ -799,8 +799,9 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 .right-media-cart input[type=number]::-webkit-inner-spin-button, .right-media-cart input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; } 
 .right-media-cart input[type=number] { -moz-appearance: textfield; } 
 .right-media-cart .quantity input {
-	width: 102px;
-	height: 36px;
+	width: 100px;
+	height: 34px;
+  	font-size:14px;
 } 
 .right-media-cart .quantity input:focus { outline: 0; } 
 .right-media-cart .quantity-button { cursor: pointer; text-align: center; color: var(--black); font-size: 24px; line-height: 1; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; padding: 2px 5px; margin: 0 10px;top: 0px; height: 100%; position: absolute; display: flex; align-items: center; } 
