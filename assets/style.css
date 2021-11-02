@@ -1845,10 +1845,10 @@ justify-content: center
     justify-content: flex-start;
     align-items: center;
     font-size: 13px;
-    margin: 20px 0 0;
+    margin: 15px 0 0;
     cursor: pointer;
   	color: var(--theme-color);
-    font-weight: 600;
+    font-weight: var(--medium);
     text-transform: capitalize;
 }
 .shop-sidebar-inside .sidebar-widget-product li:hover input~.checkmark {
@@ -2028,11 +2028,11 @@ display: none;
 }
 .select-item.filter-clean {
     text-transform: uppercase;
-    font-weight: var(--medium);
+    font-weight: var(--semibold);
     color: var(--black);
-    font-size: 13px;
+    font-size: 12px;
     margin-left: auto;
-    margin-right: 45px;
+    margin-right: 55px;
 }
 /* =========== contact page css start ============== */
 .contact-banner-text{
