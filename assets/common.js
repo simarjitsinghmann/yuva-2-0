@@ -510,7 +510,7 @@ $(document).ready(function()
   $("body").mouseup(function(){ 
     if(! mouse_is_inside) {
       $('body').removeClass('active_askme').removeClass('scrollHidden').removeClass('quickview-open').removeClass('nav-open').removeClass('addsearch').removeClass('small_search').removeClass('minicart-open').removeClass('customer-open').removeClass('NewsletterActive').removeClass('show__similar__products');
-      $('.newsletter-popup,.wrapper-overlay').hide();
+      $('.newsletter-popup,.wrapper-overlay,.askmeMain.slideAskme').hide();
     }
   });
   $(document).on('click', '.quickView', function(evt) {
