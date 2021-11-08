@@ -14,7 +14,7 @@
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    max-width: 766px;
+    max-width: 700px;
     margin: 0px auto;
     vertical-align: middle;
     background: var(--white);
@@ -53,7 +53,7 @@
     padding: 0;
     font-size: 14px;
     color: #959595;
-    font-weight: var(--medium);
+    font-weight: var(--normal);
 }
 .newsletter-popup .close_dialog {
     display: flex;
@@ -142,7 +142,7 @@
 }
 @media (max-width: 991px) {
   .newsletter-popup .newsletter-popup-inner {
-    max-width: 700px; 
+    max-width: 650px; 
   }
   .newsletter-popup .newsletter-popup-inner .popup-body .nl-content .discount h6 {
     font-size: 18px; 
