@@ -46,6 +46,7 @@
       </label>   
       <input
         type="text"
+             class="form-control"
         name="customer[first_name]"
         id="RegisterForm-FirstName"
         {% if form.first_name %}value="{{ form.first_name }}"{% endif %}
@@ -59,6 +60,7 @@
       </label>
       <input
         type="text"
+             class="form-control"
         name="customer[last_name]"
         id="RegisterForm-LastName"
         {% if form.last_name %}value="{{ form.last_name }}"{% endif %}
@@ -72,6 +74,7 @@
       </label>    
       <input
         type="email"
+             class="form-control"
         name="customer[email]"
         id="RegisterForm-email"
         {% if form.email %} value="{{ form.email }}"{% endif %}
@@ -100,6 +103,7 @@
       </label>    
       <input
         type="password"
+             class="form-control"
         name="customer[password]"
         id="RegisterForm-password"
         aria-required="true"
