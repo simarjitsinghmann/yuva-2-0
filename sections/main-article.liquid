@@ -239,10 +239,13 @@ readonly
                   </small>
                   {%- endif -%}
                 </div>
-                {%- if blog.moderated? -%}
+                
+                <div class="d-flex">
+                	{%- if blog.moderated? -%}
                 <p class="article-template__comment-warning caption">{{ 'blogs.article.moderated' | t }}</p>
                 {%- endif -%}
                 <input type="submit" class="button" value="{{ 'blogs.article.post' | t }}">
+                </div>
                 {% endform %}
               </div>
             </div>
