@@ -20,7 +20,7 @@
                         <img src="{{article.image |img_url :'master'}}" alt="blog image"/>
                     </div>
                     <h3 class="blog-title">{{article.title}}</h3> 
-                    <p class="blog-desc">{{article.content | truncatewords:25}}</p>
+                    <p class="blog-desc">{{article.content | strip_html | truncatewords:25}}</p>
                     <a href="{{article.url}}" class="read-more">Read More</a>
                   </div>
                 </div>
