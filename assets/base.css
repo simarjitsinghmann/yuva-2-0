@@ -460,7 +460,6 @@ blockquote {
 }
 
 .caption-large,
-.customer .field input,
 .customer select,
 .field__input,
 .form__label,
@@ -1248,23 +1247,20 @@ deferred-media {
 
 .field__input:hover,
 .select__select:hover,
-.customer .field input:hover,
 .customer select:hover,
 .localization-form__select:hover {
   box-shadow: 0 0 0 0.2rem var(--color-foreground-55);
 }
 
 .field__input:focus-visible,
-.select__select:focus-visible,
-.field input:focus-visible {
+.select__select:focus-visible {
   box-shadow: 0 0 0 0.1rem var(--color-foreground-55),
     0 0 0 0.3rem var(--color-background),
     0 0 0.5rem 0.4rem var(--color-foreground-30);
 }
 
 .field__input:focus,
-.select__select:focus,
-.field input:focus {
+.select__select:focus {
   box-shadow: 0 0 0 0.1rem var(--color-foreground-55),
     0 0 0 0.3rem var(--color-background),
     0 0 0.5rem 0.4rem var(--color-foreground-30);
