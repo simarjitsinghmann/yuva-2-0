@@ -2350,10 +2350,11 @@ margin: 40px 0;
 	position:relative;
 }
 .video-play-box {
-	position:absolute;
-  	top:50%;
-  	left:50%;
-  	width:100px;
-  	height:100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50px, -50px);
 }
 /* ================= about page css end =============== */
