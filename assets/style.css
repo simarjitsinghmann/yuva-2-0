@@ -37,12 +37,12 @@
   background-image: -moz-linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); 
     background-image: -webkit-linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); 
       background-image: linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); }
-.orange-btn{ background-color: var(--theme-color); 
+.orange-btn{ background-color: var(--white); 
   padding:8px!important;
   border: 2px solid var(--black);
-  background-image: -moz-linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%); 
-  background-image: -webkit-linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000 100%); 
-  background-image: linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%); }
+  background-image: -moz-linear-gradient(90deg, #000 0%, #000 50%, #fff 50%, #fff 100%); 
+  background-image: -webkit-linear-gradient(90deg, #000 0%, #000 50%, #fff 50%, #fff 100%); 
+  background-image: linear-gradient(90deg, #000 0%, #000 50%, #fff 50%, #fff 100%); }
 .orange-btn:hover,
 .black-btn:hover,
 .button:hover {
