@@ -93,6 +93,7 @@
                   </label>      
                   <input
                          type="email"
+                         class="form-control"
                          name="customer[email]"
                          id="CustomerEmail"
                          autocomplete="email"
@@ -112,6 +113,7 @@
                   </label>          
                   <input
                          type="password"
+                         class="form-control"
                          value=""
                          name="customer[password]"
                          id="CustomerPassword"
@@ -128,7 +130,7 @@
                 </a>
                 {%- endif -%}
 
-                <button>
+                <button class="black-btn">
                   {{ 'customer.login_page.sign_in' | t }}
                 </button>
 
