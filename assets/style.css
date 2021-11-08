@@ -1418,7 +1418,7 @@ padding-top: 20px;}
 .results-similarGrid li.product-base { width: 50%; float: left; flex: 0 0 50%; padding: 0 10px 20px; } 
 .results-similarGrid li.product-base picture { 
   max-height: 190px;
-  display: flex;
+  display: flex!important;
   align-items: center;
   justify-content: center;
   overflow: hidden;
