@@ -2129,12 +2129,12 @@ main .shopify-section.cstm-cart-sec {
     letter-spacing: 0.5px;
     font-style:normal;
 }
-.get_in_touch input.form-control, .get_in_touch textarea.form-control {
+.form-control {
     border: 1px solid #cccccc;
     padding: 12px 15px;
-    height: 51px;
+    min-height: 51px;
     font-size: 14px;
-    color: #555555;
+    color: var(--black);
     letter-spacing: 0.5px;
     margin-bottom: 28px;
     font-family: var(--font-family);
