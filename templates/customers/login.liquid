@@ -7,12 +7,10 @@
         <h6 class="form_title" tabindex="-1">
           {{ 'customer.recover_password.title' | t }}
         </h6> 
-
-        <div>
-          <p>
+ 			<p>
             {{ 'customer.recover_password.subtext' | t }}
           </p>
-
+        <div>
           {%- form 'recover_customer_password' -%}
           {% assign recover_success = form.posted_successfully? %}
           <div class="field form-group">
