@@ -47,7 +47,7 @@
     letter-spacing: 0.5px;
      margin: 1.5rem 0;
 }
-.new__customer a.button.create__acount, .login a.cancel_recover {
+.login a.cancel_recover {
     width: 100%;
     text-transform: uppercase;
     font-weight: var(--semibold);
@@ -771,7 +771,7 @@ li[data-address] > h2 {
 .new__customer {
     padding: 25px 0 0;
 } 
-  .login a.cancel_recover, .new__customer a.button.create__acount {
+  .login a.cancel_recover{
     margin-top: 20px;
 }
   .customer.login .grid__item, .customer.register .grid__item {
