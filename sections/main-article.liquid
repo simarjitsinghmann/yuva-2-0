@@ -38,8 +38,7 @@
                 <div class="col-12 col-sm-7 col-md-8">
                   <div class="blog-detail-content">
                     <h3 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h3>
-                    
-                    <span class="caption-with-letter-spacing" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span class="blog-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
                       <span itemprop="name">Posted By {{ article.author }}</span>
                     </span>
                     {%- if block.settings.blog_show_date -%}
