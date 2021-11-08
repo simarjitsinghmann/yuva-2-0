@@ -40,7 +40,7 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
-    <div class="field">   
+    <div class="field form-group">   
       <label for="RegisterForm-FirstName">
         {{ 'customer.register.first_name' | t }}
       </label>   
@@ -54,7 +54,7 @@
         placeholder="{{ 'customer.register.first_name' | t }}"
       >
     </div>
-    <div class="field">
+    <div class="field form-group">
       <label for="RegisterForm-LastName">
         {{ 'customer.register.last_name' | t }}
       </label>
@@ -68,7 +68,7 @@
         placeholder="{{ 'customer.register.last_name' | t }}"
       >
     </div>
-    <div class="field">  
+    <div class="field form-group">  
       <label for="RegisterForm-email">
         {{ 'customer.register.email' | t }}
       </label>    
@@ -97,7 +97,7 @@
         {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.
       </span>
     {%- endif -%}
-    <div class="field"> 
+    <div class="field form-group"> 
       <label for="RegisterForm-password">
         {{ 'customer.register.password' | t }}
       </label>    
@@ -122,7 +122,7 @@
         {{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.
       </span>
     {%- endif -%}
-    <button>
+    <button class="button black-btn btn-block">
       {{ 'customer.register.submit' | t }}
     </button>
   {%- endform -%}
