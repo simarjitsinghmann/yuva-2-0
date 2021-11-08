@@ -33,6 +33,8 @@
 
         {%- when 'title'-%}
           <div class="container" {{ block.shopify_attributes }}>
+            <div class="blog-detail-box">
+            </div>
             <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
             {%- if block.settings.blog_show_date -%}
               <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">{{ article.published_at | time_tag: format: 'month_year' }}</span>
