@@ -31,21 +31,21 @@
 .content-for-layout {
     background: #fff;
 }
-.customer .field input:-webkit-autofill, .customer .field input:focus, .customer .field input:not(:placeholder-shown), .field__input:-webkit-autofill, .field__input:focus, .field__input:not(:placeholder-shown) {
+/* .customer .field input:-webkit-autofill, .customer .field input:focus, .customer .field input:not(:placeholder-shown), .field__input:-webkit-autofill, .field__input:focus, .field__input:not(:placeholder-shown) {
     padding: 10px 15px;
-}
-.customer .field input {
+} */
+/* .customer .field input {
     padding: 10px 15px;
     border: 1px solid #000;
     height: 54px;
     font-size: 13px;
     line-height: normal;
-}
-.customer .field input:-webkit-autofill~label, .customer .field input:focus~label, .customer .field input:not(:placeholder-shown)~label, .field__input:-webkit-autofill~.field__label, .field__input:focus~.field__label, .field__input:not(:placeholder-shown)~.field__label {
+} */
+/* .customer .field input:-webkit-autofill~label, .customer .field input:focus~label, .customer .field input:not(:placeholder-shown)~label, .field__input:-webkit-autofill~.field__label, .field__input:focus~.field__label, .field__input:not(:placeholder-shown)~.field__label {
     top: 0px;
     background: var(--white);
   	padding: 0px 3px;
-}
+} */
 
 .customer .field label {
   font-weight: 600;
@@ -59,7 +59,7 @@
     max-width: 380px;
     width: 100%;
 }
-.customer button {
+/* .customer button {
     margin: 24px 0 0;
     background-image: linear-gradient( 90deg,#646464 0,#646464 50%,#000000 50%,#000000 100%);
   background-size: 200% 100%;
@@ -72,10 +72,10 @@
     font-weight: var(--semibold);
     font-size: 12px;
       transition: background-position .25s ease-out;
-}
-.customer button:hover {
+} */
+/* .customer button:hover {
     background-position: left bottom;
-}
+} */
 .new__customer__signup p {
     color: var(--color-primary);
     line-height: 25px;
