@@ -16,6 +16,7 @@
     <h6 class="form_title" tabindex="-1">
               {{ 'customer.register.title' | t }}
           </h6> 
+    <p>If you've created an account with us, please enter.</p>
   {%- form 'create_customer', novalidate: 'novalidate' -%}
     <input type="hidden" name="return_to" value="/account" />
     {%- if form.errors -%}
