@@ -2218,6 +2218,11 @@ margin: 40px 0;
     font-weight: var(--light);
     letter-spacing: 0.2px;
     text-transform: unset;
+      display: flex;
+    justify-content: space-between;
+}
+.faq .panel-title svg {
+    width: 11px;
 }
 .faq .set .content .panel-body {
     max-width: 750px;
