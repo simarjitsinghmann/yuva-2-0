@@ -58,11 +58,11 @@
                 {% render 'icon-share' %}
                 {{ block.settings.share_label | escape }}
               </button>
-              <details>
-<!--                 <summary class="share-button__button">
+<!--               <details>
+                <summary class="share-button__button">
                   {% render 'icon-share' %}
                   {{ block.settings.share_label | escape }}
-                </summary> -->
+                </summary>
                 <div id="Article-share-{{ section.id }}" class="share-button__fallback motion-reduce">
                   <div class="field">
                     <span id="ShareMessage-{{ section.id }}" class="share-button__message hidden" role="status">
@@ -86,7 +86,7 @@
                     <span class="visually-hidden">{{ 'general.share.copy_to_clipboard' | t }}</span>
                   </button>
                 </div>
-              </details>
+              </details> -->
             </share-button>
             <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
           </div>
