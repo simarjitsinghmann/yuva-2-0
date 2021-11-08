@@ -101,12 +101,12 @@
     </a>
   </div>
   {%- if blog.comments_enabled? -%}
-    <div class="article-template__comment-wrapper background-secondary">
+    <div class="article-template__comment-wrapper background-secondary shopify-blog-comments">
       <div id="comments" class="page-width page-width--narrow">
         {%- if article.comments_count > 0 -%}
           {%- assign anchorId = '#Comments-' | append: article.id -%}
 
-          <h2 id="Comments-{{ article.id }}">{{ 'blogs.article.comments' | t: count: article.comments_count }}</h2>
+          <h3 id="Comments-{{ article.id }}">{{ 'blogs.article.comments' | t: count: article.comments_count }}</h3>
           {% paginate article.comments by 5 %}
             <div class="article-template__comments">
               {%- if comment.status == 'pending' and comment.content -%}
