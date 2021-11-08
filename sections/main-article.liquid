@@ -46,16 +46,7 @@
                       <span itemprop="name">{{ article.author }}</span>
                     </span>
                     {%- endif -%}
-                  </div>
-                </div>
-                <div class="col-12 col-sm-5 col-md-4">
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-
-        {%- when 'content'-%}
+                    {%- when 'content'-%}
           <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }}>
               {{ article.content }}
           </div>
@@ -252,6 +243,16 @@
       </div>
   </div>
   {%- endif -%}
+                  </div>
+                </div>
+                <div class="col-12 col-sm-5 col-md-4">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+        
 </article>
 
 <script type="application/ld+json">
