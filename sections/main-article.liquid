@@ -167,8 +167,9 @@
           {%- endif -%}
 
           <div{% if blog.moderated? == false %} class="article-template__comments-fields"{% endif %}>
-            <div class="article-template__comment-fields">
-              <div class="field field--with-error form-group">
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-6">
+              	<div class="field field--with-error form-group">
 <!--                 <label class="field__label" for="CommentForm-author">{{ 'blogs.article.name' | t }} <span aria-hidden="true">*</span></label> -->
                 <input
                   type="text"
@@ -191,7 +192,9 @@
                   </small>
                 {%- endif -%}
               </div>
-              <div class="field field--with-error form-group">
+              </div>
+              <div class="col-12 col-sm-6 col-md-6">
+              	<div class="field field--with-error form-group">
 <!--                 <label class="field__label" for="CommentForm-email">{{ 'blogs.article.email' | t }} <span aria-hidden="true">*</span></label> -->
                 <input
                   type="email"
@@ -216,28 +219,34 @@
                   </small>
                 {%- endif -%}
               </div>
-            </div>
-            <div class="field form-group field--with-error">
+              </div>
+              <div class="col-12 col-sm-12 col-md-12">
+              	 <div class="field form-group field--with-error">
 <!--               <label class="form__label field__label" for="CommentForm-body">{{ 'blogs.article.message' | t }} <span aria-hidden="true">*</span></label> -->
-              <textarea
-                rows="5"
-                name="comment[body]"
-                id="CommentForm-body"
-                class="text-area form-control"
-                aria-required="true"
-                {% if form.errors contains 'body' %}
-                  aria-invalid="true"
-                  aria-describedby="CommentForm-body-error"
-                {% endif %}
-                placeholder="{{ 'blogs.article.message' | t }}"
-              >{{ form.body }}</textarea>
-                
+                  <textarea
+                    rows="5"
+                    name="comment[body]"
+                    id="CommentForm-body"
+                    class="text-area form-control"
+                    aria-required="true"
+                    {% if form.errors contains 'body' %}
+                      aria-invalid="true"
+                      aria-describedby="CommentForm-body-error"
+                    {% endif %}
+                    placeholder="{{ 'blogs.article.message' | t }}"
+                  >{{ form.body }}</textarea>
+
+                </div>
+              </div>
             </div>
-            {%- if form.errors contains 'body' -%}
-              <small id="CommentForm-body-error">
-                <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.message' | t }} {{ form.errors.messages['body'] }}.</span>
-              </small>
-            {%- endif -%}
+              
+              
+             
+              {%- if form.errors contains 'body' -%}
+                <small id="CommentForm-body-error">
+                  <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.message' | t }} {{ form.errors.messages['body'] }}.</span>
+                </small>
+              {%- endif -%}
           </div>
           {%- if blog.moderated? -%}
             <p class="article-template__comment-warning caption">{{ 'blogs.article.moderated' | t }}</p>
@@ -249,6 +258,7 @@
   {%- endif -%}
                   </div>
                 </div>
+                
                 <div class="col-12 col-sm-5 col-md-4">
                   
                 </div>
