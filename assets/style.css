@@ -1416,7 +1416,15 @@ padding-top: 20px;}
 .similar-product-title .close-customer.close .icon-close:hover { fill:var(--theme-color); color:var(--theme-color); opacity:1;} 
 .similar-product-title .close-customer.close { position: relative; right: 0px; top:-13px;} 
 .results-similarGrid li.product-base { width: 50%; float: left; flex: 0 0 50%; padding: 0 10px 20px; } 
-.results-similarGrid li.product-base picture { background-color: var(--gray); } 
+.results-similarGrid li.product-base picture { 
+  max-height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 190px;
+  background-color: var(--gray);
+} 
 .results-similarGrid li.product-base picture.img-responsive img { width: 100%; } 
 .product-productMetaInfo .product-brand { color: var(--black); font-weight: var(--medium); white-space: normal; word-break: break-word; } 
 .product-productMetaInfo .product-product { color: var(--dark-gray); text-overflow: ellipsis; white-space: nowrap; overflow: hidden; } 
