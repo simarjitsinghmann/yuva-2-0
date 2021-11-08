@@ -37,15 +37,15 @@
               <div class="row">
                 <div class="col-12 col-sm-7 col-md-8">
                   <div class="blog-detail-content">
-                    <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
-                                {%- if block.settings.blog_show_date -%}
-              <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">{{ article.published_at | time_tag: format: 'month_year' }}</span>
-            {%- endif -%}
-            {%- if block.settings.blog_show_author -%}
-              <span class="caption-with-letter-spacing" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <span itemprop="name">{{ article.author }}</span>
-              </span>
-            {%- endif -%}
+                    <h3 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h3>
+                    {%- if block.settings.blog_show_date -%}
+                    <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">{{ article.published_at | time_tag: format: 'month_year' }}</span>
+                    {%- endif -%}
+                    {%- if block.settings.blog_show_author -%}
+                    <span class="caption-with-letter-spacing" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                      <span itemprop="name">{{ article.author }}</span>
+                    </span>
+                    {%- endif -%}
                   </div>
                 </div>
                 <div class="col-12 col-sm-5 col-md-4">
