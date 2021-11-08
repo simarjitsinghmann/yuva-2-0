@@ -43,7 +43,7 @@
                       <span itemprop="name">Posted By {{ article.author }}</span>
                     </span>
                     {%- if block.settings.blog_show_date -%}
-                    <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">on 
+                    <span class="circle-divider" itemprop="dateCreated pubdate datePublished">on 
                       {{ article.published_at | time_tag: format: 'month_year' }}</span>
                     {%- endif -%}
                   </div>
