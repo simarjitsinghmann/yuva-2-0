@@ -43,11 +43,13 @@
   background-image: -moz-linear-gradient(90deg, #000 0%, #000 50%, #fff 50%, #fff 100%); 
   background-image: -webkit-linear-gradient(90deg, #000 0%, #000 50%, #fff 50%, #fff 100%); 
   background-image: linear-gradient(90deg, #000 0%, #000 50%, #fff 50%, #fff 100%); }
-.orange-btn:hover,
 .black-btn:hover,
 .button:hover {
   color: #000;
   border-color: #000;
+}
+.orange-btn:hover {
+  color: var(--white);
 }
 .btn-block {
 	width:100%;
