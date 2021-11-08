@@ -2291,8 +2291,12 @@ body .shopify-section.faq-section {
 }
 /* =============== blog page css end  ================ */
 /* =============== blog detail css start  ================ */
-.article-template__hero-container {
+.article-template__hero-container div {
+  	padding-bottom:0;
 	height:390px;
+}
+.article-template__hero-container div img {
+	object-position: top;
 }
 /* =============== blog detail css end  ================ */
 /* ================= about page css start =============== */
