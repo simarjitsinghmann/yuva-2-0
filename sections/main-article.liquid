@@ -239,14 +239,11 @@
                 </div>
               </div>
             </div>
-              
-              
-             
-              {%- if form.errors contains 'body' -%}
-                <small id="CommentForm-body-error">
-                  <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.message' | t }} {{ form.errors.messages['body'] }}.</span>
-                </small>
-              {%- endif -%}
+            {%- if form.errors contains 'body' -%}
+            <small id="CommentForm-body-error">
+              <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.message' | t }} {{ form.errors.messages['body'] }}.</span>
+            </small>
+            {%- endif -%}
           </div>
           {%- if blog.moderated? -%}
             <p class="article-template__comment-warning caption">{{ 'blogs.article.moderated' | t }}</p>
