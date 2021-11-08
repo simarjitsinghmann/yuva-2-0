@@ -169,6 +169,7 @@
           <div{% if blog.moderated? == false %} class="article-template__comments-fields"{% endif %}>
             <div class="article-template__comment-fields">
               <div class="field field--with-error">
+                <label class="field__label" for="CommentForm-author">{{ 'blogs.article.name' | t }} <span aria-hidden="true">*</span></label>
                 <input
                   type="text"
                   name="comment[author]"
@@ -183,7 +184,7 @@
                   {% endif %}
                   placeholder="{{ 'blogs.article.name' | t }}"
                 >
-                <label class="field__label" for="CommentForm-author">{{ 'blogs.article.name' | t }} <span aria-hidden="true">*</span></label>
+                
                 {%- if form.errors contains 'author' -%}
                   <small id="CommentForm-author-error">
                     <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.name' | t }} {{ form.errors.messages['author'] }}.</span>
@@ -191,6 +192,7 @@
                 {%- endif -%}
               </div>
               <div class="field field--with-error">
+                <label class="field__label" for="CommentForm-email">{{ 'blogs.article.email' | t }} <span aria-hidden="true">*</span></label>
                 <input
                   type="email"
                   name="comment[email]"
@@ -207,7 +209,7 @@
                   {% endif %}
                   placeholder="{{ 'blogs.article.email' | t }}"
                 >
-                <label class="field__label" for="CommentForm-email">{{ 'blogs.article.email' | t }} <span aria-hidden="true">*</span></label>
+                
                 {%- if form.errors contains 'email' -%}
                   <small id="CommentForm-email-error">
                     <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.email' | t }} {{ form.errors.messages['email'] }}.</span>
@@ -216,6 +218,7 @@
               </div>
             </div>
             <div class="field field--with-error">
+              <label class="form__label field__label" for="CommentForm-body">{{ 'blogs.article.message' | t }} <span aria-hidden="true">*</span></label>
               <textarea
                 rows="5"
                 name="comment[body]"
@@ -228,7 +231,7 @@
                 {% endif %}
                 placeholder="{{ 'blogs.article.message' | t }}"
               >{{ form.body }}</textarea>
-                <label class="form__label field__label" for="CommentForm-body">{{ 'blogs.article.message' | t }} <span aria-hidden="true">*</span></label>
+                
             </div>
             {%- if form.errors contains 'body' -%}
               <small id="CommentForm-body-error">
