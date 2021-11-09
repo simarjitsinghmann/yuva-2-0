@@ -63,6 +63,7 @@
           <p>If you've created an account with us, please enter.</p>
           <div>
             {%- if recover_success == true -%}
+              <div class="success-container">
             <h3 class="form__message" tabindex="-1" autofocus>
               <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 13 13">
                 <path d="M6.5 12.35C9.73087 12.35 12.35 9.73086 12.35 6.5C12.35 3.26913 9.73087 0.65 6.5 0.65C3.26913 0.65 0.65 3.26913 0.65 6.5C0.65 9.73086 3.26913 12.35 6.5 12.35Z" fill="#428445" stroke="white" stroke-width="0.7"/>
@@ -71,6 +72,7 @@
                   </svg>
                 {{ 'customer.recover_password.success' | t }}
                 </h3>
+                </div>
               {%- endif -%}
               {%- form 'customer_login', novalidate: 'novalidate' -%}
               {%- if form.errors -%}
