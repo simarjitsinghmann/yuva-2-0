@@ -28,18 +28,6 @@
     .select__size, .select__color {
         margin-bottom: 20px;
     }
-    /*  header start  */
-    .navbar-nav {
-        margin-left: 10px;
-    }
-    .navbar-expand-md .nav-item .list-menu__item {
-        padding-left: 10px;
-      	padding-right: 10px;
-    }
-    .navbar-nav .nav-item span.sf-menu__arrow {
-        right: 0px;;
-    }
-    /*  header end  */
 	/* whats more css start */
     .card-information__wrapper {
         width: 165px;
@@ -96,4 +84,18 @@
       padding-right: 30px;
     }
     /*  footer end  */
+}
+@media screen and (max-width:1199px){
+    /*  header start  */
+    .navbar-nav {
+        margin-left: 10px;
+    }
+    .navbar-expand-md .nav-item .list-menu__item {
+        padding-left: 10px;
+      	padding-right: 10px;
+    }
+    .navbar-nav .nav-item span.sf-menu__arrow {
+        right: 0px;;
+    }
+    /*  header end  */
 }
