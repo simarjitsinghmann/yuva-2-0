@@ -230,13 +230,24 @@
           {% for newArticle in blog.articles %}
           {% unless newArticle.handle == currentArticle %}
           {% capture post %}
-          <li><a href="{{ newArticle.url }}"><p>{{ newArticle.title }}</p></a></li>
+          <div class="col-12 col-sm-12 col-md-4"> 
+                  <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="{{newArticle.image |img_url :'master'}}" alt="blog image"/>
+                    </div>
+                    <h3 class="blog-title">{{newArticle.title}}</h3> 
+                    <p class="blog-desc">{{newArticle.content | strip_html | truncatewords:25}}</p>
+                    <a href="{{newArticle.url}}" class="read-more">Read More</a>
+                  </div>
+                </div>
           {% endcapture %}
           {% assign related_posts = related_posts | append:post %}
           {% endunless %}
           {% endfor %}
           {% if related_posts.size > 0 %}
-          <ul> {{ related_posts }} </ul>
+          <div class="row">
+            {{related_posts}}
+        </div>
           {% else %}
           No related posts!
           {% endif %}
