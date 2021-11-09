@@ -57,7 +57,7 @@
             {%- endform -%}
             </div>
         </div>
-        <div class="login__form" id="login">
+        <div class="login__form" id="">
           <h6 class="form_title" tabindex="-1">
             {{ 'customer.login_page.title' | t }}
           </h6> 
@@ -157,9 +157,9 @@
     </div>
     <script>
       var showRecover = document.getElementsByClassName('frgt-pw')[0];
-      var recoverSection = document.getElementById('recover');
+      var recoverSection = document.getElementsByClassName('forgetPassword__form')[0];
       var cancelRecover = document.getElementsByClassName('cancel_recover')[0];
-      var loginSection = document.getElementById('login');
+      var loginSection = document.getElementsByClassName('login__form')[0];
       showRecover.addEventListener("click", ()=>{
              loginSection.style.display = "none";
              recoverSection.style.display = "block";
