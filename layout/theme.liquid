@@ -97,7 +97,7 @@
         {{ content_for_layout }}
 
       </main>
-      {{template}}sss
+      {{request.path}}sss
 		{% unless template == '' %}
       {% section 'footer' %}
       {% endunless %}
