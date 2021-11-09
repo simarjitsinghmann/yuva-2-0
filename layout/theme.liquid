@@ -97,8 +97,10 @@
         {{ content_for_layout }}
 
       </main>
-
+      {{template}}
+		{% unless template contains 'challange' %}
       {% section 'footer' %}
+      {% endunless %}
 
       {% if settings.search_style == 'full' %}
       {% include 'search-drawer' %}
