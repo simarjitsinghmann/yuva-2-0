@@ -2,7 +2,7 @@
 
 <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
   {%- if article.image -%}
-  <div class="article-template__hero-container" {{ block.shopify_attributes }}>
+  <div class="article-template__hero-container">
     <div class="article-template__hero-{{ block.settings.image_height }} media"
          itemprop="image">
       <img
@@ -22,7 +22,7 @@
   </div>
   {%- endif -%}
 
-  <div class="container" {{ block.shopify_attributes }}>
+  <div class="container">
     <div class="blog-detail-box">
       <div class="row">
         <div class="col-12 col-sm-7 col-md-8">
@@ -41,7 +41,7 @@
               {% endif %}
 
             </div>
-            <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }}>
+            <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody">
               {{ article.content }}
             </div>
 			
