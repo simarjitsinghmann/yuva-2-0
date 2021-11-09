@@ -34,7 +34,29 @@
     "name": "Image With Text",
     "tag": "section",
     "class":"about-story-section",
-    "settings": [],
+    "settings": [
+        {
+            "type":"image_picker",
+            "id":"image",
+            "label":"image"
+        },
+        {
+            "type":"text",
+            "id":"heading",
+            "label":"Heading",
+            "default":"Yuva Our Story"
+        },
+        {
+            "type": "range",
+            "id": "rotate_speed",
+            "min": 1,
+            "max": 10,
+            "step": 1,
+            "unit":"s",
+            "label": "t:sections.main-slider.settings.rotate_speed.label",
+            "default": 2
+        }
+  	],
     "presets": [
       {
         "name": "Image With Text"
