@@ -227,8 +227,8 @@
         <div class="col-12 col-sm-5 col-md-4">
      {% assign related_posts = "" %}
           {{blog.title}}
-{{blogs[blog.handle].title}}
-{% for article in blogs.blog.articles %}
+<!-- {{blogs[blog.handle].title}} -->
+{% for article in blog.articles %}
   {% if article.tags contains product.handle %}
     {% capture post %}
       <li><a href="{{ article.url }}"><p>{{ article.title }}</p></a></li>
