@@ -20,12 +20,12 @@
   {%- form 'create_customer', novalidate: 'novalidate' -%}
     {%- if form.errors -%}
     <div class="error-container">
-      <h2 class="form__message" tabindex="-1" autofocus>
+      <p class="form__message" tabindex="-1" autofocus>
         <svg aria-hidden="true" focusable="false" role="presentation">
           <use href="#icon-error" />
         </svg>
         {{ 'templates.contact.form.error_heading' | t }}
-      </h2>
+      </p>
       <ul> 
         {%- for field in form.errors -%}
           <li>
