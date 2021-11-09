@@ -48,6 +48,7 @@
            }
            else{
              btn.classList.remove('active');
+             clearActive();
              btn.classList.add("active");
              var _value = btn.getAttribute("content");
              document.getElementById(_value).style.display = "block";
