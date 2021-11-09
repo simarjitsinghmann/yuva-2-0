@@ -226,15 +226,14 @@
 
         <div class="col-12 col-sm-5 col-md-4">
      {% assign related_posts = "" %}
-          {{blog.title}}
-<!-- {{blogs[blog.handle].title}} -->
+          {% assign currentArticle = article.handle %}
 {% for article in blog.articles %}
-  {% if article.tags contains product.handle %}
+  {% unless article.handle contains currentArticle %}
     {% capture post %}
       <li><a href="{{ article.url }}"><p>{{ article.title }}</p></a></li>
     {% endcapture %}
     {% assign related_posts = related_posts | append:post %}
-  {% endif %}
+  {% endunless %}
 {% endfor %}
 {{related_posts}}
 {% if related_posts.size > 0 %}
