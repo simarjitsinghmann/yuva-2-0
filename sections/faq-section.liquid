@@ -31,14 +31,7 @@
       var tabHead = document.getElementsByClassName('faq-{{section.id}}');
       if(tabHead.length > 0 ){
          var tabContent =  document.getElementsByClassName('faqSection-content');
-         function clearActive(){
-            Array.from(tabHead).forEach(function(item) {
-               item.classList.remove('active');
-            });
-            Array.from(tabContent).forEach(function(item) {
-               item.style.display = 'none';
-            });
-         }
+        
          Array.from(tabHead).forEach(function(btn) {
            btn.addEventListener("click", ()=>{
 			let icon = btn.querySelectorAll('.fa')[0];
@@ -55,6 +48,16 @@
            }
          });
          });
+       function clearActive(){
+         var tabs = document.getElementsByClassName('faq-{{section.id}}');
+         var tabsContent =  document.getElementsByClassName('faqSection-content');
+         Array.from(tabs).forEach(function(item) {
+           item.classList.remove('active');
+         });
+         Array.from(tabsContent).forEach(function(item) {
+           item.style.display = 'none';
+         });
+       }
       }
    </script>
 {% schema %}
