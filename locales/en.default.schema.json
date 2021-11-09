@@ -1461,41 +1461,15 @@
     },
     "main-article": {
       "name": "Blog post",
-      "blocks": {
-        "featured_image": {
-          "name": "Featured image",
-          "settings": {
-            "image_height": {
-              "label": "Featured image height",
-              "options__1": {
-                "label": "Adapt to image"
-              },
-              "options__2": {
-                "label": "Medium"
-              },
-              "options__3": {
-                "label": "Large"
-              },
-              "info": "For best results, use an image with a 16:9 aspect ratio."
-            }
-          }
+      "settings": {
+        "show_author": {
+          "label": "Show Article Author"
         },
-        "title": {
-          "name": "Title",
-          "settings": {
-            "blog_show_date": {
-              "label": "Show date"
-            },
-            "blog_show_author": {
-              "label": "Show author"
-            }
-          }
+        "show_date": {
+          "label": "Show Article Published Date"
         },
-        "content": {
-          "name": "Content"
-        },
-        "social_sharing": {
-          "name": "Social share buttons"
+        "show_social": {
+          "label": "Show Social share buttons"
         }
       }
     },
