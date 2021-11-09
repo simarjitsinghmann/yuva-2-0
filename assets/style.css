@@ -2302,7 +2302,11 @@ body .shopify-section.faq-section {
 .blog-title {
     font-weight: var(--medium);
     font-size: 20px;
-    margin-bottom:0;
+    margin-bottom: 0;
+    width: 490px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .blog-desc {
     font-size: 15px;
