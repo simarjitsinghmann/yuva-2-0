@@ -232,13 +232,13 @@
     </div>
   </div>
   <div class="relatedBlogPosts">
-    {% assign related_posts = "" %}
-    {% assign count = 0 %}
-    {% assign currentArticle = article.handle %}
-    {% for newArticle in blog.articles %}
-    {% unless newArticle.handle == currentArticle %}
-    {% assign count = count | plus:1 %}
-    {% capture post %}
+    {%- assign related_posts = "" -%}
+    {%- assign count = 0 -%}
+    {%- assign currentArticle = article.handle -%}
+    {%- for newArticle in blog.articles -%}
+    {%- unless newArticle.handle == currentArticle -%}
+    {%- assign count = count | plus:1 -%}
+    {%- capture post -%}
     <div class="col-12 col-sm-12 col-md-4"> 
       <div class="blog-card">
         <div class="blog-img">
@@ -249,20 +249,20 @@
         <a href="{{newArticle.url}}" class="read-more">Read More</a>
       </div>
     </div>
-    {% endcapture %}
-    {% assign related_posts = related_posts | append:post %}
-    {% endunless %}
-    {% if count == 3 %}
-    {% break %}
-    {% endif %}
-    {% endfor %}
-    {% if related_posts.size > 0 %}
+    {%- endcapture -%}
+    {%- assign related_posts = related_posts | append:post -%}
+    {%- endunless -%}
+    {%- if count == 3 -%}
+    {%- break -%}
+    {%- endif -%}
+    {%- endfor -%}
+    {%- if related_posts.size > 0 -%}
     <div class="row">
-      {{related_posts}}
+      {{- related_posts -}}
     </div>
-    {% else %}
+    {%- else -%}
     No related posts!
-    {% endif %}
+    {%- endif -%}
   </div>
 </article>
 
