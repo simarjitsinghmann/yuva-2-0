@@ -225,12 +225,22 @@
         </div>
 
         <div class="col-12 col-sm-5 col-md-4">
-          sfsd
-<ul class="related_posts">
-  {% for post in site.related_posts %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+     {% assign related_posts = "" %}
+
+{% for article in blogs.blog.articles %}
+  {% if article.tags contains product.handle %}
+    {% capture post %}
+      <li><a href="{{ article.url }}"><p>{{ article.title }}</p></a></li>
+    {% endcapture %}
+    {% assign related_posts = related_posts | append:post %}
+  {% endif %}
+{% endfor %}
+
+{% if related_posts.size > 0 %}
+  <ul> {{ related_posts }} </ul>
+{% else %}
+  No related posts!
+{% endif %}
         </div>
       </div>
     </div>
