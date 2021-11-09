@@ -16,7 +16,7 @@
                     <div class="row column-{{section.settings.col_size}} d-flex justify-content-center">
                         {% assign limit = section.settings.col_size | times : section.settings.row_size%}
                         {% for product in collection.products limit:limit%}
-                        {% include 'product-grid'%}
+                        {% include 'product-grid' %}
                         {% endfor %}
                     </div>
                 </div>
