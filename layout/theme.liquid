@@ -50,8 +50,8 @@
 
     {{ 'style.css' | asset_url | stylesheet_tag }}
 
-    {{ 'responsive.css' | asset_url | stylesheet_tag }}
-
+    {{ 'style-responsive.css' | asset_url | stylesheet_tag }}
+    
     {{ 'variable.css' | asset_url | stylesheet_tag }}
 
     {{ 'element.css' | asset_url | stylesheet_tag }}
@@ -97,7 +97,7 @@
         {{ content_for_layout }}
 
       </main>
-		{% unless request.path contains 'challange' %}
+		{% unless request.path contains 'challenge' %}
       {% section 'footer' %}
       {% endunless %}
 
