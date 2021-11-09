@@ -222,9 +222,6 @@
             </div>
             {%- endif -%}
           </div>
-        </div>
-
-        <div class="col-12 col-sm-5 col-md-4">
           {% assign related_posts = "" %}
           {% assign currentArticle = article.handle %}
           {% for newArticle in blog.articles %}
@@ -251,6 +248,10 @@
           {% else %}
           No related posts!
           {% endif %}
+        </div>
+
+        <div class="col-12 col-sm-5 col-md-4">
+          
         </div>
       </div>
     </div>
