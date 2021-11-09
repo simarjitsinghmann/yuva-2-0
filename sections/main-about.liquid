@@ -3,7 +3,7 @@
     <div class="row align-items-center">
       <div class="col-12 col-sm-12 col-md-6">
         <div class="left-img-content">
-          <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/about-bag.png?v=1636363423" alt="bag image" />
+          <img src="{{section.settings.image | img_url:'master'}}" alt="{{section.settings.image.alt | default:shop.name}}" />
         </div>
       </div>
       <div class="col-12 col-sm-12 col-md-6">
