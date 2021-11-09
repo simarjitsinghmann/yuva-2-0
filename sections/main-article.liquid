@@ -218,7 +218,8 @@
     </div>
   </div>
   {% if section.settings.show_related %}
-  <div class="relatedBlogPosts container">
+  <div class="relatedBlogPosts">
+    <div class="container">
     {%- assign related_posts = "" -%}
     {%- assign count = 0 -%}
     {%- assign currentArticle = article.handle -%}
@@ -250,6 +251,7 @@
     {%- else -%}
     No related posts!
     {%- endif -%}
+    </div>
   </div>
   {%- endif -%}
 </article>
