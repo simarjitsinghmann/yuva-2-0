@@ -31,12 +31,13 @@
   </div>
   {%- endif -%}
 
-  {%- when 'title'-%}
   <div class="container" {{ block.shopify_attributes }}>
     <div class="blog-detail-box">
       <div class="row">
         <div class="col-12 col-sm-7 col-md-8">
           <div class="blog-detail-content">
+            
+  			{%- when 'title'-%}
             <h3 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h3>
             <div class="blog-author">
               <span class="" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -52,16 +53,10 @@
               {{ article.content }}
             </div>
 
-            {%- when 'share' -%}
-            <div class="article-template__social-sharing page-width page-width--narrow" {{ block.shopify_attributes }}>
-              <share-button class="share-button" {{ block.shopify_attributes }}>
-                <button class="share-button__button hidden">
-                  {% render 'icon-share' %}
-                  {{ block.settings.share_label | escape }}
-                </button>
-              </share-button>
-              <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
-            </div>
+            {%- when 'social_sharing'-%}
+          <div class="article-template__social-sharing page-width page-width--narrow">
+            {% render 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+          </div>
             {%- endcase -%}
             {%- endfor -%}
 
