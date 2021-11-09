@@ -235,7 +235,6 @@
     {% assign related_posts = related_posts | append:post %}
   {% endunless %}
 {% endfor %}
-{{related_posts}}
 {% if related_posts.size > 0 %}
   <ul> {{ related_posts }} </ul>
 {% else %}
