@@ -37,8 +37,15 @@
 .shopify-section-slider .button {border:0;}
 .error-container {
     background-color: #ff000012;
-    padding: 10px 20px;
+    padding: 10px 35px;
     margin-bottom: 20px;
+}
+element.style {
+    position: relative;
+}
+element.style {
+    position: absolute;
+    left: -25px;
 }
 /* common end */
 .wrapper-overlay{ position: fixed; background-color: var(--overlay-bg); top: 0; left: 0; bottom: 0; right: 0; cursor: pointer; display: none; z-index: 99; }
