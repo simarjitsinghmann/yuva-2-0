@@ -44,7 +44,11 @@
             <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody">
               {{ article.content }}
             </div>
-
+            <ul class="article_tags">
+            	{% for tag in article.tags %}
+              <li><a href="{{blog.url}}/tagged/{{tag}}">{{tag}}</a></li>
+              {% endfor %}
+            </ul>
             {% if section.settings.show_social %}
             <div class="article-template__social-sharing page-width page-width--narrow social-icons">
               {% render 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
