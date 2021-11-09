@@ -1,5 +1,6 @@
 
 <div class="container testimonials-variation-{{section.settings.style}}">
+    <div class="row">
       {% if section.settings.style == 'style1' %}
           <div class="shopify__top__section text__center">
               <small>{{section.settings.subheading}}</small>
@@ -33,12 +34,11 @@
                 </div>
             </div>
           {% endif %}
-  			<div class="row">
           {% elsif section.settings.style == 'style2' %}
             <div class="col-md-3">
               <div class="client-say-left">       
                 <small>{{section.settings.subheading}}</small>
-                <h2>{{section.settings.heading}}</h2>  
+                <h4>{{section.settings.heading}}</h4>  
                 {% if section.settings.description %}
                 <p>{{section.settings.description}}</p>
                 {% endif %}
@@ -74,8 +74,8 @@
                 </div>
             </div>
           {% endif %}
-              </div>
     {% endif %} 
+    </div>
 </div>
 <style>
     #shopify-section-{{section.id}}{
