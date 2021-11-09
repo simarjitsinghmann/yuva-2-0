@@ -1191,11 +1191,11 @@ ul.gallery-item li a > img {background: #f6f4f3;}
 .shopify-payment-button__more-options {
 	display: none;
 }
-.single__product__right .social-icons .share-icons {
+.social-icons .share-icons {
     width: 100%;
     margin-bottom: 10px;
 }
-.single__product__right .social-icons .share-icons li {
+.social-icons .share-icons li {
     transition: .8s;
     margin-right: 12px;
     list-style: none;
@@ -1203,7 +1203,7 @@ ul.gallery-item li a > img {background: #f6f4f3;}
     vertical-align: middle;
     font-size: 12px;
 }
-.single__product__right .social-icons .share-icons li a {
+.social-icons .share-icons li a {
     background: 0 0;
     border: none;
     border-radius: 0;
@@ -1216,18 +1216,16 @@ ul.gallery-item li a > img {background: #f6f4f3;}
     display:flex;
   background-color: #ececec;
 }
-
-.single__product__right .social-icons .share-icons li a svg {
-/*     margin-right: 5px; */
+.social-icons .share-icons li a svg {
     width: 14px;
     height: auto;
     fill: #757575;
 }
-.single__product__right .social-icons .share-icons li a:hover, .single__product__right .social-icons .share-icons li a:hover svg {
+.social-icons .share-icons li a:hover, .social-icons .share-icons li a:hover svg {
     color: var(--black);
      fill: #fff;
 }
-.single__product__right .social-icons .share-icons li:last-child {
+.social-icons .share-icons li:last-child {
     margin-right: 0;
 }
 .single__product__right .ask_about {
