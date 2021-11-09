@@ -227,10 +227,10 @@
         <div class="col-12 col-sm-5 col-md-4">
      {% assign related_posts = "" %}
           {% assign currentArticle = article.handle %}
-{% for article in blog.articles %}
-  {% unless article.handle contains currentArticle %}
+{% for newArticle in blog.articles %}
+  {% unless newArticle.handle == currentArticle %}
     {% capture post %}
-      <li><a href="{{ article.url }}"><p>{{ article.title }}</p></a></li>
+      <li><a href="{{ newArticle.url }}"><p>{{ newArticle.title }}</p></a></li>
     {% endcapture %}
     {% assign related_posts = related_posts | append:post %}
   {% endunless %}
