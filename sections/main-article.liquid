@@ -51,6 +51,7 @@
             </ul>
             {% if section.settings.show_social %}
             <div class="article-template__social-sharing page-width page-width--narrow social-icons">
+              <h5>Share</h5>
               {% render 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
             </div>
             {% endif %}
