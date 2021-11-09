@@ -905,7 +905,7 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--small-font); lin
     font-weight: var(--light);
     padding: 5px 12px;
     cursor: pointer;
-    /* border-bottom: 1px solid #eee; */
+    position:relative;
 }
 .toolbox-item.toolbox-sort.select-box ul li:hover {
 	color: var(--black);
