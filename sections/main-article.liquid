@@ -34,10 +34,10 @@
               </span>
               <span class="circle-divider" itemprop="dateCreated pubdate datePublished">on 
                 {{ article.published_at | time_tag: format: 'month_year' }}</span>
-              
-          <div class="article-template__social-sharing page-width page-width--narrow">
-            {% render 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
-          </div>
+
+              <div class="article-template__social-sharing page-width page-width--narrow">
+                {% render 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+              </div>
             </div>
             <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }}>
               {{ article.content }}
