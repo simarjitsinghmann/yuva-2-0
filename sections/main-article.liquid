@@ -29,20 +29,27 @@
           <div class="blog-detail-content">
             <h3 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h3>
             <div class="blog-author">
+              {% if section.settings.show_author %}
               <span class="" itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <span itemprop="name">Posted By {{ article.author }}</span>
               </span>
-              <span class="circle-divider" itemprop="dateCreated pubdate datePublished">on 
-                {{ article.published_at | time_tag: format: 'month_year' }}</span>
+              {% endif %}
+              {% if section.settings.show_date %}
+              <span class="circle-divider" itemprop="dateCreated pubdate datePublished">
+                on {{ article.published_at | time_tag: format: 'month_year' }}
+              </span>
+              {% endif %}
 
             </div>
             <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }}>
               {{ article.content }}
             </div>
 			
+              {% if section.settings.show_social %}
               <div class="article-template__social-sharing page-width page-width--narrow social-icons">
                 {% render 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
               </div>
+              {% endif %}
 
             {%- if blog.comments_enabled? -%}
             <div class="article-template__comment-wrapper background-secondary shopify-blog-comments">
