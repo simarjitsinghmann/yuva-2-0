@@ -269,7 +269,8 @@ main .shopify-section:first-child {
 .card-wrapper .card__warpper__detail:hover:before, .animate_hvrbr:hover::before { -webkit-animation: shine 1.3s; -moz-animation: shine 1.3s; -ms-animation: shine 1.3s; -o-animation: shine 1.3s; animation: shine 1.3s; opacity: .8; } 
 .card__warpper__detail.right__sided .collection-image img { /*width: calc(100% + 4px); height: calc(100% + 4px);top: -2px;*/ position: relative;  } 
 .card__warpper__detail.right__sided .collection-image { width: 50%; float: left; } 
-.card__warpper__detail.right__sided .collection-detail-right { width: 50%; float: left; display: flex; justify-content: center; align-items: flex-start; flex-direction: column; /*border: 2px solid #f5f4f3;*/ border-left: 0; padding: 0 30px 0 45px;border: 2px solid #f5f4f3;border-left:0; } 
+.card__warpper__detail.right__sided .collection-detail-right { width: 50%; display: flex; justify-content: center; align-items: flex-start; 
+  flex-direction: column; padding: 10px 30px;border: 2px solid #f5f4f3;border-left:0; } 
 .card-information .card-information-image a > img { width: 100%; } 
 .card__warpper__detail.left__sided { padding-right: 15px; } 
 .card__warpper__detail.left__sided .collection-image { width: 100%; } 

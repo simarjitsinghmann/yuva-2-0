@@ -36,11 +36,9 @@
            btn.addEventListener("click", ()=>{
 			let icon = btn.querySelectorAll('.fa')[0];
            if(btn.classList.contains('active')){
-             btn.classList.remove('active');
              clearActive();
            }
            else{
-             btn.classList.remove('active');
              clearActive();
              btn.classList.add("active");
              var _value = btn.getAttribute("content");
