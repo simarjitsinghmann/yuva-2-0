@@ -156,11 +156,20 @@
       </div>
     </div>
     <script>
-      console.log(window.location.href)
+      var url = window.location.href;
       var showRecover = document.getElementsByClassName('frgt-pw')[0];
       var recoverSection = document.getElementsByClassName('forgetPassword__form')[0];
       var cancelRecover = document.getElementsByClassName('cancel_recover')[0];
       var loginSection = document.getElementsByClassName('login__form')[0];
+      if(url.indexOf('#recover') > -1){
+        loginSection.style.display = "none";
+        recoverSection.style.display = "block";
+      }
+      else{
+             recoverSection.style.display = "none";
+             loginSection.style.display = "block";
+      
+      }
       showRecover.addEventListener("click", ()=>{
              loginSection.style.display = "none";
              recoverSection.style.display = "block";
