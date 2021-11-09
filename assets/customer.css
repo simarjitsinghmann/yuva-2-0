@@ -11,7 +11,7 @@
     padding: 40px 45px;
     text-align: left;
 }
-#recover .form_title, #login .form_title, .new__customer h6, #registerForm .form_title  {
+.customer.login .form_title, .new__customer h6, #registerForm .form_title  {
     font-weight: var(--bold);
     text-transform: uppercase;
     letter-spacing: 0.6px;
@@ -342,21 +342,6 @@
 #customer_login_guest button {
   margin-top: 0;
 }
-
-#recover {
-  display: none;
-}
-
-#recover:target {
-  display: block;
-}
-
-
-#recover:target ~ #login,
-#recover:target ~ #login {
-  display: none;
-}
-
 .activate button[name="decline"],
 .addresses li > button,
 .addresses form button[type] {
@@ -732,9 +717,6 @@ li[data-address] > h2 {
   .customer.login, .customer.register {
     max-width: calc(100% - 60px);
     padding: 70px 0 70px;
-}
-  #login, #recover, #registerForm {
-    padding: 30px 30px;
 }
 }
 @media only screen and (max-width:767px){
