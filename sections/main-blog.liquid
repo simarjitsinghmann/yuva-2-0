@@ -1,6 +1,6 @@
 
 {%- paginate blog.articles by 6 -%}
-<div class="top_page_title"  style="background:url(https://cdn.shopify.com/s/files/1/0597/9668/5009/files/blog-banner.jpg?v=1635831132) no-repeat center">
+<div class="top_page_title" {% if section.settings.show_image and section.settings.banner_image != blank %} style="background:url({{section.settings.banner_image | img_url :'master'}}) no-repeat center"{% endif %}>
   <div class="container">
     <div class="contact-banner-text">
       <div class="banner_title">
