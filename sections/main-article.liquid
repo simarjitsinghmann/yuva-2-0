@@ -223,7 +223,6 @@
               {%- unless newArticle.handle == currentArticle -%}
               {%- assign count = count | plus:1 -%}
               {%- capture post -%}
-              <div class="col-12 col-sm-12 col-md-4"> 
                 <div class="blog-card">
                   <div class="blog-img">
                     <img src="{{newArticle.image |img_url :'master'}}" alt="blog image"/>
@@ -232,7 +231,6 @@
                   <p class="blog-desc">{{newArticle.content | strip_html | truncatewords:25}}</p>
                   <a href="{{newArticle.url}}" class="read-more">Read More</a>
                 </div>
-              </div>
               {%- endcapture -%}
               {%- assign related_posts = related_posts | append:post -%}
               {%- endunless -%}
@@ -241,7 +239,7 @@
               {%- endif -%}
               {%- endfor -%}
               {%- if related_posts.size > 0 -%}
-              <div class="row">
+              <div class="">
                 {{- related_posts -}}
               </div>
               {%- else -%}
