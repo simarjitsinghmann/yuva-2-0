@@ -1203,19 +1203,16 @@ ul.gallery-item li a > img {background: #f6f4f3;}
     vertical-align: middle;
     font-size: 12px;
 }
-/* .social-icons .share-icons li a {
-    background: 0 0;
-    border: none;
-    border-radius: 0;
-    width: 30px;
-    height: 30px;
-    line-height: normal;
-    text-transform: uppercase;
-    font-size: 11px;
-    color: #757575;
-    display:flex;
-  background-color: #ececec;
-} */
+.share-icons li a { 
+  display: flex; 
+  width: 30px; 
+  height: 30px; 
+  background: #f3f3f3;
+  text-align: center; 
+  line-height: 23px; 
+  align-items: center; 
+  justify-content: center; 
+}
 .social-icons .share-icons li a svg {
     width: 14px;
     height: auto;
@@ -1645,7 +1642,6 @@ justify-content: center
 }
  .product-add-to-cart-right .form-group .btn-box .shopify-payment-button { position: relative; min-width: 150px; width: 100%; margin-right: 0; } 
  .product-add-to-cart-right .form-group .btn-box .shopify-payment-button button.shopify-payment-button__button { border-radius: 0; border: 2px solid #000;} 
-.share-icons li a { display: flex; width: 30px; height: 30px; background: #f3f3f3; border: 2px solid #f3f3f3; border-radius: 50%; text-align: center; line-height: 23px; align-items: center; justify-content: center; }
 .share-icons li a svg { fill: #757575; margin-right: 0; width: 14px; height: 14px; } 
 .share-icons li a:focus, .product-add-to-cart-right .share-icons li a:hover { background: var(--black); border: 2px solid var(--black); } 
 .share-icons li a:focus svg, .product-add-to-cart-right .share-icons li a:hover svg { fill: white; }
