@@ -1218,9 +1218,10 @@ ul.gallery-item li a > img {background: #f6f4f3;}
     height: auto;
     fill: #757575;
 }
-.social-icons .share-icons li a:hover, .social-icons .share-icons li a:hover svg {
-    color: var(--black);
-     fill: #fff;
+.social-icons .share-icons li a:hover, 
+.social-icons .share-icons li a:hover svg {
+    background-color: var(--black);
+    fill: #fff;
 }
 .social-icons .share-icons li:last-child {
     margin-right: 0;
