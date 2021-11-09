@@ -32,18 +32,17 @@
               <span class="" itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <span itemprop="name">Posted By {{ article.author }}</span>
               </span>
-              {%- if block.settings.blog_show_date -%}
               <span class="circle-divider" itemprop="dateCreated pubdate datePublished">on 
                 {{ article.published_at | time_tag: format: 'month_year' }}</span>
-              {%- endif -%}
+              
             </div>
+          <div class="article-template__social-sharing page-width page-width--narrow">
+            {% render 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+          </div>
             <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }}>
               {{ article.content }}
             </div>
 
-          <div class="article-template__social-sharing page-width page-width--narrow">
-            {% render 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
-          </div>
 
             {%- if blog.comments_enabled? -%}
             <div class="article-template__comment-wrapper background-secondary shopify-blog-comments">
