@@ -218,7 +218,7 @@
 
         {% if section.settings.show_related %}
         <div class="col-12 col-sm-5 col-md-4">
-          <div class="relatedBlogPosts">
+          <div class="relatedBlogPosts style1">
             <h4>Related Posts</h4>
               {%- assign related_posts = "" -%}
               {%- assign count = 0 -%}
@@ -227,14 +227,7 @@
               {%- unless newArticle.handle == currentArticle -%}
               {%- assign count = count | plus:1 -%}
               {%- capture post -%}
-                <div class="blog-card">
-                  <div class="blog-img">
-                    <img src="{{newArticle.image |img_url :'master'}}" alt="blog image"/>
-                  </div>
-                  <h3 class="blog-title">{{newArticle.title}}</h3> 
-                  <p class="blog-desc">{{newArticle.content | strip_html | truncatewords:25}}</p>
-                  <a href="{{newArticle.url}}" class="read-more">Read More</a>
-                </div>
+                {% include 'article-grid' %}
               {%- endcapture -%}
               {%- assign related_posts = related_posts | append:post -%}
               {%- endunless -%}
