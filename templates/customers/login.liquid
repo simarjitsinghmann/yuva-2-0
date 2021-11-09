@@ -74,6 +74,7 @@
               {%- endif -%}
               {%- form 'customer_login', novalidate: 'novalidate' -%}
               {%- if form.errors -%}
+              <div class="error-container">
               <h2 class="form__message" tabindex="-1" autofocus>
                 <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>
                 <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 13 13">
@@ -85,6 +86,7 @@
                   {{ 'templates.contact.form.error_heading' | t }}
                   </h2>
                 {{ form.errors | default_errors }}
+                </div>
                 {%- endif -%}
 
                 <div class="field form-group">  
