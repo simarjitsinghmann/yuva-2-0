@@ -96,8 +96,8 @@
           {{ product.variants | json }}
             </script>
             {% endform %}
-          </div>
-          
+          </div>     
+          {% endunless %}
             <div class="shop__options">
                     <div class="product__view__option">
                         <ul>
@@ -140,7 +140,8 @@
                     </div> -->
                 
             </div>  
-          {% endunless %}
+          
+          
             {% unless hideRelated %}      
             <div class="similar_options" data-section="{{section.id}}" data-id="{{product.id}}">
                 <span class="vs-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.36 33"><defs></defs><g>
