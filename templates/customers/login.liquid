@@ -163,10 +163,14 @@
       showRecover.addEventListener("click", ()=>{
              loginSection.style.display = "none";
              recoverSection.style.display = "block";
+                                    var url = window.location.pathname+'#recover';
+                                   history.pushState({}, null, url);
 //                                    history.pushState({}, null, _updateUrl);
       });
       cancelRecover.addEventListener("click", ()=>{
              recoverSection.style.display = "none";
              loginSection.style.display = "block";
+                                    var url = window.location.pathname;
+                                   history.pushState({}, null, url);
       });
     </script>
