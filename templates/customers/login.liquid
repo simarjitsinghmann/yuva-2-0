@@ -161,4 +161,15 @@
       var recoverSection = document.getElementById('recover');
       var cancelRecover = document.getElementsByClassName('cancel_recover')[0];
       var loginSection = document.getElementById('login');
+      showRecover.addEventListener("click", ()=>{
+			let icon = btn.querySelectorAll('.fa')[0];
+           if(btn.classList.contains('active')){
+             clearActive();
+           }
+           else{
+             clearActive();
+             btn.classList.add("active");
+             var _value = btn.getAttribute("content");
+             document.getElementById(_value).style.display = "block";
+           }
     </script>
