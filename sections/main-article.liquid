@@ -227,7 +227,7 @@
               {%- unless newArticle.handle == currentArticle -%}
               {%- assign count = count | plus:1 -%}
               {%- capture post -%}
-                {% include 'article-grid' %}
+                {% include 'article-grid' article:newArticle %}
               {%- endcapture -%}
               {%- assign related_posts = related_posts | append:post -%}
               {%- endunless -%}
