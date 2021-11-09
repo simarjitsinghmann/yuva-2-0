@@ -1,13 +1,6 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
 <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
-  {%- for block in section.blocks -%}
-  {%- case block.type -%}
-  {%- when '@app' -%}
-  <div class="page-width page-width--narrow">
-    {% render block %}
-  </div>
-  {%- when 'featured_image'-%}
   {%- if article.image -%}
   <div class="article-template__hero-container" {{ block.shopify_attributes }}>
     <div class="article-template__hero-{{ block.settings.image_height }} media"
@@ -34,8 +27,6 @@
       <div class="row">
         <div class="col-12 col-sm-7 col-md-8">
           <div class="blog-detail-content">
-            
-  			{%- when 'title'-%}
             <h3 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h3>
             <div class="blog-author">
               <span class="" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -46,17 +37,13 @@
                 {{ article.published_at | time_tag: format: 'month_year' }}</span>
               {%- endif -%}
             </div>
-            {%- when 'content'-%}
             <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }}>
               {{ article.content }}
             </div>
 
-            {%- when 'social_sharing'-%}
           <div class="article-template__social-sharing page-width page-width--narrow">
             {% render 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
           </div>
-            {%- endcase -%}
-            {%- endfor -%}
 
             {%- if blog.comments_enabled? -%}
             <div class="article-template__comment-wrapper background-secondary shopify-blog-comments">
