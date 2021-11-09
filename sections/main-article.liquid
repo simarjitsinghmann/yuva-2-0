@@ -217,6 +217,7 @@
       </div>
     </div>
   </div>
+              {% if section.settings.show_related %}
   <div class="relatedBlogPosts">
     {%- assign related_posts = "" -%}
     {%- assign count = 0 -%}
@@ -250,6 +251,7 @@
     No related posts!
     {%- endif -%}
   </div>
+            {%- endif -%}
 </article>
 
 <script type="application/ld+json">
