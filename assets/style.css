@@ -2379,6 +2379,16 @@ body .shopify-section.faq-section {
 .relatedBlogPosts .blog-card {
 	margin-top:25px;
 }
+.article_tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.article_tags li a{
+  background-color: var(--gray);
+    color: var(--gray);
+}
 /* =============== blog detail css end  ================ */
 /* ================= about page css start =============== */
 .about-story-section .right-text-content {
