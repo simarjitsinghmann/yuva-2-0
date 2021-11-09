@@ -34,6 +34,7 @@
                    >
           </div>
           {%- if form.errors -%}
+          <div class="error-container">
           <small id="RecoverEmail-email-error" class="form__message">
             <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 13 13">
               <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
@@ -43,6 +44,7 @@
                 </svg>
               {{ form.errors.messages['form'] }}
               </small>
+            </small>
             {%- endif -%}
 
             <div class="form-group">
