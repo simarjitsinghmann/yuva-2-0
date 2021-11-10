@@ -258,7 +258,13 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             var compareAtPrice= getVariant.compare_at_price;
             var price= getVariant.price;
             var percentage = ((compareAtPrice-price)/compareAtPrice)*100;
+            if(compareAtPrice > price){
             console.log(priceContainer,getVariant,percentage);
+            }
+            else{
+            
+            console.log(priceContainer,getVariant,'ewe');
+            }
             var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
             if(getVariant.available == true){
               if(paymentButtonWrapper){
