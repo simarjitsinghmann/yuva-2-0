@@ -265,8 +265,11 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             priceContainer.innerHTML = priceHtml;
             console.log(getVariant)
             var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
-            var _updateUrl = window.location.pathname+'?variant='+getVariant.id;
+            var baseUrl = window.location.pathname;
+            if(baseUrl.indexOf('/products/' > -1){
+            var _updateUrl = baseUrl+'?variant='+getVariant.id;
             history.pushState({}, null, _updateUrl);
+          }
             if(getVariant.available == true){
               if(paymentButtonWrapper){
               paymentButtonWrapper.removeAttribute("disabled");
