@@ -810,7 +810,7 @@ object-fit: cover; }
 
 /***product-collection-page****/
 	/**Breadcrumb**/
-nav.breadcrumb-nav { background: var(--white); padding:20px;} 
+nav.breadcrumb-nav { background: var(--white); padding:20px 0;} 
 .breadcrumb-list { width: 100%; } 
 li.breadcrumb-item { display: inline-block; padding: 0 13px; position: relative; } 
 .breadcrumb-item::after { content: '/'; font: normal normal normal 16px/1 FontAwesome; color: #969696; position: absolute; right: -3px; top: 52%; transform: translateY(-50%); } 
