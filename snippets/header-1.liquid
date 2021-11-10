@@ -2,13 +2,16 @@
     <div class="container">
             <div class="navbar navbar-expand-md header__inline-menu" role="navigation">
               
+                <div id="nav_style_4">
                 <div class="nav__btn">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <span class="menu_title">MENU</span>
                 </div>
+              
                 {% include 'side-menu' %}
+                </div>
                 <a class="header__heading-link" href="{{ routes.root_url }}">
                     {%- if section.settings.logo != blank -%}
                     {%- assign image_size = section.settings.logo_width | append: 'x' -%}
