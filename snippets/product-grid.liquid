@@ -240,7 +240,7 @@
                               	{% comment %}
                                 <div class="product-brand normal-font">{{product.vendor}}</div>
                               	{% endcomment %}
-                                <div class="product-product small-size" title="{{product.title}}">{{product.title | truncate:15}}</div>
+                                <div class="product-product small-size">{{product.title}}</div>
                                 <div class="product-price">
                                     {% if current_variant.compare_at_price < current_variant.price %}
                                     <span class="small-size product-price-detail">
