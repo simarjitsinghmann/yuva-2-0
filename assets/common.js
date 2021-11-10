@@ -182,28 +182,7 @@ $(document).ready(function(){
 		$('#sort__list').css({"display": "block"});
 	});
 
-	// var results = $(".card-wrapper-img").find(".fdsf");
-	// if(results.length > 1){
-	// 	$(this).prev().addClass('sdfds');
-	// }else{
-	// 	alert('not there');
-	// } 
-	
-	///WISHLIST-IMG-FILL///
-	$('.product__view__option').click(function(){
-		if($(this).find('.wishlist-view').hasClass("fill-img")){
-			$(this).find('.wishlist-view').removeClass('fill-img');
-		} else{
-			$(this).find('.wishlist-view').addClass('fill-img');
-		}
-	});
-	
-	///product-quantitly-select///
-	// $('.dropdown-select').click(function(){
-	// 	$(this).find(".quality-select").slideToggle("fast");
-	// 	$('.quality-menu').css({"display": "block"});
-	// });
-	
+		
 	///product-size-select///
 	$('.dropdown-selected').click(function(){
 		$(".productOptionSelectList").slideUp("fast");
@@ -231,45 +210,17 @@ $(document).ready(function(){
 $('.back-btn').click(function(){
 	$(this).closest('ul').removeClass('show')
 })
-$('.toggle.open-menu-drop').click(function(){
+$('.toggle.open-menu-drop,.toggle-level').click(function(){
   var $this = $(this);
   if ($this.next().hasClass('show')) {
-    // setTimeout(function() {
-    //  $this.removeClass('open-menu-drop');
-    // }, 80);
     $this.next().removeClass('show');
-    //$this.next().slideUp(350);
   } else {
-    //  setTimeout(function() {
-    //   $this.addClass('open-menu-drop');
-    //  }, 80);
     $this.parent().parent().find('li .inner').removeClass('show');
-    //$this.parent().parent().find('li .inner').slideUp(350);
     $this.next().toggleClass('show');
-    //$this.next().slideToggle(350);
   }
 
 });
 
-$('.toggle-level').click(function(){
-  var $this = $(this);
-  if ($this.next().hasClass('show')) {
-    //setTimeout(function() {
-    // $this.removeClass('open-menu-drop');
-    //}, 70);
-    $this.next().removeClass('show');
-    //$this.next().slideUp(350);
-  } else {
-    // setTimeout(function() {
-    // $this.addClass('open-menu-drop');
-    // }, 70);
-    $this.parent().parent().find('li .inner').removeClass('show');
-    //$this.parent().parent().find('li .inner').slideUp(350);
-    $this.next().toggleClass('show');
-    //$this.next().slideToggle(350);
-  }
-});
-  
 
 //count timer//
 
