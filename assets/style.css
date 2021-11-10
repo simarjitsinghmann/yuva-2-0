@@ -938,10 +938,8 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--small-font); lin
 	padding-top:30px;
 }
 .main-content .products-grid .grid-item{padding:0 15px;}
-/* .main-content .products-grid .card.card--product { margin-bottom: 51px; }  */
 .price-item--discount { color: var(--theme-color); font-size: var(--small-text); font-weight: 600; letter-spacing: 0.2px; } 
-.main-content .toolbox { display: flex; justify-content: space-between; width: 100%; padding: 30px 0 10px; } 
-/* .filter-total-result { padding-bottom: 11px; }  */
+.toolbox { display: flex; justify-content: space-between; width: 100%; align-items:center; } 
 .toolbox-right { display: flex; flex-direction: row; align-items: center; justify-content: center; } 
 .toolbox-right .toolbox-item.toolbox-sort.select-box #SortBy { float: left; display: inline-block; width: auto; border: 0; background: transparent; font-size: var(--small-text); color: var(--black); padding: 8px 0; min-width: 138px; } 
 .toolbox-right .toolbox-item.toolbox-sort.select-box label {
