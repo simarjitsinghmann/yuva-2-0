@@ -1,7 +1,7 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
 <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
-  {%- if article.image -%}
+  {%- if article.image and section.settings.show_image -%}
   <div class="article-template__hero-container">
     <div class="article-template__hero-{{ block.settings.image_height }} media"
          itemprop="image">
