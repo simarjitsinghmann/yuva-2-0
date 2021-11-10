@@ -336,14 +336,6 @@ productVariants();
 showMultipleOptions();
 }());
 
-$('.announce_close').click(function(){
-	$('.announcement-bar').slideToggle();
-	$('body').removeClass('announcement_open');
-  setTimeout(function(){
-    var headerHeight = document.getElementById('headerSection').offsetHeight;
-    document.getElementsByTagName('body')[0].style['padding-top'] = headerHeight+'px';
-  },500)
-});
 
 $(document).on("click", function(event){
 	var $trigger = $(".productOptionSelect");

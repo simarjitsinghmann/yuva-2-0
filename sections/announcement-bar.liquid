@@ -141,6 +141,15 @@
           document.getElementsByTagName('body')[0].style['padding-top'] = headerHeight+'px';
         },200)
       }());
+      
+$('.announce_close').click(function(){
+	$('.announcement-bar').slideToggle();
+	$('body').removeClass('announcement_open');
+  setTimeout(function(){
+    var headerHeight = document.getElementById('headerSection').offsetHeight;
+    document.getElementsByTagName('body')[0].style['padding-top'] = headerHeight+'px';
+  },500)
+});
 </script>
 {% endif %}
 
