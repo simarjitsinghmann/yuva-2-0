@@ -1037,22 +1037,22 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 	margin: 21px 0 11px;
 }
   /* width */
-  .cart__contents::-webkit-scrollbar {
+  .cart-items-wrapper::-webkit-scrollbar {
     width: 5px;
   }
 
   /* Track */
-  .cart__contents::-webkit-scrollbar-track {
+  .cart-items-wrapper::-webkit-scrollbar-track {
     background: var(--gray);
   }
 
   /* Handle */
-  .cart__contents::-webkit-scrollbar-thumb {
+  .cart-items-wrapper::-webkit-scrollbar-thumb {
     background: var(--dark-gray);
   }
 
   /* Handle on hover */
-  .cart__contents::-webkit-scrollbar-thumb:hover {
+  .cart-items-wrapper::-webkit-scrollbar-thumb:hover {
     background: var(--gray);
   }
 /**End progress-bar**/
