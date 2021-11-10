@@ -260,8 +260,9 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             var percentage = ((compareAtPrice-price)/compareAtPrice)*100;
             var priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}</h3>`;
             if(compareAtPrice > price){
-            	var priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}<span class="main-price"> <del>${Shopify.formatMoney(compareAtPrice, moneyFormat)}</del> </span> </h3> <span class="percent-off">(${percentage}% OFF)</span>`;
+            	priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}<span class="main-price"> <del>${Shopify.formatMoney(compareAtPrice, moneyFormat)}</del> </span> </h3> <span class="percent-off">(${percentage}% OFF)</span>`;
             }
+            console.log(priceHtml)
             var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
             if(getVariant.available == true){
               if(paymentButtonWrapper){
