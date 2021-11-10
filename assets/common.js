@@ -255,6 +255,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
               }
             }
             var price=_productParent.querySelectorAll('[data-price-wrapper]')[0];
+            console.log(getVariant);
             var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
             if(getVariant.available == true){
               if(paymentButtonWrapper){
