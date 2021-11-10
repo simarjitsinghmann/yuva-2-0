@@ -102,8 +102,8 @@
           let _day = myArr[0];
           let _month = myArr[1];
           let _year = myArr[2];
-          let _date = _month+" "+_day+","+_year+" 00:00:00";
-          let countDown = new Date(_date).getTime();
+          let _date = _month+"/"+_day+","+_year+" 00:00:00";
+          let countDown = new Date(eventdate).getTime();
           
           console.log(countDown , 'testq')
           if(isNaN(countDown)){
