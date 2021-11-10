@@ -98,7 +98,6 @@
         var eventdate = document.getElementById("eventDate");
         
         if(eventdate) {
-          console.log(eventdate , 'test')
           const myArr = eventdate.value.split("/");
           let _day = myArr[0];
           let _month = myArr[1];
@@ -112,6 +111,7 @@
             return false;
           }
           
+          console.log(eventdate , 'testq')
           x = setInterval(function() {    
 
             let now = new Date().getTime(),
