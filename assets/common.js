@@ -257,7 +257,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             var priceContainer=_productParent.querySelectorAll('[data-price-wrapper]')[0];
             var compareAtPrice= getVariant.compare_at_price;
             var price= getVariant.price;
-            var percentage = ((compareAtPrice-price)/compareAtPrice);
+            var percentage = ((compareAtPrice-price)/compareAtPrice)*100;
             console.log(priceContainer,getVariant,percentage);
             var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
             if(getVariant.available == true){
