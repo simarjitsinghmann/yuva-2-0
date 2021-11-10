@@ -2272,9 +2272,6 @@ body .shopify-section.faq-section {
 }
 /* =========== contact page css end ============== */
 /* =============== blog page css start  ================ */
-.article-template {
-    background-color: var(--gray);
-}
 .shopify-blog-section {
 	margin-bottom:0;
 }
@@ -2335,6 +2332,7 @@ body .shopify-section.faq-section {
 /* =============== blog detail css start  ================ */
 .article-template {
 	padding-bottom:80px;
+    background-color: var(--gray);
 }
 .article-template__hero-container div {
   	padding-bottom:0!important;
