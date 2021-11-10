@@ -1,7 +1,7 @@
 <div id="header" class="top-header">
     <div class="container">
             <div class="navbar navbar-expand-md header__inline-menu" role="navigation">
-              
+                {%- if section.settings.menu != blank or section.blocks.size > 0 -%}
                 <div id="nav_style_4">
                 <div class="nav__btn">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,6 +12,7 @@
               
                 {% include 'side-menu' %}
                 </div>
+              {%- endif -%}
                 <a class="header__heading-link" href="{{ routes.root_url }}">
                     {%- if section.settings.logo != blank -%}
                     {%- assign image_size = section.settings.logo_width | append: 'x' -%}
