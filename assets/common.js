@@ -263,6 +263,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             	priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}<span class="main-price"> <del>${Shopify.formatMoney(compareAtPrice, moneyFormat)}</del> </span> </h3> <span class="percent-off">(${percentage}% OFF)</span>`;
             }
             priceContainer.innerHTML = priceHtml;
+            console.log(getVariant)
             var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
             if(getVariant.available == true){
               if(paymentButtonWrapper){
