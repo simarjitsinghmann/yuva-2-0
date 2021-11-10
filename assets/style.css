@@ -946,6 +946,11 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--small-font); lin
 }
 /***Sidebar-end**/
 /***product-list***/
+.product-listing-box {
+	display:flex;
+  	justify-content:flex-start;
+  	flex-wrap:wrap;
+}
 .CollectionProductGrid .product-collection.grid-view {
 	padding-top:30px;
 }
