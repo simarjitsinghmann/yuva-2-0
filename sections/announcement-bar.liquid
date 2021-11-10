@@ -96,6 +96,7 @@
               day = hour * 24;
 
         var eventdate = document.getElementById("eventDate");
+        console.log(eventdate , 'test')
         if(eventdate) {
           const myArr = eventdate.value.split("/");
           let _day = myArr[0];
@@ -110,7 +111,6 @@
             return false;
           }
           
-          console.log('hekpppppppp')
           x = setInterval(function() {    
 
             let now = new Date().getTime(),
