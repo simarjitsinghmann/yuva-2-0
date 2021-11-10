@@ -1,6 +1,6 @@
 
 {%- paginate blog.articles by 6 -%}
-<div class="top_page_title" {% if section.settings.show_image and section.settings.banner_image != blank %} style="background:url({{section.settings.banner_image | img_url :'master'}}) no-repeat center"{% endif %}>
+<div class="top_page_title no-bg">
   <div class="container">
     <div class="contact-banner-text">
       <div class="banner_title">
@@ -35,18 +35,6 @@
   "tag": "section",
   "class": "spaced-section shopify-blog-section",
   "settings": [
-    {
-      "type": "checkbox",
-      "id": "show_image",
-      "default": true,
-      "label": "t:sections.main-blog.settings.show_image.label",
-      "info": "t:sections.main-blog.settings.show_image.info"
-    },
-    {
-      "type": "image_picker",
-      "id": "banner_image",
-      "label": "t:sections.main-blog.settings.banner_image.label"
-    }
   ]
 }
 {% endschema %}
