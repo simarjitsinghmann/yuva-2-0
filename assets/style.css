@@ -840,12 +840,7 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--small-font); lin
 .sidebar-widget-product { margin: 25px 0 0; border-bottom: 1px solid #f0f0f0; padding: 0 0 25px; } 
 .sidebar-widget-product:last-child{ border-bottom: 0; } 
 .list-tags .option { width: 15px; height: 15px; font-size: 0; display: inline-block; border-radius: 50%; float: left; margin: 6px 13px 0 0; } 
-/* .CollectionProductGrid .sidebar-fixed { height: 100vh; position: sticky; top: 50px; }  */
 .CollectionProductGrid { padding: 0 0 45px; }
-.collectionFilters__form {
-    max-width: 340px;
-    padding-right: 50px;
-}
 .collectionFilters__form .widget__price {
 	display: flex;
 	align-items: center;
@@ -1928,18 +1923,6 @@ justify-content: center
 .shop-sidebar-inside .sidebar-widget-product li:hover input~.checkmark {
     background-color: #fff;
     border-color: #d2cfd5;
-}
-.CollectionProductGrid .main-content .toolbox {
-    padding: 20px 0 10px;
-    border-bottom: 1px solid #e7e7e7;
-    margin-bottom: 15px;
-  align-items: center;
-}
-/* .product_content_section {
-  margin-bottom:40px;
-} */
-.collectionFilters__form {
-    border-right: 1px solid #e7e7e7;
 }
 /* pagination */
 .list--inline.pagination {
