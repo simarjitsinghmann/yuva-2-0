@@ -107,7 +107,14 @@
           </div>
         </div>
       </nav>
-      <div class="toolbox-item toolbox-layout">
+    </div>
+    <div class="row">
+      <aside class="col-sm-3 col-md-3 col-lg-3 sidebar sidebar-fixed shop-sidebar sticky-sidebar-wrapper">
+        {% include 'collection-sidebar' %}
+      </aside>
+      <div class="col-lg-9 col-sm-9 col-md-9 main-content">
+        <div class="product-collection grid-view">
+            <div class="toolbox-item toolbox-layout">
           <div class="filter-actions">
             <div class="select-items">
               {% assign active = 0 %}
@@ -137,13 +144,6 @@
             </div>
           </div>
         </div>
-    </div>
-    <div class="row">
-      <aside class="col-sm-3 col-md-3 col-lg-3 sidebar sidebar-fixed shop-sidebar sticky-sidebar-wrapper">
-        {% include 'collection-sidebar' %}
-      </aside>
-      <div class="col-lg-9 col-sm-9 col-md-9 main-content">
-        <div class="product-collection grid-view">
           <div class="products-grid" style="display:block">
             <div class="row product_columns">
               {% for product in collection.products %}
