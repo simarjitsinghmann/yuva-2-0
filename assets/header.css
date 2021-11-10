@@ -878,7 +878,7 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 .cart-items-wrapper {
     display: block;
     width: 100%;
-    height: calc(100% - 440px);
+    max-height: 300px;
     overflow-y: auto;
 }
 /**END Minicart**/
