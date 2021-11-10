@@ -714,7 +714,7 @@ header button.navbar-toggler:hover .span.navbar-toggler-icon:after {
 }
 @media only screen and (min-width:992px){
 .container, .custom-container {
-    width: 1120px;
+    max-width: 1120px;
 }
 .title, .title-wrapper-with-link {
 	margin: 3rem 0 2rem;
@@ -722,17 +722,17 @@ header button.navbar-toggler:hover .span.navbar-toggler-icon:after {
 }
 @media only screen and (min-width:1200px){
 .container, .custom-container {
-    width: 1280px;
+    max-width: 1280px;
 }
 }
 @media only screen and (min-width:1441px){
 .container {
-    width: 1400px;
+    max-width: 1400px;
 }
 }
 @media only screen and (min-width:1650px){
 .container {
-    width: 1600px;
+    max-width: 1600px;
 }
 }
 .form-control {
