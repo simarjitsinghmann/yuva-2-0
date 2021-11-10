@@ -103,7 +103,9 @@
           let _month = myArr[1];
           let _year = myArr[2];
           let _date = _month+" "+_day+","+_year+" 00:00:00";
-          countDown = new Date(_date).getTime();
+          let countDown = new Date(_date).getTime();
+          
+          console.log(countDown , 'testq')
           if(isNaN(countDown)){
             if(Shopify.designMode){
               alert('Incorrect Date or Date Format');
@@ -111,7 +113,6 @@
             return false;
           }
           
-          console.log(eventdate , 'testq')
           x = setInterval(function() {    
 
             let now = new Date().getTime(),
