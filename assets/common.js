@@ -241,9 +241,9 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
           });
           var getVariant = variantChange(options,_productParent);
-			
-            var paymentButtonWrapper = _productParent.querySelectorAll('.Sd_addProduct')[0]
-            var paymentButton = _productParent.querySelectorAll('.Sd_addProduct span')[0]
+
+          var paymentButtonWrapper = _productParent.querySelectorAll('.Sd_addProduct')[0]
+          var paymentButton = _productParent.querySelectorAll('.Sd_addProduct span')[0]
           if(getVariant != undefined){
             if(getVariant.featured_media != null){
               var image= getVariant.featured_media['preview_image']['src'];
@@ -260,32 +260,32 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             var percentage = ((compareAtPrice-price)/compareAtPrice)*100;
             var priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}</h3>`;
             if(compareAtPrice > price){
-            	priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}<span class="main-price"> <del>${Shopify.formatMoney(compareAtPrice, moneyFormat)}</del> </span> </h3> <span class="percent-off">(${percentage}% OFF)</span>`;
+              priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}<span class="main-price"> <del>${Shopify.formatMoney(compareAtPrice, moneyFormat)}</del> </span> </h3> <span class="percent-off">(${percentage}% OFF)</span>`;
             }
             priceContainer.innerHTML = priceHtml;
             console.log(getVariant)
             var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
             var baseUrl = window.location.pathname;
             if(baseUrl.indexOf('/products/' > -1)){
-            var _updateUrl = baseUrl+'?variant='+getVariant.id;
-            history.pushState({}, null, _updateUrl);
-          }
+              var _updateUrl = baseUrl+'?variant='+getVariant.id;
+              history.pushState({}, null, _updateUrl);
+            }
             if(getVariant.available == true){
               if(paymentButtonWrapper){
-              paymentButtonWrapper.removeAttribute("disabled");
+                paymentButtonWrapper.removeAttribute("disabled");
               }
               if(paymentButton){
-              paymentButton.innerHTML  = "Add to Cart";
+                paymentButton.innerHTML  = "Add to Cart";
               }
               if(advancePayment){
                 advancePayment.style.display = "block";
               }
             }else{
               if(paymentButtonWrapper){
-              paymentButtonWrapper.setAttribute("disabled", true);
+                paymentButtonWrapper.setAttribute("disabled", true);
               }
               if(paymentButton){
-              paymentButton.innerHTML  = "Sold Out";  
+                paymentButton.innerHTML  = "Sold Out";  
               }            
               if(advancePayment){
                 advancePayment.style.display = "none";
@@ -293,15 +293,15 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             }
           }
           else{
-              if(paymentButtonWrapper){
-            paymentButtonWrapper.setAttribute("disabled", true);
-              }
-              if(paymentButton){
-            paymentButton.innerHTML  = "Unavailable"; 
-              }           
-              if(advancePayment){
-                advancePayment.style.display = "none";
-              }
+            if(paymentButtonWrapper){
+              paymentButtonWrapper.setAttribute("disabled", true);
+            }
+            if(paymentButton){
+              paymentButton.innerHTML  = "Unavailable"; 
+            }           
+            if(advancePayment){
+              advancePayment.style.display = "none";
+            }
           }
         },100)
       })
