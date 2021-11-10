@@ -258,12 +258,9 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             var compareAtPrice= getVariant.compare_at_price;
             var price= getVariant.price;
             var percentage = ((compareAtPrice-price)/compareAtPrice)*100;
+            var priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}</h3>`;
             if(compareAtPrice > price){
-            console.log(priceContainer,getVariant,percentage);
-            }
-            else{
-            
-            console.log(priceContainer,getVariant,'ewe');
+            	var priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}<span class="main-price"> <del>${Shopify.formatMoney(compareAtPrice, moneyFormat)}</del> </span> </h3> <span class="percent-off">(${percentage}% OFF)</span>`;
             }
             var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
             if(getVariant.available == true){
