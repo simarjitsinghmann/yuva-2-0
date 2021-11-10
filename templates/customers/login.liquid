@@ -4,9 +4,9 @@
   <div class="grid grid--2-col">
     <div class="grid__item">
       <div class="forgetPassword__form" id="">
-        <h6 class="form_title" tabindex="-1">
+        <h2 class="form_title" tabindex="-1">
           {{ 'customer.recover_password.title' | t }}
-        </h6> 
+        </h2> 
         <p>
           {{ 'customer.recover_password.subtext' | t }}
         </p>
@@ -58,9 +58,9 @@
             </div>
         </div>
         <div class="login__form" id="login">
-          <h6 class="form_title" tabindex="-1">
+          <h2 class="form_title" tabindex="-1">
             {{ 'customer.login_page.title' | t }}
-          </h6> 
+          </h2> 
           <p>If you've created an account with us, please enter.</p>
           <div>
             {%- if recover_success == true -%}
@@ -146,7 +146,7 @@
         </div>
         <div class="grid__item">
           <div class="new__customer">
-            <h6>NEW CUSTOMER?</h6>
+            <h2>NEW CUSTOMER?</h2>
             <div class="new__customer__signup">
               <p>Registering for this site allows you to access your order status and history. We’ll get a new account set up for you in no time. For this will only ask you for information necessary to make the purchase process faster and easier</p>
               <a href="{{routes.account_register_url}}" class="button orange-btn btn-block">Create an Account</a>
