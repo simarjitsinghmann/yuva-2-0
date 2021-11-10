@@ -88,7 +88,7 @@
       (function () {
 
         document.getElementsByTagName('body')[0].classList.add('announcement_open');
-        setTimeout(function(){
+        console.log("hii")
         function pad2(number) {
           return (number < 10 ? '0' : '') + number
         }
@@ -141,7 +141,6 @@
           var headerHeight = document.getElementById('headerSection').offsetHeight;
           document.getElementsByTagName('body')[0].style['padding-top'] = headerHeight+'px';
         },200)
-        },500);
       }());
       
 $('.announce_close').click(function(){
