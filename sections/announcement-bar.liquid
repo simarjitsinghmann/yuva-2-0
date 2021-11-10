@@ -85,8 +85,63 @@
         {% endfor %}
     </div>
     <script>
+      (function () {
+
         document.getElementsByTagName('body')[0].classList.add('announcement_open');
-    </script>
+        function pad2(number) {
+          return (number < 10 ? '0' : '') + number
+        }
+        const second = 1000,
+              minute = second * 60,
+              hour = minute * 60,
+              day = hour * 24;
+
+        var eventdate = document.getElementById("eventDate");
+        if(eventdate) {
+          const myArr = eventdate.value.split("/");
+          let _day = myArr[0];
+          let _month = myArr[1];
+          let _year = myArr[2];
+          let _date = _month+" "+_day+","+_year+" 00:00:00";
+          countDown = new Date(_date).getTime();
+          if(isNaN(countDown)){
+            if(Shopify.designMode){
+              alert('Incorrect Date or Date Format');
+            }
+            return false;
+          }
+          x = setInterval(function() {    
+
+            let now = new Date().getTime(),
+                distance = countDown - now;
+            if(distance > 0){
+              document.getElementsByClassName("announcement-bar")[0].classList.remove('hidden');
+              var leftDays = Math.floor(distance / (day));
+              if(leftDays > 0){
+                document.getElementById("dayHours").textContent= 'Days';
+              }
+              else{
+                document.getElementById("dayHours").textContent = 'Hours';
+              }
+              document.getElementById("days").innerText = pad2(leftDays),
+                document.getElementById("hours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
+                document.getElementById("minutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
+                document.getElementById("seconds").innerText = pad2(Math.floor((distance % (minute)) / second));
+            }
+            else{
+              document.getElementsByClassName("announcement-bar")[0].classList.add('hidden');
+              document.getElementsByTagName('body')[0].classList.remove('announcement_open');
+              clearInterval(x);
+            }
+          }, 0)
+        }
+
+        setTimeout(function(){
+          var headerHeight = document.getElementById('headerSection').offsetHeight;
+          document.getElementsByTagName('body')[0].style['padding-top'] = headerHeight+'px';
+        },200)
+      }());
+</script>
 {% endif %}
 
 {% schema %}
