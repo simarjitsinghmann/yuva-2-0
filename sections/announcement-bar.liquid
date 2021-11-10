@@ -86,7 +86,6 @@
     </div>
     <script>
       window.onload = (event) => { 
-        console.log(event)
         function pad2(number) {
           return (number < 10 ? '0' : '') + number
         }
@@ -104,8 +103,6 @@
           let _year = myArr[2];
           let _date = _month+"/"+_day+"/"+_year+" 00:00:00";
           let countDown = new Date(_date).getTime();
-          
-          console.log(countDown , 'testq')
           if(isNaN(countDown)){
             if(Shopify.designMode){
               alert('Incorrect Date or Date Format');
