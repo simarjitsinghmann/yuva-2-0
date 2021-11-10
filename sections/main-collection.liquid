@@ -1,150 +1,148 @@
 {% paginate collection.products by 16%}
-                  {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+{%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
 <div class="CollectionProductGrid" id="CollectionProductsContainer" data-id="{{section.id}}" data-view="grid-layout-4">
-   <div class="container">
-      <div class="row">
-        <aside class="col-sm-3 col-md-3 col-lg-3 sidebar sidebar-fixed shop-sidebar sticky-sidebar-wrapper">
-          {% include 'collection-sidebar' %}
-        </aside>
-         <div class="col-lg-9 col-sm-9 col-md-9 main-content">
-            <div class="row">
-               <nav class="toolbox">
-                  <div class="toolbox-left">
-               <div class="filter-total-result">
+  <div class="container">
+    <div class="row">
+      <aside class="col-sm-3 col-md-3 col-lg-3 sidebar sidebar-fixed shop-sidebar sticky-sidebar-wrapper">
+        {% include 'collection-sidebar' %}
+      </aside>
+      <div class="col-lg-9 col-sm-9 col-md-9 main-content">
+        <nav class="toolbox">
+          <div class="toolbox-left">
+            <div class="filter-total-result">
 
-                  <h6>{{collection.title}} - {{ collection.products_count}} {{ collection.products_count | pluralize: 'item', 'items' }}</h6>
-               </div>
-                  </div>
-                  <div class="toolbox-right">
-                     <div class="toolbox-item toolbox-layout">
-                        <a href="javascript:void(0);" data-layout="" data-value="grid-layout-4" class="btn-layout grid-layout-4">
-                          <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 19 19" width="19" height="19">
-                            <title>Layer_1-2</title>
-                            <style>
-                             .grid-layout-4 tspan { white-space:pre }
-                              .grid-layout-4 .shp0 { fill: #000000 } 
-                            </style>
-                            <g id="Layer_1-2">
-                              <path id="Shape 1" class="shp0" d="M0 0L4 0L4 4L0 4L0 0Z"/>
-                              <path id="Shape 1 copy" class="shp0" d="M5 0L9 0L9 4L5 4L5 0Z"/>
-                              <path id="Shape 1 copy 2" class="shp0" d="M10 0L14 0L14 4L10 4L10 0Z"/>
-                              <path id="Shape 1 copy 3" class="shp0" d="M15 0L19 0L19 4L15 4L15 0Z"/>
-                              <path id="Shape 1 copy 4" class="shp0" d="M0 5L4 5L4 9L0 9L0 5Z"/>
-                              <path id="Shape 1 copy 5" class="shp0" d="M5 5L9 5L9 9L5 9L5 5Z"/>
-                              <path id="Shape 1 copy 6" class="shp0" d="M10 5L14 5L14 9L10 9L10 5Z"/>
-                              <path id="Shape 1 copy 7" class="shp0" d="M15 5L19 5L19 9L15 9L15 5Z"/>
-                              <path id="Shape 1 copy 8" class="shp0" d="M0 10L4 10L4 14L0 14L0 10Z"/>
-                              <path id="Shape 1 copy 9" class="shp0" d="M5 10L9 10L9 14L5 14L5 10Z"/>
-                              <path id="Shape 1 copy 10" class="shp0" d="M10 10L14 10L14 14L10 14L10 10Z"/>
-                              <path id="Shape 1 copy 11" class="shp0" d="M15 10L19 10L19 14L15 14L15 10Z"/>
-                              <path id="Shape 1 copy 12" class="shp0" d="M0 15L4 15L4 19L0 19L0 15Z"/>
-                              <path id="Shape 1 copy 13" class="shp0" d="M5 15L9 15L9 19L5 19L5 15Z"/>
-                              <path id="Shape 1 copy 14" class="shp0" d="M10 15L14 15L14 19L10 19L10 15Z"/>
-                              <path id="Shape 1 copy 15" class="shp0" d="M15 15L19 15L19 19L15 19L15 15Z"/>
-                            </g>
-                          </svg>
-                        </a>
-                        <a href="javascript:void(0);" data-layout="" data-value="grid-layout-3" class="btn-layout grid-layout-3">
-                          <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 19 19" width="19" height="19">
-                            <title>Layer_2</title>
-                            <style>
-                             .grid-layout-3 tspan { white-space:pre }
-                              .grid-layout-3 .shp0 { fill: #000000 } 
-                            </style>
-                            <g id="Layer_2">
-                              <g id="Layer_1-2">
-                                <path id="Layer" class="shp0" d="M0 0L4.99 0L4.99 4.99L0 4.99L0 0Z"/>
-                                <path id="Layer" class="shp0" d="M7 0L11.99 0L11.99 4.99L7 4.99L7 0Z"/>
-                                <path id="Layer" class="shp0" d="M0 7L4.99 7L4.99 11.99L0 11.99L0 7Z"/>
-                                <path id="Layer" class="shp0" d="M7 7L11.99 7L11.99 11.99L7 11.99L7 7Z"/>
-                                <path id="Layer" class="shp0" d="M0 14L4.99 14L4.99 18.99L0 18.99L0 14Z"/>
-                                <path id="Layer" class="shp0" d="M7 14L11.99 14L11.99 18.99L7 18.99L7 14Z"/>
-                                <path id="Layer copy" class="shp0" d="M14 0L18.99 0L18.99 4.99L14 4.99L14 0Z"/>
-                                <path id="Layer copy 2" class="shp0" d="M14 7L18.99 7L18.99 11.99L14 11.99L14 7Z"/>
-                                <path id="Layer copy 3" class="shp0" d="M14 14L18.99 14L18.99 18.99L14 18.99L14 14Z"/>
-                              </g>
-                            </g>
-                          </svg>
-                        </a>
-                        <a href="javascript:void(0);" data-layout="" data-value="grid-layout-2" class="btn-layout grid-layout-2">
-                          <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 19 19" width="19" height="19">
-                            <title>Layer_2</title>
-                            <style>
-                             .grid-layout-2 tspan { white-space:pre }
-                              .grid-layout-2 .shp0 { fill: #000000 } 
-                            </style>
-                            <g id="Layer_2">
-                              <g id="Layer_1-2">
-                                <path id="Shape 1" class="shp0" d="M0 0L9 0L9 9L0 9L0 0Z"/>
-                                <path id="Shape 1 copy" class="shp0" d="M10 0L19 0L19 9L10 9L10 0Z"/>
-                                <path id="Shape 1 copy 2" class="shp0" d="M0 10L9 10L9 19L0 19L0 10Z"/>
-                                <path id="Shape 1 copy 3" class="shp0" d="M10 10L19 10L19 19L10 19L10 10Z"/>
-                              </g>
-                            </g>
-                          </svg>
-                        </a>
-                     </div>
-                     <div class="toolbox-item toolbox-sort select-box">
-                        <ul class="" id="sort__list">
-                          {%- for option in collection.sort_options -%}
-                          <li class="{% if option.value == sort_by %}selected{%- assign sort_name = option.name | escape  -%}{% endif %}" value="{{ option.name | escape }}">
-                            <input type="radio" name="sort_by" value="{{ option.value | escape }}" data-name="{{ option.name | escape }}" form="CollectionFiltersForm"{% if option.value == sort_by %}checked{% endif %} hidden/>
-                            {{ option.name | escape }}
-                          </li>
-                          {%- endfor -%}
-                        </ul>
-                        <span>Sort by:</span>
-                       <label for="SortBy">{{sort_name}}</label>
-                     </div>
-                  </div>
-               </nav>
-                     <div class="toolbox-item toolbox-layout">
-                        <div class="filter-actions">
-                           <div class="select-items">
-                             {% assign active = 0 %}
-                             {%- for filter in collection.filters -%}
-                             {%- for value in filter.active_values -%}
-                             {% assign active = active | plus:1 %}
-                             <a class="select-item" href="{{ value.url_to_remove }}">
-                               {{ value.label | escape }}
-                               <span class="close">
-                               {% render 'icon-cross' %}
-                               </span>
-                             </a>
-                             {%- endfor -%}
-
-                             {% if filter.type == "price_range" %}
-                             {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}                             
-                             {% assign active = active | plus:1 %}
-                             <a class="select-item" href="{{ filter.url_to_remove }}">
-                               {%- if filter.min_value.value -%}{{ filter.min_value.value | money }}{%- else -%}{{ 0 | money }}{%- endif -%}-{%- if filter.max_value.value -%}{{ filter.max_value.value | money }}{%- else -%}{{ filter.range_max | money }}{%- endif -%}
-                               <span class="close">
-                               {% render 'icon-cross' %}
-                               </span>
-                             </a>
-                             {%- endif -%}
-                             {% endif %}
-                             {%- endfor -%}
-                           </div>
-                        </div>
-                     </div>
-               <div class="product-collection grid-view">
-                  <div class="products-grid" style="display:block">
-                     <div class="row product_columns">
-                         {% for product in collection.products %}
-                         {% render 'collection-product-grid',product: product %}
-                        {% endfor %}
-                     </div>
-                  </div>
-               </div>
+              <h6>{{collection.title}} - {{ collection.products_count}} {{ collection.products_count | pluralize: 'item', 'items' }}</h6>
             </div>
-           
-     {% if paginate.pages > 1 %}
-     {% include 'pagination' %}
-     {% endif %}
-         </div>
+          </div>
+          <div class="toolbox-right">
+            <div class="toolbox-item toolbox-layout">
+              <a href="javascript:void(0);" data-layout="" data-value="grid-layout-4" class="btn-layout grid-layout-4">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 19 19" width="19" height="19">
+                  <title>Layer_1-2</title>
+                  <style>
+                    .grid-layout-4 tspan { white-space:pre }
+                    .grid-layout-4 .shp0 { fill: #000000 } 
+                  </style>
+                  <g id="Layer_1-2">
+                    <path id="Shape 1" class="shp0" d="M0 0L4 0L4 4L0 4L0 0Z"/>
+                    <path id="Shape 1 copy" class="shp0" d="M5 0L9 0L9 4L5 4L5 0Z"/>
+                    <path id="Shape 1 copy 2" class="shp0" d="M10 0L14 0L14 4L10 4L10 0Z"/>
+                    <path id="Shape 1 copy 3" class="shp0" d="M15 0L19 0L19 4L15 4L15 0Z"/>
+                    <path id="Shape 1 copy 4" class="shp0" d="M0 5L4 5L4 9L0 9L0 5Z"/>
+                    <path id="Shape 1 copy 5" class="shp0" d="M5 5L9 5L9 9L5 9L5 5Z"/>
+                    <path id="Shape 1 copy 6" class="shp0" d="M10 5L14 5L14 9L10 9L10 5Z"/>
+                    <path id="Shape 1 copy 7" class="shp0" d="M15 5L19 5L19 9L15 9L15 5Z"/>
+                    <path id="Shape 1 copy 8" class="shp0" d="M0 10L4 10L4 14L0 14L0 10Z"/>
+                    <path id="Shape 1 copy 9" class="shp0" d="M5 10L9 10L9 14L5 14L5 10Z"/>
+                    <path id="Shape 1 copy 10" class="shp0" d="M10 10L14 10L14 14L10 14L10 10Z"/>
+                    <path id="Shape 1 copy 11" class="shp0" d="M15 10L19 10L19 14L15 14L15 10Z"/>
+                    <path id="Shape 1 copy 12" class="shp0" d="M0 15L4 15L4 19L0 19L0 15Z"/>
+                    <path id="Shape 1 copy 13" class="shp0" d="M5 15L9 15L9 19L5 19L5 15Z"/>
+                    <path id="Shape 1 copy 14" class="shp0" d="M10 15L14 15L14 19L10 19L10 15Z"/>
+                    <path id="Shape 1 copy 15" class="shp0" d="M15 15L19 15L19 19L15 19L15 15Z"/>
+                  </g>
+                </svg>
+              </a>
+              <a href="javascript:void(0);" data-layout="" data-value="grid-layout-3" class="btn-layout grid-layout-3">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 19 19" width="19" height="19">
+                  <title>Layer_2</title>
+                  <style>
+                    .grid-layout-3 tspan { white-space:pre }
+                    .grid-layout-3 .shp0 { fill: #000000 } 
+                  </style>
+                  <g id="Layer_2">
+                    <g id="Layer_1-2">
+                      <path id="Layer" class="shp0" d="M0 0L4.99 0L4.99 4.99L0 4.99L0 0Z"/>
+                      <path id="Layer" class="shp0" d="M7 0L11.99 0L11.99 4.99L7 4.99L7 0Z"/>
+                      <path id="Layer" class="shp0" d="M0 7L4.99 7L4.99 11.99L0 11.99L0 7Z"/>
+                      <path id="Layer" class="shp0" d="M7 7L11.99 7L11.99 11.99L7 11.99L7 7Z"/>
+                      <path id="Layer" class="shp0" d="M0 14L4.99 14L4.99 18.99L0 18.99L0 14Z"/>
+                      <path id="Layer" class="shp0" d="M7 14L11.99 14L11.99 18.99L7 18.99L7 14Z"/>
+                      <path id="Layer copy" class="shp0" d="M14 0L18.99 0L18.99 4.99L14 4.99L14 0Z"/>
+                      <path id="Layer copy 2" class="shp0" d="M14 7L18.99 7L18.99 11.99L14 11.99L14 7Z"/>
+                      <path id="Layer copy 3" class="shp0" d="M14 14L18.99 14L18.99 18.99L14 18.99L14 14Z"/>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <a href="javascript:void(0);" data-layout="" data-value="grid-layout-2" class="btn-layout grid-layout-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 19 19" width="19" height="19">
+                  <title>Layer_2</title>
+                  <style>
+                    .grid-layout-2 tspan { white-space:pre }
+                    .grid-layout-2 .shp0 { fill: #000000 } 
+                  </style>
+                  <g id="Layer_2">
+                    <g id="Layer_1-2">
+                      <path id="Shape 1" class="shp0" d="M0 0L9 0L9 9L0 9L0 0Z"/>
+                      <path id="Shape 1 copy" class="shp0" d="M10 0L19 0L19 9L10 9L10 0Z"/>
+                      <path id="Shape 1 copy 2" class="shp0" d="M0 10L9 10L9 19L0 19L0 10Z"/>
+                      <path id="Shape 1 copy 3" class="shp0" d="M10 10L19 10L19 19L10 19L10 10Z"/>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </div>
+            <div class="toolbox-item toolbox-sort select-box">
+              <ul class="" id="sort__list">
+                {%- for option in collection.sort_options -%}
+                <li class="{% if option.value == sort_by %}selected{%- assign sort_name = option.name | escape  -%}{% endif %}" value="{{ option.name | escape }}">
+                  <input type="radio" name="sort_by" value="{{ option.value | escape }}" data-name="{{ option.name | escape }}" form="CollectionFiltersForm"{% if option.value == sort_by %}checked{% endif %} hidden/>
+                  {{ option.name | escape }}
+                </li>
+                {%- endfor -%}
+              </ul>
+              <span>Sort by:</span>
+              <label for="SortBy">{{sort_name}}</label>
+            </div>
+          </div>
+        </nav>
+        <div class="toolbox-item toolbox-layout">
+          <div class="filter-actions">
+            <div class="select-items">
+              {% assign active = 0 %}
+              {%- for filter in collection.filters -%}
+              {%- for value in filter.active_values -%}
+              {% assign active = active | plus:1 %}
+              <a class="select-item" href="{{ value.url_to_remove }}">
+                {{ value.label | escape }}
+                <span class="close">
+                  {% render 'icon-cross' %}
+                </span>
+              </a>
+              {%- endfor -%}
+
+              {% if filter.type == "price_range" %}
+              {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}                             
+              {% assign active = active | plus:1 %}
+              <a class="select-item" href="{{ filter.url_to_remove }}">
+                {%- if filter.min_value.value -%}{{ filter.min_value.value | money }}{%- else -%}{{ 0 | money }}{%- endif -%}-{%- if filter.max_value.value -%}{{ filter.max_value.value | money }}{%- else -%}{{ filter.range_max | money }}{%- endif -%}
+                <span class="close">
+                  {% render 'icon-cross' %}
+                </span>
+              </a>
+              {%- endif -%}
+              {% endif %}
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+        <div class="product-collection grid-view">
+          <div class="products-grid" style="display:block">
+            <div class="row product_columns">
+              {% for product in collection.products %}
+              {% render 'collection-product-grid',product: product %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        {% if paginate.pages > 1 %}
+        {% include 'pagination' %}
+        {% endif %}
       </div>
-   </div>
+    </div>
+  </div>
 </div>
 
 {% endpaginate %}
