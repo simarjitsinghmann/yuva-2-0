@@ -951,6 +951,10 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--small-font); lin
   	justify-content:flex-start;
   	flex-wrap:wrap;
 }
+.product-content {
+  	max-width:75%;
+	flex: 0 0 75%;
+}
 .CollectionProductGrid .product-collection.grid-view {
 	padding-top:30px;
 }
