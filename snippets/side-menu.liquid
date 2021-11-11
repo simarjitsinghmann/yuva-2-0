@@ -8,7 +8,7 @@
           Close
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
-         <ul class="navbar-nav mr-auto list-menu list-menu--inline">
+         <ul class="navbar-nav mr-auto list-menu list-menu--inline {{mobileMenu}}">
             {% unless section.blocks.size > 0 and section.settings.megamenu %}	
             {%- for link in section.settings.menu.links -%}
             <li class="nav-item {% if link.links != blank %}dropdown{% endif %} {% if link.current %}active{% endif %}">
