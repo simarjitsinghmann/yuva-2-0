@@ -2,14 +2,13 @@
 {% assign menuIndex = forloop.index %}
 {% assign menuDropdown = false %}
 {% for block in section.blocks %}
-{{menuIndex}}{{block.settings.position }}
 {% assign blockPosition = block.settings.position | plus:0 %}
   {% if blockPosition == menuIndex %}
 	{% assign menuDropdown = true %}
   {% endif %}
 {% endfor %}
 <li class="nav-item {% if link.current %}active{% endif %}">
-  <a class="list-menu__item" href="{{ link.url }}">{{link.title | split:"{badge" | first | escape | capitalize }} --{{menuDropdown}}
+  <a class="list-menu__item" href="{{ link.url }}">{{link.title | split:"{badge" | first | escape | capitalize }}
     {%- if link.links != blank or menuDropdown -%}
     <span class="ml-2 sf-menu__arrow">
       <svg class="w-2 h-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
