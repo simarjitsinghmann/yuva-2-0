@@ -1,5 +1,12 @@
 {%- for link in section.settings.menu.links -%}
 {% assign menuIndex = forloop.index %}
+{% assign menuDropdown = false %}
+{% for block in section.blocks %}
+  {% if block.settings.position == menuIndex %}
+	{% assign menuDropdown = true %}
+{% break %}
+  {% endif %}
+{% endfor %}
 <li class="nav-item {% if link.current %}active{% endif %}">
   <a class="list-menu__item" href="{{ link.url }}">{{link.title | split:"{badge" | first | escape | capitalize }}
     {%- if link.links != blank -%}
