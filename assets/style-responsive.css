@@ -244,11 +244,18 @@
 	/*  instagram post end  */
 	/*  multicolumn css start  */
     .service__column .col {
-        padding: 15px 20px;
+        padding: 15px 15px;
+    }
+    .service__column .col>img {
+        margin-right: 8px;
+        max-width: 20px;
     }
     .service__column h6 {
         font-size: 12px;
         margin-bottom: 3px;
+    }
+    .service__column p {
+        font-size: 12px;
     }
 	/*  multicolumn css end  */
 }
