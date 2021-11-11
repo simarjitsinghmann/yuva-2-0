@@ -24,6 +24,13 @@
 {% if block.settings.image != blank and block.settings.heading != blank %}
 
 <div class="sub-menu-list">
+  <div class="menu-image-content">
+    <img src="{{block.settings.image | img_url:'master'}}"  class="menu-image">
+    <div class="menu-content">
+      <h4>{{block.settings.heading}}</h4>
+      <a href="{{block.settings.link}}" class="button black-button">{{block.settings.button}}</a>
+    </div>
+  </div>
 </div>
 {% endif %}
 {% endcase %}  
