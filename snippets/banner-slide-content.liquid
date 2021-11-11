@@ -2,7 +2,7 @@
     {% if block.settings.image != blank %}
     <img src="{{block.settings.image | img_url:'master'}}" alt="">
     {%else%}
-    {% include 'banner-placeholder'%}
+    {% render 'banner-placeholder'%}
     {% endif %} 
     <div class="carousel-caption">
         <div class="container">
