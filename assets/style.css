@@ -352,6 +352,10 @@ main .shopify-section:first-child {
 	padding-top: 10px;
 	padding-bottom: 4px;
 	font-weight: var(--normal);
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
 }
 .product__view__option li button:disabled {
 opacity: 0.3;
