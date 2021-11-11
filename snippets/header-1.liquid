@@ -1,7 +1,7 @@
 <div id="header" class="top-header">
     <div class="container">
             <div class="navbar navbar-expand-md header__inline-menu" role="navigation">
-                {%- if section.settings.menu != blank or section.blocks.size > 0 -%}
+                {%- if section.settings.menu != blank  -%}
                 <div id="nav_style_4" class="nav-menu-btn">
                 <div class="nav__btn">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,7 @@
                     <span class="h2">{{ shop.name }}</span>
                     {% endif %}
                 </a>
-                {%- if section.settings.menu != blank or section.blocks.size > 0 -%}
+                {%- if section.settings.menu != blank-%}
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     
                     <ul class="navbar-nav mr-auto list-menu list-menu--inline">					
