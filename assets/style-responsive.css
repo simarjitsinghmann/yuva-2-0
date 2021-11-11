@@ -528,12 +528,15 @@
     .client-say-left {
         flex-direction: column;
         text-align: center;
-        padding-bottom:30px;
+        padding-bottom:20px;
     }
     .client-say-left h2 {
         font-size: 24px;
         line-height: 20px;
         margin: 6px 0 12px;
+    }
+    .client-say-left p {
+        display: none;
     }
     /*  testimonial end  */
 	/*  feature blog start  */
@@ -542,11 +545,11 @@
         line-height: 18px;
         padding: 2px 7px;
     }
-  .style1 .post-wrapper {
-    	margin:0;
+    .style1 .post-wrapper {
+        margin:0;
         box-shadow: none;
-      	border: 1px solid #dbdbdb;
-  }
+        border: 1px solid #dbdbdb;
+    }
 	/*  featured blog end  */
 	/* banner css start   */
     .banner-section .item {
