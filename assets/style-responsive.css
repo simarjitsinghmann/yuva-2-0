@@ -8,9 +8,6 @@
         padding: 40px 10px;
         min-height: 110px;
     }
-    h1.smaller-heading {
-      font-size: 55px;
-    }
     .style2 .bigger-heading {
         font-size: 130px;
   	}
@@ -445,6 +442,13 @@
 }
 @media screen and (max-width:991px){
 	/*  common csss start  */
+    h1.smaller-heading {
+        font-size: 30px;
+    }
+    h4 {
+        font-size: 16px;
+        line-height: 20px;
+    }
     .button {
         min-width: 145px;
     }
@@ -515,9 +519,9 @@
     }
 	/*  featured blog end  */
 	/* banner css start   */
-/* 	.banner-section .item {
-        height: 350px;
-    } */
+    .carousel-caption .style2 h5.bottom-title {
+        padding-bottom: 20px;
+    }
     .banner-section .banner-caption-title.style2 h2.smaller-heading {
         font-size: 30px;
         line-height: 33px;
