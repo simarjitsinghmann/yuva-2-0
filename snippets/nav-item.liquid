@@ -8,7 +8,7 @@
   {% endif %}
 {% endfor %}
 <li class="nav-item {% if link.current %}active{% endif %}">
-  <a class="list-menu__item" href="{{ link.url }}">{{link.title | split:"{badge" | first | escape | capitalize }}
+  <a class="list-menu__item" href="{{ link.url }}">{{link.title | split:"{badge" | first | escape | capitalize }} --{{menuDropdown}}
     {%- if link.links != blank or menuDropdown -%}
     <span class="ml-2 sf-menu__arrow">
       <svg class="w-2 h-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -17,7 +17,7 @@
     </span>
     {% endif %}
   </a>                                
-  {%- if link.links != blank -%}
+  {%- if link.links != blank or menuDropdown -%}
   <div class="sub-menu">
     <div class="site-nav-dropdown">
       <div class="container">
