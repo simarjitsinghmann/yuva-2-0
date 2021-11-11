@@ -3,9 +3,9 @@
 {% assign menuDropdown = false %}
 {% for block in section.blocks %}
 {{menuIndex}}{{block.settings.position }}
-  {% if block.settings.position == menuIndex %}
+{% assign blockPosition = block.settings.position | plus:0 %}
+  {% if blockPosition == menuIndex %}
 	{% assign menuDropdown = true %}
-{{menuDropdown}}
   {% endif %}
 {% endfor %}
 <li class="nav-item {% if link.current %}active{% endif %}">
