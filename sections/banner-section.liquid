@@ -5,10 +5,10 @@
     {%else%}
     {% include 'banner-placeholder'%}
     {% endif %} 
-    <div class="banner-caption  {{section.settings.info_position}}">
+    <div class="banner-caption ">
       <div class="container">
         	<div class="banner-caption-outer">
-          <div class="banner-caption-title style2 text__{{section.settings.info_alignment}}">
+          <div class="banner-caption-title style2 {{section.settings.info_position}} text__{{section.settings.info_alignment}}">
             {% if section.settings.heading != blank %}
             <h6 class="top-title">{{section.settings.heading}}</h6>
             {% endif %}
