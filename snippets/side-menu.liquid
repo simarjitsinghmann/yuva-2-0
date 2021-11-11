@@ -8,8 +8,7 @@
           Close
       </button>
       <div class="collapse navbar-collapse navbar-collapse-sidebar" id="navbarCollapse">
-         <ul class="navbar-nav mr-auto list-menu list-menu--inline {{mobileMenu}}">
-            {% unless section.blocks.size > 0 and section.settings.megamenu %}	
+         <ul class="navbar-nav mr-auto list-menu list-menu--inline">
             {%- for link in section.settings.menu.links -%}
             <li class="nav-item {% if link.links != blank %}dropdown{% endif %} {% if link.current %}active{% endif %}">
                <a class="list-menu__item {% if link.links != blank %}toggle open-menu-drop{% endif %}" href="{% if link.links != blank %}javascript:void(0){%else%}{{ link.url }}{% endif %}">{{link.title | split:"{badge" | first | escape | capitalize }}</a>
@@ -76,9 +75,6 @@
                {% endif %}
             </li>	
             {%- endfor-%}
-            {% else %}                        
-            {% render 'mega-menu' sectin:section,mobileMenu:mobileMenu %}
-      {% endunless %}
          </ul>
          <div class="navigation-close-mob" style="display:none;">
             <a href="javascript:void(0)" title="close_navigation" class="close-btn">
