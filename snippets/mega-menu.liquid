@@ -9,7 +9,7 @@
 {% assign custom_offset = 0 %}
 {% endif %}
 
-{% if section.settings.header_style != 'header3' or mobileMenu == false %}
+{% if section.settings.header_style != 'header3' and mobileMenu == false %}
 {% for block in section.blocks limit:custom_limit  offset:custom_offset%}
     {% if block.settings.heading != blank %}
         
