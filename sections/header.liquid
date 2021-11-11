@@ -1,8 +1,8 @@
 {% case section.settings.header_style %}
     {% when 'header1' %}
-        {% include 'header-1' %}
+        {% include 'header-1' mobileMenu:true %}
     {% when 'header2' %}
-        {% include 'header-2' %}
+        {% include 'header-2' mobileMenu:true %}
     {% when 'header3' %}
         {% include 'header-3' %}
 {% endcase %}
