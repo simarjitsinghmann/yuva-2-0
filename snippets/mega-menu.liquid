@@ -2,7 +2,13 @@
 {% if block.settings.position == menuIndex %}
 
 <div class="sub-menu-list">
-  
+  {% case block.type %}
+  {% when product %}
+  {% if block.settings.product != blank %}
+   {% include 'product-grid' product:block.settings.product,hide_options:true,hideRelated:true,hideQuickView:true %}
+  {% endif %}
+  {% when collection %}
+  {% endcase %}
 </div>
 
 {% endif %}
