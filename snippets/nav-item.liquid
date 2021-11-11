@@ -2,7 +2,7 @@
 {% assign menuIndex = forloop.index %}
 {% assign menuDropdown = false %}
 {% for block in section.blocks %}
-{{menuIndex}}--{{block.settings.position }}
+{{menuIndex}}{{block.settings.position }}
   {% if block.settings.position == menuIndex %}
 	{% assign menuDropdown = true %}
   {% endif %}
