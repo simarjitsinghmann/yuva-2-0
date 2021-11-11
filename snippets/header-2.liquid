@@ -37,12 +37,8 @@
                 {% include 'side-menu' mobileMenu:true %}
               </div>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mr-auto list-menu list-menu--inline">	
-                        {% unless section.blocks.size > 0 and section.settings.megamenu %}							
+                    <ul class="navbar-nav mr-auto list-menu list-menu--inline">								
                         {% include 'nav-item' %}
-                        {% else %}                        
-                        {% render 'mega-menu' sectin:section,mobileMenu:false %}
-                    {% endunless %}
                     </ul>
                     <div class="navigation-close-mob" style="display:none;">
                         <a href="javascript:void(0)" title="close_navigation" class="close-btn">
