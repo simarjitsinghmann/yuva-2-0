@@ -1,21 +1,26 @@
 {% for block in section.blocks %}
 {% assign blockPosition = block.settings.position | plus:0 %}
-  {% if blockPosition == menuIndex %}
+{% if blockPosition == menuIndex %}
+
+{% case block.type %}
+{% when 'product' %}
 
 <div class="sub-menu-list">
-  {% case block.type %}
-  {% when 'product' %}
   {% if block.settings.product != blank %}
-   {% include 'product-grid' product:block.settings.product,hide_options:true,hideRelated:true,hideQuickView:true %}
+  {% include 'product-grid' product:block.settings.product,hide_options:true,hideRelated:true,hideQuickView:true %}
   {% endif %}
-  {% when 'collection' %}
-  {% if block.settings.collection != blank %}
-  {% for product in block.settings.collection.products limit:block.settings.products %}
-   {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true %}
-  {% endfor %}
-  {% endif %}
-  {% endcase %}
 </div>
+{% when 'collection' %}
+{% if block.settings.collection != blank %}
+{% for product in block.settings.collection.products limit:block.settings.products %}
+
+<div class="sub-menu-list">
+  {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true %}
+</div>
+{% endfor %}
+{% endif %}
+{% endcase %}  
+
 
 {% endif %}
 {% endfor %}
