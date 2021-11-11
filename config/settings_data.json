@@ -111,10 +111,10 @@
           "header_style": "header1",
           "logo": "shopify:\/\/shop_images\/logo.png",
           "logo_width": 250,
+          "logo_position": "left",
           "menu": "main-menu",
           "megamenu": true,
-          "menu2": "main-menu",
-          "top_message": "Welcome to Our Shopping Website",
+          "menu_position": "left",
           "show_search": true,
           "show_currency": true,
           "enable_sticky_header": true
@@ -178,6 +178,27 @@
       },
       "announcement-bar": {
         "type": "announcement-bar",
+        "blocks": {
+          "4c69c3e7-5a11-454d-afe0-a7cc090af1c2": {
+            "type": "announcement",
+            "settings": {
+              "icon": "horn",
+              "announcement": "<p>Sale is ON<\/p>",
+              "btn": "SALE",
+              "link": "",
+              "bg_style": "gradient",
+              "bgcolor": "#f17e35",
+              "bgcolor2": "#f86f64",
+              "fontcolor": "#ffffff",
+              "btn_bgcolor": "#261f1b",
+              "btn_fontcolor": "#ffffff",
+              "bborder_color": "#f41717"
+            }
+          }
+        },
+        "block_order": [
+          "4c69c3e7-5a11-454d-afe0-a7cc090af1c2"
+        ],
         "settings": {
           "show_bar": true,
           "auto_rotate": false,
