@@ -2,10 +2,9 @@
 {% assign menuIndex = forloop.index %}
 {% assign menuDropdown = false %}
 {% for block in section.blocks %}
-s
+{{menuIndex}}--{{block.settings.position }}
   {% if block.settings.position == menuIndex %}
 	{% assign menuDropdown = true %}
-{% break %}
   {% endif %}
 {% endfor %}
 <li class="nav-item {% if link.current %}active{% endif %}">
