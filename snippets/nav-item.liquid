@@ -1,4 +1,5 @@
 {%- for link in section.settings.menu.links -%}
+{% assign menuIndex = forloop.index %}
 <li class="nav-item {% if link.current %}active{% endif %}">
   <a class="list-menu__item" href="{{ link.url }}">{{link.title | split:"{badge" | first | escape | capitalize }}
     {%- if link.links != blank -%}
