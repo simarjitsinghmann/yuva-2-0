@@ -21,7 +21,7 @@
                 {% assign dropMenuCount = dropMenuCount | plus: 1 %}
             {% endif %}
         {% endfor %}
-        <li class="nav-item nnn{{mobileMenu}} {% if block.type != 'no-dropdown' and dropDown %}dropdown{% endif %} {% if block.settings.width == 'auto' %}menu-item--no-mega{% endif %}">
+        <li class="nav-item {% if block.type != 'no-dropdown' and dropDown %}dropdown{% endif %} {% if block.settings.width == 'auto' %}menu-item--no-mega{% endif %}">
             <a class="list-menu__item" href="{{ block.settings.link }}">
                 {{block.settings.heading | escape | capitalize }}
                 {% if block.type != 'no-dropdown' %}
@@ -90,7 +90,7 @@
                 {% assign dropMenuCount = dropMenuCount | plus: 1 %}
             {% endif %}
         {% endfor %}
-        <li class="nav-item aaaa{{mobileMenu}} {% if block.type != 'no-dropdown' and dropDown %}dropdown{% endif %}">
+        <li class="nav-item {% if block.type != 'no-dropdown' and dropDown %}dropdown{% endif %}">
             <a class="list-menu__item {% if block.type != 'no-dropdown' and dropDown %}toggle open-menu-drop{% endif %}" href="{% if block.settings.link != blank %}javascript:void(0){%else%}{{ block.settings.link }}{% endif %}">
                 {{block.settings.heading | escape | capitalize }}
             </a>       
