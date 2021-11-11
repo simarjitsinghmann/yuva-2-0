@@ -5,6 +5,7 @@
 {% assign blockPosition = block.settings.position | plus:0 %}
   {% if blockPosition == menuIndex %}
 	{% assign menuDropdown = true %}
+	{% break %}
   {% endif %}
 {% endfor %}
 <li class="nav-item {% if link.current %}active{% endif %}">
@@ -42,7 +43,8 @@
               {% endif %}
             </div>
             {% endfor %}
-            {%- if  menuDropdown -%}
+            {{menuDropdown}}
+            {%- if menuDropdown -%}
             {% include 'mega-menu' %}
             {%- endif -%}
           </div>
