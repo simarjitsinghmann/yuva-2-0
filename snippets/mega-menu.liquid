@@ -19,6 +19,13 @@
 </div>
 {% endfor %}
 {% endif %}
+
+{% when 'image' %}
+{% if block.settings.image != blank and block.settings.heading != blank %}
+
+<div class="sub-menu-list">
+</div>
+{% endif %}
 {% endcase %}  
 
 
