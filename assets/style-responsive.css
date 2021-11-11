@@ -534,6 +534,13 @@
     }
 	/*  featured blog end  */
 	/* banner css start   */
+    .banner-section .item {
+        height: 300px;
+    }
+    .banner-section .item img {
+        height: 100%;
+        object-fit: cover;
+    }
     .carousel-caption .style2 h5.bottom-title {
         padding-bottom: 20px;
     }
