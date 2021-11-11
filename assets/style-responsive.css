@@ -443,6 +443,9 @@
 }
 @media screen and (max-width:991px){
 	/*  common csss start  */
+    .shopify-section:not(.shopify-section-slider,.shopify-section-announcement-bar,.shopify-section-main-header,#shopify-section-footer,.shopify-section-multicolumn-content,.collection-grid-section,.product-section.single__product,.contact-page-form-section) {
+        padding-top: 35px;
+    }
     h1.smaller-heading {
         font-size: 30px;
     }
