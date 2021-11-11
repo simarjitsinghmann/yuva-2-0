@@ -440,6 +440,14 @@
   	/*  quick view end  */
 }
 @media screen and (max-width:991px){
+	/*  common csss start  */
+    .button {
+        min-width: 145px;
+    }
+    .button, .product_button .shopify-payment-button__button {
+        padding: 9px 12px;
+    }
+	/*  common css end  */
 	/* whats more cs start   */
     .card-information .card-information-image {
         border: 6px solid var(--white);
