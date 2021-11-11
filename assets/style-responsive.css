@@ -457,16 +457,21 @@
         align-items: center;
     }
   	/*  product listing home end  */
-/* testimonial start */
-  .client-say-left {
-  	flex-direction: column;
-    text-align: center;
-    padding-bottom:30px;
-  }
-  .client-say-left h2 {
+	/*  collection start */
+    .card__warpper__detail.right__sided .collection-detail-right {
+        padding: 10px 20px;
+    }
+	/*  collection end  */
+    /* testimonial start */
+    .client-say-left {
+      flex-direction: column;
+      text-align: center;
+      padding-bottom:30px;
+    }
+    .client-say-left h2 {
       font-size: 24px;
       line-height: 20px;
       margin: 6px 0 12px;
-  }
-/*  testimonial end  */
+    }
+    /*  testimonial end  */
 }
