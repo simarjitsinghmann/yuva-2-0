@@ -4,22 +4,14 @@
             <style>
                 #announcement{{block.id}} {
                     border-color:transparent !important;
-                    {% if block.settings.bg_style == 'solid'  %}
-                        background-color:{{block.settings.bgcolor}};
-                    {% elsif block.settings.bg_style == 'gradient' %}
+                    {% if block.settings.bg_style == 'gradient' %}
                         background: -moz-linear-gradient(left, {{block.settings.bgcolor}} 0%, {{block.settings.bgcolor}} 33%, {{block.settings.bgcolor2}} 66%, {{block.settings.bgcolor2}} 100%);
                         background: -webkit-linear-gradient(left, {{block.settings.bgcolor}} 0%,{{block.settings.bgcolor}} 33%,{{block.settings.bgcolor2}} 66%,{{block.settings.bgcolor2}} 100%);
                         background: linear-gradient(to right, {{block.settings.bgcolor}} 0%,{{block.settings.bgcolor}} 33%,{{block.settings.bgcolor2}} 66%,{{block.settings.bgcolor2}} 100%);
                         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{{block.settings.bgcolor}}', endColorstr='{{block.settings.bgcolor2}}',GradientType=1 );
-                        {% elsif block.settings.bg_style == 'image' %}
-                            {% if block.settings.bgimage != blank %}
-                                background: url({{block.settings.bgimage | img_url:'master'}});
-                                background-repeat: no-repeat;
-                                background-size: cover;
-                                border: 0;
+                   
                             {% else %}
                             background-color:{{block.settings.bgcolor}};
-                            {% endif %}
                     {% endif %}
                 }
                 #announcement{{block.id}} .announcement-bar__message{
