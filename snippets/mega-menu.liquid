@@ -8,6 +8,11 @@
    {% include 'product-grid' product:block.settings.product,hide_options:true,hideRelated:true,hideQuickView:true %}
   {% endif %}
   {% when collection %}
+  {% if block.settings.collection != blank %}
+  {% for product in block.settings.collection.products limit:block.settings.products %}
+   {% include 'product-grid' product:block.settings.product,hide_options:true,hideRelated:true,hideQuickView:true %}
+  {% endfor %}
+  {% endif %}
   {% endcase %}
 </div>
 
