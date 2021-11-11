@@ -8,7 +8,7 @@
 {% else %}
 {% assign custom_offset = 0 %}
 {% endif %}
-{% if section.settings.header_style != 'header4' %}
+{% if hamburger %}
 {% for block in section.blocks limit:custom_limit  offset:custom_offset%}
     {% if block.settings.heading != blank %}
         
