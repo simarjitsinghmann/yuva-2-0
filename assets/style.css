@@ -614,6 +614,10 @@ object-fit: cover; }
     font-size: 17px;
     margin: 0 0 2px;
     display: inline-block;
+      width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .post-information-image img { width: 100%; } 
 
