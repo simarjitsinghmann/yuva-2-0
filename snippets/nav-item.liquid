@@ -42,13 +42,17 @@
               {% endif %}
             </div>
             {% endfor %}
-            {% include 'mega-menu' %}
           </div>
         </div>
 
       </div>
     </div>
   </div>
+  {%- endif -%}
+                                  
+  {%- if  menuDropdown -%}
+  sdsds
+            {% include 'mega-menu' %}
   {%- endif -%}
 </li>
 {%- endfor-%}
