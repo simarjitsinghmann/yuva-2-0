@@ -49,3 +49,8 @@ form#ContactFooter .newsletter-form__field-wrapper label.field__label {
     display: none;
 }
 /***END***/
+@media screen and (max-width:991px) {
+  .newsletter-box p {
+  	display:none;
+  }
+}
