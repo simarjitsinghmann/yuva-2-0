@@ -5,7 +5,6 @@
 <div class="sub-menu-list">
   {% case block.type %}
   {% when 'product' %}
-  ss
   {% if block.settings.product != blank %}
    {% include 'product-grid' product:block.settings.product,hide_options:true,hideRelated:true,hideQuickView:true %}
   {% endif %}
