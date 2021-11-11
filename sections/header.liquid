@@ -5,10 +5,6 @@
         {% include 'header-2' %}
     {% when 'header3' %}
         {% include 'header-3' %}
-    {% when 'header4' %}
-        {% include 'header-4' %}
-    {% when 'header5' %}
-        {% include 'header-5' %}
 {% endcase %}
 
 {% if section.settings.enable_sticky_header %}
@@ -93,14 +89,6 @@
         {
           "label": "t:sections.header.settings.header_style.header3.label",
           "value": "header3"
-        },
-        {
-          "label": "t:sections.header.settings.header_style.header4.label",
-          "value": "header4"
-        },
-        {
-          "label": "t:sections.header.settings.header_style.header5.label",
-          "value": "header5"
         }
       ]
     },
