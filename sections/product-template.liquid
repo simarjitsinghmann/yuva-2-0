@@ -270,12 +270,12 @@
                                  <div class="product-detail">
                                     <div class="accordion-container">
                                        <div class="set">
-                                          <h6 class="panel-title faq-description" content="faq-content-description">
+                                          <h6 class="panel-title accordion-description" content="accordion-content-description">
                                              <a href="javascript:void(0)">
                                              Description
                                              </a>
                                           </h6>
-                                          <div id="faq-content-description" class="content productSection-content" style="display:none;">
+                                          <div id="accordion-content-description" class="content productSection-content" style="display:none;">
                                              <div class="panel-body">
                                                 {{product.description}}
                                              </div>
@@ -288,13 +288,13 @@
                                     <div class="product-detail">
                                        <div class="accordion-container">
                                           <div class="set">
-                                          <h6 class="panel-title faq-contentwrapper" content="faq-content-contentwrapper">
+                                          <h6 class="panel-title accordion-contentwrapper" content="accordion-content-contentwrapper">
                                                 <a href="javascript:void(0)">
                                                 {{block.settings.contentheading}}
                                                 <i class="fa fa-plus"></i>
                                                 </a>
                                              </h6>
-                                             <div id="faq-content-contentwrapper" class="content" style="display:none;">
+                                             <div id="accordion-content-contentwrapper"  class="content productSection-content"  style="display:none;">
                                                 <div class="panel-body">
                                                    {{block.settings.content}}
                                                 </div>
@@ -307,13 +307,13 @@
                                  <div class="product-detail">
                                     <div class="accordion-container">
                                        <div class="set">
-                                          <h6 class="panel-title faq-reviews" content="faq-content-reviews">
+                                          <h6 class="panel-title accordion-reviews" content="accordion-content-reviews">
                                              <a href="javascript:void(0)">
                                              Reviews
                                              <i class="fa fa-plus"></i>
                                              </a>
-                                          </h4>
-                                          <div class="content" style="display:none;">
+                                          </h6>
+                                          <div id="accordion-content-reviews" class="content productSection-content" style="display:none;">
                                              <div class="panel-body">
                                                 <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
                                              </div>
