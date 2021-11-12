@@ -266,10 +266,11 @@
                      </div>
                      {% when 'description_tab' %}
                               {% if block.settings.width == 'half' %}
+                     			{% if block.settings.show_description %}
                                  <div class="product-detail">
                                     <div class="accordion-container">
                                        <div class="set">
-                                          <h6 class="panel-title faq-{{section.id}}" content="faq-content-{{block.id}}">
+                                          <h6 class="panel-title faq-description" content="faq-content-description">
                                              <a href="javascript:void(0)">
                                              Description
                                              </a>
@@ -282,6 +283,45 @@
                                        </div>
                                     </div>
                                  </div>
+                                 {% endif %}
+                     				{% if block.settings.contentheading != blank %}
+                                    <div class="product-detail">
+                                       <div class="accordion-container">
+                                          <div class="set">
+                                             <h4 class="panel-title">
+                                                <a href="javascript:void(0)">
+                                                {{block.settings.contentheading}}
+                                                <i class="fa fa-plus"></i>
+                                                </a>
+                                             </h4>
+                                             <div class="content" style="display:none;">
+                                                <div class="panel-body">
+                                                   {{block.settings.content}}
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 {% endif %}
+                     			{% if block.settings.show_reviews %}
+                                 <div class="product-detail">
+                                    <div class="accordion-container">
+                                       <div class="set">
+                                          <h4 class="panel-title">
+                                             <a href="javascript:void(0)">
+                                             Reviews
+                                             <i class="fa fa-plus"></i>
+                                             </a>
+                                          </h4>
+                                          <div class="content" style="display:none;">
+                                             <div class="panel-body">
+                                                <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 {% endif %}
                               {% else %}
                               {% assign full_width_tabs = true %}
                               {% endif %}
