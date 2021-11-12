@@ -9,7 +9,7 @@
 {% assign mainMenu = block.settings.menu %}
 <div class="sub-menu-list">
   <div class="menu-mb-title">
-    <span>{% if block.settings.menu-heading != blank %}{{ block.settings.menu-heading | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</span>
+    <span>{% if block.settings.menu_heading != blank %}{{ block.settings.menu_heading | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</span>
   </div>
   {%- if mainMenu.links != blank -%}
   <ul class="site-nav-dropdown">
