@@ -76,11 +76,6 @@ html {
   font-size: var(--reg-text);
 }
 
-html {
-  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
-    font-smoothing: subpixel-antialiased;
-  }
-}
 
 
 .bottom-left {
