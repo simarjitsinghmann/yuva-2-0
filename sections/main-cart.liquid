@@ -10,7 +10,7 @@
   {% if cart.item_count > 0 %}
   <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
   <div class="row">    
-     <div class="col-sm-12 col-md-8">
+     <div class="col-sm-12 col-md-12 col-lg-8">
         <h3>Shopping Cart <span>In your bag <span data-cart-item-count>{{cart.item_count}}</span> items</span></h3>
         <div class="inner-box">
            <table>
@@ -65,7 +65,7 @@
           <a href="/collections/all">Go to Products</a>
         </div>
      </div>
-     <div class="col-sm-12 col-md-4">
+     <div class="col-sm-12 col-md-12 col-lg-4">
        <div class="sticky_cartsidebar">
         <h3>Price Details</h3>
         <div class="inner-box price-details">
