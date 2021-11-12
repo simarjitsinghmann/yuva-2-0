@@ -498,7 +498,16 @@ letter-spacing: 1.2px;
 .similar_options:hover .text-nowrap.similar { transition: 0.3s; transform: translateX(1px); width: 86px; right: 30px; top: 0; visibility: visible; opacity:1; height: 100%;} 
 .text-nowrap.similar { font-size: 10px; padding: 0 4px 0 10px; color: var(--white); font-weight: var(--medium); text-transform: capitalize; visibility: hidden; position: absolute; top: 0px; height: 100%; background: var(--theme-color); display: flex; justify-content: center; align-items: center; border-radius: 60px 0 0 60px; right: 0; transform: translateX(-10px); }
 .shop__options { position: absolute; bottom: 0px; text-align: center; left: 0; right: 0; z-index: 1; opacity:0; top:auto;-webkit-transition: all .3s linear;-moz-transition: all .3s linear;-ms-transition: all .3s linear;-o-transition: all .3s linear;transition: all .3s linear;} 
-.card-wrapper-img { position: relative; overflow: hidden;  background-color: var(--gray);} 
+.card-wrapper-img {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--gray);
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 350px;
+}
 .shop__options .add-to-cart { position: absolute; bottom: 21px; width: calc(100% - 138px); left: 0; right: 0; margin: 0 auto; text-align: center; z-index: 1; } 
 .shop__options .add-to-cart button{ transition: background-position 0.25s ease-out; background-repeat: no-repeat; background-size: 200% 100%; background-color: var(--black); background-image: -moz-linear-gradient(90deg, var(--theme-color) 0%, var(--theme-color) 50%, #000000 50%, #000000 100%); background-image: -webkit-linear-gradient(90deg, var(--theme-color) 0%, var(--theme-color) 0 50%, #000000 50%, #000000 100%); background-image: linear-gradient(90deg, var(--theme-color) 0%, var(--theme-color) 50%, #000000 50%, #000000 100%); background-position: right bottom; color:var(--white); width: 100%; font-size: var(--small-text); font-weight: var(--medium); font-family: 'Celias'; padding: 9px; } 
 .shop__options .add-to-cart button:hover { background-position: left bottom; } 
