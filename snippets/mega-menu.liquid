@@ -53,7 +53,7 @@
     {% if block.settings[collection] != blank %}
 {% assign collection = block.settings[collection] %}
       {% if block.settings.show_products %}
-          {% for product in block.settings[collection].products limit:block.settings.products %}
+          {% for product in collection.products limit:block.settings.products %}
           <div class="sub-menu-list">
             {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true %}
           </div>
