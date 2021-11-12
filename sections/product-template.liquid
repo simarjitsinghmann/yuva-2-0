@@ -285,13 +285,13 @@
                                  </div>
                                </div>
                                {% endif %}
-                               {% if block.settings.contentheading != blank %}
+                               {% if block.settings.content_heading != blank %}
                                <div class="product-detail">
                                  <div class="accordion-container">
                                    <div class="set">
                                      <h6 class="panel-title accordion-{{section.id}}" content="accordion-content-contentwrapper">
                                        <a href="javascript:void(0)">
-                                         {{block.settings.contentheading}}
+                                         {{block.settings.content_heading}}
                                          <i class="fa fa-plus"></i>
                                        </a>
                                      </h6>
@@ -343,8 +343,8 @@
                    {% if block.settings.show_description %}
                    <li class="resp-tab-item resp-tab-itemProduct easy_tabs" content="tabContentDescription"><a>Description</a></li> 
                    {% endif %}
-                   {% if block.settings.contentheading != blank %}
-                   <li class="resp-tab-item resp-tab-itemProduct easy_tabs" content="tabContentWrapper"><a>{{block.settings.contentheading}}</a></li> 
+                   {% if block.settings.content_heading != blank %}
+                   <li class="resp-tab-item resp-tab-itemProduct easy_tabs" content="tabContentWrapper"><a>{{block.settings.content_heading}}</a></li> 
                    {% endif %}
                    {% if block.settings.show_reviews %}
                    <li class="resp-tab-item resp-tab-itemProduct easy_tabs" content="tabContentReviews"><a>Reviews</a></li> 
@@ -363,7 +363,7 @@
                         {{product.description}}             
                      </div>     
                    {% endif %}
-                   {% if block.settings.contentheading != blank %}
+                   {% if block.settings.content_heading != blank %}
                      <div class="product-description tab-content resp-tab-content resp-tab-contentProduct easy_tabs" id="tabContentWrapper" aria-labelledby="easy_tabs_tab_item-2" style="display: none;">
                         {{block.settings.content}}            
                      </div> 
