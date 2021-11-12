@@ -272,8 +272,6 @@
                                           <h6 class="panel-title faq-{{section.id}}" content="faq-content-{{block.id}}">
                                              <a href="javascript:void(0)">
                                              Description
-                                               <span class="iconPlus">{% render 'icon-plus' %}</span>
-                                               <span class="iconMinus">{% render 'icon-minus' %}</span>
                                              </a>
                                           </h6>
                                           <div id="faq-content-{{block.id}}" class="content productSection-content" style="display:none;">
@@ -286,54 +284,6 @@
                                  </div>
                               {% else %}
                               {% assign full_width_tabs = true %}
-                              {% endif %}
-                           {% when 'reviews_tab' %}
-                              {% if block.settings.width == 'half' %}
-                                 <div class="product-detail">
-                                    <div class="accordion-container">
-                                       <div class="set">
-                                          <h6 class="panel-title faq-{{section.id}}" content="faq-content-{{block.id}}">
-                                             <a href="javascript:void(0)">
-                                             Reviews
-                                               <span class="iconPlus">{% render 'icon-plus' %}</span>
-                                               <span class="iconMinus">{% render 'icon-minus' %}</span>
-                                             </a>
-                                          </h6>
-                                          <div id="faq-content-{{block.id}}" class="content productSection-content" style="display:none;">
-                                             <div class="panel-body">
-                                                <div id="shopify-product-reviews " data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 {% else %}
-                                 {% assign full_width_tabs = true %}
-                              {% endif %}
-                           {% when 'accordion' %}
-                              {% if block.settings.width == 'half' %}
-                                 {% if block.settings.heading != blank %}
-                                    <div class="product-detail">
-                                       <div class="accordion-container">
-                                          <div class="set">
-                                             <h6 class="panel-title faq-{{section.id}}" content="faq-content-{{block.id}}">
-                                                <a href="javascript:void(0)">
-                                                {{block.settings.heading}}
-                                                <span class="iconPlus">{% render 'icon-plus' %}</span>
-                								<span class="iconMinus">{% render 'icon-minus' %}</span>
-                                                </a>
-                                             </h6>
-                                             <div id="faq-content-{{block.id}}" class="content productSection-content" style="display:none;">
-                                                <div class="panel-body">
-                                                   {{block.settings.content}}
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 {% endif %}
-                                 {% else %}
-                                 {% assign full_width_tabs = true %}
                               {% endif %}
                         {% endcase %}
                      {% endfor %}
