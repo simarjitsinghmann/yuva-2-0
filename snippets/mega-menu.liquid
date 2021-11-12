@@ -45,6 +45,7 @@
 {% for i in (1..5) %}
 {% assign collection = 'collection' | append:i %}
     {% if block.settings[collection] != blank %}
+{% assign collection = block.settings[collection] %}
       {% if block.settings.show_products %}
           {% for product in block.settings[collection].products limit:block.settings.products %}
           <div class="sub-menu-list">
@@ -54,8 +55,12 @@
         {% else %}
         <div class="sub-menu-list">
           <div class="menu-image-content">
-            <a href="{{block.settings[collection].url}}" class="button black-button">
-            <img src="{{block.settings[collection].image | img_url:'master'}}"  class="menu-image">
+            <a href="{{collection.url}}" class="button black-button">
+              {% if collection.image %}
+              <img src="{{ collection | img_url: 'master' }}"  alt="{{ collection.title | escape }}" class="menu-image"/>
+              {% else %}
+              <img src="{{ collection.products.first | img_url: 'master' }}"  alt="{{ collection.title | escape }}" class="menu-image" />
+              {% endif %}
             <div class="menu-content">
               <h4>{{block.settings[collection].title}}</h4>
             </div></a>
