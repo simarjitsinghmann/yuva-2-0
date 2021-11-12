@@ -166,7 +166,8 @@ main .shopify-section:first-child {
 .shopify__top__section small {display: block; letter-spacing: 1px; margin-bottom: 0px; text-transform: uppercase; font-weight: var(--medium);font-size:var(--small-text);line-height:20px; color:#555555;} 
 .card-information .card-information__wrapper .offer-name span { font-family: var(--font-family); color: var(--theme-color); font-weight: bold; font-size: 50px; line-height: 21px; margin-right: 7px; } 
 .card-information .card-information__wrapper .offer-name { font-family: var(--font-family); font-size: var(--font-size); color: var(--black); margin: 4px 0 1px; text-transform: capitalize; font-weight: var(--medium); } 
-.card-information__wrapper { position: absolute; width: 195px;  margin: 0 auto;  background: var(--white);  padding: 24px; outline: 2px dashed #c4c4c4; outline-offset: -8px; } 
+.card-information__wrapper { position: absolute; width: 195px;  margin: 0 auto;  background: var(--white);  padding: 24px;} 
+.card-information__wrapper.content-border-true { outline: 2px dashed #c4c4c4; outline-offset: -8px; }
 .shopify__top__section .card-information__wrapper h5 {font-size:18px; text-align:left; line-height: 20px; letter-spacing: 0px; font-weight: 500;color:var(--black); margin-bottom: 5px; } 
 .card-information__wrapper p.category-name { font-family: var(--font-family); font-weight: var(--medium); margin: 17px 0 18px; color: rgba(0, 0, 0, 0.6); } 
 .category-list h3 { padding-bottom: 25px;font-weight: var(--bold); } 
