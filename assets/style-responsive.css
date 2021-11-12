@@ -666,5 +666,9 @@
   .CollectionProductGrid .product-collection.grid-view {
       padding-top: 20px;
   }
+  #CollectionProductsContainer[data-view=grid-layout-3] .products-grid .product_columns .grid-item,
+  #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item {
+      padding: 0 7px;
+  }
 /*  collection page end  */
 }
