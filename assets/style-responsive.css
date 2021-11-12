@@ -506,6 +506,10 @@
         justify-content: center;
         align-items: center;
     }
+    .product-information__wrapper .caption-with-letter-spacing {
+        font-size: 13px;
+        line-height: 16px;
+    }
   	/*  product listing home end  */
 	/*  product detail start  */
     .feature-product .product-add-to-cart-right p.vendor_name {
@@ -534,9 +538,9 @@
     .size_option .option {
         font-size: 11px;
     }
-  .select__quantity .quantity {
-      max-width: 110px;
-  }
+    .select__quantity .quantity {
+        max-width: 110px;
+    }
 	/*  product detail end  */
 	/*  collection start */
     .card__warpper__detail.right__sided .collection-detail-right {
@@ -551,9 +555,6 @@
     }
 	/*  collection end  */
     /* testimonial start */
-/*   	.shopify-section.testimonial {
-        padding: 35px 0 35px;
-    } */
     .client-say-left {
         flex-direction: column;
         text-align: center;
