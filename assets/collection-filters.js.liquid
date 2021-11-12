@@ -1,5 +1,12 @@
 (function () {
-
+  
+    var parent = document.getElementById('CollectionProductsContainer');
+  if(window.innerWidth > 767 && window.innerWidth > 992){
+  	parent.setAttribute("data-view", "grid-layout-3")
+  }
+   if(window.innerWidth < 766 ){  
+  	parent.setAttribute("data-view", "grid-layout-2")
+  }
   function collectionFilters(){  
     var section = document.getElementById('CollectionProductsContainer')
     var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
