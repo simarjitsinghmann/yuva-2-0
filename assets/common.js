@@ -263,8 +263,10 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             if(compareAtPrice > price){
               priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}<span class="main-price"> <del>${Shopify.formatMoney(compareAtPrice, moneyFormat)}</del> </span> </h3> <span class="percent-off">(${percentage}% OFF)</span>`;
             }
-            priceContainer.innerHTML = priceHtml;
-            console.log(getVariant)
+            if(priceContainer){
+              priceContainer.innerHTML = priceHtml;
+            }
+            
             var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
             var baseUrl = window.location.pathname;
             if(baseUrl.indexOf('/products/' > -1)){
