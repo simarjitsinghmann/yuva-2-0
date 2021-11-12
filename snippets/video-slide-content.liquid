@@ -1,3 +1,4 @@
+{% if block.settings.videofile != blank or block.settings.poster != blank %}
 <div id="banner-{{block.id}}" class="banner banner-section item" {{ block.shopify_attributes }}>	
   {% if block.settings.height != 'use_image' %}
   <style>
@@ -61,3 +62,4 @@
     }
   </style>
 </div>
+{% endif %}
