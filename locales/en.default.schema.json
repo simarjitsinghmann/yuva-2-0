@@ -1151,7 +1151,26 @@
           "name": "Product Description"
         },
         "description_tab": {
-          "name": "Product Description as Tab"
+          "name": "Tabs",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "content": {
+              "label": "Content"
+            },
+            "width": {
+              "label": "Position",
+              "options": {
+                "half": {
+                  "label": "Accordion"
+                },
+                "full": {
+                  "label": "Tabs"
+                }
+              }
+            }
+          }
         },
         "reviews_tab": {
           "name": "Reviews Tab"
