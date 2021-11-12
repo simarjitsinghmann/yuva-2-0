@@ -21,12 +21,11 @@ changeItem = function(line, quantity, callback) {
 
 updateLineItem = function(){
 	var items = $('#cart').find('table tr');
-  console.log(items)
   items.each(function(index){
+    $(this).find('[data-line]').attr('data-line',(index + 1))
   	console.log(index,$(this).find('[data-line]'))
   })
 };
-updateLineItem();
 // Update quantity based on input on change
 
 changeCartItem = function(line, quantity) {    
@@ -49,6 +48,7 @@ changeCartItem = function(line, quantity) {
                     $('[data-cart-count]').show().text(cart.item_count);
                     var item = cart.items[line-1];
                     $('[name="item_quantity"][data-line="'+line+'"]').val(item.quantity);
+                  updateLineItem();
                     cartPageUpdate(cart);
                 }
             });
