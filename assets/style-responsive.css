@@ -677,9 +677,13 @@
       margin-bottom: 8px;
   }
   .sidebar-widget-product li .checkmark {
-    height: 14px;
-    width: 14px;
-}
+      height: 14px;
+      width: 14px;
+  }
+  .sidebar-widget-product li .checkmark::after {
+      left: 4px;
+      top: 0px;
+  }
   .filter-actions .select-items .select-item {
       padding: 2px 9px;
       padding-right: 25px;
