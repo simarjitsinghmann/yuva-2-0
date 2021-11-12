@@ -84,8 +84,8 @@
 .slider-list { width: 100%; } 
 .carousel-caption h5 { color: var(--white); margin:0; letter-spacing: 0.4px; padding-top: 14px; padding-bottom: 40px; } 
 .carousel-caption h5.top-title { font-weight: var(--medium); text-transform: uppercase; padding: 0 0 21px; color: var(--white); } 
-.banner-section.item h1 { font-weight:var(--normal); color: var(--white); } 
-.banner-section.item h2 { font-weight: var(--semibold); line-height: 1.01; color: var(--white);text-transform:uppercase; } 
+.banner-section.item.slider-banner h1 { font-weight:var(--normal); color: var(--white); } 
+.banner-section.item.slider-banner h2 { font-weight: var(--semibold); line-height: 1.01; color: var(--white);text-transform:uppercase; } 
 .carousel-caption h3.top-title { font-weight: 300; color: var(--white); text-transform: uppercase; letter-spacing: 30px; padding: 10px 0 40px; } 
 .offer-box { margin-bottom: 33px; }
 .button .fa-arrow-right { margin-left: 20px; } 
@@ -1888,16 +1888,16 @@ justify-content: center
 }
 
 /**banner-section**/
-.banner-section .item {
+.single-banner-section.banner-section .item {
 	position: relative;
 }
-.banner-section .banner-caption-title.banner-slide h6.top-title {
+.single-banner-section.banner-section .banner-caption-title.banner-slide h6.top-title {
     color: var(--white);
     text-transform: uppercase;
     font-weight: var(--normal);
 	letter-spacing: 0;
 }
-.banner-section h1 {
+.single-banner-section.banner-section h1 {
     font-weight: var(--medium);
      font-size:75px;
     line-height: 71px;
@@ -1906,7 +1906,7 @@ justify-content: center
     margin: 15px 0 16px;
 	letter-spacing: 0.8px;
 }
-.banner-section h2{
+.single-banner-section.banner-section h2{
 	font-weight: var(--bold);
     font-size:100px;
 	margin-bottom: 5px;
@@ -1915,7 +1915,7 @@ justify-content: center
 	line-height: 58px;
 	color: #F17D35;
 }
-.banner-section p {
+.single-banner-section .banner-section p {
 	font-weight: var(--normal);
 	color: var(--white);
 	margin-bottom: 29px;
