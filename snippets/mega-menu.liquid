@@ -62,8 +62,9 @@
               <img src="{{ collection.products.first | img_url: 'master' }}"  alt="{{ collection.title | escape }}" class="menu-image" />
               {% endif %}
             <div class="menu-content">
-              <h4>{{block.settings[collection].title}}</h4>
-            </div></a>
+              <h4>{{collection.title}}</h4>
+            </div>
+            </a>
           </div>
         </div>
       {% endif %}
