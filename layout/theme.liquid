@@ -126,7 +126,9 @@
     {% render 'newsletter-popup'%}
   
   {% include 'product-quick-view' %}
+    {% if settings.enable_cart_drawer and template != 'cart'%}
   {% include 'mini-cart' %}
+    {% endif %}
     <style>
       form button[type="submit"]:not([name="checkout"]) {
         position: relative;
