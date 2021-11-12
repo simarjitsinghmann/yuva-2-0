@@ -55,7 +55,7 @@
         {% else %}
         <div class="sub-menu-list">
           <div class="menu-image-content">
-            <a href="{{collection.url}}" class="button black-button">
+            <a href="{{collection.url}}" >
               {% if collection.image %}
               <img src="{{ collection | img_url: 'master' }}"  alt="{{ collection.title | escape }}" class="menu-image"/>
               {% else %}
