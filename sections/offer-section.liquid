@@ -26,7 +26,7 @@
                               {% endif %}
                             </a>
                         </div>
-                            <div class="card-information__wrapper content-border-{{block.settings.show_border}} {{block.settings.info_position}}">
+                            <div class="card-information__wrapper content-border-{{block.settings.show_border}} {% if section.settings.style == 'style1' %}{{block.settings.info_position}}{% endif %}">
                               {% if block.settings.heading != blank %}
                                 <h5>{{block.settings.heading}}</h5>
                                 {% endif%}
