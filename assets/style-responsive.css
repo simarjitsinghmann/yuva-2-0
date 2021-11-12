@@ -41,9 +41,6 @@
     .select__size, .select__color {
         margin-bottom: 20px;
     }
-/*     .shopify__top__section h2 {
-        margin-bottom: 15px;
-    } */
     .form-control {
         padding: 8px 15px;
         min-height: 46px;
@@ -52,6 +49,8 @@
         resize: none;
         min-height: 100px;
     }
+/*  COmmon end  */
+  
 	/* whats more css start */
     .card-information__wrapper {
         width: 165px;
@@ -105,20 +104,10 @@
     }
     /*  product sidebar end   */
     /*  home banner start  */
-    .banner-section .banner-caption-title.style2 h2.smaller-heading {
-        font-size: 50px;
-        line-height: 60px;
-        padding: 5px 45px 5px 15px;
-        margin: 10px 0 11px;
+    .banner.banner-section.item {
+        min-height: 650PX;
+        max-height: 650px;
     }
-    .banner-section .banner-caption-title.style2 h2.bigger-heading {
-        font-size: 50px;
-        line-height: 54px;
-    }
-    h1.smaller-heading {
-        font-size: 40px;
-    }
-
     /*  home banner end  */
 	/*  Blog responsive start */
   	.post-information__wrapper {
