@@ -5,6 +5,7 @@
       "blocks": {
         "slide": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "subheading": "JACK & JONES",
             "sh_bg": "rgba(0,0,0,0)",
@@ -29,7 +30,6 @@
         },
         "dc1ecf3e-bebc-40f7-b32c-25a54ae2dd52": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "subheading": "JACK & JONES",
             "sh_bg": "rgba(0,0,0,0)",
@@ -102,16 +102,15 @@
           "type": "video",
           "settings": {
             "videofile": "https:\/\/cdn.shopify.com\/s\/files\/1\/2018\/8867\/files\/ice.mp4",
-            "poster": "shopify:\/\/shop_images\/bh_0017af3c-ff2f-44a5-baf5-34af2c630b06.jpg",
-            "title": "",
-            "description": "",
-            "overlay": false,
+            "title": "Video with text overlay",
+            "description": "This area is used to describe your store.",
+            "overlay": true,
             "bgcolor": "#707070",
             "opacity": 40,
             "text_position": "center",
             "text_align": "text__center",
-            "link_text": "",
-            "link": "shopify:\/\/collections\/all"
+            "link_text": "View products",
+            "link": ""
           }
         }
       },
@@ -138,7 +137,7 @@
             "subheading": "<p><strong>Upto 50<\/strong>% Off<\/p>",
             "image": "shopify:\/\/shop_images\/category1.jpg",
             "link": "",
-            "bgcolor": "#ffffff",
+            "bgcolor": "rgba(0,0,0,0)",
             "info_position": "bottom-left"
           }
         },
