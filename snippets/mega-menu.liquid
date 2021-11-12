@@ -3,13 +3,27 @@
 {% if blockPosition == menuIndex %}
 
 {% case block.type %}
-{% when 'product' %}
+{% when 'menu' %}
 
+{% if block.settings.collection != blank %}
 <div class="sub-menu-list">
-  {% if block.settings.product != blank %}
-  {% include 'product-grid' product:block.settings.product,hide_options:true,hideRelated:true,hideQuickView:true %}
+  <div class="menu-mb-title">
+    <span>{%- unless childlink.links != blank -%}<a href="{{ childlink.url }}">{% endunless %}{{ childlink.title | split:"{badge" | first | escape | captilize }}{%- unless childlink.links != blank -%}</a>{% endunless %}</span>
+  </div>
+  {%- if childlink.links != blank -%}
+  <ul class="site-nav-dropdown">
+    <li class="menu-lv-3 hide_pc">
+      <a href="{{ childlink.url }}"><span>{{ childlink.title | split:"{badge" | first | escape | captilize }}</span></a>
+    </li>
+    {%- for grandchildlink in childlink.links -%}
+    <li class="menu-lv-3">
+      <a href="{{ grandchildlink.url }}"><span>{{ grandchildlink.title | split:"{badge" | first | escape | captilize }}</span></a>
+    </li>
+    {%- endfor -%}
+  </ul>
   {% endif %}
 </div>
+{% endif %}
 {% when 'collection' %}
 {% if block.settings.collection != blank %}
 {% for product in block.settings.collection.products limit:block.settings.products %}
