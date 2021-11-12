@@ -13,13 +13,13 @@
             <h6 class="top-title">{{section.settings.heading}}</h6>
             {% endif %}
             {% if section.settings.subheading != blank %}
-            <h2 class="smaller-heading">{{section.settings.subheading}}</h2>
+            <h1{{section.settings.subheading}}</h2>
             {% endif %}
             {% if section.settings.sale != blank %}
-            <h2 class="bigger-heading">{{section.settings.sale}}</h2>
+            <h2>{{section.settings.sale}}</h2>
             {% endif %}
             {% if section.settings.content != blank %}
-            <h6 class="bottom-title">{{section.settings.content}}</h6>
+            <p>{{section.settings.content}}</p>
             {% endif %}
             {% if section.settings.btn != blank %}
             <a href="{{section.settings.link}}" class="black-btn button">{{section.settings.btn}}<i class="fas fa-arrow-right"></i></a>
