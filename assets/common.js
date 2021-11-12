@@ -105,7 +105,7 @@ $(document).ready(function(){
 // 		$('body').toggleClass('minicart-open');
 // 		$('.wrapper-overlay').css({"display": "block"});
 // 	});
-// 	$(document).on('click','.close-customer',function(){
+// 	$(document).on('click','.close-cart-drawer',function(){
 // 		$("body").removeClass("minicart-open"), $(".wrapper-overlay").hide();
 // 	});
 	
