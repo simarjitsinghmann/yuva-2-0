@@ -1247,6 +1247,9 @@ ul.gallery-item li a > img {background: #f6f4f3;}
     transform-origin: 50% 50%;
     transition: all .4s;
 }
+.product-detail .panel-title.active a:after {
+    transform: rotate(-45deg);
+}
 .panel-body {
 	color: var(--black);
 }
