@@ -127,50 +127,6 @@ changeCartItem = function(line, quantity) {
     jQuery.ajax(params);
 };
 
-$(document).on('click', '.line_item_change', function(evt) {
-    evt.preventDefault();
-    var $el = $(this),
-        line = $el.data('line'),
-        $qtySelector = $el.siblings('input[name="item_quantity"]'),
-        qty = parseInt($qtySelector.val().replace(/\D/g, ''));
-
-    var qty = validateQty(qty);
-    // Add or subtract from the current quantity
-    if ($el.hasClass('plus')) {
-        qty += 1;
-    } else {
-        qty -= 1;
-        if (qty <= 0) qty = 0;
-    }
-    $qtySelector.val(qty);
-    if (line) {
-        changeCartItem(line, qty);
-    } 
-});
-
-$(document).on('change', '[name="item_quantity"]', function(evt) {
-    evt.preventDefault();
-    var $el = $(this),
-        line = $el.data('line'),
-        qty = parseInt($el.val().replace(/\D/g, ''));
-
-    var qty = validateQty(qty);
-    // Add or subtract from the current quantity
-    
-    if (line) {
-        changeCartItem(line, qty);
-    } 
-});
-
-$(document).on('click', '.line_item_remove', function(evt) {
-    evt.preventDefault();
-      var $el = $(this),
-          line = $el.data('line');
-      // If it has a data-line, update the cart
-      if (line) {
-        changeCartItem(line, 0);
-      }
-  })
 
 updateQuantity = function(line, qty,callback) {
     isUpdating = true;
@@ -282,20 +238,3 @@ validateQty = function (qty) {
     }
     return qty;
 };
-
-cartPageUpdate = function(cart){
-    $('[data-cart-item-count]').text(cart.item_count);
-    $('[data-cart-original-price]').text(Shopify.formatMoney(cart.original_total_price, moneyFormat));
-    $('[data-cart-total-price]').text(Shopify.formatMoney(cart.total_price, moneyFormat));
-    if(cart.cart_level_discount_applications.length > 0){
-        var discounts = '';
-        $.each(cart.cart_level_discount_applications,function(index,discount){
-            discounts += '<li data-cart-discount>Discount['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
-        })
-        $('li[data-cart-discount]').remove();
-        $(discounts).insertAfter('li[data-cart-original]')
-    }
-    else{
-        $('li[data-cart-discount]').remove();
-    }
-}
