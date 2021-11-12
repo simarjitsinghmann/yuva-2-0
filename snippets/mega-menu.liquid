@@ -7,12 +7,13 @@
 
 
 {% for i in (1..4) %}
-{{i}}
-{% if block.settings.menu != blank %}
-{% assign mainMenu = block.settings.menu %}
+{% assign menu = 'menu'|append:i %}
+{% assign heading = 'menu_heading'|append:i %}
+{% if block.settings[menu] != blank %}
+{% assign mainMenu = block.settings[menu] %}
 <div class="sub-menu-list">
   <div class="menu-mb-title">
-    <span>{% if block.settings.menu_heading != blank %}{{ block.settings.menu_heading | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</span>
+    <span>{% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</span>
   </div>
   {%- if mainMenu.links != blank -%}
   <ul class="site-nav-dropdown">
