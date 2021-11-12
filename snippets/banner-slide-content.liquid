@@ -33,7 +33,7 @@
                 color: {{ block.settings.h_text }};
             {% endif %}
         }             
-        #banner-{{block.id}} .carousel-caption-title .smaller-heading { 
+        #banner-{{block.id}} .carousel-caption-title h1 { 
             {% if block.settings.sh_bg != blank %}
                 background: {{ block.settings.sh_bg }};
             {% endif %}
@@ -41,7 +41,7 @@
                 color: {{ block.settings.sh_text }};
             {% endif %}
         }               
-        #banner-{{block.id}} .carousel-caption-title .bigger-heading { 
+        #banner-{{block.id}} .carousel-caption-title h2 { 
             {% if block.settings.sale_bg != blank %}
                 background: {{ block.settings.sale_bg }};
             {% endif %}
@@ -49,7 +49,7 @@
                 color: {{ block.settings.sale_text }};
             {% endif %}
         }          
-        #banner-{{block.id}} .carousel-caption-title .bottom-title { 
+        #banner-{{block.id}} .carousel-caption-title p { 
             {% if block.settings.c_bg != blank %}
                 background: {{ block.settings.c_bg }};
             {% endif %}
