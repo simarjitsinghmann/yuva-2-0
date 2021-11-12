@@ -1,4 +1,4 @@
-<div id="banner-{{block.id}}" class="item" {{ block.shopify_attributes }}>
+<div id="banner-{{block.id}}" class="banner-section item" {{ block.shopify_attributes }}>
     {% if block.settings.image != blank %}
     <img src="{{block.settings.image | img_url:'master'}}" alt="">
     {%else%}
