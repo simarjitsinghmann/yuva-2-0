@@ -101,7 +101,8 @@ $(document).ready(function(){
 // 	});
 	
 	///minicart//
-	$('.cart-icon').click(function(){
+	$('.openCartDrawer').click(function(e){
+      e.preventDefault();
 		$('body').toggleClass('minicart-open');
 		$('.wrapper-overlay').css({"display": "block"});
 	});
