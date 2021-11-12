@@ -2,6 +2,17 @@
 <div id="nav_style_3">
     <div class="container">
             <div class="navigation__header">
+              {%- if section.settings.menu != blank -%}
+              <div id="nav_style_4"  class="nav-menu-btn {{mobileMenu}}">
+                <div class="nav__btn">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+
+                {% include 'side-menu' mobileMenu:true %}
+              </div>
+              {%- endif -%}
                 <a class="header__heading-link" href="{{ routes.root_url }}">
                     {%- if section.settings.logo != blank -%}
                     {%- assign image_size = section.settings.logo_width | append: 'x' -%}
@@ -27,15 +38,6 @@
 <div class="nav__header" id="nav_style_3">
     <div class="container">
             <div class="navbar navbar-expand-md header__inline-menu" role="navigation">
-              <div id="nav_style_4"  class="nav-menu-btn {{mobileMenu}}">
-                <div class="nav__btn">
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                </div>
-
-                {% include 'side-menu' mobileMenu:true %}
-              </div>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto list-menu list-menu--inline">								
                         {% include 'nav-item' %}
