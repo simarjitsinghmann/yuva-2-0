@@ -272,7 +272,8 @@
                                           <h6 class="panel-title">
                                              <a href="javascript:void(0)">
                                              Description
-                                             <i class="fa fa-plus"></i>
+                                               <span class="iconPlus">{% render 'icon-plus' %}</span>
+                                               <span class="iconMinus">{% render 'icon-minus' %}</span>
                                              </a>
                                           </h6>
                                           <div class="content" style="display:none;">
@@ -294,7 +295,8 @@
                                           <h6 class="panel-title">
                                              <a href="javascript:void(0)">
                                              Reviews
-                                             <i class="fa fa-plus"></i>
+                                               <span class="iconPlus">{% render 'icon-plus' %}</span>
+                                               <span class="iconMinus">{% render 'icon-minus' %}</span>
                                              </a>
                                           </h6>
                                           <div class="content" style="display:none;">
@@ -317,7 +319,8 @@
                                              <h6 class="panel-title">
                                                 <a href="javascript:void(0)">
                                                 {{block.settings.heading}}
-                                                <i class="fa fa-plus"></i>
+                                                <span class="iconPlus">{% render 'icon-plus' %}</span>
+                								<span class="iconMinus">{% render 'icon-minus' %}</span>
                                                 </a>
                                              </h6>
                                              <div class="content" style="display:none;">
@@ -403,6 +406,35 @@
                document.getElementById(_value).style.display = "block";
             });
          });
+      }
+      var accordionHead = document.getElementsByClassName('faq-{{section.id}}');
+      if(accordionHead.length > 0 ){
+         var accordionContent =  document.getElementsByClassName('faqSection-content');
+        
+         Array.from(accordionHead).forEach(function(btn) {
+           btn.addEventListener("click", ()=>{
+			let icon = btn.querySelectorAll('.fa')[0];
+           if(btn.classList.contains('active')){
+             clearActive();
+           }
+           else{
+             clearAccordion();
+             btn.classList.add("active");
+             var _value = btn.getAttribute("content");
+             document.getElementById(_value).style.display = "block";
+           }
+         });
+         });
+       function clearAccordion(){
+         var accordionHeads = document.getElementsByClassName('faq-{{section.id}}');
+         var accordionContents =  document.getElementsByClassName('faqSection-content');
+         Array.from(accordionHead).forEach(function(item) {
+           item.classList.remove('active');
+         });
+         Array.from(accordionContents).forEach(function(item) {
+           item.style.display = 'none';
+         });
+       }
       }
    </script>
 <script type="application/ld+json">
