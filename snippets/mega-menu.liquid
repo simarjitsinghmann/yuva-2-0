@@ -49,50 +49,50 @@
 {% when 'collection' %}
 
 {% for i in (1..5) %}
-{% assign collection = 'collection' | append:i %}
-    {% if block.settings[collection] != blank %}
-{% assign collection = block.settings[collection] %}
-      {% if block.settings.show_products %}			
-        {% if block.settings.show_product_list %}
+  {% assign collection = 'collection' | append:i %}
+  {% if block.settings[collection] != blank %}
+    {% assign collection = block.settings[collection] %}
+    {% if block.settings.show_products %}			
+      {% if block.settings.show_product_list %}
+        {%- if collection.products_count > 0 -%}
         <div class="sub-menu-list">
           <div class="menu-mb-title">
             <span>{{ collection.title | escape | captilize }}</span>
           </div>
-          {%- if mainMenu.links != blank -%}
-          <ul class="site-nav-dropdown">
-            {%- for childlink in mainMenu.links -%}
+          <ul class="site-nav-dropdown">            
+            {% for product in collection.products limit:block.settings.products %}
             <li class="menu-lv-3">
-              <a href="{{ childlink.url }}"><span>{{ childlink.title | split:"{badge" | first | escape | captilize }}</span></a>
+              <a href="{{ product.url }}"><span>{{ product.title | escape | captilize }}</span></a>
             </li>
             {%- endfor -%}
           </ul>
-          {% endif %}
         </div>
-		{% else %}
+        {% endif %}
+	 {% else %}
           {% for product in collection.products limit:block.settings.products %}
           <div class="sub-menu-list">
             {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true %}
           </div>
           {% endfor %}
-		
-		{% endif %}
-        {% else %}
-        <div class="sub-menu-list">
-          <div class="menu-image-content">
-            <a href="{{collection.url}}" >
-              {% if collection.image %}
-              <img src="{{ collection | img_url: 'master' }}"  alt="{{ collection.title | escape }}" class="menu-image"/>
-              {% else %}
-              <img src="{{ collection.products.first | img_url: 'master' }}"  alt="{{ collection.title | escape }}" class="menu-image" />
-              {% endif %}
-            <div class="menu-content">
-              <h4>{{collection.title}}</h4>
-            </div>
-            </a>
+
+        {% endif %}
+      {% else %}
+      <div class="sub-menu-list">
+      <div class="menu-image-content">
+        <a href="{{collection.url}}" >
+          {% if collection.image %}
+          <img src="{{ collection | img_url: 'master' }}"  alt="{{ collection.title | escape }}" class="menu-image"/>
+          {% else %}
+          <img src="{{ collection.products.first | img_url: 'master' }}"  alt="{{ collection.title | escape }}" class="menu-image" />
+          {% endif %}
+          <div class="menu-content">
+            <h4>{{collection.title}}</h4>
           </div>
-        </div>
-      {% endif %}
-  	{% endif %}
+        </a>
+      </div>
+    </div>
+    {% endif %}
+  {% endif %}
 {% endfor %}
 {% endcase %}  
 
