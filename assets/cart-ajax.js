@@ -126,6 +126,7 @@ changeCartItem = function(line, quantity) {
     };
     jQuery.ajax(params);
 };
+
 $(document).on('click', '.line_item_change', function(evt) {
     evt.preventDefault();
     var $el = $(this),
