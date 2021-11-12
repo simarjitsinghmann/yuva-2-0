@@ -243,11 +243,12 @@ main .shopify-section:first-child {
 .collection-gutter .grid--2-col { width: 50%; max-width: 50%; } 
 .collection-gutter { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; } 
 .card-wrapper { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; position:relative; } 
-/* .card-wrapper.left-sided {position: sticky;top: 145px;}
-.announcement_open .card-wrapper.left-sided {
-	position: sticky;
-	top: 195px;
-} */
+.collection-gutter.layout2 .grid--2-col:first-child{
+	width: 40%; max-width: 40%;
+}
+.collection-gutter.layout2 .grid--2-col:last-child{
+	width: 40%; max-width: 40%;
+}
 /* .card__warpper__detail.left__sided .collection-image {height: 100vh;} */
 /* .card__warpper__detail.left__sided .collection-image > img {height: 100vh;object-fit: cover;} */
 /* .title { font-family: var(--font-family);color: var(--black); line-height: 45px; text-align: left; font-weight: var(--semibold); margin:0;font-size:28px;}  */
