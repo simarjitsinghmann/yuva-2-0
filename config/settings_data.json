@@ -37,7 +37,7 @@
           "171939af-30c1-4383-9fb5-52dcc2290bf1": {
             "type": "product",
             "settings": {
-              "position": "1",
+              "position": "3",
               "product": "top-5"
             }
           },
@@ -55,63 +55,25 @@
               "position": "1",
               "product": ""
             }
-          },
-          "6372f282-e0a1-4193-a9da-e5a33df63929": {
-            "type": "image",
-            "settings": {
-              "position": "2",
-              "image": "shopify:\/\/shop_images\/about-bag.png",
-              "heading": "",
-              "button": "",
-              "link": ""
-            }
-          },
-          "5ed67fb9-d089-4ba9-802f-0f12a8b8b385": {
-            "type": "product",
-            "settings": {
-              "position": "1",
-              "product": ""
-            }
-          },
-          "6ce60970-c4d6-4f3d-abb3-6e1c76f50ad5": {
-            "type": "image",
-            "settings": {
-              "position": "1",
-              "heading": "",
-              "button": "",
-              "link": ""
-            }
-          },
-          "41d66983-3bda-42e4-9afe-5ffe7ffc0156": {
-            "type": "collection",
-            "settings": {
-              "position": "1",
-              "collection": "",
-              "products": 4
-            }
           }
         },
         "block_order": [
           "f821ec58-a7fe-4b5f-bf11-1a1f69f205b4",
           "171939af-30c1-4383-9fb5-52dcc2290bf1",
           "b50e770e-4fe6-4a68-957e-8840104951cd",
-          "8c51c76d-2b48-4f2a-9b5b-ef407e09396a",
-          "6372f282-e0a1-4193-a9da-e5a33df63929",
-          "5ed67fb9-d089-4ba9-802f-0f12a8b8b385",
-          "6ce60970-c4d6-4f3d-abb3-6e1c76f50ad5",
-          "41d66983-3bda-42e4-9afe-5ffe7ffc0156"
+          "8c51c76d-2b48-4f2a-9b5b-ef407e09396a"
         ],
         "settings": {
-          "header_style": "header2",
+          "header_style": "header1",
           "logo": "shopify:\/\/shop_images\/logo.png",
-          "logo_width": 160,
-          "logo_position": "center",
-          "menu": "new-menu",
+          "logo_width": 250,
+          "logo_position": "left",
+          "menu": "main-menu",
           "megamenu": false,
-          "menu_position": "center",
+          "menu_position": "left",
           "show_search": true,
           "show_currency": true,
-          "enable_sticky_header": true
+          "enable_sticky_header": false
         }
       },
       "footer": {
@@ -173,16 +135,16 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
-          "8e03b2fb-5d49-4e44-b84c-e7f87c9cf781": {
+          "63569022-2a9c-4352-8edf-88272f2b4c2f": {
             "type": "timer",
             "settings": {
               "icon": "none",
-              "first_text": "Text 1",
-              "date": "",
-              "last_text": "Text 2",
-              "btn": "Button",
+              "first_text": "",
+              "date": "11\/11\/1111",
+              "last_text": "",
+              "btn": "",
               "link": "",
-              "bg_style": "solid",
+              "bg_style": "image",
               "bgcolor": "#f17e35",
               "bgcolor2": "#f86f64",
               "fontcolor": "#ffffff",
@@ -193,7 +155,7 @@
           }
         },
         "block_order": [
-          "8e03b2fb-5d49-4e44-b84c-e7f87c9cf781"
+          "63569022-2a9c-4352-8edf-88272f2b4c2f"
         ],
         "settings": {
           "show_bar": true,
