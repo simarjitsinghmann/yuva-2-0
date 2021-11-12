@@ -22,6 +22,9 @@ changeItem = function(line, quantity, callback) {
 updateLineItem = function(){
 	var items = $('#cart').find('table tr');
   console.log(items)
+  items.each(function(index){
+  	console.log(index,$(this).find('[data-line]'))
+  })
 };
 updateLineItem();
 // Update quantity based on input on change
