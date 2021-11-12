@@ -19,6 +19,9 @@ changeItem = function(line, quantity, callback) {
 };
 
 
+updateLineItem = function(){
+	
+};
 // Update quantity based on input on change
 
 changeCartItem = function(line, quantity) {    
@@ -50,6 +53,7 @@ changeCartItem = function(line, quantity) {
     };
     jQuery.ajax(params);
 };
+
 
 $(document).on('click', '.line_item_change', function(evt) {
     evt.preventDefault();
