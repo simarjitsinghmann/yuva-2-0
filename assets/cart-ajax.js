@@ -1,7 +1,6 @@
 jQuery.getJSON('/cart.js', function (cart, textStatus) {
     buildCart(cart);
 });
-console.log(Shopify.designMode,Shopify)
 // POST to cart/change.js returns the cart in JSON
 changeItem = function(line, quantity, callback) {
     var $body = $(document.body),
