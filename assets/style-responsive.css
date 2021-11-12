@@ -650,9 +650,14 @@
   	display:none
   }
   .aside-title, .shop-sidebar {
-    max-width: 35%;
-    flex: 0 0 35%;
-    padding-right: 30px;
-}
+      max-width: 35%;
+      flex: 0 0 35%;
+      padding-right: 30px;
+  }
+  .product-content {
+      max-width: 65%;
+      flex: 0 0 65%;
+      padding-top: 20px;
+  }
 /*  collection page end  */
 }
