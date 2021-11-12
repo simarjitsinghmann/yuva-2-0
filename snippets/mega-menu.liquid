@@ -5,19 +5,17 @@
 {% case block.type %}
 {% when 'menu' %}
 
-{% if block.settings.collection != blank %}
+{% if block.settings.menu != blank %}
+{% assign mainMenu = block.settings.menu %}
 <div class="sub-menu-list">
   <div class="menu-mb-title">
-    <span>{%- unless childlink.links != blank -%}<a href="{{ childlink.url }}">{% endunless %}{{ childlink.title | split:"{badge" | first | escape | captilize }}{%- unless childlink.links != blank -%}</a>{% endunless %}</span>
+    <span>{{ mainMenu.title | split:"{badge" | first | escape | captilize }}</span>
   </div>
-  {%- if childlink.links != blank -%}
+  {%- if mainMenu.links != blank -%}
   <ul class="site-nav-dropdown">
-    <li class="menu-lv-3 hide_pc">
-      <a href="{{ childlink.url }}"><span>{{ childlink.title | split:"{badge" | first | escape | captilize }}</span></a>
-    </li>
-    {%- for grandchildlink in childlink.links -%}
+    {%- for childlink in mainMenu.links -%}
     <li class="menu-lv-3">
-      <a href="{{ grandchildlink.url }}"><span>{{ grandchildlink.title | split:"{badge" | first | escape | captilize }}</span></a>
+      <a href="{{ childlink.url }}"><span>{{ childlink.title | split:"{badge" | first | escape | captilize }}</span></a>
     </li>
     {%- endfor -%}
   </ul>
