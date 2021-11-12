@@ -101,13 +101,13 @@ $(document).ready(function(){
 // 	});
 	
 	///minicart//
-	$('.cart-icon').click(function(){
-		$('body').toggleClass('minicart-open');
-		$('.wrapper-overlay').css({"display": "block"});
-	});
-	$(document).on('click','.close-customer',function(){
-		$("body").removeClass("minicart-open"), $(".wrapper-overlay").hide();
-	});
+// 	$('.cart-icon').click(function(){
+// 		$('body').toggleClass('minicart-open');
+// 		$('.wrapper-overlay').css({"display": "block"});
+// 	});
+// 	$(document).on('click','.close-customer',function(){
+// 		$("body").removeClass("minicart-open"), $(".wrapper-overlay").hide();
+// 	});
 	
 	///ask-about-product//
 	$('.ask_this_product').click(function(){
