@@ -205,7 +205,16 @@ $(document).ready(function(){
 		}
 	  });
 });
-
+  
+    var parent = document.getElementById('CollectionProductsContainer');
+  console.log(window.innerWidth)
+  if(window.innerWidth > 767 && window.innerWidth < 992){
+    console.log('hello')
+  	parent.setAttribute("data-view", "grid-layout-3")
+  }
+   if(window.innerWidth < 766 ){  
+  	parent.setAttribute("data-view", "grid-layout-2")
+  }
 ///slide-nav///
 $('.back-btn').click(function(){
 	$(this).closest('ul').removeClass('show')
