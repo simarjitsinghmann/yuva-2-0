@@ -126,7 +126,7 @@
     {% render 'newsletter-popup'%}
   
   {% include 'product-quick-view' %}
-    {% if settings.enable_cart_drawer %}
+    {% if settings.enable_cart_drawer and template != 'cart'%}
   {% include 'mini-cart' %}
     {% endif %}
     <style>
