@@ -8,6 +8,13 @@
 {% endcase %}
 
 {% if section.settings.enable_sticky_header %}
+<style>
+  header { 
+    position: sticky;
+    top: 0;
+    z-index: 5; 
+  } 
+</style>
   <script>
       ///Sticky-header//
     $(window).scroll(function () {
