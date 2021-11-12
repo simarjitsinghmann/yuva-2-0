@@ -32,7 +32,7 @@
 {% assign heading = 'heading'|append:i %}
 {% assign button = 'button'|append:i %}
 {% assign link = 'link'|append:i %}
-{% if block.settings[image] != blank and block.settings[heading] != blank %}
+{% unless block.settings[image] == blank and block.settings[heading] == blank %}
 
 <div class="sub-menu-list">
   <div class="menu-image-content">
@@ -43,7 +43,7 @@
     </div>
   </div>
 </div>
-{% endif %}
+{% endunless %}
 {% endfor %}
 
 {% when 'collection' %}
