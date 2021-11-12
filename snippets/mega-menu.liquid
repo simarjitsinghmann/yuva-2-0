@@ -27,18 +27,24 @@
 {% endfor %}
 
 {% when 'image' %}
-{% if block.settings.image != blank and block.settings.heading != blank %}
+{% for i in (1..2) %}
+{% assign image = 'image'|append:i %}
+{% assign heading = 'heading'|append:i %}
+{% assign button = 'button'|append:i %}
+{% assign link = 'link'|append:i %}
+{% if block.settings[image] != blank and block.settings[heading] != blank %}
 
 <div class="sub-menu-list">
   <div class="menu-image-content">
-    <img src="{{block.settings.image | img_url:'master'}}"  class="menu-image">
+    <img src="{{block.settings[image] | img_url:'master'}}"  class="menu-image">
     <div class="menu-content">
-      <h4>{{block.settings.heading}}</h4>
-      <a href="{{block.settings.link}}" class="button black-button">{{block.settings.button}}</a>
+      <h4>{{block.settings[heading]}}</h4>
+      <a href="{{block.settings[link]}}" class="button black-button">{{block.settings[button]}}</a>
     </div>
   </div>
 </div>
 {% endif %}
+{% endfor %}
 
 {% when 'collection' %}
 
