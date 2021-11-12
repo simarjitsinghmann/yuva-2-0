@@ -5,6 +5,8 @@
 {% case block.type %}
 {% when 'menu' %}
 
+
+{% for i in (1..4) %}
 {% if block.settings.menu != blank %}
 {% assign mainMenu = block.settings.menu %}
 <div class="sub-menu-list">
@@ -22,6 +24,7 @@
   {% endif %}
 </div>
 {% endif %}
+{% endfor %}
 {% when 'collection' %}
 {% if block.settings.collection != blank %}
 {% for product in block.settings.collection.products limit:block.settings.products %}
