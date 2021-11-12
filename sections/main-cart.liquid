@@ -99,8 +99,9 @@
 </form>
   {% endif %}
 </div>
-
+{% unless settings.enable_cart_drawer %}
 <script src="{{'cart.js' | asset_url}}" defer="defer"></script> 
+{% endunless %}
 {% schema %}
 {
   "name": "t:sections.main-cart.name",
