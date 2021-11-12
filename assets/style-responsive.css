@@ -735,7 +735,10 @@
   .collectionFilters__form .widget__selected {
       font-size: 11px;
   }
-  .showMore, .showLess {
+  .showMore, .showLess,
+  .filter-total-result h6,
+  .toolbox-right .toolbox-item.toolbox-sort.select-box,
+  .toolbox-right .toolbox-item.toolbox-sort.select-box label{
       font-size: 12px;
   }
   .card.card--product {
@@ -762,9 +765,6 @@
   .toolbox-item.toolbox-layout .btn-layout svg {
       width: 11px;
       height: 11px;
-  }
-  .filter-total-result h6 {
-      font-size: 12px;
   }
 /*  collection page end  */
 }
