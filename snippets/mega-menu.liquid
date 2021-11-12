@@ -52,12 +52,30 @@
 {% assign collection = 'collection' | append:i %}
     {% if block.settings[collection] != blank %}
 {% assign collection = block.settings[collection] %}
-      {% if block.settings.show_products %}
+      {% if block.settings.show_products %}			
+        {% if block.settings.show_product_list %}
+        <div class="sub-menu-list">
+          <div class="menu-mb-title">
+            <span>{{ collection.title | escape | captilize }}</span>
+          </div>
+          {%- if mainMenu.links != blank -%}
+          <ul class="site-nav-dropdown">
+            {%- for childlink in mainMenu.links -%}
+            <li class="menu-lv-3">
+              <a href="{{ childlink.url }}"><span>{{ childlink.title | split:"{badge" | first | escape | captilize }}</span></a>
+            </li>
+            {%- endfor -%}
+          </ul>
+          {% endif %}
+        </div>
+		{% else %}
           {% for product in collection.products limit:block.settings.products %}
           <div class="sub-menu-list">
             {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true %}
           </div>
           {% endfor %}
+		
+		{% endif %}
         {% else %}
         <div class="sub-menu-list">
           <div class="menu-image-content">
