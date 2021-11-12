@@ -722,14 +722,17 @@ li[data-address] > h2 {
 }
 @media only screen and (max-width:991px) {
   #registerForm, .forgetPassword__form, .login__form {
-      padding: 30px 25px;
+      	padding: 30px 25px;
+  }
+  .customer form {
+    	margin-top: 15px;
   }
   .new__customer__signup p {
-    line-height: 22px;
-    font-size: 14px;
-    letter-spacing: .2px;
-    margin: 1.2rem 0;
-}
+      line-height: 22px;
+      font-size: 14px;
+      letter-spacing: .2px;
+      margin: 1.2rem 0;
+  }
 }
 @media only screen and (max-width:767px){
 .customer.login, .customer.register {
