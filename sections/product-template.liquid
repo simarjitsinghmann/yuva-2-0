@@ -275,7 +275,7 @@
                                              Description
                                              </a>
                                           </h6>
-                                          <div id="faq-content-{{block.id}}" class="content productSection-content" style="display:none;">
+                                          <div id="faq-content-description" class="content productSection-content" style="display:none;">
                                              <div class="panel-body">
                                                 {{product.description}}
                                              </div>
@@ -288,13 +288,13 @@
                                     <div class="product-detail">
                                        <div class="accordion-container">
                                           <div class="set">
-                                             <h4 class="panel-title">
+                                          <h6 class="panel-title faq-contentwrapper" content="faq-content-contentwrapper">
                                                 <a href="javascript:void(0)">
                                                 {{block.settings.contentheading}}
                                                 <i class="fa fa-plus"></i>
                                                 </a>
-                                             </h4>
-                                             <div class="content" style="display:none;">
+                                             </h6>
+                                             <div id="faq-content-contentwrapper" class="content" style="display:none;">
                                                 <div class="panel-body">
                                                    {{block.settings.content}}
                                                 </div>
@@ -307,7 +307,7 @@
                                  <div class="product-detail">
                                     <div class="accordion-container">
                                        <div class="set">
-                                          <h4 class="panel-title">
+                                          <h6 class="panel-title faq-reviews" content="faq-content-reviews">
                                              <a href="javascript:void(0)">
                                              Reviews
                                              <i class="fa fa-plus"></i>
