@@ -276,7 +276,7 @@
                                                <span class="iconMinus">{% render 'icon-minus' %}</span>
                                              </a>
                                           </h6>
-                                          <div class="content" style="display:none;">
+                                          <div id="faq-content-{{block.id}}" class="content productSection-content" style="display:none;">
                                              <div class="panel-body">
                                                 {{product.description}}
                                              </div>
@@ -299,9 +299,9 @@
                                                <span class="iconMinus">{% render 'icon-minus' %}</span>
                                              </a>
                                           </h6>
-                                          <div class="content" style="display:none;">
+                                          <div id="faq-content-{{block.id}}" class="content productSection-content" style="display:none;">
                                              <div class="panel-body">
-                                                <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+                                                <div id="shopify-product-reviews " data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
                                              </div>
                                           </div>
                                        </div>
@@ -323,7 +323,7 @@
                 								<span class="iconMinus">{% render 'icon-minus' %}</span>
                                                 </a>
                                              </h6>
-                                             <div class="content" style="display:none;">
+                                             <div id="faq-content-{{block.id}}" class="content productSection-content" style="display:none;">
                                                 <div class="panel-body">
                                                    {{block.settings.content}}
                                                 </div>
@@ -409,7 +409,7 @@
       }
       var accordionHead = document.getElementsByClassName('faq-{{section.id}}');
       if(accordionHead.length > 0 ){
-         var accordionContent =  document.getElementsByClassName('faqSection-content');
+         var accordionContent =  document.getElementsByClassName('productSection-content');
         
          Array.from(accordionHead).forEach(function(btn) {
            btn.addEventListener("click", ()=>{
@@ -427,7 +427,7 @@
          });
        function clearAccordion(){
          var accordionHeads = document.getElementsByClassName('faq-{{section.id}}');
-         var accordionContents =  document.getElementsByClassName('faqSection-content');
+         var accordionContents =  document.getElementsByClassName('productSection-content');
          Array.from(accordionHead).forEach(function(item) {
            item.classList.remove('active');
          });
