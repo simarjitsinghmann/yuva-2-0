@@ -222,6 +222,9 @@
         "slide": {
           "name": "Image Slide",
           "settings": {
+            "header1": {
+              "content": "Heading"
+            },
             "header2": {
               "content": "Sub Heading"
             },
@@ -344,9 +347,12 @@
         "split": {
           "name": "Split Slide",
           "settings": {
+            "header1": {
+              "content": "Image"
+            },
             "image_desktop": {
-              "label": "Desktop Image",
-              "info": "544 x 649px recommended"
+              "label": "Image",
+              "info": "Size:544x649"
             },
             "header2": {
               "content": "Content"
@@ -364,16 +370,19 @@
               "label": "Tag line Background"
             },
             "banner_title": {
-              "label": "Heading"
+              "label": "Title"
             },
             "banner_title_color": {
-              "label": "Heading Text Color"
+              "label": "Title Color"
             },
             "banner_desc": {
-              "label": "Sub-Heading"
+              "label": "Description"
             },
             "banner_desc_color": {
-              "label": "Sub-Heading Text Color"
+              "label": "Description Color"
+            },
+            "header3": {
+              "content": "BUTTON"
             },
             "button_text": {
               "label": "Button Text"
@@ -398,6 +407,86 @@
             },
             "banner_button_radius": {
               "label": "Button Radius"
+            }
+          }
+        },
+        "video-slide": {
+          "name": "Video Slide",
+          "settings": {
+            "videofile": {
+              "label": "Video Link"
+            },
+            "poster": {
+              "label": "Placeholder Image"
+            },
+            "header": {
+              "content": "Text"
+            },
+            "title": {
+              "label": "Title"
+            },
+            "description": {
+              "label": "Description"
+            },
+            "overlay": {
+              "label": "Add Overlay"
+            },
+            "bgcolor": {
+              "label": "Overlay Color"
+            },
+            "opacity": {
+              "label": "Overlay Opacity"
+            },
+            "header2": {
+              "content": "Button"
+            },
+            "link_text": {
+              "label": "Button Text"
+            },
+            "link": {
+              "label": "Button Link"
+            },
+            "text_position": {
+              "top-left": {
+                "label": "Top Left"
+              },
+              "center-left": {
+                "label": "Center Left"
+              },
+              "bottom-left": {
+                "label": "Bottom Left"
+              },
+              "top-center": {
+                "label": "Top Center"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "bottom-center": {
+                "label": "Bottom Center"
+              },
+              "top-right": {
+                "label": "Top Right"
+              },
+              "center-right": {
+                "label": "Center Right"
+              },
+              "bottom-right": {
+                "label": "Bottom Right"
+              },
+              "label": "Text Position"
+            },
+            "text_align": {
+              "left": {
+                "label": "Left"
+              },
+              "center": {
+                "label": "Center"
+              },
+              "right": {
+                "label": "Right"
+              },
+              "label": "Text Alignment"
             }
           }
         }
@@ -1141,14 +1230,20 @@
         "description": {
           "name": "Product Description"
         },
-        "description_tab": {
+        "tabs": {
           "name": "Tabs",
           "settings": {
+            "show_description": {
+              "label": "Show Product Description"
+            },
             "heading": {
               "label": "Heading"
             },
             "content": {
               "label": "Content"
+            },
+            "show_reviews": {
+              "label": "Show Product Reviews"
             },
             "width": {
               "label": "Position",
