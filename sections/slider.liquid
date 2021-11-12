@@ -11,7 +11,9 @@
 								{% when 'slide' %}
 								{% render 'banner-slide-content' block:block%}	
 								{% when 'split' %}
-									{% render 'split-slide-content' block:block%}							
+									{% render 'split-slide-content' block:block%}	
+								{% when 'video' %}
+									{% render 'video-slide-content' block:block%}							
 							{% endcase %}
 						{% endfor %}
 				</div>
