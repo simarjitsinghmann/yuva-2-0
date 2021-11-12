@@ -165,7 +165,10 @@
 
 /**nav-style2-End**/
 /**nav-style3**/
-#nav_style_3 .navigation__header { display: flex; align-items: center; width: 100%; position:relative;} 
+#nav_style_3 .navigation__header { display: flex; align-items: center; width: 100%; } 
+.navigation__header {
+	position:relative;
+}
 .header-right {
     position: absolute;
     right: 0;
