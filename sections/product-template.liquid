@@ -404,7 +404,7 @@
             });
          });
       }
-      var accordionHead = document.getElementsByClassName('faq-{{section.id}}');
+      var accordionHead = document.getElementsByClassName('accordion-{{section.id}}');
       if(accordionHead.length > 0 ){
          var accordionContent =  document.getElementsByClassName('productSection-content');
         
@@ -423,7 +423,7 @@
          });
          });
        function clearAccordion(){
-         var accordionHeads = document.getElementsByClassName('faq-{{section.id}}');
+         var accordionHeads = document.getElementsByClassName('accordion-{{section.id}}');
          var accordionContents =  document.getElementsByClassName('productSection-content');
          Array.from(accordionHead).forEach(function(item) {
            item.classList.remove('active');
