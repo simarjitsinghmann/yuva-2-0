@@ -721,6 +721,11 @@ li[data-address] > h2 {
     padding: 70px 0 70px;
 }
 }
+@media only screen and (max-width:991px) {
+  #registerForm, .forgetPassword__form, .login__form {
+      padding: 30px 25px;
+  }
+}
 @media only screen and (max-width:767px){
 .customer.login, .customer.register {
     max-width: calc(100% - 30px);
