@@ -1197,16 +1197,19 @@ ul.gallery-item li a > img {background: #f6f4f3;}
 .set .content { border-bottom: 1px solid #f0f0f0; padding: 10px 0 22px; } 
 .single__product__right .set h4.panel-title a i { font-size: 13px; color: #5d5d5d; width: auto; right: 0; position: absolute; top: 50%; -moz-transform: translateY(-50%); -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); } 
 .product_button { padding: 32px 0 10px; } 
-.product-detail .panel-title a{
+.product-detail .panel-title a {
     color: var(--black);
-    font-size: 17px;
-    font-weight: var(--normal);
+    font-size: 16px;
+    font-weight: var(--medium);
     letter-spacing: .2px;
     text-transform: uppercase;
     display: flex;
     justify-content: space-between;
+    line-height: 24px;
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 20px;
+    margin-top: 20px;
 }
-
 .social-icons {
     display: inline-block;
     width: 100%;
