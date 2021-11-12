@@ -1,6 +1,4 @@
 <div id="product-slider">
-			<div class="slider-list" >
-				<div class="d-flex">
 					{% if section.blocks.size > 1 %}
 				  	<div id="slider-{{section.id}}" class="loop owl-carousel owl-theme">
 					{% else %}
@@ -16,8 +14,6 @@
 									{% render 'video-slide-content' block:block%}							
 							{% endcase %}
 						{% endfor %}
-				</div>
-			</div>
   </div>
 </div>
 <style>
