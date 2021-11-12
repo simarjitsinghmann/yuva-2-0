@@ -118,7 +118,9 @@
 }
 .carousel-caption-title a.black-btn.button {text-transform: uppercase;font-weight: var(--medium);}
 /*.slider-list .owl-stage, .slider-list .owl-item { display: flex; width:100%;}*/
-.banner.banner-section.item { width: 100%; } 
+.banner.banner-section.item { width: 100%;     min-height: 800px;
+    max-height: 800px;
+}
 .banner .slide_container { height: 100%; } 
 .banner .slide_container > .row { height: 100%; } 
 #product-slider .owl-nav {margin: 0;}
