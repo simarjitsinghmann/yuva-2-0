@@ -472,9 +472,6 @@
     p {
         font-size: 13px;
     }
-    .style2 .bigger-heading {
-        font-size: 60px;
-    }
     .button {
         min-width: 145px;
     }
@@ -620,6 +617,13 @@
     }
 	/*  featured blog end  */
 	/* banner css start   */
+    .banner.banner-section.item {
+        min-height: 400PX;
+        max-height: 400px;
+    }
+    .banner.slider-banner img {
+        height: 400px;
+    }
     .banner-section .item {
         height: 300px;
     }
