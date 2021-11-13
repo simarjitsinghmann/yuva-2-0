@@ -1,22 +1,22 @@
 <div id="product-slider">
-					{% if section.blocks.size > 1 %}
-				  	<div id="slider-{{section.id}}" class="loop owl-carousel owl-theme">
-					{% else %}
-					<div class="slider-item">
-					{% endif %}
-						{% for block in section.blocks %}
-							{% case block.type %}
-								{% when 'slide' %}
-								{% render 'banner-slide-content' block:block%}	
-								{% when 'split' %}
-									{% render 'split-slide-content' block:block%}	
-								{% when 'video' %}
-									{% render 'video-slide-content' block:block%}							
-							{% endcase %}
-						{% endfor %}
+  {% if section.blocks.size > 1 %}
+  <div id="slider-{{section.id}}" class="loop owl-carousel owl-theme">
+    {% else %}
+    <div class="slider-item">
+      {% endif %}
+      {% for block in section.blocks %}
+      {% case block.type %}
+      {% when 'slide' %}
+      {% render 'banner-slide-content' block:block%}	
+      {% when 'split' %}
+      {% render 'split-slide-content' block:block%}	
+      {% when 'video' %}
+      {% render 'video-slide-content' block:block%}							
+      {% endcase %}
+      {% endfor %}
+    </div>
   </div>
-</div>
-<style>
+  <style>
 	.slider-item{
 		position:relative;
 		overflow:hidden;
