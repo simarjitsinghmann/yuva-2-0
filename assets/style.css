@@ -154,6 +154,8 @@ div#banner-slide > img { width: 100%;}
 }
 .split-slider.slider-banner {
 	position:relative;
+    display: flex;
+    align-items: center;
 }
 .split-slider.slider-banner:after {
 	position:absolute;
