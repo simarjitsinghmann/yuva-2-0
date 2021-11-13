@@ -17,6 +17,13 @@
   background-image: -moz-linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); 
     background-image: -webkit-linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); 
       background-image: linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); }
+.white-btn {
+    font-family: var(--font-family);
+    border: 2px solid var(--white);
+    background-image: -moz-linear-gradient(90deg,#000 0,#000 50%,#fff 50%,#fff 100%);
+    background-image: -webkit-linear-gradient(90deg,#000 0,#000 50%,#fff 50%,#fff 100%);
+    background-image: linear-gradient(90deg,#000 0,#000 50%,#fff 50%,#fff 100%);
+}
 .orange-btn{ background-color: var(--white); 
   color: var(--black)
   border: 2px solid var(--black);
