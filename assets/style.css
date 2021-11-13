@@ -2704,3 +2704,13 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     content: "";
 }
 /* end */
+/* featured collection list start */
+.collection-list-view-card {
+    position: relative;
+    max-height: 560px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+/* featured collection list end */
