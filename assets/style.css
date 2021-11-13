@@ -2729,6 +2729,7 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
 .collection-list-view-card {
     position: relative;
     max-height: 480px;
+  	min-height: 480px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
