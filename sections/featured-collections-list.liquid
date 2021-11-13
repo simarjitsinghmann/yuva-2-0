@@ -22,9 +22,9 @@
       <div class="col-12 col-sm-6 {{colWidth}}" id="block-{{block.id}}">
         <div class="collection-list-view-card">
            {% if block.settings.image != blank %}
-              <img src="{{ block.settings.image | img_url:'500x'}}" />
+              <img src="{{ block.settings.image | img_url:'500x500'}}" />
               {% else %}
-              <img src="{{ collection.featured_image | img_url:'500x'}}" />
+              <img src="{{ collection.featured_image | img_url:'500x500'}}" />
                {% endif %}
           
             <div class="list-view-content">          
