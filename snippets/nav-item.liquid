@@ -44,7 +44,12 @@
             </div>
             {% endfor %}
             {%- if menuDropdown -%}
-            {% include 'mega-menu' %}
+            <div class="row">
+              <div class="menu-lv-2 col-12 col5 inner dropdown">
+              	{% include 'mega-menu' %}
+              </div>
+            </div>
+            
             {%- endif -%}
           </div>
         </div>
