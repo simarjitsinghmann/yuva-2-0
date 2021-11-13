@@ -71,13 +71,14 @@
                         {% endif %}
                         </li>
                   {%- endfor-%}	
+                 
+            {%- if menuDropdown -%}
+            {% include 'side-mega-menu' %}
+            {%- endif -%}
                </ul>
                {% endif %}
             </li>	
             {%- endfor-%}
-            {%- if menuDropdown -%}
-            {% include 'side-mega-menu' %}
-            {%- endif -%}
          </ul>
          <div class="navigation-close-mob" style="display:none;">
             <a href="javascript:void(0)" title="close_navigation" class="close-btn">
