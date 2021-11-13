@@ -377,10 +377,14 @@ body.nav-open {
 	font-weight: var(--medium);
 }
 #nav_style_4 .inner-child-menu .category_title h4 {
-  font-weight: var(--semibold);
-  font-family: var(--font-family);
-  font-size: 32px;
-  position:relative;
+    font-weight: var(--semibold);
+    font-family: var(--font-family);
+    font-size: 22px;
+    position: relative;
+    display: inline-block;
+    border-bottom: 2px solid var(--theme-color);
+    padding-bottom: 6px;
+    text-transform: capitalize;
 }
 #nav_style_4 .side-menu .inner-side ul li .inner.child li {
 	padding: 8px 0;
