@@ -73,14 +73,6 @@
                     <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col" role="list">
                         <ul class="collection__right__list" role="list">
                           {% for block in section.blocks %}
-                          {% if section.settings.style == 'style2' %}
-                          <style>
-                            .section-{{section.id}} .block-{{forloop.index}}.right__sided .collection-detail h4,
-                            .section-{{section.id}} .block-{{forloop.index}}.right__sided .collection-detail small{
-                              color:{{block.settings.text_color}} !important;
-                            }
-                          </style>
-                          {% endif %}
                             {% assign collection = ''%}
                             {% if block.settings.collection != blank %}
                             {% assign collection = block.settings.collection %}
@@ -105,22 +97,14 @@
                                       {% if block.settings.info_position == 'right'%}
                                         {{image_content}}
                                       {% endif %}
-                                    <div class="{% if section.settings.style == 'style1' %}collection-detail-right{% else %}collection-detail {{ block.settings.text_position }} {% endif %}">
-                                           {% if section.settings.style == 'style1' %}
+                                    <div class="collection-detail-right">
                                       <h5>
-                                        {% else %}
-                                    <h4>
-                                          {% endif %}
                                           {% if block.settings.custom == false %}
                                             {{collection.title}}
                                             {% elsif block.settings.custom and block.settings.heading != blank  %}
                                             {{block.settings.heading}}
                                           {% endif %}
-                                           {% if section.settings.style == 'style1' %}
                                       </h5>
-                                        {% else %}
-                                    </h4>
-                                          {% endif %}
                                         <small>
                                           {% if block.settings.custom == false %}
                                             {{collection.description | strip_html | truncatewords: 15, "" }}
@@ -136,7 +120,7 @@
                                       {% assign btnlink = collection.url %}
                                         {% endif%}               
                                         
-                                      <a href="{{btnlink}}" class="{% if section.settings.style == 'style2' %}button{% endif %} mainColbutton-{{section.id}}">    
+                                      <a href="{{btnlink}}" class="mainColbutton-{{section.id}}">    
                                           <span>
                                             {% if section.settings.button_icon %}
                                             <svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> 
