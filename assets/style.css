@@ -2734,7 +2734,8 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     justify-content: center;
     align-items: flex-end;
     overflow: hidden;
-  margin-bottom:30px;
+  	margin-bottom:30px;
+  background-color: var(--gray);
 }
 .collection-list-view-card h2 {
     margin-bottom: 10px;
