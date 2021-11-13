@@ -7,7 +7,7 @@
             {% assign main_articles = section.settings.blog.articles %}
             {% if main_articles.size > 0 or section.settings.custom %}
             <div class="blog-multi-slide " role="list">  
-              <div class="{% if section.settings.style == "style2" %}blog-variation2{% endif %}">
+              <div class="">
               <div id="featuredBlog-{{section.id}}" class="blog__post owl-carousel" >
                 {% if section.settings.custom != true %}              
                     {% for article in main_articles %}
@@ -64,22 +64,6 @@
         "id": "heading",
         "default": "CONSECTETUR",
         "label": "t:sections.featured-blog.settings.heading.label"
-      },
-      {
-        "type": "select",
-        "id": "style",
-        "default": "style1",
-        "label": "t:sections.featured-blog.settings.style.label",
-        "options":[
-          {
-              "value":"style1",
-              "label":"t:sections.featured-blog.settings.style.options.style1.label"
-          },
-          {
-            "value":"style2",
-            "label":"t:sections.featured-blog.settings.style.options.style2.label"
-          }
-        ]
       },
       {
         "type": "textarea",
