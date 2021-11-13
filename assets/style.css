@@ -688,7 +688,16 @@ object-fit: cover; }
 
 /**END Blog-post**/
 /**video-section**/
-.home-video-sec { position: relative; clear: both; display: flex; align-items: center; justify-content: center; width: 100%; flex-direction: column; } 
+.home-video-sec {
+    position: absolute;
+    clear: both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+}
 .home-video-sec video { object-fit: cover; height:100%; }
 .home-video-sec .flex-absolute {position: absolute;z-index: 1;text-transform: uppercase; max-width: 1000px;width:100%;margin:0 auto}
 .home-video-sec .flex-absolute h1 {font-size: 70px;font-weight: 600;}

@@ -117,7 +117,7 @@
 
         {% endif %}
       {% else %}
-      <div class="sub-menu-list">
+      <li>
       <div class="menu-image-content">
         <a href="{{collection.url}}" >
           {% if collection.image %}
@@ -130,7 +130,7 @@
           </div>
         </a>
       </div>
-    </div>
+    </li>
     {% endif %}
   {% endif %}
 {% endfor %}
