@@ -1,5 +1,5 @@
 {{'section-featured-collections-list.css' | asset_url | stylesheet_tag }}
-<section class="colllection-list-view">
+<section id="section-{{section.id}}" class="colllection-list-view">
   <div class="container">
     <div class="collection-section-header section-heading-box">                  
       {% if section.settings.heading != blank %}
@@ -37,9 +37,6 @@
             </div>
         </div>
         <style>
-          #block-{block.id}} h2{
-            font-size:{{section.settings.heading_font }}px;
-          }
           #block-{{block.id}} .list-view-content{
             background:{{block.settings.overlay_color | color_modify: 'alpha', block.settings.overlay_opacity}};
           }
@@ -50,6 +47,13 @@
     </div>
   </div>
 </section>
+<style>
+  
+          #section-{{section.id}} .collection-list-view-card h2{
+            font-size:{{section.settings.heading_font }}px;
+          }
+</style>
+
 {% schema %}
 {
   "name": "t:sections.featured-collections-list.name",
