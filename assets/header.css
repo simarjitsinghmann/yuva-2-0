@@ -447,7 +447,7 @@ div.lower-nav .nav-item .userful__links {
 .sub-menu-list .menu-image-content {
 	position:relative;
 }
-.sub-menu-list .menu-image-content .menu-content{
+.sub-menu-list.menu-image-content .menu-content{
     position: absolute;
     width: 100%;
     padding: 20px;
@@ -456,7 +456,7 @@ div.lower-nav .nav-item .userful__links {
 .sub-menu-list.menu-image-content {
 	margin-top:20px
 }
-.sub-menu-list .menu-image-content img {
+.sub-menu-list.menu-image-content img {
     width: 100%;
     height: 200px;
     object-fit: cover;
