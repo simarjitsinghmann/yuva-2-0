@@ -25,7 +25,14 @@
 </div>
 {% endif %}
 {% endfor %}
+{% endcase %}
+{% endif %}
+{% endfor %}
+{% for block in section.blocks %}
+{% assign blockPosition = block.settings.position | plus:0 %}
+{% if blockPosition == menuIndex %}
 
+{% case block.type %}
 {% when 'image' %}
 {% for i in (1..2) %}
 {% assign image = 'image'|append:i %}
@@ -71,7 +78,7 @@
 	 {% else %}
           {% for product in collection.products limit:block.settings.products %}
           <div class="sub-menu-list">
-            {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true,hideColors:true %}
+            {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true %}
           </div>
           {% endfor %}
 
