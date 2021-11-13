@@ -179,22 +179,6 @@
         "style": "style1"
       }
     },
-    "video-banner": {
-      "type": "video-banner",
-      "disabled": true,
-      "settings": {
-        "videofile": "https:\/\/cdn.shopify.com\/s\/files\/1\/2018\/8867\/files\/ice.mp4",
-        "title": "Video with text overlay",
-        "description": "This area is used to describe your store.",
-        "overlay": true,
-        "bgcolor": "#707070",
-        "opacity": 40,
-        "text_position": "center",
-        "text_align": "text__center",
-        "link_text": "View products",
-        "link": ""
-      }
-    },
     "collection-list": {
       "type": "collection-list",
       "blocks": {
@@ -532,6 +516,22 @@
         "padding": 20
       }
     },
+    "video-banner": {
+      "type": "video-banner",
+      "settings": {
+        "videofile": "",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=9xwazD5SyVg",
+        "title": "Video with text overlay",
+        "description": "This area is used to describe your store.",
+        "overlay": true,
+        "bgcolor": "#707070",
+        "opacity": 40,
+        "text_position": "center",
+        "text_align": "text__center",
+        "link_text": "View products",
+        "link": ""
+      }
+    },
     "163678842797a17b64": {
       "type": "featured-collections-list",
       "blocks": {
@@ -608,7 +608,6 @@
   "order": [
     "slider",
     "offer-section",
-    "video-banner",
     "collection-list",
     "featured-collection",
     "16345626467f5a91b7",
@@ -617,6 +616,7 @@
     "testimonials",
     "instagram",
     "multicolumn-content",
+    "video-banner",
     "163678842797a17b64"
   ]
 }
