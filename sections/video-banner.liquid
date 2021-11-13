@@ -16,7 +16,7 @@
     </video> 
   {% elsif section.settings.video_url != blank %}
     {% if section.settings.video_url.type == "youtube" %}
-      <iframe src="//www.youtube.com/embed/{{ section.settings.video_url.id }}?autoplay=1&showinfo=0&controls=0&rel=0" loop muted width="1060" height="600" frameborder="0" allowfullscreen></iframe>
+      <iframe src="//www.youtube.com/embed/{{ section.settings.video_url.id }}?autoplay=1&showinfo=0&controls=0" loop muted width="1060" height="600" frameborder="0" allowfullscreen></iframe>
     {% elsif section.settings.video_url.type == "vimeo" %}
       <iframe src="//player.vimeo.com/video/{{ section.settings.video_url.id }}?byline=0&portrait=0&badge=0" width="1060" height="600" frameborder="0" allowfullscreen></iframe>
     {% endif %}
