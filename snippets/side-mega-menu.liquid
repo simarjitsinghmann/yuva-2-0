@@ -110,9 +110,9 @@
         {% endif %}
 	 {% else %}
           {% for product in collection.products limit:block.settings.products %}
-          <div class="sub-menu-list">
+          <li>
             {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true %}
-          </div>
+		</li>
           {% endfor %}
 
         {% endif %}
