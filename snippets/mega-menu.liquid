@@ -34,7 +34,9 @@
             <div class="category_title">
                 <h4>{% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</h4>
             </div>
+          sss
             {%- for childlink in mainMenu.links -%}
+          ssss
             <li>
                 <a href="{{ childlink.url }}"><span>{{ childlink.title | escape | captilize }}</span></a>
             </li>
