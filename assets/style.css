@@ -2727,7 +2727,7 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     overflow: hidden;
 }
 .collection-list-view-card h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   	font-size:25px;
     color: var(--white);
 }
@@ -2751,5 +2751,6 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
 .collection-list-view-card a.link {
     color: #fff;
     border-bottom: 1px solid;
+  	text-decoration:none;
 }
 /* featured collection list end */
