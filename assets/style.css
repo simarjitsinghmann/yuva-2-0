@@ -2722,7 +2722,7 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     position: relative;
     max-height: 480px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     overflow: hidden;
 }
@@ -2742,6 +2742,9 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
 .list-view-content {
     position: absolute;
     text-align: center;
-  	z-index:1
+    z-index: 1;
+    background-color: #7e353573;
+    padding: 20px 10px;
+    width: 90%;
 }
 /* featured collection list end */
