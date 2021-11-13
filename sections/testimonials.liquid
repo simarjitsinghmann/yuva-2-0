@@ -101,9 +101,14 @@
             nav:$('#testimonials-{{section.id}}').data('nav'),
             navText: [previcon,nexticon],
             responsive: {
-                740: {
-                    items: 1,
-          			center: false	
+             200: {
+                  items: 1,
+                  center: false,
+                  autoplay: true,
+                  slideTransition: 'linear',
+                  autoplayTimeout: 6000,
+                  autoplaySpeed: 6000,
+                  autoplayHoverPause: true,
                 },
                 768: {
                     items: 2,
