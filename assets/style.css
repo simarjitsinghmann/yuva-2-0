@@ -618,11 +618,11 @@ a.wishlist-view .fas { display: none; }
   object-fit: contain;
 }
 
-.best__for__you .card-wrapper .card.card--product .card-wrapper-img img.product-second-img{ position: absolute; top: 0; left: 0; -webkit-opacity: 0; -moz-opacity: 0; -ms-opacity: 0; -o-opacity: 0; opacity: 0;height: 100%;
+.card-wrapper .card.card--product .card-wrapper-img img.product-second-img{ position: absolute; top: 0; left: 0; -webkit-opacity: 0; -moz-opacity: 0; -ms-opacity: 0; -o-opacity: 0; opacity: 0;height: 100%;
 object-fit: cover; } 
-.best__for__you .card-wrapper .card.card--product .card-wrapper-img > img { -moz-transition: 0.7s ease; -webkit-transition: 0.7s ease; transition: 0.7s ease; } 
-.best__for__you .card-wrapper .card.card--product .card-wrapper-img.has-multiimage:hover > img { -webkit-opacity: 0; -moz-opacity: 0; -ms-opacity: 0; -o-opacity: 0; opacity: 0; -moz-transition: 0.7s ease; -webkit-transition: 0.7s ease; transition: 0.7s ease; } 
-.best__for__you .card-wrapper .card.card--product .card-wrapper-img.has-multiimage:hover > img.product-second-img { -webkit-opacity: 1; -moz-opacity: 1; -ms-opacity: 1; -o-opacity: 1; opacity: 1; transform: scale(1); transition: opacity .8s,transform 0.7s cubic-bezier(0, 0, .44, 1.18),-webkit-transform 0.7s cubic-bezier(0, 0, .44, 1.18); }
+.card-wrapper .card.card--product .card-wrapper-img > img { -moz-transition: 0.7s ease; -webkit-transition: 0.7s ease; transition: 0.7s ease; } 
+.card-wrapper .card.card--product .card-wrapper-img.has-multiimage:hover > img { -webkit-opacity: 0; -moz-opacity: 0; -ms-opacity: 0; -o-opacity: 0; opacity: 0; -moz-transition: 0.7s ease; -webkit-transition: 0.7s ease; transition: 0.7s ease; } 
+.card-wrapper .card.card--product .card-wrapper-img.has-multiimage:hover > img.product-second-img { -webkit-opacity: 1; -moz-opacity: 1; -ms-opacity: 1; -o-opacity: 1; opacity: 1; transform: scale(1); transition: opacity .8s,transform 0.7s cubic-bezier(0, 0, .44, 1.18),-webkit-transform 0.7s cubic-bezier(0, 0, .44, 1.18); }
 
 /***sale-section END***/
 
