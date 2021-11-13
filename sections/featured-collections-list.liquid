@@ -37,6 +37,9 @@
             </div>
         </div>
         <style>
+          #{{block.id}} h2{
+            font-size:{{block.settings.heading_font }}px;
+          }
           #{{block.id}} .list-view-content{
             background:{{block.settings.overlay_color | color_modify: 'alpha', block.settings.overlay_opacity}};
           }
