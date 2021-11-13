@@ -82,6 +82,8 @@
 
     {% if block.settings.show_products %}			
       {% if block.settings.show_product_list %}
+<div class="sub-menu-list">
+<div class="row">
 {% for i in (1..5) %}
   {% assign collection = 'collection' | append:i %}
   {% if block.settings[collection] != blank %}
@@ -93,6 +95,8 @@
           {% endfor %}
         {% endif %}
           {% endfor %}
+  </div>
+</div>
         {% endif %}
         {% endif %}
 {% endcase %}  
