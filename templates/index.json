@@ -521,6 +521,7 @@
     },
     "video-banner": {
       "type": "video-banner",
+      "disabled": true,
       "settings": {
         "videofile": "https:\/\/cdn.shopify.com\/s\/files\/1\/2018\/8867\/files\/ice.mp4",
         "title": "Video with text overlay",
@@ -543,7 +544,6 @@
             "collection": "autumn-collection",
             "heading": "",
             "btntext": "Shop Now",
-            "heading_font": 35,
             "overlay_opacity": 0.3,
             "overlay_color": "#cc4545"
           }
@@ -554,7 +554,6 @@
             "collection": "summer-collection",
             "heading": "",
             "btntext": "Shop Now",
-            "heading_font": 25,
             "overlay_opacity": 0.5,
             "overlay_color": "#000000"
           }
@@ -565,7 +564,6 @@
             "collection": "autumn-collection",
             "heading": "",
             "btntext": "Shop Now",
-            "heading_font": 25,
             "overlay_opacity": 0.5,
             "overlay_color": "#000000"
           }
@@ -574,12 +572,11 @@
           "type": "collection",
           "settings": {
             "collection": "women-collections",
-            "image": "shopify:\/\/shop_images\/contact_bg.jpg",
+            "image": "shopify:\/\/shop_images\/about-video-thumbnail.png",
             "heading": "",
             "btntext": "Shop Now",
-            "heading_font": 25,
-            "overlay_opacity": 0.6,
-            "overlay_color": "#ff9797"
+            "overlay_opacity": 0.2,
+            "overlay_color": "#33aadc"
           }
         }
       },
@@ -593,7 +590,8 @@
         "heading": "Collection list",
         "btntext": "View All",
         "btnlink": "shopify:\/\/collections",
-        "view_limit": 3
+        "view_limit": 3,
+        "heading_font": 25
       }
     }
   },
