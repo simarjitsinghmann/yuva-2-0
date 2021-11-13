@@ -1,50 +1,121 @@
-{%- for link in section.settings.menu.links -%}
-{% assign menuIndex = forloop.index %}
-{% assign menuDropdown = false %}
 {% for block in section.blocks %}
 {% assign blockPosition = block.settings.position | plus:0 %}
-  {% if blockPosition == menuIndex %}
-	{% assign menuDropdown = true %}
-	{% break %}
-  {% endif %}
-{% endfor %}
+{% if blockPosition == menuIndex %}
+
+{% case block.type %}
+{% when 'menu' %}
+{% for i in (1..4) %}
+{% assign menu = 'menu'|append:i %}
+{% assign heading = 'menu_heading'|append:i %}
+{% if block.settings[menu] != blank %}
+{% assign mainMenu = block.settings[menu] %}
 <li>
-  {% assign childlink_url = childlink.url %}
-  {% if childlink.links != blank %}
-  {% assign childlink_url = 'javascript:void(0)'%}
-  {% endif%}
-  <a class="toggle-level" href="{%- if childlink.links != blank -%}javascript:void(0){% else %}{{ childlink_url }}{% endif %}">
-    {{ childlink.title | split:"{badge" | first | escape | captilize }} <span class="caret"></span></a>
+    <a class="toggle-level" href="javascript:void(0)">
+        {% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %} <span class="caret"></span></a>
+        
+    {%- if mainMenu.links != blank -%}
+    <ul class="inner grandchild">        
+        <div class="inner-child-menu">
+            <div class="menu_back_btn">
+                <button class="back-btn">
+                    <svg height="17.031" viewbox="0 0 24 17.031" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <style>
+                    .cls-1 {
+                        fill-rule: evenodd;
+                    }
+                    </style>
+                        </defs>
+                        <path class="cls-1" d="M684,76.476H663.835l6.119-6.091-1.412-1.406-7.132,7.1h0L660,77.484l1.413,1.406,7.132,7.1,1.412-1.406-6.148-6.121H684V76.476Z" transform="translate(-660 -68.969)"></path>
+                    </svg>
+                    Back
+                </button>
+            </div>
+            <div class="category_title">
+                <h4>{% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</h4>
+            </div>
+            {%- for childlink in mainMenu.links -%}
+            <li>
+                <a href="{{ childlink.url }}"><span>{{ childlink.title | split:"{badge" | first | escape | captilize }}</span></a>
+            </li>
+            {%- endfor -%}
+        </div>
+    </ul>
+    {% endif %}
+</li>
+{% endif %}
+{% endfor %}
 
-  {%- if childlink.links != blank -%}
-  <ul class="inner grandchild">
+{% when 'image' %}
+{% for i in (1..2) %}
+{% assign image = 'image'|append:i %}
+{% assign heading = 'heading'|append:i %}
+{% assign button = 'button'|append:i %}
+{% assign link = 'link'|append:i %}
+{% unless block.settings[image] == blank and block.settings[heading] == blank %}
 
-    <div class="inner-child-menu">
-      <div class="menu_back_btn">
-        <button class="back-btn">
-          <svg height="17.031" viewbox="0 0 24 17.031" width="24" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <style>
-                .cls-1 {
-                  fill-rule: evenodd;
-                }
-              </style>
-            </defs>
-            <path class="cls-1" d="M684,76.476H663.835l6.119-6.091-1.412-1.406-7.132,7.1h0L660,77.484l1.413,1.406,7.132,7.1,1.412-1.406-6.148-6.121H684V76.476Z" transform="translate(-660 -68.969)"></path>
-          </svg>
-          Back
-        </button>
-      </div>
-      <div class="category_title">
-        <h4>{{ childlink.title | split:"{badge" | first | escape | captilize }}</h4>
+<div class="sub-menu-list">
+  <div class="menu-image-content">
+    <img src="{{block.settings[image] | img_url:'master'}}"  class="menu-image">
+    <div class="menu-content">
+      <h4>{{block.settings[heading]}}</h4>
+      <a href="{{block.settings[link]}}" class="button black-button">{{block.settings[button]}}</a>
+    </div>
+  </div>
+</div>
+{% endunless %}
+{% endfor %}
+
+{% when 'collection' %}
+
+{% for i in (1..5) %}
+  {% assign collection = 'collection' | append:i %}
+  {% if block.settings[collection] != blank %}
+    {% assign collection = block.settings[collection] %}
+    {% if block.settings.show_products %}			
+      {% if block.settings.show_product_list %}
+        {%- if collection.products_count > 0 -%}
+        <div class="sub-menu-list">
+          <div class="menu-mb-title">
+            <span>{{ collection.title | escape | captilize }}</span>
+          </div>
+          <ul class="site-nav-dropdown">            
+            {% for product in collection.products limit:block.settings.products %}
+            <li class="menu-lv-3">
+              <a href="{{ product.url }}"><span>{{ product.title | escape | captilize }}</span></a>
+            </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+        {% endif %}
+	 {% else %}
+          {% for product in collection.products limit:block.settings.products %}
+          <div class="sub-menu-list">
+            {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true %}
+          </div>
+          {% endfor %}
+
+        {% endif %}
+      {% else %}
+      <div class="sub-menu-list">
+      <div class="menu-image-content">
+        <a href="{{collection.url}}" >
+          {% if collection.image %}
+          <img src="{{ collection | img_url: 'master' }}"  alt="{{ collection.title | escape }}" class="menu-image"/>
+          {% else %}
+          <img src="{{ collection.products.first | img_url: 'master' }}"  alt="{{ collection.title | escape }}" class="menu-image" />
+          {% endif %}
+          <div class="menu-content">
+            <h4>{{collection.title}}</h4>
+          </div>
+        </a>
       </div>
     </div>
-    {%- for grandchildlink in childlink.links -%}
-    <li>
-      <a href="{{ grandchildlink.url }}"><span>{{ grandchildlink.title | split:"{badge" | first | escape | captilize }}</span></a>
-    </li>
-    {%- endfor -%}
-  </ul>
+    {% endif %}
   {% endif %}
-</li>
-{%- endfor-%}	
+{% endfor %}
+{% endcase %}  
+
+
+{% endif %}
+{% endfor %}
