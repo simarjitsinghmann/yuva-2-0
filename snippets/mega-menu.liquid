@@ -47,7 +47,7 @@
     {% if block.settings.show_products %}			
       {% if block.settings.show_product_list %}
         {%- if collection.products_count > 0 -%}
-        <div class="sub-menu-list">
+        <div class="sub-menu-list ">
           <div class="menu-mb-title">
             <span>{{ collection.title | escape | captilize }}</span>
           </div>
@@ -62,7 +62,7 @@
         {% endif %}
 	 {% else %}
           {% for product in collection.products limit:block.settings.products %}
-          <div class="sub-menu-list">
+          <div class="sub-menu-list mega-product-img">
             {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true,hideColors:true %}
           </div>
           {% endfor %}
