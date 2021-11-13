@@ -24,7 +24,7 @@
            {% if block.settings.image != blank %}
               <img src="{{ block.settings.image | img_url:'master'}}" />
               {% else %}
-              <img src="{{ collection.image | img_url:'master'}}" />
+              <img src="{{ collection.featured_image | img_url:'master'}}" />
                {% endif %}
           
             <div class="list-view-content">          
