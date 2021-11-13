@@ -10,9 +10,9 @@
       <div class="collapse navbar-collapse navbar-collapse-sidebar" id="navbarCollapse">
          <ul class="navbar-nav mr-auto list-menu list-menu--inline">
             {%- for link in section.settings.menu.links -%}
-            <li class="nav-item {% if link.links != blank %}dropdown{% endif %} {% if link.current %}active{% endif %}">
-               <a class="list-menu__item {% if link.links != blank %}toggle open-menu-drop{% endif %}" href="{% if link.links != blank %}javascript:void(0){%else%}{{ link.url }}{% endif %}">{{link.title | split:"{badge" | first | escape | capitalize }}</a>
-               {%- if link.links != blank -%}
+            <li class="nav-item {% if link.links != blank or menuDropdown  %}dropdown{% endif %} {% if link.current %}active{% endif %}">
+               <a class="list-menu__item {% if link.links != blank  or menuDropdown %}toggle open-menu-drop{% endif %}" href="{% if link.links != blank or menuDropdown  %}javascript:void(0){%else%}{{ link.url }}{% endif %}">{{link.title | split:"{badge" | first | escape | capitalize }}</a>
+               {%- if link.links != blank or menuDropdown  -%}
                <ul class="inner child">                  
                   <div class="inner-child-menu">
                      <div class="menu_back_btn">
