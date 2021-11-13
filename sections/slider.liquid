@@ -1,4 +1,4 @@
-<div id="product-slider" class="banner-product-slider">
+<div id="product-slider">
   {% if section.blocks.size > 1 %}
   <div id="slider-{{section.id}}" class="loop owl-carousel owl-theme">
     {% else %}
@@ -56,6 +56,12 @@ jQuery(document).ready(function($) {
 		  "type":"checkbox",
 		  "id":"arrows",
 		  "label":"t:sections.main-slider.settings.arrows.label",
+		  "default":true
+	  },
+	  {
+		  "type":"checkbox",
+		  "id":"dots",
+		  "label":"t:sections.main-slider.settings.dots.label",
 		  "default":true
 	  },
 	  {
