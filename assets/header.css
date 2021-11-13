@@ -483,7 +483,7 @@ div.lower-nav .nav-item .userful__links {
 .navbar-expand-md .navbar-toggler { display: none; }
 }
 
-#dropdown-customer, #mini__cart, #similar__product, .quick_view, .side-menu, .side-menu .inner-side .nav-item.dropdown ul.child, .side-menu .inner-side .nav-item.dropdown ul.grandchild { width: 100%; max-width: 464px; position: fixed; top: 0; right: -464px; z-index: 99999; background: var(--white); height: 100vh; webkit-transition: all 0.7s ease; -moz-transition: all .7s ease; -ms-transition: all .7s ease; -o-transition: all .7s ease; transition: all .7s ease; overflow-y:auto; } 
+#dropdown-customer, #mini__cart, #similar__product, .quick_view, .side-menu, .side-menu .inner-side .nav-item.dropdown ul.child, .side-menu .inner-side .nav-item.dropdown ul.grandchild { width: 100%; max-width: 464px; position: fixed; top: 0; right: -464px; z-index: 99999; background: var(--white); height: 100vh; webkit-transition: all 0.7s ease; -moz-transition: all .7s ease; -ms-transition: all .7s ease; -o-transition: all .7s ease; transition: all .7s ease; overflow-x:hidden; overflow-y:auto; } 
 .quick_view {
   right:-800px;
   max-width: 800px;
