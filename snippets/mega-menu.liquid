@@ -69,7 +69,7 @@
 
         {% endif %}
       {% else %}
-      <div class="sub-menu-list">
+      <div class="sub-menu-list mega-collection-img">
       <div class="menu-image-content">
         <a href="{{collection.url}}" >
           {% if collection.image %}
@@ -106,7 +106,7 @@
 {% assign link = 'link'|append:i %}
 {% unless block.settings[image] == blank and block.settings[heading] == blank %}
 
-<div class="sub-menu-list">
+<div class="sub-menu-list mega-images">
   <div class="menu-image-content">
     <img src="{{block.settings[image] | img_url:'master'}}"  class="menu-image">
     <div class="menu-content">
