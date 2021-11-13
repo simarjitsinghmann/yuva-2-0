@@ -195,6 +195,7 @@
                         </span>
                     </div>
                 </div>
+              {% unless hideColors %}
               {% unless has_only_default_variant or product.variants.size == 1 %}
                 {% for option in product.options_with_values%}
                 {% assign opName = option.name | downcase %}
@@ -216,6 +217,7 @@
                 </div>
             {% endif %}
             {% endfor %}
+              {% endunless %}
               {% endunless %}
             </div>
             
