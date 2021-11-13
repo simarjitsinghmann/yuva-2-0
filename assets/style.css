@@ -140,14 +140,8 @@ div#banner-slide > img { width: 100%;}
  .slider-list .owl-theme .owl-nav [class*=owl-]:hover { background: transparent; color: inherit; } 
  .slider-list .owl-theme .owl-nav [class*=owl-]:hover span{ background: var(--black); color: var(--white); } 
  #product-slider .slider-item .item > img { -webkit-transition: all 5s; -moz-transition: all 5s; -ms-transition: all 5s; -o-transition: all 5s; transition: all 5s; -webkit-transform: scale(1.05,1.05); -ms-transform: scale(1.05,1.05); transform: scale(1.05,1.05); }
-.banner-product-slider .owl-dots {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-}
-.banner-product-slider .owl-theme .owl-dots .owl-dot.active span, .banner-product-slider .owl-theme .owl-dots .owl-dot:hover span{
-	background:var(--black)
-}
+.banner-product-slider .owl-dots { position: absolute; bottom: 10px; width: 100%;}
+.banner-product-slider .owl-theme .owl-dots .owl-dot.active span, .banner-product-slider .owl-theme .owl-dots .owl-dot:hover span{ background:var(--black)}
 /***END***/
 /***category-section***/
 .shopify-section:not(.shopify-section-slider, .shopify-section-announcement-bar, .shopify-section-main-header, #shopify-section-footer, 
