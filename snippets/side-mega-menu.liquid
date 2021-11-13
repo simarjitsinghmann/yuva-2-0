@@ -1,0 +1,11 @@
+{%- for link in section.settings.menu.links -%}
+{% assign menuIndex = forloop.index %}
+{% assign menuDropdown = false %}
+{% for block in section.blocks %}
+{% assign blockPosition = block.settings.position | plus:0 %}
+  {% if blockPosition == menuIndex %}
+	{% assign menuDropdown = true %}
+	{% break %}
+  {% endif %}
+{% endfor %}
+{% endfor %}
