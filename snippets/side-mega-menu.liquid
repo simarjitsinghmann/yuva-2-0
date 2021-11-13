@@ -111,7 +111,9 @@
 	 {% else %}
           {% for product in collection.products limit:block.settings.products %}
           <li>
+            <div class="row">
             {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true ,hideColors:true%}
+            </div>
 		</li>
           {% endfor %}
 
