@@ -579,7 +579,10 @@ visibility: visible;
 .custom_login { padding: 30px 30px;}
 .minicart-open #mini__cart, .show__similar__products #similar__product, .quickview-open .quick_view { right: 0;} 
 header { background: #fff; width: 100%;} 
-/* header.sticky-header { position: fixed; top: 0; left: 0; z-index: 5;}  */
+.top-header .form-inline {
+    position: absolute;
+    right: 0;
+}
 .top-header .nav__header { background: #f7f7f7; border-top: 1px solid #eaeaea; } 
 div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { display: inline-block; color: #fff; } 
 .announcement-bar { display: flex; align-items: center; justify-content: center; overflow-x: hidden; } 
