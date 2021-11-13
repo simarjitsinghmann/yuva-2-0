@@ -219,9 +219,9 @@ margin-left:10px}
     font-weight: 600;
     color: #000;
   }
-  .cstm-cart-sec .inner-box.price-details ul li:nth-child(3) {
+.cstm-cart-sec .inner-box.price-details ul:not(.list-payment) li:nth-child(3) {
     margin: 0;
-  }
+}
   .cstm-cart-sec .inner-box.price-details ul li.total {
       margin-top: 35px;
       padding-top: 35px;
