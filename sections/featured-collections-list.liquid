@@ -21,9 +21,13 @@
       <div class="col-12 col-sm-6 col-md-4">
         <div class="collection-list-view-card">
           <img src="//cdn.shopify.com/s/files/1/0597/9668/5009/files/collection-list-left_a725767d-c712-4edb-95d9-093591ab03b6.jpg?v=1635845505" />
-            <div class="list-view-content">
-              <h2>Women’s Winter Collections</h2>
-              <a href="{{}}" class="link">Shop Now</a>
+            <div class="list-view-content">          
+      {% if block.settings.heading != blank %}
+              <h2>{{block.settings.heading}}</h2>
+              {% else %}
+              <h2>{{block.settings.collection.title}}</h2>
+               {% endif %}
+              <a href="{{block.settings.collection.url}}" class="link">{{block.settings.collection.btntext}}</a>
             </div>
         </div>
       </div>
