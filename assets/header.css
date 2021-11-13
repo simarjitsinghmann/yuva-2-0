@@ -400,7 +400,6 @@ body.nav-open {
 	content: "";
 	bottom: -9px;
 }
-
 #nav_style_4 .side-menu .inner-side ul li .inner.child li .toggle-level .caret::after {
 	-moz-transform: translateY(-50%) rotate(45deg);
 	-webkit-transform: translateY(-50%) rotate(45deg);
@@ -418,11 +417,19 @@ div.lower-nav {
 	padding: 20px 0 0;
 	margin-top: 23px;
 }
-
 div.lower-nav .nav-item .userful__links {
   font-size: 32px;
   color: #000;
   font-weight: 600;
+}
+.menu-image-content {
+	position:relative;
+}
+.menu-image-content .menu-content{
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    bottom: 0;
 }
 /**nav-humburger-menu-end**/
 
