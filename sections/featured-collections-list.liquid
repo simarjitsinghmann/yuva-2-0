@@ -9,6 +9,7 @@
       <a class="view-all" href="{{section.settings.btnlink}}">{{section.settings.btntext}}</a>
       {% endif %}
     </div>
+    {% assign colWidth = '' %}
     <div class="row">
       {% for block in section.blocks %}
       {% if block.settings.collection != blank %}
@@ -28,7 +29,7 @@
 </section>
 {% schema %}
 {
-  "name": "t:sections.collection-list.name",
+  "name": "t:sections.featured-collections-list.name",
   "tag": "section",
   "class":"spaced-section",
 	"max_blocks":6,
@@ -37,51 +38,60 @@
       "type": "text",
       "id": "heading",
       "default": "Collection list",
-      "label": "t:sections.collection-list.settings.heading.label"
+      "label": "t:sections.featured-collections-list.settings.heading.label"
     },
     {
       "type": "text",
       "id": "btntext",
       "default": "View All",
-      "label": "t:sections.collection-list.settings.btntext.label"
+      "label": "t:sections.featured-collections-list.settings.btntext.label"
     },
     {
       "type": "url",
       "id": "btnlink",
-      "label": "t:sections.collection-list.settings.btnlink.label"
-    }
+      "label": "t:sections.featured-collections-list.settings.btnlink.label"
+    },
+        {
+          "type": "range",
+          "id": "view_limit",
+          "default": 3,
+          "label": "t:sections.featured-collections-list.blocks.collection.settings.view_limit.label",
+          "min": 2,
+          "max": 4,
+          "step": 1
+        }
   ],
   "blocks": [
 	  {
       "type":"collection",
-      "name":"t:sections.collection-list.blocks.collection.name",
+      "name":"t:sections.featured-collections-list.blocks.collection.name",
       "settings": [        
         {
           "type": "collection",
           "id": "collection",
-          "label": "t:sections.collection-list.blocks.collection.settings.collection.label"
+          "label": "t:sections.featured-collections-list.blocks.collection.settings.collection.label"
         },
         {
           "type": "image_picker",
           "id": "image",
-          "label": "t:sections.collection-list.blocks.collection.settings.image.label"
+          "label": "t:sections.featured-collections-list.blocks.collection.settings.image.label"
         },
         {
           "type": "text",
           "id": "heading",
-          "label": "t:sections.collection-list.blocks.collection.settings.heading.label"
+          "label": "t:sections.featured-collections-list.blocks.collection.settings.heading.label"
         },
         {
           "type": "text",
           "id": "btntext",
           "default": "Shop Now",
-          "label": "t:sections.collection-list.blocks.collection.settings.btntext.label"
+          "label": "t:sections.featured-collections-list.blocks.collection.settings.btntext.label"
         },
         {
           "type": "range",
           "id": "heading_font",
           "default": 25,
-          "label": "t:sections.collection-list.blocks.collection.settings.heading_font.label",
+          "label": "t:sections.featured-collections-list.blocks.collection.settings.heading_font.label",
           "min": 20,
           "max": 38,
           "step": 1,
@@ -90,7 +100,7 @@
         {
           "type": "range",
           "id": "overlay_opacity",
-          "label": "t:sections.collection-list.blocks.collection.settings.overlay_color.label",
+          "label": "t:sections.featured-collections-list.blocks.collection.settings.overlay_color.label",
           "default": 0.5,
           "min": 0,
           "max": 1,
@@ -99,7 +109,7 @@
         {
           "type": "color",
           "id": "overlay_color",
-          "label": "t:sections.collection-list.blocks.collection.settings.overlay_color.label",
+          "label": "t:sections.featured-collections-list.blocks.collection.settings.overlay_color.label",
           "default":"#000000"
         }
       ]
