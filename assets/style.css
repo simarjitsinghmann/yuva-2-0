@@ -776,7 +776,7 @@ object-fit: cover; }
 .testimonial-slide .owl-dots .owl-dot span {
 	background: var(--gray);
 }
-.testimonial-slide .owl-dots .owl-dot.active span, .testimonial-slide .owl-dots .owl-dot:hover span {
+.testimonial-slide.owl-theme .owl-dots .owl-dot.active span, .testimonial-slide.owl-theme .owl-dots .owl-dot:hover span {
     background: var(--black);
 }
 .testimonial h4::before { background-image: url(quote-img.svg); background-size: 40px; width: 40px; height: 40px; content: ""; background-repeat: no-repeat; 
