@@ -705,7 +705,8 @@ object-fit: cover; }
 /**video-section-end**/
 .star-rating .checked { color: var(--theme-color); } 
 .star-rating span.fa.fa-star {display: inline-block;}
-.star-rating { text-align: center; margin-bottom: 31px; } 
+.star-rating { text-align: center; margin-bottom: 31px; }
+.star-rating .fa-star { font-size: 22px; } 
 /***testimonial-section***/
 .testimonial-slider { max-width: 100%; margin: 0 auto; } 
 .shopify-section.testimonial { background: #f6f4f2; padding: 55px 0px 55px; } 
@@ -772,7 +773,9 @@ object-fit: cover; }
 	padding-bottom: 12px;
 	padding-top:12px;
 } 
-.star-rating .fa-star { font-size: 22px; } 
+.testimonial-slide .owl-dots .owl-dot span {
+	background: var(--gray);
+}
 .testimonial h4::before { background-image: url(quote-img.svg); background-size: 40px; width: 40px; height: 40px; content: ""; background-repeat: no-repeat; 
   position: absolute; margin-left: -55px; }
 .client-say-left h2 { font-size: 36px; font-weight: var(--semibold); margin-bottom: 20px; margin-top:10px } 
