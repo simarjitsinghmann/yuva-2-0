@@ -2722,8 +2722,8 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     position: relative;
     max-height: 480px;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
     overflow: hidden;
 }
 .collection-list-view-card h2 {
