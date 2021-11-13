@@ -19,7 +19,7 @@
       {% for block in section.blocks %}
       {% if block.settings.collection != blank %}
       {% assign collection = block.settings.collection %}
-      <div class="col-12 col-sm-6 {{colWidth}}" id="{{block.id}}">
+      <div class="col-12 col-sm-6 {{colWidth}}" id="block-{{block.id}}">
         <div class="collection-list-view-card">
            {% if block.settings.image != blank %}
               <img src="{{ block.settings.image | img_url:'500x'}}" />
@@ -37,10 +37,10 @@
             </div>
         </div>
         <style>
-          #{{block.id}} h2{
+          #block-{block.id}} h2{
             font-size:{{block.settings.heading_font }}px;
           }
-          #{{block.id}} .list-view-content{
+          #block-{{block.id}} .list-view-content{
             background:{{block.settings.overlay_color | color_modify: 'alpha', block.settings.overlay_opacity}};
           }
         </style>
