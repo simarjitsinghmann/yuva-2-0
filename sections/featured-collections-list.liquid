@@ -38,7 +38,7 @@
         </div>
         <style>
           #block-{block.id}} h2{
-            font-size:{{block.settings.heading_font }}px;
+            font-size:{{section.settings.heading_font }}px;
           }
           #block-{{block.id}} .list-view-content{
             background:{{block.settings.overlay_color | color_modify: 'alpha', block.settings.overlay_opacity}};
@@ -82,6 +82,16 @@
           "min": 2,
           "max": 4,
           "step": 1
+        },
+        {
+          "type": "range",
+          "id": "heading_font",
+          "default": 25,
+          "label": "t:sections.featured-collections-list.settings.heading_font.label",
+          "min": 20,
+          "max": 38,
+          "step": 1,
+          "unit": "px"
         }
   ],
   "blocks": [
@@ -109,16 +119,6 @@
           "id": "btntext",
           "default": "Shop Now",
           "label": "t:sections.featured-collections-list.blocks.collection.settings.btntext.label"
-        },
-        {
-          "type": "range",
-          "id": "heading_font",
-          "default": 25,
-          "label": "t:sections.featured-collections-list.blocks.collection.settings.heading_font.label",
-          "min": 20,
-          "max": 38,
-          "step": 1,
-          "unit": "px"
         },
         {
           "type": "range",
