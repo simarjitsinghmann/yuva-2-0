@@ -742,10 +742,9 @@ object-fit: cover; }
 	width: 18px;
 	height: 18px;
 }
-/* .testimonial-slide .owl-item::before{ position: absolute; border-radius: 50%; width: 0; height: 0; top: 50%; left: 50%; background-color: rgba(217, 217, 217, 0.32); content: ""; z-index: 2; }  */
 .testimonial-slide .owl-item:hover::before{ top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; opacity: 0; transition: .8s; }
 .testimonial .shopify__top__section small { margin-bottom: 4px; } 
-/* .testimonial-slide .owl-nav .owl-prev img, .testimonial-slide .owl-nav .owl-next img{width:22px;}  */
+.testimonial-slide .owl-theme .owl-nav { margin-top: 10px;}
 .testimonial-slide .owl-nav .owl-prev img, .testimonial-slide .owl-nav .owl-next img {
 	width: 21px;
 	padding: 4px 3px;
