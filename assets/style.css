@@ -144,6 +144,14 @@ div#banner-slide > img { width: 100%;}
     width: 100%;
     height: 100%;
 }
+.banner-left .carousel-caption-title {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
 /***END***/
 /***category-section***/
 .shopify-section:not(.shopify-section-slider, .shopify-section-announcement-bar, .shopify-section-main-header, #shopify-section-footer, 
