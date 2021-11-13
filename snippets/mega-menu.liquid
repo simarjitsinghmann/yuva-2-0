@@ -9,42 +9,20 @@
 {% assign heading = 'menu_heading'|append:i %}
 {% if block.settings[menu] != blank %}
 {% assign mainMenu = block.settings[menu] %}
-<li>
-    <a class="toggle-level" href="javascript:void(0)">
-        {% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %} <span class="caret"></span></a>
-        
-    {%- if mainMenu.links != blank -%}
-    <ul class="inner grandchild">        
-        <div class="inner-child-menu">
-            <div class="menu_back_btn">
-                <button class="back-btn">
-                    <svg height="17.031" viewbox="0 0 24 17.031" width="24" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <style>
-                    .cls-1 {
-                        fill-rule: evenodd;
-                    }
-                    </style>
-                        </defs>
-                        <path class="cls-1" d="M684,76.476H663.835l6.119-6.091-1.412-1.406-7.132,7.1h0L660,77.484l1.413,1.406,7.132,7.1,1.412-1.406-6.148-6.121H684V76.476Z" transform="translate(-660 -68.969)"></path>
-                    </svg>
-                    Back
-                </button>
-            </div>
-            <div class="category_title">
-                <h4>{% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</h4>
-            </div>
-          sss
-            {%- for childlink in mainMenu.links -%}
-          ssss
-            <li>
-                <a href="{{ childlink.url }}"><span>{{ childlink.title | escape | captilize }}</span></a>
-            </li>
-            {%- endfor -%}
-        </div>
-    </ul>
-    {% endif %}
-</li>
+<div class="sub-menu-list">
+  <div class="menu-mb-title">
+    <span>{% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</span>
+  </div>
+  {%- if mainMenu.links != blank -%}
+  <ul class="site-nav-dropdown">
+    {%- for childlink in mainMenu.links -%}
+    <li class="menu-lv-3">
+      <a href="{{ childlink.url }}"><span>{{ childlink.title | split:"{badge" | first | escape | captilize }}</span></a>
+    </li>
+    {%- endfor -%}
+  </ul>
+  {% endif %}
+</div>
 {% endif %}
 {% endfor %}
 
