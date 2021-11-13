@@ -61,14 +61,12 @@
         </div>
         {% endif %}
 	 {% else %}
-          <div class="sub-menu-list">
-            <div class="row">
           {% for product in collection.products limit:block.settings.products %}
+          <div class="sub-menu-list">
             {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true,hideColors:true %}
+          </div>
           {% endfor %}
 
-            </div>
-          </div>
         {% endif %}
       {% else %}
       <div class="sub-menu-list">
