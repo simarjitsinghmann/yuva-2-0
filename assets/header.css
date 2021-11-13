@@ -285,8 +285,7 @@ div#nav_style_3 { width: 100%; padding: 5px 0;}
 #nav_style_4 {
 	padding: 11px 0;
 }
-.side-menu .inner-side .close-btn { /* position: absolute; top: 7px; right: 15px;  */color: var(--black); background: transparent; z-index: 99;align-content: center;
-display: flex;font-size: 18px;font-weight: var(--normal);opacity: 0.6;font-family: var(--font-family); } 
+.side-menu .inner-side .close-btn { color: var(--black); background: transparent; z-index: 99;align-content: center; align-items:center; display: flex;font-size: 18px;font-weight: var(--normal);opacity: 0.6;font-family: var(--font-family); } 
 .side-menu .inner-side .close-btn:hover{opacity:1; color: var(--theme-color);}
 .side-menu .inner-side ul li.dropdown > a::after { content: ""; position: absolute; top: 50%; -moz-transform: translateY(-50%) rotate(45deg); -webkit-transform: translateY(-50%) rotate(45deg); transform: translateY(-50%) rotate(45deg); right: 0; width: 10px; height: 10px; border-top: 2px solid #000; border-right: 2px solid #000; } 
 /* .side-menu .inner-side ul li.dropdown > a.open-menu-drop::after { -moz-transform: translateY(-50%) rotate(315deg); -webkit-transform: translateY(-50%) rotate(315deg); transform: translateY(-50%) rotate(315deg); }  */
