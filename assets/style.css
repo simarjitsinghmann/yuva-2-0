@@ -2713,6 +2713,10 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     align-items: center;
     overflow: hidden;
 }
+.collection-list-view-card h2 {
+    margin-bottom: 20px;
+    color: var(--white);
+}
 .collection-list-view-card:after{
 	position:absolute;
   	content:"";
