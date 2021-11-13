@@ -894,7 +894,7 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 .quick_view .quickviewcontent {
     padding: 30px 20px 0;
     height: calc(100vh - 57px); 
-    overflow: auto;
+    overflow-y: auto;
 }
 .quick_view .quickviewcontent .product-add-to-cart-right h2 {
     font-size: 17px;
