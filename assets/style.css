@@ -2705,17 +2705,7 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
 }
 /* end */
 /* featured collection list start */
-.collection-list-view-box {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-  margin:0 -15px;
-}
 .collection-list-view-card {
-    flex: 0 0 48%;
-    max-width: 48%;
-    margin: 0 15px;
     position: relative;
     max-height: 560px;
     display: flex;
