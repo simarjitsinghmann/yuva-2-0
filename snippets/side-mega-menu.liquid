@@ -123,7 +123,7 @@
           {% if collection.image %}
           <img src="{{ collection | img_url: 'master' }}"  alt="{{ collection.title | escape }}" class="menu-image" style="width:100%"/>
           {% else %}
-          <img src="{{ collection.products.first | img_url: 'master' }}"  alt="{{ collection.title | escape }}" class="menu-image" />
+          <img src="{{ collection.products.first | img_url: 'master' }}"  alt="{{ collection.title | escape }}" class="menu-image" style="width:100%" />
           {% endif %}
           <div class="menu-content">
             <h4>{{collection.title}}</h4>
