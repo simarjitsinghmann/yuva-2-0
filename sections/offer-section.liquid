@@ -6,13 +6,7 @@
           </div>
             <ul class="grid grid--3-col-tablet grid--3-col-desktop d-flex justify-content-center {% if section.settings.style == 'style2' %}style_variation_2{% endif %}" role="list">
                 {% for block in section.blocks%}
-                  {%- if block.settings.bgcolor != blank -%}
-                  <style>
-                    #offer-block-{{block.id}} .card-information__wrapper{
-                      background-color:{{block.settings.bgcolor}};
-                    }
-                  </style>
-                {% endif %}
+                 
                 <li id="offer-block-{{block.id}}"  class="grid__item">
                     <div class="card-wrapper">
                         <div class="card-information">
@@ -115,12 +109,6 @@
           "type": "url",
           "id": "link",
           "label": "t:sections.offer-section.blocks.offer.settings.link.label"
-        },
-        {
-          "type": "color",
-          "id": "bgcolor",
-          "default": "#ffffff",
-          "label": "t:sections.offer-section.blocks.offer.settings.bgcolor.label"
         },
         {
           "type": "checkbox",
