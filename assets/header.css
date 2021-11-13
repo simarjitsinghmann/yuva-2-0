@@ -97,10 +97,7 @@
   	padding-left:0;
   	padding-right:30px;
 }
-.sub-menu .card-wrapper-img {
-    min-height: 200px;
-    max-height: 200px;
-}
+
 .navbar-expand-md .nav-item .list-menu__item:hover { color:var(--theme-color); } 
 .nav-item .list-menu__item  { display: block; padding: .5rem 1rem; } 
 .navbar .dropdown-toggle, .navbar .dropdown-menu a { cursor: pointer; } 
@@ -253,6 +250,11 @@ div#nav_style_3 { width: 100%; padding: 5px 0;}
 }
 .mega-product-img .col{
 	padding:0;
+}
+.sub-menu .card-wrapper-img {
+    min-height: 200px;
+    max-height: 200px;
+  	border-right: 1px solid #ddd;
 }
 /**nav-style3 End**/
 
