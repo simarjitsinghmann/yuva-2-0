@@ -2713,6 +2713,13 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     align-items: center;
     overflow: hidden;
 }
+.collection-list-view-card:after{
+	position:absolute;
+  	content:"";
+  	width:100%;
+  	height:100%;
+  	background-color: rgba(0,0,0,.03);
+}
 .list-view-content {
     position: absolute;
     text-align: center;
