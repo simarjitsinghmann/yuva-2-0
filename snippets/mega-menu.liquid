@@ -60,6 +60,13 @@
           </ul>
         </div>
         {% endif %}
+	 {% else %}
+          {% for product in collection.products limit:block.settings.products %}
+          <div class="sub-menu-list">
+            {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true,hideColors:true %}
+          </div>
+          {% endfor %}
+
         {% endif %}
       {% else %}
       <div class="sub-menu-list">
@@ -79,26 +86,6 @@
     {% endif %}
   {% endif %}
 {% endfor %}
-
-    {% if block.settings.show_products %}			
-      {% if block.settings.show_product_list %}
-<div class="sub-menu-list">
-<div class="row">
-{% for i in (1..5) %}
-  {% assign collection = 'collection' | append:i %}
-  {% if block.settings[collection] != blank %}
-    {% assign collection = block.settings[collection] %}
-          {% for product in collection.products limit:block.settings.products %}
-          <div class="sub-menu-list">
-            {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true,hideColors:true %}
-          </div>
-          {% endfor %}
-        {% endif %}
-          {% endfor %}
-  </div>
-</div>
-        {% endif %}
-        {% endif %}
 {% endcase %}  
 
 
