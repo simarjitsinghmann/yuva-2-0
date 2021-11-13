@@ -92,6 +92,18 @@
               </div>
            </div>
            <p class="checkout-text">Shipping &amp; taxes calculated at checkout</p>
+          {%- if section.settings.payment_enable -%}
+                <div class="footer__payment">
+                  <span class="visually-hidden">Payment methods</span>
+                  <ul class="list list-payment" role="list">
+                    {%- for type in shop.enabled_payment_types -%}
+                    <li class="list-payment__item">
+                      {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                    </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+                {%- endif -%}
         </div>
      </div>
     </div>
@@ -110,6 +122,12 @@
       "id": "show_cart_note",
       "default": true,
       "label": "t:sections.main-cart.settings.show_cart_note.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_enable",
+      "default": true,
+      "label": "t:sections.main-cart.settings.payment_enable.label"
     }
   ],
   "blocks": [
