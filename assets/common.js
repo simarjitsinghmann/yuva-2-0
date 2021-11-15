@@ -457,7 +457,7 @@ $(document).ready(function()
     $('body').removeClass('quickview-open');
   });
   
-  jQuery('[data-main-slider]').owlCarousel({
+  $('[data-main-slider]').owlCarousel({
 	 center: false,
 	 items: 1,
 	 loop: true,
