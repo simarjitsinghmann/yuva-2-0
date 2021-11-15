@@ -423,6 +423,7 @@ $(document).ready(function()
       $('.newsletter-popup,.wrapper-overlay,.askmeMain.slideAskme').hide();
     }
   });
+  
   $(document).on('click', '.quickView', function(evt) {
     evt.preventDefault();
     $('#ProductQuickView').hide();
@@ -450,10 +451,12 @@ $(document).ready(function()
       });
     });
   });
+  
   $(document).on('click', '.quickViewClose',function(evt) {
     evt.preventDefault();
     $('body').removeClass('quickview-open');
-  })
+  });
+  
 });
 
 
