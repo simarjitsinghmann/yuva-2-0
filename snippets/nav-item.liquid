@@ -22,7 +22,14 @@
   <div class="sub-menu">
     <div class="site-nav-dropdown">
       <div class="container">
-        <div class="row">
+        <div class="row">    
+          <div class="col-12 col-md-3">          
+            <div class="megaMenuContentWrapper">
+              {%- if menuDropdown -%}
+              {% include 'mega-menu' %}
+              {%- endif -%}
+            </div>
+          </div>
           <div class="col-12 col-md-9 col5 inner dropdown">
             <div class="menuLinks-wrapper">
               {%- for childlink in link.links -%}
@@ -46,14 +53,7 @@
               {% endfor %}
               {% include 'mega-menu' content:'menu' %}
             </div>
-          </div>          
-          <div class="col-12 col-md-3">          
-            <div class="megaMenuContentWrapper">
-              {%- if menuDropdown -%}
-              {% include 'mega-menu' %}
-              {%- endif -%}
-            </div>
-          </div>
+          </div>      
         </div>
       </div>
     </div>
