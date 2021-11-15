@@ -15,11 +15,11 @@
     {% elsif section.settings.view_limit == 4 %}
     {% assign colWidth = 'col-md-3' %}
       {% endif %}
-    <div class="row">
+    <div class="collectionSlider">
       {% for block in section.blocks %}
       {% if block.settings.collection != blank %}
       {% assign collection = block.settings.collection %}
-      <div class="col-12 col-sm-6 {{colWidth}}" id="block-{{block.id}}">
+      <div class="" id="block-{{block.id}}">
         <div class="collection-list-view-card">
            {% if block.settings.image != blank %}
               <img src="{{ block.settings.image | img_url:'500x500'}}" />
