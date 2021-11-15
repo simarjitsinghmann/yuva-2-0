@@ -568,7 +568,8 @@ visibility: visible;
 -moz-transition: opacity .2s ease .1s,visibility .2s ease .1s,top .2s ease .1s;-o-transition: opacity .2s ease .1s,visibility .2s ease .1s,top .2s ease .1s;transition: opacity .2s ease .1s,visibility .2s ease .1s,top .2s ease .1s;} 
 .site-nav-dropdown .inner.dropdown .sub-menu-list .menu-mb-title span {font-weight: var(--medium); margin-bottom: 6px;font-family: var(--font-family); 
   font-size: var(--med-text); color: var(--submenu-label); padding: 6px 0 5px; display: block;} 
-.site-nav-dropdown .inner.dropdown .sub-menu-list .site-nav-dropdown li a { letter-spacing: 0.5px;color: var(--black); text-decoration: none; font-weight: var(--normal); font-family: var(--font-family); font-size: var(--font-normal); padding: 10px 0 2px; display: block; } 
+.site-nav-dropdown .inner.dropdown .sub-menu-list .site-nav-dropdown li a { letter-spacing: 0.5px;color: var(--black); text-decoration: none; font-weight: var(--normal); 
+  font-family: var(--font-family); font-size: var(--font-normal); padding: 0px 0 10px; display: block; } 
 .site-nav-dropdown .inner.dropdown .sub-menu-list .site-nav-dropdown li a:hover { color: var(--theme-color); } 
 .site-nav-dropdown .inner.dropdown { display: flex; width: 100%; flex-wrap: wrap; justify-content: flex-start; padding: 0 30px; max-width:93%;} 
 .site-nav-dropdown .inner.dropdown .sub-menu-list {	flex: 0 0 16.66%;}
