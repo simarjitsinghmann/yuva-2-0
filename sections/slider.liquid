@@ -38,9 +38,9 @@ jQuery(document).ready(function() {
 	 autoPlaySpeed: {{section.settings.rotate_speed | times:1000}},
 	 navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}}' alt='right-arrow'></span>"]
   }
-  let slider = jQuery('#slider-{{section.id}}');
+//   = jQuery('#slider-{{section.id}}');
                       
- slider.owlCarousel(options);
+let slider = slider.owlCarousel(options);
   slider.on('changed.owl.carousel', function(event) {
     slider.owlCarousel(options);
   });
