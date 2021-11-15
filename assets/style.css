@@ -2731,9 +2731,9 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
 /*     max-height: 480px;
   	min-height: 480px; */
   	height:100%;
-    display: flex;
+/*     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     overflow: hidden;
 /*   	margin-bottom:30px; */
   background-color: var(--gray);
@@ -2745,6 +2745,7 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     color: var(--white);
 }
 .collection-list-view-card img {
+  	width:100%;
     height:100%;
     object-fit:cover;
 }
