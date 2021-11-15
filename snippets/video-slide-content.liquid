@@ -1,6 +1,4 @@
-{% if block.settings.videofile != blank or block.settings.poster != blank %}
-<div id="banner-{{block.id}}" class="banner banner-section item slider-banner" {{ block.shopify_attributes }}>	
-  {% if block.settings.height != 'use_image' %}
+{% if block.settings.height != 'use_image' %}
   <style>
     @media only screen and (max-width: 480px){
       [data-block-id="{{ block.id }}"] video{
@@ -46,7 +44,7 @@
   </div>
   <style>
     {% if block.settings.overlay %}
-    #banner-{{block.id}} .home-video-sec .videoOverlay {
+    .home-video-sec .videoOverlay {
       position: absolute;
       top: 0; 
       left: 0;
@@ -58,5 +56,3 @@
     }
     {% endif %}
   </style>
-</div>
-{% endif %}

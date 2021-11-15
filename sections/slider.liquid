@@ -13,7 +13,11 @@
       {% when 'split' %}
       {% render 'split-slide-content' block:block%}	
       {% when 'video' %}
-      {% render 'video-slide-content' block:block%}							
+      {% if block.settings.videofile != blank or block.settings.poster != blank %}
+      <div id="banner-{{block.id}}" class="banner banner-section item slider-banner" {{ block.shopify_attributes }}>	
+        {% render 'video-slide-content' block:block%}	
+      </div>
+      {% endif %}						
       {% endcase %}
       {% endfor %}
     </div>
