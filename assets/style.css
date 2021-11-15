@@ -550,6 +550,10 @@ letter-spacing: 1.2px;
     justify-content: center;
     max-height: 350px;
 }
+#CollectionProductsContainer[data-view=grid-layout-3] .products-grid .product_columns .grid-item .card-wrapper-img{
+    min-height: 500px;
+    max-height: 500px;
+}
 #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item .card-wrapper-img{
     min-height: 650px;
     max-height: 650px;
