@@ -69,11 +69,19 @@
               
               {% if block.settings.show_social %}
               <div class="social-links">
-                <ul>
-                  <li class="fb"><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
-                  <li class="twitter"><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
-                  <li class="linkedin"><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a></li>
-                  <li class="insta"><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+                <ul>                  
+              	{% if block.settings.social_facebook_link != blank %}
+                  <li class="fb"><a href="{{block.settings.social_facebook_link}}"><i class="fab fa-facebook-f"></i></a></li>
+                  {% endif %}
+              	{% if block.settings.social_twitter_link != blank %}
+                  <li class="twitter"><a href="{{block.settings.social_twitter_link}}"><i class="fab fa-twitter"></i></a></li>
+                  {% endif %}
+              	{% if block.settings.social_linkedin_link != blank %}
+                  <li class="linkedin"><a href="{{block.settings.social_linkedin_link}}"><i class="fab fa-linkedin-in"></i></a></li>
+                  {% endif %}
+              	{% if block.settings.social_instagram_link != blank %}
+                  <li class="insta"><a href="{{block.settings.social_instagram_link}}"><i class="fab fa-instagram"></i></a></li>
+                  {% endif %}
                 </ul>
               </div>
             {% endif %}
