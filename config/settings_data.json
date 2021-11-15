@@ -105,6 +105,15 @@
       "footer": {
         "type": "footer",
         "blocks": {
+          "2e1d6cdc-c92f-4d6f-b23b-64ff2e75b38f": {
+            "type": "image",
+            "settings": {
+              "heading": "About Us",
+              "image": "shopify:\/\/shop_images\/footer-logo_9f7855fd-d851-40b5-9767-e250971e3590.png",
+              "image_width": 100,
+              "subtext": "<p>Receive our weekly newsletter.<\/p><p>For dietary content, fashion insider and the best offers.<\/p>"
+            }
+          },
           "ff4862a6-d894-4776-ac14-624cf050f527": {
             "type": "link_list",
             "settings": {
@@ -126,36 +135,26 @@
               "menu": "men-fashion"
             }
           },
-          "5cfadc0e-1f26-4ea0-91db-c932a15a2c05": {
-            "type": "image",
-            "settings": {
-              "heading": "",
-              "image_width": 100,
-              "subtext": ""
-            }
-          },
-          "c52a6ac4-8715-46be-89a1-010746020567": {
+          "a742e200-d70f-4d4f-8751-396a45166768": {
             "type": "newsletter",
             "settings": {
-              "show_newsletter": true,
               "heading": "Newsletter",
               "subtext": "<p>Receive our weekly newsletter.<\/p><p>For dietary content, fashion insider and the best offers.<\/p>",
               "placeholder": "Email address",
-              "btn_text": "Join",
+              "btn_text": "Join11",
               "show_social": true
             }
           }
         },
         "block_order": [
+          "2e1d6cdc-c92f-4d6f-b23b-64ff2e75b38f",
           "ff4862a6-d894-4776-ac14-624cf050f527",
           "d6eab6c4-60ce-4c0c-9d92-888c3d84949a",
           "19282a37-7015-44c7-8590-c5f261813adf",
-          "5cfadc0e-1f26-4ea0-91db-c932a15a2c05",
-          "c52a6ac4-8715-46be-89a1-010746020567"
+          "a742e200-d70f-4d4f-8751-396a45166768"
         ],
         "settings": {
-          "payment_enable": true,
-          "copyright_content": "© 2019. All Rights Reserved"
+          "payment_enable": true
         }
       },
       "announcement-bar": {
