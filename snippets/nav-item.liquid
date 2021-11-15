@@ -47,15 +47,18 @@
             {% endfor %}
     {% include 'mega-menu' content:'menu' %}
   </div>
+            <div class="megaMenuContentWrapper">
+              
+  {%- if menuDropdown -%}
+  {% include 'mega-menu' %}
+  {%- endif -%}
+            </div>
           </div>
         </div>
 
       </div>
     </div>
   </div>
-  {%- endif -%}
-  {%- if menuDropdown -%}
-  {% include 'mega-menu' %}
   {%- endif -%}
 </li>
 {%- endfor-%}
