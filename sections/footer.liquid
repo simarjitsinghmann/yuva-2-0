@@ -83,9 +83,11 @@
           <div class="footer__content-bottom">
             <div class="footer__content-bottom-wrapper page-width">
               <div class="footer__column footer__column--info d-flex justify-content-between align-items-center">
+                {%- if section.settings.copyright_content -%}
                 <div class="footer__copyright">
-                  <small class="copyright__content">© 2019. All Rights Reserved</small>
+                  <small class="copyright__content">{{section.settings.copyright_content}}</small>
                 </div>
+                {%- endif -%}
                 {%- if section.settings.payment_enable -%}
                 <div class="footer__payment">
                   <span class="visually-hidden">Payment methods</span>
@@ -126,25 +128,6 @@
           "default": "footer",
           "label": "t:sections.footer.blocks.link_list.settings.menu.label",
           "info": "t:sections.footer.blocks.link_list.settings.menu.info"
-        }
-      ]
-    },
-    {
-      "type": "text",
-      "name": "t:sections.footer.blocks.text.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "default": "Heading",
-          "label": "t:sections.footer.blocks.text.settings.heading.label"
-        },
-        {
-          "type": "richtext",
-          "id": "subtext",
-          "default": "<p>Share store details, promotions, or brand content with your customers.</p>",
-          "label": "t:sections.footer.blocks.text.settings.subtext.label"
         }
       ]
     },
