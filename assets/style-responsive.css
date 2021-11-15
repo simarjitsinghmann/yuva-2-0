@@ -227,6 +227,11 @@
         width: 15px;
         height: 15px;
     }
+    .product-loop-variants .color_option input:checked+span.option, 
+  	.product-loop-variants .color_option input:hover+span.option {
+        border: 2px solid #fff;
+        outline: 1px solid #000;
+    }
     .add_to_cart.button, .buy_now.button {
         line-height: 20px;
     }
