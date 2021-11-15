@@ -1,117 +1,74 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
-<div class="main-collection-section">
-  <div class="container">
-    {%- liquid
-      case section.settings.sort
-        when 'products_high' or 'products_low'
-          assign collections = collections | sort: 'all_products_count'
-        when 'date' or 'date_reversed'
-          assign collections = collections | sort: 'published_at'
-      endcase
 
-      if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
-        assign collections = collections | reverse
-      endif
-    -%}
+<div class="page-width">
+  <h1 class="title title--primary">{{ section.settings.title | escape }}</h1>
 
-<!--     <ul class="collection-list grid grid--1-col grid--3-col-tablet" role="list">
-      {%- for collection in collections -%}
-        <li class="collection-list__item grid__item">
-          <a{% if collection.all_products_count > 0 %} href="{{ collection.url }}"{% endif %}
-            class="card animate-arrow{% if collection.featured_image != blank %} card--media{% else %}{% if section.settings.image_ratio != 'adapt' %} card--stretch{% endif %}{% endif %}{% unless section.settings.image_padding %} card--light-border{% endunless %}"
-          >
-            <div class="card--stretch card-colored color-{{ section.settings.color_scheme }}">
-              {%- if collection.featured_image != blank -%}
-                <div{% if section.settings.image_padding %} class="card__media-spacer"{% endif %}>
-                  {% if section.settings.image_padding %}<div class="overlay-card"></div>{% endif %}
-                  <div class="media media--{{ section.settings.image_ratio }} media--hover-effect overflow-hidden"
-                    {% if section.settings.image_ratio == 'adapt' %}style="padding-bottom: {{ 1 | divided_by: collection.featured_image.aspect_ratio | times: 100 }}%;"{% endif %}>
+  {%- liquid
+    case section.settings.sort
+      when 'products_high' or 'products_low'
+        assign collections = collections | sort: 'all_products_count'
+      when 'date' or 'date_reversed'
+        assign collections = collections | sort: 'published_at'
+    endcase
 
-                    <img
-                      srcset="{%- if collection.featured_image.width >= 165 -%}{{ collection.featured_image | img_url: '165x' }} 165w,{%- endif -%}
-                        {%- if collection.featured_image.width >= 360 -%}{{ collection.featured_image | img_url: '360x' }} 360w,{%- endif -%}
-                        {%- if collection.featured_image.width >= 535 -%}{{ collection.featured_image | img_url: '535x' }} 535w,{%- endif -%}
-                        {%- if collection.featured_image.width >= 750 -%}{{ collection.featured_image | img_url: '750x' }} 750w,{%- endif -%}
-                        {%- if collection.featured_image.width >= 1000 -%}{{ collection.featured_image | img_url: '1000x' }} 1000w,{%- endif -%}
-                        {%- if collection.featured_image.width >= 1500 -%}{{ collection.featured_image | img_url: '1500x' }} 1500w,{%- endif -%}"
-                      src="{{ collection.featured_image | img_url: '1500x' }}"
-                      sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 3 }}px, (min-width: 750px) calc((100vw - 130px) / 3), calc(100vw - 30px)"
-                      alt="{{ collection.title | escape }}"
-                      height="{{ collection.featured_image.height }}"
-                      width="{{ collection.featured_image.width }}"
-                      loading="lazy"
-                    >
-                  </div>
+    if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
+      assign collections = collections | reverse
+    endif
+  -%}
+
+  <ul class="collection-list grid grid--1-col grid--3-col-tablet" role="list">
+    {%- for collection in collections -%}
+      <li class="collection-list__item grid__item">
+        <a{% if collection.all_products_count > 0 %} href="{{ collection.url }}"{% endif %}
+          class="card animate-arrow{% if collection.featured_image != blank %} card--media{% else %}{% if section.settings.image_ratio != 'adapt' %} card--stretch{% endif %}{% endif %}{% unless section.settings.image_padding %} card--light-border{% endunless %}"
+        >
+          <div class="card--stretch card-colored color-{{ section.settings.color_scheme }}">
+            {%- if collection.featured_image != blank -%}
+              <div{% if section.settings.image_padding %} class="card__media-spacer"{% endif %}>
+                {% if section.settings.image_padding %}<div class="overlay-card"></div>{% endif %}
+                <div class="media media--{{ section.settings.image_ratio }} media--hover-effect overflow-hidden"
+                  {% if section.settings.image_ratio == 'adapt' %}style="padding-bottom: {{ 1 | divided_by: collection.featured_image.aspect_ratio | times: 100 }}%;"{% endif %}>
+
+                  <img
+                    srcset="{%- if collection.featured_image.width >= 165 -%}{{ collection.featured_image | img_url: '165x' }} 165w,{%- endif -%}
+                      {%- if collection.featured_image.width >= 360 -%}{{ collection.featured_image | img_url: '360x' }} 360w,{%- endif -%}
+                      {%- if collection.featured_image.width >= 535 -%}{{ collection.featured_image | img_url: '535x' }} 535w,{%- endif -%}
+                      {%- if collection.featured_image.width >= 750 -%}{{ collection.featured_image | img_url: '750x' }} 750w,{%- endif -%}
+                      {%- if collection.featured_image.width >= 1000 -%}{{ collection.featured_image | img_url: '1000x' }} 1000w,{%- endif -%}
+                      {%- if collection.featured_image.width >= 1500 -%}{{ collection.featured_image | img_url: '1500x' }} 1500w,{%- endif -%}"
+                    src="{{ collection.featured_image | img_url: '1500x' }}"
+                    sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 3 }}px, (min-width: 750px) calc((100vw - 130px) / 3), calc(100vw - 30px)"
+                    alt="{{ collection.title | escape }}"
+                    height="{{ collection.featured_image.height }}"
+                    width="{{ collection.featured_image.width }}"
+                    loading="lazy"
+                  >
                 </div>
-                <div class="card__text card__text-spacing card__text-hover">
-                  {% unless section.settings.image_padding %}<div class="overlay-card"></div>{% endunless %}
-                  <h2 class="h3">{{- collection.title -}}</h2>
-                </div>
-              {%- else -%}
-                <div class="overlay-card"></div>
-                <div class="card__text-spacing card__text-hover">
-                  <h2 class="h1">
-                    {{- collection.title -}}{%- if collection.description == blank -%}{% endif %}
-                  </h2>
+              </div>
+              <div class="card__text card__text-spacing card__text-hover">
+                {% unless section.settings.image_padding %}<div class="overlay-card"></div>{% endunless %}
+                <h2 class="h3">{{- collection.title -}}</h2>
+              </div>
+            {%- else -%}
+              <div class="overlay-card"></div>
+              <div class="card__text-spacing card__text-hover">
+                <h2 class="h1">
+                  {{- collection.title -}}{%- if collection.description == blank -%}{% endif %}
+                </h2>
 
-                  {%- if collection.description != blank -%}
-                    <p>
-                      {{- collection.description | strip_html | truncatewords: 12 -}}
-                    </p>
-                  {%- endif -%}
-                </div>
-              {%- endif -%}
-            </div>
-          </a>
-        </li>
-      {%- endfor -%}
-    </ul> -->
-    <div class="product-content main-content">
-        <div class="toolbox-item toolbox-layout">
-          <div class="filter-actions">
-            <div class="select-items">
-              {% assign active = 0 %}
-              {%- for filter in collection.filters -%}
-              {%- for value in filter.active_values -%}
-              {% assign active = active | plus:1 %}
-              <a class="select-item" href="{{ value.url_to_remove }}">
-                {{ value.label | escape }}
-                <span class="close">
-                  {% render 'icon-cross' %}
-                </span>
-              </a>
-              {%- endfor -%}
-
-              {% if filter.type == "price_range" %}
-              {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}                             
-              {% assign active = active | plus:1 %}
-              <a class="select-item" href="{{ filter.url_to_remove }}">
-                {%- if filter.min_value.value -%}{{ filter.min_value.value | money }}{%- else -%}{{ 0 | money }}{%- endif -%}-{%- if filter.max_value.value -%}{{ filter.max_value.value | money }}{%- else -%}{{ filter.range_max | money }}{%- endif -%}
-                <span class="close">
-                  {% render 'icon-cross' %}
-                </span>
-              </a>
-              {%- endif -%}
-              {% endif %}
-              {%- endfor -%}
-            </div>
+                {%- if collection.description != blank -%}
+                  <p>
+                    {{- collection.description | strip_html | truncatewords: 12 -}}
+                  </p>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
           </div>
-        </div>
-        <div class="product-collection grid-view">
-          <div class="products-grid" style="display:block">
-            <div class="row product_columns">
-              {% for product in collection.products %}
-              {% render 'collection-product-grid',product: product %}
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-        {% if paginate.pages > 1 %}
-        {% include 'pagination' %}
-        {% endif %}
-      </div>
-  </div>
+        </a>
+      </li>
+    {%- endfor -%}
+  </ul>
 </div>
 
 {% schema %}
