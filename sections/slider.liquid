@@ -6,7 +6,9 @@
       {% endif %}
       {% for block in section.blocks %}
       {% case block.type %}
+      <div id="banner-{{block.id}}" class="banner banner-section item slider-banner" {{ block.shopify_attributes }}>
       {% when 'slide' %}
+      </div>
       {% render 'banner-slide-content' block:block%}	
       {% when 'split' %}
       {% render 'split-slide-content' block:block%}	
