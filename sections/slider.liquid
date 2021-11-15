@@ -1,6 +1,6 @@
 <div id="product-slider" class="banner-product-slider">
   {% if section.blocks.size > 1 %}
-  <div id="slider-{{section.id}}" class="loop owl-theme">
+  <div id="slider-{{section.id}}" class="loop owl-carousel owl-theme">
     {% else %}
     <div class="slider-item">
       {% endif %}
@@ -50,7 +50,8 @@ jQuery(document).ready(function() {
                       
  slider.owlCarousel(options);
   slider.on('changed.owl.carousel', function(event) {
-
+//     alert("asdasdas");
+    console.log('nanananana')
     slider.owlCarousel(options);
   });
 });
