@@ -6,10 +6,10 @@
       {% endif %}
       {% for block in section.blocks %}
       {% case block.type %}
-      <div id="banner-{{block.id}}" class="banner banner-section item slider-banner" {{ block.shopify_attributes }}>
         {% when 'slide' %}
-      </div>
+      <div id="banner-{{block.id}}" class="banner banner-section item slider-banner" {{ block.shopify_attributes }}>
       {% render 'banner-slide-content' block:block%}	
+      </div>
       {% when 'split' %}
       <div id="banner-{{block.id}}" class="banner banner-section item split-slider slider-banner" {{ block.shopify_attributes }}>	
         {% render 'split-slide-content' block:block%}	
