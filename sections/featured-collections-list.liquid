@@ -1,5 +1,5 @@
 {{'section-featured-collections-list.css' | asset_url | stylesheet_tag }}
-<section id="section-{{section.id}}" class="colllection-list-view">
+<div id="section-{{section.id}}" class="colllection-list-view">
   <div class="container">
     <div class="collection-section-header section-heading-box">                  
       {% if section.settings.heading != blank %}
@@ -46,7 +46,7 @@
       {% endfor%}
     </div>
   </div>
-</section>
+</div>
 <style>
   
           #section-{{section.id}} .collection-list-view-card h2{
@@ -58,7 +58,7 @@
 {
   "name": "t:sections.featured-collections-list.name",
   "tag": "section",
-  "class":"spaced-section",
+  "class":"collection-list-section",
 	"max_blocks":6,
   "settings": [
     {
