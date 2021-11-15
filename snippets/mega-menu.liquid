@@ -34,15 +34,12 @@
 
 {% else %}
       
-            {% assign test = false %}
 {% for block in section.blocks %}
 {% assign blockPosition = block.settings.position | plus:0 %}
 {% if blockPosition == menuIndex %}
 
 {% case block.type %}
 {% when 'image' %}
-
-            {% assign test = 'asdasdasdasdsa' %}
 {% for i in (1..2) %}
 {% assign image = 'image'|append:i %}
 {% assign heading = 'heading'|append:i %}
