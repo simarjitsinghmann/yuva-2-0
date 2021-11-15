@@ -2,7 +2,10 @@
   <div class="shopify__top__section text__center">
     <div class="section-heading-box">
       <small>{{section.settings.heading}}</small>
-      <h2>{{section.settings.subheading}} <a class="view-all corner-view" href="">View all</a></h2>
+      <h2>{{section.settings.subheading}} 
+        {% if section.settings.blog != blank and section.settings.custom == false %}
+        <a class="view-all corner-view" href="{{section.settings.blog.url}}">View all</a></h2>
+      	{% endif %}
     </div>
     {% assign main_articles = section.settings.blog.articles %}
     {% if main_articles.size > 0 or section.settings.custom %}
