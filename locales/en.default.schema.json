@@ -475,19 +475,7 @@
       "name": "Banner",
       "settings": {
         "header1": {
-          "content": "Heading"
-        },
-        "header2": {
-          "content": "Sub Heading"
-        },
-        "header3": {
-          "content": "Highlighted Text"
-        },
-        "header4": {
-          "content": "Description"
-        },
-        "header5": {
-          "content": "Button"
+          "content": "Text Content "
         },
         "header6": {
           "content": "Background and Content Style"
@@ -511,7 +499,7 @@
           "label": "Text Background Color"
         },
         "content": {
-          "label": "Content"
+          "label": "Description"
         },
         "c_text": {
           "label": "Text Color"
@@ -627,9 +615,6 @@
           "settings": {
             "heading": {
               "label": "Heading"
-            },
-            "heading_font": {
-              "label": "Heading Font Size"
             },
             "subheading": {
               "label": "Sub Heading"
@@ -961,7 +946,7 @@
               "right": {
                 "label": "Right"
               },
-              "label": "Info Position"
+              "label": "Text Position"
             },
             "image": {
               "label": "Image"
@@ -1536,9 +1521,6 @@
         "newsletter": {
           "name": "Newsletter",
           "settings": {
-            "show_newsletter": {
-              "label": "Show Newsletter"
-            },
             "header__1": {
               "content": "Email Signup",
               "info": "Subscribers added to your “accepted marketing” [customer list.](https:\/\/help.shopify.com\/en\/manual\/customers\/manage-customers)"
@@ -1561,32 +1543,25 @@
             },
             "show_social": {
               "label": "Show social media icons"
-            },
-            "social_twitter_link": {
-              "label": "Twitter",
-              "info": "https:\/\/twitter.com\/shopify"
-            },
-            "social_facebook_link": {
-              "label": "Facebook",
-              "info": "https:\/\/facebook.com\/shopify"
-            },
-            "social_linkedin_link": {
-              "label": "Linkedin",
-              "info": "https:\/\/linkedin.com\/shopify"
-            },
-            "social_instagram_link": {
-              "label": "Instagram",
-              "info": "http:\/\/instagram.com\/shopify"
             }
           }
         }
       },
       "settings": {
+        "header__1": {
+          "content": "Language selector"
+        },
+        "header__2": {
+          "info": "To add a language, go to your [language settings.](\/admin\/settings\/languages)"
+        },
+        "enable_language_selector": {
+          "label": "Enable language selector"
+        },
+        "header__3": {
+          "content": "Payment methods"
+        },
         "payment_enable": {
           "label": "Show payment icons"
-        },
-        "copyright_content": {
-          "label": "Copyright Content"
         }
       }
     },
