@@ -57,17 +57,21 @@
 
 
 {% endcase %}  
-
-
 {% endif %}
 {% endfor %}
-      
+{% if count < 2 %}  
+{% if count == 0 %}
+{% assign limit = 2 %}
+{% elsif count == 1 %}
+{% assign limit = 2 %}
+{% endif %}
 {% for block in section.blocks %}
 {% assign blockPosition = block.settings.position | plus:0 %}
 {% if blockPosition == menuIndex %}
 
 {% case block.type %}
 {% when 'image' %}
+{%- capture imageMenu -%}
 {% for i in (1..2) %}
 {% assign image = 'image'|append:i %}
 {% assign heading = 'heading'|append:i %}
@@ -86,13 +90,18 @@
 </div>
 {% endunless %}
 {% endfor %}
+{%- endcapture -%}
 
 
 {% endcase %}  
 
+<div class="megaMenuImage-wrapper">
+  {{imageMenu}}
+</div>
 
 {% endif %}
 {% endfor %}
+{% endif %}
 {% endif %}
 
 
