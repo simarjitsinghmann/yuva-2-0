@@ -138,11 +138,16 @@
           "a742e200-d70f-4d4f-8751-396a45166768": {
             "type": "newsletter",
             "settings": {
+              "show_newsletter": true,
               "heading": "Newsletter",
               "subtext": "<p>Receive our weekly newsletter.<\/p><p>For dietary content, fashion insider and the best offers.<\/p>",
               "placeholder": "Email address",
-              "btn_text": "Join11",
-              "show_social": true
+              "btn_text": "Join",
+              "show_social": true,
+              "social_twitter_link": "",
+              "social_facebook_link": "",
+              "social_linkedin_link": "",
+              "social_instagram_link": ""
             }
           }
         },
@@ -154,7 +159,8 @@
           "a742e200-d70f-4d4f-8751-396a45166768"
         ],
         "settings": {
-          "payment_enable": true
+          "payment_enable": true,
+          "copyright_content": "© 2019. All Rights Reserved"
         }
       },
       "announcement-bar": {
