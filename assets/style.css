@@ -116,7 +116,7 @@
   display: inline-block;font-weight:var(--normal);letter-spacing: 1.2px;} 
 .single-banner-section .carousel-caption .banner-slide h2 { display:block; text-shadow: 0px 1px 1px rgb(0 0 0 / 28%);text-transform: capitalize; color: var(--theme-color);padding-top: 2px; } 
 .carousel-caption .banner-slide p, 
-.home-video-sec .flex-absolute p{
+.flex-absolute p{
 	color: var(--black);
 	padding-top: 8px;
 	padding-bottom: 37px;
@@ -748,8 +748,8 @@ object-fit: cover; }
     height: 100%;
 }
 .home-video-sec video { object-fit: cover; height:100%; }
-.home-video-sec .flex-absolute {position: absolute;z-index: 1; max-width: 1000px;width:100%;margin:0 auto}
-.home-video-sec .flex-absolute h1 {font-size: 70px;font-weight: 600;}
+.flex-absolute {position: absolute;z-index: 1; max-width: 1000px;width:100%;margin:0 auto}
+.flex-absolute h1 {font-size: 70px;font-weight: 600;}
 .video-banner-section .home-video-sec {
     position: relative;
 }
