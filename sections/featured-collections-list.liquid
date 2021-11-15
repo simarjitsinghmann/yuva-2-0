@@ -15,7 +15,7 @@
     {% elsif section.settings.view_limit == 4 %}
     {% assign colWidth = 'col-md-3' %}
       {% endif %}
-    <div class="  collectionSlider" id="collectionSlider-{{section.id}}">
+    <div class=" owl-carousel owl-theme" id="collectionSlider-{{section.id}}">
       {% for block in section.blocks %}
       {% if block.settings.collection != blank %}
       {% assign collection = block.settings.collection %}
@@ -54,12 +54,29 @@
           }
 </style>
 <script>
-
-    jQuery(document).ready(function() {
-      jQuery('body').find('.collectionSlider').owlCarousel();
-
-
-    });
+jQuery(document).ready(function() {
+  var slider = jQuery('#collectionSlider-{{section.id}}');
+	var options = {
+	 center: false,
+	 items: 2,
+	 loop: true,
+	 margin: 0,
+	 dots:true,
+	 autoplay:false,
+	 nav:true,
+	 slideSpeed: 500,
+	 autoHeight: false,
+	 autoHeightClass: 'owl-height',
+	 autoPlaySpeed: {{section.settings.rotate_speed | times:1000}},
+	 navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}}' alt='right-arrow'></span>"]
+  }
+                      
+ slider.owlCarousel(options);
+  slider.on('changed.owl.carousel', function(event) {
+//     alert("asdasdas");
+    slider.owlCarousel(options);
+  });
+});
 </script>
 {% schema %}
 {
