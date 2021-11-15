@@ -3,7 +3,7 @@
         <div class="service__content page-width">
             <div class="service__column footer__column--info d-flex justify-content-between">
                 {% for block in section.blocks %}
-                <div class="col text__{{block.settings.alignment}}">
+                <div class="col text__{{block.settings.alignment}}" {{ block.shopify_attributes }}>
                     {% if block.settings.image != blank %}
                     <img src="{{block.settings.image | img_url:'master'}}" alt="{{block.settings.heading}}">
                     {% else %}
