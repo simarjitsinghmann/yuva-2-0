@@ -19,6 +19,7 @@
     {% endif %}
   </a>                                
   {%- if link.links != blank or menuDropdown -%}
+  <div class="menuLinks-wrapper">
   <div class="sub-menu">
     <div class="site-nav-dropdown">
       <div class="container">
@@ -43,15 +44,17 @@
               {% endif %}
             </div>
             {% endfor %}
-            {%- if menuDropdown -%}
-            {% include 'mega-menu' %}
-            {%- endif -%}
           </div>
         </div>
 
       </div>
     </div>
   </div>
+    {% include 'mega-menu' content:menu %}
+  </div>
+  {%- endif -%}
+  {%- if menuDropdown -%}
+  {% include 'mega-menu' %}
   {%- endif -%}
 </li>
 {%- endfor-%}
