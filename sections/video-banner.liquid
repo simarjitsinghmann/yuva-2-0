@@ -15,6 +15,7 @@
       <source src="{{ section.settings.videofile }}" type="video/mp4" id="{{ section.id }}">
     </video> 
     <div class="videoOverlay"></div>
+    <div class="container">
     {% unless section.settings.link_text == blank and section.settings.title == blank and section.settings.description == blank %}
     {% if section.settings.link_text == '' and section.settings.link  %}
       <a href="{{ section.settings.link }}">
@@ -39,9 +40,10 @@
     {% endif %}
     {% endunless %}
   </div>
+</div>
 <style>
   {% if section.settings.overlay %}
-  .home-video-sec .videoOverlay {
+  .videoOverlay {
     position: absolute;
     top: 0; 
     left: 0;
