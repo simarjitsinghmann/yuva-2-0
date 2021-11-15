@@ -1,111 +1,112 @@
 {% if content == 'menu' %}
-{% for block in section.blocks %}
-{% assign blockPosition = block.settings.position | plus:0 %}
-{% if blockPosition == menuIndex %}
+  {% for block in section.blocks %}
+    {% assign blockPosition = block.settings.position | plus:0 %}
+    {% if blockPosition == menuIndex %}
 
-{% case block.type %}
-{% when 'menu' %}
-{% for i in (1..4) %}
-{% assign menu = 'menu'|append:i %}
-{% assign heading = 'menu_heading'|append:i %}
-{% if block.settings[menu] != blank %}
-{% assign mainMenu = block.settings[menu] %}
-<div class="sub-menu-list {{test}}">
-  <div class="menu-mb-title">
-    <span>{% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</span>
-  </div>
-  {%- if mainMenu.links != blank -%}
-  <ul class="site-nav-dropdown">
-    {%- for childlink in mainMenu.links -%}
-    <li class="menu-lv-3">
-      <a href="{{ childlink.url }}"><span>{{ childlink.title | split:"{badge" | first | escape | captilize }}</span></a>
-    </li>
-    {%- endfor -%}
-  </ul>
-  {% endif %}
-</div>
-{% endif %}
-{% endfor %}
-{% endcase %}
-{% endif %}
-{% endfor %}
+      {% case block.type %}
+        {% when 'menu' %}
+          {% for i in (1..4) %}
+            {% assign menu = 'menu'|append:i %}
+            {% assign heading = 'menu_heading'|append:i %}
+              {% if block.settings[menu] != blank %}
+                {% assign mainMenu = block.settings[menu] %}
+                <div class="sub-menu-list {{test}}">
+                  <div class="menu-mb-title">
+                    <span>{% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</span>
+                  </div>
+                  {%- if mainMenu.links != blank -%}
+                  <ul class="site-nav-dropdown">
+                    {%- for childlink in mainMenu.links -%}
+                    <li class="menu-lv-3">
+                      <a href="{{ childlink.url }}"><span>{{ childlink.title | split:"{badge" | first | escape | captilize }}</span></a>
+                    </li>
+                    {%- endfor -%}
+                  </ul>
+                  {% endif %}
+                </div>
+              {% endif %}
+          {% endfor %}
+      {% endcase %}
+    {% endif %}
+  {% endfor %}
 
 
 
 {% else %}
 
-{% assign count = 0 %}
+	{% assign count = 0 %}
 
-{% for block in section.blocks %}
-{% assign blockPosition = block.settings.position | plus:0 %}
-{% if blockPosition == menuIndex %}
+    {% for block in section.blocks %}
+      {% assign blockPosition = block.settings.position | plus:0 %}
+      {% if blockPosition == menuIndex %}
 
-{% case block.type %}
-{% when 'product' %}
-{%- capture productMenu -%}
-{% for i in (1..2) %}
-{% assign product = 'product'|append:i %}
-{% unless block.settings[product] == blank  %}
+        {% case block.type %}
+          {% when 'product' %}
+            {%- capture productMenu -%}
+              {% for i in (1..2) %}
+                {% assign product = 'product'|append:i %}
+                {% unless block.settings[product] == blank  %}
 
-{% assign count = count | plus:1 %}
-<div class="sub-menu-list">
-  {% include 'product-grid' product:block.settings[product] ,hide_options:true,hideRelated:true,hideQuickView:true %}
-</div>
-{% endunless %}
-{% endfor %}
-{%- endcapture -%}
+                  {% assign count = count | plus:1 %}
+                  <div class="sub-menu-list">
+                    {% include 'product-grid' product:block.settings[product] ,hide_options:true,hideRelated:true,hideQuickView:true %}
+                  </div>
+                {% endunless %}
+              {% endfor %}
+            {%- endcapture -%}
 
-{% if count > 0 %}
-<div class="megaMenuProduct-wrapper">
-  {{productMenu}}
-</div>
-{% endif %}
+            {% if count > 0 %}
+              <div class="megaMenuProduct-wrapper">
+                {{productMenu}}
+              </div>
+            {% endif %}
 
-{% endcase %}  
-{% endif %}
-{% endfor %}
-{% if count < 2 %}  
-{% if count == 0 %}
-{% assign limit = 2 %}
-{% elsif count == 1 %}
-{% assign limit = 2 %}
-{% endif %}
-{% for block in section.blocks %}
-{% assign blockPosition = block.settings.position | plus:0 %}
-{% if blockPosition == menuIndex %}
+        {% endcase %}  
+      {% endif %}
+    {% endfor %}
 
-{% case block.type %}
-{% when 'image' %}
-{%- capture imageMenu -%}
-{% for i in (1..limit) %}
-{% assign image = 'image'|append:i %}
-{% assign heading = 'heading'|append:i %}
-{% assign button = 'button'|append:i %}
-{% assign link = 'link'|append:i %}
-{% unless block.settings[image] == blank and block.settings[heading] == blank %}
-<div class="sub-menu-list mega-images">
-  <div class="menu-image-content">
-    <img src="{{block.settings[image] | img_url:'master'}}"  class="menu-image">
-    <div class="menu-content">
-      <h4>{{block.settings[heading]}}</h4>
-      <a href="{{block.settings[link]}}" class="button black-button">{{block.settings[button]}}</a>
-    </div>
-  </div>
-</div>
-{% endunless %}
-{% endfor %}
-{%- endcapture -%}
+    {% if count < 2 %}  
+      {% if count == 0 %}
+      {% assign limit = 2 %}
+      {% elsif count == 1 %}
+      {% assign limit = 2 %}
+      {% endif %}
 
+      {% for block in section.blocks %}
+      	{% assign blockPosition = block.settings.position | plus:0 %}
+          {% if blockPosition == menuIndex %}
 
-{% endcase %}  
-{% if imageMenu != blank %}
-<div class="megaMenuImage-wrapper">
-  {{imageMenu}}
-</div>
-{% endif %}
-{% endif %}
-{% endfor %}
-{% endif %}
+            {% case block.type %}
+            {% when 'image' %}
+              {%- capture imageMenu -%}
+              {% for i in (1..limit) %}
+              {% assign image = 'image'|append:i %}
+              {% assign heading = 'heading'|append:i %}
+              {% assign button = 'button'|append:i %}
+              {% assign link = 'link'|append:i %}
+              {% unless block.settings[image] == blank and block.settings[heading] == blank %}
+              <div class="sub-menu-list mega-images">
+                <div class="menu-image-content">
+                  <img src="{{block.settings[image] | img_url:'master'}}"  class="menu-image">
+                  <div class="menu-content">
+                    <h4>{{block.settings[heading]}}</h4>
+                    <a href="{{block.settings[link]}}" class="button black-button">{{block.settings[button]}}</a>
+                  </div>
+                </div>
+              </div>
+              {% endunless %}
+              {% endfor %}
+              {%- endcapture -%}
+
+            {% if imageMenu != blank %}
+              <div class="megaMenuImage-wrapper">
+                {{imageMenu}}
+              </div>
+              {% endif %}
+            {% endcase %}  
+          {% endif %}
+      {% endfor %}
+    {% endif %}
 {% endif %}
 
 
