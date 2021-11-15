@@ -53,8 +53,7 @@
         resize: none;
         min-height: 100px;
     }
-/*  COmmon end  */
-  
+	/*  COmmon end  */
 	/* whats more css start */
     .card-information__wrapper {
         width: 165px;
@@ -184,6 +183,14 @@
         padding: 15px 25px;
     }
 	/*  multi column end  */
+	/*  banner start  */
+    .single-banner-section.banner-section h1 {
+      font-size: 47px;
+      line-height: 52px;
+      padding: 7px 37px 7px 15px;
+      margin: 15px 0 16px;
+    }
+	/*  banner end  */
 }
 @media screen and (max-width:1199px){
 	/*  common start  */
