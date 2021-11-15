@@ -32,8 +32,8 @@
 </style>
 <script>
   var slider = jQuery('#slider-{{section.id}}');
-jQuery(document).ready(function() {
-	var options = {
+	
+ var options = {
 	 center: false,
 	 items: 1,
 	 loop: true,
@@ -46,10 +46,9 @@ jQuery(document).ready(function() {
 	 autoHeightClass: 'owl-height',
 	 autoPlaySpeed: {{section.settings.rotate_speed | times:1000}},
 	 navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}}' alt='right-arrow'></span>"]
-  }
-                      
+  }  
  slider.owlCarousel(options);
-});
+
   document.addEventListener("shopify:section:load", function(event) {
     if(event.detail.sectionId === '{{section.id}}') {
         slider.owlCarousel(options);
