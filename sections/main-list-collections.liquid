@@ -1,8 +1,9 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width">
-  <h1 class="title title--primary">{{ section.settings.title | escape }}</h1>
+<div class="main-collection-category-section">
+<div class="container">
+  <h2 class="title title--primary">{{ section.settings.title | escape }}</h1>
 
   {%- liquid
     case section.settings.sort
@@ -70,7 +71,7 @@
     {%- endfor -%}
   </ul>
 </div>
-
+</div>
 {% schema %}
 {
   "name": "t:sections.main-list-collections.name",
