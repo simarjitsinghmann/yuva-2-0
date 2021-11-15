@@ -158,6 +158,7 @@ div#banner-slide > img { width: 100%;}
     position: absolute;
     width: 100%;
     height: 100%;
+  	top:0;	
 }
 .banner-left .carousel-caption-title {
     position: relative;
@@ -753,6 +754,9 @@ object-fit: cover; }
 .flex-absolute h1 {font-size: 70px;font-weight: 600;}
 .video-banner-section .home-video-sec {
     position: relative;
+}
+.video-sec {
+	position:relative;
 }
 /**video-section-end**/
 .star-rating .checked { color: var(--theme-color); } 
