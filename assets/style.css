@@ -749,7 +749,8 @@ object-fit: cover; }
     flex-direction: column;
     height: 100%;
 }
-.home-video-sec video { object-fit: cover; height:100%; }
+.home-video-sec video,
+.video-sec video{ object-fit: cover; height:100%; }
 .flex-absolute {position: absolute;z-index: 1; max-width: 1000px;width:100%;margin:0 auto}
 .flex-absolute h1 {font-size: 70px;font-weight: 600;}
 .video-banner-section .home-video-sec {
