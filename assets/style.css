@@ -2730,12 +2730,12 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     position: relative;
 /*     max-height: 480px;
   	min-height: 480px; */
-  	heigh:100%;
+  	height:100%;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-  	margin-bottom:30px;
+/*   	margin-bottom:30px; */
   background-color: var(--gray);
 }
 .collection-list-view-card h2 {
