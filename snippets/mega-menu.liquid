@@ -77,13 +77,12 @@
 {% case block.type %}
 {% when 'image' %}
 {%- capture imageMenu -%}
-{% for i in (1..2) %}
+{% for i in (1..limit) %}
 {% assign image = 'image'|append:i %}
 {% assign heading = 'heading'|append:i %}
 {% assign button = 'button'|append:i %}
 {% assign link = 'link'|append:i %}
 {% unless block.settings[image] == blank and block.settings[heading] == blank %}
-
 <div class="sub-menu-list mega-images">
   <div class="menu-image-content">
     <img src="{{block.settings[image] | img_url:'master'}}"  class="menu-image">
