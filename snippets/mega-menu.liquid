@@ -33,7 +33,8 @@
 
 
 {% else %}
-
+   
+            {% assign test = true %}
 {% for block in section.blocks %}
 {% assign blockPosition = block.settings.position | plus:0 %}
 {% if blockPosition == menuIndex %}
