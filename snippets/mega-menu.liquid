@@ -33,6 +33,31 @@
 
 
 {% else %}
+
+
+{% for block in section.blocks %}
+{% assign blockPosition = block.settings.position | plus:0 %}
+{% if blockPosition == menuIndex %}
+
+{% case block.type %}
+{% when 'product' %}
+{% for i in (1..2) %}
+{% assign product = 'product'|append:i %}
+{% unless block.settings[product] == blank  %}
+<div class="sub-menu-list">
+  {% if block.settings[product]  != blank %}
+  {% include 'product-grid' product:block.settings[product] ,hide_options:true,hideRelated:true,hideQuickView:true %}
+  {% endif %}
+</div>
+{% endunless %}
+{% endfor %}
+
+
+{% endcase %}  
+
+
+{% endif %}
+{% endfor %}
       
 {% for block in section.blocks %}
 {% assign blockPosition = block.settings.position | plus:0 %}
@@ -66,3 +91,5 @@
 {% endif %}
 {% endfor %}
 {% endif %}
+
+
