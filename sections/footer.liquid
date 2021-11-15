@@ -43,7 +43,8 @@
               {% if block.settings.subtext != blank %}
                 {{block.settings.subtext}}
               {% endif %}
-
+			
+              {% if block.settings.show_newsletter %}
               <form id="ContactFooter" accept-charset="UTF-8" class="footer__newsletter newsletter-form">
                 <div class="newsletter-form__field-wrapper">
                   <div class="field">
@@ -63,6 +64,7 @@
                   {% endif %}
                 </button>
               </form>
+            {% endif %}
 
               
               {% if block.settings.show_social %}
