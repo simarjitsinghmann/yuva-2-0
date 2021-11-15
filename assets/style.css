@@ -2795,10 +2795,17 @@ a.link {
 }
 /* featured collection list end */
 /* collection page start */
+.collection-card-box {
+	position:relative;
+}
 .collection-card {
     position: absolute;
     bottom: 0;
     padding: 20px;
     background-color: #fff;
+}
+.collection-card a {
+	color: var(--black);
+      font-soize:20px;
 }
 /* collection page end */
