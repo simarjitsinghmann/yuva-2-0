@@ -22,6 +22,14 @@
     top: 0;
     z-index: 5; 
   } 
+  .site-nav-dropdown .inner.dropdown .sub-menu-list {
+    width: 0 0 100%;
+    width: 245px;
+}
+    .menuLinks-wrapper {
+    width: 75%;
+    display: block;
+}
 </style>
   <script>
       ///Sticky-header//
@@ -34,6 +42,11 @@
         $("header").removeClass("sticky-header");
       }
     });
+    $(document).ready(function(){
+      $('.menuLinks-wrapper').masonry({
+        itemSelector: '.sub-menu-list'
+      });
+    })
   </script>
 {% endif %}
 
