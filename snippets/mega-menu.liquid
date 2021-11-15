@@ -99,11 +99,11 @@
 
 
 {% endcase %}  
-
+{% if imageMenu != blank %}
 <div class="megaMenuImage-wrapper">
   {{imageMenu}}
 </div>
-
+{% endif %}
 {% endif %}
 {% endfor %}
 {% endif %}
