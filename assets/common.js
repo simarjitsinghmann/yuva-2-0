@@ -457,6 +457,18 @@ $(document).ready(function()
     $('body').removeClass('quickview-open');
   });
   
+  jQuery('[data-main-slider]').owlCarousel({
+	 center: false,
+	 items: 1,
+	 loop: true,
+	 margin: 0,
+	 dots:false,
+	 autoplay:true,
+	 nav:true,
+	 slideSpeed: 500,
+	 autoHeight: false,
+	 autoHeightClass: 'owl-height'
+  });
 });
 
 
