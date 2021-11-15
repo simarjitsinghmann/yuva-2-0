@@ -32,10 +32,6 @@
 </style>
 <script>
 jQuery(document).ready(function() {
-  jQuery(document).on('_PrimaryAction_5wkzw_81', 'click', function(){
-  	alert('am here');
-  });
-
   var slider = jQuery('#slider-{{section.id}}');
 	var options = {
 	 center: false,
@@ -52,7 +48,7 @@ jQuery(document).ready(function() {
 	 navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}}' alt='right-arrow'></span>"]
   }
                       
- slider.owlCarousel(options);
+ //slider.owlCarousel(options);
   slider.on('changed.owl.carousel', function(event) {
 //     alert("asdasdas");
     console.log('nanananana')
