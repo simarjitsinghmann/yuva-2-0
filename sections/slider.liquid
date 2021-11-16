@@ -30,12 +30,39 @@
 		overflow:hidden;
 	}
 </style>
-{% javascript %}
-  var slider = document.getElementById('#slider-{{section.id}}');
-  console.log('#slider-{{section.id}}');
-  return false;
-	
-{% endjavascript %}
+<script>
+jQuery(document).ready(function() {
+  var slider = jQuery('#slider-{{section.id}}');
+	var options = {
+	 center: false,
+	 items: 1,
+	 loop: true,
+	 margin: 0,
+	 dots:{{section.settings.dots}},
+	 autoplay:{{section.settings.rotate}},
+	 nav:{{section.settings.arrows}},
+	 slideSpeed: 500,
+	 autoHeight: false,
+	 autoHeightClass: 'owl-height',
+	 autoPlaySpeed: {{section.settings.rotate_speed | times:1000}},
+	 navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}}' alt='right-arrow'></span>"]
+  }
+                      
+ slider.owlCarousel(options);
+  
+jQuery(document).on('shopify:section:load', function(){
+  alert('load')
+  slider.data('owlCarousel').destroy();
+slider.owlCarousel(options);
+});
+//   slider.on('changed.owl.carousel', function(event) {
+// //     alert("asdasdas");
+//     console.log('nanananana')
+//       slider.data('owlCarousel').destroy();
+// .owlCarousel(options);
+//   });
+});
+</script>
 {% schema %}
 {
   "name": "t:sections.main-slider.name",
