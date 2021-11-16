@@ -1,6 +1,6 @@
 <div id="product-slider" class="banner-product-slider">
   {% if section.blocks.size > 1 %}
-  <div id="slider{{section.id | remove:'-'}}" class="loop owl-carousel owl-theme">
+  <div id="slider-{{section.id}}" class="loop owl-carousel owl-theme">
     {% else %}
     <div class="slider-item">
       {% endif %}
@@ -31,9 +31,9 @@
 	}
 </style>
 <script>
-//   var sliderFunction = 'slider{{section.id | remove:'-'}}';
-var sliderFunction = new Function({
-    let slider = jQuery('body').find("#slider{{section.id | remove:'-'}}");
+jQuery(document).ready(function() {
+  function slider-{{section.id}}(
+    var slider= jQuery(document).find('#slider-{{section.id}}');
     var options = {
     center: false,
     items: 1,
@@ -51,12 +51,20 @@ var sliderFunction = new Function({
 
     slider.owlCarousel(options);
   
-  });
+  )
   
-  sliderFunction();
+  slider-{{section.id}}();
 jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
   console.log(event,slider)
- sliderFunction();
+ slider= jQuery(document).find('#slider-{{section.id}}');
+slider.owlCarousel(options);
+});
+//   slider.on('changed.owl.carousel', function(event) {
+// //     alert("asdasdas");
+//     console.log('nanananana')
+//       slider.data('owlCarousel').destroy();
+// .owlCarousel(options);
+//   });
 });
 </script>
 {% schema %}
