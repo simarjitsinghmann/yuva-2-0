@@ -76,34 +76,41 @@
 {% endif %}
 {% endfor %}
 
+    {% if count < 2 %}  
+      {% if count == 0 %}
+      {% assign limit = 2 %}
+      {% elsif count == 1 %}
+      {% assign limit = 2 %}
+      {% endif %}
 
+      {% for block in section.blocks %}
+      {% assign blockPosition = block.settings.position | plus:0 %}
+      {% if blockPosition == menuIndex %}
 
-{% for block in section.blocks %}
-{% assign blockPosition = block.settings.position | plus:0 %}
-{% if blockPosition == menuIndex %}
+      {% case block.type %}
 
-{% case block.type %}
+      {% when 'image' %}
+      {% for i in (1..limit) %}
+      {% assign image = 'image'|append:i %}
+      {% assign heading = 'heading'|append:i %}
+      {% assign button = 'button'|append:i %}
+      {% assign link = 'link'|append:i %}
+      {% unless block.settings[image] == blank and block.settings[heading] == blank %}
 
-{% when 'image' %}
-{% for i in (1..2) %}
-{% assign image = 'image'|append:i %}
-{% assign heading = 'heading'|append:i %}
-{% assign button = 'button'|append:i %}
-{% assign link = 'link'|append:i %}
-{% unless block.settings[image] == blank and block.settings[heading] == blank %}
+      <div class="sub-menu-list">
+        <div class="menu-image-content">
+          <img src="{{block.settings[image] | img_url:'master'}}" style="width:100%"  class="menu-image">
+          <div class="menu-content">
+            <h4>{{block.settings[heading]}}</h4>
+            <a href="{{block.settings[link]}}" class="link">{{block.settings[button]}}</a>
+          </div>
+        </div>
+      </div>
+      {% endunless %}
+      {% endfor %}
 
-<div class="sub-menu-list">
-  <div class="menu-image-content">
-    <img src="{{block.settings[image] | img_url:'master'}}" style="width:100%"  class="menu-image">
-    <div class="menu-content">
-      <h4>{{block.settings[heading]}}</h4>
-      <a href="{{block.settings[link]}}" class="link">{{block.settings[button]}}</a>
-    </div>
-  </div>
-</div>
-{% endunless %}
-{% endfor %}
+      {% endcase %}
+      {% endif %}
+      {% endfor %}
 
-{% endcase %}
-{% endif %}
-{% endfor %}
+      {% endif %}
