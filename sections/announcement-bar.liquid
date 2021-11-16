@@ -27,6 +27,9 @@
                     border: 1px solid transparent;
                     border-color:{{block.settings.bborder_color}};
                 }
+              .announcement-bar__message p:last-child {
+                margin-left: 5px;
+              }
             </style>
         <div id="announcement{{block.id}}" class="announcement-bar {% if block.type == 'timer' %}hidden{% endif %}" {{ block.shopify_attributes }}>
             {% if section.settings.auto_rotate %}
