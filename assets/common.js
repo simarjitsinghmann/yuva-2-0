@@ -367,12 +367,9 @@ sliders = function(){
   }
 }
 sliders();
-// jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
-//   console.log(event,slider)
-//  slider= jQuery(document).find('#slider-{{section.id}}');
-// slider.owlCarousel(options);
-// });
-document.addEventListener('shopify:section:load shopify:section:unload',sliders);
+jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
+ sliders();
+});
 }());
 
 
