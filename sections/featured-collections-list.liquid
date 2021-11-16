@@ -15,7 +15,7 @@
     {% elsif section.settings.view_limit == 4 %}
     {% assign colWidth = 'col-md-3' %}
     {% endif %}
-    <div class=" owl-carousel owl-theme" id="collectionSlider-{{section.id}}">
+    <div class=" owl-carousel owl-theme" id="collectionSlider-{{section.id}}" data-slider>
       {% for block in section.blocks %}
       {% if block.settings.collection != blank %}
       {% assign collection = block.settings.collection %}
@@ -46,13 +46,13 @@
       <script type="application/json" name="slider-json">
          {
           "center":false,
-          "items":1,
+          "items":2,
           "loop":true,
-          "margin":0,
-         "dots":{{-section.settings.dots-}},
-          "autoplay":{{-section.settings.rotate-}},
-          "nav":{{-section.settings.arrows-}},
-         "slideSpeed":500,
+          "margin":20,
+         "dots":false,
+          "autoplay":false,
+          "nav":true,
+         "slideSpeed":100,
           "autoHeight":false,
           "autoHeightClass":"owl-height",
           "autoPlaySpeed":{{-section.settings.rotate_speed | times:1000-}},
@@ -67,33 +67,6 @@
             font-size:{{section.settings.heading_font }}px;
           }
 </style>
-<script>
-jQuery(document).ready(function() {
-  var nexticon=;
-  var previcon= ;
-  var slider = jQuery('#collectionSlider-{{section.id}}');
-	var options = {
-	 center: false,
-	 items: 2,
-	 loop: true,
-	 margin: 20,
-	 dots:false,
-	 autoplay:false,
-	 nav:true,
-	 slideSpeed: 1000,
-	 autoHeight: false,
-	 autoHeightClass: 'owl-height',
-	 autoPlaySpeed: {{section.settings.rotate_speed | times:1000}},
-     navText: [previcon,nexticon],
-  }
-                      
- slider.owlCarousel(options);
-  slider.on('changed.owl.carousel', function(event) {
-//     alert("asdasdas");
-    slider.owlCarousel(options);
-  });
-});
-</script>
 {% schema %}
 {
   "name": "t:sections.featured-collections-list.name",
