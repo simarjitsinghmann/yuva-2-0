@@ -362,7 +362,7 @@ sliders = function(){
       console.log(slider)
       var html = $(this).parent().find('[name="slider-json"]').html;
 		
-      console.log(slider)
+      console.log(slider,$(this).parent(),$(this).parent().find('[name="slider-json"]'))
       var options = JSON.parse(html);
       slider.owlCarousel(options);
 
