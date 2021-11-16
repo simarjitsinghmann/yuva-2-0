@@ -131,7 +131,9 @@
 {% else %}
 {% assign menuWidth = 'col-md-12' %}
 {% endif %}
-
+{% if menuLinkLists %}
+{% assign colWidth = 'col-md-12' %}
+{% endif %}
 {% unless productMenu == blank and imageMenu == blank %}
 <div class="col-12 {{colWidth}} box-items">        
   
