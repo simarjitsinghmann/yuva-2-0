@@ -7,24 +7,16 @@
         <a class="view-all corner-view" href="{{section.settings.blog.url}}">View all</a></h2>
       	{% endif %}
     </div>
-    {% assign main_articles = section.settings.blog.articles %}
-    {% if main_articles.size > 0 or section.settings.custom %}
+    {% if section.blocks.size > 0  %}
     <div class="blog-multi-slide " role="list">  
       <div class="">
-        <div id="featuredBlog-{{section.id}}" class="blog__post owl-carousel" data-slider>
-          {% if section.settings.custom != true %}              
-          {% for article in main_articles %}
-          {% include 'featured-article-grid' %}
-          {% endfor %}
-          {% else %}
+        <div id="featuredBlog-{{section.id}}" class="blog__post owl-carousel" data-slider>         
           {% for block in section.blocks %}  
-
           {% if block.settings.article != blank %}  
           {% assign article = block.settings.article %}
           {% include 'featured-article-grid' %}
           {% endif %}
           {% endfor %}
-          {% endif %}
         </div>
       	<script type="application/json" name="slider-json">
          {
@@ -71,17 +63,6 @@
         "id": "subheading",
         "default": "Blog post everyday",
         "label": "t:sections.featured-blog.settings.subheading.label"
-      },
-      {
-        "type": "blog",
-        "id": "blog",
-        "label": "t:sections.featured-blog.settings.blog.label"
-      },     
-      {
-        "type": "checkbox",
-        "id": "custom",
-        "default": true,
-        "label": "t:sections.featured-blog.settings.custom.label"
       }
     ],
     "blocks":[
