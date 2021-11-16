@@ -46,7 +46,7 @@
                           {%- assign media = current_variant.featured_media -%}
                          <li>
                             {%-if media.media_type == 'image'-%}
-                            <a href="javascript:void(0)">
+                                <a href="{{media | img_url: 'master'}}" data-fancybox="gallery{{section.id}}">
                                 <img class="responsive-image__image lazyload" src="{{media | img_url: 'master'}}" data-src="" data-sizes="auto" alt="{{ media.preview_image.alt | escape }}">
                             </a>
                             {%-endif-%}
@@ -56,7 +56,7 @@
                             {%- unless media.id == current_variant.featured_media.id -%}
                             <li>
                                 {%-if media.media_type == 'image'-%}
-                                <a href="{{block.settings.image| img_url : 'master'}}" data-fancybox="gallery{{section.id}}">
+                                <a href="{{media | img_url: 'master'}}" data-fancybox="gallery{{section.id}}">
                                     <img class="responsive-image__image lazyload" src="{{media | img_url: 'master'}}" data-src="" data-sizes="auto" alt="{{ media.preview_image.alt | escape }}">
                                 </a>
                                 {%-endif-%}
