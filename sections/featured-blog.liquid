@@ -11,7 +11,7 @@
     {% if main_articles.size > 0 or section.settings.custom %}
     <div class="blog-multi-slide " role="list">  
       <div class="">
-        <div id="featuredBlog-{{section.id}}" class="blog__post owl-carousel" >
+        <div id="featuredBlog-{{section.id}}" class="blog__post owl-carousel" data-slider>
           {% if section.settings.custom != true %}              
           {% for article in main_articles %}
           {% include 'featured-article-grid' %}
@@ -26,36 +26,35 @@
           {% endfor %}
           {% endif %}
         </div>
+      <script type="application/json" name="slider-json">
+         {
+          "center":false,
+          "items":3,
+          "loop":true,
+          "margin":20,
+         "dots":false,
+          "autoplay":false,
+         "slideSpeed":1200,
+          "responsive": {
+              740: {
+                "items": 1
+              },
+              768: {
+                "items": 2,
+               "margin": 15,
+              },
+              1200: {
+                "items": 3
+              }
+            }
+          
+        }
+      </script>
       </div>
     </div>
     {% endif %}
   </div>
 </div>
-<script>
-  $(document).ready(function(){
-    $('#featuredBlog-{{section.id}}').owlCarousel({
-      center: false,
-      items: 3,
-      margin: 0,
-      loop: true,
-      dots:false,
-      slideSpeed: 1200,
-      responsiveClass:true,
-      responsive: {
-          740: {
-            items: 1
-          },
-          768: {
-            items: 2,
-      		margin: 15,
-          },
-          1200: {
-            items: 3
-          }
-        }
-      });
-  });
-</script>
 {% schema %}
 {
     "name": "t:sections.featured-blog.name",
