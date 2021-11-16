@@ -574,7 +574,7 @@ visibility: visible;
 .customer-content  .ct-register { margin: 20px 0; } 
 .top-header { position: relative; box-shadow: 0px 2px 2px rgba(0,0,0,0.05);} 
 .top-header .navbar { width:100%; } 
-.list-menu--inline .nav-item .sub-menu { top:88px; position: absolute; left: 0; right: 0; z-index: 10; padding: 31px 0 47px; max-height: 82vh; overflow-x: hidden; overflow-y: auto; opacity: 0; visibility: hidden; pointer-events: none; -webkit-box-shadow: 0 8px 17px -16px rgb(0 0 0 / 22%); -moz-box-shadow: 0 8px 17px -16px rgb(0 0 0 / 22%); box-shadow: 0 8px 17px -16px rgb(0 0 0 / 22%); background:var(--white); -webkit-transition: opacity .2s ease .1s,visibility .2s ease .1s,top .2s ease .1s;
+.list-menu--inline .nav-item .sub-menu { top:100%; position: absolute; left: 0; right: 0; z-index: 10; padding: 31px 0 47px; max-height: 82vh; overflow-x: hidden; overflow-y: auto; opacity: 0; visibility: hidden; pointer-events: none; -webkit-box-shadow: 0 8px 17px -16px rgb(0 0 0 / 22%); -moz-box-shadow: 0 8px 17px -16px rgb(0 0 0 / 22%); box-shadow: 0 8px 17px -16px rgb(0 0 0 / 22%); background:var(--white); -webkit-transition: opacity .2s ease .1s,visibility .2s ease .1s,top .2s ease .1s;
 -moz-transition: opacity .2s ease .1s,visibility .2s ease .1s,top .2s ease .1s;-o-transition: opacity .2s ease .1s,visibility .2s ease .1s,top .2s ease .1s;transition: opacity .2s ease .1s,visibility .2s ease .1s,top .2s ease .1s;} 
 .site-nav-dropdown .inner.dropdown .sub-menu-list .menu-mb-title span {font-weight: var(--medium); margin-bottom: 15px; font-family: var(--font-family); 
   font-size: var(--med-text);  padding: 0; display: block;} 
@@ -590,9 +590,6 @@ visibility: visible;
 .site-nav-dropdown .inner.dropdown .menuLinks-wrapper .sub-menu-list { margin-bottom:10px; }
  .list-menu--inline .nav-item:hover>.sub-menu { opacity: 1; visibility: visible; pointer-events: auto; border-top: 1px solid #ececec; } 
 .customer-open #dropdown-customer { right: 0; } 
-.nav__header.nav_2 .list-menu--inline .nav-item .sub-menu {
-	top:142px;
-}
 .custom_login { padding: 30px 30px;}
 .minicart-open #mini__cart, .show__similar__products #similar__product, .quickview-open .quick_view { right: 0;} 
 header { background: #fff; width: 100%;} 
