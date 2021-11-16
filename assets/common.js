@@ -358,13 +358,11 @@ function hideOptions(){
 sliders = function(){
   var sliders = $('[data-slider]');
   if(sliders.length > 0){
-    sliders.each(function(index,slider) {
-      console.log(slider)
+    sliders.each(function(index) {
       var html = $(this).parent().find('[name="slider-json"]').html;
-		
-      console.log(slider,$(this).parent(),$(this).parent().find('[name="slider-json"]'))
+      console.log(html)
       var options = JSON.parse(html);
-      slider.owlCarousel(options);
+       $(this).owlCarousel(options);
 
     });
   }
