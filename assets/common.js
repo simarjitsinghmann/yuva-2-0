@@ -361,8 +361,8 @@ sliders = function(){
     sliders.each(function(index) {
       var html = $(this).parent().find('[name="slider-json"]').eq(0).html;
       console.log(html)
-      var options = JSON.parse(html);
-       $(this).owlCarousel(options);
+//       var options = JSON.parse(html);
+//        $(this).owlCarousel(options);
 
     });
   }
