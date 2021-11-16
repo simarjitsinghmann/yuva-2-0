@@ -360,8 +360,9 @@ sliders = function(){
   if(sliders){
     Array.from(sliders).forEach(function(slider) {
       var html = slider.parentNode.querySelectorAll('[name="slider-json"]')[0].textContent;
+      var ssss = slider.parentNode.querySelectorAll('[data-slider]')[0];
 		var slide = slider.node;
-      console.log(slider,event)
+      console.log(slider,ssss)
       var options = JSON.parse(html);
       this.owlCarousel(options);
 
