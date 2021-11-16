@@ -42,14 +42,7 @@
               {% endif %}
             {% when 'review-star' %}
             <div class="ratingbox">
-              <div class="star-rating">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="spr-badge-caption">26 reviews</span>
-              </div>
+              <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
             </div>
             {% when 'price' %}
             <div class="prizebox" data-price-wrapper="">
