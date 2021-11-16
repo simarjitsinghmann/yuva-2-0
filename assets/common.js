@@ -359,10 +359,10 @@ sliders = function(){
 	var sliders = document.querySelectorAll('[data-slider]');
   if(sliders){
   	Array.from(sliders).forEach(function(slider) {
-      var html = slider.parentNode.querySelectorAll('[name="slider-json"]')[0].innerHTML;
+      var html = slider.parentNode.querySelectorAll('[name="slider-json"]')[0].textContent;
       
-      html = JSON.parse(html)
       console.log( slider.parentNode,html)
+      html = JSON.parse(html)
     });
   }
 }
