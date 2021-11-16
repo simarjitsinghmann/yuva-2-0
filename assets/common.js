@@ -358,7 +358,8 @@ function hideOptions(){
 sliders = function(){
   var sliders = $('[data-slider]');
   if(sliders.length > 0){
-    sliders.each(function(slider) {
+    sliders.each(function(index,slider) {
+      console.log(slider)
       var html = slider.parent().find('[name="slider-json"]').text;
 		
       console.log(slider)
