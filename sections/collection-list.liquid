@@ -158,12 +158,6 @@
 .mainColbutton-{{section.id}}:hover svg {
   fill:{{section.settings.hvr_btn_text}} !important ;
 }
-    {% if section.settings.style == 'style2' %}
-    .section-{{section.id}} .left__sided .collection-detail h3,
-    .section-{{section.id}} .left__sided .collection-detail small{
-      color:{{section.settings.text_color}} !important;
-    }
-    {% endif %}
   </style>
 {% schema %}
 {
@@ -304,12 +298,6 @@
     },
     {
       "type": "color",
-      "id": "text_color",
-      "label": "t:sections.collection-list.settings.text_color.label",
-      "default":"#000000"
-    },
-    {
-      "type": "color",
       "id": "btn_bg",
       "label": "t:sections.collection-list.settings.btn_bg.label"
     },
@@ -391,12 +379,6 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.collection-list.blocks.collection.settings.image.label"
-        },
-        {
-          "type": "color",
-          "id": "text_color",
-          "label": "t:sections.collection-list.blocks.collection.settings.text_color.label",
-          "default":"#000000"
         }
       ]
     }
