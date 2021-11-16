@@ -74,7 +74,7 @@
 /**top announcement_bar end**/
 /**header-menu**/
 
-.navbar { position: relative; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-align: center; align-items: center; -ms-flex-pack: justify; justify-content: space-between; padding: 0; margin: 0; } 
+.navbar { position: static; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-align: center; align-items: center; -ms-flex-pack: justify; justify-content: space-between; padding: 0; margin: 0; } 
 #shopify-section-header {will-change: auto;z-index: 999;}
 .header__heading-link { display: inline-block; margin-right: 1rem; padding:0; margin-left:0; } 
 .navbar-toggler:not(:disabled):not(.disabled) { cursor: pointer; } 
@@ -179,10 +179,6 @@
 #nav_style_3 .navigation__header { display: flex; align-items: center; width: 100%; } 
 .navigation__header {
 	position:relative;
-}
-.header-right {
-    position: absolute;
-    right: 0;
 }
 div#nav_style_3 { width: 100%; padding: 5px 0;} 
 #nav_style_3 ul.navbar-nav.list-menu--inline { margin-left: 0; } 
