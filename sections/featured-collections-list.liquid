@@ -34,11 +34,6 @@
           {% endif %}
           <a href="{{collection.url}}" class="link">{{block.settings.btntext}}</a>
         </div>
-        <style>
-          #block-{{block.id}} .list-view-content{
-            background:{{block.settings.overlay_color | color_modify: 'alpha', block.settings.overlay_opacity}};
-          }
-        </style>
       </div>
       {% endif %}
       {% endfor%}
@@ -139,21 +134,6 @@
           "id": "btntext",
           "default": "Shop Now",
           "label": "t:sections.featured-collections-list.blocks.collection.settings.btntext.label"
-        },
-        {
-          "type": "range",
-          "id": "overlay_opacity",
-          "label": "t:sections.featured-collections-list.blocks.collection.settings.overlay_color.label",
-          "default": 0.5,
-          "min": 0,
-          "max": 1,
-          "step": 0.1
-        },
-        {
-          "type": "color",
-          "id": "overlay_color",
-          "label": "t:sections.featured-collections-list.blocks.collection.settings.overlay_color.label",
-          "default":"#000000"
         }
       ]
     }
