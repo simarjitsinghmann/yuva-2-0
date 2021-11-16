@@ -351,16 +351,15 @@ function hideOptions(){
 }
 }
     productVariants();
-    showMultipleOptions();
+    showMultipleOptions(); 
 
 // sliders
 
 sliders = function(){
 	var sliders = document.querySelectorAll('[data-slider]');
-  if(slider){
+  if(sliders){
   	Array.from(sliders).forEach(function(slider) {
-      target = slider.target;
-      var html = target.parentNode.querySelectorAll('[type="application/json"][name="variant-json"]').textContent;
+      var html = slider.parentNode.querySelectorAll('[type="application/json"][name="variant-json"]').textContent;
       html = JSON.parse(html)
       console.log(slider,html)
     });
