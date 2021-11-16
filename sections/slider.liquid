@@ -31,7 +31,7 @@
 	}
 </style>
 <script>
-jQuery(document).ready(function() {
+jQuery(document).on('shopify:section:load', function(){
   var slider = jQuery('#slider-{{section.id}}');
 	var options = {
 	 center: false,
