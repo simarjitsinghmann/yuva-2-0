@@ -2779,11 +2779,13 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     padding: 20px 10px;
     width: 100%;
 }
-a.link {
+.collection-list-view-card a.link {
   	font-size:14px;
-    color: #fff;
-    border-bottom: 1px solid;
   	text-decoration:none;
+    background: var(--white);
+    padding: 7px 20px;
+    color: var(--black);
+    border: 0px;
 }
 /* featured collection list end */
 /* collection page start */
