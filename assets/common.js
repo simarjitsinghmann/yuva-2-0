@@ -229,7 +229,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
   
 //   Variant Change
   
-  productVariants=function() {
+  	productVariants=function() {
     var productOptions = document.getElementsByClassName('productOption');
     if(productOptions){
       var options=[];
@@ -266,7 +266,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             if(priceContainer){
               priceContainer.innerHTML = priceHtml;
             }
-            
+
             var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
             var baseUrl = window.location.pathname;
             if(baseUrl.indexOf('/products/' > -1)){
@@ -321,7 +321,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
   }
 }
 
- showMultipleOptions = function(){
+ 	showMultipleOptions = function(){
   var showOptions = document.getElementsByClassName('showOptions');
   if(showOptions){		
     Array.from(showOptions).forEach(function(option) {
@@ -350,8 +350,14 @@ function hideOptions(){
   });
 }
 }
-productVariants();
-showMultipleOptions();
+    productVariants();
+    showMultipleOptions();
+
+// sliders
+
+sliders = function(){
+	var slider = document.querySelectorAll('[data-slider]');
+}
 }());
 
 
