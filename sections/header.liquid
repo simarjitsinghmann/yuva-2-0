@@ -33,6 +33,7 @@
 </style>
   <script>
       ///Sticky-header//
+    $('body').addClass('{{section.settings.header_style}}')
     $(window).scroll(function () {
       if($(window).scrollTop()>150){
         $(".top-header").addClass("sticky-header");
