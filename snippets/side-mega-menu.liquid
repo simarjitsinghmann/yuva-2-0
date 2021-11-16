@@ -55,7 +55,7 @@
 {% if blockPosition == menuIndex %}
 
 {% case block.type %}
-{% when 'collection' %}
+{% when 'product' %}
 {% for i in (1..2) %}
 {% assign product = 'product'|append:i %}
 {% unless block.settings[product] == blank  %}
