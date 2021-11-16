@@ -56,47 +56,26 @@
 
 {% case block.type %}
 {% when 'collection' %}
+{% for i in (1..2) %}
+{% assign product = 'product'|append:i %}
+{% unless block.settings[product] == blank  %}
+{% assign hasProduct = true %}
+{% assign count = count | plus:1 %}
 
-{% for i in (1..5) %}
-  {% assign collection = 'collection' | append:i %}
-  {% if block.settings[collection] != blank %}
-    {% assign collection = block.settings[collection] %}
-    {% if block.settings.show_products %}			
-      {% if block.settings.show_product_list %}
-        {%- if collection.products_count > 0 -%}
-       
-        {% endif %}
-	 {% else %}
-          {% for product in collection.products limit:block.settings.products %}
-          <li>
-            <div class="row">
-            {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true ,hideColors:true%}
-            </div>
-		</li>
-          {% endfor %}
-
-        {% endif %}
-      {% else %}
-      <li>
-      <div class="menu-image-content">
-        <a href="{{collection.url}}" >
-          {% if collection.image %}
-          <img src="{{ collection | img_url: 'master' }}"  alt="{{ collection.title | escape }}" class="menu-image" style="width:100%"/>
-          {% else %}
-          <img src="{{ collection.products.first | img_url: 'master' }}"  alt="{{ collection.title | escape }}" class="menu-image" style="width:100%" />
-          {% endif %}
-          <div class="menu-content">
-            <h4>{{collection.title}}</h4>
-          </div>
-        </a>
-      </div>
-    </li>
-    {% endif %}
-  {% endif %}
+<li>
+  <div class="row">
+    {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true ,hideColors:true%}
+  </div>
+</li>
+{% endunless %}
 {% endfor %}
-{% endcase %}
+
+
+
+{% endcase %}  
 {% endif %}
 {% endfor %}
+
 
 
 {% for block in section.blocks %}
