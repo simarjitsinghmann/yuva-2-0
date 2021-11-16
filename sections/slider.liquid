@@ -51,7 +51,8 @@ jQuery(document).ready(function() {
  slider.owlCarousel(options);
   
 jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
-  console.log(event)
+  console.log(event,slider)
+ slider= jQuery(document).find('#slider-{{section.id}}');
 slider.owlCarousel(options);
 });
 //   slider.on('changed.owl.carousel', function(event) {
