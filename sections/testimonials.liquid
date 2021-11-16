@@ -12,7 +12,7 @@
           </div>
           {% if section.blocks.size > 0 %}
             <div class="testimonial-slider ">
-                <div id="testimonials-{{section.id}}" class="testimonial-slide owl-carousel owl-theme" data-slider>
+                <div id="testimonials-{{section.id}}" class="testimonial-slide owl-carousel owl-theme">
                     {% for block in section.blocks %}
                     <div class="item" {{ block.shopify_attributes }}>
                         <div class="slider-content">
@@ -50,9 +50,9 @@
             <div class="col-sm-12 col-md-12 col-lg-9">
                 <div class="client-slider">
                   <div class="testimonial-slider testimonial-variation2">
-                      <div id="testimonials-{{section.id}}" class="testimonial-client-slide owl-carousel owl-theme" data-slider>
+                      <div id="testimonials-{{section.id}}" class="testimonial-client-slide owl-carousel owl-theme" >
                         {% for block in section.blocks %}
-                        <div class="item" {{ block.shopify_attributes }}>
+                        <div class="item">
                             <div class="slider-item">
                               <div class="slider-box">
                                 {% if block.settings.image != blank %}
@@ -70,7 +70,6 @@
                         </div>
                         {% endfor %}
                       </div>
-                    
                   </div>
                 </div>
             </div>
@@ -78,52 +77,50 @@
       </div>
     {% endif %} 
     </div>
-  <script type="application/json" name="slider-json">
-                     {
-                      "center":true,
-                      "items":3,
-                      "loop":true,
-                      "margin":30,
-                     "dots":{{section.settings.dots}},
-                      "slideSpeed": 1200,
-                      "paginationSpeed": 500,
-                      "autoplay":{{section.settings.rotate}},
-                      "nav":{{section.settings.arrows}},
-                     "slideSpeed":100,
-                      "autoHeight":false,
-                      "autoPlaySpeed":1000,
-            			"responsiveClass":true,
-                       "navText":[
-                          "<svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M15.526 18.966L8.559 12l6.967-6.967\"></path></svg>",
-                          "<svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M8.474 18.966L15.44 12 8.474 5.033\"></path></svg>"
-                       ],
-                      "responsive": {
-                       "200": {
-                            "items": 1,
-                            "center": false,
-                            "autoplay": true,
-                            "autoplayTimeout": 4000,
-                            "autoplaySpeed": 3000,
-                            "autoplayHoverPause": true
-                          },
-                          "768": {
-                              "items": 2,
-                              "center": false,
-                              "margin": 15
-                          },
-                          "1200": {
-                              "items": 3
-                          }
-                      }
-                    }
-  </script>
 </div>
 <style>
     #shopify-section-{{section.id}}{
       background-color:{{section.settings.bgcolor}};
     }
   </style>
-
+  <script>
+    jQuery(document).ready(function($) {
+      var previcon='<svg width="100%" viewBox="0 0 24 24"> <path d="M12 0 9.87 2.11l8.35 8.36H0v3h18.22l-8.35 8.36L12 23.94 24 12z" focusable="false"></path> </svg>';
+      var nexticon='<svg width="100%" viewBox="0 0 24 24"> <path d="M12 0 9.87 2.11l8.35 8.36H0v3h18.22l-8.35 8.36L12 23.94 24 12z" focusable="false"></path> </svg>';
+        $('#testimonials-{{section.id}}').owlCarousel({
+            center: true,
+            items: 3,
+            loop: true,
+            margin: 30,
+            dots:{{section.settings.dots}},
+            slideSpeed: 1200,
+            paginationSpeed: 500,
+          autoplay:{{section.settings.rotate}},
+          autoPlaySpeed: 500,
+            responsiveClass:true,
+            nav:true,
+            navText: [previcon,nexticon],
+            responsive: {
+             200: {
+                  items: 1,
+                  center: false,
+                  autoplay: true,
+                  autoplayTimeout: 4000,
+                  autoplaySpeed: 3000,
+                  autoplayHoverPause: true,
+                },
+                768: {
+                    items: 2,
+          			center: false,
+          			margin: 15,
+                },
+                1200: {
+                    items: 3
+                }
+            }
+        });
+    });
+  </script> 
 {% schema %}
 {
   "name": "t:sections.testimonials.name",
