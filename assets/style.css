@@ -540,7 +540,6 @@ letter-spacing: 1.2px;
 .similar_options { position: absolute; top: 14px; right: 14px; cursor:pointer; z-index:1; } 
 .similar_options .vs-icon { width: 30px; height: 30px; background: var(--white); display: inline-block; text-align: center; display: flex; align-content: center; justify-content: center; } 
 .similar_options svg { fill: #1f2a2e; width: 17px; } 
-.text-nowrap.similar { font-size: var(--small-text); padding: 0 6px 0 6px; color: var(--white); font-weight: var(--medium); text-transform: capitalize; display: inline-block; visibility: hidden; position: absolute; top: 0px; width: 94px; background: var(--theme-color); display: flex; justify-content: center; align-items: center; border-radius: 60px 0 0 60px; right: 40px; } 
 .similar_options:hover .vs-icon { background: var(--black); } 
 .similar_options:hover svg { fill:var(--white); } 
 .similar_options:hover .text-nowrap.similar { transition: 0.3s; transform: translateX(1px); width: 86px; right: 30px; top: 0; visibility: visible; opacity:1; height: 100%;} 
