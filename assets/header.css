@@ -70,7 +70,6 @@
     transform: translateX(-100%); 
     }
 }
-
 /**top announcement_bar end**/
 /**header-menu**/
 
@@ -87,8 +86,9 @@
 .navbar-expand-md .nav-item .list-menu__item { 
       position: relative;
       font-family: var(--font-family); 
-      padding: 28px 20px;
+      padding: 28px 15px;
       font-size:13px; 
+      margin: 0 8px;
       color:var(--black); 
       line-height:32px; 
       letter-spacing:0.8px; 
