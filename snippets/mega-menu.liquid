@@ -49,7 +49,7 @@
                 {% unless block.settings[product] == blank  %}
 					{% assign hasProduct = true %}
                   {% assign count = count | plus:1 %}
-                  <div class="sub-menu-list">
+                  <div class="sub-menu-list row">
                     {% include 'product-grid' product:block.settings[product] ,hide_options:true,hideRelated:true,hideQuickView:true %}
                   </div>
                 {% endunless %}
