@@ -52,7 +52,9 @@ jQuery(document).ready(function() {
   
 jQuery(document).on('shopify:section:load', function(){
   alert('load')
+  setTimeoout(function(){
 slider.owlCarousel(options);
+    },500)
 });
 //   slider.on('changed.owl.carousel', function(event) {
 // //     alert("asdasdas");
