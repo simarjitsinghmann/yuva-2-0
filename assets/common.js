@@ -359,10 +359,9 @@ sliders = function(){
   var sliders = $('[data-slider]');
   if(sliders.length > 0){
     sliders.each(function(index) {
-      var html = $(this).parent().find('[name="slider-json"]').textContent;
-      console.log($(this).parent(),$(this).parent().find('script[name="slider-json"]')[0],html)
-//       var options = JSON.parse(html);
-//        $(this).owlCarousel(options);
+      var html = $(this).parent().find('[name="slider-json"]')[0].textContent;
+      var options = JSON.parse(html);
+       $(this).owlCarousel(options);
 
     });
   }
