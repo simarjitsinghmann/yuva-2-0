@@ -25,7 +25,7 @@
     </div>
   </div>
   <script type="application/json" name="slider-json">
-        var options = {
+         JSON.stringify({
           center: false,
           items: 1,
           loop: true,
@@ -38,7 +38,7 @@
           autoHeightClass: 'owl-height',
           autoPlaySpeed: {{section.settings.rotate_speed | times:1000}},
           navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}}' alt='right-arrow'></span>"]
-        }
+        });
       </script>
   <style>
 	.slider-item{
