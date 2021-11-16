@@ -6,6 +6,7 @@
    		<style>
           .top-header .nav__header{
             background:{{section.settings.menu_bgcolor}} !important;
+            color:{{section.settings.menu_textcolor}} !important;
           }
 		</style>
     {% when 'header3' %}
@@ -181,7 +182,14 @@
       "id": "menu_bgcolor",
       "default": "#f7f7f7",
       "label": "t:sections.header.settings.menu_bgcolor.label",
-      "info": "t:sections.header.settings.menu_position.info"
+      "info": "t:sections.header.settings.menu_bgcolor.info"
+    },
+    {
+      "type": "color",
+      "id": "menu_textcolor",
+      "default": "#000000",
+      "label": "t:sections.header.settings.menu_textcolor.label",
+      "info": "t:sections.header.settings.menu_textcolor.info"
     },
     {
       "type": "checkbox",
