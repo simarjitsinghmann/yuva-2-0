@@ -184,8 +184,10 @@
 /**nav-style2-End**/
 /**nav-style3**/
 #nav_style_3 .navigation__header { display: flex; align-items: center; width: 100%; } 
-.navigation__header {
-	position:relative;
+.navigation__header {position:relative;}
+.header_2 .header-right {
+    position: absolute;
+    right: 0;
 }
 div#nav_style_3 { padding: 5px 0;} 
 #nav_style_3 ul.navbar-nav.list-menu--inline { margin-left: 0; } 
