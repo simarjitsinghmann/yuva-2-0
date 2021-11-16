@@ -21,9 +21,9 @@
       {% assign collection = block.settings.collection %}
       <div class="collection-list-view-card" id="block-{{block.id}}"  {{ block.shopify_attributes }}>
         {% if block.settings.image != blank %}
-        <img src="{{ block.settings.image | img_url:'500x500'}}" />
+        <img src="{{ block.settings.image | img_url:'master'}}" />
         {% else %}
-        <img src="{{ collection.featured_image | img_url:'500x500'}}" />
+        <img src="{{ collection.featured_image | img_url:'master'}}" />
         {% endif %}
 
         <div class="list-view-content">          
