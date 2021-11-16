@@ -359,7 +359,7 @@ sliders = function(){
   var sliders = $('[data-slider]');
   if(sliders.length > 0){
     sliders.each(function(index) {
-      var html = $(this).parent().find('[name="slider-json"]').eq(0).html;
+      var html = $(this).parent().find('[name="slider-json"]').eq(0).textContent;
       console.log($(this).parent(),$(this).parent().find('script[name="slider-json"]'),html)
 //       var options = JSON.parse(html);
 //        $(this).owlCarousel(options);
