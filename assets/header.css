@@ -567,7 +567,8 @@ visibility: visible;
 .site-nav-dropdown .inner.dropdown .sub-menu-list .site-nav-dropdown li a { letter-spacing: 0.5px;color: var(--black); text-decoration: none; font-weight: var(--normal); 
   font-family: var(--font-family); font-size: var(--font-normal); padding: 0px 0 10px; display: block; } 
 .site-nav-dropdown .inner.dropdown .sub-menu-list .site-nav-dropdown li a:hover { color: var(--theme-color); } 
-.site-nav-dropdown .inner.dropdown { display: flex; width: 100%; flex-wrap: wrap; justify-content: flex-start;} 
+.site-nav-dropdown .inner.dropdown { display: flex; width: 100%; flex-wrap: wrap; justify-content: flex-start;}
+.site-nav-dropdown .col-md-3 { order: 2;}
 .site-nav-dropdown .inner.dropdown .sub-menu-list {	flex: 0 0 16.66%;}
 .site-nav-dropdown .inner.dropdown .sub-menu-list.no_space_around_image {
    flex: 0 0 33.33%;-ms-flex: 0 0 33.33%;display: flex;justify-content: flex-end;}
