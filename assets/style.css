@@ -2749,14 +2749,8 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
 }
 .collection-list-view-card {
     position: relative;
-/*     max-height: 480px;
-  	min-height: 480px; */
   	height:100%;
-/*     display: flex;
-    justify-content: center;
-    align-items: center; */
     overflow: hidden;
-/*   	margin-bottom:30px; */
   background-color: var(--gray);
 }
 .collection-list-view-card h2 {
@@ -2776,8 +2770,10 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     text-align: center;
     z-index: 1;
     background-color: #7e353573;
-    padding: 20px 10px;
+    padding: 30px;
     width: 100%;
+      background: linear-gradient(
+0deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
 }
 .collection-list-view-card a.link {
   	font-size:14px;
