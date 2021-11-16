@@ -850,7 +850,8 @@ object-fit: cover; }
 }
 .testimonial-slider .owl-theme .owl-dots { margin-top:20px!important}
 .testimonial-slider .owl-dots .owl-dot span {
-	background: var(--gray);
+	background: transparent;
+  	border: 1px solid var(--black);
 }
 .testimonial-slider .owl-theme .owl-dots .owl-dot.active span, .testimonial-slide.owl-theme .owl-dots .owl-dot:hover span {
     background: var(--black);
