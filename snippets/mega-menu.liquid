@@ -55,11 +55,7 @@
               {% endfor %}
             {%- endcapture -%}
 
-            {% if count > 0 %}
-              <div class="megaMenuProduct-wrapper">
-                {{productMenu}}
-              </div>
-            {% endif %}
+           
 
         {% endcase %}  
       {% endif %}
@@ -85,6 +81,7 @@
               {% assign button = 'button'|append:i %}
               {% assign link = 'link'|append:i %}
               {% unless block.settings[image] == blank and block.settings[heading] == blank %}
+				{% assign count = count | plus:1 %}
               <div class="sub-menu-list mega-images">
                 <div class="menu-image-content">
                   <img src="{{block.settings[image] | img_url:'master'}}"  class="menu-image">
@@ -107,6 +104,31 @@
           {% endif %}
       {% endfor %}
     {% endif %}
+
+
+{% if count == 2 %}
+{% assign colWidth = 'col-md-5' %}
+{% assign menuWidth = 'col-md-7' %}
+{% elsif count == 1 %}
+{% assign colWidth = 'col-md-3' %}
+{% assign menuWidth = 'col-md-9' %}
+{% else %}
+{% assign menuWidth = 'col-md-12' %}
+{% endif %}
+{% unless productMenu == blank and imageMenu == blank %}
+<div class="col-12 {{colWidth}}">        
+  
+  <div class="megaMenuContentWrapper">
+    <div class="row">
+       {% if count > 0 %}
+              <div class="megaMenuProduct-wrapper col-12 col-md-6">
+                {{productMenu}}
+              </div>
+            {% endif %}
+    </div>
+  </div>
+</div>
+{% endunless %}
 {% endif %}
 
 
