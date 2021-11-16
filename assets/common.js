@@ -360,7 +360,7 @@ sliders = function(){
   if(sliders.length > 0){
     sliders.each(function(index,slider) {
       console.log(slider)
-      var html = slider.parent().find('[name="slider-json"]').text;
+      var html = $(this).parent().find('[name="slider-json"]').html;
 		
       console.log(slider)
       var options = JSON.parse(html);
