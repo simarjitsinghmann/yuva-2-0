@@ -361,6 +361,7 @@ sliders = function(){
     Array.from(sliders).forEach(function(slider) {
       var html = slider.parentNode.querySelectorAll('[name="slider-json"]')[0].textContent;
 		var slide = slider.target;
+      console.log(slider,slide)
       var options = JSON.parse(html);
       slide.owlCarousel(options);
 
