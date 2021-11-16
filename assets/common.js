@@ -356,17 +356,24 @@ function hideOptions(){
 // sliders
 
 sliders = function(){
-	var sliders = document.querySelectorAll('[data-slider]');
+  var sliders = document.querySelectorAll('[data-slider]');
   if(sliders){
-  	Array.from(sliders).forEach(function(slider) {
+    Array.from(sliders).forEach(function(slider) {
       var html = slider.parentNode.querySelectorAll('[name="slider-json"]')[0].textContent;
-      
-      html = JSON.parse(html)
-      console.log( slider.parentNode,html)
+
+      var options = JSON.parse(html);
+      slider.owlCarousel(options);
+
     });
   }
 }
 sliders();
+// jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
+//   console.log(event,slider)
+//  slider= jQuery(document).find('#slider-{{section.id}}');
+// slider.owlCarousel(options);
+// });
+document.addEventListener('shopify:section:load shopify:section:unload',sliders);
 }());
 
 
