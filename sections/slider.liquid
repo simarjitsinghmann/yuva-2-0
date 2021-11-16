@@ -50,11 +50,9 @@ jQuery(document).ready(function() {
                       
  slider.owlCarousel(options);
   
-jQuery(document).on('shopify:section:load shopify:section:unload', function(){
-  console.log('load',slider,options)
-  setTimeoout(function(){
+jQuery(document).on('shopify:section:load', function(){
+  alert('load')
 slider.owlCarousel(options);
-    },2000)
 });
 //   slider.on('changed.owl.carousel', function(event) {
 // //     alert("asdasdas");
