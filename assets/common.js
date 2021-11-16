@@ -360,8 +360,9 @@ sliders = function(){
   if(sliders){
   	Array.from(sliders).forEach(function(slider) {
       var html = slider.parentNode.querySelectorAll('[name="slider-json"]').textContent;
-      html = JSON.parse(html)
+      
       console.log(slider,html)
+//       html = JSON.parse(html)
     });
   }
 }
