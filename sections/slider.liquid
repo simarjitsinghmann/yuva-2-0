@@ -30,7 +30,7 @@
 		overflow:hidden;
 	}
 </style>
-<script>
+{% javascript %}
 jQuery(document).ready(function() {
   var slider = jQuery('#slider-{{section.id}}');
 	var options = {
@@ -51,7 +51,7 @@ jQuery(document).ready(function() {
  slider.owlCarousel(options);
   
 jQuery(document).on('shopify:section:load', function(){
-  
+  alert
     slider.owlCarousel(options);
 });
 //   slider.on('changed.owl.carousel', function(event) {
@@ -60,7 +60,7 @@ jQuery(document).on('shopify:section:load', function(){
 //     slider.owlCarousel(options);
 //   });
 });
-</script>
+{% endjavascript %}
 {% schema %}
 {
   "name": "t:sections.main-slider.name",
