@@ -358,9 +358,9 @@ function hideOptions(){
 sliders = function(){
   var sliders = document.querySelectorAll('[data-slider]');
   if(sliders){
-    Array.from(sliders).forEach(function(slider,event) {
+    Array.from(sliders).forEach(function(slider) {
       var html = slider.parentNode.querySelectorAll('[name="slider-json"]')[0].textContent;
-		var slide = slider.Node;
+		var slide = slider.node;
       console.log(slider,event)
       var options = JSON.parse(html);
       this.owlCarousel(options);
