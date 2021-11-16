@@ -51,7 +51,7 @@ jQuery(document).ready(function() {
  slider.owlCarousel(options);
   
 jQuery(document).on('shopify:section:load', function(){
-  alert('load')
+  console.log('load',slider,options)
   setTimeoout(function(){
 slider.owlCarousel(options);
     },500)
