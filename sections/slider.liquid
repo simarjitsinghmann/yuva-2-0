@@ -30,10 +30,12 @@
 		overflow:hidden;
 	}
 </style>
+{% javascript %}
   var slider = document.getElementById('#slider-{{section.id}}');
   console.log('#slider-{{section.id}}');
   return false;
 	
+{% endjavascript %}
 {% schema %}
 {
   "name": "t:sections.main-slider.name",
