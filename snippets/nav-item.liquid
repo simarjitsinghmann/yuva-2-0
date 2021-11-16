@@ -23,14 +23,9 @@
     <div class="site-nav-dropdown">
       <div class="container">
         <div class="row">    
-          <div class="col-12 col-md-3">        
-            {% assign test = false %}
-            <div class="megaMenuContentWrapper {{test}}">
               {%- if menuDropdown -%}
               {% include 'mega-menu' %}
               {%- endif -%}
-            </div>
-          </div>
           <div class="col-12 col-md-9 col5 inner dropdown {{test}}">
             <div class="menuLinks-wrapper">
               {%- for childlink in link.links -%}
