@@ -281,7 +281,7 @@
 .header_3 .side-menu .inner-side ul li.dropdown .drop-dwn-open { padding: 20px 0 0; display: none; } 
 .header_3 .side-menu .inner-side ul { padding: 0; margin: 0; list-style: none; flex-direction: column; width: 100%; } 
 .header_3 button.navbar-toggler { background: transparent; position: relative; height: 22px; } 
-.header_3 button.navbar-toggler span.navbar-toggler-icon, #nav_style_4 button.navbar-toggler span.navbar-toggler-icon:before, #nav_style_4 button.navbar-toggler span.navbar-toggler-icon:after { width: 27px; height: 2px; position:relative; } 
+.header_3 button.navbar-toggler span.navbar-toggler-icon, .header_3 button.navbar-toggler span.navbar-toggler-icon:before, .header_3 button.navbar-toggler span.navbar-toggler-icon:after { width: 27px; height: 2px; position:relative; } 
 .header_3 button.navbar-toggler span.navbar-toggler-icon{ position: relative; background: #2f2f2f; transition: all 0s .1s,width 150ms linear; display: block; } 
 .header_3 button.navbar-toggler span.navbar-toggler-icon:before, #nav_style_4 button.navbar-toggler span.navbar-toggler-icon:after { content: ""; position: absolute; bottom: 7px; left: 0; background: #2f2f2f; transition: bottom .3s .1s cubic-bezier(.23, 1, .32, 1),transform .3s cubic-bezier(.23, 1, .32, 1),width 150ms linear,background 150ms linear; } 
 .header_3 button.navbar-toggler span.navbar-toggler-icon:after{ top: 7px; bottom: auto; } #nav_style_4 button.navbar-toggler:hover span.navbar-toggler-icon::before { width: 17px; } 
