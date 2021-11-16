@@ -27,6 +27,7 @@
           {% assign menuWidth = 'col-md-12' %}
               {%- if menuDropdown -%}
               {% include 'mega-menu' %}
+          	{% assign menuLinkLists = true %}
               {%- endif -%}
           {% if menuLinkLists %}
           <div class="col-12 {{menuWidth}} col5 inner dropdown {{test}}">
