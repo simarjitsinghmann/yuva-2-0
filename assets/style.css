@@ -544,7 +544,9 @@ letter-spacing: 1.2px;
 .similar_options:hover .vs-icon { background: var(--black); } 
 .similar_options:hover svg { fill:var(--white); } 
 .similar_options:hover .text-nowrap.similar { transition: 0.3s; transform: translateX(1px); width: 86px; right: 30px; top: 0; visibility: visible; opacity:1; height: 100%;} 
-.text-nowrap.similar { font-size: 10px; padding: 0 4px 0 10px; color: var(--white); font-weight: var(--medium); text-transform: capitalize; visibility: hidden; position: absolute; top: 0px; height: 100%; background: var(--theme-color); display: flex; justify-content: center; align-items: center; border-radius: 60px 0 0 60px; right: 0; transform: translateX(-10px); }
+.text-nowrap.similar { font-size: 10px; padding: 0 4px 0 10px; color: var(--white); font-weight: var(--medium); text-transform: capitalize; 
+  visibility: hidden; position: absolute; top: 0px; height: 100%; background: var(--theme-color); 
+    display: flex; justify-content: center; align-items: center;  right: 0; transform: translateX(-10px); }
 .shop__options { position: absolute; bottom: 0px; text-align: center; left: 0; right: 0; z-index: 1; opacity:0; top:auto;-webkit-transition: all .3s linear;-moz-transition: all .3s linear;-ms-transition: all .3s linear;-o-transition: all .3s linear;transition: all .3s linear;} 
 .card-wrapper-img {
     position: relative;
