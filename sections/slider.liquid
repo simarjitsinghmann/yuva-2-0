@@ -2,7 +2,7 @@
   {% if section.blocks.size > 1 %}
   <div id="slider-{{section.id}}" class="loop owl-carousel owl-theme" data-slider>
     {% else %}
-    <div class="slider-item">
+    <div class="slider-item" data-slider>
       {% endif %}      
       {% for block in section.blocks %}
       {% case block.type %}
@@ -23,7 +23,6 @@
       {% endcase %}
       {% endfor %}
     </div>
-  </div>
   <script type="text/javascript" name="slider-json">
          JSON.stringify({
           center: false,
@@ -40,6 +39,7 @@
           navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}}' alt='right-arrow'></span>"]
         });
       </script>
+  </div>
   <style>
 	.slider-item{
 		position:relative;
