@@ -361,7 +361,7 @@ sliders = function(){
   	Array.from(sliders).forEach(function(slider) {
       var html = slider.parentNode.querySelectorAll('[name="slider-json"]').textContent;
       
-      console.log(slider,html)
+      console.log( slider.parentNode,html)
 //       html = JSON.parse(html)
     });
   }
