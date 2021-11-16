@@ -1,6 +1,6 @@
 <div id="product-slider" class="banner-product-slider">
   {% if section.blocks.size > 1 %}
-  <div id="slider-{{section.id | remove:'-'}}" class="loop owl-carousel owl-theme">
+  <div id="slider{{section.id | remove:'-'}}" class="loop owl-carousel owl-theme">
     {% else %}
     <div class="slider-item">
       {% endif %}
@@ -33,7 +33,7 @@
 <script>
   var sliderFunction = 'slider{{section.id | remove:'-'}}';
  var sliderFunction = new Function(
-    let slider = jQuery(document).find("#slider-{{section.id | remove:'-'}}");
+    let slider = jQuery('body').find("#slider{{section.id | remove:'-'}}");
     var options = {
     center: false,
     items: 1,
