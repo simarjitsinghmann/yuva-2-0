@@ -360,7 +360,7 @@ sliders = function(){
   if(sliders.length > 0){
     sliders.each(function(index) {
       var html = $(this).parent().find('[name="slider-json"]').eq(0).html;
-      console.log($(this).parent(),$(this).parent().find('[name="slider-json"]'),html)
+      console.log($(this).parent(),$(this).parent().find('script[name="slider-json"]'),html)
 //       var options = JSON.parse(html);
 //        $(this).owlCarousel(options);
 
