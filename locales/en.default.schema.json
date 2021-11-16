@@ -49,11 +49,11 @@
             },
             "bgcolor2": {
               "label": "Background Color 2",
-              "info": "This works with Background Style option Gradient Colors"
+              "info": "Only Applicable with Background Style option Gradient Colors"
             },
             "bgimage": {
               "label": "Background Image",
-              "info": "This works with Background Style option Image"
+              "info": "Only Applicable with with Background Style option Image"
             },
             "fontcolor": {
               "label": "Text Color"
@@ -79,14 +79,14 @@
           "name": "Timer Announcement",
           "settings": {
             "first_text": {
-              "label": "Text 1"
+              "label": "Text before Countdown"
             },
             "date": {
-              "label": "Launch Date",
+              "label": "Countdown Date",
               "info": "Date Format should be DD\/MM\/YYYY and should be future date"
             },
             "last_text": {
-              "label": "Text 2"
+              "label": "Text after Countdown"
             },
             "icon": {
               "none": {
