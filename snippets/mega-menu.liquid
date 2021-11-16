@@ -122,12 +122,12 @@
   <div class="megaMenuContentWrapper">
     <div class="row">
        {% if productMenu != blank %}
-              <div class="megaMenuProduct-wrapper col-12 col-md-6">
+              <div class="megaMenuProduct-wrapper col-12 {% if hasProduct and hasImage %}col-md-6{% else %}col-md-12{% endif %}">
                 {{productMenu}}
               </div>
             {% endif %}
        {% if imageMenu != blank %}
-              <div class="megaMenuProduct-wrapper col-12 col-md-6">
+              <div class="megaMenuProduct-wrapper col-12 {% if hasProduct and hasImage %}col-md-6{% else %}col-md-12{% endif %}">
                 {{imageMenu}}
               </div>
             {% endif %}
