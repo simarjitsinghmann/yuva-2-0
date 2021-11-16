@@ -356,15 +356,14 @@ function hideOptions(){
 // sliders
 
 sliders = function(){
-  var sliders = document.querySelectorAll('[data-slider]');
-  if(sliders){
-    Array.from(sliders).forEach(function(slider) {
-      var html = slider.parentNode.querySelectorAll('[name="slider-json"]')[0].textContent;
-      var ssss = slider.parentNode.querySelectorAll('[data-slider]')[0];
-		var slide = slider.node;
-      console.log(slider,ssss)
+  var sliders = $('[data-slider]');
+  if(sliders.length > 0){
+    sliders.each(function(slider) {
+      var html = slider.parent().find('[name="slider-json"]').text;
+		
+      console.log(slider)
       var options = JSON.parse(html);
-      ssss.owlCarousel(options);
+      slider.owlCarousel(options);
 
     });
   }
