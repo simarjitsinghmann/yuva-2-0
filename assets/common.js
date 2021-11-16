@@ -356,8 +356,16 @@ function hideOptions(){
 // sliders
 
 sliders = function(){
-	var slider = document.querySelectorAll('[data-slider]');
+	var sliders = document.querySelectorAll('[data-slider]');
+  if(slider){
+  	Array.from(sliders).forEach(function(slider) {
+      var html = slider.parentNode.querySelectorAll('[type="application/json"][name="variant-json"]').textContent;
+      html = JSON.parse(html)
+      console.log(slider,html)
+    });
+  }
 }
+sliders();
 }());
 
 
