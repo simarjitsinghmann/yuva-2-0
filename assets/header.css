@@ -84,9 +84,18 @@
 .dropdown, .dropleft, .dropright, .dropup { position: relative; }
 .mr-auto, .mx-auto { margin-right: auto !important; } 
 .navbar-nav { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; padding-left: 0; margin-bottom: 0; list-style: none; margin-left: 47px; } 
-.navbar-expand-md .nav-item .list-menu__item { position: relative;font-family: var(--font-family); letter-spacing: .15em;padding-right: 18px; padding-left: 18px; 
-  padding-bottom: 28px;padding-top: 28px; font-size:13px; color:var(--black); line-height:32px; letter-spacing:0.8px; text-decoration:none;
-    font-weight:var(--medium); text-transform:uppercase;} 
+.navbar-expand-md .nav-item .list-menu__item { 
+      position: relative;
+      font-family: var(--font-family); 
+      padding: 18px 25px;
+      font-size:13px; 
+      color:var(--black); 
+      line-height:32px; 
+      letter-spacing:0.8px; 
+      text-decoration:none;
+      font-weight:var(--medium);
+      text-transform:uppercase;
+} 
 .nav_style_3 .navbar-nav{
 	margin-left:0;
 }
