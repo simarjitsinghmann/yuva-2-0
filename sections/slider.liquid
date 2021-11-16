@@ -33,7 +33,7 @@
 <script>
 jQuery(document).ready(function() {
   function slider{{section.id | remove:'-'}}({
-    slider = jQuery(document).find('#slider-{{section.id}}');
+    let slider = jQuery(document).find("#slider-{{section.id}}");
     var options = {
     center: false,
     items: 1,
