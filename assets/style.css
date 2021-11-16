@@ -775,6 +775,10 @@ object-fit: cover; }
 }
 /**video-section-end**/
 .spr-badge-starrating { display:flex;}
+.spr-badge-starrating .spr-icon {
+    font-size: 12px;
+    margin-right: 3px;
+}
 .star-rating .checked { color: var(--theme-color); } 
 .star-rating span.fa.fa-star {display: inline-block;}
 .star-rating { text-align: center; margin-bottom: 31px; }
