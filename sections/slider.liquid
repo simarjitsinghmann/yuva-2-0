@@ -3,23 +3,7 @@
   <div id="slider-{{section.id}}" class="loop owl-carousel owl-theme" data-slider>
     {% else %}
     <div class="slider-item">
-      {% endif %}
-      <script type="text/javascript">
-        var options = {
-          center: false,
-          items: 1,
-          loop: true,
-          margin: 0,
-          dots:{{section.settings.dots}},
-          autoplay:{{section.settings.rotate}},
-          nav:{{section.settings.arrows}},
-          slideSpeed: 500,
-          autoHeight: false,
-          autoHeightClass: 'owl-height',
-          autoPlaySpeed: {{section.settings.rotate_speed | times:1000}},
-          navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}}' alt='right-arrow'></span>"]
-        }
-      </script>
+      {% endif %}      
       {% for block in section.blocks %}
       {% case block.type %}
         {% when 'slide' %}
@@ -40,6 +24,22 @@
       {% endfor %}
     </div>
   </div>
+  <script type="text/javascript">
+        var options = {
+          center: false,
+          items: 1,
+          loop: true,
+          margin: 0,
+          dots:{{section.settings.dots}},
+          autoplay:{{section.settings.rotate}},
+          nav:{{section.settings.arrows}},
+          slideSpeed: 500,
+          autoHeight: false,
+          autoHeightClass: 'owl-height',
+          autoPlaySpeed: {{section.settings.rotate_speed | times:1000}},
+          navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}}' alt='right-arrow'></span>"]
+        }
+      </script>
   <style>
 	.slider-item{
 		position:relative;
