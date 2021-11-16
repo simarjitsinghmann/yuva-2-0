@@ -360,9 +360,9 @@ sliders = function(){
   if(sliders){
     Array.from(sliders).forEach(function(slider) {
       var html = slider.parentNode.querySelectorAll('[name="slider-json"]')[0].textContent;
-		console.log(slider)
+		var slide = slider.target;
       var options = JSON.parse(html);
-      slider.owlCarousel(options);
+      slide.owlCarousel(options);
 
     });
   }
