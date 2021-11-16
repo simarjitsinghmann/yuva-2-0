@@ -46,7 +46,7 @@
               {% for i in (1..2) %}
                 {% assign product = 'product'|append:i %}
                 {% unless block.settings[product] == blank  %}
-
+					{% assign hasProduct = true %}
                   {% assign count = count | plus:1 %}
                   <div class="sub-menu-list">
                     {% include 'product-grid' product:block.settings[product] ,hide_options:true,hideRelated:true,hideQuickView:true %}
@@ -81,6 +81,7 @@
               {% assign button = 'button'|append:i %}
               {% assign link = 'link'|append:i %}
               {% unless block.settings[image] == blank and block.settings[heading] == blank %}
+				{% assign hasImage = true %}
 				{% assign count = count | plus:1 %}
               <div class="sub-menu-list mega-images">
                 <div class="menu-image-content">
@@ -120,9 +121,14 @@
   
   <div class="megaMenuContentWrapper">
     <div class="row">
-       {% if count > 0 %}
+       {% if productMenu != blank %}
               <div class="megaMenuProduct-wrapper col-12 col-md-6">
                 {{productMenu}}
+              </div>
+            {% endif %}
+       {% if imageMenu != blank %}
+              <div class="megaMenuProduct-wrapper col-12 col-md-6">
+                {{imageMenu}}
               </div>
             {% endif %}
     </div>
