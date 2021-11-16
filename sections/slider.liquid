@@ -32,7 +32,7 @@
 </style>
 <script>
 jQuery(document).ready(function() {
-  function slider-{{section.id}}(
+  function slider{{section.id | remove:'-'}}(
     var slider= jQuery(document).find('#slider-{{section.id}}');
     var options = {
     center: false,
@@ -53,10 +53,10 @@ jQuery(document).ready(function() {
   
   )
   
-  slider-{{section.id}}();
+  slider-{{section.id | remove:'-'}}();
 jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
   console.log(event,slider)
- slider-{{section.id}}();
+ slider{{section.id | remove:'-'}}();
 });
 });
 </script>
