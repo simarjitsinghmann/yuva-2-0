@@ -364,7 +364,7 @@ sliders = function(){
 		var slide = slider.node;
       console.log(slider,ssss)
       var options = JSON.parse(html);
-      this.owlCarousel(options);
+      ssss.owlCarousel(options);
 
     });
   }
