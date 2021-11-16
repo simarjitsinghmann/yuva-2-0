@@ -32,7 +32,7 @@
 </style>
 <script>
 //   var sliderFunction = 'slider{{section.id | remove:'-'}}';
-	var sliderFunction = new Function(
+var sliderFunction = new Function({
     let slider = jQuery('body').find("#slider{{section.id | remove:'-'}}");
     var options = {
     center: false,
@@ -51,7 +51,7 @@
 
     slider.owlCarousel(options);
   
-)();
+  });
   
   sliderFunction();
 jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
