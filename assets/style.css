@@ -2826,8 +2826,10 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
 /* 	position:relative; */
   	margin-bottom:40px;
 }
-.collection-card-box .card--media
-.collection-card-box .card--media :after {
+.collection-card-box .card--media {
+	position:relative;
+}
+.collection-card-box .card--media:after {
 	position: absolute;
     content: "";
     left: 0;
