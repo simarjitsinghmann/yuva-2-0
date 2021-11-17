@@ -22,7 +22,7 @@
             <li class="nav-item {% if link.links != blank or menuDropdown  %}dropdown{% endif %} {% if link.current %}active{% endif %}">
                <a class="list-menu__item {% if link.links != blank  or menuDropdown %}toggle open-menu-drop{% endif %}" href="{% if link.links != blank or menuDropdown  %}javascript:void(0){%else%}{{ link.url }}{% endif %}">{{link.title | split:"{badge" | first | escape | capitalize }}</a>
                {%- if link.links != blank or menuDropdown  -%}
-               <ul class="inner child">                  
+               <div class="inner child">                  
                   <div class="inner-child-menu">
                      <div class="menu_back_btn">
                            <button class="back-btn">
@@ -84,7 +84,7 @@
             {%- if menuDropdown -%}
             {% include 'side-mega-menu' %}
             {%- endif -%}
-               </ul>
+               </div>
                {% endif %}
             </li>	
             {%- endfor-%}
