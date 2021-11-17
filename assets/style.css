@@ -2823,10 +2823,11 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
 	padding: 65px 0;
 }
 .collection-card-box {
-	position:relative;
+/* 	position:relative; */
   	margin-bottom:40px;
 }
-.collection-card-box:after {
+.collection-card-box .card--media
+.collection-card-box .card--media :after {
 	position: absolute;
     content: "";
     left: 0;
