@@ -2768,7 +2768,14 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     position: relative;
   	height:100%;
     overflow: hidden;
-  background-color: var(--gray);
+  	background-color: var(--gray);
+}
+.collection-list-view-card:after {
+	position: absolute;
+  	content: "";
+} 
+.collection-list-view-card:hover:after {
+	opacity: 1
 }
 .collection-list-view-card h2 {
     font-size: 28px;
