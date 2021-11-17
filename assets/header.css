@@ -1082,27 +1082,29 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
 	margin: 21px 0 11px;
 }
   /* width */
-  .cart-items-wrapper::-webkit-scrollbar,
-  #dropdown-customer::-webkit-scrollbar, 
-  #mini__cart::-webkit-scrollbar, 
-  #similar__product::-webkit-scrollbar, 
-  .quick_view::-webkit-scrollbar, 
-  .side-menu::-webkit-scrollbar, 
-  .side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar, 
-  .side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar {
-    width: 5px;
+    .cart-items-wrapper::-webkit-scrollbar,
+    #dropdown-customer::-webkit-scrollbar, 
+    #mini__cart::-webkit-scrollbar, 
+    #similar__product::-webkit-scrollbar, 
+    .quick_view::-webkit-scrollbar, 
+    .side-menu::-webkit-scrollbar, 
+    .side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar, 
+    .side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar,
+    #similar__product .similar__product__list::-webkit-scrollbar{
+    	width: 5px;
   }
 
   /* Track */
-  .cart-items-wrapper::-webkit-scrollbar-track,
-  #dropdown-customer::-webkit-scrollbar-track, 
-  #mini__cart::-webkit-scrollbar-track, 
-  #similar__product::-webkit-scrollbar-track, 
-  .quick_view::-webkit-scrollbar-track, 
-  .side-menu::-webkit-scrollbar-track, 
-  .side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar-track, 
-  .side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar-track{
-    background: var(--gray);
+    .cart-items-wrapper::-webkit-scrollbar-track,
+    #dropdown-customer::-webkit-scrollbar-track, 
+    #mini__cart::-webkit-scrollbar-track, 
+    #similar__product::-webkit-scrollbar-track, 
+    .quick_view::-webkit-scrollbar-track, 
+    .side-menu::-webkit-scrollbar-track, 
+    .side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar-track, 
+    .side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar-track,
+	#similar__product .similar__product__list::-webkit-scrollbar-track{
+      background: var(--gray);
   }
 
   /* Handle */
