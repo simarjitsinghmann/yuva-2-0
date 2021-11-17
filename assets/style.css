@@ -2771,11 +2771,17 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
   	background-color: var(--gray);
 }
 .collection-list-view-card:after {
-	position: absolute;
-  	content: "";
-} 
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+}
 .collection-list-view-card:hover:after {
-	opacity: 1
+	opacity: 0.2;
 }
 .collection-list-view-card h2 {
     font-size: 28px;
