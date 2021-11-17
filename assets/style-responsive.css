@@ -680,6 +680,14 @@
         font-size: 13px;
         padding: 5px 15px;
     }
+    .colllection-list-view .owl-carousel .owl-nav button.owl-next, .colllection-list-view .owl-carousel .owl-nav button.owl-prev {
+        top: -45px;
+        width: 30px;
+        height: 30px;
+    }
+    .colllection-list-view .owl-carousel .owl-nav button.owl-prev {
+        right: 40px;
+    }
 	/*  collection end  */
     /* testimonial start */
     .client-say-left {
@@ -798,7 +806,7 @@
         margin-bottom: 10px;
     }
 	/*  end  */
-	/*  collecton page star  */
+	/*  product listing  page start  */
     .toolbox-item.toolbox-layout .btn-layout {
       display:none
     }
@@ -908,7 +916,7 @@
       width: 14px;
       margin-top: -5px;
     }
-	/*  collection page end  */
+	/*  product listing page end  */
 	/*  pdp page start  */
     .product-add-to-cart-right p.vendor_name {
         margin: 0 0 7px;
