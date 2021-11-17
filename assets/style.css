@@ -314,8 +314,7 @@ div#banner-slide > img { width: 100%;}
 .collection-list-view-card:before { 
   position: absolute; top: 0; left: -75%; z-index: 2; display: block; content: ''; width: 50%; height: 100%; background: -webkit-linear-gradient(left,rgba(255,255,255,0) 0,rgba(255,255,255,.3) 100%); background: linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,.3) 100%); -webkit-transform: skewX(-25deg); -moz-transform: skewX(-25deg); -ms-transform: skewX(-25deg); -o-transform: skewX(-25deg); transform: skewX(-25deg); } 
 .card-wrapper .card__warpper__detail:hover:before, 
-.animate_hvrbr:hover::before,
-.collection-list-view-card:hover::before { -webkit-animation: shine 1.3s; -moz-animation: shine 1.3s; -ms-animation: shine 1.3s; -o-animation: shine 1.3s; animation: shine 1.3s; opacity: .8; } 
+.animate_hvrbr:hover::before { -webkit-animation: shine 1.3s; -moz-animation: shine 1.3s; -ms-animation: shine 1.3s; -o-animation: shine 1.3s; animation: shine 1.3s; opacity: .8; } 
 .card__warpper__detail.right__sided .collection-image img {
     position: relative;
     height: 100%;
