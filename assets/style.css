@@ -2826,6 +2826,9 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
 	position:relative;
   	margin-bottom:40px;
 }
+.collection-card-box:hover img {
+	transform: scale(1.1);
+}
 .collection-card  {
     position: absolute;
     bottom: 20px;
