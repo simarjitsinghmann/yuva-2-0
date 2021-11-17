@@ -333,7 +333,6 @@
 	color: #fff;
 	padding: 10px 0;
 }
-
 .header_3 .side-menu .social-links ul li a:hover {
 	color: #ffffff;
 }
@@ -348,6 +347,10 @@
 }
 .header_3 .side-menu .social-links ul li.insta {
 	background: var(--insta-bg);
+}
+.header_3 .side-menu .card.card--product {
+    width: 100%;
+    margin-top: 20px;
 }
 body.nav-open {
     overflow: hidden;
