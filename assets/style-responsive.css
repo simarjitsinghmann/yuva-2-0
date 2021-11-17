@@ -292,6 +292,11 @@
     .navbar-nav .nav-item span.sf-menu__arrow {
         right: 0px;
     }
+	/*  side menu start  */
+    .side-menu, .side-menu .inner-side .nav-item.dropdown ul {
+        left: -400px;
+    }
+	/*  side menu end  */
     /*  header end  */
     /*  Whats more start  */
     .category-section {
