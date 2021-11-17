@@ -21,7 +21,8 @@
 
   <ul class="collection-list grid grid--1-col grid--3-col-tablet" role="list">
     {%- for collection in collections -%}
-      <li class="collection-list__item grid__item collection-card-box">
+      <li class="collection-list__item grid__item">
+        <div class="collection-card-box">
         <a{% if collection.all_products_count > 0 %} href="{{ collection.url }}"{% endif %}
           class="card animate-arrow{% if collection.featured_image != blank %} card--media{% else %}{% if section.settings.image_ratio != 'adapt' %} card--stretch{% endif %}{% endif %}{% unless section.settings.image_padding %} card--light-border{% endunless %}"
         >
@@ -68,6 +69,7 @@
             {%- endif -%}
           </div>
         </a>
+        </div>
       </li>
     {%- endfor -%}
   </ul>
