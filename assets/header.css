@@ -304,7 +304,7 @@
 .header_3 .list-menu--inline .nav-item > .sub-menu { position: static; opacity: 1; visibility: visible; } 
 .toggle-level .caret::after { content: ""; position: absolute; top: 50%; -moz-transform: translateY(-50%) rotate(45deg); -webkit-transform: translateY(-50%) rotate(45deg); transform: translateY(-50%) rotate(45deg); right: 0; width: 10px; height: 10px; border-top: 2px solid #000; border-right: 2px solid #000; } 
 .header_3 .side-menu .inner-side ul li .inner li { padding: 13px 0; } 
-.header_3 .side-menu .inner-side ul li .inner li .toggle-level { font-size: 16px; text-transform: capitalize; font-weight: 400; } 
+.header_3 .side-menu .inner-side ul li .inner li .toggle-level { font-size: 20px; text-transform: capitalize; font-weight: 400; } 
 .header_3 .side-menu .inner-side ul li .inner li .inner li { border-bottom: none; padding: 3px 0; } 
 .header_3 .side-menu .inner-side ul li .inner li .inner li a { font-size: 13px; color: #7d7d7d; font-weight: 400; } 
 .header_3 .navbar-expand-md .navbar-toggler { display: block; position: relative; min-width: 32px; }
@@ -391,10 +391,6 @@ body.nav-open {
 .header_3 .inner-child-menu .category_title {
 	padding-top: 30px;
 	margin-bottom: 30px;
-}
-.header_3 .side-menu .inner-side ul li .inner.child li .toggle-level {
-	font-size: 20px;
-	font-weight: var(--medium);
 }
 .header_3 .inner-child-menu .category_title h4 {
     font-weight: var(--semibold);
