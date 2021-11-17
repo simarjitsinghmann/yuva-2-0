@@ -2855,10 +2855,12 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     color: var(--black);
     margin:0;
 }
-.colllection-list-view .owl-carousel .owl-nav button.owl-next{
+.colllection-list-view .owl-carousel .owl-nav button.owl-next,
+.recent-product .owl-carousel .owl-nav button.owl-next{
 	right:0;
 } 
-.colllection-list-view .owl-carousel .owl-nav button.owl-prev {
+.colllection-list-view .owl-carousel .owl-nav button.owl-prev,
+.recent-product .owl-carousel .owl-nav button.owl-prev{
   	right:60px;
 }
 .collection-list-view-card:hover img{
