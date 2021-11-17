@@ -1103,20 +1103,21 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
     .side-menu::-webkit-scrollbar-track, 
     .side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar-track, 
     .side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar-track,
-	#similar__product .similar__product__list::-webkit-scrollbar-track{
+	#similar__product .similar__product__list::-webkit-scrollbar-track {
       background: var(--gray);
   }
 
   /* Handle */
-  .cart-items-wrapper::-webkit-scrollbar-thumb,
-  #dropdown-customer::-webkit-scrollbar-thumb, 
-  #mini__cart::-webkit-scrollbar-thumb, 
-  #similar__product::-webkit-scrollbar-thumb, 
-  .quick_view::-webkit-scrollbar-thumb, 
-  .side-menu::-webkit-scrollbar-thumb, 
-  .side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar-thumb, 
-  .side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar-thumb{
-    background: var(--dark-gray);
+    .cart-items-wrapper::-webkit-scrollbar-thumb,
+    #dropdown-customer::-webkit-scrollbar-thumb, 
+    #mini__cart::-webkit-scrollbar-thumb, 
+    #similar__product::-webkit-scrollbar-thumb, 
+    .quick_view::-webkit-scrollbar-thumb, 
+    .side-menu::-webkit-scrollbar-thumb, 
+    .side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar-thumb, 
+    .side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar-thumb,
+	#similar__product .similar__product__list::-webkit-scrollbar-thumb {
+    	background: var(--dark-gray);
   }
 
   /* Handle on hover */
