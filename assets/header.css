@@ -274,9 +274,8 @@
 .header_3 .side-menu .inner-side ul li { margin: 0; position: static; } 
 .header_3 .nav__btn .menu_title { margin-left: 18px; font-size: var(--med-text); font-weight: var(--semibold); color: var(--black);padding-top: 3px; } 
 .header_3 .side-menu .inner-side ul li a { text-decoration: none; font-weight: var(--medium); font-size: 25px; color: var(--black); display: block; 
-  position: relative; padding: 0; margin: 0; }
+  position: relative; padding: 10px 0; margin: 0; border: 0; text-transform: capitalize; }
 .header_3 .side-menu .inner-side ul li:last-child { border-bottom: 0; } 
-.header_3 .side-menu .inner-side ul li a.list-menu__item { border: 0; text-transform: capitalize;} 
 .header_3 .side-menu .inner-side ul li.dropdown .drop-dwn-open { padding: 20px 0 0; display: none; } 
 .header_3 .side-menu .inner-side ul { padding: 0; margin: 0; list-style: none; flex-direction: column; width: 100%; } 
 .header_3 button.navbar-toggler { background: transparent; position: relative; height: 22px; } 
