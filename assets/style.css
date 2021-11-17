@@ -2835,6 +2835,7 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     height: 100%;
     background-color: #000;
     opacity: 0;
+  	z-index:0;
     transition: 1s ease all;
 }
 .collection-card-box:hover:after{
