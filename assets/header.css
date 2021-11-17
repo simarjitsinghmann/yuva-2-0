@@ -1121,15 +1121,16 @@ div#countdown { display: inline-block; } .announcement-bar.style-2 ul li { displ
   }
 
   /* Handle on hover */
-  .cart-items-wrapper::-webkit-scrollbar-thumb:hover,
-  #dropdown-customer::-webkit-scrollbar-thumb:hover, 
-  #mini__cart::-webkit-scrollbar-thumb:hover, 
-  #similar__product::-webkit-scrollbar-thumb:hover, 
-  .quick_view::-webkit-scrollbar-thumb:hover, 
-  .side-menu::-webkit-scrollbar-thumb:hover, 
-  .side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar-thumb:hover, 
-  .side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar-thumb:hover{
-    background: var(--gray);
+    .cart-items-wrapper::-webkit-scrollbar-thumb:hover,
+    #dropdown-customer::-webkit-scrollbar-thumb:hover, 
+    #mini__cart::-webkit-scrollbar-thumb:hover, 
+    #similar__product::-webkit-scrollbar-thumb:hover, 
+    .quick_view::-webkit-scrollbar-thumb:hover, 
+    .side-menu::-webkit-scrollbar-thumb:hover, 
+    .side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar-thumb:hover, 
+    .side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar-thumb:hover,
+	#similar__product .similar__product__list::-webkit-scrollbar-thumb:hover{
+    	background: var(--gray);
   }
 /**End progress-bar**/
 /* header menu */
