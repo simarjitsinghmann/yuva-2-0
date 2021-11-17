@@ -2829,6 +2829,9 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
 .collection-card-box:hover:after{
 	opacity:0.15;
 }
+.collection-card-box img {
+	transition:1s ease all;
+}
 .collection-card-box:hover img {
 	transform: scale(1.1);
 }
