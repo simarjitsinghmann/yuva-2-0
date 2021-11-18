@@ -116,29 +116,3 @@
 /* Proof of concept for Firefox */
 
 </style>
-<script>
-  (function() {
-
-    $('.mall-slider-handles').each(function () {
-      var el = this;
-      noUiSlider.create(el, {
-        start: [el.dataset.start, el.dataset.end],
-        connect: true,
-        tooltips: true,
-        range: {
-          min: [parseFloat(el.dataset.min)],
-          max: [parseFloat(el.dataset.max)]
-        },
-        pips: {
-          mode: 'range',
-          density: 20
-        }
-      }).on('change', function (values) {
-        $('[data-min="' + el.dataset.target + '"]').val(values[0])
-        $('[data-max="' + el.dataset.target + '"]').val(values[1])
-       
-      });
-    })
-        
-})();
-</script>
