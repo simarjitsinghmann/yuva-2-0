@@ -122,7 +122,8 @@
               {%- case item.object_type -%}
                 {%- when 'product' -%}
                   {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
-                  {% include 'product-grid'%}
+                  {% include 'product-grid',
+                    product: item                  %}
                 {%- when 'article' -%}
                   <a href="{{ item.url }}" class="card-wrapper">
                     <div class="card card--search card--soft{% unless item.image %} card--text-only{% endunless %}">
