@@ -36,11 +36,19 @@
   </div>
   {% when 'price_range' %}
   <div class="widget sidebar-widget-product">
+     {% assign max_value = filter.range_max |money_without_currency %} 
+        {% assign min_value = filter.range_min |money_without_currency %}
+        {%- if filter.max_value.value -%} 
+        {% assign max_value = filter.max_value.value |money_without_currency  %} 
+        {%- endif -%}
+        {%- if filter.min_value.value -%}
+        {% assign min_value = filter.min_value.value |money_without_currency %}
+        {%- endif -%}
     <div class="mall-slider-handles" 
-         data-start="{{ filter.min_value.value | money_without_currency | replace: ',', ''  | floor }}" 
-         data-end="{%- if fileter.max_value > 0 -%}{{ filter.max_value.value | money_without_currency | replace: ',', '' | floor }}{%- else -%}{{ filter.range_max | money_without_currency | replace: ',', '' | floor}}{%-endif-%}" 
+         data-start="{{min_value | replace:',','' | floor}}" 
+         data-end="{{max_value| replace:',','' | floor}}" 
          data-min="{{ filter.range_min | money_without_currency | replace: ',', '' | floor}}" 
-         data-max="{{ filter.range_max | money_without_currency | replace: ',', '' | floor}}" 
+         data-max="{{filter.range_max |money_without_currency | replace:',','' | floor}}" 
          data-target="price" 
          style="width: 100%"></div>
     <div class="widget-title">
