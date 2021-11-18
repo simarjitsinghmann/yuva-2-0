@@ -38,7 +38,7 @@
   <div class="widget sidebar-widget-product">
     <div class="mall-slider-handles" 
          data-start="{{ filter.min_value.value | money_without_currency | replace: ',', ''  | floor }}" 
-         data-end="{{ filter.max_value.value | money_without_currency | replace: ',', '' | floor }}" 
+         data-end="{%- if fileter.max_value > 0 -%}{{ filter.max_value.value | money_without_currency | replace: ',', '' | floor }}{%- else -%}{{ filter.range_max | money_without_currency | replace: ',', '' | floor}}{%-endif-%}" 
          data-min="{{ filter.range_min | money_without_currency | replace: ',', '' | floor}}" 
          data-max="{{ filter.range_max | money_without_currency | replace: ',', '' | floor}}" 
          data-target="price" 
