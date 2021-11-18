@@ -36,7 +36,7 @@
   </div>
   {% when 'price_range' %}
   <div class="widget sidebar-widget-product">
-    <div class="mall-slider-handles" 
+    <div id="mall-slider-handles" 
          data-start="{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' | floor }}" 
          data-end="{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' | floor }}" 
          data-min="{{ filter.range_min | money_without_currency | replace: ',', '.' | floor}}" 
