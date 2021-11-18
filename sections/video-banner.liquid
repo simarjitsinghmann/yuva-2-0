@@ -66,8 +66,17 @@
   var button = section.querySelector("#playVideo");
   var video = section.querySelector("#videoFile");
   button.addEventListener("click", ()=>{	   
-               console.log('test') 
+                          if(button.classList.contains('play-video')){
+    console.log('test') 
   video.play();
+    button.classList.remove('play-video');
+    button.classList.add('stop-video');
+  }
+  else{  	
+  video.pause();
+    button.classList.remove('stop-video');
+    button.classList.add('play-video');
+  }
                            });
 </script>
     {% schema %}
