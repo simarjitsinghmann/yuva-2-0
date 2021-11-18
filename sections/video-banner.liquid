@@ -63,7 +63,7 @@
 </style>
 <script>
   var section = document.getElementById("shopify-section-{{section.id}}");
-  var button = section.getElementById("playVideo");
+  var button = section.querySelectorAll("#playVideo");
   button.addEventListener("click", ()=>{	   
                console.log('test')                  
                            });
