@@ -9,7 +9,7 @@
   </style>
   {% endif %}
   
-  <div class="section--image fade-in-child {% if section.settings.full_width %}full_width{% else %}half_width{% endif %} preventOverflow video-sec {{ section.settings.height }} {{ section.settings.color }}" data-section-id="{{ section.id }}" data-section-type="hero" data-overlay-header>
+  <div class="section--image fade-in-child {% unless section.settings.full_width %}container{% endunless %} preventOverflow video-sec {{ section.settings.height }} {{ section.settings.color }}" data-section-id="{{ section.id }}" data-section-type="hero" data-overlay-header>
   
     <video {% if section.settings.autoplay %}autoplay muted{% endif %} loop playsinline width="100%" height="750px" {% if section.settings.poster !=blank %}poster="{{section.settings.poster | img_url:'master'}}"{% endif %}>
       <source src="{{ section.settings.videofile }}" type="video/mp4" id="{{ section.id }}">
@@ -30,7 +30,7 @@
           <p class="content--overlay h5--body">{{ section.settings.description }}</p>
         {% endunless %}
         {% unless section.settings.link_text == '' %}
-          <a class="{{ section.settings.button_style }} cta--overlay btn--large uppercase black-btn button" href="{{ section.settings.link }}">{{ section.settings.link_text | escape }}</a>
+          <a class="{{ section.settings.button_style }} cta--overlay btn--large uppercase black-btn button playVideo" href="{{ section.settings.link }}">{{ section.settings.link_text | escape }}</a>
         {% endunless %}
       </div>
     </div>
@@ -61,6 +61,9 @@
     margin-top: 25px;
   }
 </style>
+<script>
+  var section = document.getElementById("shopify-section")
+</script>
     {% schema %}
     {
       "name": "t:sections.video-banner.name",
