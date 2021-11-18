@@ -44,7 +44,7 @@
         {%- if filter.min_value.value -%}
         {% assign min_value = filter.min_value.value |money_without_currency %}
         {%- endif -%}
-    <div class="mall-slider-handles" 
+    <div class="mall-slider-handles" id="slider-round"
          data-start="{{min_value | replace:',','' | floor}}" 
          data-end="{{max_value| replace:',','' | floor}}" 
          data-min="{{ filter.range_min | money_without_currency | replace: ',', '' | floor}}" 
@@ -122,5 +122,19 @@
 <style>
  
 /* Proof of concept for Firefox */
+#slider-round {
+    height: 10px;
+}
 
+#slider-round .noUi-connect {
+    background: #c0392b;
+}
+
+#slider-round .noUi-handle {
+    height: 18px;
+    width: 18px;
+    top: -5px;
+    right: -9px; /* half the width */
+    border-radius: 9px;
+}
 </style>
