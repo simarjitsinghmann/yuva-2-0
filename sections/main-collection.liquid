@@ -223,10 +223,6 @@
         range: {
           min: [parseFloat(el.dataset.min)],
           max: [parseFloat(el.dataset.max)]
-        },
-        pips: {
-          mode: 'range',
-          density: 20
         }
       }).on('change', function (values) {
         $('[data-min="' + el.dataset.target + '"]').val(values[0])
