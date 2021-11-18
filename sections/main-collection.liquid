@@ -224,11 +224,7 @@
           min: [parseFloat(el.dataset.min)],
           max: [parseFloat(el.dataset.max)]
         }
-      }).on('change', function (values) {
-        $('[data-min="' + el.dataset.target + '"]').val(values[0])
-        $('[data-max="' + el.dataset.target + '"]').val(values[1])
-       
-      });
+      })
     })
         
 })();
