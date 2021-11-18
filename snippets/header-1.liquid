@@ -12,14 +12,14 @@
                 {% include 'side-menu' mobileMenu:true %}
                 </div>
               {%- endif -%}
-                <a class="header__heading-link" href="{{ routes.root_url }}">
-                    {%- if section.settings.logo != blank -%}
-                    {%- assign image_size = section.settings.logo_width | append: 'x' -%}
-                    <img src="{{ section.settings.logo | img_url: image_size }}" class="Yuva-logo" width="{{ section.settings.logo.width }}" height="{{ section.settings.logo.height }}" alt="{{ section.settings.logo.alt | default: shop.name | escape }}">
-                    {% else %}
-                    <span class="h2">{{ shop.name }}</span>
-                    {% endif %}
-                </a>
+              <a class="header__heading-link" href="{{ routes.root_url }}">
+                {%- if section.settings.logo != blank -%}
+                {%- assign image_size = section.settings.logo_width | append: 'x' -%}
+                <img src="{{ section.settings.logo | img_url: 'master' }}" class="Yuva-logo" width="{{ section.settings.logo_width }}" alt="{{ section.settings.logo.alt | default: shop.name | escape }}">
+                {% else %}
+                <span class="h2">{{ shop.name }}</span>
+                {% endif %}
+              </a>
                 {%- if section.settings.menu != blank-%}
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     
