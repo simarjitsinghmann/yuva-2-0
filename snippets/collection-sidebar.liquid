@@ -118,6 +118,31 @@
 </style>
 <script>
   (function() {
+	
+       var $propertiesForm = $('.mall-category-filter');
+            var $body = $('body');
+
+            $body.on('click', '.js-mall-filter', function () {
+                var $input = $(this).find('input');
+                $(this).toggleClass('mall-filter__option--selected')
+                $input.prop('checked', ! $input.prop('checked'));
+                $propertiesForm.trigger('submit');
+            });
+            $body.on('click', '.js-mall-clear-filter', function () {
+                var $parent = $(this).closest('.mall-property');
+
+                $parent.find(':input:not([type="checkbox"])').val('');
+                $parent.find('input[type="checkbox"]').prop('checked', false);
+                $parent.find('.mall-filter__option--selected').removeClass('mall-filter__option--selected')
+
+                var slider = $parent.find('.mall-slider-handles')[0]
+                if (slider) {
+                    slider.noUiSlider.updateOptions({
+                        start: [slider.dataset.min, slider.dataset.max]
+                    });
+                }
+                $propertiesForm.trigger('submit');
+            });
 
         
 })();
