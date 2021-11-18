@@ -121,7 +121,12 @@
 	
        var $propertiesForm = $('.mall-category-filter');
             var $body = $('body');
-
+ var slider = $('.mall-slider-handles')
+                if (slider) {
+                    slider.noUiSlider.updateOptions({
+                        start: [slider.dataset.min, slider.dataset.max]
+                    });
+                }
             $body.on('click', '.js-mall-filter', function () {
                 var $input = $(this).find('input');
                 $(this).toggleClass('mall-filter__option--selected')
@@ -135,12 +140,7 @@
                 $parent.find('input[type="checkbox"]').prop('checked', false);
                 $parent.find('.mall-filter__option--selected').removeClass('mall-filter__option--selected')
 
-                var slider = $parent.find('.mall-slider-handles')[0]
-                if (slider) {
-                    slider.noUiSlider.updateOptions({
-                        start: [slider.dataset.min, slider.dataset.max]
-                    });
-                }
+               
                 $propertiesForm.trigger('submit');
             });
 
