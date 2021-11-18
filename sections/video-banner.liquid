@@ -11,7 +11,7 @@
   
   <div class="section--image fade-in-child {% if section.settings.full_width %}full_width{% else %}half_width{% endif %} preventOverflow video-sec {{ section.settings.height }} {{ section.settings.color }}" data-section-id="{{ section.id }}" data-section-type="hero" data-overlay-header>
   
-    <video loop playsinline width="100%" height="750px" poster="{{section.settings.poster | img_url:'master'}}">
+    <video {% if section.settings.autoplay %}autoplay muted{% endif %} loop playsinline width="100%" height="750px" {% if section.settings.poster !=blank %}poster="{{section.settings.poster | img_url:'master'}}"{% endif %}>
       <source src="{{ section.settings.videofile }}" type="video/mp4" id="{{ section.id }}">
     </video> 
     <div class="videoOverlay"></div>
