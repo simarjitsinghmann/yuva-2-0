@@ -36,6 +36,13 @@
   </div>
   {% when 'price_range' %}
   <div class="widget sidebar-widget-product">
+    <div class="mall-slider-handles" 
+         data-start="{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' | floor }}" 
+         data-end="{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' | floor }}" 
+         data-min="{{ filter.range_min | money_without_currency | replace: ',', '.' | floor}}" 
+         data-max="{{ filter.range_max | money_without_currency | replace: ',', '.' | floor}}" 
+         data-target="price" 
+         style="width: 100%"></div>
     <div class="widget-title">
       <h6 class="sidebar-title">
         <span>{{ filter.label | escape }}</span>
@@ -54,14 +61,7 @@
         <input class="max" type="range" min="0" max="{{filter.range_max |money_without_currency | replace:',','' | floor}}" value="{{max_value| replace:',','' | floor}}" />
    
       </div>
-      <div class="widget-content">
-        <div class="mall-slider-handles" 
-             data-start="{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' | floor }}" 
-             data-end="{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' | floor }}" 
-             data-min="{{ filter.range_min | money_without_currency | replace: ',', '.' | floor}}" 
-             data-max="{{ filter.range_max | money_without_currency | replace: ',', '.' | floor}}" 
-             data-target="price" 
-             style="width: 100%"></div>
+      <div class="widget-content">       
         <div class="widget__price">
         
           
