@@ -118,32 +118,27 @@
 </style>
 <script>
   (function() {
-	
-       var $propertiesForm = $('.mall-category-filter');
-            var $body = $('body');
- var slider = $('.mall-slider-handles')
-                if (slider) {
-                    slider.noUiSlider.updateOptions({
-                        start: [slider.dataset.min, slider.dataset.max]
-                    });
-                }
-            $body.on('click', '.js-mall-filter', function () {
-                var $input = $(this).find('input');
-                $(this).toggleClass('mall-filter__option--selected')
-                $input.prop('checked', ! $input.prop('checked'));
-                $propertiesForm.trigger('submit');
-            });
-            $body.on('click', '.js-mall-clear-filter', function () {
-                var $parent = $(this).closest('.mall-property');
 
-                $parent.find(':input:not([type="checkbox"])').val('');
-                $parent.find('input[type="checkbox"]').prop('checked', false);
-                $parent.find('.mall-filter__option--selected').removeClass('mall-filter__option--selected')
-
-               
-                $propertiesForm.trigger('submit');
-            });
-
+    $('.mall-slider-handles').each(function () {
+      var el = this;
+      noUiSlider.create(el, {
+        start: [el.dataset.start, el.dataset.end],
+        connect: true,
+        tooltips: true,
+        range: {
+          min: [parseFloat(el.dataset.min)],
+          max: [parseFloat(el.dataset.max)]
+        },
+        pips: {
+          mode: 'range',
+          density: 20
+        }
+      }).on('change', function (values) {
+        $('[data-min="' + el.dataset.target + '"]').val(values[0])
+        $('[data-max="' + el.dataset.target + '"]').val(values[1])
+       
+      });
+    })
         
 })();
 </script>
