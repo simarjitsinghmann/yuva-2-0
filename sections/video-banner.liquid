@@ -62,7 +62,11 @@
   }
 </style>
 <script>
-  var section = document.getElementById("shopify-section")
+  var section = document.getElementById("shopify-section-{{section.id}}");
+  var button = section..getElementById("playVideo");
+  button.addEventListener("click", ()=>{	   
+               console.log('test')                  
+                           });
 </script>
     {% schema %}
     {
