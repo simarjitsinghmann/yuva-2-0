@@ -218,9 +218,6 @@
       ],
       "settings": {
         "heading": "Collection list",
-        "btntext": "View All",
-        "btnlink": "shopify:\/\/collections",
-        "view_limit": 4,
         "heading_font": 35
       }
     },
@@ -369,7 +366,8 @@
         "1c420cc2-7be4-4305-8f64-175f9f84d926": {
           "type": "button",
           "settings": {
-            "dynamic_checkout_btn": true
+            "dynamic_checkout_btn": true,
+            "show_view_detail": true
           }
         }
       },
