@@ -64,8 +64,10 @@
 <script>
   var section = document.getElementById("shopify-section-{{section.id}}");
   var button = section.querySelector("#playVideo");
+  var video = section.querySelector("#videoFile");
   button.addEventListener("click", ()=>{	   
-               console.log('test')                  
+               console.log('test') 
+  video.play();
                            });
 </script>
     {% schema %}
