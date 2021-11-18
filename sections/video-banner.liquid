@@ -30,7 +30,7 @@
           <p class="content--overlay h5--body">{{ section.settings.description }}</p>
         {% endunless %}
         {% unless section.settings.link_text == '' %}
-          <a class="{{ section.settings.button_style }} cta--overlay btn--large uppercase black-btn button playVideo" href="{{ section.settings.link }}">{{ section.settings.link_text | escape }}</a>
+          <button class="{{ section.settings.button_style }} cta--overlay btn--large uppercase black-btn button playVideo">{{ section.settings.link_text | escape }}</button>
         {% endunless %}
       </div>
     </div>
