@@ -5,18 +5,27 @@
 }
 .scrollHidden { overflow: hidden;}
 .button {
-  border: 1px solid var(--black); 
-  font-family: var(--font-family); 
-  color: var(--white);
-  text-decoration: none; 
-  padding: 16px 12px; 
-  min-width: 195px; 
-  text-align: center; 
-  background-color: var(--black); background-image: -moz-linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%); 
+    border: 1px solid var(--black); 
+    font-family: var(--font-family); 
+    color: var(--white);
+    text-decoration: none; 
+    padding: 16px 12px; 
+    min-width: 195px; 
+    text-align: center; 
+    background-color: var(--black); 
+    background-image: -moz-linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%); 
     background-image: -webkit-linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%); 
-    background-image: linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%); background-repeat: no-repeat; background-size: 200% 100%; 
-    background-position: right bottom; transition: background-position 0.25s ease-out; 
-    font-size:13px; min-height: initial; line-height: 16px; letter-spacing: 1.2px;font-weight: var(--medium); } 
+    background-image: linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%); 
+    background-repeat: no-repeat; 
+    background-size: 200% 100%; 
+    background-position: right bottom; 
+    transition: background-position 0.25s ease-out; 
+    font-size:13px; 
+    min-height: 50px; 
+    line-height: 16px; 
+    letter-spacing: 1.2px;
+    font-weight: var(--medium); 
+   } 
 .button:hover { background-position: left bottom; } 
 .black-btn{ 
   background-image: -moz-linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); 
