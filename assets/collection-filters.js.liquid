@@ -63,9 +63,9 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
       }).on("update",  function(e){
         console.log('change',e)
       });
-//   el.on("update", function(){
-//         console.log('input')
-//       })
+  el.on("update", function(){
+        console.log('input')
+      })
     })
 
 var sortBy = section.querySelectorAll('[name="sort_by"]');
