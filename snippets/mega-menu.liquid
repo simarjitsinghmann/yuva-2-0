@@ -128,14 +128,14 @@
     {% endif %}
 
 
-{% if count == 2 %}
-{% assign colWidth = 'col-md-4' %}
-{% assign menuWidth = 'col-md-8' %}
+{% if count == 0 %}
+{% assign menuWidth = 'col-md-12' %}
 {% elsif count == 1 %}
 {% assign colWidth = 'col-md-3' %}
 {% assign menuWidth = 'col-md-9' %}
 {% else %}
-{% assign menuWidth = 'col-md-12' %}
+{% assign colWidth = 'col-md-4' %}
+{% assign menuWidth = 'col-md-8' %}
 {% endif %}
 {% unless productMenu == blank and imageMenu == blank %}
 <div class="col-12 {{colWidth}} {{count}} box-items">        
