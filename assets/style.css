@@ -33,6 +33,8 @@
   background-image: -webkit-linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); 
   background-image: linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%);  */
   color: var(--white);
+    position: relative;
+    overflow: hidden;
 }
 .black-btn:after {
     content: "";
