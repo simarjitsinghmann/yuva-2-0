@@ -326,7 +326,7 @@
                <div class="container container-product">
                  <ul class="resp-tabs-list easy_tabs">    
                    {% for block in section.blocks %}                  
-                   {% if block.type == 'tabs' and block.settings.width == 'full' %}  
+                   {% if block.type == 'content' and block.settings.width == 'full' %}  
                    {% if block.settings.show_description %}
                    <li class="resp-tab-item resp-tab-itemProduct easy_tabs" content="tabContentDescription"><a>Description</a></li> 
                    {% endif %}
@@ -344,7 +344,7 @@
              <div class="container ">        
                <div class="row">
                {% for block in section.blocks %}
-                  {% if block.type == 'tabs' and block.settings.width == 'full' %}    
+                  {% if block.type == 'content' and block.settings.width == 'full' %}    
                    {% if block.settings.show_description %} 
                      <div class="product-description tab-content resp-tab-content resp-tab-contentProduct easy_tabs" id="tabContentDescription" aria-labelledby="easy_tabs_tab_item-2" style="display: none;">
                         {{product.description}}             
