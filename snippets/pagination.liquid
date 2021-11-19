@@ -21,7 +21,7 @@
       </a>
     </li>
   {% endunless %}
-  {% for part in paginate.parts limit:5%}
+  {% for part in paginate.parts %}
   {% if part.is_link %}
   <li>
       <a href="{{ part.url }}" class="btn btn--tertiary btn--narrow">
