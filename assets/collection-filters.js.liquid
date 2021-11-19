@@ -61,7 +61,7 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
           max: [parseInt(el.dataset.max)]
         }
       })
-     rangeBar.addEventListener("input", (e)=>{	
+     rangeBar.noUiSlider.addEventListener("input", (e)=>{	
     e.preventDefault();
     console.log('test')
     
