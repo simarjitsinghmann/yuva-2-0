@@ -440,11 +440,17 @@ div.lower-nav .nav-item .userful__links {
 .sub-menu-list .menu-image-content {
 	position:relative;
 }
-.sub-menu-list .menu-image-content .menu-content{
+.sub-menu-list .menu-image-content .menu-content {
     position: absolute;
     width: 100%;
     padding: 10px;
     bottom: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #00000029;
 }
 .sub-menu-list .menu-image-content img {
     width: 100%;
