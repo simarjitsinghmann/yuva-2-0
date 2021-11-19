@@ -21,9 +21,24 @@
       </a>
     </li>
   {% endunless %}
+  {% for part in paginate.parts %}
+  {% if part.is_link %}
+  <span class="page"><a href="{{part.url}}" title="">{{part.title}}</a></span> 
+  <li>
+      <a href="{{ part.url }}" class="btn btn--tertiary btn--narrow">
+        <span class="icon__fallback-text">{{part.title}}</span>
+      </a>
+    </li>
+  {%- else -%}
+  {%- if part.title == paginate.current_page -%}
+  
   <li class="pagination__text">
-    {{ paginate.current_page}} of {{ paginate.pages }}
-  </li>
+    {{ part.title }}</li> 
+  {%- else -%}
+  <span class="page">{{ part.title }}</span> 
+  {%- endif -%}
+  {% endif %}
+  {%endfor%}
   {% unless paginate.next.is_link %}
     <li aria-hidden="true">
       <button class="btn btn--tertiary btn--narrow" disabled>
