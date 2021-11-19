@@ -51,15 +51,7 @@
   background-color: #2b2b2b;
 } */
 .black-btn:hover:after{
-    animation: shine .75s cubic-bezier(.01,.56,1,1);
-}
-@keyframe shine{
-  from{
-    left:150%;
-  }
-  to{
-    left:-200%;
-  }
+    left:-200px;
 }
 .white-btn {
     background-image: -moz-linear-gradient(90deg,#000 0,#000 50%,#fff 50%,#fff 100%);
