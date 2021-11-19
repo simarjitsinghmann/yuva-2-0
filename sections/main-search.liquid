@@ -23,6 +23,7 @@
       {%- endif -%} 
         <form action="{{ routes.search_url }}" method="get" role="search" class="search">
           <div class="form-group">
+                      <div class="search-result-input">
             <input
               class="search-input form-control"
               id="Search-In-Template"
@@ -44,7 +45,6 @@
               {%- endif -%}
             >
             <input name="options[prefix]" type="hidden" value="last">
-
             {%- if settings.predictive_search_enabled -%}
               <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
                 <div class="predictive-search__loading-state">
@@ -53,16 +53,15 @@
                   </svg>
                 </div>
               </div>
-  
               <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span> 
             {%- endif -%}
-                
             <button type="submit" class="search__button" aria-label="{{ 'general.search.search' | t }}">
               <svg class="icon icon-search">
                 <use xlink:href="#icon-search">
               </svg>
             </button>
           </div>
+            </div>
         </form>
       {%- if settings.predictive_search_enabled -%}
         </predictive-search>
