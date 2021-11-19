@@ -67,14 +67,14 @@
     {% if section.settings.btn_text != blank %}
     color: {{ section.settings.btn_text }};
     {% endif %}
-    background-image: linear-gradient(
-      90deg,{{ section.settings.btn_h_bg }} 0,{{ section.settings.btn_h_bg }} 50%,{{ section.settings.btn_bg }} 50%,{{ section.settings.btn_bg }} 100%);
+    background-color:{{ section.settings.btn_bg }};
   }
 
   #banner-{{section.id}} .banner-caption-title a.button:hover { 
     {% if section.settings.btn_h_text != blank %}
     color: {{ section.settings.btn_h_text }};
     {% endif %}
+        background-color:{{ section.settings.btn_h_bg }};
   }
 </style>
 {% schema %}
