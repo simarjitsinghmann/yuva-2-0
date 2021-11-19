@@ -6,43 +6,6 @@
 
 <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
 
-<style>
-  .template-search__search {
-    margin: 0 auto;
-    max-width: 47.8rem;
-  }
-
-  .template-search__search .search {
-    margin-top: 3rem;
-  }
-
-  .template-search__results {
-    margin-top: 6rem;
-  }
-
-  .template-search--empty {
-    padding-bottom: 18rem;
-  }
-
-  .template-search .grid__item--small:not(:last-child) {
-    padding-bottom: 0.5rem;
-  }
-
-  @media screen and (min-width: 750px) {
-    .template-search__results {
-      margin-top: 9rem;
-    }
-
-    .template-search .grid__item--small:not(:last-child) {
-      padding-bottom: 1rem;
-    }
-  }
-
-  .search__button .icon {
-    height: 1.8rem;
-  }
-</style>
-
 <div class="template-search {% unless search.performed and search.results.size > 0 %} template-search--empty{% endunless %}">
   <div class="container">
     {%- if search.performed -%}
