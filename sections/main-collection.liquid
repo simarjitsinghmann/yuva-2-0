@@ -1,4 +1,4 @@
-{% paginate collection.products by 16%}
+{% paginate collection.products by 4%}
 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
 <div class="CollectionProductGrid" id="CollectionProductsContainer" data-id="{{section.id}}" data-view="grid-layout-4">
   <div class="container">

@@ -13,12 +13,12 @@
     min-width: 195px; 
     text-align: center; 
     background-color: var(--black); 
-    background-image: -moz-linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%); 
+/*     background-image: -moz-linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%); 
     background-image: -webkit-linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%); 
-    background-image: linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%); 
-    background-repeat: no-repeat; 
+    background-image: linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%);  */
+/*     background-repeat: no-repeat; 
     background-size: 200% 100%; 
-    background-position: right bottom; 
+    background-position: right bottom;  */
     transition: background-position 0.25s ease-out; 
     font-size:13px; 
     min-height: 30px; 
@@ -28,9 +28,10 @@
    } 
 .button:hover { background-position: left bottom; } 
 .black-btn{ 
-  background-image: -moz-linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); 
+  background-color: var(--black);
+/*   background-image: -moz-linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); 
   background-image: -webkit-linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); 
-  background-image: linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); 
+  background-image: linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%);  */
   color: var(--white);
 }
 .black-btn:after {
@@ -43,7 +44,6 @@
     transform: skewX(-20deg);
     background-image: linear-gradient(90deg,transparent,hsla(0,0%,100%,.25),transparent);
 }
-
 .white-btn {
     background-image: -moz-linear-gradient(90deg,#000 0,#000 50%,#fff 50%,#fff 100%);
     background-image: -webkit-linear-gradient(90deg,#000 0,#000 50%,#fff 50%,#fff 100%);
