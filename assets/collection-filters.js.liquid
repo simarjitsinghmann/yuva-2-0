@@ -60,7 +60,7 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
           min: [parseInt(el.dataset.min)],
           max: [parseInt(el.dataset.max)]
         }
-      }).on("input", (test)=>{
+      }).on("update", (test)=>{
         console.log('input',test)
       }).on("change", (e)=>{
         console.log('change',e)
