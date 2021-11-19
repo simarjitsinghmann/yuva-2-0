@@ -62,13 +62,13 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
         }
       });
   sliderEventListener.on('change',  function(values){
+        getFilterData(filterForm,rangeBar,sectionId);
+      })
+  sliderEventListener.on("update", function(values){
         var minVal =  parseInt(values[0]);
   section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = minVal;
   var maxVal =  parseInt([1]);
   section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = maxVal;
-      })
-  sliderEventListener.on("update", function(values){
-        getFilterData(filterForm,rangeBar,sectionId);
       })
     })
 
