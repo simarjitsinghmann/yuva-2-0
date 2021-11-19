@@ -10,7 +10,7 @@
         {% for product in collections.all.products limit:4 %}
         <div class="item">
           <div class="slider-content">
-            {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true %}
+            {% include 'product-grid' hide_options:true,hideRelated:true,hideQuickView:true,show_second_image : true %}
           </div>
         </div>
       {%- endfor -%}
