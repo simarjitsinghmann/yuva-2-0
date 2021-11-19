@@ -140,17 +140,17 @@
 {% assign menuWidth = 'col-md-8' %}
 {% endif %}
 {% unless productMenu == blank and imageMenu == blank %}
-<div class="col-12 {{colWidth}} items-{{count}} box-items">        
+<div class="col-12 {{colWidth}} box-items">        
   
   <div class="megaMenuContentWrapper">
     <div class="row">
        {% if productMenu != blank %}
-              <div class="megaMenuProduct-wrapper col-12 {% if hasProduct and hasImage %}col-md-6{% else %}col-md-12 samecategory{% endif %}">
+              <div class="megaMenuProduct-wrapper col-12  items-{{count}} {% if hasProduct and hasImage %}col-md-6{% else %}col-md-12 samecategory{% endif %}">
                 {{productMenu}}
               </div>
             {% endif %}
        {% if imageMenu != blank %}
-              <div class="megaMenuProduct-wrapper col-12 {% if hasProduct and hasImage %}col-md-6{% else %}col-md-12 samecategory{% endif %}">
+              <div class="megaMenuProduct-wrapper col-12 items-{{count}} {% if hasProduct and hasImage %}col-md-6{% else %}col-md-12 samecategory{% endif %}">
                 {{imageMenu}}
               </div>
             {% endif %}
