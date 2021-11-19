@@ -24,7 +24,7 @@
       <li class="collection-list__item grid__item">
         <div class="collection-card-box">
         <a{% if collection.all_products_count > 0 %} href="{{ collection.url }}"{% endif %}
-          class="card animate-arrow card--media{% unless section.settings.image_padding %} card--light-border{% endunless %}"
+          class="card animate-arrow{% if collection.featured_image != blank %} card--media{% else %}{% if section.settings.image_ratio != 'adapt' %} card--stretch{% endif %}{% endif %}{% unless section.settings.image_padding %} card--light-border{% endunless %}"
         >
           <div class="card--stretch card-colored color-{{ section.settings.color_scheme }}">
             {%- if collection.featured_image != blank -%}
@@ -49,7 +49,7 @@
                 </div>
               </div>
               <div class="card__text card__text-spacing card__text-hover collection-card">
-               <div class="overlay-card"></div>
+                {% unless section.settings.image_padding %}<div class="overlay-card"></div>{% endunless %}
                 <h4 class="collection-title">{{- collection.title -}}</h4>
               </div>
             {%- else -%}
