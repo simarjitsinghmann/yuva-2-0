@@ -506,14 +506,10 @@ font-weight: var(--semibold);
 letter-spacing: 1.2px;	
 }
   
-.feature-product .product-add-to-cart-right .form-group #Sd_addProduct:hover, .cart-btn-container .button.checkout-btn:hover {
-    border: 2px solid #000;
-	color: var(--white);
-}
-.feature-product .product-add-to-cart-right p.vendor_name {
+.product-add-to-cart-right p.vendor_name {
 	margin: 0 0 13px;
 }
-.feature-product .product-add-to-cart-right p {
+.product-add-to-cart-right p {
 	margin-bottom: 6px;
 }
 .select__color .product-loop-variants.square .color_option span, .select__color .product-loop-variants.circle .color_option span {
