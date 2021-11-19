@@ -52,7 +52,7 @@
   var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
 Array.from(priceRangeBars).forEach(function(rangeBar) {
       var el = rangeBar;
-      noUiSlider.create(el, {
+     var sliderEventListener = noUiSlider.create(el, {
         start: [el.dataset.start, el.dataset.end],
         connect: true,
         tooltips: false,
@@ -67,11 +67,9 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
         }
       }).on("update",  function(e){
         console.log('change',e)
-      }).on("change", function(){
-        console.log('input')
-      });
-  el.addEventListener("change", function(){
-        console.log('input')
+      })
+  sliderEventListener.addEventListener("update", function(values){
+        console.log('input',values)
       })
     })
 
