@@ -35,6 +35,7 @@
 {% else %}
 {% assign productMenu = ''%}
 {% assign imageMenu = ''%}
+{% assign pending = 2 %}
 {% if link.links != blank  %}
 {% assign menuLinkLists = true %}
 {% endif %}
@@ -65,13 +66,16 @@
             {%- capture productMenu -%}
               {% for i in (1..2) %}
                 {% assign product = 'product'|append:i %}
+				{% if pending > 0 and pending < 3 %}
                 {% unless block.settings[product] == blank  %}
 					{% assign hasProduct = true %}
                   {% assign count = count | plus:1 %}
+					{% assign pending = pending | minus: 1 %}
                   <div class="sub-menu-list row">
                     {% include 'product-grid' product:block.settings[product] ,hide_options:true,hideRelated:true,hideQuickView:true %}
                   </div>
                 {% endunless %}
+				{% endif %}
               {% endfor %}
             {%- endcapture -%}
 
@@ -87,7 +91,7 @@
       {% elsif count == 1 %}
       {% assign limit = 2 %}
       {% endif %}
-
+{{pending}}
       {% for block in section.blocks %}
       	{% assign blockPosition = block.settings.position | plus:0 %}
           {% if blockPosition == menuIndex %}
@@ -100,10 +104,12 @@
               {% assign heading = 'heading'|append:i %}
               {% assign button = 'button'|append:i %}
               {% assign link = 'link'|append:i %}
+				{% if pending > 0 and pending < 3 %}
               {% unless block.settings[image] == blank and block.settings[heading] == blank %}
 				{% assign hasImage = true %}
 				{% assign count = count | plus:1 %}
-              <div class="sub-menu-list {{count}} mega-images">
+					{% assign pending = pending | minus: 1 %}
+              <div class="sub-menu-list {{pending}} mega-images">
                 <div class="menu-image-content">
                   <img src="{{block.settings[image] | img_url:'master'}}"  class="menu-image">
                   <div class="menu-content">
@@ -113,6 +119,7 @@
                 </div>
               </div>
               {% endunless %}
+				{% endif %}
               {% endfor %}
               {%- endcapture -%}
             {% endcase %}  
@@ -121,14 +128,14 @@
     {% endif %}
 
 
-{% if count == 0 %}
-{% assign menuWidth = 'col-md-12' %}
+{% if count == 2 %}
+{% assign colWidth = 'col-md-4' %}
+{% assign menuWidth = 'col-md-8' %}
 {% elsif count == 1 %}
 {% assign colWidth = 'col-md-3' %}
 {% assign menuWidth = 'col-md-9' %}
 {% else %}
-{% assign colWidth = 'col-md-4' %}
-{% assign menuWidth = 'col-md-8' %}
+{% assign menuWidth = 'col-md-12' %}
 {% endif %}
 {% unless productMenu == blank and imageMenu == blank %}
 <div class="col-12 {{colWidth}} {{count}} box-items">        
