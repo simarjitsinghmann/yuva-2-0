@@ -24,7 +24,7 @@
       <li class="collection-list__item grid__item">
         <div class="collection-card-box">
         <a{% if collection.all_products_count > 0 %} href="{{ collection.url }}"{% endif %}
-          class="card animate-arrow card--media card--light-border"
+          class="card animate-arrow card--media{% unless section.settings.image_padding %} card--light-border{% endunless %}"
         >
           <div class="card--stretch card-colored color-{{ section.settings.color_scheme }}">
             {%- if collection.featured_image != blank -%}
