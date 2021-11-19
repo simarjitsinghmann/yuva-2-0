@@ -55,7 +55,7 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
       noUiSlider.create(el, {
         start: [el.dataset.start, el.dataset.end],
         connect: true,
-        tooltips: true,
+        tooltips: false,
         range: {
           min: [parseInt(el.dataset.min)],
           max: [parseInt(el.dataset.max)]
