@@ -57,8 +57,8 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
         connect: true,
         tooltips: true,
         range: {
-          min: [parseFloat(el.dataset.min)],
-          max: [parseFloat(el.dataset.max)]
+          min: [parseInt(el.dataset.min)],
+          max: [parseInt(el.dataset.max)]
         }
       })
     })
