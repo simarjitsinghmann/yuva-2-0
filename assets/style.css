@@ -2950,9 +2950,6 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     margin: 0 auto;
     max-width: 100%;
   }
-  .template-search__results {
-    margin-top: 6rem;
-  }
   .template-search--empty {
     padding-bottom: 18rem;
   }
@@ -2960,10 +2957,6 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     padding-bottom: 0.5rem;
   }
   @media screen and (min-width: 750px) {
-    .template-search__results {
-      margin-top: 9rem;
-    }
-
     .template-search .grid__item--small:not(:last-child) {
       padding-bottom: 1rem;
     }
