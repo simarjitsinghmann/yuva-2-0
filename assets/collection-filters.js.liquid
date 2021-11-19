@@ -59,6 +59,11 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
         range: {
           min: [parseInt(el.dataset.min)],
           max: [parseInt(el.dataset.max)]
+        },
+          serialization: {
+          format: {
+            decimals: 0
+          }
         }
       }).on("update",  function(e){
         console.log('change',e)
