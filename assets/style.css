@@ -4,7 +4,7 @@
   	margin: 0 auto;
 }
 .scrollHidden { overflow: hidden;}
-.button {font-weight: var(--medium);border: 2px solid var(--black); font-family: var(--font-family); color: var(--white);
+.button {font-weight: var(--medium);border: 1px solid var(--black); font-family: var(--font-family); color: var(--white);
   text-decoration: none; padding: 16px 12px; min-width: 195px; text-align: center; 
   background-color: var(--black); background-image: -moz-linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%); 
     background-image: -webkit-linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%); 
@@ -13,13 +13,13 @@
     font-size:13px; min-height: initial; line-height: 16px; letter-spacing: 1.2px;font-weight: var(--medium); } 
 .button:hover { background-position: left bottom; } 
 .black-btn{font-family: var(--font-family); 
-  border: 2px solid var(--black);
+  border: 1px solid var(--black);
   background-image: -moz-linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); 
     background-image: -webkit-linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); 
       background-image: linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); }
 .white-btn {
     font-family: var(--font-family);
-    border: 2px solid var(--white);
+    border: 1px solid var(--white);
     background-image: -moz-linear-gradient(90deg,#000 0,#000 50%,#fff 50%,#fff 100%);
     background-image: -webkit-linear-gradient(90deg,#000 0,#000 50%,#fff 50%,#fff 100%);
     background-image: linear-gradient(90deg,#000 0,#000 50%,#fff 50%,#fff 100%);
@@ -27,7 +27,7 @@
 }
 .orange-btn{ background-color: var(--white); 
   color: var(--black)
-  border: 2px solid var(--black);
+  border: 1px solid var(--black);
   background-image: -moz-linear-gradient(90deg, #000 0%, #000 50%, #fff 50%, #fff 100%); 
   background-image: -webkit-linear-gradient(90deg, #000 0%, #000 50%, #fff 50%, #fff 100%); 
   background-image: linear-gradient(90deg, #000 0%, #000 50%, #fff 50%, #fff 100%); }
