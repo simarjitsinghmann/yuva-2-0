@@ -123,14 +123,13 @@
           {% if section.settings.enable_payment_button %}
           {{ form | payment_button }}
           {% endif %}
+          <a href="{{product.url}}" class="button white-btn btn-block">View Detail</a>
         </div>
       </div>
       {% endform %}
       <div class="rte">
         {{product.description |strip_html| truncatewords:50}}
       </div>
-      
-          <a href="{{product.url}}" class="button black-btn btn-block">View Detail</a>
       <div class="social-icons">
       {% include 'social-sharing', hidetext:true, share_title: product.title, share_permalink: product.url, share_image: product %}
       </div>
