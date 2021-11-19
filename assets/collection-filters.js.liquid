@@ -67,6 +67,8 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
         }
       }).on("update",  function(e){
         console.log('change',e)
+      }).on("change", function(){
+        console.log('input')
       });
   el.addEventListener("change", function(){
         console.log('input')
