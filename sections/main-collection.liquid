@@ -111,9 +111,15 @@
       </nav>
     </div>
     <div class="product-listing-box">
+      
+      {% if section.settings.enable_filtering %}
       <aside class="sidebar sidebar-fixed shop-sidebar sticky-sidebar-wrapper">
         {% include 'collection-sidebar' %}
       </aside>
+      {% else %}
+      <form id="CollectionFiltersForm" class="collectionFilters__form" >
+      </form>
+      {% endif %}
       <div class="product-content main-content">
         <div class="toolbox-item toolbox-layout">
           <div class="filter-actions">
