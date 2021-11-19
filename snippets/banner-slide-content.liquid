@@ -60,13 +60,13 @@
     {% if block.settings.btn_text != blank %}
     color: {{ block.settings.btn_text }};
     {% endif %}
-    background-image: linear-gradient(
-      90deg,{{ block.settings.btn_h_bg }} 0,{{ block.settings.btn_h_bg }} 50%,{{ block.settings.btn_bg }} 50%,{{ block.settings.btn_bg }} 100%);
+    background-color:{{ block.settings.btn_bg }} ;
   }
 
   #banner-{{block.id}} .carousel-caption-title a.button:hover { 
     {% if block.settings.btn_h_text != blank %}
     color: {{ block.settings.btn_h_text }};
     {% endif %}
+     background-color:{{ block.settings.btn_h_bg }}
   }
 </style>
