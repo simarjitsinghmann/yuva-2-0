@@ -27,6 +27,7 @@
             <h6>{{collection.title}} - {{ collection.products_count}} {{ collection.products_count | pluralize: 'item', 'items' }}</h6>
           </div>
         </div>
+        {% if section.settings.enable_sorting %}
         <div class="toolbox-right">
           <div class="toolbox-item toolbox-layout">
             <a href="javascript:void(0);" data-layout="" data-value="grid-layout-4" class="btn-layout grid-layout-4">
@@ -96,7 +97,6 @@
               </svg>
             </a>
           </div>
-          {% if section.settings.enable_sorting %}
           <div class="toolbox-item toolbox-sort select-box">
             <ul class="" id="sort__list">
               {%- for option in collection.sort_options -%}
@@ -109,8 +109,8 @@
             <span>Sort by:</span>
             <label for="SortBy">{{sort_name}}</label>
           </div>
-          {% endif %}
         </div>
+        {% endif %}
       </nav>
     </div>
     <div class="product-listing-box">
