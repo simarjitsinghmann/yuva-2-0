@@ -145,12 +145,12 @@
   <div class="megaMenuContentWrapper">
     <div class="row">
        {% if productMenu != blank %}
-              <div class="megaMenuProduct-wrapper col-12  items-{{count}} {% if hasProduct and hasImage %}col-md-6{% else %}col-md-12 samecategory{% endif %}">
+              <div class="megaMenuProduct-wrapper col-12  items-{{count}} {% if hasProduct and hasImage %}col-md-6 nocategory{% else %}col-md-12 samecategory{% endif %}">
                 {{productMenu}}
               </div>
             {% endif %}
        {% if imageMenu != blank %}
-              <div class="megaMenuProduct-wrapper col-12 items-{{count}} {% if hasProduct and hasImage %}col-md-6{% else %}col-md-12 samecategory{% endif %}">
+              <div class="megaMenuProduct-wrapper col-12 items-{{count}} {% if hasProduct and hasImage %}col-md-6 nocategory{% else %}col-md-12 samecategory{% endif %}">
                 {{imageMenu}}
               </div>
             {% endif %}
