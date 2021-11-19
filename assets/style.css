@@ -47,6 +47,11 @@
 .black-btn:hover:after{
     animation: shine .75s cubic-bezier(.01,.56,1,1);
 }
+@keyframes shine{
+  to{
+    left:-200%;
+  }
+}
 .white-btn {
     background-image: -moz-linear-gradient(90deg,#000 0,#000 50%,#fff 50%,#fff 100%);
     background-image: -webkit-linear-gradient(90deg,#000 0,#000 50%,#fff 50%,#fff 100%);
