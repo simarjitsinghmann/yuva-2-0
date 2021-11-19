@@ -1,0 +1,56 @@
+  <div class="product-content-tabs">
+                               {% if block.settings.show_description %}
+                               <div class="product-detail">
+                                 <div class="accordion-container">
+                                   <div class="set">
+                                     <h6 class="panel-title accordion-{{section.id}}" content="accordion-content-description">
+                                       <a href="javascript:void(0)">
+                                         Description
+                                       </a>
+                                     </h6>
+                                     <div id="accordion-content-description" class="content productSection-content" style="display:none;">
+                                       <div class="panel-body">
+                                         {{product.description}}
+                                       </div>
+                                     </div>
+                                   </div>
+                                 </div>
+                               </div>
+                               {% endif %}
+                               {% if block.settings.content_heading != blank %}
+                               <div class="product-detail">
+                                 <div class="accordion-container">
+                                   <div class="set">
+                                     <h6 class="panel-title accordion-{{section.id}}" content="accordion-content-contentwrapper">
+                                       <a href="javascript:void(0)">
+                                         {{block.settings.content_heading}}
+                                       </a>
+                                     </h6>
+                                     <div id="accordion-content-contentwrapper"  class="content productSection-content"  style="display:none;">
+                                       <div class="panel-body">
+                                         {{block.settings.content}}
+                                       </div>
+                                     </div>
+                                   </div>
+                                 </div>
+                               </div>
+                               {% endif %}
+                               {% if block.settings.show_reviews %}
+                               <div class="product-detail">
+                                 <div class="accordion-container">
+                                   <div class="set">
+                                     <h6 class="panel-title accordion-{{section.id}}" content="accordion-content-reviews">
+                                       <a href="javascript:void(0)">
+                                         Reviews
+                                       </a>
+                                     </h6>
+                                     <div id="accordion-content-reviews" class="content productSection-content" style="display:none;">
+                                       <div class="panel-body">
+                                         <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+                                       </div>
+                                     </div>
+                                   </div>
+                                 </div>
+                               </div>
+                               {% endif %}
+                             </div>
