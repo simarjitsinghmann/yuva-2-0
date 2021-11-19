@@ -109,12 +109,14 @@
 				{% assign count = count | plus:1 %}
 					{% assign pending = pending | minus: 1 %}
               <div class="sub-menu-list {{pending}} mega-images row">
+                <div class="grid-item col">
                 <div class="menu-image-content">
                   <img src="{{block.settings[image] | img_url:'master'}}"  class="menu-image">
                   <div class="menu-content">
                     <h4>{{block.settings[heading]}}</h4>
                     <a href="{{block.settings[link]}}" class="button black-button">{{block.settings[button]}}</a>
                   </div>
+                </div>
                 </div>
               </div>
               {% endunless %}
