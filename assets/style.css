@@ -45,13 +45,18 @@
     height: 100%;
     transform: skewX(-20deg);
     background-image: linear-gradient(90deg,transparent,hsla(0,0%,100%,.25),transparent);
+  	transition:2s ease all;
 }
 /* .black-btn:hover,
 .button:hover {
   background-color: #2b2b2b;
 } */
 .black-btn:hover:after{
-    left:-200%;
+  animation: wave 1s linear;
+}
+@keyframes wave{
+  0%{left:150%}
+  to{left:-200%}
 }
 .white-btn {
     background-image: -moz-linear-gradient(90deg,#000 0,#000 50%,#fff 50%,#fff 100%);
