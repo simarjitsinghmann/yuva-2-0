@@ -1663,6 +1663,55 @@
           "name": "Link"
         }
       }
+    },
+    "main-collection": {
+      "name": "Product grid",
+      "settings": {
+        "products_per_page": {
+          "label": "Products per page"
+        },
+        "enable_filtering": {
+          "label": "Enable filtering",
+          "info": "[Customize filters](\/admin\/menus)"
+        },
+        "enable_sorting": {
+          "label": "Enable sorting"
+        },
+        "image_ratio": {
+          "label": "Image ratio",
+          "options__1": {
+            "label": "Adapt to image"
+          },
+          "options__2": {
+            "label": "Portrait"
+          },
+          "options__3": {
+            "label": "Square"
+          }
+        },
+        "show_secondary_image": {
+          "label": "Show second image on hover"
+        },
+        "add_image_padding": {
+          "label": "Add image padding"
+        },
+        "show_vendor": {
+          "label": "Show vendor"
+        },
+        "header__1": {
+          "content": "Filtering and sorting"
+        },
+        "header__3": {
+          "content": "Product card"
+        },
+        "enable_tags": {
+          "label": "Enable filtering",
+          "info": "[Customize filters](\/admin\/menus)"
+        },
+        "enable_sort": {
+          "label": "Enable sorting"
+        }
+      }
     }
   },
   "settings_schema": {
