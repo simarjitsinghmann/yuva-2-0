@@ -2946,7 +2946,33 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
 }
 /* collection page end */
 /* search page css start */
-.template-search__search {
+  .template-search__search {
+    margin: 0 auto;
     max-width: 100%;
-}
+  }
+  .template-search__search .search {
+    margin-top: 3rem;
+  }
+  .template-search__results {
+    margin-top: 6rem;
+  }
+  .template-search--empty {
+    padding-bottom: 18rem;
+  }
+  .template-search .grid__item--small:not(:last-child) {
+    padding-bottom: 0.5rem;
+  }
+  @media screen and (min-width: 750px) {
+    .template-search__results {
+      margin-top: 9rem;
+    }
+
+    .template-search .grid__item--small:not(:last-child) {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .search__button .icon {
+    height: 1.8rem;
+  }
 /* search page css end */
