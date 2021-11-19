@@ -23,7 +23,6 @@
   {% endunless %}
   {% for part in paginate.parts %}
   {% if part.is_link %}
-  <span class="page"><a href="{{part.url}}" title="">{{part.title}}</a></span> 
   <li>
       <a href="{{ part.url }}" class="btn btn--tertiary btn--narrow">
         <span class="icon__fallback-text">{{part.title}}</span>
