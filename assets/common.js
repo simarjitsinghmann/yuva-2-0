@@ -87,18 +87,7 @@ $(document).ready(function(){
 	
 	$('.close-btn').click(function(){
 		$('body').toggleClass('nav-open'), $('.navbar-collapse-sidebar').removeClass('show');
-// 		$('.wrapper-overlay').hide();
 	});
-	
-	
-	///account-sidebar//
-// 	$('.acc-sign-in').click(function(){
-// 		$('body').toggleClass('customer-open');
-// 		$('.wrapper-overlay').css({"display": "block"});
-// 	});
-// 	$('.close-customer').click(function(){
-// 		$("body").removeClass("customer-open"), $(".wrapper-overlay").hide();
-// 	});
 	
 	///minicart//
 	$('.openCartDrawer').click(function(e){
