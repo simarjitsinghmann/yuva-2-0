@@ -59,13 +59,8 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
         range: {
           min: [parseInt(el.dataset.min)],
           max: [parseInt(el.dataset.max)]
-        },
-          serialization: {
-          format: {
-            decimals: 0
-          }
         }
-      }).on("change",  function(e){
+      }).on('change',  function(e){
         console.log('change',e)
       })
   sliderEventListener.on("update", function(values){
