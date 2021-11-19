@@ -12,11 +12,11 @@
     background-position: right bottom; transition: background-position 0.25s ease-out; 
     font-size:13px; min-height: initial; line-height: 16px; letter-spacing: 1.2px;font-weight: var(--medium); } 
 .button:hover { background-position: left bottom; } 
-.black-btn{font-family: var(--font-family); 
-  border: 1px solid var(--black);
+.black-btn{ 
   background-image: -moz-linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); 
-    background-image: -webkit-linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); 
-      background-image: linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); }
+  background-image: -webkit-linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); 
+  background-image: linear-gradient(90deg, #fff 0%, #fff 50%, #000000 50%, #000000 100%); 
+}
 .white-btn {
     font-family: var(--font-family);
     border: 1px solid var(--white);
