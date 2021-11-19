@@ -25,6 +25,7 @@
     line-height: 30px; 
     letter-spacing: 2px;
     font-weight: var(--medium);
+    text-transform: uppercase;
 } 
 .black-btn{ 
   background-color: var(--black);
@@ -35,7 +36,6 @@
     position: relative;
     overflow: hidden;
     transition: background .2s ease 0s;
-    text-transform: uppercase;
 }
 .black-btn:after {
     content: "";
