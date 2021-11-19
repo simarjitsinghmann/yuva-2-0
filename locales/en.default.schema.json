@@ -1279,11 +1279,8 @@
             }
           }
         },
-        "description": {
-          "name": "Product Description"
-        },
-        "tabs": {
-          "name": "Tabs",
+        "content": {
+          "name": "Product Content",
           "settings": {
             "show_description": {
               "label": "Show Product Description"
@@ -1301,9 +1298,20 @@
               "label": "Position",
               "options": {
                 "half": {
-                  "label": "Accordion"
+                  "label": "Sidebar"
                 },
                 "full": {
+                  "label": "Full Width"
+                }
+              }
+            },
+            "style": {
+              "label": "Style",
+              "options": {
+                "accordion": {
+                  "label": "Accordion"
+                },
+                "tabs": {
                   "label": "Tabs"
                 }
               }
