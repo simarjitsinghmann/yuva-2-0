@@ -1,6 +1,6 @@
 <!-- {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }} -->
-
+{% paginate collection.products by section.settings.products_per_page %}
 <div class="main-collection-category-section">
 <div class="container">
   <div class="shopify__top__section section-heading-box">
@@ -73,7 +73,12 @@
     {%- endfor -%}
   </ul>
 </div>
+  
+        {% if paginate.pages > 1 %}
+        {% include 'pagination' %}
+        {% endif %}
 </div>
+{% endpaginate %}
 {% schema %}
 {
   "name": "t:sections.main-list-collections.name",
