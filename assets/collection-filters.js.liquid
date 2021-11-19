@@ -68,7 +68,7 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
       }).on("change",  function(e){
         console.log('change',e)
       })
-  sliderEventListener.addEventListener("update", function(values){
+  sliderEventListener.on("update", function(values){
         console.log('input',values)
       })
     })
