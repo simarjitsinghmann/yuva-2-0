@@ -67,9 +67,8 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
   sliderEventListener.on("update", function(values){
         var minVal =  parseInt(values[0]);
   section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = minVal;
-  var maxVal =  parseInt([1]);
+  var maxVal =  parseInt(values[1]);
   section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = maxVal;
-    console.log(values[0],values[1],minVal,maxVal)
       })
     })
 
