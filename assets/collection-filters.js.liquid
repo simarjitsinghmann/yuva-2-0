@@ -47,7 +47,21 @@
     price.addEventListener("change", ()=>{	
                            getFilterData(filterForm,price,sectionId)
   });
-});   
+});  
+
+  var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles'');
+Array.from(priceRangeBars).forEach(function(rangeBar) {
+      var el = rangeBar;
+      noUiSlider.create(el, {
+        start: [el.dataset.start, el.dataset.end],
+        connect: true,
+        tooltips: true,
+        range: {
+          min: [parseFloat(el.dataset.min)],
+          max: [parseFloat(el.dataset.max)]
+        }
+      })
+    })
 
 var sortBy = section.querySelectorAll('[name="sort_by"]');
 Array.from(sortBy).forEach(function(sort) {
@@ -64,19 +78,19 @@ Array.from(removeFilters).forEach(function(removeFilter) {
     getFilterData(filterForm,removeFilter,sectionId,_url);
   });
 }); 
-var priceRange = section.querySelectorAll('input[type="range"]');
-Array.from(priceRange).forEach(function(price) {
-  price.addEventListener("input", (e)=>{	
-    e.preventDefault();
-    rangeInputChangeEventHandler(price,section)
+// var priceRange = section.querySelectorAll('input[type="range"]');
+// Array.from(priceRange).forEach(function(price) {
+//   price.addEventListener("input", (e)=>{	
+//     e.preventDefault();
+//     rangeInputChangeEventHandler(price,section)
     
-  });
-  price.addEventListener("change", (e)=>{	
-    e.preventDefault();
+//   });
+//   price.addEventListener("change", (e)=>{	
+//     e.preventDefault();
     
-    getFilterData(filterForm,price,sectionId);
-  });
-});
+//     getFilterData(filterForm,price,sectionId);
+//   });
+// });
 
    
 }
