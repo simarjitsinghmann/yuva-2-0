@@ -91,7 +91,7 @@
       {% elsif count == 1 %}
       {% assign limit = 2 %}
       {% endif %}
-
+{{pending}}
       {% for block in section.blocks %}
       	{% assign blockPosition = block.settings.position | plus:0 %}
           {% if blockPosition == menuIndex %}
