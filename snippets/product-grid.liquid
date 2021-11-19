@@ -14,10 +14,10 @@
 <div class="{% unless template contains 'cart'%}grid-item{% endunless %} col">
     <div class="card-wrapper">
         <div class="card card--text-only card--soft card--product text__left">
-        <div class="card-wrapper-img {% if section.settings.show_second_image %}has-multiimage{% endif %}">
+        <div class="card-wrapper-img {% if section.settings.show_second_image or show_second_image %}has-multiimage{% endif %}">
           <a href="{{product.url}}">
             <img src="{{product.featured_image | img_url:'master'}}" alt="">
-            {% if section.settings.show_second_image %}
+            {% if section.settings.show_second_image or show_second_image %}
                 <img class="product-second-img" src="{{second_image}}" alt="">
             {% endif %} 
           </a>
