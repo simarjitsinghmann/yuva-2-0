@@ -60,12 +60,12 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
           min: [parseInt(el.dataset.min)],
           max: [parseInt(el.dataset.max)]
         }
-      }).on("change",  function(e){
+      }).on("update",  function(e){
         console.log('change',e)
       });
-  el.on("update", function(){
-        console.log('input')
-      })
+//   el.on("update", function(){
+//         console.log('input')
+//       })
     })
 
 var sortBy = section.querySelectorAll('[name="sort_by"]');
