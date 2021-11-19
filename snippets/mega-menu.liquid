@@ -103,7 +103,7 @@
               {% unless block.settings[image] == blank and block.settings[heading] == blank %}
 				{% assign hasImage = true %}
 				{% assign count = count | plus:1 %}
-              <div class="sub-menu-list mega-images">
+              <div class="sub-menu-list {{count}} mega-images">
                 <div class="menu-image-content">
                   <img src="{{block.settings[image] | img_url:'master'}}"  class="menu-image">
                   <div class="menu-content">
