@@ -130,7 +130,7 @@
         {{product.description |strip_html| truncatewords:50}}
       </div>
       
-          <a href="{{product.url}}">View Detail</a>
+          <a href="{{product.url}}" class="button black-btn btn-block">View Detail</a>
       <div class="social-icons">
       {% include 'social-sharing', hidetext:true, share_title: product.title, share_permalink: product.url, share_image: product %}
       </div>
