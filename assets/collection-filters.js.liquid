@@ -52,19 +52,18 @@
   var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
 Array.from(priceRangeBars).forEach(function(rangeBar) {
       var el = rangeBar;
-      noUiSlider.create(el, {
-        start: [el.dataset.start, el.dataset.end],
-        connect: true,
-        tooltips: false,
-        range: {
-          min: [parseInt(el.dataset.min)],
-          max: [parseInt(el.dataset.max)]
-        }
-      })
-      el.addEventListener("input", (e)=>{	
+  noUiSlider.create(el, {
+    start: [el.dataset.start, el.dataset.end],
+    connect: true,
+    tooltips: false,
+    range: {
+      min: [parseInt(el.dataset.min)],
+      max: [parseInt(el.dataset.max)]
+    }
+  }).addEventListener("input", (e)=>{	
     e.preventDefault();
     console.log('test')
-    
+
   });
     })
 
