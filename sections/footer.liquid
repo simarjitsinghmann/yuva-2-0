@@ -24,8 +24,8 @@
               <h5>{{block.settings.heading}}</h5>
               {% endif %}
               {% if block.settings.image != blank %}
-              {% assign width = block.settings.image_width | append:'x' %}
-              <img src="{{block.settings.image | img_url:width}}">
+              {% assign width = block.settings.image_width | append:'px' %}
+              <img src="{{block.settings.image | img_url:'master'}}" width="{{width}}">
               {% endif %}
               {% if block.settings.subtext != blank %}
               <div class="footer-innner-continer">
@@ -167,7 +167,7 @@
           "type": "range",
           "id": "image_width",
           "min": 50,
-          "max": 200,
+          "max": 250,
           "step": 5,
           "unit": "px",
           "label": "t:sections.footer.blocks.image.settings.image_width.label",
