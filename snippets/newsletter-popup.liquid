@@ -89,10 +89,11 @@
           date.setDate(date.getDate() + parseInt('{{settings.popup_cookie}}'));
           var expires = date.toUTCString();
           
+          if(checked.length > 0){
+            
           console.log('{{settings.popup_cookie}}',expires)
-//           if(checked.length > 0){
 //             Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: expires, path: '/' });
-//           }
+          }
 //             $('.newsletter-popup').fadeOut('slow');
 //             $('body').removeClass('NewsletterActive').removeClass('scrollHidden');         
         });
