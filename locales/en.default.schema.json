@@ -11,6 +11,41 @@
         },
         "show_close": {
           "label": "Show Close Icon"
+        },
+        "bg_style": {
+          "solid": {
+            "label": "Solid Color"
+          },
+          "gradient": {
+            "label": "Gradient Colors"
+          },
+          "image": {
+            "label": "Image"
+          },
+          "label": "Background Style"
+        },
+        "bgcolor": {
+          "label": "Background Color"
+        },
+        "bgcolor2": {
+          "label": "Background Color 2",
+          "info": "Select both colors for Gradient background"
+        },
+        "bgimage": {
+          "label": "Background Image",
+          "info": "Only Applicable with with Background Style option Image"
+        },
+        "fontcolor": {
+          "label": "Text Color"
+        },
+        "btn_bgcolor": {
+          "label": "Button Background Color"
+        },
+        "btn_fontcolor": {
+          "label": "Button Text Color"
+        },
+        "bborder_color": {
+          "label": "Button Border Color"
         }
       },
       "blocks": {
@@ -32,46 +67,11 @@
               },
               "label": "Icon"
             },
-            "bg_style": {
-              "solid": {
-                "label": "Solid Color"
-              },
-              "gradient": {
-                "label": "Gradient Colors"
-              },
-              "image": {
-                "label": "Image"
-              },
-              "label": "Background Style"
-            },
-            "bgcolor": {
-              "label": "Background Color"
-            },
-            "bgcolor2": {
-              "label": "Background Color 2",
-              "info": "Select both colors for Gradient background"
-            },
-            "bgimage": {
-              "label": "Background Image",
-              "info": "Only Applicable with with Background Style option Image"
-            },
-            "fontcolor": {
-              "label": "Text Color"
-            },
             "btn": {
               "label": "Button Text"
             },
             "link": {
               "label": "Button Link"
-            },
-            "btn_bgcolor": {
-              "label": "Button Background Color"
-            },
-            "btn_fontcolor": {
-              "label": "Button Text Color"
-            },
-            "bborder_color": {
-              "label": "Button Border Color"
             }
           }
         },
@@ -100,46 +100,11 @@
               },
               "label": "Icon"
             },
-            "bg_style": {
-              "solid": {
-                "label": "Solid Color"
-              },
-              "gradient": {
-                "label": "Gradient Colors"
-              },
-              "image": {
-                "label": "Image"
-              },
-              "label": "Background Style"
-            },
-            "bgcolor": {
-              "label": "Background Color"
-            },
-            "bgcolor2": {
-              "label": "Background Color 2",
-              "info": "Select both colors for Gradient background"
-            },
-            "bgimage": {
-              "label": "Background Image",
-              "info": "This works with Background Style option Image"
-            },
-            "fontcolor": {
-              "label": "Text Color"
-            },
             "btn": {
               "label": "Button Text"
             },
             "link": {
               "label": "Button Link"
-            },
-            "btn_bgcolor": {
-              "label": "Button Background Color"
-            },
-            "btn_fontcolor": {
-              "label": "Button Text Color"
-            },
-            "bborder_color": {
-              "label": "Button Border Color"
             }
           }
         }
