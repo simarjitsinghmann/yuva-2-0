@@ -91,7 +91,7 @@
         });
       $('button[name="commit"]').click(function(e){
       	e.preventDefault();
-        var checked = $(this).find('#close-dialog').is(":checked");
+        var checked = $(this).find('#close-dialog').val();
         console.log(checked)
       })
 /* NEWSLETTER POPUP ENDS */
