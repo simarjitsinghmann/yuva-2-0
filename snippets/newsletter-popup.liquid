@@ -91,8 +91,14 @@
         });
       $('button[name="commit"]').click(function(e){
       	e.preventDefault();
-        var checked = $(this).closest('form').find('#close-dialog:checked');
-        console.log(checked.length)
+        var form = $(this).closest('form');
+        var checked = form.find('#close-dialog:checked');
+        if(checked.length > 0){
+        
+        }else{
+          
+        }
+        form.submit();
       })
 /* NEWSLETTER POPUP ENDS */
   </script>
