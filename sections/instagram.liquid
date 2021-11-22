@@ -55,6 +55,22 @@
   setTimeout(function(){ $('#instafeed a').attr('target','_blank'); }, 1000);
 </script>
 {% endif %}
+<style>
+  .instagram-post-list {
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+}
+  .instagram-post-list > a {
+    flex: 0 0 16.66%;
+}
+  .instagram-post-list > a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+</style>
 {% schema %} 
   {
     "name": "t:sections.instagram.name",
