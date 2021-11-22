@@ -12,16 +12,17 @@
     "newsletter_heading_color": "#000000",
     "newsletter_description_color": "#555555",
     "popup_cookie": 13,
-    "colors_solid_button_labels": "#FFFFFF",
+    "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
-    "colors_accent_2": "#334FB4",
+    "colors_accent_2": "#334fb4",
     "colors_text": "#121212",
     "colors_outline_button_labels": "#121212",
-    "colors_background_1": "#FFFFFF",
-    "colors_background_2": "#F3F3F3",
+    "colors_background_1": "#ffffff",
+    "colors_background_2": "#f3f3f3",
     "type_header_font": "assistant_n4",
     "type_body_font": "assistant_n4",
-    "checkout_body_font": "Oswald",
+    "checkout_heading_font": "Roboto",
+    "checkout_body_font": "Roboto",
     "sections": {
       "header": {
         "type": "header",
@@ -288,6 +289,7 @@
           "menu_position": "left",
           "menu_bgcolor": "#ffffff",
           "menu_textcolor": "#000000",
+          "sub_hover_color": "#000000",
           "show_search": true,
           "show_currency": true,
           "enable_sticky_header": true
@@ -373,7 +375,14 @@
         "settings": {
           "show_bar": true,
           "auto_rotate": false,
-          "show_close": true
+          "show_close": true,
+          "bg_style": "solid",
+          "bgcolor": "#f17e35",
+          "bgcolor2": "#f86f64",
+          "fontcolor": "#ffffff",
+          "btn_bgcolor": "#f17e35",
+          "btn_fontcolor": "#ffffff",
+          "bborder_color": ""
         }
       }
     },
