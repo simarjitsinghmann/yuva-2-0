@@ -37,7 +37,6 @@
                       </div>
                        {% endif %}
                       
-                            <div class="product-option">
                         {%- for property in item.properties -%}
                           {%- assign property_first_char = property.first | slice: 0 -%}
                           {%- if property.last != blank and property_first_char != '_' -%}
@@ -53,7 +52,6 @@
                               </dd>
                           {%- endif -%}
                         {%- endfor -%}
-                            </div>
                     </td>
                     <td class="cart-qty">
                        <div class="qty">
