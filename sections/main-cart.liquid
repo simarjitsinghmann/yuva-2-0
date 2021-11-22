@@ -41,8 +41,7 @@
                         {%- for property in item.properties -%}
                           {%- assign property_first_char = property.first | slice: 0 -%}
                           {%- if property.last != blank and property_first_char != '_' -%}
-                              <dt>{{ property.first }}: </dt>
-                              <dd>
+                      <span><strong>{{ property.first }}</strong>: 
                                 {%- if property.last contains '/uploads/' -%}
                                   <a href="{{ property.last }}" target="_blank">
                                     {{ property.last | split: '/' | last }}
@@ -50,7 +49,7 @@
                                 {%- else -%}
                                   {{ property.last }}
                                 {%- endif -%}
-                              </dd>
+                      </span>
                           {%- endif -%}
                         {%- endfor -%}
                     </td>
