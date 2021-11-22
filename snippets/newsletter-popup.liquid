@@ -96,10 +96,8 @@
         var date = new Date();
         date.setDate(date.getDate()+{{settings.popup_cookie}});
         var expires = date.toUTCString();
-        if(checked.length == 0){
-        
-        }else{
-          
+        if(checked.length > 0){
+        Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: expires, path: '/' });
         }
 //         form.submit();
       })
