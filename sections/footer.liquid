@@ -48,7 +48,7 @@
               {%- form 'contact', id: 'ContactFooter',class:'footer__newsletter newsletter-form' -%}
               {{ form.errors | default_errors }}
               {% if form.posted_successfully? %}
-              <p>{{ 'general.newsletter_form.confirmation' | t }}</p>
+              <p>{{ 'newsletter.success' | t }}</p>
               {% else %}
                 <div class="newsletter-form__field-wrapper">
                   <div class="field">
