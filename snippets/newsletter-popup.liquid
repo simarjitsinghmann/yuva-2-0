@@ -49,7 +49,7 @@
                                              value="{% if customer.email != blank %}{{ customer.email }}{% endif %}" 
                                                placeholder="{{ 'newsletter.email_placeholder' | t }}" autocapitalize="off" class="form-control enter-email" required>
                                   		</div>
-                                      <button class="button black-btn btn-block" id="SubscribeBtn" name="commit" type="submit">
+                                      <button class="button black-btn btn-block" id="SubscribeBtn" name="commit">
                                         <span>{{'newsletter.button_label' | t }}</span>
                                       </button>
                                     {% endif %}
@@ -89,7 +89,7 @@
             $('.newsletter-popup').fadeOut('slow');
             $('body').removeClass('NewsletterActive').removeClass('scrollHidden');         
         });
-      $('#contact-form-popup').submit(function(e){
+      $('button[name="commit"]').click(function(e){
       	e.preventDefault();
         var checked = $(this).find('#close-dialog:checked');
         console.log(checked)
