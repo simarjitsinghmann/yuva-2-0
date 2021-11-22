@@ -89,7 +89,6 @@
           date.setTime(date.getTime() + (parseInt('{{settings.popup_cookie}}') * 24 * 60 * 60 * 1000));
      
           console.log(date);
-                       return false;
           if(checked.length > 0){
             Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: date, path: '/' });
           }
@@ -101,7 +100,7 @@
         var form = $(this).closest('form');
         var checked = form.find('#close-dialog:checked');
         var date = new Date();
-          date.setDate(date.getTime() + parseInt('{{settings.popup_cookie}}') * 24 * 60 * 60 * 100);
+          date.setDate(date.getTime() + parseInt('{{settings.popup_cookie}}') * 24 * 60 * 60 * 1000);
         if(checked.length > 0){
         	Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: date, path: '/' });
         }
