@@ -96,7 +96,7 @@
       {% assign image = 'image'|append:i %}
       {% assign heading = 'heading'|append:i %}
       {% assign button = 'button'|append:i %}
-      {% assign link = 'link'|append:i %}
+      {% assign newlink = 'link'|append:i %}
       {% unless block.settings[image] == blank and block.settings[heading] == blank %}
 
       <div class="sub-menu-list">
@@ -104,7 +104,7 @@
           <img src="{{block.settings[image] | img_url:'master'}}" style="width:100%"  class="menu-image">
           <div class="menu-content">
             <h4>{{block.settings[heading]}}</h4>
-            <a href="{{block.settings[link]}}" class="link">{{block.settings[button]}}</a>
+            <a href="{{block.settings[newlink]}}" class="link">{{block.settings[button]}}</a>
           </div>
         </div>
       </div>
