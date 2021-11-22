@@ -23,7 +23,8 @@
                       </a>
                     </td>
                     <td class="cart-prd-details">
-                       <h5>{{item.product.title}}</h5>
+                       
+                      <a href="{{item.url}}"><h5>{{item.product.title}}</h5></a>
                       {% if item.sku != blank and item.variant.title != 'Default Title'%}
                       	<div class="cart-item-product-details">
                        {% if item.sku != blank %}
