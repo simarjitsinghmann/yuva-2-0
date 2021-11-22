@@ -46,6 +46,7 @@
 			
               {% if block.settings.show_newsletter %}
               {%- form 'contact', id: 'ContactFooter',class:'footer__newsletter newsletter-form' -%}
+                              <input type="hidden" name="contact[tags]" value="newsletter">
               {{ form.errors | default_errors }}
               {% if form.posted_successfully? %}
               <p>{{ 'newsletter.success' | t }}</p>
