@@ -82,7 +82,7 @@
         }
         $("body").on('click', '.newsletter-popup .pop_cross,.newsletter-popup .popclose', function (e) {
             e.preventDefault();
-            Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: {{settings.popup_cookie}}, path: '/' });
+            Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: 3000, path: '/' });
             $('.newsletter-popup').fadeOut('slow');
             $('body').removeClass('NewsletterActive').removeClass('scrollHidden');         
         });
