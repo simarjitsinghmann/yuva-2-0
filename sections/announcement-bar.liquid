@@ -1,36 +1,37 @@
 {% if section.settings.show_bar and section.blocks.size > 0 %}
     <div id="shopify-section-announcement-bar"> 
+      <style>
+        #shopify-section-{{section.id}} .announcement-bar {
+          border-color:transparent !important;
+          {% if section.settings.bg_style == 'gradient' %}
+          background: -moz-linear-gradient(left, {{section.settings.bgcolor}} 0%, {{section.settings.bgcolor}} 33%, {{section.settings.bgcolor2}} 66%, {{section.settings.bgcolor2}} 100%);
+          background: -webkit-linear-gradient(left, {{section.settings.bgcolor}} 0%,{{section.settings.bgcolor}} 33%,{{section.settings.bgcolor2}} 66%,{{section.settings.bgcolor2}} 100%);
+          background: linear-gradient(to right, {{section.settings.bgcolor}} 0%,{{section.settings.bgcolor}} 33%,{{section.settings.bgcolor2}} 66%,{{section.settings.bgcolor2}} 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{{section.settings.bgcolor}}', endColorstr='{{section.settings.bgcolor2}}',GradientType=1 );
+
+            {% else %}
+            background-color:{{section.settings.bgcolor}};
+            {% endif %}
+            }
+        #announcement{{section.id}} .announcement-bar__message{
+          color:{{section.settings.fontcolor}};
+        }
+        #announcement{{section.id}} .announcement-bar__message p a{
+          color: {{section.settings.fontcolor}};
+          border-bottom: 1px solid {{section.settings.fontcolor}};
+        }
+        #announcement{{section.id}} .announcement-bar__message a.announce-btn{
+          color:{{section.settings.btn_fontcolor}};
+          background-color:{{section.settings.btn_bgcolor}};
+          border: 1px solid transparent;
+          border-color:{{section.settings.bborder_color}};
+        }
+        .announcement-bar__message p:last-child {
+          margin-left: 5px;
+        }
+      </style>
         {% for block in section.blocks %}
-            <style>
-                #announcement{{block.id}} {
-                    border-color:transparent !important;
-                    {% if block.settings.bg_style == 'gradient' %}
-                        background: -moz-linear-gradient(left, {{block.settings.bgcolor}} 0%, {{block.settings.bgcolor}} 33%, {{block.settings.bgcolor2}} 66%, {{block.settings.bgcolor2}} 100%);
-                        background: -webkit-linear-gradient(left, {{block.settings.bgcolor}} 0%,{{block.settings.bgcolor}} 33%,{{block.settings.bgcolor2}} 66%,{{block.settings.bgcolor2}} 100%);
-                        background: linear-gradient(to right, {{block.settings.bgcolor}} 0%,{{block.settings.bgcolor}} 33%,{{block.settings.bgcolor2}} 66%,{{block.settings.bgcolor2}} 100%);
-                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{{block.settings.bgcolor}}', endColorstr='{{block.settings.bgcolor2}}',GradientType=1 );
-                   
-                            {% else %}
-                            background-color:{{block.settings.bgcolor}};
-                    {% endif %}
-                }
-                #announcement{{block.id}} .announcement-bar__message{
-                    color:{{block.settings.fontcolor}};
-                }
-                #announcement{{block.id}} .announcement-bar__message p a{
-                    color: {{block.settings.fontcolor}};
-                    border-bottom: 1px solid {{block.settings.fontcolor}};
-                }
-                #announcement{{block.id}} .announcement-bar__message a.announce-btn{
-                    color:{{block.settings.btn_fontcolor}};
-                    background-color:{{block.settings.btn_bgcolor}};
-                    border: 1px solid transparent;
-                    border-color:{{block.settings.bborder_color}};
-                }
-              .announcement-bar__message p:last-child {
-                margin-left: 5px;
-              }
-            </style>
+            
         <div id="announcement{{block.id}}" class="announcement-bar {% if block.type == 'timer' %}hidden{% endif %}" {{ block.shopify_attributes }}>
             {% if section.settings.auto_rotate %}
             <div class="sf__scrolling-text text-base" data-s-speed="lowest" data-outline-thickness="thin" data-s-dir="ltr">
