@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="close_dialog">
                                     <label class="custom-checkbox">Do not show this dialog again
-                                      <input type="checkbox" id="close-dialog" name="close-dialog">
+                                      <input type="checkbox" id="close-dialog">
                                       <span class="checkmark"></span>
                                     </label>
 <!--                                 	<label for="close-dialog"><input type="checkbox" id="close-dialog" name="close-dialog"> Do not show this dialog again</label> -->
@@ -92,7 +92,7 @@
       $('button[name="commit"]').click(function(e){
       	e.preventDefault();
         var checked = $(this).closest('form').find('#close-dialog:checked');
-        console.log(checked)
+        console.log(checked.length)
       })
 /* NEWSLETTER POPUP ENDS */
   </script>
