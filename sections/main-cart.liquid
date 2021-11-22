@@ -25,33 +25,32 @@
                     <td class="cart-prd-details">
                        
                       <a href="{{item.url}}"><h5>{{item.product.title}}</h5></a>
-                      {% if item.sku != blank and item.variant.title != 'Default Title'%}
-                      	<div class="cart-item-product-details">
-                       {% if item.sku != blank %}
-                       <span>SKU: {{item.sku}}</span>
-                       {% endif %}
-                       {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
-                       {% for option in item.options_with_values %}
-                       <span>{{option.name}}: {{option.value}}</span>
-                       {% endfor %}
-                       {% endunless %}
-                      </div>
-                       {% endif %}
-                      
+                      <div class="cart-item-product-details">
+                        {% if item.sku != blank %}
+                        <span>SKU: {{item.sku}}</span>
+                        {% endif %}
+                        {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
+                        {% for option in item.options_with_values %}
+                        <span>{{option.name}}: {{option.value}}</span>
+                        {% endfor %}
+                        {% endunless %}
                         {%- for property in item.properties -%}
-                          {%- assign property_first_char = property.first | slice: 0 -%}
-                          {%- if property.last != blank and property_first_char != '_' -%}
-                      <span><strong>{{ property.first }}</strong>: 
-                                {%- if property.last contains '/uploads/' -%}
-                                  <a href="{{ property.last }}" target="_blank">
-                                    {{ property.last | split: '/' | last }}
-                                  </a>
-                                {%- else -%}
-                                  {{ property.last }}
-                                {%- endif -%}
-                      </span>
+                        {%- assign property_first_char = property.first | slice: 0 -%}
+                        {%- if property.last != blank and property_first_char != '_' -%}
+                        <span><strong>{{ property.first }}</strong>: 
+                          {%- if property.last contains '/uploads/' -%}
+                          <a href="{{ property.last }}" target="_blank">
+                            {{ property.last | split: '/' | last }}
+                          </a>
+                          {%- else -%}
+                          {{ property.last }}
                           {%- endif -%}
+                        </span>
+                        {%- endif -%}
                         {%- endfor -%}
+                      </div>
+                      
+                       
                     </td>
                     <td class="cart-qty">
                        <div class="qty">
