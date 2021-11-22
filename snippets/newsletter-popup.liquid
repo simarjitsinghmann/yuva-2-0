@@ -84,11 +84,13 @@
             e.preventDefault();
         var form = $(this).parent().find('form');
         var checked = form.find('#close-dialog:checked');
-          var expires parseInt('{{settings.popup_cookie}}') * 24 * 60 * 60 * 1000);
-              
+          console.log('{{settings.popup_cookie}}')
+          var date = new Date();
+          date.setDate(date.getTime() + parseInt('{{settings.popup_cookie}}') * 24 * 60 * 60 * 100);
+     
           
           if(checked.length > 0){
-            Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: expires, path: '/' });
+            Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: date, path: '/' });
           }
             $('.newsletter-popup').fadeOut('slow');
             $('body').removeClass('NewsletterActive').removeClass('scrollHidden');         
@@ -98,10 +100,9 @@
         var form = $(this).closest('form');
         var checked = form.find('#close-dialog:checked');
         var date = new Date();
-        date.setDate(date.getDate()+ parseInt('{{settings.popup_cookie}}'));
-        var expires = date.toUTCString();
+          date.setDate(date.getTime() + parseInt('{{settings.popup_cookie}}') * 24 * 60 * 60 * 100);
         if(checked.length > 0){
-        	Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: expires, path: '/' });
+        	Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: date, path: '/' });
         }
         form.submit();
       })
