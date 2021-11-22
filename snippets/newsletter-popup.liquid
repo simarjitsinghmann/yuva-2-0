@@ -84,11 +84,8 @@
             e.preventDefault();
         var form = $(this).parent().find('form');
         var checked = form.find('#close-dialog:checked');
-          console.log('{{settings.popup_cookie}}',(parseInt('{{settings.popup_cookie}}') * 24 * 60 * 60 * 1000))
           var date = new Date();
           date.setTime(date.getTime() + (parseInt('{{settings.popup_cookie}}') * 24 * 60 * 60 * 1000));
-     
-          console.log(date);
           if(checked.length > 0){
             Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: date, path: '/' });
           }
