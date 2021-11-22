@@ -1,7 +1,8 @@
 /***top announcement_bar***/  
 .announcement-bar__message {text-align: center; padding: 8px 10px; margin: 0; letter-spacing: 1px; display: flex; flex-wrap: wrap; align-items: center;
   justify-content: center;font-weight: var(--medium);}
-.announcement-bar__message p {text-align: center;margin: 0;color: var(--white);font-weight: var(--normal); } 
+.announcement-bar__message p {text-align: center;margin: 0;font-weight: var(--normal); }
+.announcement-bar__message p, .announcement-bar__message li span#dayHours {color: inherit !important;}
 .announcement-bar__message a{font-weight: var(--medium);text-decoration:none;color: var(--white);border-bottom:1px solid var(--border-light-theme); }
 .announcement-bar .border-bg {border: 1px solid var(--white);}
 .announcement-bar .fill-bg {border: 1px solid var(--white);}
