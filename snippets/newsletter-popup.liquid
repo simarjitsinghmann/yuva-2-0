@@ -34,9 +34,9 @@
                                     {{settings.newsletter_description}}
                                 </div>
                             </div>
-                            <form accept-charset="UTF-8" action="/contact#contact_form" class="contact-form" id="contact-form-popup" method="post">
-                                <input name="form_type" type="hidden" value="customer">
-                                <input name="utf8" type="hidden" value="✓">
+              {%- form 'contact', id: 'contact-form-popup',class:'contact-form' -%}
+                            
+                              <input type="hidden" name="contact[tags]" value="newsletter">
 
                                 <div class="input-news-letter">
                                     {{ form.errors | default_errors }}
@@ -61,7 +61,7 @@
                                     </label>
 <!--                                 	<label for="close-dialog"><input type="checkbox" id="close-dialog" name="close-dialog"> Do not show this dialog again</label> -->
                                 </div>
-                            </form>
+                           {% endform %}
                         </div>
                 </div>
             </div>
