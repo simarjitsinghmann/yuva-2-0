@@ -254,13 +254,13 @@
 
                      </div>
                      {% when 'content' %}
-                             {% if block.settings.width == 'half' %}
-                     			{% if block.settings.style == "accordion" %}
-                           {% include 'product-accordion-content' %}
-                              {% else %}
-            {% include 'product-tabs-content' %}
-                              {% endif %}
-                              {% endif %}
+                     {% if block.settings.width == 'half' %}
+                     {% if block.settings.style == "accordion" %}
+                     {% include 'product-accordion-content' position:"sidebar-content" %}
+                     {% else %}
+                     {% include 'product-tabs-content' %}
+                     {% endif %}
+                     {% endif %}
                        
                         {% endcase %}
                      {% endfor %}
@@ -271,7 +271,7 @@
             {% for block in section.blocks %}                  
             {% if block.type == 'content' and block.settings.width == 'full' %}  
             {% if block.settings.style == "accordion" %}
-            {% include 'product-accordion-content' %}
+            {% include 'product-accordion-content'  position:"belowProductGalllery" %}
             {% else %}
             {% include 'product-tabs-content' %}
             {% endif %}
