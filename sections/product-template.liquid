@@ -317,7 +317,7 @@
              clearAccordion();
              btn.classList.add("active");
              var _value = btn.getAttribute("content");
-//              document.getElementById(_value).style.display = "block";
+             document.getElementById(_value).style.display = "block";
            }
          });
          });
@@ -328,7 +328,7 @@
            item.classList.remove('active');
          });
          Array.from(accordionContents).forEach(function(item) {
-//            item.style.display = 'none';
+           item.style.display = 'none';
          });
        }
       }
