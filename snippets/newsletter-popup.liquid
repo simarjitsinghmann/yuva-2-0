@@ -87,6 +87,8 @@
           console.log('{{settings.popup_cookie}}')
           var date = new Date();
           date.setDate(date.getDate() + parseInt('{{settings.popup_cookie}}'));
+              
+console.log(date)
           var expires = date.toUTCString();
           
           if(checked.length > 0){
