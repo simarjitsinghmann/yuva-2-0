@@ -46,7 +46,10 @@
 			
               {% if block.settings.show_newsletter %}
               {%- form 'contact', id: 'ContactFooter',class:'footer__newsletter newsletter-form' -%}
-<!--               <form id="ContactFooter" accept-charset="UTF-8" class="footer__newsletter newsletter-form"> -->
+              {{ form.errors | default_errors }}
+              {% if form.posted_successfully? %}
+              <p>{{ 'general.newsletter_form.confirmation' | t }}</p>
+              {% else %}
                 <div class="newsletter-form__field-wrapper">
                   <div class="field">
                     <input id="NewsletterForm--footer" type="email" name="contact[email]" class="field__input" value="" aria-required="true" autocorrect="off" autocapitalize="none" autocomplete="email" placeholder="{{block.settings.placeholder}}">
@@ -64,7 +67,7 @@
                     Join
                   {% endif %}
                 </button>
-<!--               </form> -->
+            {% endif %}
               {% endform %}
             {% endif %}
 
