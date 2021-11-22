@@ -93,12 +93,15 @@
       	e.preventDefault();
         var form = $(this).closest('form');
         var checked = form.find('#close-dialog:checked');
-        if(checked.length > 0){
+        var date = new Date();
+        date.setDate(date.getDate()+{{settings.popup_cookie}});
+        var expires = date.toUTCString();
+        if(checked.length == 0){
         
         }else{
           
         }
-        form.submit();
+//         form.submit();
       })
 /* NEWSLETTER POPUP ENDS */
   </script>
