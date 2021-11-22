@@ -210,6 +210,27 @@
       },
       "announcement-bar": {
         "type": "announcement-bar",
+        "blocks": {
+          "290094a0-74e5-4a10-a21f-214130263def": {
+            "type": "announcement",
+            "settings": {
+              "icon": "horn",
+              "announcement": "<p>Grab It Now, Black Friday Sale is going on.<\/p>",
+              "btn": "SALE",
+              "link": "shopify:\/\/collections",
+              "bg_style": "solid",
+              "bgcolor": "#e71d1d",
+              "bgcolor2": "#f86f64",
+              "fontcolor": "#fdfdfd",
+              "btn_bgcolor": "#f1e0d6",
+              "btn_fontcolor": "#f11818",
+              "bborder_color": "#120a0a"
+            }
+          }
+        },
+        "block_order": [
+          "290094a0-74e5-4a10-a21f-214130263def"
+        ],
         "settings": {
           "show_bar": true,
           "auto_rotate": false,
