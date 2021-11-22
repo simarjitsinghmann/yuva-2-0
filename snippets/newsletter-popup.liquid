@@ -89,6 +89,11 @@
             $('.newsletter-popup').fadeOut('slow');
             $('body').removeClass('NewsletterActive').removeClass('scrollHidden');         
         });
+      $('#contact-form-popup').submit(function(e){
+      	e.preventDefault();
+        var checked = $(this).find('#close-dialog:checked');
+        console.log(checked)
+      })
 /* NEWSLETTER POPUP ENDS */
   </script>
 {% endif %}
