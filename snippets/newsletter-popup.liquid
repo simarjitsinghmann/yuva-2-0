@@ -86,7 +86,7 @@
         var checked = form.find('#close-dialog:checked');
           console.log('{{settings.popup_cookie}}')
           var date = new Date();
-          date.setDate(date.getTime() + (parseInt('{{settings.popup_cookie}}') * 24 * 60 * 60 * 100));
+          date.setTime(date.getTime() + (parseInt('{{settings.popup_cookie}}') * 24 * 60 * 60 * 100));
      
           console.log(date);
                        return false;
