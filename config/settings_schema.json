@@ -143,6 +143,15 @@
         "id": "newsletter_bk",
         "label": "t:settings_schema.newsletter-popup.settings.newsletter_bk.label",
         "default": "#ffffff"
+      },
+      {
+        "type": "range",
+        "id": "popup_cookie",
+        "min": 1,
+        "max": 30,
+        "step": 1,
+        "label": "t:settings_schema.newsletter-popup.settings.popup_cookie.label",
+        "default": 1
       }
     ]
   },
