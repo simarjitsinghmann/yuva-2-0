@@ -28,15 +28,7 @@
   </div>
 </div>
 <style>              
-  #banner-{{section.id}} .banner-caption-title h6 { 
-    {% if section.settings.h_bg != blank %}
-    background: {{ section.settings.h_bg }};
-    {% endif %}
-    {% if section.settings.h_text != blank %}
-    color: {{ section.settings.h_text }};
-    {% endif %}
-  }             
-  #banner-{{section.id}} .banner-caption-title h1 { 
+    #banner-{{section.id}} .carousel-caption-title h6 { 
     {% if section.settings.sh_bg != blank %}
     background: {{ section.settings.sh_bg }};
     {% endif %}
@@ -44,34 +36,28 @@
     color: {{ section.settings.sh_text }};
     {% endif %}
   }               
-  #banner-{{section.id}} .banner-caption-title h2 { 
-    {% if section.settings.sale_bg != blank %}
-    background: {{ section.settings.sale_bg }};
-    {% endif %}
-    {% if section.settings.sale_text != blank %}
-    color: {{ section.settings.sale_text }};
+  #banner-{{section.id}} .carousel-caption-title h2 { 
+    {% if section.settings.h_text != blank %}
+    color: {{ section.settings.h_text }};
     {% endif %}
   }          
-  #banner-{{section.id}} .banner-caption-title p { 
-    {% if section.settings.c_bg != blank %}
-    background: {{ section.settings.c_bg }};
-    {% endif %}
+  #banner-{{section.id}} .carousel-caption-title p { 
     {% if section.settings.c_text != blank %}
     color: {{ section.settings.c_text }};
     {% endif %}
   }        
-  #banner-{{section.id}} .banner-caption-title a.button { 
+  #banner-{{section.id}} .carousel-caption-title a.button { 
     {% if section.settings.btn_text != blank %}
     color: {{ section.settings.btn_text }};
     {% endif %}
-    background-color:{{ section.settings.btn_bg }};
+    background-color:{{ section.settings.btn_bg }} ;
   }
 
-  #banner-{{section.id}} .banner-caption-title a.button:hover { 
+  #banner-{{section.id}} .carousel-caption-title a.button:hover { 
     {% if section.settings.btn_h_text != blank %}
     color: {{ section.settings.btn_h_text }};
     {% endif %}
-        background-color:{{ section.settings.btn_h_bg }};
+     background-color:{{ section.settings.btn_h_bg }}
   }
 </style>
 {% schema %}
