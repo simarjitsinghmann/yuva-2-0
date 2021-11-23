@@ -30,7 +30,7 @@
           {% unless block.settings.description == '' %}
           <p class="content--overlay h5--body">{{ block.settings.description }}</p>
           {% endunless %}
-          {% unless block.settings.link_text == '' %}
+          {% unless block.settings.link_text == blank %}
           <a class="{{ block.settings.button_style }} cta--overlay btn--large uppercase black-btn button" href="{{ block.settings.link }}">{{ block.settings.link_text | escape }}</a>
           {% endunless %}
         </div>
