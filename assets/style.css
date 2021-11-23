@@ -2979,11 +2979,11 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     font-weight: var(--medium);
 }
 .main-collection-category-section .collection-list.grid {
-    padding-left: 7px;
-    padding-right: 7px;
+    margin: 0 -7px;
 }
 .main-collection-category-section .grid__item {
-    margin: 0 -7px;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 /* collection page end */
 /* search page css start */
