@@ -352,7 +352,8 @@ div#banner-slide > img { width: 100%;}
 .collection-detail-right small { font-size:var(--reg-text); color: var(--dark-gray); line-height: 22px; letter-spacing: 0.3px; margin-bottom: 15px;font-weight: var(--normal);} 
 .collection-detail-right a{ color: var(--theme-color); font-size: var(--small-text); text-decoration: none; font-weight: var(--normal); } 
 .collection-detail-right a svg { fill: var(--theme-color); font-size: var(--small-text); width: 12px; height: 12px; position: relative; top: 1px; } 
-.collection__right__list .grid__item__list { padding-bottom: 15px; } 
+collection__right__list {height:100%}
+.collection__right__list .grid__item__list { padding-bottom: 15px;  height: 33.3%;} 
 .collection__right__list .grid__item__list:last-child { padding-bottom: 0px; } 
 .collection-image img { width: 100%; }
 
