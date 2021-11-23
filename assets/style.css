@@ -342,8 +342,9 @@ div#banner-slide > img { width: 100%;}
     object-position: center;
 }
 .card__warpper__detail.right__sided .collection-image { width: 50%; float: left; background-color: var(--gray) } 
-.card__warpper__detail.right__sided .collection-detail-right { width: 50%; display: flex; justify-content: center; align-items: flex-start; 
-  flex-direction: column; padding: 10px 30px;border: 2px solid #f5f4f3;border-left:0; } 
+.card__warpper__detail.right__sided .collection-detail-right { width: 50%; display: flex; 
+  justify-content: center; align-items: flex-start; 
+  flex-direction: column; padding: 10px 30px;border-left:0; } 
 .card-information .card-information-image a > img { width: 100%; } 
 .card__warpper__detail.left__sided { padding-right: 15px; } 
 .card__warpper__detail.left__sided .collection-image { width: 100%; background-color: var(--gray);  max-height:699px; display:flex; align-items:center;} 
@@ -362,6 +363,9 @@ div#banner-slide > img { width: 100%;}
 .card-wrapper.left-sided {
     height: 100%;
     
+}
+.card__warpper__detail.right__sided {
+	border: 2px solid #f5f4f3;
 }
 /**new layout**/
 .layout2 .card__warpper__detail.left__sided .collection-image {
