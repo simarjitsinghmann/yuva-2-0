@@ -60,17 +60,13 @@
 
   #banner-{{block.id}}  .btn-box a {
     background-color:{{ block.settings.button_text_bk }};
-    {% if block.settings.button_text_color != blank %}
     color: {{ block.settings.button_text_color }};
-    {% endif %}
+    border: 1px solid {{block.settings.button_border_color}};
   }
   #banner-{{block.id}}  .banner-left .btn-box a:hover{
     color:  {{ block.settings.hvr_button_text_color }};
     background-color:{{ block.settings.hvr_button_text_bk }}
   }
-  {% if block.settings.button_border_color != blank %}
-  #banner-{{block.id}}  .banner-left .btn-box a{border: 1px solid {{block.settings.button_border_color}};}
-  {% endif %}
   #banner-{{block.id}}.split-slider.slider-banner:after{
     background-image: url({{banner_image}})
   }
