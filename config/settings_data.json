@@ -359,18 +359,20 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
-          "290094a0-74e5-4a10-a21f-214130263def": {
-            "type": "announcement",
+          "ef1fb592-1069-4e57-8624-62795edc5097": {
+            "type": "timer",
             "settings": {
               "icon": "horn",
-              "announcement": "<p>Grab It Now, Black Friday Sale is going on.<\/p>",
+              "first_text": "Sale will go live after",
+              "date": "24\/11\/2021",
+              "last_text": "Go for It",
               "btn": "SALE",
-              "link": "shopify:\/\/collections"
+              "link": "shopify:\/\/collections\/all"
             }
           }
         },
         "block_order": [
-          "290094a0-74e5-4a10-a21f-214130263def"
+          "ef1fb592-1069-4e57-8624-62795edc5097"
         ],
         "settings": {
           "show_bar": true,
@@ -380,7 +382,7 @@
           "bgcolor": "#000000",
           "bgcolor2": "#f86f64",
           "fontcolor": "#ffffff",
-          "btn_bgcolor": "#f17e35",
+          "btn_bgcolor": "#f13535",
           "btn_fontcolor": "#ffffff",
           "bborder_color": ""
         }
