@@ -2,7 +2,7 @@
   {% if section.blocks.size > 1 %}
   <div id="slider-{{section.id}}" class=" slider-item">
     {% else %}
-    <div class="slider-item" data-slider>
+    <div class="slider-item">
       {% endif %}      
       {% for block in section.blocks %}
       {% case block.type %}
