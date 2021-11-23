@@ -71,7 +71,7 @@
                         name="add"
                         data-add-to-cart id="Sd_addProduct"
                         {% unless product.available %}disabled="disabled"{% endunless %}
-                        {% if section_onboarding %}disabled="disabled"{% endif %} class="black-btn button Sd_addProduct">
+                        {% if section_onboarding %}disabled="disabled"{% endif %} class="black-btn button small-btn Sd_addProduct">
                    <span>
                   {% if product.available %}
                   {{ 'products.product.add_to_cart' | t }}
