@@ -17,7 +17,7 @@
         {% if block.settings.banner_desc != blank %}
         <p>{{block.settings.banner_desc}} </p>
         {% endif %}
-        {% if block.settings.button_text != blank %}
+        {% if block.settings.button_text != blank and block.settings.link != blank %}
         <div class="btn-box"> 
           <a href="{{block.settings.button_link}}" class="black-btn button" >{{block.settings.button_text}}</a>
         </div>
