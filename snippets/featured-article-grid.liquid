@@ -1,4 +1,3 @@
-{% unless section.settings.style == 'style2' %}
 <div class="item grid__item style1">
     <div class="post-wrapper">
         <div class="post-information">
@@ -23,27 +22,3 @@
         </div>
     </div>
 </div>
-
-{% else %}
-
-<div class="item grid__item style2">
-    <div class="post-wrapper">
-      <div class="post-information">          
-        {% assign article_image = 'featured_image.png' | asset_url %}
-        {% if article.image %}
-        {% assign article_image = article.image | img_url:'master' %}
-        {% endif %}
-        <div class="post-information-image">
-          <a href="{{article.url}}" class="animate_hvrbr"><img src="{{article_image}}" alt=""></a>
-        </div>
-        <div class="post-information__wrapper text__left">
-          <div class="post-date">
-            <p>{{article.published_at | date: "%d %b %Y" }}</p>
-          </div>
-          <h5>{{article.title | truncatewords: 6}}</h5>
-          <div class="post-name"><p><a href="javascript:void(0)">{{article.excerpt_or_content | strip_html | truncatewords: 6}}</a></p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  {% endunless %}
