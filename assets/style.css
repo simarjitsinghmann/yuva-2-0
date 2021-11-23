@@ -1090,6 +1090,11 @@ li.breadcrumb-item span, li.breadcrumb-item a { font-size:var(--small-text); lin
 	flex: 0 0 75%;
   padding-top:20px;
 }
+.filters-false .product-content {
+    max-width: 100%;
+    flex: 0 0 100%;
+    padding-top: 0;
+}
 .CollectionProductGrid .product-collection.grid-view {
 	padding-top:30px;
 }
