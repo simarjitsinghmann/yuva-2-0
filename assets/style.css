@@ -2022,6 +2022,13 @@ justify-content: center
 /**banner-section**/
 .single-banner-section.banner-section .item {
 	position: relative;
+    min-height: 450px;
+    max-height: 450px;
+  	overflow:hidden;
+}
+.single-banner-section.banner-section .item img {
+    height: 100%;
+    object-fit: cover;
 }
 .single-banner-section.banner-section .banner-caption-title.banner-slide h6 {
     color: var(--white);
