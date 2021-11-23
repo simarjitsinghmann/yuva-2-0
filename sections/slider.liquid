@@ -1,7 +1,8 @@
 <div id="product-slider" class="banner-product-slider">
-  <div id="slider-{{section.id}}" class="loop owl-carousel owl-theme slider-item" data-slider {{section.blocks.size}}>
+  <div id="slider-{{section.id}}" class="loop owl-carousel owl-theme slider-item"   {% if section.blocks.size > 1 %}data-slider{% endif %}>
   
 <!--     <div class="" data-slider> -->
+         
       {% for block in section.blocks %}
       {% case block.type %}
         {% when 'slide' %}
