@@ -190,11 +190,11 @@
                          {{ form | payment_button }}
                          {% endif %}
                        </div>
-						{% if block.settings.show_contact and block.settings.text != blank %}
+						{% if block.settings.show_contact and block.settings.form_text != blank %}
                        <div class="product-contact-form">
                          <div class="ask_about"> 
                            <a href="javascript:;" class="ask_this_product" data-name="{{product.title}}"> 
-                             <i class="far fa-envelope"></i> {{block.settings.text}}</a>
+                             <i class="far fa-envelope"></i> {{block.settings.form_text}}</a>
                          </div>
                          <div class="askmeMain" style="display: none;">
                            <div class="askmecontainer">   
@@ -513,7 +513,7 @@
                },
 				{
                   "type": "text",
-                  "id": "text",
+                  "id": "form_text",
                   "default":"Ask about this product",
                   "label": "t:sections.product-template.blocks.button.settings.text.label"
 				}
