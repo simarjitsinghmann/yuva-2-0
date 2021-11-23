@@ -54,14 +54,15 @@
   #banner-{{block.id}}  p {color: {{ block.settings.banner_desc_color }};}								 
   {% endif %}
 
-  {% if block.settings.button_text_color != blank %}
-  #banner-{{block.id}}  .btn-box a {color: {{ block.settings.button_text_color }};}
-  {% endif %}
+  
 
 
 
   #banner-{{block.id}}  .btn-box a {
     background-color:{{ block.settings.button_text_bk }};
+    {% if block.settings.button_text_color != blank %}
+    color: {{ block.settings.button_text_color }};
+    {% endif %}
   }
   #banner-{{block.id}}  .banner-left .btn-box a:hover{
     color:  {{ block.settings.hvr_button_text_color }};
