@@ -46,8 +46,8 @@
 			
               {% if block.settings.show_newsletter %}
               {%- form 'contact', id: 'ContactFooter',class:'footer__newsletter newsletter-form' -%}
-                              <input type="hidden" name="contact[tags]" value="newsletter">
-              {{ form.errors | default_errors }}
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              
               {% if form.posted_successfully? %}
               <p>{{ 'newsletter.success' | t }}</p>
               {% else %}
@@ -60,6 +60,7 @@
                       {% endif %}
                     </label>
                   </div>
+                  {{ form.errors | default_errors }}
                 </div>
                 <button type="submit" class="button button--secondary newsletter-form__button" name="commit" id="Subscribe">
                   {% if block.settings.btn_text != blank %}
