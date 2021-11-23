@@ -258,9 +258,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
 
             var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
             var baseUrl = window.location.pathname;
-            console.log(baseUrl)
             if(baseUrl.indexOf('/products/') > -1){
-              console.log('ethe rakh',baseUrl)
               var _updateUrl = baseUrl+'?variant='+getVariant.id;
               history.pushState({}, null, _updateUrl);
             }
