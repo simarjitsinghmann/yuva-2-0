@@ -719,6 +719,10 @@ object-fit: cover; }
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+.post-information-image {
+    max-height: 200px;
+    overflow: hidden;
+}
 .post-information-image img { width: 100%; } 
 
 /**blog-variation2**/
