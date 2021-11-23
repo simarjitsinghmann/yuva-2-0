@@ -7,16 +7,16 @@
       {% for block in section.blocks %}
       {% case block.type %}
         {% when 'slide' %}
-      <div id="banner-{{block.id}}" class="banner banner-section item slider-banner animate__backInDown" {{ block.shopify_attributes }}>
+      <div id="banner-{{block.id}}" class="banner banner-section item slider-banner" {{ block.shopify_attributes }}>
       {% render 'banner-slide-content' block:block%}	
       </div>
       {% when 'split' %}
-      <div id="banner-{{block.id}}" class="banner banner-section item split-slider slider-banner animate__backInDown" {{ block.shopify_attributes }}>	
+      <div id="banner-{{block.id}}" class="banner banner-section item split-slider slider-banner" {{ block.shopify_attributes }}>	
         {% render 'split-slide-content' block:block%}	
       </div>
       {% when 'video' %}
       {% if block.settings.videofile != blank or block.settings.poster != blank %}
-      <div id="banner-{{block.id}}" class="banner banner-section item slider-banner animate__backInDown" {{ block.shopify_attributes }}>	
+      <div id="banner-{{block.id}}" class="banner banner-section item slider-banner" {{ block.shopify_attributes }}>	
         {% render 'video-slide-content' block:block%}	
       </div>
       {% endif %}						
@@ -33,9 +33,6 @@
           "autoplay":{{-section.settings.rotate-}},
           "nav":{{-section.settings.arrows-}},
          "slideSpeed":500,
-         "animateIn":true,
-         "animateOut":"backInDown",
-          "autoHeight":"backInUp",
           "autoHeightClass":"owl-height",
           "autoPlaySpeed":{{-section.settings.rotate_speed | times:1000-}},
           "navText": ["<span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M15.526 18.966L8.559 12l6.967-6.967\"></path></svg></span>","<span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M8.474 18.966L15.44 12 8.474 5.033\"></path></svg></span>"]
