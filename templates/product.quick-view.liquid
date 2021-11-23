@@ -32,16 +32,18 @@
       <input type="hidden" name="form_type" value="product">
       <div class="prizebox" data-price-wrapper>
         <label class="visually-hidden" data-price-text>{{ 'Price' }}</label>
+        {% if current_variant.compare_at_price > current_variant.price %}
         <h3 data-product-price id="get_price">
-          {{ current_variant.price | default: '1999' | money }}
-          {% if product.compare_at_price_max > product.price %}
-          <span data-compare-price>
-            {% if current_variant.compare_at_price > current_variant.price %}
-            <s>{{ current_variant.compare_at_price | money }}</s>
-            {% endif %}
+          {{current_variant.price | money}}
+          <span class="main-price" data-compare-price>
+            <del>{{current_variant.compare_at_price | money}}</del>
           </span>
-          {% endif %}
         </h3>
+        <span class="percent-off">({{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}})</span>
+        {% else %}
+        <h3 data-product-price id="get_price">{{current_variant.price | money}}</h3>
+        {% endif %}
+        
       </div>
       <div class="form-group">
         {% if product.available and product.variants.size > 1 %}
