@@ -46,7 +46,7 @@
                                         <input name="contact[tags]" type="hidden" value="newsletter">
                                   		<div class="form-group">
                                         	<input class="form-control" type="email" name="contact[email]" id="EmailId" 
-                                             value="{% if customer.email != blank %}{{ customer.email }}{% endif %}" 
+                                             value="{% if customer.email != blank %}{{ customer.email }}{% else %}{{ form.email }}{% endif %}" 
                                                placeholder="{{ 'newsletter.email_placeholder' | t }}" autocapitalize="off" class="form-control enter-email" required>
                                   		</div>
                                       <button class="button black-btn btn-block" id="SubscribeBtn" name="commit">
