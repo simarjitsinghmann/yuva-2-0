@@ -173,85 +173,86 @@
                                 </div>
                               
                            </div>
-                           {% when 'button' %}
-                           {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                              <div class="product_button">
-                                 <div class="pdp-action-container">
-                                    <div class="pdp-add-to-bag pdp-button pdp-flex pdp-center">
-                                      <button type="submit" class="Sd_addProduct add_to_cart black-btn button btn-block"><span>Add to Cart</span>
-                                        <svg height="38" width="38" class="svg-loader" style="display:none;">
-                                          <circle r="13" cx="14" cy="20"></circle>
-                                          <circle stroke-dasharray="103.964594 87.96459430051421" r="13" cx="14" cy="20"></circle>
-                                        </svg>
-                                      </button>
-                                    </div>
-                                    {% if block.settings.dynamic_checkout_btn %}
-                                    {{ form | payment_button }}
-                                    {% endif %}
+                     {% when 'button' %}
+                     {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                     <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                     <div class="product_button">
+                       <div class="pdp-action-container">
+                         <div class="pdp-add-to-bag pdp-button pdp-flex pdp-center">
+                           <button type="submit" class="Sd_addProduct add_to_cart black-btn button btn-block"><span>Add to Cart</span>
+                             <svg height="38" width="38" class="svg-loader" style="display:none;">
+                               <circle r="13" cx="14" cy="20"></circle>
+                               <circle stroke-dasharray="103.964594 87.96459430051421" r="13" cx="14" cy="20"></circle>
+                             </svg>
+                           </button>
+                         </div>
+                         {% if block.settings.dynamic_checkout_btn %}
+                         {{ form | payment_button }}
+                         {% endif %}
+                       </div>
+						{% if block.settings.show_contact and block.settings.text != blank %}
+                       <div class="product-contact-form">
+                         <div class="ask_about"> 
+                           <a href="javascript:;" class="ask_this_product" data-name="{{product.title}}"> 
+                             <i class="far fa-envelope"></i> {{block.settings.text}}</a>
+                         </div>
+                         <div class="askmeMain" style="display: none;">
+                           <div class="askmecontainer">   
+                             <a href="javascript:;" class="ask_cross">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+                                 <defs>
+                                   <style>
+                                     .close {
+                                       fill: #323030;
+                                       fill-rule: evenodd;
+                                       opacity: 0.6;
+                                     }
+                                   </style>
+                                 </defs>
+                                 <path d="M1235.63,300.5l5.11-5.115a0.813,0.813,0,0,0-1.15-1.15l-5.11,5.115-5.12-5.115a0.813,0.813,0,1,0-1.15,1.15l5.12,5.115-5.12,5.116a0.809,0.809,0,0,0,0,1.15,0.82,0.82,0,0,0,.58.238,0.8,0.8,0,0,0,.57-0.238l5.12-5.115,5.11,5.115a0.814,0.814,0,0,0,1.15,0,0.809,0.809,0,0,0,0-1.15Z" transform="translate(-1228 -294)"></path>
+                               </svg>    
+                             </a>
+                             <h3 class="productheading">{{product.title}}</h3>    
+
+
+                             {%- form 'contact', id: 'ContactForm' -%}
+
+
+                             <input type="hidden" name="contact[product]" id="ContactFormProduct" placeholder="Product:" value="{{product.title}}">
+                             <div class="form-group">
+                               <label for="ContactFormName">Name</label>
+                               <input class="ask-me-form-control " type="text" name="contact[name]" id="ContactFormName" placeholder="Name" value="" required="">
+                             </div>    
+                             <div class="form-group">
+                               <div class="row">
+                                 <div class="col-md-6 width-50">
+                                   <label for="ContactFormEmail">Email</label>
+                                   <input class="ask-me-form-control " type="email" name="contact[email]" id="ContactFormEmail" placeholder="Email" value="" spellcheck="false" autocomplete="off" autocapitalize="off" required="">
+
                                  </div>
+                                 <div class="col-md-6 width-50">
+                                   <label for="ContactFormPhone">Phone Number</label>
+                                   <input class="ask-me-form-control " type="tel" name="contact[phone]" id="ContactFormPhone" placeholder="Phone Number" value="" pattern="[0-9\-]*">
+                                 </div>
+                               </div>
+                             </div>
+                             <div class="form-group">
+                               <label for="ContactFormMessage">Message</label>
+                               <textarea class="ask-me-form-control " rows="10" name="contact[body]" id="ContactFormMessage" placeholder="Message" required=""></textarea>
+                             </div>
+                             <input type="submit" class="button black-btn submit-button" value="Send">
+                             {% endform %}
+                           </div>
+                         </div>
+
+
+                       </div>
+                       {% endif %}
                      </div>
                      {% endform %}
                      {% when 'social-icons' %}
                      <div class="social-icons">
                         {% include 'social-sharing' , share_title: product.title, share_permalink: product.url, share_image: product%}
-                     </div>
-                     {% when 'contact-form' %}
-                     <div class="product-contact-form">
-                       <div class="ask_about"> 
-                         <a href="javascript:;" class="ask_this_product" data-name="{{product.title}}"> 
-                           <i class="far fa-envelope"></i> {{block.settings.text}}</a>
-                       </div>
-                       <div class="askmeMain" style="display: none;">
-                         <div class="askmecontainer">   
-                           <a href="javascript:;" class="ask_cross">
-                             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
-                               <defs>
-                                 <style>
-                                   .close {
-                                     fill: #323030;
-                                     fill-rule: evenodd;
-                                     opacity: 0.6;
-                                   }
-                                 </style>
-                               </defs>
-                               <path d="M1235.63,300.5l5.11-5.115a0.813,0.813,0,0,0-1.15-1.15l-5.11,5.115-5.12-5.115a0.813,0.813,0,1,0-1.15,1.15l5.12,5.115-5.12,5.116a0.809,0.809,0,0,0,0,1.15,0.82,0.82,0,0,0,.58.238,0.8,0.8,0,0,0,.57-0.238l5.12-5.115,5.11,5.115a0.814,0.814,0,0,0,1.15,0,0.809,0.809,0,0,0,0-1.15Z" transform="translate(-1228 -294)"></path>
-                             </svg>    
-                           </a>
-                           <h3 class="productheading">{{product.title}}</h3>    
-
-
-                           {%- form 'contact', id: 'ContactForm' -%}
-
-
-                           <input type="hidden" name="contact[product]" id="ContactFormProduct" placeholder="Product:" value="{{product.title}}">
-                           <div class="form-group">
-                             <label for="ContactFormName">Name</label>
-                             <input class="ask-me-form-control " type="text" name="contact[name]" id="ContactFormName" placeholder="Name" value="" required="">
-                           </div>    
-                           <div class="form-group">
-                             <div class="row">
-                               <div class="col-md-6 width-50">
-                                 <label for="ContactFormEmail">Email</label>
-                                 <input class="ask-me-form-control " type="email" name="contact[email]" id="ContactFormEmail" placeholder="Email" value="" spellcheck="false" autocomplete="off" autocapitalize="off" required="">
-
-                               </div>
-                               <div class="col-md-6 width-50">
-                                 <label for="ContactFormPhone">Phone Number</label>
-                                 <input class="ask-me-form-control " type="tel" name="contact[phone]" id="ContactFormPhone" placeholder="Phone Number" value="" pattern="[0-9\-]*">
-                               </div>
-                             </div>
-                           </div>
-                           <div class="form-group">
-                             <label for="ContactFormMessage">Message</label>
-                             <textarea class="ask-me-form-control " rows="10" name="contact[body]" id="ContactFormMessage" placeholder="Message" required=""></textarea>
-                           </div>
-                           <input type="submit" class="button black-btn submit-button" value="Send">
-                           {% endform %}
-                         </div>
-                       </div>
-
-
                      </div>
                      {% when 'content' %}
                      {% if block.settings.width == 'half' %}
