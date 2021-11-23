@@ -93,10 +93,7 @@
                             {% endcapture %}
                             <li class="grid__item__list">
                                 <div class="card-wrapper">
-                                    <div class="card__warpper__detail right__sided block-{{forloop.index}}">
-                                      {% if block.settings.info_position == 'right'%}
-                                        {{image_content}}
-                                      {% endif %}
+                                    <div class="card__warpper__detail right__sided block-{{forloop.index}}">                                      
                                     <div class="collection-detail-right">
                                       <h5>
                                           {% if block.settings.custom == false %}
@@ -130,9 +127,7 @@
                                         </a>
                                       {% endif %}
                                     </div>
-                                    {% if block.settings.info_position == 'left'%}
                                       {{image_content}}
-                                    {% endif %}
                                     </div>
                                 </div>
                             </li>
@@ -335,23 +330,7 @@
           "id": "btntext",
           "default": "Explore",
           "label": "t:sections.collection-list.blocks.collection.settings.btntext.label"
-        },
-        {
-          "type": "select",
-          "id": "info_position",
-          "label": "t:sections.collection-list.blocks.collection.settings.info_position.label",
-          "default": "right",
-          "options": [
-            {
-              "label": "t:sections.collection-list.blocks.collection.settings.info_position.left.label",
-              "value": "left"
-            },
-            {
-              "label": "t:sections.collection-list.blocks.collection.settings.info_position.right.label",
-              "value": "right"
-            }
-          ]
-        },     
+        },    
         {
           "type": "checkbox",
           "id": "custom",
