@@ -41,11 +41,8 @@
     {% endif %}
   }               
   #banner-{{block.id}} .carousel-caption-title h2 { 
-    {% if block.settings.sale_bg != blank %}
-    background: {{ block.settings.sale_bg }};
-    {% endif %}
-    {% if block.settings.sale_text != blank %}
-    color: {{ block.settings.sale_text }};
+    {% if block.settings.h_text != blank %}
+    color: {{ block.settings.h_text }};
     {% endif %}
   }          
   #banner-{{block.id}} .carousel-caption-title p { 
