@@ -291,7 +291,8 @@ div#banner-slide > img { width: 100%;}
 /***Collection section***/
 .collection-gutter .grid--2-col { width: 50%; max-width: 50%; } 
 .collection-gutter { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; } 
-.card-wrapper { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; position:relative; } 
+.card-wrapper { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;
+  position:relative; height: 100%;} 
 /* .card__warpper__detail.left__sided .collection-image {height: 100vh;} */
 /* .card__warpper__detail.left__sided .collection-image > img {height: 100vh;object-fit: cover;} */
 /* .title { font-family: var(--font-family);color: var(--black); line-height: 45px; text-align: left; font-weight: var(--semibold); margin:0;font-size:28px;}  */
