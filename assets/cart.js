@@ -46,7 +46,9 @@ changeCartItem = function(line, quantity) {
                 }
                 else{ 
                     $('[data-cart-count]').show().text(cart.item_count);
-                    var item = cart.items[line-1];
+                    
+                  var item = cart.items[line-1];
+                  console.log(item)
                     $('[name="item_quantity"][data-line="'+line+'"]').val(item.quantity);
                   updateLineItem();
                     cartPageUpdate(cart);
