@@ -2978,6 +2978,13 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
 .main-collection-category-section .shopify__top__section h2{
     font-weight: var(--medium);
 }
+.main-collection-category-section .collection-list.grid {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.main-collection-category-section .grid__item {
+    margin: 0 -7px;
+}
 /* collection page end */
 /* search page css start */
   .template-search__search {
