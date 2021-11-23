@@ -21,7 +21,6 @@
 {% endif %}
 <style>
     #shopify-section-{{section.id}}{
-      padding: {{section.settings.padding}}px 0;
       background-color:{{section.settings.bgcolor}};
       {%- if section.settings.show_divider -%}
       border-bottom: 1px solid {{section.settings.textcolor | color_lighten: 80}};
@@ -60,16 +59,6 @@
       "id": "show_divider",
       "default": true,
       "label": "t:sections.multicolumn.settings.show_divider.label"
-    },
-    {
-      "type": "range",
-      "id": "padding",
-      "default": 100,
-      "min":0,
-      "max":150,
-      "step":5,
-      "unit":"px",
-      "label": "t:sections.multicolumn.settings.padding.label"
     }
   ],
   "blocks": [
