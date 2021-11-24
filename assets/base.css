@@ -2999,10 +2999,19 @@ section.shopify-section.about-best-choice.featured-content-section {
     font-weight: 500;
   	color: #262626;
 }
-
 .section--image.fade-in-child.container.preventOverflow.video-sec {
     max-height: inherit;
-}  
+}
+.flex-absolute {
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
   
   
   
