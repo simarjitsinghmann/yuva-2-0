@@ -102,22 +102,9 @@
   font-size:16px;
 }
 
-.customer tbody td {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-@media screen and (min-width: 750px) {
-  .customer tbody td {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
 .customer td:empty {
   display: initial;
 }
-
 
 .customer thead th {
   font-size: 16px;
