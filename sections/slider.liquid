@@ -1,11 +1,7 @@
 <div id="product-slider" class="banner-product-slider">
   <div id="slider-{{section.id}}" class="slider-item {% if section.blocks.size > 1 %}{% endif %}"  {% if section.blocks.size > 1 %}{% endif %} 
-       data-flickity='{"cellAlign": "left",
-                      "contain": true,
-                      "autoplay":{%- if section.settings.rotate -%}{{-section.settings.rotate_speed | times:1000-}}{%- else -%}{{-section.settings.rotate-}}{%-endif-%},
-                      "pageDots":{{-section.settings.dots-}},
-                      "prevNextButtons":{{-section.settings.arrows-}},
-                      "fade": true
+       data-flickity='{
+                      
                       }'>
         
       {% for block in section.blocks %}
@@ -29,17 +25,13 @@
     </div>
   <script type="application/json" name="slider-json">
          {
-          "center":false,
-          "items":1,
-          "loop":true,
-          "margin":0,
-         "dots":{{-section.settings.dots-}},
-          "autoplay":{{-section.settings.rotate-}},
-          "nav":{{-section.settings.arrows-}},
-         "slideSpeed":500,
-          "autoHeightClass":"owl-height",
-          "autoPlaySpeed":{{-section.settings.rotate_speed | times:1000-}},
-          "navText": ["<span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M15.526 18.966L8.559 12l6.967-6.967\"></path></svg></span>","<span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M8.474 18.966L15.44 12 8.474 5.033\"></path></svg></span>"]
+          "cellAlign": "left",
+                      "contain": true,
+                      "autoplay":{%- if section.settings.rotate -%}{{-section.settings.rotate_speed | times:1000-}}{%- else -%}{{-section.settings.rotate-}}{%-endif-%},
+                      "pageDots":{{-section.settings.dots-}},
+                      "prevNextButtons":{{-section.settings.arrows-}},
+                      "fade": true,
+          "arrowShape": "M15.526 18.966L8.559 12l6.967-6.967"
         }
       </script>
   </div>
