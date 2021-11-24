@@ -2881,8 +2881,11 @@ li.fancybox-thumbs-loading {
 }
 .search-result-box .search-result-input .search__button {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 50%;
+    right: 10px;
+    background: transparent;
+    padding: 12px;
+    transform: translate(10px, -50%);
 }
 .template-search__results {
     margin-top: 50px;
