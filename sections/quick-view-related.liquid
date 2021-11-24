@@ -31,7 +31,14 @@
               autoplayHoverPause:false,
               arrows: false,
               dots: false,
-              asNavFor: sync1
+              responsive:[
+                {
+                  breakpoint:767,
+                  "settings": {
+                    "slidesToShow": 2
+                  }
+                }
+              ]
             })
           clearInterval(recomend);
             },200)
