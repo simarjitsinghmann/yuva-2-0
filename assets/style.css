@@ -168,7 +168,7 @@
 .banner-product-slider .slick-arrow span { background: var(--white); width: 45px; 
   height: 45px; color: var(--black); font-size: 27px; border-radius:0; display: flex; align-items: center; justify-content: center; }
 div#banner-slide > img { width: 100%;}
-.banner.slider-banner img {height:800px; object-fit:cover;}
+.banner.slider-banner img {height:100%; object-fit:cover;}
 .banner-product-slider .owl-theme .owl-nav [class*=owl-]:hover { background: transparent; color: inherit; } 
 .banner-product-slider .owl-theme .owl-nav [class*=owl-]:hover span{ background: var(--black); color: var(--white); } 
 #product-slider .slider-item .item > img { -webkit-transition: all 5s; -moz-transition: all 5s; -ms-transition: all 5s; -o-transition: all 5s; transition: all 5s; -webkit-transform: scale(1.05,1.05); -ms-transform: scale(1.05,1.05); transform: scale(1.05,1.05); }
