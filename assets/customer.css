@@ -126,14 +126,12 @@
   text-align: left;
 }
 
-.customer tfoot tr:first-of-type td {
-  padding-top: 4rem;
-}
 
 @media screen and (min-width: 750px) {
   .customer tfoot tr:first-of-type td,
   .customer tfoot tr:first-of-type th {
     padding-top: 2.4rem;
+    font-weight: 600;
   }
 }
 
