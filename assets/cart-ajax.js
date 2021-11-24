@@ -238,3 +238,16 @@ validateQty = function (qty) {
   }
   return qty;
 };
+
+$(document).on('click', '.sd_mini_removeproduct', function(evt) {
+  $.ajax({
+    url: '/cart/update.js',
+    type: 'POST',
+    data: {note: "test note"},
+    success: function(result) { 
+    },
+    error: function(jqxhr, status, exception) {
+      console.log(exception);
+    }
+  });
+})
