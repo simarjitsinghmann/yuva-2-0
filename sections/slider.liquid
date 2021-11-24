@@ -1,5 +1,5 @@
 <div id="product-slider" class="banner-product-slider">
-  <div id="slider-{{section.id}}" class="slider-item {% if section.blocks.size > 1 %}{% endif %}"  {% if section.blocks.size > 1 %}{% endif %} data-flickity="{cellAlign: 'left',contain: true,fade: true}">
+  <div id="slider-{{section.id}}" class="slider-item {% if section.blocks.size > 1 %}{% endif %}"  {% if section.blocks.size > 1 %}{% endif %} data-flickity="{'cellAlign': 'left','contain': true,'fade': true}">
         
       {% for block in section.blocks %}
       {% case block.type %}
