@@ -1,6 +1,6 @@
 {% paginate collection.products by section.settings.products_per_page %}
 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-<div class="CollectionProductGrid" id="CollectionProductsContainer" data-id="{{section.id}}" data-view="grid-layout-4">
+<div class="CollectionProductGrid {{sort_by}} {{collection.default_sort_by}} " id="CollectionProductsContainer" data-id="{{section.id}}" data-view="grid-layout-4">
   <div class="container">
     <div class="product-toolbar-box">
       
