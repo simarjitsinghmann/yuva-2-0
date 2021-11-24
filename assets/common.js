@@ -344,8 +344,9 @@ function hideOptions(){
 
 // sliders
 
-sliders = function(){
+sliders = function(unslick){
   var sliders = $('[data-slider]');
+  console.log('slick')
   if(sliders.length > 0){
     sliders.each(function(index) {
       $(this).slick('unslick')
@@ -358,7 +359,7 @@ sliders = function(){
 }
 sliders();
 jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
- sliders();
+ sliders('true');
 });
 }());
 
