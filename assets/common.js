@@ -346,7 +346,7 @@ function hideOptions(){
 
 sliders = function(unslick){
   var sliders = $('[data-slider]');
-  console.log('slick')
+  console.log('slick',unslick)
   if(sliders.length > 0){
     sliders.each(function(index) {
       $(this).slick('unslick')
