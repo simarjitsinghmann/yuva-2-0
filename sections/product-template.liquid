@@ -401,12 +401,11 @@
     $('[data-fancybox="gallery{{section.id}}"]').fancybox({
       buttons : [ 
       'close','thumbs'
-      ],helpers: {
-    thumbs: {
-      width: 75,
-      height: 50
-    }
-  }
+      ],
+      thumbs : {
+      autoStart : true,
+      axis      : 'x'
+      }
       });
   })
 </script>
