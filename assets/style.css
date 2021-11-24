@@ -827,7 +827,7 @@ object-fit: cover; }
 .star-rating { text-align: center; margin-bottom: 31px; }
 .star-rating .fa-star { font-size: 22px; } 
 /***testimonial-section***/
-.testimonial-slider { max-width: 100%; margin: 0 auto; } 
+.testimonial-slider { max-width: 100%; margin: 0 auto; position:relative; } 
 .shopify-section.testimonial { background: #f6f4f2; padding: 65px 0px 65px; } 
 .testimonial-slide .owl-item { background: var(--white); padding: 20px 29px; text-align: center; } 
 .testimonial-slide .owl-item .slider-content > img { width: 110px; margin: 0 auto; text-align: center; } 
@@ -854,7 +854,7 @@ object-fit: cover; }
 	-webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
     position: absolute; 
-  	top: calc(50% - 70px);
+  	top: 50%;
   z-index:9;
   -moz-transform: translateY(-50%); 
   -webkit-transform: translateY(-50%);
