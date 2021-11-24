@@ -56,10 +56,6 @@
 
     {{ 'element.css' | asset_url | stylesheet_tag }}
 
-    {{ 'owl.carousel.min.css' | asset_url | stylesheet_tag }}
-
-    {{ 'owl.theme.default.min.css' | asset_url | stylesheet_tag }}
-
     {{ 'fonts.css' | asset_url | stylesheet_tag }}
     
     {{ 'style-responsive.css' | asset_url | stylesheet_tag }}
@@ -78,7 +74,6 @@
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
 
     <script src="{{'vendor.js' | asset_url}}" ></script> 
-    <script src="{{'owl.carousel.js' | asset_url}}"></script> 
     <script src="{{'instafeed.min.js' | asset_url}}"></script> 
 
     <script src="{{'common.js' | asset_url}}" defer="defer"></script> 
