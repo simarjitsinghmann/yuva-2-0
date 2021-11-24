@@ -25,7 +25,7 @@
                               <div class="slider slider-main">
                                  {%- for media in product.media -%}
                                     {%-if media.media_type == 'image'-%}
-                                    <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
+                                    <div id="media-{{media.id}}" class="responsive-image__wrapper slick-slide productImageSlideItem">
                                        <img class="responsive-image__image lazyload" src="{{media | img_url: 'master'}}" alt="{{ media.preview_image.alt | escape }}">
                                        <a href="{{media | img_url: 'master'}}" class="image-popup-link btn-gallery" data-fancybox="gallery{{section.id}}">
                                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
