@@ -359,8 +359,10 @@ sliders = function(){
 }
 sliders();
 jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
-  console.log(event)
- sliders('true');
+  var parent = event.target;
+  var slider = parent.find('[data-slider]');
+  slider.slick('unslick');
+slickSlider($(slider));
 });
 }());
 
