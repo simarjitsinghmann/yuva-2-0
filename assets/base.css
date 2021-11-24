@@ -2895,8 +2895,37 @@ li.fancybox-thumbs-loading {
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0px 0 30px;
+    margin: 0 0 20px;
 }
+.search-result-box .search-result-input .search__button svg {
+    fill: #a4a2a2;
+    width: 16px;
+    margin-right: 6px;
+    margin-top: 4px;
+}
+.tabs-inner-box li {
+    background: #ebebeb;
+    margin: 3px;
+}
+.tabs-inner-box li.active {
+    background: #3c3c3c;
+    color: #fff;
+}
+.tabs-inner-box li a {
+    display: inline-block;
+    padding: 6px 24px;
+    font-size: 14px;
+    margin-left: -1px;
+    color: #767676;
+}
+  
+.tabs-inner-box li.active a {
+    color: #fff;
+}
+
+  
+  
+  
 .result_product .grid__item {
     padding-left: 0;
     padding-right: 0;
