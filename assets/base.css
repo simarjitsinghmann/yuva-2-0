@@ -908,6 +908,11 @@ summary::-webkit-details-marker {
   .grid--2-col-tablet .grid__item {
     width: calc(50% - 1rem / 2);
   }
+  
+  .main-collection-category-section .grid__item {
+    max-width: calc(33.33% - 1rem * 2 / 3);
+  }
+  
 }
 
 @media screen and (min-width: 990px) {
