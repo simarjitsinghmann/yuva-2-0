@@ -248,9 +248,6 @@ $(document).on('change ', '[name=note]', function(evt) {
     data: {note: currentVal},
     dataType: 'json',
     success: function(result) { 
-    },
-    error: function(jqxhr, status, exception) {
-      console.log(exception);
     }
   });
 })
