@@ -158,8 +158,11 @@
 .banner .banner-left h1 { font-size: 74px; line-height: 73px; margin-top: 10px; font-weight: 600;  word-break: break-word; } 
 .banner .banner-left h6 { display: inline-block; padding: 9px 10px; text-transform: uppercase; } 
 .banner  .banner-left p { font-size: 19px; margin-top: 10px; margin-bottom: 30px; line-height: 25px; font-weight: 400;   word-break: break-word; } 
-.banner .btn-box { clear: both; } 
-.banner-product-slider .owl-theme .owl-nav button { line-height: 10px; height: auto; border: 0; margin: 0; position: absolute; bottom:20px; cursor: pointer;} 
+.banner .btn-box { clear: both; }
+.banner-product-slider .slick-arrow { 
+  line-height: 10px; height: auto; border: 0; margin: 0; position: absolute; 
+  bottom:20px; cursor: pointer;
+} 
 .banner-product-slider .owl-theme .owl-nav button.owl-prev { right: 80px; } 
 .banner-product-slider .owl-theme .owl-nav button.owl-next { right: 20px; } 
 .banner-product-slider .owl-theme .owl-nav button.disabled { pointer-events: none; } 
