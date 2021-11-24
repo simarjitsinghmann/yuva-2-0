@@ -2907,9 +2907,9 @@ li.fancybox-thumbs-loading {
     background: #ebebeb;
     margin: 3px;
 }
+.tabs-inner-box li:hover, 
 .tabs-inner-box li.active {
     background: #3c3c3c;
-    color: #fff;
 }
 .tabs-inner-box li a {
     display: inline-block;
@@ -2919,6 +2919,7 @@ li.fancybox-thumbs-loading {
     color: #767676;
 }
   
+.tabs-inner-box li:hover a, 
 .tabs-inner-box li.active a {
     color: #fff;
 }
