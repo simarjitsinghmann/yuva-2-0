@@ -45,7 +45,7 @@ var flkty = new Flickity( elem, {
   cellAlign: 'left',
   contain: true,
   fade: true,
-      autoplay:{%- if section.settings.rotate -%}{{-section.settings.rotate_speed | times:1000-}}{%- else -%}{{-section.settings.rotate-}}{%-endif-%},
+      autoPlay:{%- if section.settings.rotate -%}{{-section.settings.rotate_speed | times:1000-}}{%- else -%}{{-section.settings.rotate-}}{%-endif-%},
                       pageDots:{{-section.settings.dots-}},
                       prevNextButtons:{{-section.settings.arrows-}}
 });
