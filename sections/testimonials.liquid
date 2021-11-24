@@ -12,7 +12,7 @@
           </div>
           {% if section.blocks.size > 0 %}
             <div class="testimonial-slider ">
-                <div id="testimonials-{{section.id}}" class="testimonial-slide slider-items" >
+                <div id="testimonials-{{section.id}}" class="testimonial-slide owl-carousel owl-theme" data-slider>
                     {% for block in section.blocks %}
                     <div class="item" {{ block.shopify_attributes }}>
                         <div class="slider-content">
@@ -50,7 +50,7 @@
             <div class="col-sm-12 col-md-12 col-lg-9">
                 <div class="client-slider">
                   <div class="testimonial-slider testimonial-variation2">
-                      <div id="testimonials-{{section.id}}" class="testimonial-client-slide slider-items">
+                      <div id="testimonials-{{section.id}}" class="testimonial-client-slide owl-carousel owl-theme" data-slider>
                         {% for block in section.blocks %}
                         <div class="item" {{ block.shopify_attributes }}>
                             <div class="slider-item">
@@ -83,7 +83,7 @@
                       "center":true,
                       "items":3,
                       "loop":true,
-                      "margin":30,
+                      "margin":0,
                      "dots":{{section.settings.dots}},
                       "slideSpeed": 1200,
                       "paginationSpeed": 500,
@@ -123,16 +123,7 @@
       background-color:{{section.settings.bgcolor}};
     }
   </style>
-<script>
-  var elem = document.querySelector('.slider-items');
-var flkty = new Flickity( elem, {
-  // options
-      autoplay:{%- if section.settings.rotate -%}{{-section.settings.rotate_speed | times:1000-}}{%- else -%}{{-section.settings.rotate-}}{%-endif-%},
-                      pageDots:{{-section.settings.dots-}},
-                      prevNextButtons:{{-section.settings.arrows-}}
-});
 
-</script>
 {% schema %}
 {
   "name": "t:sections.testimonials.name",
