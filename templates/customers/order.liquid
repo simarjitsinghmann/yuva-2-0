@@ -6,6 +6,7 @@
     <div class="account-pages-content">
       <div class="row">
         <div class="col-12 col-sm-7 col-md-8 col-lg-9">
+          <div class="d-flex">
           <h3>{{ 'customer.order.title' | t: name: order.name }}</h3>
           {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
           <p>{{ 'customer.order.date_html' | t: date: order_date }}</p>
@@ -14,6 +15,7 @@
           <p>{{ 'customer.order.cancelled_html' | t: date: cancelled_at }}</p>
           <p>{{ 'customer.order.cancelled_reason' | t: reason: order.cancel_reason_label }}</p>
           {%- endif -%}
+          </div>
 
           <table role="table" class="order-details">
             <caption class="visually-hidden">{{ 'customer.order.title' | t: name: order.name }}</caption>
