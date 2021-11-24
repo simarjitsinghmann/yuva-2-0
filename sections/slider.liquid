@@ -8,7 +8,7 @@
       {% render 'banner-slide-content' block:block%}	
       </div>
       {% when 'split' %}
-      <div id="banner-{{block.id}}" class="banner banner-section item split-slider slider-banner" {{ block.shopify_attributes }}>	
+      <div id="banner-{{block.id}}" class=" banner-{{block.id}} banner banner-section item split-slider slider-banner" {{ block.shopify_attributes }}>	
         {% render 'split-slide-content' block:block%}	
       </div>
       {% when 'video' %}
