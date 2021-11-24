@@ -239,7 +239,9 @@ validateQty = function (qty) {
   return qty;
 };
 
-$(document).on('click', '.sd_mini_removeproduct', function(evt) {
+$(document).on('change ', '[name=note]', function(evt) {
+    var currentVal = $(this).val();
+  console.log('test',currentVal)
   $.ajax({
     url: '/cart/update.js',
     type: 'POST',
