@@ -871,9 +871,6 @@ summary::-webkit-details-marker {
   .grid--quarter-max.grid--4-col-desktop .grid__item {
     max-width: 25%;
   }
-  .grid--quarter-max.grid--5-col-desktop .grid__item {
-    max-width: 20%;
-  }
 }
 
 .grid--1-col .grid__item {
@@ -2937,4 +2934,7 @@ li.fancybox-thumbs-loading {
 .result_product .grid__item .grid-item.col {
     padding-left: 6px;
     padding-right: 6px;
+}
+.reset-password .form-group label {
+    text-align: left;
 }
