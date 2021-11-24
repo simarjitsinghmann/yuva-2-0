@@ -401,9 +401,11 @@
     $('[data-fancybox="gallery{{section.id}}"]').fancybox({
       buttons : [ 
       'close'
-      ],thumbs : {
-    autoStart : true,
-    axis      : 'x'
+      ],helpers: {
+    thumbs: {
+      width: 75,
+      height: 50
+    }
   }
       });
   })
