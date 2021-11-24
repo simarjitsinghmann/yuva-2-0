@@ -67,7 +67,7 @@
 
     </div>
     {%- if search.performed -%}
-      <p class="element-margin" role="status">
+      <p class="status-text" role="status">
         {%- if search.results_count == 0 -%}
           {{ 'templates.search.no_results' | t: terms: search.terms }}
         {%- else -%}
