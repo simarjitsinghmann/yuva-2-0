@@ -345,15 +345,15 @@ function hideOptions(){
 // sliders
 
 slickSlider = function(selector){
-	   var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
-      var options = JSON.parse(html);
-       selector.slick(options);
+  var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
+  var options = JSON.parse(html);
+  selector.slick(options);
 }
 sliders = function(){
   var sliders = $('body').find('[data-slider]');
   if(sliders.length > 0){
     sliders.each(function(index) {
-   		slickSlider($(this));
+      slickSlider($(this));
     });
   }
 }
@@ -362,12 +362,10 @@ jQuery(document).on('shopify:section:load shopify:section:unload', function(even
   var parent = event.target;
   var slider = $(parent).find('[data-slider]');
   if(event.type == "shopify:section:load"){
-  console.log('load',slider)
-slickSlider($(slider));
+    slickSlider($(slider));
   }
   else{
-  console.log('unload',slider)
-  slider.slick('destroy');
+    slider.slick('destroy');
   }
 });
 }());

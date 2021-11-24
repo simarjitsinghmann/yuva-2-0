@@ -4,7 +4,6 @@
   <div class="container">
     {% include 'account-header' %}
     <div class="account-pages-content">
-      <div>
         <h3>{{ 'customer.orders.title' | t }}</h3>
 
         {% paginate customer.orders by 20 %}
@@ -96,5 +95,4 @@
         {% endpaginate %}
       </div>
     </div>
-  </div>
 </section>
