@@ -344,16 +344,20 @@ function hideOptions(){
 
 // sliders
 
-sliders = function(unslick){
+slickSlider = function(selector){
+	   var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
+      var options = JSON.parse(html);
+       selector.slick(options);
+}
+sliders = function(){
   var sliders = $('body').find('[data-slider]');
   if(sliders.length > 0){
     sliders.each(function(index) {
       if(unslick == 'true'){
-      $(this).slick('unslick')
+      	$(this).slick('unslick')
       }
-      var html = $(this).closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
-      var options = JSON.parse(html);
-       $(this).slick(options);
+   		slickSlider($(this));
+      
 
     });
   }
