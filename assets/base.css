@@ -2924,10 +2924,11 @@ li.fancybox-thumbs-loading {
 }
 
   
-  
-  
 .result_product .grid__item {
     padding-left: 0;
     padding-right: 0;
 }
-  
+.result_product .grid__item .grid-item.col {
+    padding-left: 8px;
+    padding-right: 8px;
+}
