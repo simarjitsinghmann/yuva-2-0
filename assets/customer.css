@@ -404,7 +404,7 @@
   }
 }
 
-:is(.account, .order) p {
+/* :is(.account, .order) p {
   margin: 0 0 2rem;
   font-size: 1.6rem;
 }
@@ -416,13 +416,13 @@
 :is(.account, .order) h2 {
   margin-top: 4rem;
   margin-bottom: 3rem;
-}
+} */
 
-@media screen and (min-width: 990px) {
+/* @media screen and (min-width: 990px) {
   :is(.account, .order) h2 {
     margin-top: 0;
   }
-}
+} */
 
 .account h1 + a {
   display: inline-flex;
