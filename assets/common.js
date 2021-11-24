@@ -361,7 +361,7 @@ sliders();
 jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
   var parent = event.target;
   var slider = $(parent).find('[data-slider]');
-  slider.slick('destroy');
+  console.log(slider)
 slickSlider($(slider));
 });
 }());
