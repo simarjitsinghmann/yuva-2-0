@@ -856,6 +856,8 @@ object-fit: cover; }
 	background: #ffffff !important;
   	transition:.3s ease all;
 }
+.testimonial-slider .slick-arrow.slick-next { left: -28px; } 
+.testimonial-slider .slick-arrow.slick-prev { right: -28px;} 
 .testimonial .testimonial-slider .slick-arrow:hover {
 	background: var(--black)!important;
       color: var(--white);
