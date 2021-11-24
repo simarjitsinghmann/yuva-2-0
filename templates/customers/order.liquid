@@ -6,7 +6,7 @@
     <div class="account-pages-content">
       <div class="row">
         <div class="col-12 col-sm-7 col-md-8 col-lg-9">
-          <div class="d-flex">
+          <div class="d-flex justify-content-between">
           <h3>{{ 'customer.order.title' | t: name: order.name }}</h3>
           {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
           <p>{{ 'customer.order.date_html' | t: date: order_date }}</p>

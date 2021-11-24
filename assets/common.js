@@ -458,6 +458,7 @@ $(document).ready(function()
       setTimeout(function(){
         $('.Quick_loader').hide();
         $('#ProductQuickView').show();
+        $(window).trigger('resize');
         productVariants();
       },500)
       });
