@@ -2,15 +2,47 @@
   "sections": {
     "main-collection": {
       "type": "main-collection",
-      "disabled": true,
       "settings": {
         "products_per_page": 24,
         "enable_filtering": true,
         "enable_sorting": true
       }
+    },
+    "1637746807df2e8535": {
+      "type": "featured-blog",
+      "disabled": true,
+      "settings": {
+        "heading": "CONSECTETUR",
+        "subheading": "Blog post everyday",
+        "button": "View all",
+        "link": ""
+      }
+    },
+    "163774707816571c51": {
+      "type": "banner-section",
+      "disabled": true,
+      "settings": {
+        "tag_line": "Tag Line",
+        "heading": "Heading",
+        "content": "content",
+        "btn": "Explore Now",
+        "link": "",
+        "sh_bg": "#000000",
+        "sh_text": "#ffffff",
+        "h_text": "#f17e35",
+        "c_text": "#000000",
+        "btn_bg": "#f17e35",
+        "btn_text": "#ffffff",
+        "btn_h_bg": "#000000",
+        "btn_h_text": "#ffffff",
+        "info_position": "center-left",
+        "info_alignment": "left"
+      }
     }
   },
   "order": [
-    "main-collection"
+    "main-collection",
+    "1637746807df2e8535",
+    "163774707816571c51"
   ]
 }
