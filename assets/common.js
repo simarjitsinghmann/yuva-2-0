@@ -353,12 +353,7 @@ sliders = function(){
   var sliders = $('body').find('[data-slider]');
   if(sliders.length > 0){
     sliders.each(function(index) {
-      if(unslick == 'true'){
-      	$(this).slick('unslick')
-      }
    		slickSlider($(this));
-      
-
     });
   }
 }
