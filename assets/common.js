@@ -350,6 +350,7 @@ sliders = function(){
     sliders.each(function(index) {
       var html = $(this).closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
       var options = JSON.parse(html);
+      console.log(options)
        $(this).slick(options);
 
     });
