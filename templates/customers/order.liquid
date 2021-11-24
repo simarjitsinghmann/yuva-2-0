@@ -245,8 +245,8 @@
               </tr>
               {%- endfor -%}
               <tr role="row">
-                <td id="RowTotal" role="rowheader" scope="row" colspan="3">{{ 'customer.order.total' | t }}</td>
-                <td headers="RowTotal" role="cell" colspan="2" data-label="{{ 'customer.order.total' | t }}">{{ order.total_price | money_with_currency }}</td>
+                <td id="RowTotal" role="rowheader" scope="row" colspan="4">{{ 'customer.order.total' | t }}</td>
+                <td headers="RowTotal" role="cell" data-label="{{ 'customer.order.total' | t }}">{{ order.total_price | money_with_currency }}</td>
               </tr>
             </tfoot>
           </table>
