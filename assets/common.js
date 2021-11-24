@@ -346,6 +346,7 @@ function hideOptions(){
 
 sliders = function(unslick){
   var sliders = $('body').find('[data-slider]');
+  console.log(sliders)
   if(sliders.length > 0){
     sliders.each(function(index) {
       var html = $(this).closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
@@ -356,7 +357,7 @@ sliders = function(unslick){
   }
 }
 sliders();
-jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
+jQuery(document).on('shopify:section:load', function(event){
  sliders('true');
 });
 }());
