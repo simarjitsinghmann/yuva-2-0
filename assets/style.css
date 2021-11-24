@@ -3018,8 +3018,14 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     display: flex;
     justify-content: center;
 }
+.account-header-tabs {
+	border-bottom: 1px solid var(--gray);
+}
 .account-header-tabs a {
-	padding:10px;
-  margin:0 10px;
+    padding: 10px;
+    margin: 0 10px;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: var(--black);
 }
 /* account page after login css end */
