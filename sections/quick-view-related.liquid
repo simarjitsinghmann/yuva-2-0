@@ -19,32 +19,6 @@
   </div>
 </div>
   <script>
-    $(document).ready(function(){
-      var recomend = setInterval(function(){
-        if($('.recent-product-slide').length > 0 ){
-          setTimeout(function(){
-          $('.recent-product-slide').owlCarousel({
-            center: false,
-            loop: false,
-            margin: 26,
-            dots:false,
-            slideSpeed: 1200,
-            paginationSpeed: 500,
-            responsiveClass:true,
-              responsive: {
-                  0: {
-                      items: 2
-                  },
-                  768: {
-                      items: 4
-                  }
-              }
-          });
-          clearInterval(recomend);
-            },200)
-        }
-      },100)
-    })
     </script>
   {% schema %}
     {
