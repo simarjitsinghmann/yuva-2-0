@@ -381,11 +381,7 @@ $(document).on("click", function(event){
 $('.dropdown-menu li').on('click', function() {
 	var getValue = $(this).text();
 	$(this).find('input').prop('checked',true)
-	console.log($(this).find('input').val())
-// 	$('.dropdown-select').text(getValue);
 	$(this).closest('.productOptionSelect').find('.dropdown-selected').text(getValue);
-	
-// 	$(this).closest('.select__quantity').find('input[name=quantity]').val(getValue);
 	$(this).closest('.productOptionSelectList').slideUp("fast");
 });
 

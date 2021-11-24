@@ -902,16 +902,14 @@ summary::-webkit-details-marker {
   }
 
   .grid--3-col-tablet .grid__item {
-    width: calc(33.33% - 1rem * 2 / 3);
+/*     width: calc(33.33% - 1rem * 2 / 3); */    
+    max-width: calc(33.33% - 1rem * 2 / 3);
   }
 
   .grid--2-col-tablet .grid__item {
     width: calc(50% - 1rem / 2);
   }
   
-  .main-collection-category-section .grid__item {
-    max-width: calc(33.33% - 1rem * 2 / 3);
-  }
   
 }
 
