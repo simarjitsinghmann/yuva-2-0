@@ -845,7 +845,8 @@ object-fit: cover; }
 	-webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
     position: absolute; 
-  	top: calc(50% - 17px); 
+  	top: calc(50% - 70px);
+  z-index:9;
   -moz-transform: translateY(-50%); 
   -webkit-transform: translateY(-50%);
   -o-transform: translateY(-50%); 
