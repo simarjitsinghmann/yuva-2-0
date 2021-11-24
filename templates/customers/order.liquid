@@ -3,7 +3,7 @@
 <div class="shopify-section customer account">
   <div class="container">
     {% include 'account-header' %}
-    <div>
+    <div classs="account-pages-content">
       <div>
         <h2>{{ 'customer.order.title' | t: name: order.name }}</h2>
         {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
