@@ -16,7 +16,7 @@
 </div>
 <script id="CartTemplate" type="text/template">
     {% raw %}
-     <form action=" {% endraw %}{{ routes.cart_url }} {% raw %}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
+     <form action="{% endraw %}{{ routes.cart_url }}{% raw %}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
 	<div class="cart-item-container">	
     	{% endraw %}
         {% if settings.enable_shipping and settings.shipping_rate != blank %}
