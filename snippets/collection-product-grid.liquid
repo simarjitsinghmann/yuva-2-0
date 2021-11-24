@@ -15,11 +15,12 @@
     <div class="card-wrapper">
         <div class="card card--text-only card--soft card--product text__left">
         <div class="card-wrapper-img {% if section.settings.show_second_image %}has-multiimage{% endif %}">
+           <a href="{{product.url}}">
             <img src="{{product.featured_image | img_url:'master'}}" alt="{{product.title}}" style="width: 100%;"> 
             {% if section.settings.show_second_image %}
                 <img class="product-second-img" src="{{second_image}}" alt="{{product.title}}" style="width: 100%;">
             {% endif %} 
-          
+          </a>
           	{% unless hide_options %}
           {% unless has_only_default_variant or product.variants.size == 1 %}
           <div id="showProductWrap-{{product.id}}" class="product-wrap product_content_section">
