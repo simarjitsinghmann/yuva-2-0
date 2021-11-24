@@ -348,7 +348,7 @@ sliders = function(unslick){
   var sliders = $('body').find('[data-slider]');
   if(sliders.length > 0){
     sliders.each(function(index) {
-      if(unslick){
+      if(unslick == 'true'){
       $(this).slick('unslick')
       }
       var html = $(this).closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
@@ -360,6 +360,7 @@ sliders = function(unslick){
 }
 sliders();
 jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
+  console.log(event)
  sliders('true');
 });
 }());
