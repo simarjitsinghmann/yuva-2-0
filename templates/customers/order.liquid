@@ -5,7 +5,7 @@
     {% include 'account-header' %}
     <div classs="account-pages-content">
       <div class="row">
-        <div class="col-12 col-sm-7 col-md-8">
+        <div class="col-12 col-sm-7 col-md-8 col-lg-9">
           <h2>{{ 'customer.order.title' | t: name: order.name }}</h2>
           {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
           <p>{{ 'customer.order.date_html' | t: date: order_date }}</p>
@@ -249,7 +249,7 @@
             </tfoot>
           </table>
         </div>
-        <div class="col-12 col-sm-5 col-md-4">
+        <div class="col-12 col-sm-5 col-md-4 col-lg-3">
           <div>
             <h2>{{ 'customer.order.billing_address' | t }}</h2>
             <p>
