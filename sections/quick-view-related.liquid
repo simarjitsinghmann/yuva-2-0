@@ -19,6 +19,25 @@
   </div>
 </div>
   <script>
+    $(document).ready(function(){
+      var recomend = setInterval(function(){
+        if($('.recent-product-slide').length > 0 ){
+          setTimeout(function(){
+            $('.recent-product-slide')slick({
+              slidesToShow:4,
+              slidesToScroll:1,
+              autoplay:true,
+              infinite:true,
+              autoplayHoverPause:false,
+              arrows: false,
+              dots: false,
+              asNavFor: sync1
+            })
+          clearInterval(recomend);
+            },200)
+        }
+      },100)
+    })
     </script>
   {% schema %}
     {
