@@ -28,8 +28,7 @@
                       "autoplay":{%- if section.settings.rotate -%}{{-section.settings.rotate_speed | times:1000-}}{%- else -%}{{-section.settings.rotate-}}{%-endif-%},
                       "pageDots":{{-section.settings.dots-}},
                       "prevNextButtons":{{-section.settings.arrows-}},
-                      "fade": true,
-          "arrowShape": "M15.526 18.966L8.559 12l6.967-6.967"
+                      "fade": true
         }
       </script>
   </div>
@@ -48,8 +47,7 @@ var flkty = new Flickity( elem, {
   fade: true,
       autoplay:{%- if section.settings.rotate -%}{{-section.settings.rotate_speed | times:1000-}}{%- else -%}{{-section.settings.rotate-}}{%-endif-%},
                       pageDots:{{-section.settings.dots-}},
-                      prevNextButtons:{{-section.settings.arrows-}},
-          arrowShape: "M15.526 18.966L8.559 12l6.967-6.967"
+                      prevNextButtons:{{-section.settings.arrows-}}
 });
 
 </script>
