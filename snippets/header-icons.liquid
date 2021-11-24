@@ -28,7 +28,7 @@
     </div>
     {% if shop.customer_accounts_enabled %}                      
     <div class="customer-links">
-        <a class="acc-links text-hover acc-sign-in" id="customer_login_link" href="{{routes.account_url}}">
+        <a class="acc-links text-hover acc-sign-in" id="customer_login_link" href="{%- if customer -%}{{-routes.account_url-}}{%-else-%}{{routes.account_login_url}}{%-endif-%}">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
                 <defs>
                     <style>
