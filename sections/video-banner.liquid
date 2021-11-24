@@ -9,36 +9,37 @@
   </style>
   {% endif %}
   
-  <div class="section--image fade-in-child {% unless section.settings.full_width %}container{% endunless %} preventOverflow video-sec {{ section.settings.height }} {{ section.settings.color }}" data-section-id="{{ section.id }}" data-section-type="hero" data-overlay-header>
-  
+<div class="section--image fade-in-child {% unless section.settings.full_width %}container{% endunless %} preventOverflow video-sec {{ section.settings.height }} {{ section.settings.color }}" data-section-id="{{ section.id }}" data-section-type="hero" data-overlay-header>
+  <div class="video-inner-box">
     <video id="videoFile" {% if section.settings.autoplay %}autoplay muted{% endif %} loop playsinline width="100%" height="750px" {% if section.settings.poster !=blank %}poster="{{section.settings.poster | img_url:'master'}}"{% endif %}>
       <source src="{{ section.settings.videofile }}" type="video/mp4" id="{{ section.id }}">
     </video> 
     <div class="videoOverlay"></div>
     <div class="container">
-    {% unless section.settings.link_text == blank and section.settings.title == blank and section.settings.description == blank %}
-    {% if section.settings.link_text == '' and section.settings.link  %}
+      {% unless section.settings.link_text == blank and section.settings.title == blank and section.settings.description == blank %}
+      {% if section.settings.link_text == '' and section.settings.link  %}
       <a href="{{ section.settings.link }}">
-    {% endif %}
-  
-    <div class="flex-absolute {{ section.settings.text_position }} {{ section.settings.text_align }}">
-      <div class="wrapper preventOverflowContent">
-        {% unless section.settings.title == '' %}
-          <h1 class="title--overlay h2">{{ section.settings.title | escape }}</h1>
-        {% endunless %}
-        {% unless section.settings.description == '' %}
-          <p class="content--overlay h5--body">{{ section.settings.description }}</p>
-        {% endunless %}
-        {% unless section.settings.link_text == '' %}
-          <button class="{{ section.settings.button_style }} cta--overlay btn--large uppercase black-btn button" id="playVideo">{{ section.settings.link_text | escape }}</button>
-        {% endunless %}
-      </div>
-    </div>
-        
-    {% if section.settings.link_text == '' and section.settings.link %}
+        {% endif %}
+
+        <div class="flex-absolute {{ section.settings.text_position }} {{ section.settings.text_align }}">
+          <div class="wrapper preventOverflowContent">
+            {% unless section.settings.title == '' %}
+            <h1 class="title--overlay h2">{{ section.settings.title | escape }}</h1>
+            {% endunless %}
+            {% unless section.settings.description == '' %}
+            <p class="content--overlay h5--body">{{ section.settings.description }}</p>
+            {% endunless %}
+            {% unless section.settings.link_text == '' %}
+            <button class="{{ section.settings.button_style }} cta--overlay btn--large uppercase black-btn button" id="playVideo">{{ section.settings.link_text | escape }}</button>
+            {% endunless %}
+          </div>
+        </div>
+
+        {% if section.settings.link_text == '' and section.settings.link %}
       </a>
-    {% endif %}
-    {% endunless %}
+      {% endif %}
+      {% endunless %}
+    </div>
   </div>
 </div>
 <style>
