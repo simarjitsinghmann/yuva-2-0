@@ -361,10 +361,11 @@ sliders();
 jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
   var parent = event.target;
   var slider = $(parent).find('[data-slider]');
-  console.log(slider)
   if(event.type == "shopify:section:load"){
-  slider.slick('destroy');
 slickSlider($(slider));
+  }
+  else{
+  slider.slick('destroy');
   }
 });
 }());
