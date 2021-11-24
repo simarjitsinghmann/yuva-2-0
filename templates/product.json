@@ -3,8 +3,30 @@
     "product-template": {
       "type": "product-template",
       "blocks": {
+        "62b81903-337b-415e-958a-8dbeff322a7d": {
+          "type": "content",
+          "settings": {
+            "width": "full",
+            "style": "tabs",
+            "show_description": true,
+            "content_heading": "Specification",
+            "content": "<p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.<\/p><p>I’m a great place for you to tell a story and let your users know a little more about you.<\/p><p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.<\/p><p>I’m a great place for you to tell a story and let your users know a little more about you.<\/p>",
+            "show_reviews": true
+          }
+        },
         "ed5aa936-0a62-4a16-aa49-2b56113ffdfe": {
           "type": "title",
+          "settings": {
+          }
+        },
+        "1fd84199-98b7-4ff9-8610-6ada9ce20f0e": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}"
+          }
+        },
+        "439cfe74-8b0b-4876-ba96-394486c1fdb7": {
+          "type": "review-star",
           "settings": {
           }
         },
@@ -15,6 +37,11 @@
         },
         "de11d30b-4897-43b8-8071-a7d2ce00690f": {
           "type": "quantity",
+          "settings": {
+          }
+        },
+        "c17b7cf0-f3c0-43b5-bcf4-1a9c1ab391c1": {
+          "type": "variant",
           "settings": {
           }
         },
@@ -30,52 +57,18 @@
           "type": "social-icons",
           "settings": {
           }
-        },
-        "1fd84199-98b7-4ff9-8610-6ada9ce20f0e": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}"
-          }
-        },
-        "c17b7cf0-f3c0-43b5-bcf4-1a9c1ab391c1": {
-          "type": "variant",
-          "settings": {
-          }
-        },
-        "439cfe74-8b0b-4876-ba96-394486c1fdb7": {
-          "type": "review-star",
-          "settings": {
-          }
-        },
-        "62b81903-337b-415e-958a-8dbeff322a7d": {
-          "type": "content",
-          "settings": {
-            "width": "full",
-            "style": "tabs",
-            "show_description": true,
-            "content_heading": "Specification",
-            "content": "<p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.<\/p><p>I’m a great place for you to tell a story and let your users know a little more about you.<\/p><p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.<\/p><p>I’m a great place for you to tell a story and let your users know a little more about you.<\/p>",
-            "show_reviews": true
-          }
-        },
-        "e496ed57-5549-4de6-af5f-571ee5f300da": {
-          "type": "contact-form",
-          "settings": {
-            "text": "Ask about this product"
-          }
         }
       },
       "block_order": [
+        "62b81903-337b-415e-958a-8dbeff322a7d",
         "ed5aa936-0a62-4a16-aa49-2b56113ffdfe",
+        "1fd84199-98b7-4ff9-8610-6ada9ce20f0e",
+        "439cfe74-8b0b-4876-ba96-394486c1fdb7",
         "abfd10b4-fa40-4666-a606-62c0b5cdf066",
         "de11d30b-4897-43b8-8071-a7d2ce00690f",
-        "6a876cb6-91ee-4ffe-a4b1-f8b7c7e8c9cd",
-        "338f39d7-4ad9-438f-9dc8-e99fae01f87b",
-        "1fd84199-98b7-4ff9-8610-6ada9ce20f0e",
         "c17b7cf0-f3c0-43b5-bcf4-1a9c1ab391c1",
-        "439cfe74-8b0b-4876-ba96-394486c1fdb7",
-        "62b81903-337b-415e-958a-8dbeff322a7d",
-        "e496ed57-5549-4de6-af5f-571ee5f300da"
+        "6a876cb6-91ee-4ffe-a4b1-f8b7c7e8c9cd",
+        "338f39d7-4ad9-438f-9dc8-e99fae01f87b"
       ],
       "settings": {
         "gallery_style": "stacked"
