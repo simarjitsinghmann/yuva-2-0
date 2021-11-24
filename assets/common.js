@@ -345,13 +345,9 @@ function hideOptions(){
 // sliders
 
 sliders = function(unslick){
-  var sliders = $('[data-slider]');
-  console.log('slick',unslick)
+  var sliders = $('body').find('[data-slider]');
   if(sliders.length > 0){
     sliders.each(function(index) {
-      if(unslick){
-      $(this).slick('unslick')
-      }
       var html = $(this).closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
       var options = JSON.parse(html);
        $(this).slick(options);
