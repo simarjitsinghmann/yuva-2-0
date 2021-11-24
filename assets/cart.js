@@ -138,7 +138,6 @@ cartPageUpdate = function(cart){
 
 $(document).on('change ', '[name=note]', function(evt) {
   var currentVal = $(this).val();
-  console.log('test',currentVal)
   $.ajax({
     url: '/cart/update.js',
     type: 'POST',
