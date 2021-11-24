@@ -245,7 +245,8 @@ $(document).on('change ', '[name=note]', function(evt) {
   $.ajax({
     url: '/cart/update.js',
     type: 'POST',
-    data: {note: "test note"},
+    data: {note: currentVal},
+    dataType: 'json',
     success: function(result) { 
     },
     error: function(jqxhr, status, exception) {
