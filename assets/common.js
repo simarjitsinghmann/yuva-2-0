@@ -362,9 +362,11 @@ jQuery(document).on('shopify:section:load shopify:section:unload', function(even
   var parent = event.target;
   var slider = $(parent).find('[data-slider]');
   if(event.type == "shopify:section:load"){
+  console.log('load',slider)
 slickSlider($(slider));
   }
   else{
+  console.log('unload',slider)
   slider.slick('destroy');
   }
 });
