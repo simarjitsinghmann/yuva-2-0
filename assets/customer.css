@@ -109,16 +109,11 @@
   font-weight: var(--medium);
 }
 .customer tbody tr {
-  border-top: 0.01rem solid var(--gray);
+  border-bottom: 1px solid var(--gray);
 }
 .customer td a {
     color: var(--black);
     font-weight: var(--medium);
-}
-@media screen and (min-width: 750px) {
-  .customer tbody tr:first-of-type {
-    border-top: none;
-  }
 }
 
 .customer tfoot td:first-of-type,
