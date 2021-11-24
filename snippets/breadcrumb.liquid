@@ -14,7 +14,7 @@
                         <li class="breadcrumb-item"> 
                             <span>Products</span></li>
                             <li class="breadcrumb-item"> 
-                                <span>{{ product.title }}</span></li>
+                                <span>{{ product.title | truncatewords:5}}</span></li>
                         {% elsif template contains 'collection' and collection.handle %}
                         
                         {% if current_tags %}
