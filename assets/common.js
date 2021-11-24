@@ -348,7 +348,7 @@ sliders = function(){
   var sliders = $('[data-slider]');
   if(sliders.length > 0){
     sliders.each(function(index) {
-      console.log($(this))
+      $(this).slick('unslick')
       var html = $(this).closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
       var options = JSON.parse(html);
        $(this).slick(options);
