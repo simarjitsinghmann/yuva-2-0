@@ -3,47 +3,8 @@
     "product-template": {
       "type": "product-template",
       "blocks": {
-        "ed5aa936-0a62-4a16-aa49-2b56113ffdfe": {
-          "type": "title",
-          "settings": {
-          }
-        },
-        "1fd84199-98b7-4ff9-8610-6ada9ce20f0e": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}"
-          }
-        },
-        "439cfe74-8b0b-4876-ba96-394486c1fdb7": {
-          "type": "review-star",
-          "settings": {
-          }
-        },
         "abfd10b4-fa40-4666-a606-62c0b5cdf066": {
           "type": "price",
-          "settings": {
-          }
-        },
-        "de11d30b-4897-43b8-8071-a7d2ce00690f": {
-          "type": "quantity",
-          "settings": {
-          }
-        },
-        "6a876cb6-91ee-4ffe-a4b1-f8b7c7e8c9cd": {
-          "type": "button",
-          "settings": {
-            "dynamic_checkout_btn": true,
-            "show_contact": true,
-            "form_text": "Ask about this product"
-          }
-        },
-        "c17b7cf0-f3c0-43b5-bcf4-1a9c1ab391c1": {
-          "type": "variant",
-          "settings": {
-          }
-        },
-        "338f39d7-4ad9-438f-9dc8-e99fae01f87b": {
-          "type": "social-icons",
           "settings": {
           }
         },
@@ -57,18 +18,57 @@
             "content": "<p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.<\/p><p>I’m a great place for you to tell a story and let your users know a little more about you.<\/p><p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.<\/p><p>I’m a great place for you to tell a story and let your users know a little more about you.<\/p>",
             "show_reviews": true
           }
+        },
+        "de11d30b-4897-43b8-8071-a7d2ce00690f": {
+          "type": "quantity",
+          "settings": {
+          }
+        },
+        "c17b7cf0-f3c0-43b5-bcf4-1a9c1ab391c1": {
+          "type": "variant",
+          "settings": {
+          }
+        },
+        "439cfe74-8b0b-4876-ba96-394486c1fdb7": {
+          "type": "review-star",
+          "settings": {
+          }
+        },
+        "ed5aa936-0a62-4a16-aa49-2b56113ffdfe": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "6a876cb6-91ee-4ffe-a4b1-f8b7c7e8c9cd": {
+          "type": "button",
+          "settings": {
+            "dynamic_checkout_btn": true,
+            "show_contact": true,
+            "form_text": "Ask about this product"
+          }
+        },
+        "1fd84199-98b7-4ff9-8610-6ada9ce20f0e": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}"
+          }
+        },
+        "338f39d7-4ad9-438f-9dc8-e99fae01f87b": {
+          "type": "social-icons",
+          "settings": {
+          }
         }
       },
       "block_order": [
-        "ed5aa936-0a62-4a16-aa49-2b56113ffdfe",
-        "1fd84199-98b7-4ff9-8610-6ada9ce20f0e",
-        "439cfe74-8b0b-4876-ba96-394486c1fdb7",
         "abfd10b4-fa40-4666-a606-62c0b5cdf066",
+        "62b81903-337b-415e-958a-8dbeff322a7d",
         "de11d30b-4897-43b8-8071-a7d2ce00690f",
-        "6a876cb6-91ee-4ffe-a4b1-f8b7c7e8c9cd",
         "c17b7cf0-f3c0-43b5-bcf4-1a9c1ab391c1",
-        "338f39d7-4ad9-438f-9dc8-e99fae01f87b",
-        "62b81903-337b-415e-958a-8dbeff322a7d"
+        "439cfe74-8b0b-4876-ba96-394486c1fdb7",
+        "ed5aa936-0a62-4a16-aa49-2b56113ffdfe",
+        "6a876cb6-91ee-4ffe-a4b1-f8b7c7e8c9cd",
+        "1fd84199-98b7-4ff9-8610-6ada9ce20f0e",
+        "338f39d7-4ad9-438f-9dc8-e99fae01f87b"
       ],
       "settings": {
         "gallery_style": "stacked"
