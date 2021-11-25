@@ -65,7 +65,7 @@ class CustomerAddresses {
       attributes.expanded,
       (target.getAttribute(attributes.expanded) === 'false').toString()
     );
-    console.log(target.parentNode.querySelector(".addressPopUp"))
+    var popUp =target.parentNode.querySelector(".addressPopUp").innerHTML;
   }
 
   _handleAddEditButtonClick = ({ currentTarget }) => {
