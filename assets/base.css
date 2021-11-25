@@ -2918,7 +2918,7 @@ li.fancybox-thumbs-loading {
 .tabs-inner-box li.active {
     background: #3c3c3c;
 }
-.tabs-inner-box li a {
+.tabs-inner-box li button {
     display: inline-block;
     padding: 6px 24px;
     font-size: 14px;
@@ -2926,8 +2926,8 @@ li.fancybox-thumbs-loading {
     color: #767676;
 }
   
-.tabs-inner-box li:hover a, 
-.tabs-inner-box li.active a {
+.tabs-inner-box li:hover button, 
+.tabs-inner-box li.active button {
     color: #fff;
 }
 .search-result-box .search .form-group {
