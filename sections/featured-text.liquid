@@ -3,6 +3,12 @@
     <h2 class="content-heading text-center">{{section.settings.content}}</h2>
   </div>
 </div>
+
+<style>
+  #shopify-section-{{section.id}}{
+    background-color:{{section.settings.bgcolor}};
+  }
+</style>
 {% schema %}
   {
     "name": "t:sections.featured-text.name",
@@ -13,7 +19,7 @@
             "type":"textarea",
             "id":"content",
             "label":"t:sections.featured-text.settings.content.label",
-			"default":"<p>Why We Are Your Best Choice</p>"
+			"default":"Why We Are Your Best Choice"
         },
         {
           "type": "color",
