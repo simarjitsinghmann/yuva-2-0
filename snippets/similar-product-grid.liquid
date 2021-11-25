@@ -12,10 +12,10 @@
           </picture>
         </div>
         <div class="product-productMetaInfo">
-          <div class="product-brand normal-font">{{product.title}}</div>
           {% comment %}
-          <div class="product-product small-size">{{product.vendor}}</div>
+          <div class="product-brand normal-font">{{product.vendor}}</div>
           {% endcomment %}
+          <div class="product-product small-size">{{product.title}}</div>
           <div class="product-price">
             {% if current_variant.compare_at_price < current_variant.price %}
             <span class="small-size product-price-detail">
