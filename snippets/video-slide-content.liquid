@@ -24,14 +24,16 @@
 
       <div class="flex-absolute {{ block.settings.text_position }} {{ block.settings.text_align }}">
         <div class="wrapper preventOverflowContent">
-          {% unless block.settings.title == '' %}
+          {% if block.settings.title != blank %}
           <h1 class="title--overlay h2">{{ block.settings.title | escape }}</h1>
-          {% endunless %}
+          {% endif %}
           
-         <h2>{{block.settings.title}}</h2>
-          {% unless block.settings.description == '' %}
+          {% if block.settings.subtitle != blank %}
+         <h2>{{block.settings.subtitle}}</h2>
+          {% endif %}
+         {% if block.settings.description != blank %}
           <p class="content--overlay h5--body">{{ block.settings.description }}</p>
-          {% endunless %}
+         {% endif %}
           {% unless block.settings.link_text == blank or block.settings.link == blank%}
           <a class="{{ block.settings.button_style }} cta--overlay btn--large uppercase black-btn button" href="{{ block.settings.link }}">{{ block.settings.link_text | escape }}</a>
           {% endunless %}
@@ -60,6 +62,10 @@
     #banner-{{block.id}} h1.title--overlay{
       color:{{block.settings.title_color}};
     }
+    #banner-{{block.id}} h2.{
+      color:{{block.settings.subtitle_color}};
+    }
+    
     
     #banner-{{block.id}} p.content--overlay{
       color:{{block.settings.desc_color}};
