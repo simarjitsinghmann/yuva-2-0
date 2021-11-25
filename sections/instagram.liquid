@@ -43,7 +43,6 @@
       {% endif %}
 </div>
 
-
                 
 {% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
 <script>
@@ -60,6 +59,9 @@
 </script>
 {% endif %}
 <style>
+  #shopify-section-{{section.id}}{
+    background-color:{{section.settings.bgcolor}};
+  }
   .instagram-post-list {
     display: flex;
     width: 100%;
