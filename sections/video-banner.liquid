@@ -30,7 +30,7 @@
             <p class="content--overlay h5--body">{{ section.settings.description }}</p>
             {% endunless %}
             {% unless section.settings.videofile == '' %}
-            <span id="playVideo">
+            <button class="cta--overlay" id="playVideo">
               <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 97 97" width="97" height="97">
                 <title>Folder 1</title>
                 <style>
@@ -43,7 +43,7 @@
                   <path id="Shape 2" class="shp1" d="M63 49L37 64L37 34L63 49"/>
                 </g>
               </svg>
-            </span>
+            </button>
             {% endunless %}
           </div>
         </div>
