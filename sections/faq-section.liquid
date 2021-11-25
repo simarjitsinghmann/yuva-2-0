@@ -25,6 +25,12 @@
       </div>
   </div> 
 {% endif %}
+
+<style>
+  #shopify-section-{{section.id}}{
+    background-color:{{section.settings.color}};
+  }
+</style>
  <script>
       var tabHead = document.getElementsByClassName('faq-{{section.id}}');
       if(tabHead.length > 0 ){
