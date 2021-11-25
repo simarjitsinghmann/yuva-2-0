@@ -13,18 +13,18 @@ const attributes = {
 };
 
 class CustomerAddresses {
-  
-    const $this = this;
   constructor() {
     this.elements = this._getElements();
     if (Object.keys(this.elements).length === 0) return;
     this._setupCountries();
     this._setupEventListeners();
+    const $this = this;
+    console.log()
   }
 
   _getElements() {
     const container = document.querySelector(selectors.customerAddresses);
-    console.log(container)
+//     console.log(container)
     return container ? {
       container,
       addressContainer: container.querySelector(selectors.addressContainer),
@@ -52,7 +52,6 @@ class CustomerAddresses {
   }
 
   _setupEventListeners() {
-    console.log('help22')
     this.elements.toggleButtons.forEach((element) => {
       element.addEventListener('click', this._handleAddEditButtonClick);
     });
@@ -74,8 +73,8 @@ class CustomerAddresses {
     newTarget.innerHTML = popUp;
     
     document.querySelector('body').classList.add('show__similar__products');
-    $this._getElements();
-    $this._setupEventListeners();
+    this._getElements();
+    this._setupEventListeners();
   }
 
   _handleAddEditButtonClick = ({ currentTarget }) => {
