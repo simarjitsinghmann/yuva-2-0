@@ -1,5 +1,5 @@
 const selectors = {
-  customerAddresses: '[data-customer-addresses]',
+  customerAddresses: 'body',
   addressCountrySelect: '[data-address-country-select]',
   addressContainer: '[data-address]',
   toggleAddressButton: 'button[aria-expanded]',
