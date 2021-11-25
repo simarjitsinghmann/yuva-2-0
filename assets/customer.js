@@ -71,7 +71,7 @@ class CustomerAddresses {
     var newTarget = document.getElementById('similar__product');
     newTarget.innerHTML = popUp;
     
-    document.querySelector('body').classList.add('show__similar__products');    
+    document.querySelector('body').classList.add('show__similar__products');     
     this.elements = this._getElements();
     this._setupEventListeners();
   }
