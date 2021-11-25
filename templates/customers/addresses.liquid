@@ -4,6 +4,7 @@
 
 {%- paginate customer.addresses by 5 -%}
   <div class="customer addresses account" data-customer-addresses>
+    <div class="container">
  {% include 'account-header' %}
 
     <div data-address>
@@ -246,6 +247,7 @@
           </nav>
       {%- endif -%}
     {%- endif -%}
+    </div>
   </div>
 {%- endpaginate -%}
 
