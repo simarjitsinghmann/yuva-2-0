@@ -23,12 +23,6 @@
 
         <div class="flex-absolute {{ section.settings.text_position }} {{ section.settings.text_align }}">
           <div class="wrapper preventOverflowContent">
-            {% unless section.settings.title == '' %}
-            <h1 class="title--overlay h2">{{ section.settings.title | escape }}</h1>
-            {% endunless %}
-            {% unless section.settings.description == '' %}
-            <p class="content--overlay h5--body">{{ section.settings.description }}</p>
-            {% endunless %}
             {% unless section.settings.videofile == '' %}
             <button class="cta--overlay" id="playVideo">
               <svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97 97" width="97" height="97">
@@ -42,6 +36,12 @@
                 <use id="Folder 1" href="#img1" transform="matrix(1,0,0,1,-2,-2)"/>
               </svg>
             </button>
+            {% endunless %}
+            {% unless section.settings.title == '' %}
+            <h1 class="title--overlay h2">{{ section.settings.title | escape }}</h1>
+            {% endunless %}
+            {% unless section.settings.description == '' %}
+            <p class="content--overlay h5--body">{{ section.settings.description }}</p>
             {% endunless %}
           </div>
         </div>
