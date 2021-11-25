@@ -15,7 +15,7 @@
       >
         {{ 'customer.addresses.add_new' | t }}
       </button>
-      <div id="AddAddress">
+      <div id="AddAddress" class="addressPopUp">
         <h2 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>
         {%- form 'customer_address', customer.new_address, aria-labelledBy: 'AddressNewHeading' -%}
           <div class="field">
