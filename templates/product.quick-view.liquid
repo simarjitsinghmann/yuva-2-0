@@ -55,7 +55,7 @@
                   <p class="small-size size_title">SELECT {{option.name}}</p>
                   <ul class="product-loop-variants {{downOption}} variants circle _small list-unstyled">                            
                   {%- for value in option.values -%}  
-                      <li class="{{downOption}}_option">
+                      <li class="{{downOption}}_option {% unless downOption == 'color' or  downOption == 'colour'%}variant_option{% endunless%}">
                         <input class="productOption" type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
                         <span class="option {% if option.selected_value == value %}selected{% endif %}" {% if downOption == 'color' or  downOption == 'colour'%}{% unless block.settings.variant_image %} style="background-color:{{value}};"{% endunless %}{% endif %}>
                             {% if downOption == 'color' or  downOption == 'colour'%}    
