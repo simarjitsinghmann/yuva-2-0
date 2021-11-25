@@ -2,8 +2,8 @@
 
 <script src="{{ 'customer.js' | asset_url }}" defer></script>
 
-{%- paginate customer.addresses by 5 -%}
-  <div class="customer addresses account" data-customer-addresses>
+{%- paginate customer.addresses by 10 -%}
+  <div class="customer addresses account shopify-section" data-customer-addresses>
     <div class="container">
  {% include 'account-header' %}
 
