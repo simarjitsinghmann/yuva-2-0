@@ -65,7 +65,7 @@ class CustomerAddresses {
 //       attributes.expanded,
 //       (target.getAttribute(attributes.expanded) === 'false').toString()
 //     );
-    var popUp = target.parentNode.querySelector(".addressPopUp");
+    var popUp = target.parentNode.querySelector(".addressPopUp").innerHTML;
     var newTarget = document.getElementById('similar__product');
     newTarget.innerHTML = popUp;
     
