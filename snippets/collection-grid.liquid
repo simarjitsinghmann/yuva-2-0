@@ -8,22 +8,22 @@
        class="card animate-arrow{% if collection.featured_image != blank %} card--media{% else %}{% if section.settings.image_ratio != 'adapt' %} card--stretch{% endif %}{% endif %}{% unless section.settings.image_padding %} card--light-border{% endunless %}"
        >
       <div class="card--stretch card-colored color-{{ section.settings.color_scheme }}">
-        {%- if collection.featured_image != blank -%}
+        {%- if featuredImage != blank -%}
         <div>
           <div class="media media--square media--hover-effect overflow-hidden">
 			
             <img
-                 srcset="{%- if collection.featured_image.width >= 165 -%}{{ collection.featured_image | img_url: '165x' }} 165w,{%- endif -%}
-                         {%- if collection.featured_image.width >= 360 -%}{{ collection.featured_image | img_url: '360x' }} 360w,{%- endif -%}
-                         {%- if collection.featured_image.width >= 535 -%}{{ collection.featured_image | img_url: '535x' }} 535w,{%- endif -%}
-                         {%- if collection.featured_image.width >= 750 -%}{{ collection.featured_image | img_url: '750x' }} 750w,{%- endif -%}
-                         {%- if collection.featured_image.width >= 1000 -%}{{ collection.featured_image | img_url: '1000x' }} 1000w,{%- endif -%}
-                         {%- if collection.featured_image.width >= 1500 -%}{{ collection.featured_image | img_url: '1500x' }} 1500w,{%- endif -%}"
+                 srcset="{%- if featuredImage.width >= 165 -%}{{ featuredImage | img_url: '165x' }} 165w,{%- endif -%}
+                         {%- if featuredImage.width >= 360 -%}{{ featuredImage | img_url: '360x' }} 360w,{%- endif -%}
+                         {%- if featuredImage.width >= 535 -%}{{ featuredImage | img_url: '535x' }} 535w,{%- endif -%}
+                         {%- if featuredImage.width >= 750 -%}{{ featuredImage| img_url: '750x' }} 750w,{%- endif -%}
+                         {%- if featuredImage.width >= 1000 -%}{{ featuredImage | img_url: '1000x' }} 1000w,{%- endif -%}
+                         {%- if featuredImage.width >= 1500 -%}{{ featuredImage | img_url: '1500x' }} 1500w,{%- endif -%}"
                  src="{{ collection.featured_image | img_url: '1500x' }}"
                  sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 3 }}px, (min-width: 750px) calc((100vw - 130px) / 3), calc(100vw - 30px)"
                  alt="{{ collection.title | escape }}"
-                 height="{{ collection.featured_image.height }}"
-                 width="{{ collection.featured_image.width }}"
+                 height="{{ featuredImage.height }}"
+                 width="{{ featuredImage.width }}"
                  loading="lazy"
                  >
           </div>
