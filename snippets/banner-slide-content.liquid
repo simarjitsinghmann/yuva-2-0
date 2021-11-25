@@ -8,12 +8,16 @@
     <div class="">
       <div class="carousel-caption-title banner-slide {{block.settings.info_position}} text__{{block.settings.info_alignment}}">
         {% if block.settings.tag_line != blank %}
-        <h6>{{block.settings.tag_line}}</h6>
+        <span class="tag-line">{{block.settings.tag_line}}</span>
         {% endif %}
         {% if block.settings.heading != blank %}
-        <h2>{{block.settings.heading}}</h2>
+        <h1>{{block.settings.heading}}</h1>
         {% endif %}
+        
+         <h2>{{block.settings.tag_line}}</h2>
+        
         {% if block.settings.content != blank %}
+        
         <p>{{block.settings.content}}</p>
         {% endif %}
         {% if block.settings.btn != blank and block.settings.link != blank %}
