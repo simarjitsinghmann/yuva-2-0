@@ -3,53 +3,96 @@
 
   <form id="CollectionFiltersForm" class="collectionFilters__form" >
     {%- for filter in collection.filters -%}
+    
     {% case filter.type %}
+    
     {% when 'list' %}
+    
     <div class="widget sidebar-widget-product">
+      
       <div class="widget-title">
+        
         <h6 class="sidebar-title">
+          
           <span>{{ filter.label | escape }}</span>
+          
         </h6>
+        
         <div class="widget-content">
+          
           <ul class="list-tags">
+            
             {%- for value in filter.values -%}
+            
             <li {% if forloop.index > 5 %}class="hideOptions {% if value.count == 0 and value.active == false %}disabled{% endif %}" style="display:none"{% endif %}>
+              
               <input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" id="Filter-{{ filter.label | escape }}-{{ forloop.index }}"
                      {% if value.active %}checked{% endif %}
                      {% if value.count == 0 and value.active == false %}disabled{% endif %}
                      >
+              
               <span class="checkmark"></span>
+              
               <label for="Filter-{{ filter.label | escape }}-{{ forloop.index }}">
+                
                 {{ value.label | escape }} ({{ value.count }})
+                
               </label>
+              
             </li>
+            
             {% endfor %}
+            
           </ul>
+          
           {%- if filter.values.size > 5 -%}
+          
           <div class="br_more_filter hide">
+            
             <div class="showMore">{% render 'icon-plus' %} Show More</div>
+            
             <div class="showLess hide">{% render 'icon-minus' %} Show Less</div>
+            
           </div>
+          
           {%-endif-%}
+          
         </div>
+        
       </div>
+      
     </div>
+    
     {% when 'price_range' %}
+    
     <div class="widget sidebar-widget-product">
+      
       {% assign max_value = filter.range_max |money_without_currency %} 
+      
       {% assign min_value = filter.range_min |money_without_currency %}
+      
       {%- if filter.max_value.value -%} 
+      
       {% assign max_value = filter.max_value.value |money_without_currency  %} 
+      
       {%- endif -%}
+      
       {%- if filter.min_value.value -%}
+      
       {% assign min_value = filter.min_value.value |money_without_currency %}
+      
       {%- endif -%}
       
       <div class="widget-title">
+        
         <h6 class="sidebar-title">
+          
           <span>{{ filter.label | escape }}</span>
+          
         </h6>
+        
         {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
+        
        <div class="mall-slider-handles" id="slider-round"
            data-start="{{min_value | replace:',','' | floor}}" 
            data-end="{{max_value| replace:',','' | floor}}" 
@@ -58,11 +101,12 @@
            data-target="price" 
            style="width: 100%"></div>
         
-        <div class="widget-content">       
+        <div class="widget-content">  
+          
           <div class="widget__price">
-
-
+            
             <div class="field">
+              
               <input class="field__input"
                      name="{{ filter.min_value.param_name }}"
                      id="Filter-{{ filter.label | escape }}-GTE"
@@ -74,10 +118,13 @@
                      min="0"
                      {%- if uses_comma_decimals -%}max="{{ filter.range_max | money_without_currency  | replace: ',', '.' | floor}}"{%- else -%}max="{{ filter.range_max | money_without_currency | replace: ',', '' | floor}}"{% endif %}
                      >
-
+              
             </div>
+            
             <div class="fieldCenter text__center price-spacer"></div>
+            
             <div class="field">
+              
               <input class="field__input"
                      name="{{ filter.max_value.param_name }}"
                      id="Filter-{{ filter.label | escape }}-LTE"
@@ -93,21 +140,33 @@
                      max="{{ filter.range_max | money_without_currency | replace: ',', '' |floor }}"
                      {% endif %}
                      >
-
+              
             </div>
+            
           </div>
 
           <span class="widget__selected">{{ "sections.collection_template.max_price" | t: price: max_price_amount }}</span>
+          
         </div>
+        
       </div>
+      
     </div>
+    
     {% endcase %}
+    
     {% endfor %}
+    
     <noscript>
+      
       <button type="submit" class=" button button--tertiary">{{ 'sections.collection_template.filter_button' | t }}</button>
+      
     </noscript>
+    
   </form>
+  
 </div>
+
 <style>
 
   /* Proof of concept for Firefox */
