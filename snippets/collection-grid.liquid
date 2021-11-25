@@ -1,3 +1,7 @@
+{% assign featuredImage =  collection.featured_image %}
+{% if collectionImage != blank %}
+{% assign featuredImage =  collectionImage %}
+{% endif %}
 <li class="collection-list__item grid__item">
   <div class="collection-card-box">
     <a{% if collection.all_products_count > 0 %} href="{{ collection.url }}"{% endif %}
@@ -7,7 +11,7 @@
         {%- if collection.featured_image != blank -%}
         <div>
           <div class="media media--square media--hover-effect overflow-hidden">
-
+			
             <img
                  srcset="{%- if collection.featured_image.width >= 165 -%}{{ collection.featured_image | img_url: '165x' }} 165w,{%- endif -%}
                          {%- if collection.featured_image.width >= 360 -%}{{ collection.featured_image | img_url: '360x' }} 360w,{%- endif -%}
