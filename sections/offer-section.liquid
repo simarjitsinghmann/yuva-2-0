@@ -23,7 +23,7 @@
                           {% unless block.settings.heading == blank and block.settings.subheading == blank %}
                             <div class="card-information__wrapper text__{{block.settings.info_alignment}} content-border-{{block.settings.show_border}} {% if section.settings.style == 'style1' %}{{block.settings.info_position}}{% endif %}">
                               {% if block.settings.heading != blank %}
-                                <h5 style="font-size:{{block.settings.heading_font}}px">{{block.settings.heading}}</h5>
+                                <h5>{{block.settings.heading}}</h5>
                                 {% endif%}
                                 {% if block.settings.subheading != blank %}
                                 {{block.settings.subheading}}
@@ -95,16 +95,6 @@
           "id": "heading",
           "default": "Heading",
           "label": "t:sections.offer-section.blocks.offer.settings.heading.label"
-        },
-        {
-          "type": "range",
-          "id": "heading_font",
-          "default": 18,
-          "label": "t:sections.offer-section.blocks.offer.settings.heading_font.label",
-          "min": 16,
-          "max": 27,
-          "step": 1,
-          "unit": "px"
         },
         {
           "type": "richtext",
