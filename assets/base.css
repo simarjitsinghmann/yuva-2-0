@@ -3049,6 +3049,9 @@ section.shopify-section.about-best-choice.featured-content-section {
 .toolbox-item.toolbox-sort.select-box ul li:last-child {
     border-bottom: 0px solid #e9e9e9;
 }
+  
+
+/* 25-Nov-21 */
 .preventOverflowContent .h2 {
     font-weight: 500;
 }
@@ -3061,7 +3064,6 @@ section.shopify-section.about-best-choice.featured-content-section {
     height: 100px;
     fill: #fff;
 }
-  
 .productImageSlideItem {
     background-color: #ececec;
 }
@@ -3069,5 +3071,12 @@ section.shopify-section.about-best-choice.featured-content-section {
     margin: 0 auto 4px;
     width: 100%;
 }
-  
+.product-loop-variants .material_option {
+    margin-right: 15px;
+}
+
+.product-loop-variants .material_option .productOption {
+    display: inline-block;
+    vertical-align: middle;
+} 
   
