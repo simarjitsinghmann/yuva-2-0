@@ -86,7 +86,6 @@ class CustomerAddresses {
 //         .closest(selectors.addressContainer)
 //         .querySelector(`[${attributes.expanded}]`)
 //     )
-    console.log('help')
     document.querySelector('body').classList.remove('show__similar__products');
   }
 
