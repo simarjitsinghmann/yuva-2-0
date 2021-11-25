@@ -3094,3 +3094,8 @@ section.shopify-section.about-best-choice.featured-content-section {
     border: 2px solid #ff000000;
     display: block;
 }
+.product-loop-variants .material_option .productOption:checked+span.option {
+    background: #000;
+    border-color: #000;
+    color: #fff;
+}
