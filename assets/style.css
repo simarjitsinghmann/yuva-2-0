@@ -161,7 +161,7 @@
 .banner .btn-box { clear: both; }
 .banner-product-slider .slick-arrow { 
   line-height: 10px; height: auto; border: 0; margin: 0; position: absolute; 
-  bottom:20px; cursor: pointer;
+  bottom:20px; cursor: pointer; z-index: 99;
 } 
 .banner-product-slider .slick-arrow.slick-prev { right: 80px; } 
 .banner-product-slider .slick-arrow.slick-next { right: 20px; } 
