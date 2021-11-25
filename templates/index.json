@@ -620,7 +620,7 @@
         "subheading": "Happy Client’s",
         "heading": "What Our Customers Say",
         "description": "Developer best Ut enim ad minim veniam, qui nostrud exercitated andullamco laboris nisi ut aliquip ex ea commodo and consequat.",
-        "bgcolor": "#ececec",
+        "bgcolor": "#c4c4c4",
         "rotate": false,
         "arrows": true,
         "dots": false
@@ -684,17 +684,17 @@
       "settings": {
         "bgcolor": "#ececec",
         "textcolor": "#000000",
-        "show_divider": true
+        "show_divider": false
       }
     },
     "video-banner": {
       "type": "video-banner",
-      "disabled": true,
       "settings": {
         "videofile": "https:\/\/cdn.shopify.com\/s\/files\/1\/2018\/8867\/files\/ice.mp4",
+        "poster": "shopify:\/\/shop_images\/about.png",
         "title": "Video with text overlay",
         "full_width": true,
-        "autoplay": true,
+        "autoplay": false,
         "overlay": true,
         "bgcolor": "#707070",
         "opacity": 40,
