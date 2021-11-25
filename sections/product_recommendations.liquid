@@ -51,7 +51,36 @@
   <script>
     $(document).ready(function(){
       var recomend = setInterval(function(){
-        if($('.recent-product-slide').length > 0 ){
+        if($('.recent-product-slide').length > 0 ){ 
+          $('.recent-product-slide').slick({
+              slidesToShow:7,
+              slidesToScroll:1,
+              autoplay:true,
+              infinite:true,
+              autoplayHoverPause:false,
+              arrows: false,
+              dots: false,
+              responsive:[
+                {
+                  breakpoint:1440,
+                  "settings": {
+                    "slidesToShow": 5
+                  }
+                },
+                {
+                  breakpoint:1199,
+                  "settings": {
+                    "slidesToShow": 4
+                  }
+                },
+                {
+                  breakpoint:767,
+                  "settings": {
+                    "slidesToShow": 2
+                  }
+                }
+              ]
+            })
           $('.recent-product-slide').owlCarousel({
             center: false,
             loop: false,
