@@ -2892,6 +2892,7 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     height:100%;
     object-fit:cover;
   	transition: 1s ease all;
+  	max-height: 650px;
 }
 .list-view-content {
     position: absolute;
