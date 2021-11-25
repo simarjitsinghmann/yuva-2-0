@@ -13,12 +13,13 @@ const attributes = {
 };
 
 class CustomerAddresses {
+  
+    const $this = this;
   constructor() {
     this.elements = this._getElements();
     if (Object.keys(this.elements).length === 0) return;
     this._setupCountries();
     this._setupEventListeners();
-    const $this = this;
   }
 
   _getElements() {
