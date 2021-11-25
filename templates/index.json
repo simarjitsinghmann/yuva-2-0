@@ -352,11 +352,13 @@
       ],
       "settings": {
         "heading": "Collection list(Style 2)",
-        "heading_font": 38
+        "heading_font": 38,
+        "color": "#ffffff"
       }
     },
     "collection-list": {
       "type": "collection-list",
+      "disabled": true,
       "blocks": {
         "collection": {
           "type": "collection",
@@ -412,6 +414,7 @@
         "mc_btnlink": "shopify:\/\/collections",
         "mc_image": "shopify:\/\/shop_images\/collection-list-left_a725767d-c712-4edb-95d9-093591ab03b6.jpg",
         "button_icon": true,
+        "color": "#ffffff",
         "btn_bg": "rgba(0,0,0,0)",
         "btn_text": "#c58b2f",
         "hvr_btn_bg": "rgba(0,0,0,0)",
@@ -544,7 +547,8 @@
         "heading": "CONSECTETUR",
         "subheading": "Blog post everyday",
         "button": "View all",
-        "link": "#"
+        "link": "#",
+        "color": "#ffffff"
       }
     },
     "testimonials": {
