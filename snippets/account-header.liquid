@@ -3,10 +3,10 @@
       <h2>{{ 'customer.account.title' | t }}</h2>
   </div>
   <div class="account-header-tabs">
-  <a href="{{ routes.account_url }}">
+  <a href="{{ routes.account_url }}"  class="{% if request.path == routes.account_addresses_url or request.path contains '/orders/' %}active{% endif %}">
        orders
       </a>
-  <a href="{{ routes.account_addresses_url }}" class="{{request}}  {{request.path}}">
+  <a href="{{ routes.account_addresses_url }}" class="{% if request.path == routes.account_addresses_url %}active{% endif %}">
         {{ 'customer.account.view_addresses' | t }}
       </a>
    <a href="{{ routes.account_logout_url }}">
