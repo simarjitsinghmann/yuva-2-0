@@ -19,12 +19,11 @@ class CustomerAddresses {
     this._setupCountries();
     this._setupEventListeners();
     const $this = this;
-    console.log()
   }
 
   _getElements() {
     const container = document.querySelector(selectors.customerAddresses);
-//     console.log(container)
+    console.log(container);
     return container ? {
       container,
       addressContainer: container.querySelector(selectors.addressContainer),
@@ -72,8 +71,8 @@ class CustomerAddresses {
     var newTarget = document.getElementById('similar__product');
     newTarget.innerHTML = popUp;
     
-    document.querySelector('body').classList.add('show__similar__products');
-    this._getElements();
+    document.querySelector('body').classList.add('show__similar__products');    
+    this.elements = this._getElements();
     this._setupEventListeners();
   }
 
