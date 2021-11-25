@@ -63,10 +63,6 @@ class CustomerAddresses {
   }
 
   _toggleExpanded(target) {
-//     target.setAttribute(
-//       attributes.expanded,
-//       (target.getAttribute(attributes.expanded) === 'false').toString()
-//     );
     var popUp = target.parentNode.querySelector(".addressPopUp").innerHTML;
     var newTarget = document.getElementById('similar__product');
     newTarget.innerHTML = popUp;
@@ -81,11 +77,6 @@ class CustomerAddresses {
   }
 
   _handleCancelButtonClick = ({ currentTarget }) => {
-//     this._toggleExpanded(
-//       currentTarget
-//         .closest(selectors.addressContainer)
-//         .querySelector(`[${attributes.expanded}]`)
-//     )
     document.querySelector('body').classList.remove('show__similar__products');
   }
 
