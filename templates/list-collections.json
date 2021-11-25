@@ -2,8 +2,37 @@
   "sections": {
     "main": {
       "type": "main-list-collections",
+      "blocks": {
+        "20268de2-6f1d-4d89-853f-1b61fd261e6b": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage",
+            "image": "shopify:\/\/shop_images\/studded-flats.jpg"
+          }
+        },
+        "45ba3a0e-5038-4b78-b9f1-76c91709b171": {
+          "type": "collection",
+          "settings": {
+            "collection": "summer-collection"
+          }
+        },
+        "8b4878d2-a451-4e50-9def-c1235217e3d7": {
+          "type": "collection",
+          "settings": {
+            "collection": "winter-collections"
+          }
+        }
+      },
+      "block_order": [
+        "20268de2-6f1d-4d89-853f-1b61fd261e6b",
+        "45ba3a0e-5038-4b78-b9f1-76c91709b171",
+        "8b4878d2-a451-4e50-9def-c1235217e3d7"
+      ],
       "settings": {
-        "image_ratio": "square"
+        "title": "Collections",
+        "collections_per_page": 9,
+        "show_collections": "all",
+        "sort": "alphabetical"
       }
     }
   },
