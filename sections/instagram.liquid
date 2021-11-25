@@ -4,7 +4,7 @@
             <p class="instagramUserName">{{section.settings.handle}}</p>
         </div>
         {% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
-          <div class="instagram-post-list" id="instafeed"></div>
+  <div class="instagram-post-list"><ul id="instafeed"></ul></div>
         {% else %}
         <div class="instagram-post-list">
             <ul>
@@ -42,6 +42,9 @@
         </div>
       {% endif %}
 </div>
+
+
+                
 {% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
 <script>
   var userFeed = new Instafeed({
@@ -50,7 +53,7 @@
     accessToken: '{{ section.settings.insta_access_Token}}',
     limit: 5,
     resolution : 'standard_resolution',
-    template: '<div class="col-xs-12 col-sm-6 col-md-4"><a href="{%raw%}{{image}}{%endraw%}"><div class="img-featured-container"><div class="img-backdrop"></div><div class="description-container"><p class="caption">{{caption}}</p><span class="likes"><i class="icon ion-heart"></i>{{likes}}</span><span class="comments"><i class="icon ion-chatbubble"></i>{{comments}}</span></div><img src="{%raw%}{{image}}{%endraw%}" class="img-responsive"></div></a></div>'
+    template:'<li><div class="instagram-post-detail"><a href="{% raw %}{{link}}{% endraw %}"><img src="{% raw %}{{image}}{% endraw %}" alt=""><div class="insta-icon"><i class="fab fa-instagram"></i></div></a></div></li>'
   });
   userFeed.run();
   setTimeout(function(){ $('#instafeed a').attr('target','_blank'); }, 1000);
