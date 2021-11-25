@@ -1620,6 +1620,8 @@ clear:both;
 .single-detail-detail .left-product-images.has_slider .nav-container .slider-nav > div img {
     margin: 0 auto;
     height: 78px;
+  	width: 100%;
+  	object-fit: cover;
 }
 .single-detail-detail .ImageleftContainer .nav-container .slider-nav {
     position: sticky;
