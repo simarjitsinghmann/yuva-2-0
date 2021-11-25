@@ -5,7 +5,7 @@
       {% for block in section.blocks %}
       <div class="col-12 col-sm-6 col-md-4">
         <div class="about-feature-box">
-          <div class="feature-icon"><i class="fas fa-{{block.settings.icon}}"></i></div>
+          <div class="feature-icon">{% if block.settings.icon != blank %}<img src="{{block.settings.icon | img_url:'master'}}">{% endif %}</div>
           <h5>{{block.settings.heading}}</h5>
           <p>{{block.settings.content}}</p>
         </div>
