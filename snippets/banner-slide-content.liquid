@@ -14,10 +14,11 @@
         <h1>{{block.settings.heading}}</h1>
         {% endif %}
         
-         <h2>{{block.settings.tag_line}}</h2>
+        {% if block.settings.subheading != blank %}
+         <h2>{{block.settings.subheading}}</h2>
+        {% endif %}
         
-        {% if block.settings.content != blank %}
-        
+        {% if block.settings.content != blank %}        
         <p>{{block.settings.content}}</p>
         {% endif %}
         {% if block.settings.btn != blank and block.settings.link != blank %}
@@ -36,7 +37,13 @@
     {% if block.settings.sh_text != blank %}
     color: {{ block.settings.sh_text }};
     {% endif %}
-  }               
+  }  
+                
+  #banner-{{block.id}} .carousel-caption-title h2 { 
+    {% if block.settings.subh_text != blank %}
+    color: {{ block.settings.subh_text }};
+    {% endif %}
+  }  
   #banner-{{block.id}} .carousel-caption-title h1 { 
     {% if block.settings.h_text != blank %}
     color: {{ block.settings.h_text }};
