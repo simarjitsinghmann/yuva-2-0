@@ -29,7 +29,7 @@
 </div>
 <style>              
              
-  #banner-{{block.id}} .carousel-caption-title h6 { 
+  #banner-{{block.id}} .carousel-caption-title span.tag-line { 
     {% if block.settings.sh_bg != blank %}
     background: {{ block.settings.sh_bg }};
     {% endif %}
@@ -37,7 +37,7 @@
     color: {{ block.settings.sh_text }};
     {% endif %}
   }               
-  #banner-{{block.id}} .carousel-caption-title h2 { 
+  #banner-{{block.id}} .carousel-caption-title h1 { 
     {% if block.settings.h_text != blank %}
     color: {{ block.settings.h_text }};
     {% endif %}
