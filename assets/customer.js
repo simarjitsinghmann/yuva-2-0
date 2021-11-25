@@ -65,7 +65,7 @@ class CustomerAddresses {
       attributes.expanded,
       (target.getAttribute(attributes.expanded) === 'false').toString()
     );
-    console.log(target.parentNode.querySelector(".addressPopUp"))
+    console.log(target.parentNode)
   }
 
   _handleAddEditButtonClick = ({ currentTarget }) => {
