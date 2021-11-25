@@ -33,10 +33,10 @@
     {% endif %}
   </ul>
 </div>
-  
-        {% if paginate.pages > 1 %}
-        {% include 'pagination' %}
-        {% endif %}
+
+  {% if paginate.pages > 1 %}
+  {% include 'pagination' %}
+  {% endif %}
 </div>
 {% endpaginate %}
 {% schema %}
