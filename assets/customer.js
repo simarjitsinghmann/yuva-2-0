@@ -61,11 +61,15 @@ class CustomerAddresses {
   }
 
   _toggleExpanded(target) {
-    target.setAttribute(
-      attributes.expanded,
-      (target.getAttribute(attributes.expanded) === 'false').toString()
-    );
-    var popUp =target.parentNode.querySelector(".addressPopUp").innerHTML;
+//     target.setAttribute(
+//       attributes.expanded,
+//       (target.getAttribute(attributes.expanded) === 'false').toString()
+//     );
+    var popUp = target.parentNode.querySelector(".addressPopUp");
+    var newTarget = document.getElementById('similar__product');
+    newTarget.innerHTML = popUp;
+    
+    document.querySelector('body').classList.add('show__similar__products');
   }
 
   _handleAddEditButtonClick = ({ currentTarget }) => {
@@ -73,11 +77,13 @@ class CustomerAddresses {
   }
 
   _handleCancelButtonClick = ({ currentTarget }) => {
-    this._toggleExpanded(
-      currentTarget
-        .closest(selectors.addressContainer)
-        .querySelector(`[${attributes.expanded}]`)
-    )
+//     this._toggleExpanded(
+//       currentTarget
+//         .closest(selectors.addressContainer)
+//         .querySelector(`[${attributes.expanded}]`)
+//     )
+    
+    document.querySelector('body').classList.remove('show__similar__products');
   }
 
   _handleDeleteButtonClick = ({ currentTarget }) => {
