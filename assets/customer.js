@@ -70,7 +70,7 @@ class CustomerAddresses {
     newTarget.innerHTML = popUp;
     
     document.querySelector('body').classList.add('show__similar__products');
-    _setupEventListeners();
+    this._setupEventListeners();
   }
 
   _handleAddEditButtonClick = ({ currentTarget }) => {
