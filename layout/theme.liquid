@@ -84,6 +84,7 @@
   </head>
 
   <body class="template_{{ template |handle }}">
+    
     <div class="wrapper">   
 
       <header id="headerSection">
@@ -92,6 +93,7 @@
         {% section 'header' %}      
 
       </header>
+      
       {% include 'breadcrumb' %}      
 
       <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
@@ -99,9 +101,11 @@
         {{ content_for_layout }}
 
       </main>
+      
       {% section 'footer' %}
 
       {% include 'search-drawer' %}
+      
       {% render 'similar-products'%}
 
       {% if shop.customer_accounts_enabled %} 
@@ -119,12 +123,17 @@
       <div class="wrapper-overlay" style="display: none;"></div>
 
     </div>
+    
     {% render 'newsletter-popup'%}
 
     {% include 'product-quick-view' %}
+    
     {% if settings.enable_cart_drawer and template != 'cart'%}
+    
     {% include 'mini-cart' %}
+    
     {% endif %}
+    
     <style>
       form button[type="submit"]:not([name="checkout"]) {
         position: relative;
@@ -154,6 +163,7 @@
         display: block;
       }
     </style>
+    
   </body>
 
 </html>
