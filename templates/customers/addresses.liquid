@@ -118,7 +118,7 @@
           >
             {{ 'customer.addresses.delete' | t }}
           </button>
-          <div id="EditAddress_{{ address.id }}">
+          <div id="EditAddress_{{ address.id }}" class="addressPopUp">
             <h2>{{ 'customer.addresses.edit_address' | t }}</h2>
             {%- form 'customer_address', address -%}
               <div class="field">
