@@ -49,6 +49,7 @@ class CustomerAddresses {
   }
 
   _setupEventListeners() {
+    console.log('help22')
     this.elements.toggleButtons.forEach((element) => {
       element.addEventListener('click', this._handleAddEditButtonClick);
     });
@@ -83,7 +84,7 @@ class CustomerAddresses {
 //         .closest(selectors.addressContainer)
 //         .querySelector(`[${attributes.expanded}]`)
 //     )
-    
+    console.log('help')
     document.querySelector('body').classList.remove('show__similar__products');
   }
 
