@@ -21,7 +21,7 @@
                             </a>
                         </div>
                           {% unless block.settings.heading == blank and block.settings.subheading == blank %}
-                            <div class="card-information__wrapper text__{{block.settings.info_alignment}} content-border-{{block.settings.show_border}} {% if section.settings.style == 'style1' %}{{block.settings.info_position}}{% endif %}">
+                            <div class="card-information__wrapper text__{{block.settings.info_alignment}} content-border-{{block.settings.show_border}} {{block.settings.info_position}}">
                               {% if block.settings.heading != blank %}
                                 <h5>{{block.settings.heading}}</h5>
                                 {% endif%}
