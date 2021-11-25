@@ -46,6 +46,11 @@
   </div>
 </div>
 
+<style>
+  #shopify-section-{{section.id}}{
+    background-color:{{section.settings.bgcolor}};
+  }
+</style>
 {% schema %}
 {
   "name": "t:sections.newsletter.name",
@@ -75,7 +80,13 @@
       "id": "btn",
       "default": "Subscribe",
       "label": "t:sections.newsletter.settings.btn.label"
-    }
+    },
+      {
+        "type": "color",
+        "id": "bgcolor",
+        "label": "t:sections.faq-section.settings.bgcolor.label",
+        "default":"#ffffff"
+      }
   ],
   "presets": [
     {
