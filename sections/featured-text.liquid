@@ -1,24 +1,30 @@
 <div class="container">
   <div class="inner-container">
-    <h2 class="content-heading text-center">{{section.settings.heading}}</h2>
+    <h2 class="content-heading text-center">{{section.settings.content}}</h2>
   </div>
 </div>
 {% schema %}
   {
-    "name": "Featured Text",
+    "name": "t:sections.featured-text.name",
     "tag": "section",
     "class":"about-best-choice featured-text-section",
     "settings": [
         {
-            "type":"textarea",
-            "id":"heading",
-            "label":"Text",
-            "default":"Why We Are Your Best Choice"
+            "type":"richtext",
+            "id":"content",
+            "label":"t:sections.featured-text.settings.content.label",
+			"default":"<p>Why We Are Your Best Choice</p>"
+        },
+        {
+          "type": "color",
+          "id": "bgcolor",
+          "label": "t:sections.featured-text.settings.bgcolor.label",
+          "default":"#ffffff"
         }
   	],
     "presets": [
       {
-        "name": "Featured Text"
+        "name": "t:sections.featured-text.presets.name"
       }
     ]
   }
