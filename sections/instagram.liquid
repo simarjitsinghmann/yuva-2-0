@@ -49,7 +49,8 @@
     userId: '{{ section.settings.insta_user_id}}',
     accessToken: '{{ section.settings.insta_access_Token}}',
     limit: 5,
-    resolution : 'standard_resolution'
+    resolution : 'standard_resolution',
+    template:'<a href="{{link}}"><img title="{{caption}}" src="{{image}}" /></a>'
   });
   userFeed.run();
   setTimeout(function(){ $('#instafeed a').attr('target','_blank'); }, 1000);
