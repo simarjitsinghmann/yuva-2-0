@@ -103,9 +103,7 @@
       {% section 'footer' %}
       {% endunless %}
 
-      {% if settings.search_style == 'full' %}
       {% include 'search-drawer' %}
-      {% endif %}
       {% render 'similar-products'%}
 
       {% if shop.customer_accounts_enabled %} 
