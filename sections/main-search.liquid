@@ -118,7 +118,7 @@
               data-result="{% if productResults %}products{% elsif otherResults %}others{% endif %}"
               >
             {%- for item in search.results limit:50 -%}
-              <li class="grid__item search_result_items{% unless item.object_type == 'product' %} grid__item--small others_item{% else %} products_item{% endunless %}">
+              <li class="grid__item search_result_items{% unless item.object_type == 'product' %} grid__item--small other_item{% else %} product_item{% endunless %}">
                 {%- case item.object_type -%}
                   {%- when 'product' -%}
                     {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
