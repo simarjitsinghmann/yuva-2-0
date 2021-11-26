@@ -497,9 +497,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload', function(even
   var parent = event.target;
   var slider = $(parent).find('[data-slider]');
   if(event.type == "shopify:section:load"){
-//     slickSlider($(slider));
-    
-//     slider.slick('refresh');
+    slickSlider($(slider));
   }
   else{
     slider.slick('refresh');
