@@ -54,7 +54,7 @@
             "style": "accordion",
             "show_description": true,
             "content_heading": "Specification",
-            "content": "<p>{{ product.metafields.my_fields.specifications | metafield_tag }}<\/p>",
+            "content": "<p>{{ product.metafields.my_fields.specifications | metafield_tag }}{{ product.title }}{{ product.vendor }}{{ product.metafields.reviews.rating | metafield_tag }}{{ product.metafields.reviews.rating_count.value }}<\/p>",
             "show_reviews": true
           }
         }
