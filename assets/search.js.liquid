@@ -162,11 +162,10 @@ $(document).ready(function(){
           } 
         });  
         $(document).ajaxStop(function(){
-          alert("All AJAX requests completed");
-        });
         console.log(recent_Html)
         recent_Html =  recent_Html.concat('</ul></div></div>'); 
         $('#recent_search_list').html(recent_Html);
+        });
 
       }
 
