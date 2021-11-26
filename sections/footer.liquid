@@ -5,18 +5,18 @@
           
           <div class="grid__item full__item col-sm-4 col-md-12 col-lg-12 footer-logo-box">
             <div class="footer-block d-flex">
-              <div class="grid__item full__item col-sm-12 col-md-6">
                 {% if section.settings.image != blank %}
+              <div class="grid__item full__item col-sm-12 col-md-3">
                 {% assign width = section.settings.image_width | append:'px' %}
                 <img src="{{section.settings.image | img_url:'master'}}" width="{{width}}">
+              </div>
                 {% endif %}
+              {% if block.settings.subtext != blank %}
+              <div class="grid__item full__item col-sm-12 col-md-9">
+                <div class="footer-innner-continer">
+                  {{ block.settings.subtext }}
+                </div>
               </div>
-                {% if block.settings.subtext != blank %}
-            <div class="grid__item full__item col-sm-12 col-md-6">
-              <div class="footer-innner-continer">
-                {{ block.settings.subtext }}
-              </div>
-            </div>
               {% endif %}
           </div>
           </div>
