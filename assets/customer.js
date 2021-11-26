@@ -68,7 +68,6 @@ class CustomerAddresses {
     
     document.querySelector('body').classList.add('show__similar__products');     
     this.elements = this._getElements();
-    this._setupEventListeners();
     this._setupCountries();
     this._setupEventListeners();
   }
