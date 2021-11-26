@@ -208,9 +208,9 @@
                                 {% for value in option.values%}
                                 <li class="color_option">
                                     <input type="radio" name="option-{{opIndex}}" value="{{value}}">
-                                  <span class="option" {% if downOption == 'color' or  downOption == 'colour'%}{% unless block.settings.variant_image %} style="background-color:{{value}};"{% endunless %}{% endif %}>
+                                  <span class="option" {% if downOption == 'color' or  downOption == 'colour'%}{% unless settings.variant_image %} style="background-color:{{value}};"{% endunless %}{% endif %}>
                             {% if downOption == 'color' or  downOption == 'colour'%}    
-                              {% if block.settings.variant_image %}                                                                                  
+                              {% if settings.variant_image %}                                                                                  
                                   {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
                                   {% for variant in variantsList %}
                                     {% if variant.featured_image != blank %}
