@@ -49,7 +49,7 @@
           <label for="AddressCityNew">{{ 'customer.addresses.city' | t }}</label>
           <input type="text" id="AddressCityNew" name="address[city]" value="{{ form.city }}" autocomplete="address-level2" placeholder="{{ 'customer.addresses.city' | t }}">
         </div>
-        <div>
+        <div class="field">
           <label for="AddressCountryNew">{{ 'customer.addresses.country' | t }}</label>
           <div class="select">
             <select
@@ -62,9 +62,9 @@
             </select>
           </div>
         </div>
-        <div id="AddressProvinceContainerNew" style="display: none">
+        <div id="AddressProvinceContainerNew" class="field" style="display: none">
           <label for="AddressProvinceNew">{{ 'customer.addresses.province' | t }}</label>
-          <div class="select">
+          <div class="select ">
             <select
                     id="AddressProvinceNew"
                     name="address[province]"
@@ -157,7 +157,7 @@
             <label for="AddressCountry_{{ form.id }}">
               {{ 'customer.addresses.country' | t }}
             </label>
-            <div class="select field">
+            <div class="select">
               <select
                       id="AddressCountry_{{ form.id }}"
                       name="address[country]"
@@ -174,7 +174,7 @@
             <label for="AddressProvince_{{ form.id }}">
               {{ 'customer.addresses.province' | t }}
             </label>
-            <div class="select field"> 
+            <div class="select"> 
               <select
                       id="AddressProvince_{{ form.id }}"
                       name="address[province]"
