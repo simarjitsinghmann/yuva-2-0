@@ -25,13 +25,13 @@
                   {% if block.settings.heading != blank %}
                   <h5>{{block.settings.heading}}</h5>
                   {% endif %}
+                  {% if block.settings.image != blank %}
+                  {% assign width = block.settings.image_width | append:'px' %}
+                  <img src="{{block.settings.image | img_url:'master'}}" width="{{width}}">
+                  {% endif %}
+                  {% if block.settings.subtext != blank %}
                 </div>
               </div>
-              {% if block.settings.image != blank %}
-              {% assign width = block.settings.image_width | append:'px' %}
-              <img src="{{block.settings.image | img_url:'master'}}" width="{{width}}">
-              {% endif %}
-              {% if block.settings.subtext != blank %}
               <div class="footer-innner-continer">
                 {{ block.settings.subtext }}
               </div>

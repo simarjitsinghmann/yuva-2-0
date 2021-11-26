@@ -180,32 +180,26 @@
 </div>
 
    <script>
-      var accordionHead = document.getElementsByClassName('accordion-{{section.id}}');
-      if(accordionHead.length > 0 ){
-         var accordionContent =  document.getElementsByClassName('productSection-content');
-        
-         Array.from(accordionHead).forEach(function(btn) {
+      var categories = document.getElementsByClassName('result_category_button');
+      if(categories.length > 0 ){
+         Array.from(categories).forEach(function(btn) {
            btn.addEventListener("click", ()=>{
-			let icon = btn.querySelectorAll('.fa')[0];
-           if(btn.classList.contains('active')){
-             clearAccordion();
+           var parent = btn.parentNode;
+           if(parent.classList.contains('active')){
+             return false;
            }
            else{
-             clearAccordion();
+             clearActive();
              btn.classList.add("active");
              var _value = btn.getAttribute("content");
              document.getElementById(_value).style.display = "block";
            }
          });
          });
-       function clearAccordion(){
-         var accordionHeads = document.getElementsByClassName('accordion-{{section.id}}');
-         var accordionContents =  document.getElementsByClassName('productSection-content');
+       function clearActive(){
+         
          Array.from(accordionHead).forEach(function(item) {
            item.classList.remove('active');
-         });
-         Array.from(accordionContents).forEach(function(item) {
-           item.style.display = 'none';
          });
        }
       }
