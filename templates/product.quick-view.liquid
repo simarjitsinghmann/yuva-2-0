@@ -53,7 +53,7 @@
                 {% assign varOptionIndex = 'option'|append:forloop.index %}
                 <div class="select__{{downOption}}">
                   <p class="small-size size_title">SELECT {{option.name}}</p>
-                  <ul class="product-loop-variants {{downOption}} variants circle _small list-unstyled">                            
+                  <ul class="product-loop-variants {{downOption}} variants {{ settings.color_swatch_style}} _small list-unstyled">                            
                   {%- for value in option.values -%}  
                       <li class="{{downOption}}_option {% unless downOption == 'color' or  downOption == 'colour'%}variant_option{% endunless%}">
                         <input class="productOption" type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
