@@ -18,7 +18,6 @@ class CustomerAddresses {
     if (Object.keys(this.elements).length === 0) return;
     this._setupCountries();
     this._setupEventListeners();
-    const $this = this;
   }
 
   _getElements() {
@@ -69,6 +68,8 @@ class CustomerAddresses {
     
     document.querySelector('body').classList.add('show__similar__products');     
     this.elements = this._getElements();
+    this._setupEventListeners();
+    this._setupCountries();
     this._setupEventListeners();
   }
 
