@@ -12,7 +12,15 @@ footer ul li a:hover { color: var(--theme-color); }
     margin-bottom: 50px;
 }
 #ContactFooter .field { position: relative; width: 100%; } 
-#ContactFooter #NewsletterForm--footer { padding: 13px 20px; height: auto; background: #ffffff21; font-size: 13px; min-height:46px; color: var(--gray); } 
+#ContactFooter #NewsletterForm--footer {
+    padding: 13px 20px 13px 0;
+    height: auto;
+    background: transparent;
+    font-size: 13px;
+    min-height: 46px;
+    color: var(--gray);
+    border-bottom: 2px solid #2d2d2d;
+}
 #ContactFooter { position: relative; margin-top: 28px; } 
 #ContactFooter #Subscribe { text-transform: none;
 /*   position: absolute;  */

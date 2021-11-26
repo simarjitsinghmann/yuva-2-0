@@ -199,7 +199,7 @@
            else{
              parent.classList.add("active");
              var _value = btn.getAttribute("data-type");
-             document.getElementById(_value+'_item').style.display = "block";
+             document.getElementById('searchResultContainer').setAttribute("data-result",_value);
            }
          });
          });
