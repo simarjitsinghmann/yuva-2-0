@@ -61,11 +61,6 @@
       </script>
   </div>
 </div>
-<style>
-  #section-{{section.id}} .collection-list-view-card h2{
-    font-size:{{section.settings.heading_font }}px;
-  }
-</style>
 {% schema %}
 {
   "name": "t:sections.featured-collections-list.name",
@@ -78,16 +73,6 @@
       "id": "heading",
       "default": "Collection list",
       "label": "t:sections.featured-collections-list.settings.heading.label"
-    },
-    {
-      "type": "range",
-      "id": "heading_font",
-      "default": 25,
-      "label": "t:sections.featured-collections-list.settings.heading_font.label",
-      "min": 20,
-      "max": 38,
-      "step": 1,
-      "unit": "px"
     }
   ],
   "blocks": [
