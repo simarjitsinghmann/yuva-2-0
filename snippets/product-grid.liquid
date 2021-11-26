@@ -219,10 +219,8 @@
                                                    {% endfor %}
                                                 {% endif %}
                                   <span class="option"{% unless settings.variant_image and variantImage != blank %} style="background-color:{{value}};"{% endunless %}>  
-                                    {% if settings.variant_image %}         
-                                    {% if variant.featured_image != blank %}
+                                    {% if settings.variant_image and variantImage != blank %}    
                                     <img src="{{variant.featured_image | img_url:"100x"}}">
-                                    {% endif %}
                                     {% else %}
                                     {{value}}
                                     {% endif%}
