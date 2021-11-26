@@ -344,9 +344,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
 
           var paymentButtonWrapper = _productParent.querySelectorAll('.Sd_addProduct')[0]
           var paymentButton = _productParent.querySelectorAll('.Sd_addProduct span')[0]
-          console.log(getVariant)
           if(getVariant != undefined){
-            console.log
             if(getVariant.featured_media != null){
               var image= getVariant.featured_media['preview_image']['src'];
               image= image.replace("https:", ""); 
