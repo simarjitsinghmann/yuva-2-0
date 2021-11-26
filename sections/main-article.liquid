@@ -67,18 +67,18 @@
                   {%- if comment.status == 'pending' and comment.content -%}
                   <article id="{{ comment.id }}" class="article-template__comments-comment">
                     {{ comment.content }}
-                    <footer class="right">
+                    <div class="right">
                       <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span>
-                    </footer>
+                    </div>
                   </article>
                   {%- endif -%}
 
                   {%- for comment in article.comments -%}
                   <article id="{{ comment.id }}" class="article-template__comments-comment">
                     {{ comment.content }}
-                    <footer class="right">
+                    <div class="right">
                       <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span><span class="caption-with-letter-spacing">{{ comment.created_at | time_tag: format: 'month_year' }}</span>
-                    </footer>
+                    </div>
                   </article>
                   {%- endfor -%}
                   {% render 'pagination', paginate: paginate, anchor: anchorId %}
