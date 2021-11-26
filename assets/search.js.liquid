@@ -146,15 +146,18 @@ $(document).ready(function(){
         var Prev_search =recent_pro_val.reverse();
         $.each(Prev_search, function(index, value){   
           if(index<10){
-            var getV = value.split("__");
-            var Title = getV[0];
-            if(Title.length > 10){
-              var Title = Title.substring(0,10) + '..';
-            }else{
-              var Title = getV[0];
-            }
-
-            recent_Html =  recent_Html.concat('<li><a href="/products/'+getV[1]+'" title="'+getV[0]+'"><span><img src="'+getV[2]+'"></span>'+Title+'</a></li>');                                      
+            var getV = value;
+            jQuery.ajax({
+              type: 'GET',
+              url: '/admin/products/' + value + '.json',
+              success: function(response) {
+                recent_Html =  recent_Html.concat('<li><a href="/products/'+response.handle+'" title="'+response.title+'"><span><img src="'++'"></span>'+Title+'</a></li>');                                      
+              },
+              error: function(error) {
+                console.log("Error: "+ error);
+              }
+            });
+            
           } 
         });  
         recent_Html =  recent_Html.concat('</ul></div></div>'); 
