@@ -220,7 +220,7 @@
                                                 {% endif %}
                                   <span class="option"{% unless settings.variant_image and variantImage != blank %} style="background-color:{{value}};"{% endunless %}>  
                                     {% if settings.variant_image and variantImage != blank %}    
-                                    <img src="{{variant.featured_image | img_url:"100x"}}">
+                                    <img src="{{variantImage| img_url:"100x"}}">
                                     {% else %}
                                     {{value}}
                                     {% endif%}
