@@ -25,12 +25,6 @@
       </div>
   </div> 
 {% endif %}
-
-<style>
-  #shopify-section-{{section.id}}{
-    background-color:{{section.settings.bgcolor}};
-  }
-</style>
  <script>
       var tabHead = document.getElementsByClassName('faq-{{section.id}}');
       if(tabHead.length > 0 ){
@@ -73,12 +67,6 @@
         "id": "heading",
         "default": "Frequently Asked Questions",
         "label": "t:sections.faq-section.settings.heading.label"
-      },
-      {
-        "type": "color",
-        "id": "bgcolor",
-        "label": "t:sections.faq-section.settings.bgcolor.label",
-        "default":"#ffffff"
       }
     ],
 	"blocks":[
