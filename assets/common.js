@@ -48,10 +48,22 @@ Shopify.postLink = function(path, options) {
 };
 
 Shopify.CountryProvinceSelector = function(country_domid, province_domid, options) {
+  var countryElement = document.querySelectorAll('#'+country_domid);
+  var provinceElement = document.querySelectorAll('#'+province_domid);
+  var provinceContainerEl = document.querySelectorAll('#'+options['hideElement'] || '#'+province_domid);
   
-  this.countryEl         = document.querySelectorAll('#'+country_domid)[1];
-  this.provinceEl        = document.querySelectorAll('#'+province_domid)[1];
-  this.provinceContainer = document.querySelectorAll('#'+options['hideElement'] || '#'+province_domid)[1];
+  this.countryEl         = countryElement[0];
+  this.provinceEl        = provinceElement[0];
+  this.provinceContainer = provinceContainerEl[0];
+  if(countryElement[1]){
+  	 this.countryEl= countryElement[1];
+  }
+  if(provinceElement[1]){
+  	 this.provinceEl= provinceElement[1];
+  }
+  if(provinceContainerEl[1]){
+  	 this.provinceContainer= provinceContainerEl[1];
+  }
   
 //   this.countryEl         = document.querySelector('#'+country_domid+':last-child');
 //   this.provinceEl        = document.querySelector('#'+province_domid+':last-child');
