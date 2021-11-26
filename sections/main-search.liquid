@@ -185,12 +185,13 @@
          Array.from(categories).forEach(function(btn) {
            btn.addEventListener("click", ()=>{
            var parent = btn.parentNode;
+           var option =  btn.getAttribute('');
            if(parent.classList.contains('active')){
              return false;
            }
            else{
              clearActive();
-             btn.classList.add("active");
+             parent.classList.add("active");
              var _value = btn.getAttribute("content");
              document.getElementById(_value).style.display = "block";
            }
