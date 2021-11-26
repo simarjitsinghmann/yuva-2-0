@@ -19,24 +19,26 @@
             {% endif %}
             </div>
             {% when 'image'%}
-            <div class="grid__item full__item col-sm-4 col-md-12 col-lg-12" {{ block.shopify_attributes }}>
-              <div class="d-flex">
-                <div class="grid__item full__item col-sm-12 col-md-6">
-                  {% if block.settings.heading != blank %}
-                  <h5>{{block.settings.heading}}</h5>
-                  {% endif %}
-                  {% if block.settings.image != blank %}
-                  {% assign width = block.settings.image_width | append:'px' %}
-                  <img src="{{block.settings.image | img_url:'master'}}" width="{{width}}">
-                  {% endif %}
-                  {% if block.settings.subtext != blank %}
-                </div>
+          <div class="grid__item full__item col-sm-4 col-md-12 col-lg-12" {{ block.shopify_attributes }}>
+            <div class="d-flex">
+              <div class="grid__item full__item col-sm-12 col-md-6">
+                {% if block.settings.heading != blank %}
+                <h5>{{block.settings.heading}}</h5>
+                {% endif %}
+                {% if block.settings.image != blank %}
+                {% assign width = block.settings.image_width | append:'px' %}
+                <img src="{{block.settings.image | img_url:'master'}}" width="{{width}}">
+                {% endif %}
+                {% if block.settings.subtext != blank %}
               </div>
+            </div>
+            <div class="grid__item full__item col-sm-12 col-md-6">
               <div class="footer-innner-continer">
                 {{ block.settings.subtext }}
               </div>
               {% endif %}
-              </div>
+            </div>
+          </div>
             {% when 'newsletter'%}
             <div class="grid__item full__item col-sm-12 col-md-3 col-lg-3 newsletter-box" {{ block.shopify_attributes }}>
 
