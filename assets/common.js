@@ -485,7 +485,6 @@ slickSlider = function(selector){
 }
 sliders = function(){
   var sliders = $('body').find('[data-slider]');
-  console.log(sliders)
   if(sliders.length > 0){
     sliders.each(function(index) {
       slickSlider($(this));
@@ -501,7 +500,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload', function(even
     slickSlider($(slider));
   }
   else{
-    slider.slick('destroy');
+    slider.slick('refresh');
   }
 });
 }());
