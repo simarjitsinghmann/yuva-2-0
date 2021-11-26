@@ -22,7 +22,6 @@ class CustomerAddresses {
 
   _getElements() {
     const container = document.querySelector(selectors.customerAddresses);
-    console.log(container);
     return container ? {
       container,
       addressContainer: container.querySelector(selectors.addressContainer),
@@ -40,6 +39,7 @@ class CustomerAddresses {
         hideElement: 'AddressProvinceContainerNew'
       });
       this.elements.countrySelects.forEach((select) => {
+        console.log(select)
         const formId = select.dataset.formId;
         // eslint-disable-next-line no-new
         new Shopify.CountryProvinceSelector(`AddressCountry_${formId}`, `AddressProvince_${formId}`, {
