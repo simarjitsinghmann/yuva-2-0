@@ -78,7 +78,7 @@
 </style>
 {% schema %}
 {
-    "name": "t:sections.featured-blog.name",
+    "name": "t:sections.featured-article.name",
     "tag": "section",
     "class":"blog-post",
     "settings": [
@@ -86,48 +86,48 @@
         "type": "text",
         "id": "heading",
         "default": "CONSECTETUR",
-        "label": "t:sections.featured-blog.settings.heading.label"
+        "label": "t:sections.featured-article.settings.heading.label"
       },
       {
         "type": "textarea",
         "id": "subheading",
         "default": "Blog post everyday",
-        "label": "t:sections.featured-blog.settings.subheading.label"
+        "label": "t:sections.featured-article.settings.subheading.label"
       },
       {
         "type": "text",
         "id": "button",
         "default": "View all",
-        "label": "t:sections.featured-blog.settings.button.label"
+        "label": "t:sections.featured-article.settings.button.label"
       },
       {
         "type": "url",
         "id": "link",
-        "label": "t:sections.featured-blog.settings.link.label"
+        "label": "t:sections.featured-article.settings.link.label"
       },
       {
         "type": "color",
         "id": "color",
-        "label": "t:sections.featured-blog.settings.color.label",
+        "label": "t:sections.featured-article.settings.color.label",
         "default":"#ffffff"
       }
     ],
     "blocks":[
       {
         "type":"article",
-         "name":"t:sections.featured-blog.blocks.article.name",
+         "name":"t:sections.featured-article.blocks.article.name",
          "settings":[
           {
           "type":"article",
           "id":"article",
-          "label": "t:sections.featured-blog.blocks.article.settings.article.label"
+          "label": "t:sections.featured-article.blocks.article.settings.article.label"
           }
            ]
        }
          ],
     "presets": [
       {
-        "name": "t:sections.featured-blog.presets.name",
+        "name": "t:sections.featured-article.presets.name",
         "category": "Blog"
       }
     ]
