@@ -168,7 +168,7 @@ buildCart = function (cart,showCart) {
       line: index + 1, // Shopify uses a 1+ index in the API
       url: cartItem.url,
       img: prodImg,
-      name: cartItem.product_title,
+      name: truncate(cartItem.product_title,4),
       variation: cartItem.variant_title,
       properties: cartItem.properties,
       itemAdd: cartItem.quantity + 1,
