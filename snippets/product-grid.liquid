@@ -208,15 +208,21 @@
                                 {% for value in option.values%}
                                 <li class="color_option">
                                     <input type="radio" name="option-{{opIndex}}" value="{{value}}">
-                                  <span class="option"{% unless settings.variant_image %} style="background-color:{{value}};"{% endunless %}>  
-                                    {% if settings.variant_image %}                                                                                  
-                                    {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
-                                    {% for variant in variantsList %}
+                                    {% assign variantImage = '' %}
+                                         {% if settings.variant_image %}                                                                                  
+                                                   {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
+                                                   {% for variant in variantsList %}
+                                                      {% if variant.featured_image != blank %}
+                                         					{% assign variantImage = variant.featured_image %}
+                                                         {% break %}
+                                                      {% endif %}
+                                                   {% endfor %}
+                                                {% endif %}
+                                  <span class="option"{% unless settings.variant_image and variantImage != blank %} style="background-color:{{value}};"{% endunless %}>  
+                                    {% if settings.variant_image %}         
                                     {% if variant.featured_image != blank %}
                                     <img src="{{variant.featured_image | img_url:"100x"}}">
-                                    {% break %}
                                     {% endif %}
-                                    {% endfor %}
                                     {% else %}
                                     {{value}}
                                     {% endif%}
