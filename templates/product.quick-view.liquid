@@ -52,42 +52,58 @@
                 {% assign optionIndex = forloop.index %}
                 {% assign varOptionIndex = 'option'|append:forloop.index %}
                 <div class="select__{{downOption}}">
-                  <p class="small-size size_title">SELECT {{option.name}}</p>
-                  <ul class="product-loop-variants {{downOption}} variants {{ settings.color_swatch_style}} _small list-unstyled">                            
-                  {%- for value in option.values -%}  
-                      <li class="{{downOption}}_option {% unless downOption == 'color' or  downOption == 'colour'%}variant_option{% endunless%}">
-                        <input class="productOption" type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
-                        {% assign variantImage = '' %}
-                        {% if settings.variant_image %}                                                                                  
-                        {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
-                        {% for variant in variantsList %}
-                        {% if variant.featured_image != blank %}
-                        {% assign variantImage = variant.featured_image %}
-                        {% break %}
-                        {% endif %}
-                        {% endfor %}
-                        {% endif %}
-
-                        {% if downOption == 'color' or  downOption == 'colour'%}    
-                        <span 
-                              class="option {% if option.selected_value == value %}selected{% endif %} {% unless settings.variant_image and variantImage != blank %}variantColorOption {% else %}variantImageOption {% endunless %}" 
-                              {% if downOption == 'color' or  downOption == 'colour'%}{% unless settings.variant_image and variantImage != blank %} 
-                              style="background-color:{{value}};"{% endunless %}{% endif %}
-                              >
-                          {% if settings.variant_image %}    
-                          {% if variantImage != blank %}
-                          <img src="{{variantImage | img_url:"grande"}}">
-                          {% endif %}
-                          {% endif %}
-                        </span>
-                        {% else %}
-                        <span class="option {% if option.selected_value == value %}selected{% endif %}" >
-                          {{value}}
-                        </span>
-                        {% endif%}
-                      </li>
-                  {% endfor %}
-                  </ul> 
+                  <p class="small-size size_title">SELECT {{option.name}}</p>{% if settings.option_style == 'swatch' %}
+                                    <ul class="product-loop-variants {{downOption}} variants {{settings.color_swatch_style}} _small list-unstyled">                            
+                                    {%- for value in option.values -%}  
+                                       <li class="{{downOption}}_option {% unless downOption == 'color' or  downOption == 'colour'%}variant_option{% endunless%}">
+                                          <input class="productOption" type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
+                                         {% assign variantImage = '' %}
+                                         {% if settings.variant_image %}                                                                                  
+                                                   {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
+                                                   {% for variant in variantsList %}
+                                                      {% if variant.featured_image != blank %}
+                                         					{% assign variantImage = variant.featured_image %}
+                                                         {% break %}
+                                                      {% endif %}
+                                                   {% endfor %}
+                                                {% endif %}
+                                         
+                                             {% if downOption == 'color' or  downOption == 'colour'%}    
+                                          <span 
+                                                class="option {% if option.selected_value == value %}selected{% endif %} {% unless settings.variant_image and variantImage != blank %}variantColorOption {% else %}variantImageOption {% endunless %}" 
+                                                {% if downOption == 'color' or  downOption == 'colour'%}{% unless settings.variant_image and variantImage != blank %} 
+                                                style="background-color:{{value}};"{% endunless %}{% endif %}
+                                                >
+                                         {% if settings.variant_image %}    
+                                                      {% if variantImage != blank %}
+                                                         <img src="{{variantImage | img_url:"grande"}}">
+                                                      {% endif %}
+                                                {% endif %}
+                                          </span>
+                                             {% else %}
+                                          <span class="option {% if option.selected_value == value %}selected{% endif %}" >
+                                             {{value}}
+                                         </span>
+                                             {% endif%}
+                                       </li>
+                                    {% endfor %}
+                                    </ul> 
+                                    {% elsif settings.option_style == 'dropdown' %}
+                                    <div class="dropdown {{downOption}}-select productOptionSelect">
+                                       <button id="dLabel" class="dropdown-selected" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        {{option.selected_value}}
+                                       </button>
+                                        <span class="caret"></span>
+                                       <ul class="product-loop-variants dropdown-menu {{downOption}}-menu productOptionSelectList" aria-labelledby="dLabel" style="display: none;">
+                                          {%- for value in option.values -%}
+                                          <li class="productOption">
+                                          <input type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
+                                          {{value}}
+                                       </li>
+                                        {% endfor %}
+                                       </ul>
+                                     </div>
+                                    {% endif %}
                 </div>
               {% endfor %}
               {% endif %}
