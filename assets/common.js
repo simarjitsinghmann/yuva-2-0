@@ -347,7 +347,8 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
           if(getVariant != undefined){
             if(getVariant.featured_media != null){
               var image= getVariant.featured_media['preview_image']['src'];
-              image= image.replace("https:", "");                       
+              image= image.replace("https:", ""); 
+              console.log(_productParent.querySelector('[name="id"]'))
               _productParent.querySelector('[name="id"]').value = getVariant.id;
               var imageSource = _productParent.querySelectorAll(".owl-thumb-item img[src='"+image+"']")[0];
               if(imageSource){
