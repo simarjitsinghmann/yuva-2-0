@@ -10,7 +10,7 @@
     {% if section.blocks.size > 0  %}
     <div class="blog-multi-slide " role="list">  
       <div class="">
-        <div id="featuredBlog-{{section.id}}" class="blog__post owl-carousel">         
+        <div id="featuredBlog-{{section.id}}" class="blog__post">         
           {% for block in section.blocks %}  
           {% if block.settings.article != blank %}  
           {% assign article = block.settings.article %}
