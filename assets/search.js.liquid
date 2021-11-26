@@ -151,7 +151,8 @@ $(document).ready(function(){
               type: 'GET',
               url: '/admin/products/' + value + '.json',
               success: function(response) {
-                recent_Html =  recent_Html.concat('<li><a href="/products/'+response.handle+'" title="'+response.title+'"><span><img src="'+response.title+'"></span>'+response.title+'</a></li>');                                      
+                recent_Html +=`<li><a href="/products/${response.handle}" title="${response.title}">
+<span><img src="${response.title}"></span>${response.title}</a></li>`;                                      
               },
               error: function(error) {
                 console.log("Error: "+ error);
