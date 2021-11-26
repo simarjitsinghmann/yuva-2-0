@@ -2,199 +2,199 @@
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
 <div class="col-md-6 no-padding-left no-padding-right background-img-color euqal-height shopify-section">
-    <div class="product-image-left">    
-      <div id="feature__product-{{product.id}}" class="feature__product" data-slider-id="1">
-          {% for image in product.images %}
-          <div class="item" >
-              <img src="{{image | img_url:'master'}}" alt="">
-          </div>
-          {% endfor %}
-      </div> 
-      <div id="feature__productThumbs-{{product.id}}" class="feature__product thumb" data-slider-id="1">
-          {% for image in product.images %}
-          <div class="" >
-              <img src="{{image | img_url:'100x'}}" alt="">
-          </div>
-          {% endfor %}
-      </div> 
-    </div>
+  <div class="product-image-left">    
+    <div id="feature__product-{{product.id}}" class="feature__product" data-slider-id="1">
+      {% for image in product.images %}
+      <div class="item" >
+        <img src="{{image | img_url:'master'}}" alt="">
+      </div>
+      {% endfor %}
+    </div> 
+    <div id="feature__productThumbs-{{product.id}}" class="feature__product thumb" data-slider-id="1">
+      {% for image in product.images %}
+      <div class="" >
+        <img src="{{image | img_url:'100x'}}" alt="">
+      </div>
+      {% endfor %}
+    </div> 
   </div>
-  <div class="col-md-6 euqal-height background-white product_content_section">
-    <div class="product-add-to-cart-right">
-                  
-      <div class="clearfix"> </div>
-      <h2><a href="{{product.url}}">{{ product.title | default: 'Example Product Title' }}</a></h2>
-      <p class="vendor_name">{{product.vendor}}</p>
-      <div class="ratingbox">
-        <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
-      </div>
-      {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
-      <input type="hidden" name="form_type" value="product">
-      <div class="prizebox" data-price-wrapper>
-        <label class="visually-hidden" data-price-text>{{ 'Price' }}</label>
-        {% if current_variant.compare_at_price > current_variant.price %}
-        <h3 id="get_price">
-          {{current_variant.price | money}}
-          <span class="main-price">
-            <del>{{current_variant.compare_at_price | money}}</del>
-          </span>
-        </h3>
-        <span class="percent-off">({{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}})</span>
-        {% else %}
-        <h3 id="get_price">{{current_variant.price | money}}</h3>
-        {% endif %}
-        
-      </div>
-      <div class="form-group">
-        {% if product.available and product.variants.size > 1 %}
-              {% for option in product.options_with_values %}
-              {% assign downOption = option.name | downcase %}
-                {% assign optionIndex = forloop.index %}
-                {% assign varOptionIndex = 'option'|append:forloop.index %}
-                <div class="select__{{downOption}}">
-                  <p class="small-size size_title">SELECT {{option.name}}</p>{% if settings.option_style == 'swatch' %}
-                                    <ul class="product-loop-variants {{downOption}} variants {{settings.color_swatch_style}} _small list-unstyled">                            
-                                    {%- for value in option.values -%}  
-                                       <li class="{{downOption}}_option {% unless downOption == 'color' or  downOption == 'colour'%}variant_option{% endunless%}">
-                                          <input class="productOption" type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
-                                         {% assign variantImage = '' %}
-                                         {% if settings.variant_image %}                                                                                  
-                                                   {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
-                                                   {% for variant in variantsList %}
-                                                      {% if variant.featured_image != blank %}
-                                         					{% assign variantImage = variant.featured_image %}
-                                                         {% break %}
-                                                      {% endif %}
-                                                   {% endfor %}
-                                                {% endif %}
-                                         
-                                             {% if downOption == 'color' or  downOption == 'colour'%}    
-                                          <span 
-                                                class="option {% if option.selected_value == value %}selected{% endif %} {% unless settings.variant_image and variantImage != blank %}variantColorOption {% else %}variantImageOption {% endunless %}" 
-                                                {% if downOption == 'color' or  downOption == 'colour'%}{% unless settings.variant_image and variantImage != blank %} 
-                                                style="background-color:{{value}};"{% endunless %}{% endif %}
-                                                >
-                                         {% if settings.variant_image %}    
-                                                      {% if variantImage != blank %}
-                                                         <img src="{{variantImage | img_url:"grande"}}">
-                                                      {% endif %}
-                                                {% endif %}
-                                          </span>
-                                             {% else %}
-                                          <span class="option {% if option.selected_value == value %}selected{% endif %}" >
-                                             {{value}}
-                                         </span>
-                                             {% endif%}
-                                       </li>
-                                    {% endfor %}
-                                    </ul> 
-                                    {% elsif settings.option_style == 'dropdown' %}
-                                    <div class="dropdown {{downOption}}-select productOptionSelect">
-                                       <button id="dLabel" class="dropdown-selected" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        {{option.selected_value}}
-                                       </button>
-                                        <span class="caret"></span>
-                                       <ul class="product-loop-variants dropdown-menu {{downOption}}-menu productOptionSelectList" aria-labelledby="dLabel" style="display: none;">
-                                          {%- for value in option.values -%}
-                                          <li class="productOption">
-                                          <input type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
-                                          {{value}}
-                                       </li>
-                                        {% endfor %}
-                                       </ul>
-                                     </div>
-                                    {% endif %}
-                </div>
-              {% endfor %}
+</div>
+<div class="col-md-6 euqal-height background-white product_content_section">
+  <div class="product-add-to-cart-right">
+
+    <div class="clearfix"> </div>
+    <h2><a href="{{product.url}}">{{ product.title | default: 'Example Product Title' }}</a></h2>
+    <p class="vendor_name">{{product.vendor}}</p>
+    <div class="ratingbox">
+      <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+    </div>
+    {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
+    <input type="hidden" name="form_type" value="product">
+    <div class="prizebox" data-price-wrapper>
+      <label class="visually-hidden" data-price-text>{{ 'Price' }}</label>
+      {% if current_variant.compare_at_price > current_variant.price %}
+      <h3 id="get_price">
+        {{current_variant.price | money}}
+        <span class="main-price">
+          <del>{{current_variant.compare_at_price | money}}</del>
+        </span>
+      </h3>
+      <span class="percent-off">({{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}})</span>
+      {% else %}
+      <h3 id="get_price">{{current_variant.price | money}}</h3>
+      {% endif %}
+
+    </div>
+    <div class="form-group">
+      {% if product.available and product.variants.size > 1 %}
+      {% for option in product.options_with_values %}
+      {% assign downOption = option.name | downcase %}
+      {% assign optionIndex = forloop.index %}
+      {% assign varOptionIndex = 'option'|append:forloop.index %}
+      <div class="select__{{downOption}}">
+        <p class="small-size size_title">SELECT {{option.name}}</p>{% if settings.option_style == 'swatch' %}
+        <ul class="product-loop-variants {{downOption}} variants {{settings.color_swatch_style}} _small list-unstyled">                            
+          {%- for value in option.values -%}  
+          <li class="{{downOption}}_option {% unless downOption == 'color' or  downOption == 'colour'%}variant_option{% endunless%}">
+            <input class="productOption" type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
+            {% assign variantImage = '' %}
+            {% if settings.variant_image %}                                                                                  
+            {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
+            {% for variant in variantsList %}
+            {% if variant.featured_image != blank %}
+            {% assign variantImage = variant.featured_image %}
+            {% break %}
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+
+            {% if downOption == 'color' or  downOption == 'colour'%}    
+            <span 
+                  class="option {% if option.selected_value == value %}selected{% endif %} {% unless settings.variant_image and variantImage != blank %}variantColorOption {% else %}variantImageOption {% endunless %}" 
+                  {% if downOption == 'color' or  downOption == 'colour'%}{% unless settings.variant_image and variantImage != blank %} 
+                  style="background-color:{{value}};"{% endunless %}{% endif %}
+                  >
+              {% if settings.variant_image %}    
+              {% if variantImage != blank %}
+              <img src="{{variantImage | img_url:"grande"}}">
               {% endif %}
-        <select name="id" id="ProductSelect" class="product-form__variants no-js hide js">
-          {% for variant in product.variants %}
-          {% if variant.available %}
-          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
-            {{ variant.title }}
-          </option>
-          {% else %}
-          <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
-          {% endif %}
+              {% endif %}
+            </span>
+            {% else %}
+            <span class="option {% if option.selected_value == value %}selected{% endif %}" >
+              {{value}}
+            </span>
+            {% endif%}
+          </li>
           {% endfor %}
-        </select>
-        
-         {% if section.settings.product_quantity_enable %}
-        <div class="quantity">
-          <label for="Featured_quantity" class="quantity_label">Quantity</label>
-          <div class="quantity_container">
-            <input type="number" name="quantity" class="quantity-cart" value="1"  id="Featured_quantity" >
-            <a href="JavaScript:void(0);" class="q_up quantity-up" id="quantity_plus" >
-                          +</a>
-            <a href="JavaScript:void(0);" class="q_down quantity-down" id="quantity_minus">-</a>
-          </div>
+        </ul> 
+        {% elsif settings.option_style == 'dropdown' %}
+        <div class="dropdown {{downOption}}-select productOptionSelect">
+          <button id="dLabel" class="dropdown-selected" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{option.selected_value}}
+          </button>
+          <span class="caret"></span>
+          <ul class="product-loop-variants dropdown-menu {{downOption}}-menu productOptionSelectList" aria-labelledby="dLabel" style="display: none;">
+            {%- for value in option.values -%}
+            <li class="productOption">
+              <input type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
+              {{value}}
+            </li>
+            {% endfor %}
+          </ul>
         </div>
-         {% endif %}
-        
-        <div class="btn-box product-featured-form-submit {% if section.settings.enable_payment_button %} product-form--payment-button{% endif %}">
-          <button
-                  type="submit"
-                  name="add"
-                  data-add-to-cart id="Sd_addProduct"
-                  {% unless product.available %}disabled="disabled"{% endunless %}
-                  {% if section_onboarding %}disabled="disabled"{% endif %} class="Sd_addProduct black-btn button">
-           	<span>
+        {% endif %}
+      </div>
+      {% endfor %}
+      {% endif %}
+      <select name="id" id="ProductSelect" class="product-form__variants no-js hide js">
+        {% for variant in product.variants %}
+        {% if variant.available %}
+        <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+          {{ variant.title }}
+        </option>
+        {% else %}
+        <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+        {% endif %}
+        {% endfor %}
+      </select>
+
+      {% if section.settings.product_quantity_enable %}
+      <div class="quantity">
+        <label for="Featured_quantity" class="quantity_label">Quantity</label>
+        <div class="quantity_container">
+          <input type="number" name="quantity" class="quantity-cart" value="1"  id="Featured_quantity" >
+          <a href="JavaScript:void(0);" class="q_up quantity-up" id="quantity_plus" >
+            +</a>
+          <a href="JavaScript:void(0);" class="q_down quantity-down" id="quantity_minus">-</a>
+        </div>
+      </div>
+      {% endif %}
+
+      <div class="btn-box product-featured-form-submit {% if section.settings.enable_payment_button %} product-form--payment-button{% endif %} {% unless product.available %}disabled{% endunless %}" data-button-wrapper>
+        <button
+                type="submit"
+                name="add"
+                data-add-to-cart id="Sd_addProduct"
+                {% unless product.available %}disabled="disabled"{% endunless %}
+                {% if section_onboarding %}disabled="disabled"{% endif %} class="Sd_addProduct black-btn button">
+          <span>
             {% if product.available %}
             {{ 'products.product.add_to_cart' | t }}
             {% else %}
             {{ 'products.product.sold_out' | t }}
             {% endif %}
-            </span>
-            <svg height="18" width="18" class="svg-loader" style="display:none;">
-              <circle r="7" cx="9" cy="9"></circle>
-              <circle stroke-dasharray="87.96459430051421 87.96459430051421" r="7" cx="9" cy="9"></circle>
-            </svg>
-          </button>
+          </span>
+          <svg height="18" width="18" class="svg-loader" style="display:none;">
+            <circle r="7" cx="9" cy="9"></circle>
+            <circle stroke-dasharray="87.96459430051421 87.96459430051421" r="7" cx="9" cy="9"></circle>
+          </svg>
+        </button>
 
-          {% if section.settings.enable_payment_button %}
-          {{ form | payment_button }}
-          {% endif %}
-        </div>
-        <a href="{{product.url}}" class="button white-btn btn-block">View Detail</a>
+        {% if section.settings.enable_payment_button %}
+        {{ form | payment_button }}
+        {% endif %}
       </div>
-      {% endform %}
-      
-      <div class="social-icons">
-      {% include 'social-sharing', hidetext:true, share_title: product.title, share_permalink: product.url, share_image: product %}
-      </div>
+      <a href="{{product.url}}" class="button white-btn btn-block">View Detail</a>
     </div>
-  
-  
-    <script type="application/json" name="variant-json">
-      {{ product.variants | json }}
-    </script>
-  </div>
-    <script>
-    $(document).ready(function(){
-      var sync1 =$("#feature__product-{{product.id}}");
-      var sync2 = $("#feature__productThumbs-{{product.id}}");
+    {% endform %}
 
-      sync1.slick({
-                   slidesToShow:1,
-                   slidesToScroll:1,
-                   autoplay:false,
-                   infinite:false,
-                   autoplayHoverPause:false,
-                   arrows: false,
-                   dots: false,
-                   asNavFor: sync2
-      })
-      sync2.slick({
-        slidesToShow:4,
-        slidesToScroll:1,
-        autoplay:false,
-        infinite:false,
-        autoplayHoverPause:false,
-        arrows: false,
-        dots: false,
-        asNavFor: sync1
-      })
-                                
+    <div class="social-icons">
+      {% include 'social-sharing', hidetext:true, share_title: product.title, share_permalink: product.url, share_image: product %}
+    </div>
+  </div>
+
+
+  <script type="application/json" name="variant-json">
+      {{ product.variants | json }}
+  </script>
+</div>
+<script>
+  $(document).ready(function(){
+    var sync1 =$("#feature__product-{{product.id}}");
+                 var sync2 = $("#feature__productThumbs-{{product.id}}");
+
+                 sync1.slick({
+                 slidesToShow:1,
+                 slidesToScroll:1,
+                 autoplay:false,
+                 infinite:false,
+                 autoplayHoverPause:false,
+                 arrows: false,
+                 dots: false,
+                 asNavFor: sync2
+                 })
+    sync2.slick({
+      slidesToShow:4,
+      slidesToScroll:1,
+      autoplay:false,
+      infinite:false,
+      autoplayHoverPause:false,
+      arrows: false,
+      dots: false,
+      asNavFor: sync1
     })
+
+  })
 </script>
 {% section 'quick-view-related' %}
