@@ -11,10 +11,10 @@
                 <img src="{{section.settings.image | img_url:'master'}}" width="{{width}}">
               </div>
               {% endif %}
-              {% if block.settings.subtext != blank %}
+              {% if section.settings.subtext != blank %}
               <div class="grid__item full__item col-sm-12 col-md-9">
                 <div class="footer-innner-continer">
-                  {{ block.settings.subtext }}
+                  {{ section.settings.subtext }}
                 </div>
               </div>
               {% endif %}
