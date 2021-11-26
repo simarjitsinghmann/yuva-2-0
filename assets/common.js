@@ -347,7 +347,8 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
           });
           var getVariant = variantChange(options,_productParent);
-
+			
+          var buttonWrapper = _productParent.querySelector('[data-button-wrapper]')
           var paymentButtonWrapper = _productParent.querySelectorAll('.Sd_addProduct')[0]
           var paymentButton = _productParent.querySelectorAll('.Sd_addProduct span')[0]
           var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
@@ -379,37 +380,33 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
               history.pushState({}, null, _updateUrl);
             }
             if(getVariant.available == true){
+              
+            buttonWrapper.classList.remove('disabled');
               if(paymentButtonWrapper){
                 paymentButtonWrapper.removeAttribute("disabled");
               }
               if(paymentButton){
                 paymentButton.innerHTML  = "Add to Cart";
               }
-              if(advancePayment){
-                advancePayment.style.display = "block";
-              }
             }else{
+              
+            buttonWrapper.classList.add('disabled');
               if(paymentButtonWrapper){
                 paymentButtonWrapper.setAttribute("disabled", true);
               }
               if(paymentButton){
                 paymentButton.innerHTML  = "Sold Out";  
-              }            
-              if(advancePayment){
-                advancePayment.style.display = "none";
-              }
+              } 
             }
           }
           else{
+            buttonWrapper.classList.add('disabled');
             if(paymentButtonWrapper){
               paymentButtonWrapper.setAttribute("disabled", true);
             }
             if(paymentButton){
               paymentButton.innerHTML  = "Unavailable"; 
-            }           
-            if(advancePayment){
-              advancePayment.style.display = "none";
-            }
+            }   
           }
         },100)
       })
