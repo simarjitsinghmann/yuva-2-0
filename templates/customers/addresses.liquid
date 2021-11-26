@@ -82,11 +82,11 @@
           <label for="AddressPhoneNew">{{ 'customer.addresses.phone' | t }}</label>
           <input type="tel" id="AddressPhoneNew" name="address[phone]" value="{{ form.phone }}" autocomplete="tel" placeholder="{{ 'customer.addresses.phone' | t }}">
         </div>
-        <div>
-          <label for="address_default_address_new">{{ 'customer.addresses.set_default' | t }}</label>
+        <div class="field">
           {{ form.set_as_default_checkbox }}
+          <label for="address_default_address_new">{{ 'customer.addresses.set_default' | t }}</label>          
         </div>
-        <div>
+        <div class="field">
           <button>{{ 'customer.addresses.add' | t }}</button>
           <button type="reset">{{ 'customer.addresses.cancel' | t }}</button>
         </div>
@@ -153,11 +153,11 @@
             <label for="AddressCity_{{ form.id }}">{{ 'customer.addresses.city' | t }}</label>
             <input type="text" id="AddressCity_{{ form.id }}" name="address[city]" value="{{ form.city }}" autocomplete="address-level2" placeholder="{{ 'customer.addresses.city' | t }}">
           </div>
-          <div>
+          <div class="field">
             <label for="AddressCountry_{{ form.id }}">
               {{ 'customer.addresses.country' | t }}
             </label>
-            <div class="select">
+            <div class="select field">
               <select
                       id="AddressCountry_{{ form.id }}"
                       name="address[country]"
@@ -170,11 +170,11 @@
               </select>
             </div>
           </div>
-          <div id="AddressProvinceContainer_{{ form.id }}" style="display:none;">
+          <div id="AddressProvinceContainer_{{ form.id }}"  class="field" style="display:none;">
             <label for="AddressProvince_{{ form.id }}">
               {{ 'customer.addresses.province' | t }}
             </label>
-            <div class="select">
+            <div class="select field"> 
               <select
                       id="AddressProvince_{{ form.id }}"
                       name="address[province]"
@@ -192,13 +192,13 @@
             <label for="AddressPhone_{{ form.id }}">{{ 'customer.addresses.phone' | t }}</label>
             <input type="tel" id="AddressPhone_{{ form.id }}"  name="address[phone]" value="{{ form.phone }}" autocomplete="tel" placeholder="{{ 'customer.addresses.phone' | t }}">
           </div>
-          <div>
+          <div class="field">
+            {{ form.set_as_default_checkbox }}
             <label for="address_default_address_{{ form.id }}">
               {{ 'customer.addresses.set_default' | t }}
             </label>
-            {{ form.set_as_default_checkbox }}
           </div>
-          <div>
+          <div class="field">
             <button>{{ 'customer.addresses.update' | t }}</button>
             <button type="reset">{{ 'customer.addresses.cancel' | t }}</button>
           </div>
