@@ -33,14 +33,20 @@
   </div>
 </div>
 <style>              
-    #banner-{{section.id}} .banner-caption-title h6 { 
+  #banner-{{section.id}} .carousel-caption-title span.tag-line { 
     {% if section.settings.sh_bg != blank %}
     background: {{ section.settings.sh_bg }};
     {% endif %}
     {% if section.settings.sh_text != blank %}
     color: {{ section.settings.sh_text }};
     {% endif %}
-  }               
+  }  
+                
+  #banner-{{section.id}} .carousel-caption-title h2 { 
+    {% if section.settings.subh_text != blank %}
+    color: {{ section.settings.subh_text }};
+    {% endif %}
+  }              
   #banner-{{section.id}} .banner-caption-title h2 { 
     {% if section.settings.h_text != blank %}
     color: {{ section.settings.h_text }};
