@@ -1,10 +1,10 @@
 const selectors = {
   customerAddresses: 'body',
-  addressCountrySelect: '[data-address-country-select]',
-  addressContainer: '[data-address]',
-  toggleAddressButton: 'button[aria-expanded]',
-  cancelAddressButton: 'button[type="reset"]',
-  deleteAddressButton: 'button[data-confirm-message]'
+  addressCountrySelect: '[data-address-country-select]:last-child',
+  addressContainer: '[data-address]:last-child',
+  toggleAddressButton: 'button[aria-expanded]:last-child',
+  cancelAddressButton: 'button[type="reset"]:last-child',
+  deleteAddressButton: 'button[data-confirm-message]:last-child'
 };
 
 const attributes = {
