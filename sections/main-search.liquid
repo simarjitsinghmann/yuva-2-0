@@ -110,7 +110,7 @@
               <li class="active"><button class="searchresult result_category_button" data-type="products">Products</button></li>
               {% endif %}
               {% if otherResults %}
-              <li><button class="searchresult result_category_button" data-type="other" >Blogs</button></li>
+              <li><button class="searchresult result_category_button" data-type="others" >Blogs</button></li>
               {% endif %}
             </ul>
           </div>
@@ -197,19 +197,12 @@
              return false;
            }
            else{
-             clearActive();
              parent.classList.add("active");
              var _value = btn.getAttribute("data-type");
              document.getElementsByClassName(_value+'_item').style.display = "block";
            }
          });
          });
-       function clearActive(){
-         
-         Array.from(accordionHead).forEach(function(item) {
-           item.classList.remove('active');
-         });
-       }
       }
    </script>
 {% schema %}
