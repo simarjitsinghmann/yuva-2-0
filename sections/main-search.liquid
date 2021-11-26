@@ -199,10 +199,16 @@
            else{
              parent.classList.add("active");
              var _value = btn.getAttribute("data-type");
-             document.getElementsByClassName(_value+'_item').style.display = "block";
+             document.getElementById(_value+'_item').style.display = "block";
            }
          });
          });
+       function clearActive(){
+         
+         Array.from(categories).forEach(function(btn) {
+           btn.parentNode.classList.remove('active');
+         });
+       }
       }
    </script>
 {% schema %}
