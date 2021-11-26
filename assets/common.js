@@ -499,7 +499,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload', function(even
   if(event.type == "shopify:section:load"){
 //     slickSlider($(slider));
     
-    slider.slick('refresh');
+//     slider.slick('refresh');
   }
   else{
     slider.slick('refresh');
