@@ -99,14 +99,8 @@ $(document).ready(function(){
                           
                             localStorage.setItem("Recent_search", JSON.stringify(retrievedSearch_v));                          
                           	$('.searc-item-box').wrapAll( "<div class='result-list' />" );                         	                          
-                            //$('<div class="rightsearch"><p>This is collection</p></div>').insertAfter(".leftsearch");
-                            if(_drawer == 'small_search'){
-                                console.log('tetete')
-                                $('.search-bar-box.search-box').append('<a href="' + linkURL + '" class="note">See all Results </a>');
-                            }
-                            else{
-                                $resultsBox.append('<a href="' + linkURL + '" class="note">See all Results </a>');
-                            }
+                            //$('<div class="rightsearch"><p>This is collection</p></div>').insertAfter(".leftsearch");                           
+                          $resultsBox.append('<a href="' + linkURL + '" class="note">See all Results </a>');
                             $('.Search_loader').hide();                  
                             $('.header_icon_search').show();
                           $('.recent-search-list').addClass('ActiveSearch');
