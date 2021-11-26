@@ -3,7 +3,7 @@
         <div class="service__content page-width">
             <div class="service__column footer__column--info d-flex justify-content-between">
                 {% for block in section.blocks %}
-                <div class="col text__{{block.settings.alignment}}" {{ block.shopify_attributes }}>
+                <div class="col" {{ block.shopify_attributes }}>
                     {% if block.settings.image != blank %}
                     <img src="{{block.settings.image | img_url:'master'}}" alt="{{block.settings.heading}}">
                     {% else %}
@@ -82,26 +82,6 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.multicolumn.blocks.column.settings.image.label"
-        },
-        {
-          "type": "select",
-          "id": "alignment",
-          "label": "t:sections.multicolumn.blocks.column.settings.alignment.label",
-          "default": "left",
-          "options": [
-            {
-              "label": "t:sections.multicolumn.blocks.column.settings.alignment.left.label",
-              "value": "left"
-            },
-            {
-              "label": "t:sections.multicolumn.blocks.column.settings.alignment.center.label",
-              "value": "center"
-            },
-            {
-              "label": "t:sections.multicolumn.blocks.column.settings.alignment.right.label",
-              "value": "right"
-            }
-          ]
         }
       ]
     }
