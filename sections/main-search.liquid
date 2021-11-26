@@ -109,7 +109,9 @@
               {% endif %}
             </ul>
           </div>
-          <ul id="searchResultContainer" class="grid grid--5-col-desktop grid--3-col-tablet grid--2-col grid--one-third-max grid--quarter-max negative-margin product-grid result_product" role="list">
+          <ul id="searchResultContainer" class="grid grid--5-col-desktop grid--3-col-tablet grid--2-col grid--one-third-max grid--quarter-max negative-margin product-grid result_product" role="list" 
+              data-result="{% if productResults %}products{% elsif otherResults %}other{% endif %}"
+              >
             {%- for item in search.results limit:50 -%}
               <li class="grid__item search_result_items{% unless item.object_type == 'product' %} grid__item--small other_item{% else %} products_item{% endunless %}">
                 {%- case item.object_type -%}
