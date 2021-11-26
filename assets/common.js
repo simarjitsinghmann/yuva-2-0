@@ -340,7 +340,6 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
       var options=[];
       Array.from(productOptions).forEach(function(productOption) {
         productOption.addEventListener("click", ()=>{	
-                                       console.log('help')
                                        var _productParent = productOption.closest('.product_content_section');
         setTimeout(function(){
           const fieldsets = Array.from(_productParent.querySelectorAll('.product-loop-variants'));
@@ -413,7 +412,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             }
           }
         },100)
-      }).click()
+      })
     });
 		
   }
