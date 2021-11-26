@@ -13,7 +13,7 @@
       <div id="feature__productThumbs-{{product.id}}" class="feature__product thumb" data-slider-id="1">
           {% for image in product.images %}
           <div class="" >
-              <img src="{{image | img_url:'500x'}}" alt="">
+              <img src="{{image | img_url:'100x'}}" alt="">
           </div>
           {% endfor %}
       </div> 
@@ -149,7 +149,7 @@
                    slidesToShow:1,
                    slidesToScroll:1,
                    autoplay:false,
-                   infinite:true,
+                   infinite:false,
                    autoplayHoverPause:false,
                    arrows: false,
                    dots: false,
@@ -159,7 +159,7 @@
         slidesToShow:4,
         slidesToScroll:1,
         autoplay:false,
-        infinite:true,
+        infinite:false,
         autoplayHoverPause:false,
         arrows: false,
         dots: false,
