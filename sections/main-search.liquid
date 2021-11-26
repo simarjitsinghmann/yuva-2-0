@@ -2,6 +2,14 @@
 {% assign productResults = false %}
 {% assign otherResults = false %}
 {%- for item in search.results limit:50 -%}
+{%- case item.object_type -%}
+{%- when 'product' -%}
+{% assign productResults = true %}
+{%- when 'article' -%}
+{% assign otherResults = true %}
+{%- when 'page' -%}
+{% assign otherResults = true %}
+{% endcase %}
 {%  endfor%}
 <div class="template-search {% unless search.performed and search.results.size > 0 %} template-search--empty{% endunless %}">
   <div class="container">
