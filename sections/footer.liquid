@@ -170,39 +170,6 @@
       ]
     },
     {
-      "type": "image",
-      "name": "t:sections.footer.blocks.image.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "default": "About Us",
-          "label": "t:sections.footer.blocks.newsletter.settings.heading.label"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "t:sections.footer.blocks.image.settings.image.label"
-        },
-        {
-          "type": "range",
-          "id": "image_width",
-          "min": 50,
-          "max": 250,
-          "step": 5,
-          "unit": "px",
-          "label": "t:sections.footer.blocks.image.settings.image_width.label",
-          "default": 100
-        },
-        {
-          "type": "richtext",
-          "id": "subtext",
-          "label": "t:sections.footer.blocks.image.settings.subtext.label"
-        }
-      ]
-    },
-    {
       "type": "newsletter",
       "name": "t:sections.footer.blocks.newsletter.name",
       "limit": 1,
@@ -276,12 +243,32 @@
     }
   ],
   "settings": [
-    {
-      "type": "checkbox",
-      "id": "payment_enable",
-      "default": true,
-      "label": "t:sections.footer.settings.payment_enable.label"
-    },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.footer.settings.image.label"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "min": 50,
+          "max": 250,
+          "step": 5,
+          "unit": "px",
+          "label": "t:sections.footer.settings.image_width.label",
+          "default": 100
+        },
+        {
+          "type": "richtext",
+          "id": "subtext",
+          "label": "t:sections.footer.settings.subtext.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "payment_enable",
+          "default": true,
+          "label": "t:sections.footer.settings.payment_enable.label"
+        },
         {
           "type": "textarea",
           "id": "copyright_content",
