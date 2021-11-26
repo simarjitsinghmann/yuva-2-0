@@ -44,22 +44,27 @@
                   {%- for value in option.values -%}  
                   <li class="{{downOption}}_option {% unless downOption == 'color' or  downOption == 'colour'%}variant_option{% endunless%}">
                     <input class="productOption" type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
-                    <span class="option {% if option.selected_value == value %}selected{% endif %}" {% if downOption == 'color' or  downOption == 'colour'%}{% unless block.settings.variant_image %} style="background-color:{{value}};"{% endunless %}{% endif %}>
+                  
+                    {% assign variantImage = '' %}
+                    {% if settings.variant_image %}                                                                                  
+                    {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
+                    {% for variant in variantsList %}
+                    {% if variant.featured_image != blank %}
+                    {% assign variantImage = variant.featured_image %}
+                    {% break %}
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                    <span class="option {% if option.selected_value == value %}selected{% endif %}" {% if downOption == 'color' or  downOption == 'colour'%}{% unless settings.variant_image and variantImage != blank %} style="background-color:{{value}};"{% endunless %}{% endif %}>
                       {% if downOption == 'color' or  downOption == 'colour'%}    
-                      {% if block.settings.variant_image %}                                                                                  
-                      {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
-                      {% for variant in variantsList %}
-                      {% if variant.featured_image != blank %}
-                      <img src="{{variant.featured_image | img_url:"100x"}}">
-                      {% break %}
-                      {% endif %}
-                      {% endfor %}
-                      {% endif %}
+                      {% if settings.variant_image and variantImage != blank %}    
+                      <img src="{{variantImage| img_url:"100x"}}">
+                      {% endif%}
                       {% else %}
                       {{value}}
                       {% endif%}
                     </span>
-                  </li>
+                   </li>
                   {% endfor %}
                 </ul> 
               </div>
