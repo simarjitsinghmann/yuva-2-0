@@ -210,27 +210,27 @@
                     <div class="prd-variants">
                         <div class="prd--option1">
                             <ul class="product-loop-variants variants {{ settings.color_swatch_style}} _small list-unstyled">
-                                {% for value in option.values%}
-                                <li class="color_option">
-                                  <input type="radio" name="option-{{opIndex}}" value="{{value}}">
-                                  {% assign variantImage = '' %}
-                                  {% if settings.variant_image %}                                                                                  
-                                  {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
-                                  {% for variant in variantsList %}
-                                  {% if variant.featured_image != blank %}
-                                  {% assign variantImage = variant.featured_image %}
-                                  {% break %}
-                                  {% endif %}
-                                  {% endfor %}
-                                  {% endif %}
-                                  <span class="option"{% unless settings.variant_image and variantImage != blank %} style="background-color:{{value}};"{% endunless %}>  
-                                    {% if settings.variant_image and variantImage != blank %}    
-                                    <img src="{{variantImage| img_url:"100x"}}">
-                                    {% else %}
-                                    {{value}}
-                                    {% endif%}
-                        </span>
-                                </li>
+                              {% for value in option.values%}
+                              <li class="color_option">
+                                <input type="radio" name="option-{{opIndex}}" value="{{value}}">
+                                {% assign variantImage = '' %}
+                                {% if settings.variant_image %}                                                                                  
+                                {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
+                                {% for variant in variantsList %}
+                                {% if variant.featured_image != blank %}
+                                {% assign variantImage = variant.featured_image %}
+                                {% break %}
+                                {% endif %}
+                                {% endfor %}
+                                {% endif %}
+                                <span class="option"{% unless settings.variant_image and variantImage != blank %} style="background-color:{{value}};"{% endunless %}>  
+                                  {% if settings.variant_image and variantImage != blank %}    
+                                  <img src="{{variantImage| img_url:"100x"}}">
+                                  {% else %}
+                                  {{value}}
+                                  {% endif%}
+                                </span>
+                              </li>
                             {% endfor %}
                             </ul>
                         </div>
