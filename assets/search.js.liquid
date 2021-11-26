@@ -157,9 +157,7 @@ console.log(truncate('The quick brown fox jumps over the lazy dog', 4));
               success: function(response) {
                var product =response.product;
                 recent_Html +=`<li><a href="/products/${product.handle}" title="${product.title}">
-				<span><img src="${product.image.src}"></span>${truncate(product.title,3)}</a></li>`;                                      
-                
-                console.log(product.image['src'])
+				<span><img src="${product.image.src}"></span>${truncate(product.title,3)}</a></li>`;     
               },
               error: function(error) {
                 console.log("Error: "+ error);
@@ -169,7 +167,6 @@ console.log(truncate('The quick brown fox jumps over the lazy dog', 4));
           } 
         });  
         $(document).ajaxStop(function(){
-        console.log(recent_Html)
         recent_Html =  recent_Html.concat('</ul></div></div>'); 
         $('#recent_search_list').html(recent_Html);
         });
