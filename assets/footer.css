@@ -22,10 +22,20 @@ footer ul li a:hover { color: var(--theme-color); }
     border-bottom: 2px solid #2d2d2d;
 }
 #ContactFooter { position: relative; margin-top: 28px; } 
-#ContactFooter #Subscribe { text-transform: none;
-/*   position: absolute;  */
-  top: 0; right: 0; font-size: 13px; line-height: 22px; padding: 0; height: 100%; min-width: 88px; background:transparent; min-height:46px; width:100%;
-  margin-top:10px; border:1px solid #383c40;} 
+#ContactFooter #Subscribe {
+    text-transform: none;
+    top: 0;
+    position: absolute;
+    right: 0;
+    font-size: 13px;
+    line-height: 22px;
+    padding: 0;
+    height: 100%;
+    min-width: auto;
+    background: 0 0;
+    min-height: 46px;
+    border: 0;
+}
 .field .field__label { color: rgba(52, 52, 52, 0.50); font-size: 13px; font-weight: 400; top: 12px; left: 20px; letter-spacing:0.4px; } 
 .field__input:focus ~ .field__label, .field__input:not(:placeholder-shown) ~ .field__label, .field__input:-webkit-autofill ~ .field__label, .customer .field input:focus ~ label, .customer .field input:not(:placeholder-shown) ~ label, .customer .field input:-webkit-autofill ~ label {
      font-size: 11px; top:0px; letter-spacing: 0.4px;
