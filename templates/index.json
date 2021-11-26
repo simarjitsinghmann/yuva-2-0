@@ -372,8 +372,7 @@
       ],
       "settings": {
         "heading": "Collection list",
-        "heading_font": 38,
-        "color": "#513e3e"
+        "heading_font": 38
       }
     },
     "collection-list": {
@@ -433,7 +432,6 @@
         "mc_btnlink": "shopify:\/\/collections",
         "mc_image": "shopify:\/\/shop_images\/collection-list-left_a725767d-c712-4edb-95d9-093591ab03b6.jpg",
         "button_icon": true,
-        "color": "#ababab",
         "btn_bg": "rgba(0,0,0,0)",
         "btn_text": "#c58b2f",
         "hvr_btn_bg": "rgba(0,0,0,0)",
@@ -526,48 +524,6 @@
       ],
       "settings": {
         "product": "ayers-chambray"
-      }
-    },
-    "featured-blog": {
-      "type": "featured-blog",
-      "blocks": {
-        "796d3d0e-f6ec-4d53-b1c2-0f22f7bbefd0": {
-          "type": "article",
-          "settings": {
-            "article": "news\/redefine-your-workday-with-the-palm-treo-pro-smart-phone-2"
-          }
-        },
-        "0a114bd4-1861-4320-baa9-7e06682915eb": {
-          "type": "article",
-          "settings": {
-            "article": "news\/redefine-your-workday-with-the-palm-treo-pro-smart-phone"
-          }
-        },
-        "9440572b-9a6e-4e04-a502-e390b885223b": {
-          "type": "article",
-          "settings": {
-            "article": "test\/test-blog"
-          }
-        },
-        "d77541b4-794a-4dd5-8810-6bf664618ba2": {
-          "type": "article",
-          "settings": {
-            "article": "news\/test-blog"
-          }
-        }
-      },
-      "block_order": [
-        "796d3d0e-f6ec-4d53-b1c2-0f22f7bbefd0",
-        "0a114bd4-1861-4320-baa9-7e06682915eb",
-        "9440572b-9a6e-4e04-a502-e390b885223b",
-        "d77541b4-794a-4dd5-8810-6bf664618ba2"
-      ],
-      "settings": {
-        "heading": "CONSECTETUR",
-        "subheading": "Blog post everyday",
-        "button": "View all",
-        "link": "#",
-        "color": "#ffbebe"
       }
     },
     "testimonials": {
@@ -815,6 +771,41 @@
         "content": "Why We Are Your Best Choice",
         "bgcolor": "#ffffff"
       }
+    },
+    "1637909437c24c2665": {
+      "type": "featured-articles",
+      "blocks": {
+        "1637909437e3e084b5-0": {
+          "type": "article",
+          "settings": {
+            "article": ""
+          }
+        },
+        "1637909437e3e084b5-1": {
+          "type": "article",
+          "settings": {
+            "article": ""
+          }
+        },
+        "1637909437e3e084b5-2": {
+          "type": "article",
+          "settings": {
+            "article": ""
+          }
+        }
+      },
+      "block_order": [
+        "1637909437e3e084b5-0",
+        "1637909437e3e084b5-1",
+        "1637909437e3e084b5-2"
+      ],
+      "settings": {
+        "heading": "CONSECTETUR",
+        "subheading": "Blog post everyday",
+        "button": "View all",
+        "link": "",
+        "color": "#ffffff"
+      }
     }
   },
   "order": [
@@ -825,7 +816,6 @@
     "featured-collection",
     "16345626467f5a91b7",
     "163456266607727edf",
-    "featured-blog",
     "testimonials",
     "instagram",
     "multicolumn-content",
@@ -834,6 +824,7 @@
     "1637836943c10e04c6",
     "1637836948779ea0e5",
     "16378395879fc0118a",
-    "16378396162c4cd192"
+    "16378396162c4cd192",
+    "1637909437c24c2665"
   ]
 }
