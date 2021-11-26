@@ -54,12 +54,7 @@ Shopify.CountryProvinceSelector = function(country_domid, province_domid, option
   this.provinceContainer = document.getElementById(options['hideElement'] || province_domid);
 
   Shopify.addListener(this.countryEl, 'change', Shopify.bind(this.countryHandler,this));
-
-  this.initCountry();
-  this.initProvince();
-};
-
-Shopify.CountryProvinceSelector.prototype = {
+	
   initCountry: function() {
     var value = this.countryEl.getAttribute('data-default');
     Shopify.setSelectorByValue(this.countryEl, value);
@@ -107,7 +102,14 @@ Shopify.CountryProvinceSelector.prototype = {
       selector.appendChild(opt);
     }
   }
+  
+  this.initCountry();
+  this.initProvince();
 };
+
+// Shopify.CountryProvinceSelector.prototype = {
+  
+// };
 
 if ((typeof Shopify) === 'undefined') { Shopify = {}; }
 if (!Shopify.formatMoney) {
