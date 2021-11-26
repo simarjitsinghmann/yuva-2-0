@@ -74,7 +74,6 @@ Shopify.CountryProvinceSelector.prototype = {
   },
 
   countryHandler: function(e) {
-    console.log('test')
     var opt       = this.countryEl.options[this.countryEl.selectedIndex];
     var raw       = opt.getAttribute('data-provinces');
     var provinces = JSON.parse(raw);
