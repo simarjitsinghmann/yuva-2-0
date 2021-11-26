@@ -152,7 +152,7 @@ $(document).ready(function(){
               url: '/admin/products/' + value + '.json',
               success: function(response) {
                 recent_Html +=`<li><a href="/products/${response.handle}" title="${response.title}">
-<span><img src="${response.title}"></span>${response.title}</a></li>`;                                      
+				<span><img src="${response.title}"></span>${response.title}</a></li>`;                                      
               },
               error: function(error) {
                 console.log("Error: "+ error);
@@ -161,6 +161,9 @@ $(document).ready(function(){
             
           } 
         });  
+        $(document).ajaxStop(function(){
+          alert("All AJAX requests completed");
+        });
         console.log(recent_Html)
         recent_Html =  recent_Html.concat('</ul></div></div>'); 
         $('#recent_search_list').html(recent_Html);
