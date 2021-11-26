@@ -24,7 +24,7 @@
                     </td>
                     <td class="cart-prd-details">
                        
-                      <a href="{{item.url}}"><h5>{{item.product.title}}</h5></a>
+                      <a href="{{item.url}}"><h5>{{item.product.title | truncatewords:5}}</h5></a>
                       <div class="cart-item-product-details">
                         {% if item.sku != blank %}
                         <span>SKU: {{item.sku}}</span>
