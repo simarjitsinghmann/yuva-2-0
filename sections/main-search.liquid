@@ -11,13 +11,18 @@
 {% assign otherResults = true %}
 {% endcase %}
 {%  endfor%}
-{% if productResults %}
 <style>
-  .search_result_items.other_item{
+  .search_result_items{
   	display:none;
   }
+  
+ #searchResultContainer[data-result="product"] .search_result_items.product_item{
+  	display:block;
+  }
+  #searchResultContainer[data-result="other"] .search_result_items.other_item{
+  	display:block;
+  }
 </style>
-{% endif %}
 <div class="template-search {% unless search.performed and search.results.size > 0 %} template-search--empty{% endunless %}">
   <div class="container">
     <div class="search-result-box">
