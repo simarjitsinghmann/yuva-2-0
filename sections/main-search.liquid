@@ -102,10 +102,10 @@
           <div class="tabs-box">
             <ul class="tabs-inner-box">
               {% if productResults %}
-              <li class="active"><button class="searchresult" data-type="products">Products</button></li>
+              <li class="active"><button class="searchresult result_category_button" data-type="products">Products</button></li>
               {% endif %}
               {% if otherResults %}
-              <li><button class="searchresult" data-type="other" >Blogs</button></li>
+              <li><button class="searchresult result_category_button" data-type="other" >Blogs</button></li>
               {% endif %}
             </ul>
           </div>
@@ -179,6 +179,37 @@
   {%- endif -%}
 </div>
 
+   <script>
+      var accordionHead = document.getElementsByClassName('accordion-{{section.id}}');
+      if(accordionHead.length > 0 ){
+         var accordionContent =  document.getElementsByClassName('productSection-content');
+        
+         Array.from(accordionHead).forEach(function(btn) {
+           btn.addEventListener("click", ()=>{
+			let icon = btn.querySelectorAll('.fa')[0];
+           if(btn.classList.contains('active')){
+             clearAccordion();
+           }
+           else{
+             clearAccordion();
+             btn.classList.add("active");
+             var _value = btn.getAttribute("content");
+             document.getElementById(_value).style.display = "block";
+           }
+         });
+         });
+       function clearAccordion(){
+         var accordionHeads = document.getElementsByClassName('accordion-{{section.id}}');
+         var accordionContents =  document.getElementsByClassName('productSection-content');
+         Array.from(accordionHead).forEach(function(item) {
+           item.classList.remove('active');
+         });
+         Array.from(accordionContents).forEach(function(item) {
+           item.style.display = 'none';
+         });
+       }
+      }
+   </script>
 {% schema %}
 {
   "name": "t:sections.main-search.name",
