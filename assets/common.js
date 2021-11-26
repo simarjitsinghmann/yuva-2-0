@@ -57,7 +57,7 @@ Shopify.CountryProvinceSelector = function(country_domid, province_domid, option
 //   this.provinceEl        = document.querySelector('#'+province_domid+':last-child');
 //   this.provinceContainer = document.querySelector('#'+options['hideElement']+':last-child' || '#'+province_domid+':last-child');
 	
-  console.log('test',this.countryEl,'test1',$('#'+country_domid).eq(1) )
+  console.log('test',this.countryEl,'test1',document.querySelectorAll('#'+country_domid) )
   Shopify.addListener(this.countryEl, 'change', Shopify.bind(this.countryHandler,this));
 
   this.initCountry();
