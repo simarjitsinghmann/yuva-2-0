@@ -494,6 +494,7 @@ sliders = function(){
 sliders();
 
 jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
+  console.log(event)
   var parent = event.target;
   var slider = $(parent).find('[data-slider]');
   if(event.type == "shopify:section:load"){
