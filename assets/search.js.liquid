@@ -130,10 +130,6 @@ $(document).ready(function(){
     //Click anywhere on page, hide results
     //$resultsBox.fadeOut(200);
   });
-function truncate(str, no_words) {
-    return str.split(" ").splice(0,no_words).join(" ");
-}
-
   $('body').on('focus', '.search-box .search-input', function(){
     $('#recent_search_list').html('');
     var recent_Html = '';
