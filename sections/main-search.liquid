@@ -204,7 +204,7 @@
          });
          });
        function clearActive(){
-         
+         var categories = document.getElementsByClassName('result_category_button');
          Array.from(categories).forEach(function(btn) {
            btn.parentNode.classList.remove('active');
          });
