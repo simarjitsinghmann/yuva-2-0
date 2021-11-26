@@ -96,6 +96,7 @@
         },
         "91fffe39-6164-42ed-9782-975c01d727d2": {
           "type": "split",
+          "disabled": true,
           "settings": {
             "image_desktop": "shopify:\/\/shop_images\/man-in-french-cuff-fashion.jpg",
             "banner_tag_line": "Big Offer11",
@@ -119,6 +120,7 @@
         },
         "701d3d43-f587-4f10-8f6e-53d7528e6407": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "videofile": "",
             "poster": "shopify:\/\/shop_images\/holding-coffee-in-bed.jpg",
@@ -255,7 +257,7 @@
         "5336f2d3-6000-4264-bbda-f78c1002e36c"
       ],
       "settings": {
-        "rotate": true,
+        "rotate": false,
         "arrows": true,
         "dots": false,
         "rotate_speed": 2
@@ -371,8 +373,7 @@
         "5c6c89c9-f7d9-4923-adde-6bde7a739a48"
       ],
       "settings": {
-        "heading": "Collection list",
-        "heading_font": 38
+        "heading": "Collection list"
       }
     },
     "collection-list": {
@@ -432,10 +433,7 @@
         "mc_btnlink": "shopify:\/\/collections",
         "mc_image": "shopify:\/\/shop_images\/collection-list-left_a725767d-c712-4edb-95d9-093591ab03b6.jpg",
         "button_icon": true,
-        "btn_bg": "rgba(0,0,0,0)",
-        "btn_text": "#c58b2f",
-        "hvr_btn_bg": "rgba(0,0,0,0)",
-        "hvr_btn_text": "#c58b2f"
+        "btn_text": "#c58b2f"
       }
     },
     "featured-collection": {
@@ -623,8 +621,7 @@
           "settings": {
             "heading": "Free Shipping Worldwide",
             "subtext": "<p>100% Original guarantee<\/p>",
-            "image": "shopify:\/\/shop_images\/shipping-van.png",
-            "alignment": "left"
+            "image": "shopify:\/\/shop_images\/shipping-van.png"
           }
         },
         "column1": {
@@ -632,8 +629,7 @@
           "settings": {
             "heading": "30 Days Money Back",
             "subtext": "<p>Return within 30days of receiving<\/p>",
-            "image": "shopify:\/\/shop_images\/money-back.png",
-            "alignment": "left"
+            "image": "shopify:\/\/shop_images\/money-back.png"
           }
         },
         "column2": {
@@ -641,8 +637,7 @@
           "settings": {
             "heading": "Support 24\/7",
             "subtext": "<p>Get free delivery for every order <\/p>",
-            "image": "shopify:\/\/shop_images\/support-team.png",
-            "alignment": "left"
+            "image": "shopify:\/\/shop_images\/support-team.png"
           }
         },
         "column3": {
@@ -650,8 +645,7 @@
           "settings": {
             "heading": "100% Secure Checkout",
             "subtext": "<p>100% Original guarantee<\/p>",
-            "image": "shopify:\/\/shop_images\/secure.png",
-            "alignment": "left"
+            "image": "shopify:\/\/shop_images\/secure.png"
           }
         }
       },
@@ -706,16 +700,6 @@
       "settings": {
         "heading": "Frequently Asked Questions",
         "bgcolor": "#e2caca"
-      }
-    },
-    "1637836943c10e04c6": {
-      "type": "newsletter",
-      "settings": {
-        "heading": "Join Our Newsletter",
-        "description": "Sign up it only takes a second to be the news.",
-        "placeholder": "Email Address",
-        "btn": "Subscribe",
-        "bgcolor": "#6b1f1f"
       }
     },
     "1637836948779ea0e5": {
@@ -821,7 +805,6 @@
     "multicolumn-content",
     "video-banner",
     "16378358938771729e",
-    "1637836943c10e04c6",
     "1637836948779ea0e5",
     "16378395879fc0118a",
     "16378396162c4cd192",
