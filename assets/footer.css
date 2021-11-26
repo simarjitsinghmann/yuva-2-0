@@ -5,6 +5,11 @@ footer ul li a, footer .grid__item p { font-size: 14px; text-decoration: none; c
 footer .grid__item p { line-height: 22px;margin-top: 0px; } 
 footer ul li a:hover { color: var(--theme-color); }
 .footer-innner-continer {padding: 0px 20px 10px 0;}
+.footer-logo-box {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
 #ContactFooter .field { position: relative; width: 100%; } 
 #ContactFooter #NewsletterForm--footer { padding: 13px 20px; height: auto; background: #ffffff21; font-size: 13px; min-height:46px; color: var(--gray); } 
 #ContactFooter { position: relative; margin-top: 28px; } 
