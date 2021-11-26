@@ -346,16 +346,16 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
           var paymentButton = _productParent.querySelectorAll('.Sd_addProduct span')[0]
           console.log(getVariant)
           if(getVariant != undefined){
+            console.log
             if(getVariant.featured_media != null){
               var image= getVariant.featured_media['preview_image']['src'];
               image= image.replace("https:", ""); 
-              console.log(_productParent.querySelector('[name="id"]'))
-              _productParent.querySelector('[name="id"]').value = getVariant.id;
               var imageSource = _productParent.querySelectorAll(".owl-thumb-item img[src='"+image+"']")[0];
               if(imageSource){
                 imageSource.click();
               }
             }
+            _productParent.querySelector('[name="id"]').value = getVariant.id;
             var priceContainer=_productParent.querySelectorAll('[data-price-wrapper]')[0];
             var compareAtPrice= getVariant.compare_at_price;
             var price= getVariant.price;
