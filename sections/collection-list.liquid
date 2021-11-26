@@ -146,13 +146,7 @@
 .mainColbutton-{{section.id}} svg {
   fill:{{section.settings.btn_text}} !important ;
 }
-.mainColbutton-{{section.id}}:hover {
-  background:{{section.settings.hvr_btn_bg}} !important ;
-  color:{{section.settings.hvr_btn_text}} !important ;
-}
-.mainColbutton-{{section.id}}:hover svg {
-  fill:{{section.settings.hvr_btn_text}} !important ;
-}
+
   </style>
 {% schema %}
 {
@@ -229,26 +223,9 @@
     },
     {
       "type": "color",
-      "id": "btn_bg",
-      "label": "t:sections.collection-list.settings.btn_bg.label"
-    },
-    {
-      "type": "color",
       "id": "btn_text",
       "label": "t:sections.collection-list.settings.btn_text.label",
       "default":"#000000"
-    },
-    {
-      "type": "color",
-      "id": "hvr_btn_bg",
-      "label": "t:sections.collection-list.settings.hvr_btn_bg.label",
-      "default":"#000000"
-    },
-    {
-      "type": "color",
-      "id": "hvr_btn_text",
-      "label": "t:sections.collection-list.settings.hvr_btn_text.label",
-      "default":"#ffffff"
     }
   ],
   "blocks": [
