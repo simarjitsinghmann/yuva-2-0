@@ -374,7 +374,6 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             }
 
             var baseUrl = window.location.pathname;
-            console.log('help')
             if(baseUrl.indexOf('/products/') > -1){
               var _updateUrl = baseUrl+'?variant='+getVariant.id;
               history.pushState({}, null, _updateUrl);
@@ -413,9 +412,9 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             }
           }
         },100)
-      })
+      }).click()
     });
-
+		
   }
   function variantChange(options,selector){
     var variantData = JSON.parse(selector.querySelector('[type="application/json"][name="variant-json"]').textContent);
