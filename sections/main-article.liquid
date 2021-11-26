@@ -97,7 +97,7 @@
                 {%- if form.errors -%}
                 <div class="form__message" role="alert">
                   <h3 class="form-status caption-large" tabindex="-1" autofocus>
-                    {% render 'icon-error' %} {{ 'templates.contact.form.error_heading' | t }}
+                     {{ 'templates.contact.form.error_heading' | t }}
                   </h3>
                 </div>
                 <ul class="form-status-list caption-large">
@@ -118,7 +118,7 @@
                 </ul>
                 {%- elsif form.posted_successfully? -%}
                 <div class="form-status-list form__message" role="status">
-                  <h3 class="form-status" tabindex="-1" autofocus>{% render 'icon-success' %} {{ post_message | t }}</h3>
+                  <h3 class="form-status" tabindex="-1" autofocus>{{ post_message | t }}</h3>
                 </div>
                 {%- endif -%}
 
@@ -144,7 +144,7 @@
 
                         {%- if form.errors contains 'author' -%}
                         <small id="CommentForm-author-error">
-                          <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.name' | t }} {{ form.errors.messages['author'] }}.</span>
+                          <span class="form__message">{{ 'blogs.article.name' | t }} {{ form.errors.messages['author'] }}.</span>
                         </small>
                         {%- endif -%}
                       </div>
@@ -171,7 +171,7 @@
 
                         {%- if form.errors contains 'email' -%}
                         <small id="CommentForm-email-error">
-                          <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.email' | t }} {{ form.errors.messages['email'] }}.</span>
+                          <span class="form__message">{{ 'blogs.article.email' | t }} {{ form.errors.messages['email'] }}.</span>
                         </small>
                         {%- endif -%}
                       </div>
@@ -197,7 +197,7 @@
                   </div>
                   {%- if form.errors contains 'body' -%}
                   <small id="CommentForm-body-error">
-                    <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.message' | t }} {{ form.errors.messages['body'] }}.</span>
+                    <span class="form__message">{{ 'blogs.article.message' | t }} {{ form.errors.messages['body'] }}.</span>
                   </small>
                   {%- endif -%}
                 </div>
