@@ -49,9 +49,9 @@ Shopify.postLink = function(path, options) {
 
 Shopify.CountryProvinceSelector = function(country_domid, province_domid, options) {
   
-  this.countryEl         = document.getElementById(country_domid);
-  this.provinceEl        = document.getElementById(province_domid);
-  this.provinceContainer = document.getElementById(options['hideElement'] || province_domid);
+  this.countryEl         = document.querySelector('#'+country_domid+':last-child');
+  this.provinceEl        = document.querySelector('#'+province_domid+':last-child');
+  this.provinceContainer = document.querySelector('#'+options['hideElement']+':last-child' || '#'+province_domid+':last-child');
 
   Shopify.addListener(this.countryEl, 'change', Shopify.bind(this.countryHandler,this));
 
