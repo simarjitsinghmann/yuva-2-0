@@ -39,8 +39,9 @@ class CustomerAddresses {
         hideElement: 'AddressProvinceContainerNew'
       });
       this.elements.countrySelects.forEach((select) => {
-        console.log(select)
         const formId = select.dataset.formId;
+        
+        console.log(formId)
         // eslint-disable-next-line no-new
         new Shopify.CountryProvinceSelector(`AddressCountry_${formId}`, `AddressProvince_${formId}`, {
           hideElement: `AddressProvinceContainer_${formId}`
