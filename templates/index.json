@@ -602,56 +602,9 @@
         "bgcolor": "#ffffff"
       }
     },
-    "multicolumn-content": {
-      "type": "multicolumn-content",
-      "blocks": {
-        "column": {
-          "type": "column",
-          "settings": {
-            "heading": "Free Shipping Worldwide",
-            "subtext": "<p>100% Original guarantee<\/p>",
-            "image": "shopify:\/\/shop_images\/shipping-van.png"
-          }
-        },
-        "column1": {
-          "type": "column",
-          "settings": {
-            "heading": "30 Days Money Back",
-            "subtext": "<p>Return within 30days of receiving<\/p>",
-            "image": "shopify:\/\/shop_images\/money-back.png"
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "heading": "Support 24\/7",
-            "subtext": "<p>Get free delivery for every order <\/p>",
-            "image": "shopify:\/\/shop_images\/support-team.png"
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "heading": "100% Secure Checkout",
-            "subtext": "<p>100% Original guarantee<\/p>",
-            "image": "shopify:\/\/shop_images\/secure.png"
-          }
-        }
-      },
-      "block_order": [
-        "column",
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "bgcolor": "#ececec",
-        "textcolor": "#000000",
-        "show_divider": false
-      }
-    },
     "video-banner": {
       "type": "video-banner",
+      "disabled": true,
       "settings": {
         "videofile": "https:\/\/cdn.shopify.com\/s\/files\/1\/2018\/8867\/files\/ice.mp4",
         "poster": "shopify:\/\/shop_images\/about.png",
@@ -798,6 +751,54 @@
         "link": "",
         "color": "#ffffff"
       }
+    },
+    "multicolumn-content": {
+      "type": "multicolumn-content",
+      "blocks": {
+        "column": {
+          "type": "column",
+          "settings": {
+            "heading": "Free Shipping Worldwide",
+            "subtext": "<p>100% Original guarantee<\/p>",
+            "image": "shopify:\/\/shop_images\/shipping-van.png"
+          }
+        },
+        "column1": {
+          "type": "column",
+          "settings": {
+            "heading": "30 Days Money Back",
+            "subtext": "<p>Return within 30days of receiving<\/p>",
+            "image": "shopify:\/\/shop_images\/money-back.png"
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "heading": "Support 24\/7",
+            "subtext": "<p>Get free delivery for every order <\/p>",
+            "image": "shopify:\/\/shop_images\/support-team.png"
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "heading": "100% Secure Checkout",
+            "subtext": "<p>100% Original guarantee<\/p>",
+            "image": "shopify:\/\/shop_images\/secure.png"
+          }
+        }
+      },
+      "block_order": [
+        "column",
+        "column1",
+        "column2",
+        "column3"
+      ],
+      "settings": {
+        "bgcolor": "#ececec",
+        "textcolor": "#000000",
+        "show_divider": false
+      }
     }
   },
   "order": [
@@ -810,12 +811,12 @@
     "163456266607727edf",
     "testimonials",
     "instagram",
-    "multicolumn-content",
     "video-banner",
     "16378358938771729e",
     "1637836948779ea0e5",
     "16378395879fc0118a",
     "16378396162c4cd192",
-    "1637909437c24c2665"
+    "1637909437c24c2665",
+    "multicolumn-content"
   ]
 }
