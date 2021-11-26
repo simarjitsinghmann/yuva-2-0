@@ -177,7 +177,7 @@
                      {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                      <div class="product_button">
-                       <div class="pdp-action-container">
+                       <div class="pdp-action-container {% unless product.available %}disabled{% endunless %}" data-button-wrapper>
                          <div class="pdp-add-to-bag pdp-button pdp-flex pdp-center">
                            <button type="submit" class="Sd_addProduct add_to_cart black-btn button btn-block"><span>Add to Cart</span>
                              <svg height="38" width="38" class="svg-loader" style="display:none;">
