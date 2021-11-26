@@ -323,7 +323,6 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
 });
 
 
-//count timer//
 
 (function () {
   
@@ -349,7 +348,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             if(getVariant.featured_media != null){
               var image= getVariant.featured_media['preview_image']['src'];
               image= image.replace("https:", "");                       
-              _productParent.querySelectorAll('[name="id"]')[0].value = getVariant.id;
+              _productParent.querySelector('[name="id"]')[0].value = getVariant.id;
               var imageSource = _productParent.querySelectorAll(".owl-thumb-item img[src='"+image+"']")[0];
               if(imageSource){
                 imageSource.click();
