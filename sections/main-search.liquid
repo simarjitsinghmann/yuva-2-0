@@ -197,6 +197,7 @@
              return false;
            }
            else{
+             clearActive()
              parent.classList.add("active");
              var _value = btn.getAttribute("data-type");
              document.getElementById('searchResultContainer').setAttribute("data-result",_value);
@@ -204,9 +205,7 @@
          });
          });
        function clearActive(){
-         var categories = document.getElementsByClassName('result_category_button');
          Array.from(categories).forEach(function(btn) {
-           console.log(btn)
            btn.parentNode.classList.remove('active');
          });
        }
