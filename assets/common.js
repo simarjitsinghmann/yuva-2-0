@@ -161,6 +161,11 @@ if (!Shopify.formatMoney) {
     return formatString.replace(placeholderRegex, value);
   };
 }
+
+function truncate(str, no_words) {
+    return str.split(" ").splice(0,no_words).join(" ");
+}
+
 function toggleDropdown(id) {
 	var x = document.getElementById(id);
 	if (x.style.display === "none") {
