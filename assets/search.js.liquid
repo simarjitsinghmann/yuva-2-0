@@ -153,8 +153,8 @@ $(document).ready(function(){
               success: function(response) {
 //       			var data = JSON.parse(response);
                 console.log(response.product)
-//                 recent_Html +=`<li><a href="/products/${response.handle}" title="${response.title}">
-// 				<span><img src="${response['image']}"></span>${response.title}</a></li>`;                                      
+                recent_Html +=`<li><a href="/products/${response.handle}" title="${response.title}">
+				<span><img src="${response['image']}"></span>${response.title}</a></li>`;                                      
               },
               error: function(error) {
                 console.log("Error: "+ error);
