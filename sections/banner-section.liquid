@@ -10,13 +10,18 @@
         	<div class="banner-caption-outer">
           <div class="banner-caption-title banner-slide {{section.settings.info_position}} text__{{section.settings.info_alignment}}">
             {% if section.settings.tag_line != blank %}
-            <h6>{{section.settings.tag_line}}</h6>
+            <span class="tag-line">{{section.settings.tag_line}}</span>
             {% endif %}
             {% if section.settings.heading != blank %}
-            <h2>{{section.settings.heading}}</h2>
+            <h1>{{section.settings.heading}}</h1>
             {% endif %}
-            {% if section.settings.content != blank %}
-            <p>{{section.settings.content}}</p>
+
+            {% if section.settings.subheading != blank %}
+            <h2>{{section.settings.subheading}}</h2>
+            {% endif %}
+
+            {% if section.settings.content != blank %}        
+            <p>{{blosectionck.settings.content}}</p>
             {% endif %}
             {% if section.settings.btn != blank and section.settings.link != blank %}
             <a href="{{section.settings.link}}" class="black-btn button">{{section.settings.btn}}<i class="fas fa-arrow-right"></i></a>
