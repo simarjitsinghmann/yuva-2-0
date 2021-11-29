@@ -481,7 +481,8 @@ function hideOptions(){
 slickSlider = function(selector){
   var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
   var options = JSON.parse(html);
-  selector.slick(options);
+  var slider = selector.slick(options);
+  return slider;
 }
 slickSliderJump = function(selector,slideIndex){
   selector.slickGoTo(slideIndex)
@@ -507,8 +508,8 @@ jQuery(document).on('shopify:section:load shopify:section:unload', function(even
   var parent = event.target;
   var slider = $(parent).find('[data-slider]');
   if(event.type == "shopify:section:load"){
-    slickSlider($(slider));
-    slickSliderJump($(slider),slideIndex)
+    slider = slickSlider($(slider));
+    slickSliderJump(slider,slideIndex)
   }
   else{
     slider.slick('refresh');
