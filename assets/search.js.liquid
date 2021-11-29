@@ -141,7 +141,7 @@ $(document).ready(function(){
         $('.recent-search-list').html('');
       }else{
         recent_Html =  recent_Html.concat('<h5 style="">Recent Search</h5>');
-        recent_Html =  recent_Html.concat('<div class="recent-search-inner mCustomScrollbar" style="max-width:750px;overflow-x:auto;"><div id="mCSB_9_container" class="mCSB_container mCS_x_hidden mCS_no_scrollbar_x" style="position: relative; top: 0px; left: 0px; width: 100%;" dir="ltr"><ul style=" display: flex; align-items: center; list-style: none;">'); 
+        recent_Html =  recent_Html.concat('<div class="recent-search-inner mCustomScrollbar" style="overflow-x:auto;"><div id="mCSB_9_container" class="mCSB_container mCS_x_hidden mCS_no_scrollbar_x" style="position: relative; top: 0px; left: 0px; width: 100%;" dir="ltr"><ul style=" display: flex; align-items: center; list-style: none;">'); 
         var Prev_search =recent_pro_val.reverse();
         $.each(Prev_search, function(index, value){   
           if(index<10){
