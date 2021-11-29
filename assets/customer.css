@@ -656,13 +656,15 @@ label[for="AddressProvinceNew"] {
   line-height:28px;
 }
 .address-header {
-    margin-bottom: 10px;
-    position: absolute;
-    right: 0;
-    padding: 10px;
+  margin-bottom: 10px;
+  position: absolute;
+  right: 0;
+  padding: 5px 10px;
+  background-color: #f3f3f3;
 }
 .address-header h5 {
-	font-weight: var(--normal)
+	font-weight: var(--normal);
+      font-size:16px;
 }
 .address-footer {
     margin-top: 10px;
