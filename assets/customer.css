@@ -647,9 +647,9 @@ label[for="AddressProvinceNew"] {
     flex-direction: column;
     justify-content: space-between;
       position:relative;
+      	padding:30px;
 }
 .address-content {
-	padding:30px;
 }
 .address-list .address-content p {
 	font-size:15px;
@@ -657,7 +657,6 @@ label[for="AddressProvinceNew"] {
 }
 .address-header {
   margin-bottom: 10px;
-  padding: 10px 30px;
 }
 .address-header h5 {
 	font-weight: var(--normal);
