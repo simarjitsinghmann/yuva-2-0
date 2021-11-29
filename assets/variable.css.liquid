@@ -195,6 +195,6 @@ $icon_linecaps: {{ settings.icon_linecaps | default: 'miter' }};
 
         font-family: '{{ settings.type_header_font_family.family }}',{{ settings.type_header_font_family.fallback_families }};
         font-weight: {{ settings.type_header_font_family.weight }};
-        letter-spacing: $type_header_spacing;
+        letter-spacing: {{ settings.type_header_spacing | default: "25" | divided_by: 1000.00 }}em;
         line-height:  {{ settings.type_header_line_height | default: 1.4 }};
       }
