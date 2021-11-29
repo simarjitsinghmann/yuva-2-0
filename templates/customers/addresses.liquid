@@ -55,31 +55,31 @@
             </h5>
           </div>
           {%- form 'customer_address', address -%}
-          <div class="field form-group">
+          <div class="form-group">
             <label for="AddressFirstName_{{ form.id }}">{{ 'customer.addresses.first_name' | t }}</label>
             <input type="text" class="form-control" id="AddressFirstName_{{ form.id }}" name="address[first_name]" value="{{ form.first_name }}" autocomplete="given-name" placeholder="{{ 'customer.addresses.first_name' | t }}">
           </div>
-          <div class="field form-group">
+          <div class="form-group">
             <label for="AddressLastName_{{ form.id }}">{{ 'customer.addresses.last_name' | t }}</label>
             <input type="text" class="form-control" id="AddressLastName_{{ form.id }}" name="address[last_name]" value="{{ form.last_name }}" autocomplete="family-name" placeholder="{{ 'customer.addresses.last_name' | t }}">
           </div>
-          <div class="field form-group">
+          <div class="form-group">
             <input type="text" class="form-control" id="AddressCompany_{{ form.id }}" name="address[company]" value="{{ form.company }}" autocomplete="organization" placeholder="{{ 'customer.addresses.company' | t }}">
             <label for="AddressCompany_{{ form.id }}">{{ 'customer.addresses.company' | t }}</label>
           </div>
-          <div class="field form-group">
+          <div class="form-group">
             <label for="AddressAddress1_{{ form.id }}">{{ 'customer.addresses.address1' | t }}</label>
             <input type="text" class="form-control" id="AddressAddress1_{{ form.id }}" name="address[address1]" value="{{ form.address1 }}" autocomplete="address-line1" placeholder="{{ 'customer.addresses.address1' | t }}">
           </div>
-          <div class="field form-group">
+          <div class="form-group">
             <label for="AddressAddress2_{{ form.id }}">{{ 'customer.addresses.address2' | t }}</label>
             <input type="text" class="form-control" id="AddressAddress2_{{ form.id }}" name="address[address2]" value="{{ form.address2 }}" autocomplete="address-line2" placeholder="{{ 'customer.addresses.address2' | t }}">
           </div>
-          <div class="field form-group">
+          <div class="form-group">
             <label for="AddressCity_{{ form.id }}">{{ 'customer.addresses.city' | t }}</label>
             <input type="text" class="form-control" id="AddressCity_{{ form.id }}" name="address[city]" value="{{ form.city }}" autocomplete="address-level2" placeholder="{{ 'customer.addresses.city' | t }}">
           </div>
-          <div class="field form-group">
+          <div class="form-group">
             <label for="AddressCountry_{{ form.id }}">
               {{ 'customer.addresses.country' | t }}
             </label>
@@ -112,21 +112,21 @@
               </select>
             </div>
           </div>
-          <div class="field">
+          <div class="form-group">
             <label for="AddressZip_{{ form.id }}">{{ 'customer.addresses.zip' | t }}</label>
             <input type="text" id="AddressZip_{{ form.id }}" name="address[zip]" value="{{ form.zip }}" autocapitalize="characters" autocomplete="postal-code" placeholder="{{ 'customer.addresses.zip' | t }}">
           </div>
-          <div class="field">
+          <div class="form-group">
             <label for="AddressPhone_{{ form.id }}">{{ 'customer.addresses.phone' | t }}</label>
             <input type="tel" id="AddressPhone_{{ form.id }}"  name="address[phone]" value="{{ form.phone }}" autocomplete="tel" placeholder="{{ 'customer.addresses.phone' | t }}">
           </div>
-          <div class="field">
+          <div class="form-group">
             {{ form.set_as_default_checkbox }}
             <label for="address_default_address_{{ form.id }}">
               {{ 'customer.addresses.set_default' | t }}
             </label>
           </div>
-          <div class="field">
+          <div class="form-group">
             <button class="button">{{ 'customer.addresses.update' | t }}</button>
             <button class="button" type="reset">{{ 'customer.addresses.cancel' | t }}</button>
           </div>
