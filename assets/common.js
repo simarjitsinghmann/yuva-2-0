@@ -381,10 +381,11 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             var priceContainer=_productParent.querySelectorAll('[data-price-wrapper]')[0];
             var compareAtPrice= getVariant.compare_at_price;
             var price= getVariant.price;
-            var percentage = ((compareAtPrice-price)/compareAtPrice)*100;
+            var percentage = (((compareAtPrice-price)/compareAtPrice)*100)+'% OFF';
+            var savedAmount = ((compareAtPrice-price)/compareAtPrice)*100;
             var priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}</h3>`;
             if(compareAtPrice > price){
-              priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}<span class="main-price"> <del>${Shopify.formatMoney(compareAtPrice, moneyFormat)}</del> </span> </h3> <span class="percent-off">(${percentage}% OFF)</span>`;
+              priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}<span class="main-price"> <del>${Shopify.formatMoney(compareAtPrice, moneyFormat)}</del> </span> </h3> <span class="percent-off">(${percentage})</span>`;
             }
             if(priceContainer){
               priceContainer.innerHTML = priceHtml;
