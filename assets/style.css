@@ -434,7 +434,6 @@ span.tag-line {
 .shopify__top__section { width: 100%; } 
 .card.card--product .product__on__sale svg { width: 56px; } 
 .card.card--product { position: relative; } 
-.card.card--product .product__on__sale { position: absolute; top: 14px; z-index:1; } 
 .product-information__wrapper .caption-with-letter-spacing {
   font-size: var(--reg-text);
     color: var(--black);
@@ -661,6 +660,7 @@ a.wishlist-view .fas { display: none; }
   text-transform: uppercase;
   font-size: var(--small-text); 
   line-height: 16px;
+    position: absolute; top: 14px; z-index:1;
 } 
 .card.card--product .product__badge.product__on__sale { 
   background: var(--black);
