@@ -505,12 +505,17 @@ jQuery(document).on('shopify:block:select', function(event){
 })
 
 
-jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:select', function(event){
+jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:select shopify:block:deselect', function(event){
   var parent = event.target;
   
   var slider = $(parent).find('[data-slider]');
   
   if(event.type == "shopify:block:select"){
+    var blockIndex = jQuery(event.target).index();
+	slideIndex = blockIndex;
+  }
+  
+  if(event.type == "shopify:block:deselect"){
     var blockIndex = jQuery(event.target).index();
 	slideIndex = blockIndex;
   }
