@@ -499,12 +499,7 @@ sliders = function(){
 sliders();
 
 var slideIndex = 0;
-jQuery(document).on('shopify:block:select', function(event){
-  var blockIndex = jQuery(event.target).index();
-	slideIndex = blockIndex;
-})
-
-  var block = '';
+var block = '';
 
 jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:select shopify:block:deselect', function(event){
   var parent = event.target;
