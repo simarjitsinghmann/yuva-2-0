@@ -225,7 +225,6 @@ $(document).on('click', '.sd_mini_removeproduct', function(evt) {
   		parent.addClass('disabled')
   // If it has a data-line, update the cart
   if (line) {
-    parent.remove();
     updateQuantity(line, 0,buildCart);
   }
 })
