@@ -677,6 +677,9 @@ label[for="AddressProvinceNew"] {
     color: var(--dark-gray);
       margin:0 5px;
 }
+.address-footer .address-btn p {
+	 font-size: 17px;
+}
 .address-footer .address-btn:hover,
 .address-footer .address-btn:hover svg{
 	color: var(--black);
@@ -693,7 +696,7 @@ label[for="AddressProvinceNew"] {
     align-items: center;
     justify-content: center;
     background-color: #f8f8f8;
-border-right:1px solid #eee;
+	border-right:1px solid #eee;
 }
 .address-list li.add-address .link{
     text-decoration: none;
