@@ -30,20 +30,27 @@
     </div>
     {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
     <input type="hidden" name="form_type" value="product">
-    <div class="prizebox" data-price-wrapper>
+
+
+    <div class="prizebox" data-saved="{{settings.show_saved_amount}}"  data-saved-style="{{settings.saved_amount_style}}" data-price-wrapper>
       <label class="visually-hidden" data-price-text>{{ 'Price' }}</label>
       {% if current_variant.compare_at_price > current_variant.price %}
       <h3 id="get_price">
-        {{current_variant.price | money}}
+        {{current_variant.price | money }}
         <span class="main-price">
-          <del>{{current_variant.compare_at_price | money}}</del>
+          <del>{{current_variant.compare_at_price | money }}</del>
         </span>
       </h3>
+      {% if settings.show_saved_amount %}        
+      {% if settings.saved_amount_style == 'percentage' %}
       <span class="percent-off">({{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}})</span>
       {% else %}
-      <h3 id="get_price">{{current_variant.price | money}}</h3>
+      <span class="percent-off">({{ product.compare_at_price | minus: product.price | money}})</span>
       {% endif %}
-
+      {% endif %}
+      {% else %}
+      <h3 id="get_price">{{current_variant.price | money }}</h3>
+      {% endif %}
     </div>
     <div class="form-group">
       {% if product.available and product.variants.size > 1 %}

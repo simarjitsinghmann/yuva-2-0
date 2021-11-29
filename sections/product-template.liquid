@@ -82,7 +82,8 @@
                               <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
                            </div>
                            {% when 'price' %}
-                           <div class="prizebox" data-saved="{{settings.show_saved_amount}}"  data-saved-style="{{settings.saved_amount_style}}" data-price-wrapper="">
+                           <div class="prizebox" data-saved="{{settings.show_saved_amount}}"  data-saved-style="{{settings.saved_amount_style}}" data-price-wrapper>
+                              <label class="visually-hidden" data-price-text>{{ 'Price' }}</label>
                               {% if current_variant.compare_at_price > current_variant.price %}
                                  <h3 id="get_price">
                                  {{current_variant.price | money }}
