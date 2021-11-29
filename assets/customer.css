@@ -642,8 +642,10 @@ label[for="AddressProvinceNew"] {
     flex: 0 0 20%;
     background-color: var(--white);
     border: 1px solid #eee;
-    padding: 20px;
-    margin:0 10px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .address-list li p {
 	font-size:15px;
@@ -656,6 +658,8 @@ label[for="AddressProvinceNew"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
 }
 .address-footer .address-btn {
     font-family: var(--font-family);
