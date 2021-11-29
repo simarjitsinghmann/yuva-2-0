@@ -121,7 +121,7 @@
                                          
                                              {% if downOption == 'color' or  downOption == 'colour'%}    
                                           <span 
-                                                class="option {% if option.selected_value == value %}selected{% endif %} {% unless settings.variant_image and variantImage != blank %}variantColorOption {% else %}variantImageOption {% endunless %}" 
+                                                class="option {% if option.selected_value == value %}selected{% endif %} {% unless settings.variant_image %}variantColorOption {% else %}variantImageOption {% endunless %}" 
                                                 {% if downOption == 'color' or  downOption == 'colour'%}{% unless settings.variant_image and variantImage != blank %} 
                                                 style="background-color:{{value}};"{% endunless %}{% endif %}
                                                 >
