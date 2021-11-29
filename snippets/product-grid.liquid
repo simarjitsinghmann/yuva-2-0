@@ -180,6 +180,13 @@
                                <s>{{ current_variant.compare_at_price | money }}
                             </s>
                           </span>
+                          {% if settings.show_saved_amount %}        
+                          {% if settings.saved_amount_style == 'percentage' %}
+                          <span class="percent-off">({{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}})</span>
+                          {% else %}
+                          <span class="percent-off">({{ product.compare_at_price | minus: product.price | money}})</span>
+                          {% endif %}
+                          {% endif %}
                           {% endif %}
                         </span>
                     </div>
