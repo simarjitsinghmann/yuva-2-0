@@ -75,9 +75,11 @@
     },
     "1637920171b1ae8b6a": {
       "type": "faq-section",
+      "disabled": true,
       "blocks": {
         "ee11f66c-81cc-429a-9323-b5dfa96e2da7": {
           "type": "faq",
+          "disabled": true,
           "settings": {
             "heading": "iS here an issue",
             "answer": "<p><a href=\"\/pages\/about-us\" title=\"About Us\">\/pages\/about-us<\/a><\/p>"
@@ -98,11 +100,53 @@
       "settings": {
         "heading": "Frequently Asked Questions"
       }
+    },
+    "16381612949192efba": {
+      "type": "featured-collections-list",
+      "blocks": {
+        "1638161294a0079030-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/4.jpg",
+            "heading": "",
+            "btntext": "Shop Now",
+            "info_position": "left"
+          }
+        },
+        "1638161294a0079030-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "",
+            "btntext": "Shop Now",
+            "info_position": "left"
+          }
+        },
+        "1638161294a0079030-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "",
+            "btntext": "Shop Now",
+            "info_position": "left"
+          }
+        }
+      },
+      "block_order": [
+        "1638161294a0079030-0",
+        "1638161294a0079030-1",
+        "1638161294a0079030-2"
+      ],
+      "settings": {
+        "heading": "Collection list"
+      }
     }
   },
   "order": [
     "main",
     "1637917970297515ae",
-    "1637920171b1ae8b6a"
+    "1637920171b1ae8b6a",
+    "16381612949192efba"
   ]
 }
