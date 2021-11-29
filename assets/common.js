@@ -512,6 +512,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
 	slideIndex = blockIndex;
   }
   if(event.type == "shopify:section:load"){
+    console.log($(block))
     if(block != ''){
     console.log($(block))
     }
