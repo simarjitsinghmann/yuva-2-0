@@ -509,12 +509,14 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
   var parent = event.target;
   
   var slider = $(parent).find('[data-slider]');
-  
-  if(event.type == "shopify:block:deselect"){
+  var block = '';
+  if(event.type == "shopify:block:select"){
+    block = jQuery(event.target);
     var blockIndex = jQuery(event.target).index();
 	slideIndex = blockIndex;
   }
   if(event.type == "shopify:section:load"){
+    slideIndex = $(block).index();
     slickSlider($(slider),slideIndex);
   }
   else{
