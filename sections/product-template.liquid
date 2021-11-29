@@ -85,14 +85,14 @@
                            <div class="prizebox" data-price-wrapper="">
                               {% if current_variant.compare_at_price > current_variant.price %}
                                  <h3 id="get_price">
-                                 {{current_variant.price | money_without_trailing_zeros }}
+                                 {{current_variant.price | money }}
                                  <span class="main-price">
-                                    <del>{{current_variant.compare_at_price | money_without_trailing_zeros }}</del>
+                                    <del>{{current_variant.compare_at_price | money }}</del>
                                  </span>
                                  </h3>
                                  <span class="percent-off">({{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}})</span>
                                     {% else %}
-                                    <h3 id="get_price">{{current_variant.price | money_without_trailing_zeros }}</h3>
+                                    <h3 id="get_price">{{current_variant.price | money }}</h3>
                               {% endif %}
                            </div>
                            {% when 'variant' %}
