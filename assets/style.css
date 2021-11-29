@@ -316,7 +316,8 @@ span.tag-line {
 }
 .collection-section-header { align-items: flex-end; justify-content: space-between; display: flex; margin-bottom: 20px; }
 .shopify__top__section h3{ margin-bottom:20px;}
-.card-wrapper .collection-detail { position: absolute;padding: 20px;z-index:4; left:0; background-color: var(--white); }
+.card-wrapper .collection-detail { position: absolute;padding: 20px;z-index:4; left:0; background-color: var(--white); bottom: 0;
+    width: 100%;}
 .card__warpper__detail { width: 100%; } 
 .collection-detail a {
   color: var(--theme-color);
