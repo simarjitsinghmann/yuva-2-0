@@ -654,15 +654,22 @@ a.wishlist-view .fas { display: none; }
 #CollectionProductsContainer[data-view="grid-layout"] .products-grid .product-content {
   display: none;
 }
-.card.card--product .product__on__sale { top: 0px;
+.card.card--product .product__badge{ 
+  top: 0px;
   left: 0;
+  padding: 2px 12px;
+  text-transform: uppercase;
+  font-size: var(--small-text); 
+  line-height: 16px;
+} 
+.card.card--product .product__badge.product__on__sale { 
   background: var(--black);
-    color: var(--white);
-      padding: 2px 12px;
-      text-transform: uppercase;
-      font-size: var(--small-text); 
-        line-height: 16px;
-        } 
+  color: var(--white);
+} 
+.card.card--product .product__badge.product__on__soldOut { 
+  background: var(--white);
+  color: var(--black);
+} 
 /* #CollectionProductsContainer[data-view="list-layout"] .product-information__wrapper .price-item { font-size: var(--font-size); } */
 #ProductQuickView .product_content_section {
   max-height: 600px;
