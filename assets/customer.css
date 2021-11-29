@@ -670,8 +670,10 @@ label[for="AddressProvinceNew"] {
     background-color: transparent;
     color: var(--dark-gray);
 }
-.address-footer .address-btn:hover {
+.address-footer .address-btn:hover,
+.address-footer .address-btn:hover svg{
 	color: var(--black);
+      fill: var(--black);
 }
 .address-footer .address-btn svg {
 	vertical-align: middle;
