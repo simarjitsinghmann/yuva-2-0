@@ -508,6 +508,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
   if(event.type == "shopify:block:select"){
    slideIndex = jQuery(event.target).index();
   }
+  console.log(slideIndex)
   var slider = $(parent).find('[data-slider]');
   if(event.type == "shopify:section:load"){
     slickSlider($(slider),slideIndex);
