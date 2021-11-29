@@ -31,6 +31,7 @@
         },
         "439cfe74-8b0b-4876-ba96-394486c1fdb7": {
           "type": "review-star",
+          "disabled": true,
           "settings": {
           }
         },
@@ -51,7 +52,7 @@
           "type": "content",
           "settings": {
             "width": "half",
-            "style": "tabs",
+            "style": "accordion",
             "show_description": true,
             "content_heading": "Specification",
             "content": "<p>{{ product.metafields.my_fields.specifications | metafield_tag }}{{ product.title }}{{ product.vendor }}{{ product.metafields.reviews.rating | metafield_tag }}{{ product.metafields.reviews.rating_count.value }}<\/p>",
@@ -71,7 +72,7 @@
         "62b81903-337b-415e-958a-8dbeff322a7d"
       ],
       "settings": {
-        "gallery_style": "stacked"
+        "gallery_style": "gallery"
       }
     },
     "product_recommendations": {
