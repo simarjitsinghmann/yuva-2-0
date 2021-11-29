@@ -883,23 +883,22 @@ a.wishlist-view .fas { display: none; }
 .testimonial .testimonial-slider .slick-arrow:hover {
   background: var(--black)!important;
     color: var(--white);
-      }
-.testimonial-slide .owl-item:hover::before{ top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; opacity: 0; transition: .8s; }
+ }
 .testimonial .shopify__top__section small { margin-bottom: 4px; } 
 .testimonial-slider .slick-arrow {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.testimonial .testimonial-slider .slick-arrow span {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .testimonial-variation2 .testimonial-client-slide .slider-item {
   padding: 0px;
-}
-.testimonial-slider .owl-nav button.owl-next img {
-  padding: 4px 3px;
-}
-.testimonial-slider .owl-carousel .active.center {
-  left: 0;
-  right: 0;
 }
 .testimonial-variation2 .owl-carousel .active.center {
   padding: 0;
