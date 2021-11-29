@@ -517,7 +517,6 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
   }
   if(event.type == "shopify:section:load"){
     console.log($(block))
-    slideIndex = $(block).index();
     slickSlider($(slider),slideIndex);
   }
   else{
