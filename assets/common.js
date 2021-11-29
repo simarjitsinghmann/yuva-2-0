@@ -505,10 +505,15 @@ jQuery(document).on('shopify:block:select', function(event){
 })
 
 
-jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
+jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:select', function(event){
   var parent = event.target;
   
   var slider = $(parent).find('[data-slider]');
+  
+  if(event.type == "shopify:block:select"){
+    var blockIndex = parent.index();
+	slideIndex = blockIndex;
+  }
   if(event.type == "shopify:section:load"){
     slickSlider($(slider),slideIndex);
   }
