@@ -99,7 +99,7 @@
       {%- for address in customer.addresses -%}
       <li data-address>
         {%- if address == customer.default_address -%}
-        <h2>{{ 'customer.addresses.default' | t }}</h2>
+        <h5>{{ 'customer.addresses.default' | t }}</h5>
         {%- endif -%}
         {{ address | format_address }}
         <button
