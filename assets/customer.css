@@ -642,12 +642,12 @@ label[for="AddressProvinceNew"] {
     flex: 0 0 20%;
     background-color: var(--white);
     border: 1px solid #eee;
-    margin: 0 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
       position:relative;
       	padding:30px;
+      border-right:0;
 }
 .address-content {
   padding-bottom:20px;
@@ -693,6 +693,7 @@ label[for="AddressProvinceNew"] {
     align-items: center;
     justify-content: center;
     background-color: #f8f8f8;
+border-right:1px solid #eee;
 }
 .address-list li.add-address .link{
     text-decoration: none;
