@@ -663,16 +663,17 @@ label[for="AddressProvinceNew"] {
 .address-footer {
     margin-top: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    padding: 15px 20px;
-    background-color: #f8f8f8;
+/*     padding: 15px 20px;
+    background-color: #f8f8f8; */
 }
 .address-footer .address-btn {
     font-family: var(--font-family);
     font-size: 15px;
     background-color: transparent;
     color: var(--dark-gray);
+      margin:0 5px;
 }
 .address-footer .address-btn:hover,
 .address-footer .address-btn:hover svg{
