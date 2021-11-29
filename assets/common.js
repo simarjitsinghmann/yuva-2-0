@@ -387,7 +387,9 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             var savedAmount = Shopify.formatMoney((compareAtPrice-price),moneyFormat);
             var priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}</h3>`;
             var savedAmountHtml = '';
+            if(showSavedAmount == 'true'){
             savedAmountHtml +=`<span class="percent-off">(${percentage})</span>`;
+            }
             if(compareAtPrice > price){
               priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}<span class="main-price"> <del>${Shopify.formatMoney(compareAtPrice, moneyFormat)}</del> </span> </h3>${savedAmountHtml}`;
             }
