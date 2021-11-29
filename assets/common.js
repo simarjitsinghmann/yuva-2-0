@@ -495,7 +495,8 @@ sliders();
 var slideIndex = 0;
 
 jQuery(document).on('shopify:block:select', function(event){
-	console.log(event)
+  var blockIndex = jQuery(event.target).index()
+	console.log(event,blockIndex)
 })
 
 
