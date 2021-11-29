@@ -1,5 +1,5 @@
-<div class="container product-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=10">
-  <div class="row">
+<div class="container">
+  <div class="product-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=10">
     {%- if recommendations.performed and recommendations.products_count > 0 -%}
     <div id="SimilarProductsMain" class="recent-product">
       <div class="recent-product-header shopify__top__section">
