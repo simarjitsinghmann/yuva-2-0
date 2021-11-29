@@ -483,10 +483,8 @@ slickSlider = function(selector){
   var options = JSON.parse(html);
   selector.slick(options);
 }
-slickSliderJump = function(selector,index){
-  var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
-  var options = JSON.parse(html);
-  selector.slick(options);
+slickSliderJump = function(selector,slideIndex){
+  selector.slickGoTo(slideIndex)
 }
 sliders = function(){
   var sliders = $('body').find('[data-slider]');
