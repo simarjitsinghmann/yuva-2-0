@@ -2254,7 +2254,11 @@ padding: 0 100px 0 0;
     align-items:center;
     background-color: var(--gray);
       color: var(--black);
-    }
+  }
+.pagination__text {
+	color: var(--white);
+      background-color: var(--black);
+}
 .list--inline.pagination a span,
 .list--inline.pagination button span{
   display:flex;
