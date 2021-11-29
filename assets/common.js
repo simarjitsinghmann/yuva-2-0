@@ -504,12 +504,12 @@ jQuery(document).on('shopify:block:select', function(event){
 	slideIndex = blockIndex;
 })
 
+  var block = '';
 
 jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:select shopify:block:deselect', function(event){
   var parent = event.target;
   
   var slider = $(parent).find('[data-slider]');
-  var block = '';
   if(event.type == "shopify:block:select"){
     block = jQuery(event.target);
     var blockIndex = jQuery(event.target).index();
