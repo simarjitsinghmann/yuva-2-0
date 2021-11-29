@@ -645,4 +645,11 @@ label[for="AddressProvinceNew"] {
     margin: 0;
     list-style: none;
 }
+.address-list li {
+    max-width: 20%;
+    flex: 0 0 20%;
+    background-color: var(--white);
+    border: 1px solid #eee;
+    padding: 20px;
+}
 /* end */
