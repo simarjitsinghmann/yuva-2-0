@@ -2246,12 +2246,13 @@ padding: 0 100px 0 0;
 }
 .list--inline.pagination a,
 .list--inline.pagination button {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content:center;
-  align-items:center;
-  background-color: var(--gray);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-color: var(--gray);
+      color: var(--black);
     }
 .list--inline.pagination a span,
 .list--inline.pagination button span{
