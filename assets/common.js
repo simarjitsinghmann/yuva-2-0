@@ -488,10 +488,10 @@ slickSlider = function(selector,slideIndex){
 }
 
 sliders = function(){
-  var sliders = $('body').find('[data-slider]');
+  var sliders = jQuery('body').find('[data-slider]');
   if(sliders.length > 0){
     sliders.each(function(index) {
-      slickSlider($(this));
+      slickSlider(jQuery(this));
     });
   }
 }
@@ -503,20 +503,19 @@ var block = '';
 jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:select shopify:block:deselect', function(event){
   var parent = event.target;
 
-  var slider = $(parent).find('[data-slider]');
+  var slider = jQuery(parent).find('[data-slider]');
   if(event.type == "shopify:block:select"){
     var sectionId = event.detail.sectionId
     block = jQuery(event.target);
-    var slider = $('#shopify-section-'+sectionId).find('[data-slider]');
-    var blockIndex = jQuery(event.target).index();
-    slideIndex = blockIndex;
+    var slider = jQuery('#shopify-section-'+sectionId).find('[data-slider]');
+    slideIndex = jQuery(event.target).index();
     slider.slick('slickGoTo',slideIndex)
   }
   if(event.type == "shopify:section:load"){
     if(block != ''){
       slideIndex = block.index();
     }
-    slickSlider($(slider),slideIndex);
+    slickSlider(jQuery(slider),slideIndex);
   }
   else{
     slider.slick('refresh');
