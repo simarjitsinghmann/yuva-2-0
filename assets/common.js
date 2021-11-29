@@ -482,11 +482,9 @@ slickSlider = function(selector,slideIndex){
   console.log(slideIndex)
   var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
   var options = JSON.parse(html);
-  if(slideIndex){
-  selector.slick(options).slickGoTo(slideIndex);
-  }
-  else{
   selector.slick(options);
+  if(slideIndex){
+  selector.slickGoTo(slideIndex);
   }
 }
 
