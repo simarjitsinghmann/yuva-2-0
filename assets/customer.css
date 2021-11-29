@@ -652,11 +652,14 @@ label[for="AddressProvinceNew"] {
 	margin-bottom:10px;
 }
 .address-footer {
-	margin-top:20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .address-footer .address-btn {
     font-family: var(--font-family);
-    font-size: 18px;
+    font-size: 16px;
     background-color: transparent;
 }
 .address-list li.add-address {
