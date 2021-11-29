@@ -505,10 +505,14 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
   
   var slider = $(parent).find('[data-slider]');
   if(event.type == "shopify:block:select"){
-    console.log(event);
+    var sectionId = event.detail.sectionId
+    console.log(event,sectionId);
     block = jQuery(event.target);
+    var slider = $('#shopify-section-'+sectionId).find('[data-slider]');
+    
     var blockIndex = jQuery(event.target).index();
 	slideIndex = blockIndex;
+    slider.slick('slickGoTo',slideIndex)
   }
   if(event.type == "shopify:section:load"){
     console.log(block)
