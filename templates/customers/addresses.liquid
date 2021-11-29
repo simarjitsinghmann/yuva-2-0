@@ -16,7 +16,7 @@
         <div class="address-header"><h5>{{ 'customer.addresses.default' | t }}</h5></div>
         {%- endif -%}
         {{ address | format_address }}
-       
+        <div class="address-footer">
         <button
                 type="button"
                 id="EditFormButton_{{ address.id }}"
@@ -120,6 +120,7 @@
             <button class="button" type="reset">{{ 'customer.addresses.cancel' | t }}</button>
           </div>
           {%- endform -%}
+        </div>
         </div>
       </li>
       {%- endfor -%}
