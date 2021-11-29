@@ -668,6 +668,10 @@ label[for="AddressProvinceNew"] {
     font-family: var(--font-family);
     font-size: 15px;
     background-color: transparent;
+    color: var(--dark-gray);
+}
+.address-footer .address-btn:hover {
+	color: var(--black);
 }
 .address-footer .address-btn svg {
 	vertical-align: middle;
