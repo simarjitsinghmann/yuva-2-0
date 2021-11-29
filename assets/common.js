@@ -506,12 +506,12 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
   
   var slider = $(parent).find('[data-slider]');
   if(event.type == "shopify:block:select"){
+    console.log(event);
     block = jQuery(event.target);
     var blockIndex = jQuery(event.target).index();
 	slideIndex = blockIndex;
   }
   if(event.type == "shopify:section:load"){
-    console.log($(block))
     slickSlider($(slider),slideIndex);
   }
   else{
