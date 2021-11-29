@@ -70,8 +70,8 @@
                     </div>
                   {% endif %}
                   {% if section.blocks.size > 0 %}
-                    <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col" role="list">
-                        <ul class="collection__right__list" role="list">
+                    <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col " role="list">
+                        <ul class="collection__right__list block-count{{section.blocks.size}}" role="list">
                           {% for block in section.blocks %}
                             {% assign collection = ''%}
                             {% if block.settings.collection != blank %}
