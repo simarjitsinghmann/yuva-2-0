@@ -24,6 +24,7 @@
                 aria-controls="EditAddress_{{ address.id }}"
                 aria-expanded="false"
                 data-address-id="{{ address.id }}"
+                class="address-btn"
                 >
           {{ 'customer.addresses.edit' | t }}
         </button>
@@ -32,6 +33,7 @@
                 aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
                 data-target="{{ address.url }}"
                 data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}"
+                class="address-btn"
                 >
           {{ 'customer.addresses.delete' | t }}
         </button>
