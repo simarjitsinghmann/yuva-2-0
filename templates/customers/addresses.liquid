@@ -16,7 +16,7 @@
         <div class="address-header"><h5>{{ 'customer.addresses.default' | t }}</h5></div>
         {%- endif -%}
         {{ address | format_address }}
-        <div class="address-footer">
+       
         <button
                 type="button"
                 id="EditFormButton_{{ address.id }}"
@@ -35,7 +35,7 @@
                 >
           {{ 'customer.addresses.delete' | t }}
         </button>
-        </div>
+        
         <div id="EditAddress_{{ address.id }}" class="addressPopUp">
           <div class="cart-product-title">
             <button type="reset" title="Close" class="close-customer close" aria-describedby="a11y-external-message">
