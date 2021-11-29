@@ -275,13 +275,6 @@
 #customer_login_guest button {
   margin-top: 0;
 }
-.activate button[name="decline"],
-.addresses li > button,
-.addresses form button[type] {
-  background-color: transparent;
-  box-shadow: 0 0 0 0.1rem var(--color-base-outline-button-labels);
-  color: var(--color-base-outline-button-labels);
-}
 
 .activate button[name="decline"]:hover,
 .addresses li > button:hover,
