@@ -476,6 +476,22 @@
         "id": "show_saved_amount",
         "label": "t:settings_schema.product-variants.show_saved_amount.label",
         "default": true
+      },
+      {
+        "type": "select",
+        "id": "saved_amount_style",
+        "label": "t:settings_schema.product-variants.saved_amount_style.label",
+        "options": [
+          {
+            "value": "currency",
+            "label": "t:settings_schema.product-variants.saved_amount_style.options.currency.label"
+          },
+          {
+            "value": "percentage",
+            "label": "t:settings_schema.product-variants.saved_amount_style.options.percentage.label"
+          }
+        ],
+        "default": "percentage"
       }
     ]
   },
