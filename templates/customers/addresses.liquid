@@ -14,6 +14,8 @@
       <li data-address>
         {%- if address == customer.default_address -%}
         <div class="address-header"><p>{{ 'customer.addresses.default' | t }}</p></div>
+        {% else %}        
+        <div class="address-header"><p>Address {{ forloop.index }}</p></div>
         {%- endif -%}
         <div class="address-content">
         {{ address | format_address }}
