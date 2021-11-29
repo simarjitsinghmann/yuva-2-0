@@ -658,8 +658,6 @@ label[for="AddressProvinceNew"] {
 .address-header {
   margin-bottom: 10px;
 }
-.address-header h5 {
-}
 .address-footer {
     margin-top: 10px;
     display: flex;
@@ -667,6 +665,9 @@ label[for="AddressProvinceNew"] {
     align-items: center;
 /*     padding: 15px 20px;
     background-color: #f8f8f8; */
+  position: absolute;
+    bottom: 10px;
+    right: 5px;
 }
 .address-footer .address-btn {
     font-family: var(--font-family);
