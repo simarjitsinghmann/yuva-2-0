@@ -478,15 +478,12 @@ function hideOptions(){
 
 // sliders
 
-slickSlider = function(selector){
+slickSlider = function(selector,slideIndex){
   var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
   var options = JSON.parse(html);
-  var slider = selector.slick(options);
-  return slider;
+  selector.slick(options).slickGoTo(slideIndex);
 }
-slickSliderJump = function(selector,slideIndex){
-  selector.slickGoTo(slideIndex)
-}
+
 sliders = function(){
   var sliders = $('body').find('[data-slider]');
   if(sliders.length > 0){
@@ -508,8 +505,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload', function(even
   var parent = event.target;
   var slider = $(parent).find('[data-slider]');
   if(event.type == "shopify:section:load"){
-    slider = slickSlider($(slider));
-    slickSliderJump(slider,slideIndex)
+    slickSlider($(slider),slideIndex);
   }
   else{
     slider.slick('refresh');
