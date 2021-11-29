@@ -82,7 +82,7 @@
                               <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
                            </div>
                            {% when 'price' %}
-                           <div class="prizebox" data-saved="{{settings.show_saved_amount}}" data-price-wrapper="">
+                           <div class="prizebox" data-saved="{{settings.show_saved_amount}}"  data-saved-style="{{settings.saved_amount_style}}" data-price-wrapper="">
                               {% if current_variant.compare_at_price > current_variant.price %}
                                  <h3 id="get_price">
                                  {{current_variant.price | money }}
@@ -90,7 +90,13 @@
                                     <del>{{current_variant.compare_at_price | money }}</del>
                                  </span>
                                  </h3>
-                                 <span class="percent-off">({{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}})</span>
+                               {% if settings.show_saved_amount %}        
+                             	{% if settings.saved_amount_style == 'percentage' %}
+                               <span class="percent-off">({{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}})</span>
+                             {% else %}
+                               <span class="percent-off">({{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}})</span>
+                               {% endif %}
+                               {% endif %}
                                     {% else %}
                                     <h3 id="get_price">{{current_variant.price | money }}</h3>
                               {% endif %}
