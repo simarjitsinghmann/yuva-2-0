@@ -668,14 +668,15 @@ li[data-address] > h2 {
 	border-bottom: 1px solid var(--gray);
 }
 .account-header-tabs a {
-    padding: 20px 10px;
+    padding: 20px 40px;
     margin: 0 10px;
     text-transform: capitalize;
     font-size: 18px;
     color: var(--black);
 }
 .account-header-tabs a.active {
-	
+    background-color: var(--black);
+    color: #fff;
 }
 .account-pages-content h3 {
 	margin-bottom:20px;
