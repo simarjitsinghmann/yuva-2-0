@@ -1,4 +1,5 @@
 
+
 :root {
     --black: #000000;
     --white:#ffffff;
@@ -7,7 +8,7 @@
     --theme-color: #c58b2f;
     --green:#6cad61;
     --red:#ec7c7c;
-    --font-family:'{{ settings.type_header_font_family.family }}',{{ settings.type_header_font_family.fallback_families }};
+    --font-family:'Jost', sans-serif;
     --extra-small:12px;
     --small-text: 13px;
     --reg-text: 14px;
@@ -19,9 +20,11 @@
 	--medium:500;
 	--semibold:600;
   	--bold:700;
-  	--extrabold:900;    }
+  	--extrabold:900;    
 
- {% comment %}
+}
+
+     {% comment %}
       h1,h2,h3,h4,h5,h6{
 
         font-family: '{{ settings.type_header_font_family.family }}',{{ settings.type_header_font_family.fallback_families }};
