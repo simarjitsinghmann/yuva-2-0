@@ -492,9 +492,14 @@ sliders = function(){
   }
 }
 sliders();
+var slideIndex = 0;
+
+jQuery(document).on('shopify:block:select', function(event){
+	console.log(event)
+})
+
 
 jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
-  console.log(event)
   var parent = event.target;
   var slider = $(parent).find('[data-slider]');
   if(event.type == "shopify:section:load"){
