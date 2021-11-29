@@ -515,86 +515,22 @@
 }
 
 /* Addresses */
-.addresses li > button {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.addresses li > button + button,
-.addresses form button + button {
-  margin-top: 0rem;
-}
-
-@media screen and (min-width: 750px) {
-  .addresses li > button:first-of-type {
-    margin-top: 3rem;
-  }
-}
-
-.addresses form button:first-of-type {
-  margin-right: 1rem;
-}
-
 label[for="AddressCountryNew"],
 label[for="AddressProvinceNew"] {
   display: block;
   font-size: 1.4rem;
   margin-bottom: 0.6rem;
 }
-
-.addresses form {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.addresses form > div {
-  width: 100%;
-  text-align: left;
-}
-
-.addresses ul {
-  list-style: none;
-  padding-left: 0;
-  text-align: center;
-}
-
-li[data-address] {
-  margin-top: 5rem;
-}
-
 .addresses [aria-expanded="false"] ~ div[id] {
   display: none;
 }
-
 .addresses [aria-expanded="true"] ~ div[id] {
   display: block;
 }
-
-.addresses h2 {
-  text-align: left;
-}
-
-li[data-address] > h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width: 750px) {
-  li[data-address] > h2 {
-    font-size: 2.2rem;
-  }
-}
-
-.addresses ul p {
-  margin-bottom: 0;
-}
-
 .addresses input[type="checkbox"] {
   margin-top: 2rem;
   margin-left: 0;
 }
-
 @media only screen and (min-width: 750px) {
   .addresses form > div:nth-of-type(1) {
     padding-right: 2rem;
@@ -701,5 +637,12 @@ li[data-address] > h2 {
 /* account page after login css end */
 /* address page css start */
 .address-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 /* end */
