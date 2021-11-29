@@ -382,10 +382,12 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             var compareAtPrice= getVariant.compare_at_price;
             var price= getVariant.price;
             var percentage = (((compareAtPrice-price)/compareAtPrice)*100)+'% OFF';
-            var savedAmount = ((compareAtPrice-price)/compareAtPrice)*100;
+            var savedAmount = Shopify.formatMoney((compareAtPrice-price),moneyFormat);
             var priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}</h3>`;
+            var savedAmountHtml = '';
+            savedAmountHtml +=`<span class="percent-off">(${percentage})</span>`;
             if(compareAtPrice > price){
-              priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}<span class="main-price"> <del>${Shopify.formatMoney(compareAtPrice, moneyFormat)}</del> </span> </h3> <span class="percent-off">(${percentage})</span>`;
+              priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}<span class="main-price"> <del>${Shopify.formatMoney(compareAtPrice, moneyFormat)}</del> </span> </h3>${savedAmountHtml}`;
             }
             if(priceContainer){
               priceContainer.innerHTML = priceHtml;
