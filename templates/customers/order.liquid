@@ -250,6 +250,9 @@
               </tr>
             </tfoot>
           </table>
+          <a href="{{ routes.account_url }}"  class="button black-btn{% if request.path == routes.account_url or request.path contains '/orders/' %}active{% endif %}">
+            Back to orders
+          </a>
         </div>
         <div class="col-12 col-sm-5 col-md-4 col-lg-3">
           <div class="order-detail-address">
