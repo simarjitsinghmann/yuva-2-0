@@ -13,7 +13,7 @@
                                  {%- for media in product.media -%}
                                     {%-if media.media_type == 'image'-%}
                                     <div>
-                                       <a href="#media-{{media.id}}" id="#media-{{media.id}}" class="productThumbImage owl-thumb-item" data-id="media-{{media.id}}">
+                                       <a href="#media-{{media.id}}" id="#media-{{media.id}}" class="productThumbImage" data-id="media-{{media.id}}">
                                        <img class="product-single__thumbnail-image" src="{{media | img_url: '150x'}}" alt="{{ media.preview_image.alt | escape }}">
                                        </a>
                                     </div>
