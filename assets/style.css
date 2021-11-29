@@ -13,12 +13,6 @@
         min-width: 195px; 
         text-align: center; 
         background-color: var(--black); 
-          /*     background-image: -moz-linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%); 
-          background-image: -webkit-linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%); 
-          background-image: linear-gradient(90deg, #fff 0%, #fff 50%, #000 50%, #000 100%);  */
-          /*     background-repeat: no-repeat; 
-          background-size: 200% 100%; 
-          background-position: right bottom;  */
           transition: 0.25s ease-out; 
           font-size:13px; 
           min-height: 30px; 
@@ -492,6 +486,10 @@ span.tag-line {
     animation: animate-svg 1s linear infinite;
     animation-play-state: initial;
     }
+.product-information__wrapper .price {
+    overflow: hidden;
+    white-space: nowrap;
+}
 @keyframes animate-svg{0%{stroke-dashoffset:88}to{stroke-dashoffset:0}}
 .product-loop-variants.circle, .product-loop-variants.square { display: flex; } 
 .select__color .product-loop-variants .color_option, .product-loop-variants .color_option  {
