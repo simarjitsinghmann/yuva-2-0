@@ -3205,3 +3205,28 @@ min-height: 15px;
     float: left;
 }
 /* pdp page review css end */
+/* side drawer css start */
+#similar__product {max-width: 470px; right: -470px;padding: 0;}
+#mini__cart {padding:0;}
+.cart-product-title h5 {
+	font-weight: var(--medium);
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
+}
+.cart-product-title { border-bottom: 1px solid #ececf0;}
+.customer-title .close-customer, .cart-product-title .close-customer{ position: absolute; top: 23px; right: 22px; color: var(--black); } 
+.cart-product-title .close-customer {
+	top: 50%;
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-size: 0;
+}
+.cart-item-container .product__price {
+	font-size: var(--reg-text);
+	font-weight: var(--medium);
+	line-height: 24px;
+	letter-spacing: 0.6px;
+}
+.close { float: right; font-size: 1.5rem; font-weight: 700; line-height: 1; color: var(--black); text-shadow: 0 1px 0 var(--white); opacity: 1!important; } 
+/* side drawer css end */
