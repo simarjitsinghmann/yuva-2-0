@@ -14,10 +14,9 @@ function checkVisible(elm) {
     );
 }
 function visibleElement(){
- Array.from(elements).forEach(function(item) {
-   
-          console.log(item)
+ Array.from(elements).forEach(function(item) {   
         if (checkVisible(item)) {
+          console.log(item)
             Array.from(thumbs).forEach(function(thumb) {
                 thumb.classList.remove('active');
             });
