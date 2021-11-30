@@ -3121,9 +3121,12 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
 #shopify-product-reviews .spr-header-title {
 	font-size:20px;
 }
-.spr-form-input  {
+#shopify-product-reviews .spr-form-input  {
     border: 1px solid var(--gray);
     padding: 10px 15px;
     font-family: var(--font-family);
+}
+#shopify-product-reviews .spr-form-label {
+    display: none;
 }
 /* pdp page review css end */
