@@ -2062,7 +2062,7 @@ body.fancybox-iosfix {
 }
 
 .fancybox-bg {
-    background: #1e1e1e;
+    background: #fff;
     opacity: 0;
     transition-duration: inherit;
     transition-property: opacity;
@@ -2070,7 +2070,7 @@ body.fancybox-iosfix {
 }
 
 .fancybox-is-open .fancybox-bg {
-    opacity: .87;
+    opacity: 1;
     transition-timing-function: cubic-bezier(.22,.61,.36,1)
 }
 
@@ -2872,8 +2872,6 @@ li.fancybox-thumbs-loading {
     bottom: 95px;
   }
 }
-  
-
   
 /* 24-Nov-21 */
 .search-result-box {
