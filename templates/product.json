@@ -19,7 +19,7 @@
           "settings": {
             "dynamic_checkout_btn": true,
             "show_contact": true,
-            "form_text": "Ask about this product"
+            "form_text": "Ask about this product{{ product.title }}{{ product.vendor }}{{ product.metafields.reviews.rating | metafield_text }}{{ product.metafields.reviews.rating_count.value }}"
           }
         },
         "ed5aa936-0a62-4a16-aa49-2b56113ffdfe": {

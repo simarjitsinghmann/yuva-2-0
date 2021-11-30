@@ -1,5 +1,5 @@
 
-<div id="mini__cart" class="mini_cart" {% if settings.enable_shipping and settings.shipping_rate != blank %}data-shipping="{{settings.shipping_rate | times:100}}"{% endif %}>  
+<div id="mini__cart" class="mini_cart side_drawer_wrapper" {% if settings.enable_shipping and settings.shipping_rate != blank %}data-shipping="{{settings.shipping_rate | times:100}}"{% endif %}>  
   
 	<div class="cart-product-title">
 		<a href="javascript:void(0)" title="Close Cart Drawer" class="close-customer close-cart-drawer close" aria-describedby="a11y-external-message">
