@@ -3096,10 +3096,10 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
 body #shopify-product-reviews {
 	margin:0;
 }
-#shopify-product-reviews .spr-container {
+/* #shopify-product-reviews .spr-container {
     padding: 0;
     border: 0;
-}
+} */
 #shopify-product-reviews .spr-summary-starrating,
 #shopify-product-reviews .spr-starratings {
 	display:flex;
@@ -3125,9 +3125,10 @@ body #shopify-product-reviews {
 	font-size:20px;
 }
 #shopify-product-reviews .spr-form-input  {
-    border: 1px solid var(--gray);
+/*     border: 1px solid var(--gray); */
     padding: 10px 15px;
     font-family: var(--font-family);
+      background-color:#f7f7f7;
 }
 #shopify-product-reviews .spr-form-label {
     display: none;
