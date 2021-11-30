@@ -253,6 +253,8 @@ $(document).ready(function(){
 		
       const drawer = document.querySelector('[data-side-drawer]');	
       
+    drawer.setAttribute('id','similar_product');
+    drawer.classList.add('similar_product');
 		drawer.querySelector('.results-similarItemContainer').innerHTML ='';
 		drawer.querySelector('[data-drawer-title]').innerHTML ='Similar Products';
       drawer.querySelector('.results-similarItemContainer').style.display = "none"
