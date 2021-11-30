@@ -612,7 +612,7 @@ $(document).ready(function()
     $('.Quick_loader').fadeIn('slow');
     $('body').addClass('quickview-open');
     $('#ProductQuickView').load(_url+'?view=quick-view', function() {
-     var recommended = $('#ProductQuickView').find('.product-recommendations');
+      var recommended = $('#ProductQuickView').find('.product-recommendations');
       var url = recommended.attr('data-url');
       fetch(url)
       .then(response => response.text())
@@ -620,21 +620,21 @@ $(document).ready(function()
         const html = document.createElement('div');
         html.innerHTML = $(text).find('.product-recommendations').html();
         recommended.html(html)
-      setTimeout(function(){
-        $('.Quick_loader').hide();
-        $('#ProductQuickView').show();
-        $(window).trigger('resize');
-        productVariants();
-      },500)
+        setTimeout(function(){
+          $('.Quick_loader').hide();
+          $('#ProductQuickView').show();
+          $(window).trigger('resize');
+          productVariants();
+        },500)
       });
     });
   });
-  
+
   $(document).on('click', '.quickViewClose',function(evt) {
     evt.preventDefault();
     $('body').removeClass('quickview-open');
   });
-  
+
 });
 
 
