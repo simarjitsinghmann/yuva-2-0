@@ -105,7 +105,7 @@
 
       {% include 'search-drawer' %}
       
-      {% render 'similar-products'%}
+      {% render 'side-drawer'%}
 
       {% if shop.customer_accounts_enabled %} 
 
@@ -124,8 +124,6 @@
     </div>
     
     {% render 'newsletter-popup'%}
-
-    {% include 'product-quick-view' %}
     
     {% if settings.enable_cart_drawer and template != 'cart'%}
     
