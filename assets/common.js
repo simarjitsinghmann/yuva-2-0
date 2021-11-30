@@ -274,6 +274,7 @@ $(document).ready(function(){
         drawer.querySelector('[data-drawer-body]').style.display = "block";
       }
     });
+  });
 	$('.close-customer').click(function(){
 		$("body").removeClass("show__similar__products"), 
 		$(".wrapper-overlay").hide();
