@@ -215,6 +215,7 @@ buildCart = function (cart,showCart) {
 };
 $('body').on('click','.openCartDrawer',function(e){
   e.preventDefault();
+  alert('asdas')
   jQuery.getJSON('/cart.js', function (cart, textStatus) {
     buildCart(cart);
   });
