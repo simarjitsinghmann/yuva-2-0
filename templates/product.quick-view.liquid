@@ -180,24 +180,24 @@
   $(document).ready(function(){
 
     $("#feature__product-{{product.id}}").slick({
+      asNavFor: $("#feature__productThumbs-{{product.id}}"),
       slidesToShow:1,
       slidesToScroll:1,
       autoplay:false,
       infinite:false,
       autoplayHoverPause:false,
       arrows: false,
-      dots: false,
-      asNavFor: $("#feature__productThumbs-{{product.id}}")
+      dots: false
       })
     $("#feature__productThumbs-{{product.id}}").slick({
+      asNavFor: $("#feature__product-{{product.id}}"),
       slidesToShow:4,
       slidesToScroll:1,
       autoplay:false,
       infinite:false,
       autoplayHoverPause:false,
       arrows: false,
-      dots: false,
-      asNavFor: $("#feature__product-{{product.id}}")
+      dots: false
       })
 
   })
