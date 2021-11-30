@@ -188,7 +188,9 @@
       </div>
     </div>
   </div>
+  {% unless template contains 'collection'%}
   {% unless hideRelated %}
   {% include 'similar-product-grid' %}
+  {% endunless %}
   {% endunless %}
 </div>
