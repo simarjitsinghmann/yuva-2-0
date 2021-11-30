@@ -15,7 +15,7 @@
       </div> 
       <div id="feature__productThumbs-{{product.id}}" class="quickview_product thumb" data-slider-id="1">
         {% for image in product.images %}
-        <div class="" >
+        <div class="quickview_product_img_thumb" >
           <img src="{{image | img_url:'100x'}}" alt="">
         </div>
         {% endfor %}
