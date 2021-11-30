@@ -364,9 +364,9 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
           });
           var getVariant = variantChange(options,_productParent);
 			
-          var buttonWrapper = _productParent.querySelector('[data-button-wrapper]')
-          var paymentButtonWrapper = _productParent.querySelectorAll('.Sd_addProduct')[0]
-          var paymentButton = _productParent.querySelectorAll('.Sd_addProduct span')[0]
+          var buttonWrapper = _productParent.querySelector('[data-button-wrapper]');
+          var paymentButtonWrapper = _productParent.querySelector('.Sd_addProduct');
+          var paymentButton = paymentButtonWrapper.querySelectorAll('span');
           var advancePayment = _productParent.querySelectorAll('.shopify-payment-button')[0];
           if(getVariant != undefined){
             if(getVariant.featured_media != null){
