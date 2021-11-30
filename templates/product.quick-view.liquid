@@ -180,7 +180,7 @@
   $(document).ready(function(){
 
     $('[data-slider-main]').slick({
-      asNavFor: '[data-slider-thumb],
+      asNavFor:'[data-slider-thumb]',
       slidesToShow:1,
       slidesToScroll:1,
       autoplay:false,
@@ -189,7 +189,7 @@
       dots: false
       })
     $('[data-slider-thumb]').slick({
-      asNavFor: '[data-slider-main],
+      asNavFor:'[data-slider-main]',
       slidesToShow:4,
       slidesToScroll:1,
       infinite:true,
