@@ -15,11 +15,12 @@ function checkVisible(elm) {
 }
 function visibleElement(){
  Array.from(elements).forEach(function(item) {
+   
+          console.log(item.id)
         if (checkVisible(item)) {
             Array.from(thumbs).forEach(function(thumb) {
                 thumb.classList.remove('active');
             });
-          console.log(item.id)
             const relatedThumb = document.querySelector('[href="#'+item.id+'"]');
             relatedThumb.classList.add('active');
         }
