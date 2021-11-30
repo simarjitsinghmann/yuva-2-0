@@ -605,7 +605,10 @@ $(document).ready(function()
     
     const drawer = document.querySelector('[data-side-drawer]');	
     drawer.setAttribute('id','quickView_product');
-    drawer.classList.add('quickView_product');Quick View
+    drawer.classList.add('quickView_product');
+    drawer.querySelector('[data-drawer-body]').innerHTML ='';
+    drawer.querySelector('[data-drawer-title]').innerHTML ='Quick View';
+    drawer.querySelector('[data-drawer-body]').style.display = "none"
     $('#ProductQuickView').hide();
     var _url = $(this).data('href');
     if(_url.indexOf('?') > -1){
