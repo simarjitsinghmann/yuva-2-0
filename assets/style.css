@@ -1998,6 +1998,84 @@ button.Sd_addProduct:disabled {
 .quick_view #shopify-section-quick-view-related {
   padding:0
 }
+.quick_view .quickviewcontent .rte {
+    font-size: 13px;
+}
+.quick_view .quickviewcontent .select__size {
+    margin-bottom: 16px;
+}
+.quickview-open,
+.minicart-open,
+.show__similar__products{
+	position:relative;
+}
+.quick_view .quickviewcontent .product-image-left {
+    padding: 0 10px 0 10px;
+}
+.quick_view .quickviewcontent {
+    padding: 30px 20px 0;
+    height: calc(100vh - 57px); 
+    overflow-y: auto;
+  	overflow-x:hidden;
+}
+.quick_view .quickviewcontent .product-add-to-cart-right h2 {
+    font-size: 17px;
+  line-height:20px;
+    margin-bottom: 0;
+    font-weight: var(--medium);
+    letter-spacing: .3px;
+    margin-bottom: 3px;
+    text-transform: capitalize;
+}
+.quick_view .quickviewcontent .product-add-to-cart-right h2 a {
+	color: #000;
+    font-size: 19px;
+}
+.quick_view .quickviewcontent .prizebox #get_price {
+    font-size: 25px;
+}
+.quick_view .quickviewcontent .size_option .option {
+    min-width: 30px;
+    font-size: 12px;
+    line-height: 23px;
+}
+.quick_view #ProductQuickView .product-loop-variants.circle .color_option span.option {
+    width: 22px;
+    height: 22px;
+}
+.quick_view  #ProductQuickView .product-add-to-cart-right .prizebox {
+    margin: 0 0 5px;
+}
+.quick_view .quickviewcontent .product-add-to-cart-right p.vendor_name {
+    margin: 0px 0 5px;
+}
+.quick_view .quickviewcontent .product-image-left .owl-item div {
+    background-color: #ececec;
+  border:1px solid #ddd;
+}
+.quick_view .quickviewcontent .feature__product .owl-thumbs button.owl-thumb-item {
+    height: 60px;
+}
+.quick_view .quickviewcontent .feature__product .item {
+    height: 400px;
+    overflow: hidden;
+    background: #ececec;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#shopify-section-quick-view-related {
+  width:100%
+}
+#shopify-section-quick-view-related .recent-product-header {
+	text-align:left;
+}
+#shopify-section-quick-view-related .recent-product-header  h6 {
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
 /**Quick0view-end**/
 
 
@@ -3236,12 +3314,12 @@ min-height: 15px;
 
 
 
-#dropdown-customer, #mini__cart, #similar__product, .quick_view, .side-menu, .side-menu .inner-side .nav-item.dropdown ul.child, .side-menu .inner-side .nav-item.dropdown ul.grandchild { width: 100%; max-width: 464px; position: fixed; top: 0; right: -464px; z-index: 99999; background: var(--white); height: 100vh; webkit-transition: all 0.7s ease; -moz-transition: all .7s ease; -ms-transition: all .7s ease; -o-transition: all .7s ease; transition: all .7s ease; overflow-x:hidden; overflow-y:auto; } 
-.quick_view {
-  right:-800px;
-  max-width: 800px;
-}
-.minicart-open #mini__cart, .show__similar__products #similar__product, .quickview-open .quick_view { right: 0;}
+#dropdown-customer, #mini__cart, #similar__product,  
+.side-menu, 
+.side-menu .inner-side .nav-item.dropdown ul.child, 
+.side-menu .inner-side .nav-item.dropdown ul.grandchild { 
+  width: 100%; max-width: 464px; position: fixed; top: 0; right: -464px; z-index: 99999; background: var(--white); height: 100vh; webkit-transition: all 0.7s ease; -moz-transition: all .7s ease; -ms-transition: all .7s ease; -o-transition: all .7s ease; transition: all .7s ease; overflow-x:hidden; overflow-y:auto; } 
+.minicart-open #mini__cart, .show__similar__products #similar__product, { right: 0;}
 #similar__product {max-width: 470px; right: -470px;padding: 0;}
 #mini__cart {padding:0;}
 .cart-product-title h5 {
@@ -3315,82 +3393,6 @@ min-height: 15px;
     left: 0;
     z-index: 9;
 }
-.quick_view .quickviewcontent .feature__product .owl-thumbs button.owl-thumb-item {
-    height: 60px;
-}
-.quick_view .quickviewcontent .feature__product .item {
-    height: 400px;
-    overflow: hidden;
-    background: #ececec;
-      display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#shopify-section-quick-view-related {
-  width:100%
-}
-#shopify-section-quick-view-related .recent-product-header {
-	text-align:left;
-}
-#shopify-section-quick-view-related .recent-product-header  h6 {
-    color: var(--black);
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-.quick_view .quickviewcontent .rte {
-    font-size: 13px;
-}
-.quick_view .quickviewcontent .select__size {
-    margin-bottom: 16px;
-}
-.quickview-open,
-.minicart-open,
-.show__similar__products{
-	position:relative;
-}
-.quick_view .quickviewcontent .product-image-left {
-    padding: 0 10px 0 10px;
-}
-.quick_view .quickviewcontent {
-    padding: 30px 20px 0;
-    height: calc(100vh - 57px); 
-    overflow-y: auto;
-  	overflow-x:hidden;
-}
-.quick_view .quickviewcontent .product-add-to-cart-right h2 {
-    font-size: 17px;
-  line-height:20px;
-    margin-bottom: 0;
-    font-weight: var(--medium);
-    letter-spacing: .3px;
-    margin-bottom: 3px;
-    text-transform: capitalize;
-}
-.quick_view .quickviewcontent .product-add-to-cart-right h2 a {
-	color: #000;
-    font-size: 19px;
-}
-.quick_view .quickviewcontent .prizebox #get_price {
-    font-size: 25px;
-}
-.quick_view .quickviewcontent .size_option .option {
-    min-width: 30px;
-    font-size: 12px;
-    line-height: 23px;
-}
-.quick_view #ProductQuickView .product-loop-variants.circle .color_option span.option {
-    width: 22px;
-    height: 22px;
-}
-.quick_view  #ProductQuickView .product-add-to-cart-right .prizebox {
-    margin: 0 0 5px;
-}
-.quick_view .quickviewcontent .product-add-to-cart-right p.vendor_name {
-    margin: 0px 0 5px;
-}
-.quick_view .quickviewcontent .product-image-left .owl-item div {
-    background-color: #ececec;
-  border:1px solid #ddd;
-}
+
+
 /* side drawer css end */
