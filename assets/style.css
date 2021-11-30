@@ -3216,13 +3216,6 @@ min-height: 15px;
 .cart-product-title { border-bottom: 1px solid #ececf0;}
 .customer-title .close-customer, 
 .side_drawer_close { position: absolute; top: 23px; right: 22px; color: var(--black); } 
-.side_drawer_close {
-	top: 50%;
-	-moz-transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-	font-size: 0;
-}
 .cart-item-container .product__price {
 	font-size: var(--reg-text);
 	font-weight: var(--medium);
