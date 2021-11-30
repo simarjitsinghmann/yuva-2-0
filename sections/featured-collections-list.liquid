@@ -15,7 +15,7 @@
     {% elsif section.settings.view_limit == 4 %}
     {% assign colWidth = 'col-md-3' %}
     {% endif %}
-    <div class=" owl-carousel owl-theme" id="collectionSlider-{{section.id}}" data-slider>
+    <div class="" id="collectionSlider-{{section.id}}" data-slider>
       {% for block in section.blocks %}
       {% if block.settings.collection != blank %}
       {% assign collection = block.settings.collection %}
