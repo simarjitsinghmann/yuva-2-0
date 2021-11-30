@@ -62,7 +62,7 @@ class CustomerAddresses {
 
   _toggleExpanded(target) {
     var popUp = target.parentNode.querySelector(".addressPopUp").innerHTML;
-    var newTarget = document.getElementById('similar__product');
+    var newTarget = document.querySelector('[data-drawer-body]');
     newTarget.innerHTML = popUp;
     
     document.querySelector('body').classList.add('show__similar__products');     
