@@ -874,6 +874,9 @@ a.wishlist-view .fas { display: none; }
 .colllection-list-view .slick-active:not(.slick-current) .collection-list-view-wrapper {
     padding: 0;
 }
+.colllection-list-view .slick-active:not(.slick-current):last-child .collection-list-view-wrapper {
+    padding: 0;
+}
 .colllection-list-view .collection-list-view-wrapper {
     padding: 0 10px 0 0;
 }
