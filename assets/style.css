@@ -3099,7 +3099,7 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     margin-right: 2px;
 }
 #shopify-product-reviews .spr-summary-actions-newreview,
-#shopify-product-reviews .spr-review-reportreview {
+#shopify-product-reviews .spr-review-reportreview  {
 	    cursor: pointer;
     display: inline-block;
     border: none;
@@ -3110,5 +3110,11 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     background-color: transparent;
     font-size: 14px;
 }
+#shopify-product-reviews .spr-container {
+    padding: 0;
+    border: 0;
+}
+#shopify-product-reviews .spr-header-title {
+	font-size:20px;
 }
 /* pdp page review css end */
