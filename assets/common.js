@@ -618,7 +618,7 @@ $(document).ready(function()
       _url = _url[0]
     }
     $('.Quick_loader').fadeIn('slow');
-    $('#ProductQuickView').load(_url+'?view=quick-view', function() {setTimeout(function(){
+    drawer.querySelector('[data-drawer-body]').load(_url+'?view=quick-view', function() {setTimeout(function(){
     drawer.querySelector('[data-drawer-body]').classList.remove('searching');
     drawer.querySelector('[data-drawer-body]').style.display = "block";
       $(window).trigger('resize');
