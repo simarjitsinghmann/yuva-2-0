@@ -379,8 +379,12 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             }
             _productParent.querySelector('[name="id"]').value = getVariant.id;
             var priceContainer=_productParent.querySelector('[data-price-wrapper]');
-            var showSavedAmount = priceContainer.getAttribute('data-saved');
-            var savedAmountStyle = priceContainer.getAttribute('data-saved-style');
+            var showSavedAmount = '';
+            var savedAmountStyle = '';
+            if(priceContainer == 'true'){
+              showSavedAmount = priceContainer.getAttribute('data-saved');
+              savedAmountStyle = priceContainer.getAttribute('data-saved-style');
+            }
             var compareAtPrice= getVariant.compare_at_price;
             var price= getVariant.price;
             var percentage = (((compareAtPrice-price)/compareAtPrice)*100)+'% OFF';
