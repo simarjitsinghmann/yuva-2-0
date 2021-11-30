@@ -4,11 +4,7 @@ var elements = document.getElementsByClassName('productImageSlideItem');
 var thumbs = document.getElementsByClassName('productThumbImage');
 
 window.onscroll = function() {
-    checkElementOnLoad()
-};
-
-function checkElementOnLoad(){
-Array.from(elements).forEach(function(item) {
+    Array.from(elements).forEach(function(item) {
         if (checkVisible(item)) {
             Array.from(thumbs).forEach(function(thumb) {
                 thumb.classList.remove('active');
@@ -17,14 +13,10 @@ Array.from(elements).forEach(function(item) {
             relatedThumb.classList.add('active');
         }
     });
-}
+};
 
 function checkVisible(elm) {
-    var bounding = elm.getBoundingClientRect();
-    return (
-        bounding.top >= 0 &&
-        bounding.left >= 0 &&
-        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+    var rect = elm.getBoundingClientRect();
+    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
 }
