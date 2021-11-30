@@ -610,7 +610,6 @@ $(document).ready(function()
     drawer.classList.add('quickView_product');
     drawer.querySelector('[data-drawer-body]').innerHTML ='';
     drawer.querySelector('[data-drawer-title]').innerHTML ='Quick View';
-    drawer.querySelector('[data-drawer-body]').style.display = "none";
     drawer.querySelector('[data-drawer-body]').classList.add('searching');
     document.querySelector('body').classList.add('side_Drawer_open'); 
     var _url = $(this).data('href');
@@ -621,7 +620,6 @@ $(document).ready(function()
     $('.Quick_loader').fadeIn('slow');
     $('[data-drawer-body]').load(_url+'?view=quick-view', function() {setTimeout(function(){
     drawer.querySelector('[data-drawer-body]').classList.remove('searching');
-    drawer.querySelector('[data-drawer-body]').style.display = "block";
       Shopify.PaymentButton.init();
       $(window).trigger('resize');
       productVariants();
