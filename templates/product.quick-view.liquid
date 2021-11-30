@@ -157,10 +157,7 @@
             <circle stroke-dasharray="87.96459430051421 87.96459430051421" r="7" cx="9" cy="9"></circle>
           </svg>
         </button>
-
-        {% if section.settings.enable_payment_button %}
         {{ form | payment_button }}
-        {% endif %}
       </div>
       <a href="{{product.url}}" class="button white-btn btn-block">View Detail</a>
     </div>
