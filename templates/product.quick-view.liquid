@@ -141,7 +141,8 @@
         </div>
       </div>
       {% endif %}
-
+	
+              <div class="productErrors" style="display:none"></div>
       <div class="product_button product-featured-form-submit {% if section.settings.enable_payment_button %} product-form--payment-button{% endif %} {% unless current_variant.available %}disabled{% endunless %}" data-button-wrapper>
         <div class="pdp-add-to-bag ">
         <button
