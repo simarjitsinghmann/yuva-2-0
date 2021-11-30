@@ -3064,8 +3064,12 @@ section.shopify-section.about-best-choice.featured-content-section {
 }
 .image-popup-link {
     cursor: zoom-in;
-    display: block;
+    display: flex;
     width: 100%;
+    height: 100%;
+    min-height: 650px;
+    align-items: center;
+    justify-content: center;
 }
 .product-loop-variants .material_option {
     margin-right: 9px;
