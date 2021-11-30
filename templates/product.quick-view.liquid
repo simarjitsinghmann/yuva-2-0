@@ -1,27 +1,27 @@
 {% layout none %}
+
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
-<div class="col-md-6 no-padding-left no-padding-right background-img-color euqal-height shopify-section">
-  <div class="product-image-left">    
-    <div id="feature__product-{{product.id}}" class="feature__product" data-slider-id="1">
-      {% for image in product.images %}
-      <div class="item" >
+<div class="quickview_product_wrapper">
+  <div class="quickview_product_slider">   
+      <div id="feature__product-{{product.id}}" class="quickview_product" data-slider-id="1">
+        {% for image in product.images %}
+        <div class="item" >
         <div class="quickview_product_img">
-        <img src="{{image | img_url:'master'}}" alt="">
+          <img src="{{image | img_url:'master'}}" alt="">
+          </div>
         </div>
-      </div>
-      {% endfor %}
-    </div> 
-    <div id="feature__productThumbs-{{product.id}}" class="feature__product thumb" data-slider-id="1">
-      {% for image in product.images %}
-      <div class="" >
-        <img src="{{image | img_url:'100x'}}" alt="">
-      </div>
-      {% endfor %}
-    </div> 
+        {% endfor %}
+      </div> 
+      <div id="feature__productThumbs-{{product.id}}" class="quickview_product thumb" data-slider-id="1">
+        {% for image in product.images %}
+        <div class="" >
+          <img src="{{image | img_url:'100x'}}" alt="">
+        </div>
+        {% endfor %}
+      </div> 
   </div>
-</div>
-<div class="col-md-6 euqal-height background-white product_content_section">
+  <div class="quickview_product_detail">
   <div class="product-add-to-cart-right">
 
     <div class="clearfix"> </div>
@@ -175,6 +175,7 @@
       {{ product.variants | json }}
   </script>
 </div>
+</div>
 <script>
   $(document).ready(function(){
 
@@ -190,10 +191,8 @@
       slidesToScroll: 1,
       asNavFor:'#feature__product-{{product.id}}',
       dots: false,
-      infinite: true,
       arrows: false,
-      focusOnSelect: true,
-      centerMode: true
+      focusOnSelect: true
       });
 
   })
