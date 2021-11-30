@@ -270,6 +270,7 @@ $(document).ready(function(){
       const recommendations = html.querySelector('.similarItemContainer');
       if (recommendations && recommendations.innerHTML.trim().length) {
         drawer.querySelector('[data-drawer-body]').innerHTML = recommendations.innerHTML;
+        drawer.querySelector('.sp-loader').style.display = "none";
         drawer.querySelector('[data-drawer-body]').style.display = "block";
       }
     });
@@ -282,7 +283,7 @@ $(document).ready(function(){
       $('.SimilarNoResults').show();
       $('#SimilarProducts').show(); 
     }, 1800);
-	});
+  });
 	$('.close-customer').click(function(){
 		$("body").removeClass("show__similar__products"), 
 		$(".wrapper-overlay").hide();
