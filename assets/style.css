@@ -3318,6 +3318,11 @@ min-height: 15px;
 }
 .quickview_product.thumb .slick-list{
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quickview_product_img_thumb {
+    display: flex;
     height: 80px;
     justify-content: center;
     margin: 0 10px 0 0;
