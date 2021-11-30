@@ -12,6 +12,7 @@ function visibleElement(){
             Array.from(thumbs).forEach(function(thumb) {
                 thumb.classList.remove('active');
             });
+          console.log(item.id)
             const relatedThumb = document.querySelector('[href="#'+item.id+'"]');
             relatedThumb.classList.add('active');
         }
