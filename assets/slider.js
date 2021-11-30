@@ -4,7 +4,11 @@ var elements = document.getElementsByClassName('productImageSlideItem');
 var thumbs = document.getElementsByClassName('productThumbImage');
 
 window.onscroll = function() {
-    Array.from(elements).forEach(function(item) {
+    checkElementOnLoad()
+};
+
+function checkElementOnLoad(){
+Array.from(elements).forEach(function(item) {
         if (checkVisible(item)) {
             Array.from(thumbs).forEach(function(thumb) {
                 thumb.classList.remove('active');
@@ -13,7 +17,7 @@ window.onscroll = function() {
             relatedThumb.classList.add('active');
         }
     });
-};
+}
 
 function checkVisible(elm) {
     var bounding = elm.getBoundingClientRect();
