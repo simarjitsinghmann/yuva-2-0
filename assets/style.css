@@ -679,19 +679,7 @@ a.wishlist-view .fas { display: none; }
   background: #626262a8;
     color: #ffffff;
 } 
-/* #CollectionProductsContainer[data-view="list-layout"] .product-information__wrapper .price-item { font-size: var(--font-size); } */
-#ProductQuickView .product_content_section {
-  max-height: 600px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-#ProductQuickView .feature__product.thumb {
-  margin-top:15px;
-}
-#ProductQuickView .feature__product.thumb .owl-item img{
-  max-height: 84px;
-  object-fit: contain;
-}
+
 
 .card-wrapper .card.card--product .card-wrapper-img img.product-second-img{ position: absolute; top: 0; left: 0; -webkit-opacity: 0; -moz-opacity: 0; -ms-opacity: 0; -o-opacity: 0; opacity: 0;height: 100%;
   object-fit: cover; } 
@@ -1959,6 +1947,18 @@ button.Sd_addProduct:disabled {
 /**Feature Product Section End**/
 
 /**Quick-view**/
+#ProductQuickView .product_content_section {
+  max-height: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#ProductQuickView .feature__product.thumb {
+  margin-top:15px;
+}
+#ProductQuickView .feature__product.thumb .owl-item img{
+  max-height: 84px;
+  object-fit: contain;
+}
 #ProductQuickView .product-loop-variants.circle .color_option span.option {
   width: 35px;
   height: 35px;
@@ -1981,6 +1981,22 @@ button.Sd_addProduct:disabled {
       }
 #ProductQuickView .product-add-to-cart-right .prizebox {
   margin: 0 0 15px;
+}
+.quick-view-recent-product {
+  padding:20px
+}
+.quick-view-product-recommendations .card-wrapper-img {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--gray);
+    min-height:150px;
+    max-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+.quick_view #shopify-section-quick-view-related {
+  padding:0
 }
 /**Quick0view-end**/
 
@@ -2389,9 +2405,7 @@ button.shopify-payment-button__more-options[aria-disabled="true"] {
   font-size: 24px;
   font-weight: var(--semibold);
     }
-.quick-view-recent-product {
-  padding:20px
-}
+
 .toolbox-item.toolbox-layout .btn-layout svg path{
   fill: #ddd;
 }
@@ -2413,19 +2427,7 @@ button.shopify-payment-button__more-options[aria-disabled="true"] {
     border-bottom: 1px solid;
     margin-right: 10px;
     }
-.quick-view-product-recommendations .card-wrapper-img {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--gray);
-    min-height:150px;
-    max-height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-.quick_view #shopify-section-quick-view-related {
-  padding:0
-}
+
 .product-variants-wrapper {
   margin-top: 10px;
 }
