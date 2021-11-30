@@ -252,7 +252,7 @@ $(document).ready(function(){
 		$('.wrapper-overlay').css({"display": "block"});
 		$('.results-similarItemContainer').html('').hide();
 		$('.sp-loader').show();
-
+		
 		var getID = $(this).attr('data-id'); 
 		var getSection = $(this).attr('data-section'); 
 		fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
@@ -260,7 +260,8 @@ $(document).ready(function(){
 			.then((text) => {
 				const html = document.createElement('div');
 				html.innerHTML = text;
-				const recommendations = html.querySelector('.similarItemContainer');		
+				const recommendations = html.querySelector('.similarItemContainer');
+          		const drawer = document.querySelector('[data-side-drawer]');
 				if (recommendations && recommendations.innerHTML.trim().length) {
 					document.querySelector('.results-similarItemContainer').innerHTML = recommendations.innerHTML;
 					$('.sp-loader').hide();
