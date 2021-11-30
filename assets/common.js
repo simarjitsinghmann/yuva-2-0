@@ -263,7 +263,7 @@ $(document).ready(function(){
 				const recommendations = html.querySelector('.similarItemContainer');
           		const drawer = document.querySelector('[data-side-drawer]');
 				if (recommendations && recommendations.innerHTML.trim().length) {
-					document.querySelector('.results-similarItemContainer').innerHTML = recommendations.innerHTML;
+					drawer.querySelector('.results-similarItemContainer').innerHTML = recommendations.innerHTML;
 					$('.sp-loader').hide();
 					$('.results-similarItemContainer').show();
 				}
