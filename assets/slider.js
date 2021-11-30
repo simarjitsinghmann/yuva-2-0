@@ -15,8 +15,8 @@ console.log(elements)
 };
 function visibleElement(){
  Array.from(elements).forEach(function(item) {   
-        if (isInViewport(item)) {
           console.log(item)
+        if (isInViewport(item)) {
             Array.from(thumbs).forEach(function(thumb) {
                 thumb.classList.remove('active');
             });
