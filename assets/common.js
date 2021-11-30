@@ -253,6 +253,7 @@ $(document).ready(function(){
 		$('.results-similarItemContainer').html('').hide();
 		$('.sp-loader').show();
 		
+      const drawer = document.querySelector('[data-side-drawer]');
 		var getID = $(this).attr('data-id'); 
 		var getSection = $(this).attr('data-section'); 
 		fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
@@ -261,7 +262,6 @@ $(document).ready(function(){
 				const html = document.createElement('div');
 				html.innerHTML = text;
 				const recommendations = html.querySelector('.similarItemContainer');
-          		const drawer = document.querySelector('[data-side-drawer]');
 				if (recommendations && recommendations.innerHTML.trim().length) {
 					drawer.querySelector('.results-similarItemContainer').innerHTML = recommendations.innerHTML;
 					drawer.querySelector('.sp-loader').style.display = "none";
