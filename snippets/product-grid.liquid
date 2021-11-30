@@ -11,7 +11,7 @@
 {% else %}
 {% assign second_image = product.featured_image | img_url:'master' %}
 {% endif %}
-<div class="{% unless template contains 'cart'%}grid-item{% endunless %} col">
+<div class="{% unless template contains 'cart'%}grid-item{% endunless %} col collection-product-grid">
   <div class="card-wrapper">
     <div class="card card--text-only card--soft card--product text__left">
       <div class="card-wrapper-img {% if section.settings.show_second_image or show_second_image %}has-multiimage{% endif %}">
