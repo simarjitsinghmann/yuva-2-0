@@ -62,7 +62,8 @@ $(document).on('click', '.quantity-button', function(evt) {
   var $el = $(this),
       line = $el.data('line'),
       $qtySelector = $el.closest('.quantity').find('.ajaxcart__qty-num');
-      var qty = 0;
+      var qty = parseInt($qtySelector.val());
+  	console.log(qty)
   if($qtySelector){
    qty = parseInt($qtySelector.val().replace(/\D/g, ''));
   }
