@@ -588,7 +588,7 @@ var mouse_is_inside = false;
 
 $(document).ready(function()
                   {
-  $('.side_drawer_wrapper,.askmecontainer,#quick_view,.search-bar-container,.search-form,#mini__cart,#dropdown-customer,.newsletter-popup-inner,#similar__product,.side-menu').hover(function(){ 
+  $('body').on('hover','.side_drawer_wrapper,.askmecontainer,#quick_view,.search-bar-container,.search-form,#mini__cart,#dropdown-customer,.newsletter-popup-inner,#similar__product,.side-menu',function(){ 
     mouse_is_inside=true; 
   }, function(){ 
     mouse_is_inside=false; 
