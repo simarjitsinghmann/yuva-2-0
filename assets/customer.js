@@ -63,6 +63,10 @@ class CustomerAddresses {
   _toggleExpanded(target) {
     var popUp = target.parentNode.querySelector(".addressPopUp").innerHTML;
     var newTarget = document.querySelector('[data-drawer-body]');
+    
+    var parent = document.querySelector('[data-side-drawer]');
+    parent.setAttribute('id','addressSection');
+    parent.classList.add('addressSection');
     document.querySelector('[data-drawer-title]').innerHTML = target.getAttribute('data-title');
     newTarget.innerHTML = popUp;
     
