@@ -601,7 +601,10 @@ $(document).ready(function()
       $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper').attr('id','')
     }
   });
-  
+  $(document).on('click','side_drawer_close',function(){
+      $('body').removeClass('side_Drawer_open')
+      $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper').attr('id','')
+  });
   $(document).on('click', '.quickView', function(evt) {
     evt.preventDefault();
     
