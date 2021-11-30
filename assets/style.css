@@ -3117,9 +3117,20 @@ body #shopify-product-reviews {
     box-shadow: none;
     text-decoration: underline;
     text-underline-offset: 0.3rem;
-    color: var(--color-link);
     background-color: transparent;
     font-size: 14px;
+}
+#shopify-product-reviews .spr-review-reportreview {
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    box-shadow: none;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    background-color: #ebebeb;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 4px 10px;
 }
 #shopify-product-reviews .spr-header-title {
 	font-size:20px;
