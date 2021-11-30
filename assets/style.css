@@ -871,7 +871,7 @@ a.wishlist-view .fas { display: none; }
 /* .colllection-list-view{
     margin: 0px -10px;
 } */
-.colllection-list-view .slick-active .collection-list-view-wrapper {
+.colllection-list-view .slick-active:not(.slick-current) .collection-list-view-wrapper {
     padding: 0;
 }
 .colllection-list-view .collection-list-view-wrapper {
