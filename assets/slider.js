@@ -2,7 +2,7 @@
 var elements = document.getElementsByClassName('productImageSlideItem');
 
 var thumbs = document.getElementsByClassName('productThumbImage');
-
+console.log(elements)
 window.onscroll = function() {
    visibleElement()
 };
