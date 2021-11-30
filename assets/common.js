@@ -255,7 +255,6 @@ $(document).ready(function(){
     document.querySelector('body').classList.add('side_Drawer_open');     
     drawer.querySelector('[data-drawer-body]').innerHTML ='';
     drawer.querySelector('[data-drawer-title]').innerHTML ='Similar Products';
-    drawer.querySelector('[data-drawer-body]').style.display = "none";
     var getID = $(this).attr('data-id'); 
     var getSection = $(this).attr('data-section'); 
     fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
@@ -267,7 +266,6 @@ $(document).ready(function(){
       if (recommendations && recommendations.innerHTML.trim().length) {
         drawer.querySelector('[data-drawer-body]').innerHTML = recommendations.innerHTML;   
         drawer.classList.remove('searching');
-        drawer.querySelector('[data-drawer-body]').style.display = "block";
       }
     });
   });
