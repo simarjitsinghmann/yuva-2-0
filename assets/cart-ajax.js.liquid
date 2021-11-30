@@ -215,7 +215,11 @@ buildCart = function (cart,showCart) {
   }
 
 };
-
+$('.openCartDrawer').click(function(e){
+  e.preventDefault();
+  $('body').toggleClass('minicart-open');
+  $('.wrapper-overlay').css({"display": "block"});
+});
 
 $(document).on('click', '.sd_mini_removeproduct', function(evt) {
   evt.preventDefault();
