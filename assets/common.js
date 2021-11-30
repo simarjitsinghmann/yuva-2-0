@@ -518,7 +518,9 @@ var block = '';
 
 jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:select shopify:block:deselect', function(event){
   var parent = event.target;
-
+  if(Shopify.PaymentButton){
+    Shopify.PaymentButton.init();
+  }
   var slider = jQuery(parent).find('[data-slider]');
   if(event.type == "shopify:block:select"){
     var sectionId = event.detail.sectionId

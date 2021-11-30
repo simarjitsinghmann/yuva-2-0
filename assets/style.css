@@ -3321,5 +3321,45 @@ min-height: 15px;
 .quick_view .quickviewcontent .product-image-left {
     padding: 0 10px 0 10px;
 }
-
+.quick_view .quickviewcontent {
+    padding: 30px 20px 0;
+    height: calc(100vh - 57px); 
+    overflow-y: auto;
+  	overflow-x:hidden;
+}
+.quick_view .quickviewcontent .product-add-to-cart-right h2 {
+    font-size: 17px;
+  line-height:20px;
+    margin-bottom: 0;
+    font-weight: var(--medium);
+    letter-spacing: .3px;
+    margin-bottom: 3px;
+    text-transform: capitalize;
+}
+.quick_view .quickviewcontent .product-add-to-cart-right h2 a {
+	color: #000;
+    font-size: 19px;
+}
+.quick_view .quickviewcontent .prizebox #get_price {
+    font-size: 25px;
+}
+.quick_view .quickviewcontent .size_option .option {
+    min-width: 30px;
+    font-size: 12px;
+    line-height: 23px;
+}
+.quick_view #ProductQuickView .product-loop-variants.circle .color_option span.option {
+    width: 22px;
+    height: 22px;
+}
+.quick_view  #ProductQuickView .product-add-to-cart-right .prizebox {
+    margin: 0 0 5px;
+}
+.quick_view .quickviewcontent .product-add-to-cart-right p.vendor_name {
+    margin: 0px 0 5px;
+}
+.quick_view .quickviewcontent .product-image-left .owl-item div {
+    background-color: #ececec;
+  border:1px solid #ddd;
+}
 /* side drawer css end */
