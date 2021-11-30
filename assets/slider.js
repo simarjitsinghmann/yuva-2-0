@@ -28,4 +28,3 @@ function checkVisible(elm) {
         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
-checkElementOnLoad()
