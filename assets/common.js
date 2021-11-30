@@ -588,7 +588,6 @@ var mouse_is_inside = false;
 
 $(document).ready(function()
                   {
-  console.log('help')
   $('.side_drawer_wrapper,.askmecontainer,.search-bar-container,.search-form,.newsletter-popup-inner,.side-menu').hover(function(){ 
     mouse_is_inside=true; 
   }, function(){ 
@@ -596,9 +595,8 @@ $(document).ready(function()
   });
 
   $("body").mouseup(function(){ 
-    console.log(mouse_is_inside)
     if(! mouse_is_inside) {
-      $('body').removeClass('side_drawer_open').removeClass('active_askme').removeClass('scrollHidden').removeClass('quickview-open').removeClass('nav-open').removeClass('addsearch').removeClass('small_search').removeClass('minicart-open').removeClass('customer-open').removeClass('NewsletterActive').removeClass('show__similar__products');
+      $('body').removeClass('side_Drawer_open').removeClass('active_askme').removeClass('scrollHidden').removeClass('quickview-open').removeClass('nav-open').removeClass('addsearch').removeClass('small_search').removeClass('minicart-open').removeClass('customer-open').removeClass('NewsletterActive').removeClass('show__similar__products');
       $('.newsletter-popup,.wrapper-overlay,.askmeMain.slideAskme').hide();
     }
   });
