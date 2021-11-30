@@ -178,20 +178,18 @@
 </div>
 <script>
   $(document).ready(function(){
-    var sync1 =$("#feature__product-{{product.id}}");
-                 var sync2 = $("#feature__productThumbs-{{product.id}}");
 
-                 sync1.slick({
-                 slidesToShow:1,
-                 slidesToScroll:1,
-                 autoplay:false,
-                 infinite:false,
-                 autoplayHoverPause:false,
-                 arrows: false,
-                 dots: false,
-                 asNavFor: sync2
-                 })
-    sync2.slick({
+    $("#feature__product-{{product.id}}").slick({
+      slidesToShow:1,
+      slidesToScroll:1,
+      autoplay:false,
+      infinite:false,
+      autoplayHoverPause:false,
+      arrows: false,
+      dots: false,
+      asNavFor: $("#feature__productThumbs-{{product.id}}")
+      })
+    $("#feature__productThumbs-{{product.id}}").slick({
       slidesToShow:4,
       slidesToScroll:1,
       autoplay:false,
@@ -199,8 +197,8 @@
       autoplayHoverPause:false,
       arrows: false,
       dots: false,
-      asNavFor: sync1
-    })
+      asNavFor: $("#feature__product-{{product.id}}")
+      })
 
   })
 </script>
