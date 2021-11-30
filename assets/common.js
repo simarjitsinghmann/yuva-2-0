@@ -256,7 +256,7 @@ $(document).ready(function(){
     drawer.setAttribute('id','similar_product');
     drawer.classList.add('similar_product');
     drawer.classList.add('similarSearching');
-    document.querySelector('body').classList.add('similarSearching');
+    document.querySelector('body').classList.add('side_Drawer_open');     
     drawer.querySelector('[data-drawer-body]').innerHTML ='';
     drawer.querySelector('[data-drawer-title]').innerHTML ='Similar Products';
     drawer.querySelector('[data-drawer-body]').style.display = "none"
