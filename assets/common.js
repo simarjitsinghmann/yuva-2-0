@@ -247,41 +247,41 @@ $(document).ready(function(){
 	
 	
 	///similar-product//
-	$('body').on('click','.similar_options',function(){
-		$('body').toggleClass('side_Drawer_open');
-		$('.wrapper-overlay').css({"display": "block"});
-		
-      const drawer = document.querySelector('[data-side-drawer]');	
-      
+  $('body').on('click','.similar_options',function(){
+    $('body').toggleClass('side_Drawer_open');
+    $('.wrapper-overlay').css({"display": "block"});
+
+    const drawer = document.querySelector('[data-side-drawer]');	
+
     drawer.setAttribute('id','similar_product');
     drawer.classList.add('similar_product');
-		drawer.querySelector('.results-similarItemContainer').innerHTML ='';
-		drawer.querySelector('[data-drawer-title]').innerHTML ='Similar Products';
-      drawer.querySelector('.results-similarItemContainer').style.display = "none"
-		drawer.querySelector('.sp-loader').style.display = "block";
-		var getID = $(this).attr('data-id'); 
-		var getSection = $(this).attr('data-section'); 
-		fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
-			.then(response => response.text())
-			.then((text) => {
-				const html = document.createElement('div');
-				html.innerHTML = text;
-				const recommendations = html.querySelector('.similarItemContainer');
-				if (recommendations && recommendations.innerHTML.trim().length) {
-					drawer.querySelector('.results-similarItemContainer').innerHTML = recommendations.innerHTML;
-					drawer.querySelector('.sp-loader').style.display = "none";
-					drawer.querySelector('.results-similarItemContainer').style.display = "block";
-				}
-			});
-		return false;
-		$('.similar-product-section').fadeIn(); 
-		setTimeout(function(){ $('.sp-inner').css({'bottom':'0px'});}, 100);
-		setTimeout(function(){ $('.sp-loader').hide(); }, 1400);
-		setTimeout(function(){      
-		  $('.similar-product-section').removeClass('similarSearching');
-		  $('.SimilarNoResults').show();
-		  $('#SimilarProducts').show(); 
-		}, 1800);
+    drawer.querySelector('.results-similarItemContainer').innerHTML ='';
+    drawer.querySelector('[data-drawer-title]').innerHTML ='Similar Products';
+    drawer.querySelector('.results-similarItemContainer').style.display = "none"
+    drawer.querySelector('.sp-loader').style.display = "block";
+    var getID = $(this).attr('data-id'); 
+    var getSection = $(this).attr('data-section'); 
+    fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
+    .then(response => response.text())
+    .then((text) => {
+      const html = document.createElement('div');
+      html.innerHTML = text;
+      const recommendations = html.querySelector('.similarItemContainer');
+      if (recommendations && recommendations.innerHTML.trim().length) {
+        drawer.querySelector('.results-similarItemContainer').innerHTML = recommendations.innerHTML;
+        drawer.querySelector('.sp-loader').style.display = "none";
+        drawer.querySelector('.results-similarItemContainer').style.display = "block";
+      }
+    });
+    return false;
+    $('.similar-product-section').fadeIn(); 
+    setTimeout(function(){ $('.sp-inner').css({'bottom':'0px'});}, 100);
+    setTimeout(function(){ $('.sp-loader').hide(); }, 1400);
+    setTimeout(function(){      
+      $('.similar-product-section').removeClass('similarSearching');
+      $('.SimilarNoResults').show();
+      $('#SimilarProducts').show(); 
+    }, 1800);
 	});
 	$('.close-customer').click(function(){
 		$("body").removeClass("show__similar__products"), 
