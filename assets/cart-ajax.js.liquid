@@ -208,7 +208,7 @@ buildCart = function (cart,showCart) {
     totalCartDiscountApplied: cart.total_discount === 0 ? false : true
   }
   $('[data-cart-count]').text(cart.item_count).show();
-  $('#mini__cartForm').html(template(data));
+  $('[data-drawer-body]').html(template(data));
   if(showCart){
     $('body').addClass('minicart-open');
     $('.wrapper-overlay').css({"display": "block"});

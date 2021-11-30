@@ -3206,6 +3206,29 @@ min-height: 15px;
 }
 /* pdp page review css end */
 /* side drawer css start */
+.side_drawer_wrapper {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#dropdown-customer, #mini__cart, #similar__product, .quick_view, .side-menu, .side-menu .inner-side .nav-item.dropdown ul.child, .side-menu .inner-side .nav-item.dropdown ul.grandchild { width: 100%; max-width: 464px; position: fixed; top: 0; right: -464px; z-index: 99999; background: var(--white); height: 100vh; webkit-transition: all 0.7s ease; -moz-transition: all .7s ease; -ms-transition: all .7s ease; -o-transition: all .7s ease; transition: all .7s ease; overflow-x:hidden; overflow-y:auto; } 
+.quick_view {
+  right:-800px;
+  max-width: 800px;
+}
+.minicart-open #mini__cart, .show__similar__products #similar__product, .quickview-open .quick_view { right: 0;}
 #similar__product {max-width: 470px; right: -470px;padding: 0;}
 #mini__cart {padding:0;}
 .cart-product-title h5 {
@@ -3216,6 +3239,7 @@ min-height: 15px;
 .cart-product-title { border-bottom: 1px solid #ececf0;}
 .customer-title .close-customer, 
 .side_drawer_close { position: absolute; top: 23px; right: 22px; color: var(--black); } 
+
 .cart-item-container .product__price {
 	font-size: var(--reg-text);
 	font-weight: var(--medium);
