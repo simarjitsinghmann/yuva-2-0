@@ -269,9 +269,8 @@ $(document).ready(function(){
       html.innerHTML = text;
       const recommendations = html.querySelector('.similarItemContainer');
       if (recommendations && recommendations.innerHTML.trim().length) {
-        drawer.querySelector('.results-similarItemContainer').innerHTML = recommendations.innerHTML;
-        drawer.querySelector('.sp-loader').style.display = "none";
-        drawer.querySelector('.results-similarItemContainer').style.display = "block";
+        drawer.querySelector('[data-drawer-body]').innerHTML = recommendations.innerHTML;
+        drawer.querySelector('[data-drawer-body]').style.display = "block";
       }
     });
     return false;
