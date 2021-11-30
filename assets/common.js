@@ -256,9 +256,9 @@ $(document).ready(function(){
     drawer.setAttribute('id','similar_product');
     drawer.classList.add('similar_product');
     drawer.classList.add('similarSearching');
-    drawer.querySelector('.results-similarItemContainer').innerHTML ='';
+    drawer.querySelector('[data-drawer-body]').innerHTML ='';
     drawer.querySelector('[data-drawer-title]').innerHTML ='Similar Products';
-    drawer.querySelector('.results-similarItemContainer').style.display = "none"
+    drawer.querySelector('[data-drawer-body]').style.display = "none"
     drawer.querySelector('.sp-loader').style.display = "block";
     var getID = $(this).attr('data-id'); 
     var getSection = $(this).attr('data-section'); 
@@ -604,9 +604,8 @@ $(document).ready(function()
     evt.preventDefault();
     
     const drawer = document.querySelector('[data-side-drawer]');	
-    drawer.setAttribute('id','similar_product');
-    drawer.classList.add('similar_product');
-    drawer.classList.add('similarSearching');
+    drawer.setAttribute('id','quickView_product');
+    drawer.classList.add('quickView_product');Quick View
     $('#ProductQuickView').hide();
     var _url = $(this).data('href');
     if(_url.indexOf('?') > -1){
