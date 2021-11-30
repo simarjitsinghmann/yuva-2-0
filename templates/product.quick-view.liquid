@@ -189,8 +189,9 @@
     $('#feature__productThumbs-{{product.id}}').slick({
       slidesToShow: 3,
       slidesToScroll: 1,
-      asNavFor: #feature__product-{{product.id}},
-      dots: true,
+      asNavFor:'#feature__product-{{product.id}}',
+      dots: false,
+      arrows: false,
       centerMode: true,
       focusOnSelect: true
       });
