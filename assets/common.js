@@ -255,7 +255,7 @@ $(document).ready(function(){
 
     drawer.setAttribute('id','similar_product');
     drawer.classList.add('similar_product');
-    drawer.classList.add('similarSearching');
+    drawer.classList.add('searching');
     document.querySelector('body').classList.add('side_Drawer_open');     
     drawer.querySelector('[data-drawer-body]').innerHTML ='';
     drawer.querySelector('[data-drawer-title]').innerHTML ='Similar Products';
@@ -272,7 +272,7 @@ $(document).ready(function(){
       if (recommendations && recommendations.innerHTML.trim().length) {
         drawer.querySelector('[data-drawer-body]').innerHTML = recommendations.innerHTML;
         drawer.querySelector('.sp-loader').style.display = "none";        
-        drawer.classList.remove('similarSearching');
+        drawer.classList.remove('searching');
         drawer.querySelector('[data-drawer-body]').style.display = "block";
       }
     });
@@ -610,6 +610,7 @@ $(document).ready(function()
     drawer.querySelector('[data-drawer-body]').innerHTML ='';
     drawer.querySelector('[data-drawer-title]').innerHTML ='Quick View';
     drawer.querySelector('[data-drawer-body]').style.display = "none";
+    drawer.querySelector('[data-drawer-body]').classList.add('searching');
     document.querySelector('body').classList.add('side_Drawer_open'); 
     var _url = $(this).data('href');
     if(_url.indexOf('?') > -1){
@@ -618,7 +619,7 @@ $(document).ready(function()
     }
     $('.Quick_loader').fadeIn('slow');
     $('#ProductQuickView').load(_url+'?view=quick-view', function() {setTimeout(function(){
-      $('.Quick_loader').hide();
+    drawer.querySelector('[data-drawer-body]').classList.remove('searching');
       $('#ProductQuickView').show();
       $(window).trigger('resize');
       productVariants();
