@@ -602,6 +602,11 @@ $(document).ready(function()
   
   $(document).on('click', '.quickView', function(evt) {
     evt.preventDefault();
+    
+    const drawer = document.querySelector('[data-side-drawer]');	
+    drawer.setAttribute('id','similar_product');
+    drawer.classList.add('similar_product');
+    drawer.classList.add('similarSearching');
     $('#ProductQuickView').hide();
     var _url = $(this).data('href');
     if(_url.indexOf('?') > -1){
@@ -611,21 +616,7 @@ $(document).ready(function()
     $('.Quick_loader').fadeIn('slow');
     $('body').addClass('quickview-open');
     $('#ProductQuickView').load(_url+'?view=quick-view', function() {
-      var recommended = $('#ProductQuickView').find('.product-recommendations');
-      var url = recommended.attr('data-url');
-      fetch(url)
-      .then(response => response.text())
-      .then((text) => {
-        const html = document.createElement('div');
-        html.innerHTML = $(text).find('.product-recommendations').html();
-        recommended.html(html)
-        setTimeout(function(){
-          $('.Quick_loader').hide();
-          $('#ProductQuickView').show();
-          $(window).trigger('resize');
-          productVariants();
-        },500)
-      });
+      
     });
   });
 
