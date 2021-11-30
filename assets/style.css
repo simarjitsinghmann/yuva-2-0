@@ -3321,11 +3321,17 @@ min-height: 15px;
     width: 100%;
     background-color: var(--gray);
 }
-.quickview_product_detail .product-loop-variants.circle .color_option span.option {
-  width: 35px;
-  height: 35px;
+.quickview_product_detail .product-add-to-cart-right h2, 
+.quickview_product_detail .product-add-to-cart-right h2 a {
+    color: var(--black);
+    position: relative;
+    font-size: 20px;
+    margin-bottom: 0;
+    font-weight: var(--medium);
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    line-height: 20px;
 }
-
 .rte + ul.share-icons {
   margin-top: 14px;
 }
