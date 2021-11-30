@@ -12,7 +12,7 @@ function visibleElement(){
             Array.from(thumbs).forEach(function(thumb) {
                 thumb.classList.remove('active');
             });
-            const relatedThumb = document.querySelectorAll('[href="#'+item.id+'"]')[0];
+            const relatedThumb = document.querySelector('[href="#'+item.id+'"]');
             relatedThumb.classList.add('active');
         }
     });
