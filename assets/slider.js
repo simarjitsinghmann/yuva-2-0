@@ -21,6 +21,7 @@ function visibleElement(){
                 thumb.classList.remove('active');
             });
             const relatedThumb = document.querySelector('[href="#'+item.id+'"]');
+          console.log(relatedThumb)
             relatedThumb.classList.add('active');
         }
     });
