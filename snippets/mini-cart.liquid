@@ -2,6 +2,7 @@
 </div>
 <script id="CartTemplate" type="text/template">
     {% raw %}
+  <div id="mini__cartForm">
      <form action="{% endraw %}{{ routes.cart_url }}{% raw %}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
 	<div class="cart-item-container">	
     	{% endraw %}
@@ -65,6 +66,7 @@
 		</div>
 	</div>
     </form>
+    </div>
 {% endraw %}
 </script>
 <script src="{{'cart-ajax.js' | asset_url}}" defer="defer"></script> 
