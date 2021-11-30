@@ -16,7 +16,7 @@ function checkVisible(elm) {
 function visibleElement(){
  Array.from(elements).forEach(function(item) {
    
-          console.log(item.id)
+          console.log(item)
         if (checkVisible(item)) {
             Array.from(thumbs).forEach(function(thumb) {
                 thumb.classList.remove('active');
