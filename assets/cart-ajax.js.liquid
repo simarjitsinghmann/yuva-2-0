@@ -210,7 +210,7 @@ buildCart = function (cart,showCart) {
   $('[data-cart-count]').text(cart.item_count).show();
   $('[data-drawer-body]').html(template(data));
   if(showCart){
-    $('body').addClass('minicart-open');
+    $('body').addClass('minicart-open').addClass('side_Drawer_open');
     $('.wrapper-overlay').css({"display": "block"});
   }
 
