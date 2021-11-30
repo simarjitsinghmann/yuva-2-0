@@ -3299,11 +3299,13 @@ min-height: 15px;
     width: 100%;
 }
 .quickview_product_slider .quickview_product .quickview_product_img {
-    max-height: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  max-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom:20px;
+  overflow:hidden;
+  background-color: var(--gray);
 }
 #ProductQuickView .product_content_section {
   max-height: 600px;
