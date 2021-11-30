@@ -65,7 +65,7 @@ class CustomerAddresses {
     var newTarget = document.querySelector('[data-drawer-body]');
     newTarget.innerHTML = popUp;
     
-    document.querySelector('body').classList.add('show__similar__products');     
+    document.querySelector('body').classList.add('show__similar__products side_Drawer_open');     
     this.elements = this._getElements();
     this._setupCountries();
     this._setupEventListeners();
@@ -76,7 +76,7 @@ class CustomerAddresses {
   }
 
   _handleCancelButtonClick = ({ currentTarget }) => {
-    document.querySelector('body').classList.remove('show__similar__products');
+    document.querySelector('body').classList.remove('show__similar__products side_Drawer_open');
   }
 
   _handleDeleteButtonClick = ({ currentTarget }) => {
