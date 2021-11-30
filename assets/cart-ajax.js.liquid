@@ -21,6 +21,7 @@ changeItem = function(line, quantity, callback) {
 // POST to cart/add.js returns the cart in JSON
 $(document).on('submit','[action="/cart/add"]', function(evt) {
   evt.preventDefault();
+  $('.productErrors').hide().html('');
   var submit = $(this).find('[type="submit"]');
   submit.addClass('is-loading');
   params = {
@@ -47,6 +48,7 @@ $(document).on('submit','[action="/cart/add"]', function(evt) {
       else {
         console.log(XMLHttpRequest);
         console.log(XMLHttpRequest.responseJSON.description);
+        $('.productErrors').html(XMLHttpRequest.responseJSON.description).show();
       }
       setTimeout(function(){
         submit.removeClass('is-loading');
