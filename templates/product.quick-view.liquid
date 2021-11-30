@@ -3,14 +3,14 @@
 {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
 <div class="col-md-6 no-padding-left no-padding-right background-img-color euqal-height shopify-section">
   <div class="product-image-left">    
-    <div id="feature__product-{{product.id}}" class="feature__product" data-slider-main>
+    <div id="feature__product-{{product.id}}" class="feature__product" data-slider-id="1">
       {% for image in product.images %}
       <div class="item" >
         <img src="{{image | img_url:'master'}}" alt="">
       </div>
       {% endfor %}
     </div> 
-    <div id="feature__productThumbs-{{product.id}}" class="feature__product thumb" data-slider-thumb>
+    <div id="feature__productThumbs-{{product.id}}" class="feature__product thumb" data-slider-id="1">
       {% for image in product.images %}
       <div class="" >
         <img src="{{image | img_url:'100x'}}" alt="">
@@ -179,23 +179,25 @@
 <script>
   $(document).ready(function(){
 
-    $('[data-slider-main]').slick({
-      asNavFor:'[data-slider-thumb]',
+    $("#feature__product-{{product.id}}").slick({
       slidesToShow:1,
       slidesToScroll:1,
       autoplay:false,
+      infinite:false,
       autoplayHoverPause:false,
       arrows: false,
-      dots: false
+      dots: false,
+      asNavFor:'#feature__productThumbs-{{product.id}}'
       })
-    $('[data-slider-thumb]').slick({
-      asNavFor:'[data-slider-main]',
+    $("#feature__productThumbs-{{product.id}}").slick({
       slidesToShow:4,
       slidesToScroll:1,
-      infinite:true,
+      autoplay:false,
+      infinite:false,
+      autoplayHoverPause:false,
       arrows: false,
       dots: false,
-      centerMode:true
+      asNavFor:'#feature__product-{{product.id}}'
       })
 
   })
