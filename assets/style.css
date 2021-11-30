@@ -3327,6 +3327,9 @@ min-height: 15px;
 .side_drawer_title button {
 	background-color: transparent;
 }
+.side_drawer_title button:hover svg {
+	fill: var(--theme-color);
+}
 .side_drawer_title button svg{
   width: 12px; 
   fill:var(--black);    
