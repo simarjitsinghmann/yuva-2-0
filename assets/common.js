@@ -621,6 +621,7 @@ $(document).ready(function()
     $('#ProductQuickView').load(_url+'?view=quick-view', function() {setTimeout(function(){
     drawer.querySelector('[data-drawer-body]').classList.remove('searching');
     drawer.querySelector('[data-drawer-body]').style.display = "block";
+      $(window).trigger('resize');
       productVariants();
     },500)
     });
