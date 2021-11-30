@@ -3382,7 +3382,7 @@ min-height: 15px;
 .side_drawer_body
 
 /* width */
-    .side_drawer_body::-webkit-scrollbar,
+    .side_drawer_body ::-webkit-scrollbar,
     #dropdown-customer::-webkit-scrollbar, 
     .side-menu::-webkit-scrollbar, 
     .side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar, 
@@ -3391,7 +3391,7 @@ min-height: 15px;
   }
 
   /* Track */
-    .side_drawer_body::-webkit-scrollbar-track,
+    .side_drawer_body ::-webkit-scrollbar-track,
     #dropdown-customer::-webkit-scrollbar-track, 
     .side-menu::-webkit-scrollbar-track, 
     .side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar-track, 
@@ -3400,7 +3400,7 @@ min-height: 15px;
   }
 
   /* Handle */
-    .side_drawer_body::-webkit-scrollbar-thumb,
+    .side_drawer_body ::-webkit-scrollbar-thumb,
     #dropdown-customer::-webkit-scrollbar-thumb, 
     .side-menu::-webkit-scrollbar-thumb, 
     .side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar-thumb, 
@@ -3409,7 +3409,7 @@ min-height: 15px;
   }
 
   /* Handle on hover */
-    .side_drawer_body::-webkit-scrollbar-thumb:hover,
+    .side_drawer_body ::-webkit-scrollbar-thumb:hover,
     #dropdown-customer::-webkit-scrollbar-thumb:hover, 
     .side-menu::-webkit-scrollbar-thumb:hover, 
     .side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar-thumb:hover, 
