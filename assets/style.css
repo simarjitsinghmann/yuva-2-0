@@ -3316,9 +3316,17 @@ min-height: 15px;
     overflow:hidden;
     background-color: var(--gray);
 }
+.quickview_product_img_thumb {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    margin-right: 10px;
+}
 .quickview_product_img_thumb img{
     width: 100%;
-    background-color: var(--gray);
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
 }
 .quickview_product_detail .product-add-to-cart-right h2, 
 .quickview_product_detail .product-add-to-cart-right h2 a {
