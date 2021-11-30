@@ -599,6 +599,10 @@ border: 1px solid #000;
     justify-content: center;
     max-height: 380px;
     }
+.template_collection .card-wrapper-img {
+	min-height:auto;
+  max-height:auto;
+}
 #CollectionProductsContainer[data-view=grid-layout-3] .products-grid .product_columns .grid-item .card-wrapper-img{
   min-height: 500px;
   max-height: 500px;
