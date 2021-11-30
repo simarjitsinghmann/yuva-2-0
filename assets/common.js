@@ -617,8 +617,12 @@ $(document).ready(function()
       _url = _url[0]
     }
     $('.Quick_loader').fadeIn('slow');
-    $('#ProductQuickView').load(_url+'?view=quick-view', function() {
-      
+    $('#ProductQuickView').load(_url+'?view=quick-view', function() {setTimeout(function(){
+      $('.Quick_loader').hide();
+      $('#ProductQuickView').show();
+      $(window).trigger('resize');
+      productVariants();
+    },500)
     });
   });
 
