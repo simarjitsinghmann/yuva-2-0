@@ -12,10 +12,10 @@
   <div class="custom-container">
     <div class="get_in_touch">
       <div class="contact__form__title">
+      	<div class="row">
+        <div class="col-md-8 col-sm-8 mx-auto">
         <h3>{{section.settings.form_heading}}</h3>
  
-      	<div class="row">
-        <div class="col-md-12 col-sm-12">
           {%- form 'contact', id: 'ContactForm' -%}
           {%- if form.posted_successfully? -%}
           <div class="form-status form-status-list form__message" tabindex="-1" autofocus>{{ 'templates.contact.form.post_success' | t }}</div>
