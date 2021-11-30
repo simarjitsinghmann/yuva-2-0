@@ -179,21 +179,21 @@
 <script>
   $(document).ready(function(){
 
-     $(#feature__product-{{product.id}}).slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  fade: true,
-  asNavFor: '#feature__productThumbs-{{product.id}}'
-});
-$('#feature__productThumbs-{{product.id}}').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  asNavFor: #feature__product-{{product.id}},
-  dots: true,
-  centerMode: true,
-  focusOnSelect: true
-});
+    $('#feature__product-{{product.id}}').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '#feature__productThumbs-{{product.id}}'
+      });
+    $('#feature__productThumbs-{{product.id}}').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: #feature__product-{{product.id}},
+      dots: true,
+      centerMode: true,
+      focusOnSelect: true
+      });
 
   })
 </script>
