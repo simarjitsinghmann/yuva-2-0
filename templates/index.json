@@ -422,6 +422,7 @@
         },
         "collection1": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "",
             "btntext": "Explore",
@@ -434,6 +435,7 @@
         },
         "collection2": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "",
             "btntext": "Explore",
@@ -841,6 +843,23 @@
         "textcolor": "#000000",
         "show_divider": false
       }
+    },
+    "1638255644cb8d3175": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "heading": "Yuva Our Story",
+        "content": ""
+      }
+    },
+    "1638256036636fff66": {
+      "type": "newsletter",
+      "settings": {
+        "heading": "Join Our Newsletter",
+        "description": "Sign up it only takes a second to be the news.",
+        "placeholder": "Email Address",
+        "btn": "Subscribe"
+      }
     }
   },
   "order": [
@@ -859,6 +878,8 @@
     "16378396162c4cd192",
     "1637909437c24c2665",
     "instagram",
-    "multicolumn-content"
+    "multicolumn-content",
+    "1638255644cb8d3175",
+    "1638256036636fff66"
   ]
 }
