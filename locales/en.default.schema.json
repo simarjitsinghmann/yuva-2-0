@@ -1101,12 +1101,17 @@
     },
     "rich-text": {
       "name": "Rich Text",
-      "settings": {
-        "heading": {
-          "label": "Heading"
-        },
-        "content": {
-          "label": "content"
+      "blocks": {
+        "richtext": {
+          "name": "Text",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "content": {
+              "label": "content"
+            }
+          }
         }
       },
       "presets": {
