@@ -620,8 +620,7 @@ $(document).ready(function()
     $('.Quick_loader').fadeIn('slow');
     $('#ProductQuickView').load(_url+'?view=quick-view', function() {setTimeout(function(){
     drawer.querySelector('[data-drawer-body]').classList.remove('searching');
-      $('#ProductQuickView').show();
-      $(window).trigger('resize');
+    drawer.querySelector('[data-drawer-body]').style.display = "block";
       productVariants();
     },500)
     });
