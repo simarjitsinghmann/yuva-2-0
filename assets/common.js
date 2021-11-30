@@ -378,7 +378,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
               }
             }
             _productParent.querySelector('[name="id"]').value = getVariant.id;
-            var priceContainer=_productParent.querySelectorAll('[data-price-wrapper]')[0];
+            var priceContainer=_productParent.querySelector('[data-price-wrapper]');
             var showSavedAmount = priceContainer.getAttribute('data-saved');
             var savedAmountStyle = priceContainer.getAttribute('data-saved-style');
             var compareAtPrice= getVariant.compare_at_price;
