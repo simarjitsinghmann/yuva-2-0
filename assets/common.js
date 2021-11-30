@@ -625,6 +625,7 @@ $(document).ready(function()
     $('[data-drawer-body]').load(_url+'?view=quick-view', function() {setTimeout(function(){
     drawer.querySelector('[data-drawer-body]').classList.remove('searching');
     drawer.querySelector('[data-drawer-body]').style.display = "block";
+      Shopify.PaymentButton.init();
       $(window).trigger('resize');
       productVariants();
     },500)
