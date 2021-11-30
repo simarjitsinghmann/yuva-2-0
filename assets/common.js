@@ -248,7 +248,7 @@ $(document).ready(function(){
 	
 	///similar-product//
 	$('body').on('click','.similar_options',function(){
-		$('body').toggleClass('show__similar__products');
+		$('body').toggleClass('side_Drawer_open');
 		$('.wrapper-overlay').css({"display": "block"});
 		$('.results-similarItemContainer').html('').hide();
 		$('.sp-loader').show();
