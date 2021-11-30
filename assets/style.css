@@ -3229,4 +3229,47 @@ min-height: 15px;
 	letter-spacing: 0.6px;
 }
 .close { float: right; font-size: 1.5rem; font-weight: 700; line-height: 1; color: var(--black); text-shadow: 0 1px 0 var(--white); opacity: 1!important; } 
+#recent_search_list h5, .results-box h5 {
+	font-weight: var(--semibold);
+	margin: 26px 0 12px;
+}
+#recent_search_list {
+	width: 100%;
+}
+.recent-search-inner li img {
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	border-radius: 50%;
+	border: 3px solid #fff;
+	box-shadow: 0 0 4px #aaa;
+	object-fit: cover;
+	margin: 0 auto;
+}
+.recent-search-inner {
+	padding-bottom: 25px;
+}
+.recent-search-inner li a span {
+	padding-top: 5px;
+	display: block;
+  	padding-bottom: 10px;
+}
+
+.recent-search-inner ul li {
+	margin-right: 30px;
+}
+.results-box {
+	border-top: 1px solid #f2f2f2;
+}
+.recent-search-inner li a {
+	text-align: center;
+	color: var(--black);
+	font-size: 14px;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: 400;
+}
+.recent-search-inner li:hover a{
+	color:var(--theme-color);
+}
 /* side drawer css end */
