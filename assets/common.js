@@ -265,7 +265,7 @@ $(document).ready(function(){
 				if (recommendations && recommendations.innerHTML.trim().length) {
 					drawer.querySelector('.results-similarItemContainer').innerHTML = recommendations.innerHTML;
 					$('.sp-loader').hide();
-					$('.results-similarItemContainer').show();
+					drawer.querySelector('.results-similarItemContainer').show();
 				}
 			});
 		return false;
