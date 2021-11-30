@@ -264,8 +264,8 @@ $(document).ready(function(){
           		const drawer = document.querySelector('[data-side-drawer]');
 				if (recommendations && recommendations.innerHTML.trim().length) {
 					drawer.querySelector('.results-similarItemContainer').innerHTML = recommendations.innerHTML;
-					$('.sp-loader').hide();
-					drawer.querySelector('.results-similarItemContainer').show();
+					drawer.querySelector('.sp-loader').style.display = "none";
+					drawer.querySelector('.results-similarItemContainer').style.display = "block";
 				}
 			});
 		return false;
