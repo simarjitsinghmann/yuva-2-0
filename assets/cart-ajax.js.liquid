@@ -45,7 +45,7 @@ $(document).on('submit','[action="/cart/add"]', function(evt) {
         errorCallback(XMLHttpRequest, textStatus);
       }
       else {
-        console.log(XMLHttpRequest, textStatus);
+        console.log(textStatus.responseText.message);
       }
       setTimeout(function(){
         submit.removeClass('is-loading');
