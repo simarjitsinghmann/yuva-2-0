@@ -70,12 +70,12 @@
             </div>
             {% endfor %}
 
-            <div class="btn-box product-featured-form-submit {% if section.settings.enable_payment_button %} product-form--payment-button{% endif %}">
+            <div class="btn-box product-featured-form-submit {% if section.settings.enable_payment_button %} product-form--payment-button{% endif %} {% unless current_variant.available %}disabled{% endunless %}" data-button-wrapper>
               <button
                       type="submit"
                       name="add"
                       data-add-to-cart id="Sd_addProduct"
-                      {% unless product.available %}disabled="disabled"{% endunless %}
+                      {% unless current_variant.available %}disabled="disabled"{% endunless %}
                       {% if section_onboarding %}disabled="disabled"{% endif %} class="black-btn button small-btn Sd_addProduct">
                 <span>
                   {% if product.available %}
