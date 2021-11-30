@@ -4,18 +4,18 @@ var elements = document.getElementsByClassName('productImageSlideItem');
 var thumbs = document.getElementsByClassName('productThumbImage');
 console.log(elements)
 
-function checkVisible(elm) {
-  var rect = elm.getBoundingClientRect();
+ isInViewport = function (elem) {
+    var bounding = elem.getBoundingClientRect();
     return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
-}
+};
 function visibleElement(){
  Array.from(elements).forEach(function(item) {   
-        if (checkVisible(item)) {
+        if (isInViewport(item)) {
           console.log(item)
             Array.from(thumbs).forEach(function(thumb) {
                 thumb.classList.remove('active');
