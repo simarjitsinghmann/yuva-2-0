@@ -250,10 +250,12 @@ $(document).ready(function(){
 	$('body').on('click','.similar_options',function(){
 		$('body').toggleClass('side_Drawer_open');
 		$('.wrapper-overlay').css({"display": "block"});
-		$('.results-similarItemContainer').html('').hide();
-		$('.sp-loader').show();
 		
-      const drawer = document.querySelector('[data-side-drawer]');
+      const drawer = document.querySelector('[data-side-drawer]');	
+      
+		drawer.querySelector('.results-similarItemContainer').innerHTML ='';
+      drawer.querySelector('.results-similarItemContainer').style.display = "none"
+		drawer.querySelector('.sp-loader').style.display = "block";
 		var getID = $(this).attr('data-id'); 
 		var getSection = $(this).attr('data-section'); 
 		fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
