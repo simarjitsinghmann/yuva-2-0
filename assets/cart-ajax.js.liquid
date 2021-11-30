@@ -135,7 +135,7 @@ updateQuantity = function(line, qty,callback) {
 buildCart = function (cart,showCart) {
   var shipping = parseInt($('#mini_cart_shipping').data('shipping'));
   $('body').find('[data-drawer-title]').html('Cart');
-  $('body').find('[data-side-drawer]').attr('id','mini__cart').addClass('mini_cart')
+  $('body').find('[data-side-drawer]').attr('id','mini__cart').addClass('mini_cart');
   if (cart.item_count === 0) {
     $('[data-cart-count]').hide();
     $('body').find('[data-drawer-body]').html(`<div class="emptySideCart">
