@@ -598,6 +598,7 @@ $(document).ready(function()
     if(! mouse_is_inside) {
       $('body').removeClass('side_Drawer_open').removeClass('active_askme').removeClass('scrollHidden').removeClass('quickview-open').removeClass('nav-open').removeClass('addsearch').removeClass('small_search').removeClass('minicart-open').removeClass('customer-open').removeClass('NewsletterActive').removeClass('show__similar__products');
       $('.newsletter-popup,.wrapper-overlay,.askmeMain.slideAskme').hide();
+      $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper').attr('id','')
     }
   });
   
