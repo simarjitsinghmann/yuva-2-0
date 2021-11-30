@@ -3165,8 +3165,6 @@ min-height: 15px;
     height: 100vh;
     transform: translateX(100%);
     transition: all .7s ease;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 .side_Drawer_open .side_drawer_wrapper {
 	transform: translateX(0);
@@ -3175,14 +3173,14 @@ min-height: 15px;
 	position:relative;
 }
 .side_Drawer_open:after {
-	    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    background-color: rgb(0 0 0 / 26%);
-    left: 0;
-    z-index: 9;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgb(0 0 0 / 26%);
+  left: 0;
+  z-index: 9;
 }
 .side_drawer_title {
   padding: 15px 20px; 
@@ -3206,6 +3204,10 @@ min-height: 15px;
   margin-right: 10px; 
   color:var(--black); 
   opacity:1; 
+}
+.side_drawer_body {
+    height: calc(100vh - 57px);
+    overflow-y: auto;
 }
 /* side drawer css end */
 
