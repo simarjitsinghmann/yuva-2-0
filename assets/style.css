@@ -3204,7 +3204,7 @@ min-height: 15px;
   color:var(--black); 
   opacity:1; 
 }
-
+/* side drawer css end */
 
 
 
@@ -3294,6 +3294,9 @@ min-height: 15px;
 /* quick view drawer css start */
 .quickview_product_wrapper {
 	padding:20px;
+}
+.quickview_product_slider .quickview_product .item img {
+    width: 100%;
 }
 #ProductQuickView .product_content_section {
   max-height: 600px;
