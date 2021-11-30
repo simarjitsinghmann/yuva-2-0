@@ -269,16 +269,12 @@ $(document).ready(function(){
       }
     });
   });
-	$('.close-customer').click(function(){
-		$("body").removeClass("show__similar__products"), 
-		$(".wrapper-overlay").hide();
-	});
 		
 	///search-top//
 	$('.search-form').click(function(){
 		var _class=$(this).data('search-drawer');
 		$('body').toggleClass(_class);		
-		$('input.form-control.search-input').trigger('click,input,focus');
+		$('input.form-control.search-input').trigger('click input focus');
 		$('#recent_search_list').html('');
 	});
 	$('.HeaderProClose').click(function(){
