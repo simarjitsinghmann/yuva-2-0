@@ -3095,5 +3095,19 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
 }
 #shopify-product-reviews .spr-icon {
     color: #f5b500;
+  font-size: 100%;
+    margin-right: 2px;
+}
+#shopify-product-reviews .spr-summary-actions-newreview {
+	    cursor: pointer;
+    display: inline-block;
+    border: none;
+    box-shadow: none;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    color: var(--color-link);
+    background-color: transparent;
+    font-size: 14px;
+}
 }
 /* pdp page review css end */
