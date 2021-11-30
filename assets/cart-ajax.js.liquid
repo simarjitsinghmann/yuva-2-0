@@ -1,6 +1,3 @@
-jQuery.getJSON('/cart.js', function (cart, textStatus) {
-  buildCart(cart);
-});
 // POST to cart/change.js returns the cart in JSON
 changeItem = function(line, quantity, callback) {
   var $body = $(document.body),
@@ -217,8 +214,9 @@ buildCart = function (cart,showCart) {
 };
 $('.openCartDrawer').click(function(e){
   e.preventDefault();
-  $('body').toggleClass('minicart-open');
-  $('.wrapper-overlay').css({"display": "block"});
+  jQuery.getJSON('/cart.js', function (cart, textStatus) {
+    buildCart(cart);
+  });
 });
 
 $(document).on('click', '.sd_mini_removeproduct', function(evt) {
