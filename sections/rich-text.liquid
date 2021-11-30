@@ -11,19 +11,25 @@
     "name": "t:sections.rich-text.name",
     "tag": "section",
     "class":"rich-text-section",
-    "settings": [
-        {
-            "type":"text",
-            "id":"heading",
-            "label":"t:sections.rich-text.settings.heading.label",
-            "default":"Yuva Our Story"
-        },
-        {
-            "type":"richtext",
-            "id":"content",
-            "label":"t:sections.rich-text.settings.content.label"
-        }
-  	],
+	"blocks":[
+          {
+          "type":"richtext",
+          "name":"t:sections.rich-text.blocks.richtext.name",
+          "settings": [
+              {
+                  "type":"text",
+                  "id":"heading",
+                  "label":"t:sections.rich-text.blocks.richtext.settings.heading.label",
+                  "default":"Heading`"
+              },
+              {
+                  "type":"richtext",
+                  "id":"content",
+                  "label":"t:sections.rich-text.blocks.richtext.settings.content.label"
+              }
+          ]
+		}
+	],
     "presets": [
       {
         "name": "t:sections.rich-text.presets.name"
