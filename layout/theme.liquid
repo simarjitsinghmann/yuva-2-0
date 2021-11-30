@@ -61,10 +61,7 @@
     {{ 'fonts.css' | asset_url | stylesheet_tag }}
 
     {{ 'style-responsive.css' | asset_url | stylesheet_tag }}
-    <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-          />
+    
     {{ content_for_header }}
 
     {%- liquid
@@ -78,10 +75,7 @@
     <script src="{{'vendor.js' | asset_url}}" ></script> 
     <script src="{{'instafeed.min.js' | asset_url}}"></script> 
     <script src="{{'common.js' | asset_url}}" defer="defer"></script> 
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+    
   </head>
 
   <body class="template_{{ template |handle }}">
