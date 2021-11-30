@@ -254,6 +254,7 @@ $(document).ready(function(){
       const drawer = document.querySelector('[data-side-drawer]');	
       
 		drawer.querySelector('.results-similarItemContainer').innerHTML ='';
+		drawer.querySelector('[data-drawer-title]').innerHTML ='Similar Products';
       drawer.querySelector('.results-similarItemContainer').style.display = "none"
 		drawer.querySelector('.sp-loader').style.display = "block";
 		var getID = $(this).attr('data-id'); 
