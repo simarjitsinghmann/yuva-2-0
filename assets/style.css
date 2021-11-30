@@ -3093,6 +3093,9 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
   justify-content: space-around;
 }
 /* pdp page review css start */
+#shopify-product-reviews {
+	margin:0;
+}
 #shopify-product-reviews .spr-summary-starrating,
 #shopify-product-reviews .spr-starratings {
 	display:flex;
@@ -3114,10 +3117,6 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     background-color: transparent;
     font-size: 14px;
 }
-/* #shopify-product-reviews .spr-container {
-    padding: 0;
-    border: 0;
-} */
 #shopify-product-reviews .spr-header-title {
 	font-size:20px;
 }

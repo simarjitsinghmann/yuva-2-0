@@ -255,6 +255,7 @@ $(document).ready(function(){
 
     drawer.setAttribute('id','similar_product');
     drawer.classList.add('similar_product');
+    drawer.classList.add('similarSearching');
     drawer.querySelector('.results-similarItemContainer').innerHTML ='';
     drawer.querySelector('[data-drawer-title]').innerHTML ='Similar Products';
     drawer.querySelector('.results-similarItemContainer').style.display = "none"
