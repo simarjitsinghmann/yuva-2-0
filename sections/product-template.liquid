@@ -182,7 +182,7 @@
                            </div>
                      {% when 'button' %}
                      {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                     <input type="hidden" name="id" value="{{ current_variant.selected_or_first_available_variant.id }}">
+                     <input type="hidden" name="id" value="{{ current_variant.id }}">
                      <div class="product_button">
                        <div class="pdp-action-container {% unless current_variant.available %}disabled{% endunless %}" data-button-wrapper>
                          <div class="pdp-add-to-bag pdp-button pdp-flex pdp-center">
