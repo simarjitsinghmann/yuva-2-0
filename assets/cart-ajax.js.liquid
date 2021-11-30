@@ -213,7 +213,7 @@ buildCart = function (cart,showCart) {
   }
 
 };
-$('.openCartDrawer').click(function(e){
+$('body').on('click','.openCartDrawer',(function(e){
   e.preventDefault();
   jQuery.getJSON('/cart.js', function (cart, textStatus) {
     buildCart(cart);
