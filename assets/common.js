@@ -279,7 +279,7 @@ $(document).ready(function(){
     setTimeout(function(){ $('.sp-inner').css({'bottom':'0px'});}, 100);
     setTimeout(function(){ $('.sp-loader').hide(); }, 1400);
     setTimeout(function(){      
-      $('.similar-product-section').removeClass('similarSearching');
+      drawer.classList.remove('similarSearching');
       $('.SimilarNoResults').show();
       $('#SimilarProducts').show(); 
     }, 1800);
