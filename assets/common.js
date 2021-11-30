@@ -270,7 +270,8 @@ $(document).ready(function(){
       const recommendations = html.querySelector('.similarItemContainer');
       if (recommendations && recommendations.innerHTML.trim().length) {
         drawer.querySelector('[data-drawer-body]').innerHTML = recommendations.innerHTML;
-        drawer.querySelector('.sp-loader').style.display = "none";
+        drawer.querySelector('.sp-loader').style.display = "none";        
+        drawer.classList.remove('similarSearching');
         drawer.querySelector('[data-drawer-body]').style.display = "block";
       }
     });
