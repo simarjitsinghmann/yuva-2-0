@@ -1427,6 +1427,9 @@ padding-top: 20px;
   transition: .3s ease;
   transition-property: transform,opacity;
 }
+.product-detail .panel-title a:before {
+	transform: rotate(-90deg);
+}
 .product-detail .panel-title.active a:after {
   transform: rotate(-45deg);
 }
