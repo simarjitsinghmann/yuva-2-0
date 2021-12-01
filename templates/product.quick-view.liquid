@@ -2,7 +2,7 @@
 
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
-<div class="quickview_product_wrapper">
+<div class="quickview_product_wrapper product_content_section">
   <div class="quickview_product_slider">   
       <div id="feature__product-{{product.id}}" class="quickview_product" data-slider-id="1">
         {% for image in product.images %}
@@ -24,7 +24,7 @@
       </div> 
   </div>
   <div class="quickview_product_detail">
-  <div class="product-add-to-cart-right product_content_section">
+  <div class="product-add-to-cart-right">
 
     <div class="clearfix"> </div>
     <h2><a href="{{product.url}}">{{ product.title | default: 'Example Product Title' }}</a></h2>
