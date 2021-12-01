@@ -347,6 +347,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
                                        var _productParent = productOption.closest('.product_content_section');
         setTimeout(function(){
           const fieldsets = Array.from(_productParent.querySelectorAll('.product-loop-variants'));
+          console.log(fieldsets)
           options=fieldsets.map((fieldset) => {
             return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
           });
@@ -448,16 +449,16 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
   }
 }
 
- 	showMultipleOptions = function(){
-  var showOptions = document.getElementsByClassName('showOptions');
-  if(showOptions){		
-    Array.from(showOptions).forEach(function(option) {
-      option.addEventListener("click", ()=>{	
-                              hideOptions();
-      var product = option.getAttribute("data-product");
-      document.getElementById(product).style.display="block";
+   showMultipleOptions = function(){
+    var showOptions = document.getElementsByClassName('showOptions');
+    if(showOptions){		
+      Array.from(showOptions).forEach(function(option) {
+        option.addEventListener("click", ()=>{	
+                                hideOptions();
+        var product = option.getAttribute("data-product");
+        document.getElementById(product).style.display="block";
+      });
     });
-  });
 }
 
 var closeOptions = document.getElementsByClassName('close-product-wrap');
