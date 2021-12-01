@@ -291,6 +291,48 @@
         "rotate_speed": 2
       }
     },
+    "1638355202411997bd": {
+      "type": "contact-form",
+      "settings": {
+        "form_heading": "Get In Touch",
+        "form_button": "SEND MESSAGE"
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "All Products",
+        "subheading": "See the latest!",
+        "collection": "summer-collection",
+        "col_size": 5,
+        "row_size": 2,
+        "show_second_image": true,
+        "view_all_btn": true,
+        "view_all_btn_text": "View all"
+      }
+    },
+    "16345626467f5a91b7": {
+      "type": "banner-section",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/bh_0017af3c-ff2f-44a5-baf5-34af2c630b06.jpg",
+        "tag_line": "Big Sale",
+        "heading": "Black Friday Big Sale",
+        "subheading": "40% OFF",
+        "content": "Discover the latest chapter of the collection.",
+        "btn": "Shop Now",
+        "link": "shopify:\/\/products\/top-5",
+        "sh_bg": "#ffffff",
+        "sh_text": "#190707",
+        "h_text": "#190707",
+        "subh_text": "#ffffff",
+        "c_text": "#000000",
+        "btn_bg": "#ffffff",
+        "btn_text": "#000000",
+        "btn_h_bg": "#000000",
+        "btn_h_text": "#ffffff",
+        "info_position": "center-right"
+      }
+    },
     "collection-list": {
       "type": "collection-list",
       "blocks": {
@@ -351,17 +393,59 @@
         "btn_text": "#181515"
       }
     },
-    "featured-collection": {
-      "type": "featured-collection",
+    "163456266607727edf": {
+      "type": "featured-product",
+      "blocks": {
+        "f72f1373-ce06-4617-a32d-0722c5e78a36": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "6ff7309b-e945-4e24-aca8-beca6597e82f": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}"
+          }
+        },
+        "ce77ddff-abd2-4f60-9dc4-ec6f7dab1cf4": {
+          "type": "review-star",
+          "settings": {
+          }
+        },
+        "d66f4371-e683-444e-870a-51cdfea4380c": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "13ec56eb-f306-4298-a27f-c400494af1d3": {
+          "type": "variant",
+          "settings": {
+          }
+        },
+        "1cffe049-f089-4d60-8008-5bd00d3710d5": {
+          "type": "quantity",
+          "settings": {
+          }
+        },
+        "1c420cc2-7be4-4305-8f64-175f9f84d926": {
+          "type": "button",
+          "settings": {
+            "dynamic_checkout_btn": true,
+            "show_view_detail": true
+          }
+        }
+      },
+      "block_order": [
+        "f72f1373-ce06-4617-a32d-0722c5e78a36",
+        "6ff7309b-e945-4e24-aca8-beca6597e82f",
+        "ce77ddff-abd2-4f60-9dc4-ec6f7dab1cf4",
+        "d66f4371-e683-444e-870a-51cdfea4380c",
+        "13ec56eb-f306-4298-a27f-c400494af1d3",
+        "1cffe049-f089-4d60-8008-5bd00d3710d5",
+        "1c420cc2-7be4-4305-8f64-175f9f84d926"
+      ],
       "settings": {
-        "heading": "All Products",
-        "subheading": "See the latest!",
-        "collection": "summer-collection",
-        "col_size": 5,
-        "row_size": 2,
-        "show_second_image": true,
-        "view_all_btn": true,
-        "view_all_btn_text": "View all"
+        "product": "ayers-chambray"
       }
     },
     "163678842797a17b64": {
@@ -437,83 +521,6 @@
       ],
       "settings": {
         "heading": "Collection list"
-      }
-    },
-    "16345626467f5a91b7": {
-      "type": "banner-section",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/bh_0017af3c-ff2f-44a5-baf5-34af2c630b06.jpg",
-        "tag_line": "Big Sale",
-        "heading": "Black Friday Big Sale",
-        "subheading": "40% OFF",
-        "content": "Discover the latest chapter of the collection.",
-        "btn": "Shop Now",
-        "link": "shopify:\/\/products\/top-5",
-        "sh_bg": "#ffffff",
-        "sh_text": "#190707",
-        "h_text": "#190707",
-        "subh_text": "#ffffff",
-        "c_text": "#000000",
-        "btn_bg": "#ffffff",
-        "btn_text": "#000000",
-        "btn_h_bg": "#000000",
-        "btn_h_text": "#ffffff",
-        "info_position": "center-right"
-      }
-    },
-    "163456266607727edf": {
-      "type": "featured-product",
-      "blocks": {
-        "f72f1373-ce06-4617-a32d-0722c5e78a36": {
-          "type": "title",
-          "settings": {
-          }
-        },
-        "6ff7309b-e945-4e24-aca8-beca6597e82f": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}"
-          }
-        },
-        "ce77ddff-abd2-4f60-9dc4-ec6f7dab1cf4": {
-          "type": "review-star",
-          "settings": {
-          }
-        },
-        "d66f4371-e683-444e-870a-51cdfea4380c": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "13ec56eb-f306-4298-a27f-c400494af1d3": {
-          "type": "variant",
-          "settings": {
-          }
-        },
-        "1cffe049-f089-4d60-8008-5bd00d3710d5": {
-          "type": "quantity",
-          "settings": {
-          }
-        },
-        "1c420cc2-7be4-4305-8f64-175f9f84d926": {
-          "type": "button",
-          "settings": {
-            "dynamic_checkout_btn": true,
-            "show_view_detail": true
-          }
-        }
-      },
-      "block_order": [
-        "f72f1373-ce06-4617-a32d-0722c5e78a36",
-        "6ff7309b-e945-4e24-aca8-beca6597e82f",
-        "ce77ddff-abd2-4f60-9dc4-ec6f7dab1cf4",
-        "d66f4371-e683-444e-870a-51cdfea4380c",
-        "13ec56eb-f306-4298-a27f-c400494af1d3",
-        "1cffe049-f089-4d60-8008-5bd00d3710d5",
-        "1c420cc2-7be4-4305-8f64-175f9f84d926"
-      ],
-      "settings": {
-        "product": "ayers-chambray"
       }
     },
     "testimonials": {
@@ -595,7 +602,6 @@
     },
     "video-banner": {
       "type": "video-banner",
-      "disabled": true,
       "settings": {
         "videofile": "https:\/\/cdn.shopify.com\/s\/files\/1\/2018\/8867\/files\/ice.mp4",
         "poster": "shopify:\/\/shop_images\/about.png",
@@ -608,9 +614,17 @@
         "link_text": "View products"
       }
     },
+    "1638256036636fff66": {
+      "type": "newsletter",
+      "settings": {
+        "heading": "Join Our Newsletter",
+        "description": "Sign up it only takes a second to be the news.",
+        "placeholder": "Email Address",
+        "btn": "Subscribe"
+      }
+    },
     "16378358938771729e": {
       "type": "faq-section",
-      "disabled": true,
       "blocks": {
         "7969094b-3d16-4dff-9ec1-176409fe418e": {
           "type": "faq",
@@ -653,7 +667,6 @@
     },
     "1637836948779ea0e5": {
       "type": "featured-content",
-      "disabled": true,
       "blocks": {
         "66898c31-882c-4957-b02f-a0444d586590": {
           "type": "featured-content",
@@ -692,7 +705,6 @@
     },
     "16378395879fc0118a": {
       "type": "image-with-text",
-      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/about.png",
         "image_alignment": "left",
@@ -702,7 +714,6 @@
     },
     "16378396162c4cd192": {
       "type": "featured-text",
-      "disabled": true,
       "settings": {
         "content": "\"Synth ethical biodiesel poutine. Bitters beard salvia lo-fi. Palo santo literally plaid edison bulb, pitchfork drinking vinegar authentic pabst street art subway tile craft beer single-origin coffee shaman dreamcatcher. \"",
         "bgcolor": "#e9e9e9"
@@ -852,18 +863,7 @@
     },
     "1638255644cb8d3175": {
       "type": "rich-text",
-      "disabled": true,
       "settings": {
-      }
-    },
-    "1638256036636fff66": {
-      "type": "newsletter",
-      "disabled": true,
-      "settings": {
-        "heading": "Join Our Newsletter",
-        "description": "Sign up it only takes a second to be the news.",
-        "placeholder": "Email Address",
-        "btn": "Subscribe"
       }
     },
     "16382724245dbd108e": {
@@ -875,13 +875,15 @@
   },
   "order": [
     "slider",
-    "collection-list",
+    "1638355202411997bd",
     "featured-collection",
-    "163678842797a17b64",
     "16345626467f5a91b7",
+    "collection-list",
     "163456266607727edf",
+    "163678842797a17b64",
     "testimonials",
     "video-banner",
+    "1638256036636fff66",
     "16378358938771729e",
     "1637836948779ea0e5",
     "16378395879fc0118a",
@@ -891,7 +893,6 @@
     "multicolumn-content",
     "offer-section",
     "1638255644cb8d3175",
-    "1638256036636fff66",
     "16382724245dbd108e"
   ]
 }
