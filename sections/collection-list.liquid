@@ -4,73 +4,27 @@
                   {% if section.settings.heading != blank %}
                   <h2 class="title">{{section.settings.heading}}</h2>
                   {% endif %}
-                  {% if section.settings.btntext != blank and section.settings.btnlink != blank %}
+                  {% if section.settings.btntext != blank %}
                   <a class="view-all" href="{{section.settings.btnlink}}">{{section.settings.btntext}}</a>
                   {% endif %}
                 </div>
                 <div class="collection-gutter">
                   {% if section.settings.m_collection != blank or section.settings.m_collection != false %}
                     <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col" role="list">
-                      {% assign collection = ''%}
-                      {% if section.settings.m_collection != blank %}
-                      {% assign collection = section.settings.m_collection %}
-                      {% endif %}
-                        <div class="card-wrapper left-sided">
-                            <div class="card__warpper__detail left__sided">
-                                <div class="collection-image">
-                                  {% if section.settings.custom == false and collection.featured_image != blank %} 
-                                  {% assign feature_image = collection.featured_image | img_url:'master' %}
-                                  {% elsif section.settings.custom == true and section.settings.mc_image == blank and collection.featured_image != blank %}
-                                  {% assign feature_image = collection.featured_image | img_url:'master' %}
-                                    {% elsif section.settings.custom and section.settings.mc_image != blank  %}
-                                    {% assign feature_image = section.settings.mc_image | img_url:'master' %}
-                                    {%else%}
-                                    {% assign feature_image = 'collection1.svg' | asset_url %}
-                                  {% endif %}
-                                  <img src="{{feature_image}}" alt="">
-                                </div>
-                                <div class="collection-detail">
-                                  
-                                       
-                                    <h4>
-                                      {% if section.settings.custom == false %}
-                                        {{collection.title}}
-                                        {% elsif section.settings.custom and section.settings.mc_heading != blank  %}
-                                        {{section.settings.mc_heading}}
-                                      {% endif %}
-                                      </h4>
-                                         <small>
-                                      {% if section.settings.custom == false %}
-                                        {{collection.description | strip_html | truncatewords: 15, "" }}
-                                        {% elsif section.settings.custom and section.settings.mc_desc != blank  %}
-                                        {{section.settings.mc_desc}}
-                                      {% endif %}
-                                    </small>
-                                      {% if section.settings.mc_btntext != blank %}
-                                        
-                                        {% if section.settings.custom and section.settings.mc_btnlink != blank  %}
-                                          {% assign btnlink = section.settings.mc_btnlink %}
-                                    {% else %}
-                                    {% assign btnlink = collection.url %}
-                                      {% endif%}               
-                                      
-                                    <a href="{{btnlink}}" class="mainColbutton-{{section.id}}">                       
-                                      <span>
-                                      {% if section.settings.button_icon %}
-                                    <svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> 
-                                    {% endif %}
-                                      {{section.settings.mc_btntext}}
-                                    </span>
-                                    </a>
-                                  {% endif %}
-                                </div>
-                            </div>
-                            
-                        </div>
+                      {% include 'featured-collection-grid'
+                      	m_collection:section.settings.m_collection,
+                      custom:section.settings.custom,
+                      mc_image:section.settings.mc_image,
+                      mc_heading:section.settings.mc_heading,
+                      mc_desc:section.settings.mc_desc,
+                      mc_btntext:section.settings.mc_btntext,
+                      mc_btnlink:section.settings.mc_btnlink
+                      %}
                     </div>
                   {% endif %}
                   {% if section.blocks.size > 0 %}
                     <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col " role="list">
+                      {% if section.blocks.size > 1 %}
                         <ul class="collection__right__list block-count{{section.blocks.size}}" role="list">
                           {% for block in section.blocks %}
                             {% assign collection = ''%}
@@ -133,6 +87,19 @@
                             </li>
                             {% endfor %}
                         </ul>
+                      {% else %}
+                      {% for block in section.blocks %}
+                      {% include 'featured-collection-grid'
+                      	m_collection:block.settings.collection,
+                      custom:block.settings.custom,
+                      mc_image:block.settings.image,
+                      mc_heading:block.settings.heading,
+                      mc_desc:block.settings.desc,
+                      mc_btntext:block.settings.btntext,
+                      mc_btnlink:block.settings.btnlink
+                      %}
+                      {% endfor %}
+                      {% endif %}
                     </div>
                   {% endif %}
                 </div>
