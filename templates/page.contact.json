@@ -3,65 +3,21 @@
     "main": {
       "type": "contact-page-template",
       "settings": {
-        "heading": "Contact Us",
-        "banner": "shopify:\/\/shop_images\/contact_bg.jpg"
-      }
-    },
-    "163825587476d3c731": {
-      "type": "image-with-text",
-      "disabled": true,
-      "settings": {
-        "image_alignment": "left",
-        "heading": "Yuva Our Story",
-        "content": ""
-      }
-    },
-    "1638255883c26f9754": {
-      "type": "image-with-text",
-      "settings": {
-        "image_alignment": "left",
-        "heading": "Yuva Our Story",
-        "content": ""
-      }
-    },
-    "16382735064b088bfa": {
-      "type": "contact-form",
-      "settings": {
-        "form_heading": "Get In Touchs",
-        "form_button": "SEND MESSAGE"
-      }
-    },
-    "16382751742e937d75": {
-      "type": "rich-text",
-      "blocks": {
-        "b4e73d95-6be0-4f56-b58b-0a81f8111b05": {
-          "type": "richtext",
-          "settings": {
-            "heading": "Heading",
-            "content": "<p>aasdasdas<\/p>"
-          }
-        },
-        "694569f6-7a05-4ddd-971e-2a881abb725c": {
-          "type": "page",
-          "settings": {
-            "heading": "Heading",
-            "page": "copy-of-frequently-asked-question"
-          }
-        }
-      },
-      "block_order": [
-        "b4e73d95-6be0-4f56-b58b-0a81f8111b05",
-        "694569f6-7a05-4ddd-971e-2a881abb725c"
-      ],
-      "settings": {
+        "banner": "shopify:\/\/shop_images\/contact_bg.jpg",
+        "contact_heading": "Customer Service",
+        "phone_heading": "PHONE US",
+        "phone_number": "+1234567890",
+        "email_heading": "EMAIL",
+        "email": "info@yuva.com",
+        "address_heading": "ADDRESS",
+        "address": "#123 abc main city",
+        "form_heading": "Get In Touch",
+        "form_button": "SEND MESSAGE",
+        "form_info": "<p><strong>Our Stores<\/strong><\/p><p>00 Terry Francois Street<\/p><p>San Francisco, CA 94158<\/p><p>info@mysite.com<\/p><p>Tel: 123-456-7890<\/p><p><\/p><p><strong>Opening Hours<\/strong><\/p><p>Monday - Friday: 11.00 - 18.30<\/p><p>Saturday: 11.00 - 17.00<\/p><p>Sunday: 12.30 - 16.30<br\/><br\/><\/p>"
       }
     }
   },
   "order": [
-    "main",
-    "163825587476d3c731",
-    "1638255883c26f9754",
-    "16382735064b088bfa",
-    "16382751742e937d75"
+    "main"
   ]
 }
