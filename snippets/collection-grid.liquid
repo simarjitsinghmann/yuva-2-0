@@ -8,7 +8,9 @@
        class="card animate-arrow{% if collection.featured_image != blank %} card--media{% else %}{% if section.settings.image_ratio != 'adapt' %} card--stretch{% endif %}{% endif %}{% unless section.settings.image_padding %} card--light-border{% endunless %}"
        >
       <div class="card--stretch card-colored color-{{ section.settings.color_scheme }}">
-        {%- if featuredImage != blank -%}
+        {%- if featuredImage == blank -%}
+        {% assign featuredImage = 'collection1.svg' | asset_url %}
+        {% endif %}
         <div>
           <div class="media media--square media--hover-effect overflow-hidden">
 			
@@ -32,20 +34,6 @@
           <div class="overlay-card"></div>
           <h4 class="collection-title">{{- collection.title -}}</h4>
         </div>
-        {%- else -%}
-        <div class="overlay-card"></div>
-        <div class="card__text-spacing card__text-hover">
-          <h4 class="">
-            {{- collection.title -}}{%- if collection.description == blank -%}{% endif %}
-          </h4>
-
-          {%- if collection.description != blank -%}
-          <p>
-            {{- collection.description | strip_html | truncatewords: 12 -}}
-          </p>
-          {%- endif -%}
-        </div>
-        {%- endif -%}
       </div>
     </a>
   </div>
