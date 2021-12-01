@@ -3425,7 +3425,8 @@ min-height: 15px;
     #dropdown-customer::-webkit-scrollbar, 
     .side-menu::-webkit-scrollbar, 
     .side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar, 
-    .side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar {
+    .side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar,
+	.testimonial-variation2 .testimonial-client-slide .slider-item .slider-box p::-webkit-scrollbar {
     	width: 5px;
   }
 
@@ -3434,7 +3435,8 @@ min-height: 15px;
     #dropdown-customer::-webkit-scrollbar-track, 
     .side-menu::-webkit-scrollbar-track, 
     .side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar-track, 
-    .side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar-track {
+    .side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar-track,
+.testimonial-variation2 .testimonial-client-slide .slider-item .slider-box p::-webkit-scrollbar-track{
       background: var(--gray);
   }
 
@@ -3443,7 +3445,8 @@ min-height: 15px;
     #dropdown-customer::-webkit-scrollbar-thumb, 
     .side-menu::-webkit-scrollbar-thumb, 
     .side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar-thumb, 
-    .side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar-thumb {
+    .side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar-thumb,
+.testimonial-variation2 .testimonial-client-slide .slider-item .slider-box p::-webkit-scrollbar-thumb{
     	background: var(--dark-gray);
   }
 
@@ -3452,7 +3455,8 @@ min-height: 15px;
     #dropdown-customer::-webkit-scrollbar-thumb:hover, 
     .side-menu::-webkit-scrollbar-thumb:hover, 
     .side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar-thumb:hover, 
-    .side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar-thumb:hover{
+    .side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar-thumb:hover,
+.testimonial-variation2 .testimonial-client-slide .slider-item .slider-box p::-webkit-scrollbar-thumb:hover{
     	background: var(--gray);
   }
 /* scrollbar css end */
