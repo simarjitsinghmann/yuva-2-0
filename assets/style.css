@@ -638,12 +638,10 @@ a.wishlist-view .fas { display: none; }
 .card-wrapper .card.card--product .card-wrapper-img a > img, .card-information .card-information-image a > img{ transition:2.5s ease; width:100%; display:block;} 
 .card-wrapper .card.card--product .card-wrapper-img:hover a > img, .card-information .card-information-image:hover a > img{ -moz-transition:2.5s ease; -webkit-transition:2.5s ease; transition:2.5s ease; transform:scale(1.05); } 
 .card-wrapper .card.card--product .card-wrapper-img:hover::after, .card-information .card-information-image:hover::after { -moz-transition:2.5s ease; -webkit-transition:2.5s ease; transition: 2.5s ease;visibility:visible; opacity:1; } 
-/* .card-wrapper .card.card--product .card-wrapper-img::after, .card-information .card-information-image::after { background: rgba(0, 0, 0,0.22); position: absolute; left: 0; right: 0; top: 0; height: 100%; bottom: 0; content: ""; -moz-transition:2.5s ease; -webkit-transition:2.5s ease; transition: 2.5s ease; opacity:0; visibility:hidden; }  */
 .product-loop-variants.circle .color_option input { opacity: 0; position: absolute; cursor:pointer;z-index:9; } 
 .product-loop-variants .color_option input:checked+span.option, 
 .product-loop-variants .color_option input:hover+span.option {
-  /*     border: 3px solid #fff; */
-  outline: 1px solid #000;
+  bordwer-color: #000;
 }
 .product__view__option li button svg {
   width: 19px;
