@@ -12,7 +12,7 @@
       {% elsif section.settings.view_limit == 4 %}
       {% assign colWidth = 'col-md-3' %}
       {% endif %}
-      <div class="" id="collectionSlider-{{section.id}}" data-slider>
+      <div class="" id="collectionSlider-{{section.id}}">
         {% for block in section.blocks %}
         {% if block.settings.collection != blank %}
         {% assign collection = block.settings.collection %}
@@ -39,29 +39,6 @@
         {% endif %}
         {% endfor%}
       </div>
-      <script type="application/json" name="slider-json">
-         {
-          "slidesToShow":2,
-          "slidesToScroll":1,
-          "infinite":true,
-          "speed": 1000,
-         "dots":false,
-          "autoplay":false,
-          "draggable":false,
-          "centerPadding":"20px",
-          "arrows":true,
-          "prevArrow":"<button type=\"button\" class=\"slick-prev\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M15.526 18.966L8.559 12l6.967-6.967\"></path></svg></span></button>",
-          "nextArrow":"<button type=\"button\" class=\"slick-next\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M8.474 18.966L15.44 12 8.474 5.033\"></path></svg></span></button>",
-          "responsive":[
-          	{
-            	"breakpoint": 750,
-                  "settings": {
-                    "slidesToShow": 1
-                  }
-            }
-          ]
-        }
-      </script>
     </div>
   </div>
 </div>
