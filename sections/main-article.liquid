@@ -122,7 +122,7 @@
 
                         {%- if form.errors contains 'author' -%}
                         <small id="CommentForm-author-error">
-                          <span class="form__message">{{ 'blogs.article.name' | t }} {{ form.errors.messages['author'] }}.</span>
+                          <span class="form__message error_message">{{ 'blogs.article.name' | t }} {{ form.errors.messages['author'] }}.</span>
                         </small>
                         {%- endif -%}
                       </div>
@@ -149,7 +149,7 @@
 
                         {%- if form.errors contains 'email' -%}
                         <small id="CommentForm-email-error">
-                          <span class="form__message">{{ 'blogs.article.email' | t }} {{ form.errors.messages['email'] }}.</span>
+                          <span class="form__message error_message">{{ 'blogs.article.email' | t }} {{ form.errors.messages['email'] }}.</span>
                         </small>
                         {%- endif -%}
                       </div>
@@ -175,7 +175,7 @@
                   </div>
                   {%- if form.errors contains 'body' -%}
                   <small id="CommentForm-body-error">
-                    <span class="form__message">{{ 'blogs.article.message' | t }} {{ form.errors.messages['body'] }}.</span>
+                    <span class="form__message error_message">{{ 'blogs.article.message' | t }} {{ form.errors.messages['body'] }}.</span>
                   </small>
                   {%- endif -%}
                 </div>
