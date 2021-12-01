@@ -195,6 +195,7 @@ buildCart = function (cart,showCart) {
   var shipPendingPercentage = '100';
   if(cart.total_price < shipping){
     shippPending = Shopify.formatMoney((shipping - cart.total_price), moneyFormat);
+    shippPending = shippingText.replace('||amount||',shippPending);
     shipPendingPercentage = ((cart.total_price /shipping)*100);
     if(shipPendingPercentage > 10){
       shipPendingPercentage= shipPendingPercentage - 5
