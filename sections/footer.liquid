@@ -53,7 +53,7 @@
               <input type="hidden" name="contact[tags]" value="newsletter">
               
               {% if form.posted_successfully? %}
-              <p>{{ 'newsletter.success' | t }}</p>
+              <span class="success_message">{{ 'newsletter.success' | t }}</span>
               {% else %}
                 <div class="newsletter-form__field-wrapper">
                   <div class="field">
@@ -82,7 +82,7 @@
                     </label>
                   </div>                  
               {%- if form.errors -%}
-                <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                <span class="newsletter-form__message form__message error_message" id="Newsletter-error--{{ section.id }}">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
               {%- endif -%}
                 </div>
                 <button type="submit" class="button button--secondary newsletter-form__button" name="commit" id="Subscribe">
