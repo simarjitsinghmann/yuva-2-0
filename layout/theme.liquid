@@ -71,10 +71,7 @@
     %}
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
-
-    <script src="{{'vendor.js' | asset_url}}" ></script> 
-    <script src="{{'instafeed.min.js' | asset_url}}"></script> 
-    <script src="{{'common.js' | asset_url}}" defer="defer"></script> 
+	{% include 'theme-scripts' %}
     
   </head>
 
