@@ -1,4 +1,4 @@
-<div id="mini_cart_shipping" {% if settings.enable_shipping and settings.shipping_rate != blank %}data-shipping="{{settings.shipping_rate | times:100}}"{% endif %}>
+<div id="mini_cart_shipping" {% if settings.enable_shipping and settings.shipping_rate != blank %}data-shipping="{{settings.shipping_rate | times:100}}" data-shipText="{{settings.shipping_text}}"{% endif %}>
 </div>
 <script id="CartTemplate" type="text/template">
     {% raw %}
