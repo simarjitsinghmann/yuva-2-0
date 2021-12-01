@@ -1,17 +1,19 @@
-<div class="container">
-  {% for block in section.blocks %}
-  <div class="right-text-content"  {{ block.shopify_attributes }}>
-    <h3>{{block.settings.heading}}</h3>
-    <div class="rich-text-description">
-      {%-case block.type -%}
-      {% when 'richtext' %}
-      {{block.settings.content}}
-      {% when 'page' %}
-      {{block.settings.page.content}}
-      {%- endcase -%}
+<div class="section-spacer">
+  <div class="container">
+    {% for block in section.blocks %}
+    <div class="right-text-content"  {{ block.shopify_attributes }}>
+      <h3>{{block.settings.heading}}</h3>
+      <div class="rich-text-description">
+        {%-case block.type -%}
+        {% when 'richtext' %}
+        {{block.settings.content}}
+        {% when 'page' %}
+        {{block.settings.page.content}}
+        {%- endcase -%}
+      </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
 {% schema %}
   {
