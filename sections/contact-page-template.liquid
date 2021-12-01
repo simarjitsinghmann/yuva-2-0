@@ -1,5 +1,5 @@
 
-<div class="top_page_title" {% if section.settings.banner != blank %}style="background:url({{section.settings.banner | img_url:'master'}}) no-repeat center"{% endif %}>
+<div class="top_page_title {% if section.settings.banner == blank %}no-bg{% endif %}" {% if section.settings.banner != blank %}style="background:url({{section.settings.banner | img_url:'master'}}) no-repeat center"{% endif %}>
 <div class="container">
     <div class="contact-banner-text">
       <div class="banner_title">
