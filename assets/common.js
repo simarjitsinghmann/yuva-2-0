@@ -617,8 +617,7 @@ $(document).ready(function()
     $('.Quick_loader').fadeIn('slow');
     $('[data-drawer-body]').load(_url+'?view=quick-view', function() {setTimeout(function(){
     drawer.querySelector('[data-drawer-body]').classList.remove('searching');
-      Shopify.PaymentButton.init();
-      $(window).trigger('resize');
+      Shopify.PaymentButton.init()
       productVariants();
     },500)
     });
