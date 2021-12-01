@@ -1,17 +1,15 @@
 <div class="container">
-  <div class="right-text-content">
     <div class="rich-text-description">
       {{ section.settings.custom_liquid }}
     </div>
   </div>
-</div>
 
 
 {% schema %}
 {
   "name": "t:sections.custom-liquid.name",
   "tag": "section",
-  "class": "spaced-section",
+  "class": "spaced-section custom-section",
   "settings": [
     {
       "type": "liquid",
