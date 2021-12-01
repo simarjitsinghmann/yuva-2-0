@@ -962,6 +962,8 @@ a.wishlist-view .fas { display: none; }
 .testimonial-variation2 .testimonial-client-slide .slider-item .slider-box p {
   width: 100%;
   line-height: 22px;
+  max-height: 70px;
+  overflow: auto;
 }
 .testimonial-variation2 .testimonial-client-slide .slider-item .slider-box {
   padding: 30px 15px;
