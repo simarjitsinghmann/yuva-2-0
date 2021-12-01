@@ -1,22 +1,24 @@
 {% if section.blocks.size > 0 %}
-<div class="container">
-        <div class="service__content page-width">
-            <div class="service__column footer__column--info d-flex justify-content-between">
-                {% for block in section.blocks %}
-                <div class="col" {{ block.shopify_attributes }}>
-                    {% if block.settings.image != blank %}
-                    <img src="{{block.settings.image | img_url:'master'}}" alt="{{block.settings.heading}}">
-                    {% else %}
-                    <img src="https://yova.shinedezign.pro/assets/images/delivery.png" alt="delivery">
-                    {% endif %}
-                    <div class="service_title">
-                    <h6>{{block.settings.heading}}</h6>
-                    {{block.settings.subtext}}
-                    </div>
-                </div>            
-                {% endfor %}
-            </div>
-        </div>
+<div class="section-spacer">
+  <div class="container">
+    <div class="service__content page-width">
+      <div class="service__column footer__column--info d-flex justify-content-between">
+        {% for block in section.blocks %}
+        <div class="col" {{ block.shopify_attributes }}>
+          {% if block.settings.image != blank %}
+          <img src="{{block.settings.image | img_url:'master'}}" alt="{{block.settings.heading}}">
+          {% else %}
+          <img src="https://yova.shinedezign.pro/assets/images/delivery.png" alt="delivery">
+          {% endif %}
+          <div class="service_title">
+            <h6>{{block.settings.heading}}</h6>
+            {{block.settings.subtext}}
+          </div>
+        </div>            
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
 {% endif %}
 <style>
