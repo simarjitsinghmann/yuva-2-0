@@ -623,6 +623,8 @@ $(document).ready(function()
         productVariants();
       },500)
     });
+    
+      $(window).trigger('resize');
   });
 
   $(document).on('click', '.quickViewClose',function(evt) {
