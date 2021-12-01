@@ -340,7 +340,6 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
   
   	productVariants=function() {
     var productOptions = document.getElementsByClassName('productOption');
-          console.log(productOptions)
     if(productOptions){
       var options=[];
       Array.from(productOptions).forEach(function(productOption) {
@@ -538,7 +537,7 @@ $(document).on("click", function(event){
 	}          				
 });
 
-$('.dropdown-menu li').on('click', function() {
+$('body').on('click','.dropdown-menu li', function() {
 	var getValue = $(this).text();
 	$(this).find('input').prop('checked',true)
 	$(this).closest('.productOptionSelect').find('.dropdown-selected').text(getValue);
