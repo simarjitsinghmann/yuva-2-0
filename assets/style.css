@@ -1431,9 +1431,13 @@ padding-top: 20px;
 .product-detail .panel-title a:before {
 	transform: rotate(-90deg);
 }
-/* .product-detail .panel-title.active a:after {
+.product-detail .panel-title.active a:after {
   transform: rotate(180deg);
-} */
+}
+.product-detail .panel-title.active a:before {
+  transform: rotate(90deg);
+      opacity: 0;
+}
 .panel-body {
   color: var(--black);
     }
