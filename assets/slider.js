@@ -4,7 +4,7 @@ var elements = document.getElementsByClassName('productImageSlideItem');
 var thumbs = document.getElementsByClassName('productThumbImage');
 
 window.onscroll = function() {
-    findVisibleItems();
+  findVisibleItems();
 };
 
 function findVisibleItems(){
@@ -32,7 +32,7 @@ function isOnScreen(elem) {
   var $elem = $(elem);
   var top = $elem.offset().top;
   if($(window).width() > 767 ){
-  top = top + 400;
+    top = top + 400;
   }
   var height = $elem.height();
   var bottom = top + height;
