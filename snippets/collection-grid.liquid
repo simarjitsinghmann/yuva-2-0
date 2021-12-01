@@ -8,13 +8,10 @@
        class="card animate-arrow{% if collection.featured_image != blank %} card--media{% else %}{% if section.settings.image_ratio != 'adapt' %} card--stretch{% endif %}{% endif %}{% unless section.settings.image_padding %} card--light-border{% endunless %}"
        >
       <div class="card--stretch card-colored color-{{ section.settings.color_scheme }}">
-        {%- if featuredImage == blank -%}
-        {% assign featuredImage = 'collection1.svg' | asset_url %}
-        {% endif %}
-        {{featuredImage}}
+        
         <div>
           <div class="media media--square media--hover-effect overflow-hidden">
-			
+			{%- if featuredImage != blank -%}
             <img
                  srcset="{%- if featuredImage.width >= 165 -%}{{ featuredImage | img_url: '165x' }} 165w,{%- endif -%}
                          {%- if featuredImage.width >= 360 -%}{{ featuredImage | img_url: '360x' }} 360w,{%- endif -%}
@@ -29,6 +26,10 @@
                  width="{{ featuredImage.width }}"
                  loading="lazy"
                  >
+            {% else %}
+
+            {% assign featuredImage = 'collection1.svg' | asset_url | img_tag %}
+            {% endif %}
           </div>
         </div>
         <div class="card__text card__text-spacing card__text-hover collection-card">
