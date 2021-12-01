@@ -515,7 +515,6 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     block = jQuery(event.target);
     var slider = jQuery('#shopify-section-'+sectionId).find('[data-slider]');
     slideIndex = jQuery(event.target).index();
-    console.log(slideIndex)
     setTimeout(function(){
     slider.slick('slickGoTo',slideIndex)
     },500);
