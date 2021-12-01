@@ -291,30 +291,58 @@
         "rotate_speed": 2
       }
     },
-    "16345626467f5a91b7": {
-      "type": "banner-section",
+    "offer-section": {
+      "type": "offer-section",
+      "blocks": {
+        "offer": {
+          "type": "offer",
+          "settings": {
+            "heading": "New look of women tops",
+            "subheading": "<p><strong>Upto 50<\/strong>% Off<\/p>",
+            "image": "shopify:\/\/shop_images\/wooden-table-with-a-scale-and-pour-over-coffee.jpg",
+            "link": "",
+            "show_border": true,
+            "info_position": "bottom-left"
+          }
+        },
+        "offer1": {
+          "type": "offer",
+          "settings": {
+            "heading": "New look of women tops",
+            "subheading": "<p><strong>Upto 25<\/strong>% Off<\/p>",
+            "image": "shopify:\/\/shop_images\/category2.jpg",
+            "link": "shopify:\/\/collections",
+            "show_border": true,
+            "info_position": "bottom-left"
+          }
+        },
+        "offer2": {
+          "type": "offer",
+          "settings": {
+            "heading": "New look of women tops",
+            "subheading": "<p><strong>Upto 40<\/strong>% Off<\/p>",
+            "image": "shopify:\/\/shop_images\/category3.jpg",
+            "link": "",
+            "show_border": true,
+            "info_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "offer",
+        "offer1",
+        "offer2"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/bh_0017af3c-ff2f-44a5-baf5-34af2c630b06.jpg",
-        "tag_line": "Big Sale",
-        "heading": "Black Friday Big Sale",
-        "subheading": "40% OFF",
-        "content": "Discover the latest chapter of the collection.",
-        "btn": "Shop Now",
-        "link": "shopify:\/\/products\/top-5",
-        "sh_bg": "#ffffff",
-        "sh_text": "#190707",
-        "h_text": "#190707",
-        "subh_text": "#ffffff",
-        "c_text": "#000000",
-        "btn_bg": "#ffffff",
-        "btn_text": "#000000",
-        "btn_h_bg": "#000000",
-        "btn_h_text": "#ffffff",
-        "info_position": "center-right"
+        "subheading": "BEST FOR YOU",
+        "heading": "What's More",
+        "color": "#f3f3f3",
+        "style": "style1"
       }
     },
     "1638355202411997bd": {
       "type": "contact-form",
+      "disabled": true,
       "settings": {
         "form_heading": "Get In Touch",
         "form_button": "SEND MESSAGE"
@@ -435,8 +463,31 @@
         "product": "ayers-chambray"
       }
     },
+    "16345626467f5a91b7": {
+      "type": "banner-section",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/bh_0017af3c-ff2f-44a5-baf5-34af2c630b06.jpg",
+        "tag_line": "Big Sale",
+        "heading": "Black Friday Big Sale",
+        "subheading": "40% OFF",
+        "content": "Discover the latest chapter of the collection.",
+        "btn": "Shop Now",
+        "link": "shopify:\/\/products\/top-5",
+        "sh_bg": "#ffffff",
+        "sh_text": "#190707",
+        "h_text": "#190707",
+        "subh_text": "#ffffff",
+        "c_text": "#000000",
+        "btn_bg": "#ffffff",
+        "btn_text": "#000000",
+        "btn_h_bg": "#000000",
+        "btn_h_text": "#ffffff",
+        "info_position": "center-right"
+      }
+    },
     "1637836948779ea0e5": {
       "type": "featured-content",
+      "disabled": true,
       "blocks": {
         "66898c31-882c-4957-b02f-a0444d586590": {
           "type": "featured-content",
@@ -627,6 +678,7 @@
     },
     "video-banner": {
       "type": "video-banner",
+      "disabled": true,
       "settings": {
         "videofile": "https:\/\/cdn.shopify.com\/s\/files\/1\/2018\/8867\/files\/ice.mp4",
         "poster": "shopify:\/\/shop_images\/about.png",
@@ -641,6 +693,7 @@
     },
     "1638256036636fff66": {
       "type": "newsletter",
+      "disabled": true,
       "settings": {
         "heading": "Join Our Newsletter",
         "description": "Sign up it only takes a second to be the news.",
@@ -650,6 +703,7 @@
     },
     "16378358938771729e": {
       "type": "faq-section",
+      "disabled": true,
       "blocks": {
         "7969094b-3d16-4dff-9ec1-176409fe418e": {
           "type": "faq",
@@ -692,6 +746,7 @@
     },
     "16378395879fc0118a": {
       "type": "image-with-text",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/about.png",
         "image_alignment": "left",
@@ -701,6 +756,7 @@
     },
     "16378396162c4cd192": {
       "type": "featured-text",
+      "disabled": true,
       "settings": {
         "content": "\"Synth ethical biodiesel poutine. Bitters beard salvia lo-fi. Palo santo literally plaid edison bulb, pitchfork drinking vinegar authentic pabst street art subway tile craft beer single-origin coffee shaman dreamcatcher. \"",
         "bgcolor": "#e9e9e9"
@@ -799,55 +855,6 @@
         "show_divider": false
       }
     },
-    "offer-section": {
-      "type": "offer-section",
-      "blocks": {
-        "offer": {
-          "type": "offer",
-          "settings": {
-            "heading": "New look of women tops",
-            "subheading": "<p><strong>Upto 50<\/strong>% Off<\/p>",
-            "image": "shopify:\/\/shop_images\/wooden-table-with-a-scale-and-pour-over-coffee.jpg",
-            "link": "",
-            "show_border": true,
-            "info_position": "bottom-left"
-          }
-        },
-        "offer1": {
-          "type": "offer",
-          "settings": {
-            "heading": "New look of women tops",
-            "subheading": "<p><strong>Upto 25<\/strong>% Off<\/p>",
-            "image": "shopify:\/\/shop_images\/category2.jpg",
-            "link": "shopify:\/\/collections",
-            "show_border": true,
-            "info_position": "bottom-left"
-          }
-        },
-        "offer2": {
-          "type": "offer",
-          "settings": {
-            "heading": "New look of women tops",
-            "subheading": "<p><strong>Upto 40<\/strong>% Off<\/p>",
-            "image": "shopify:\/\/shop_images\/category3.jpg",
-            "link": "",
-            "show_border": true,
-            "info_position": "bottom-left"
-          }
-        }
-      },
-      "block_order": [
-        "offer",
-        "offer1",
-        "offer2"
-      ],
-      "settings": {
-        "subheading": "BEST FOR YOU",
-        "heading": "What's More",
-        "color": "#f3f3f3",
-        "style": "style1"
-      }
-    },
     "1638255644cb8d3175": {
       "type": "rich-text",
       "settings": {
@@ -876,10 +883,11 @@
   },
   "order": [
     "slider",
-    "16345626467f5a91b7",
+    "offer-section",
     "1638355202411997bd",
     "collection-list",
     "163456266607727edf",
+    "16345626467f5a91b7",
     "1637836948779ea0e5",
     "163678842797a17b64",
     "testimonials",
@@ -891,7 +899,6 @@
     "1637909437c24c2665",
     "instagram",
     "multicolumn-content",
-    "offer-section",
     "1638255644cb8d3175",
     "16382724245dbd108e",
     "featured-collection"
