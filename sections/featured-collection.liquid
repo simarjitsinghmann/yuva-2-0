@@ -1,27 +1,27 @@
 <div class="container">
-        <div class="best__for__you shopify__top__section text__center">
-          <div class="section-heading-box">
-            <small>{{section.settings.heading}}</small>
-            <h2>{{section.settings.subheading}} 
-              {% if section.settings.view_all_btn and section.settings.collection != blank and section.settings.view_all_btn_text != blank %}
-              <a class="view-all corner-view" href="{{section.settings.collection.url}}">{{section.settings.view_all_btn_text}}</a>    
-              {% endif %}
-            </h2>
-          </div>
-            {% if section.settings.collection != blank %}
-            {% assign collection = section.settings.collection %}
-            <div class="grid grid--4-col-desktop grid--3-col-tablet">
-                <div class="grid__item full__item products-grid ">
-                    <div class="row column-{{section.settings.col_size}} d-flex">
-                        {% assign limit = section.settings.col_size | times : section.settings.row_size%}
-                        {% for product in collection.products limit:limit%}
-                        {% include 'product-grid' %}
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-            {% endif%}
+  <div class="best__for__you shopify__top__section text__center">
+    <div class="section-heading-box">
+      <small>{{section.settings.heading}}</small>
+      <h2>{{section.settings.subheading}} 
+        {% if section.settings.view_all_btn and section.settings.collection != blank and section.settings.view_all_btn_text != blank %}
+        <a class="view-all corner-view" href="{{section.settings.collection.url}}">{{section.settings.view_all_btn_text}}</a>    
+        {% endif %}
+      </h2>
+    </div>
+    {% if section.settings.collection != blank %}
+    {% assign collection = section.settings.collection %}
+    <div class="grid grid--4-col-desktop grid--3-col-tablet">
+      <div class="grid__item full__item products-grid ">
+        <div class="row column-{{section.settings.col_size}} d-flex">
+          {% assign limit = section.settings.col_size | times : section.settings.row_size%}
+          {% for product in collection.products limit:limit%}
+          {% include 'product-grid' %}
+          {% endfor %}
         </div>
+      </div>
+    </div>
+    {% endif%}
+  </div>
 </div>
 {% schema %}
 {
