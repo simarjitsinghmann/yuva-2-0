@@ -862,7 +862,10 @@ a.wishlist-view .fas { display: none; }
 .star-rating .fa-star { font-size: 22px; } 
 /***testimonial-section***/
 .testimonial-slider { max-width: 100%; margin: 0 auto; position:relative; } 
-.shopify-section.testimonial { background: #f6f4f2; padding: 65px 0px 65px; } 
+.shopify-section..testimonial-section { background: #f6f4f2; } 
+.testimonial-section .section-spacer{
+	padding: 65px 0px 65px;
+}
 .testimonial-slide .owl-item { background: var(--white); padding: 20px 29px; text-align: center; } 
 .testimonial-slide .owl-item .slider-content > img { width: 110px; margin: 0 auto; text-align: center; } 
 .testimonial-slide .owl-item .item { padding: 8px 10px 0px; } 
