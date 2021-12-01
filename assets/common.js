@@ -519,7 +519,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
   }
   if(event.type == "shopify:section:load"){
     if(block != ''){
-      slideIndex = block.index();
+      slideIndex = undefined;
     }
     slickSlider(jQuery(slider),slideIndex);
   }
