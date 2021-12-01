@@ -3,7 +3,7 @@
     <div class="section-heading-box">
       <small>{{section.settings.heading}}</small>
       <h2>{{section.settings.subheading}} 
-        {% if section.settings.button != blank %}
+        {% if section.settings.button != blank and section.settings.link != blank %}
         <a class="view-all corner-view" href="{{section.settings.link}}">{{section.settings.button}}</a></h2>
       	{% endif %}
     </div>
