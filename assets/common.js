@@ -621,11 +621,11 @@ $(document).ready(function()
       setTimeout(function(){
         drawer.querySelector('[data-drawer-body]').classList.remove('searching');
         Shopify.PaymentButton.init()
+
         productVariants();
+        showMultipleOptions(); 
       },500)
     });
-    
-      $(window).trigger('resize');
   });
 
   $(document).on('click', '.quickViewClose',function(evt) {
