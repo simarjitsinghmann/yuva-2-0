@@ -295,7 +295,7 @@ $(document).ready(function(){
 
 		
 	///product-size-select///
-	$('.dropdown-selected').click(function(){
+	$('body').on('click','.dropdown-selected',function(){
 		$(".productOptionSelectList").slideUp("fast");
 		// $(this).find(".size-select").slideToggle("fast");
 		$(this).siblings('.productOptionSelectList').css({"display": "block"});
