@@ -1,6 +1,10 @@
 <!-- {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }} -->
-{% paginate collections by section.settings.collections_per_page %}
+{% assign pagination = collections %}
+{% if section.settings.show_collections == 'selected' %}
+{% assign pagination = section.blocks %}
+{% endif %}
+{% paginate pagination by section.settings.collections_per_page %}
 <div class="main-collection-category-section">
 <div class="container">
   <div class="shopify__top__section section-heading-box">
