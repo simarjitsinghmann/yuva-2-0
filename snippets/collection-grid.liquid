@@ -27,8 +27,7 @@
                  loading="lazy"
                  >
             {% else %}
-
-            {% assign featuredImage = 'collection1.svg' | asset_url | img_tag %}
+            {{ 'collection1.svg' | asset_url | img_tag }}
             {% endif %}
           </div>
         </div>
