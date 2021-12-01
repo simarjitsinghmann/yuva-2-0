@@ -291,26 +291,6 @@
         "rotate_speed": 2
       }
     },
-    "1638355202411997bd": {
-      "type": "contact-form",
-      "settings": {
-        "form_heading": "Get In Touch",
-        "form_button": "SEND MESSAGE"
-      }
-    },
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "heading": "All Products",
-        "subheading": "See the latest!",
-        "collection": "summer-collection",
-        "col_size": 5,
-        "row_size": 2,
-        "show_second_image": true,
-        "view_all_btn": true,
-        "view_all_btn_text": "View all"
-      }
-    },
     "16345626467f5a91b7": {
       "type": "banner-section",
       "settings": {
@@ -331,6 +311,13 @@
         "btn_h_bg": "#000000",
         "btn_h_text": "#ffffff",
         "info_position": "center-right"
+      }
+    },
+    "1638355202411997bd": {
+      "type": "contact-form",
+      "settings": {
+        "form_heading": "Get In Touch",
+        "form_button": "SEND MESSAGE"
       }
     },
     "collection-list": {
@@ -379,7 +366,7 @@
         "collection2"
       ],
       "settings": {
-        "heading": "Collection",
+        "heading": "<b>Collection List(Style 1)<\/b>",
         "btntext": "View all",
         "btnlink": "",
         "m_collection": "winter-collections",
@@ -446,6 +433,44 @@
       ],
       "settings": {
         "product": "ayers-chambray"
+      }
+    },
+    "1637836948779ea0e5": {
+      "type": "featured-content",
+      "blocks": {
+        "66898c31-882c-4957-b02f-a0444d586590": {
+          "type": "featured-content",
+          "settings": {
+            "heading": "Feature Title",
+            "content": "Contrary to popular belief, Lorem Ipsum yuva theme shopify is not",
+            "icon": "shopify:\/\/shop_images\/shipping-van.png"
+          }
+        },
+        "e655e4e1-ceb9-4cb8-9151-92f0d83e299d": {
+          "type": "featured-content",
+          "settings": {
+            "heading": "Feature Title",
+            "content": "Contrary to popular belief, Lorem Ipsum yuva theme shopify is not",
+            "icon": "shopify:\/\/shop_images\/support-team.png"
+          }
+        },
+        "fef16e90-3a11-4d70-894b-11a7fffbdad8": {
+          "type": "featured-content",
+          "settings": {
+            "heading": "Feature Title",
+            "content": "Contrary to popular belief, Lorem Ipsum yuva theme shopify is not",
+            "icon": "shopify:\/\/shop_images\/secure.png"
+          }
+        }
+      },
+      "block_order": [
+        "66898c31-882c-4957-b02f-a0444d586590",
+        "e655e4e1-ceb9-4cb8-9151-92f0d83e299d",
+        "fef16e90-3a11-4d70-894b-11a7fffbdad8"
+      ],
+      "settings": {
+        "heading": "Why We Are Your Best Choice",
+        "bgcolor": "#e9e9e9"
       }
     },
     "163678842797a17b64": {
@@ -665,44 +690,6 @@
         "heading": "Frequently Asked Questions"
       }
     },
-    "1637836948779ea0e5": {
-      "type": "featured-content",
-      "blocks": {
-        "66898c31-882c-4957-b02f-a0444d586590": {
-          "type": "featured-content",
-          "settings": {
-            "heading": "Feature Title",
-            "content": "Contrary to popular belief, Lorem Ipsum yuva theme shopify is not",
-            "icon": "shopify:\/\/shop_images\/shipping-van.png"
-          }
-        },
-        "e655e4e1-ceb9-4cb8-9151-92f0d83e299d": {
-          "type": "featured-content",
-          "settings": {
-            "heading": "Feature Title",
-            "content": "Contrary to popular belief, Lorem Ipsum yuva theme shopify is not",
-            "icon": "shopify:\/\/shop_images\/support-team.png"
-          }
-        },
-        "fef16e90-3a11-4d70-894b-11a7fffbdad8": {
-          "type": "featured-content",
-          "settings": {
-            "heading": "Feature Title",
-            "content": "Contrary to popular belief, Lorem Ipsum yuva theme shopify is not",
-            "icon": "shopify:\/\/shop_images\/secure.png"
-          }
-        }
-      },
-      "block_order": [
-        "66898c31-882c-4957-b02f-a0444d586590",
-        "e655e4e1-ceb9-4cb8-9151-92f0d83e299d",
-        "fef16e90-3a11-4d70-894b-11a7fffbdad8"
-      ],
-      "settings": {
-        "heading": "Why We Are Your Best Choice",
-        "bgcolor": "#e9e9e9"
-      }
-    },
     "16378395879fc0118a": {
       "type": "image-with-text",
       "settings": {
@@ -868,24 +855,37 @@
     },
     "16382724245dbd108e": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "{{shop.name}}\n<form method=\"post\" action=\"\/contact#ContactForm\" id=\"ContactForm\" accept-charset=\"UTF-8\" class=\"contact-form\">\n<input type=\"hidden\" name=\"form_type\" value=\"contact\"><input type=\"hidden\" name=\"utf8\" value=\"✓\"><div class=\"row\">\n              <div class=\"col-lg-12 col-md-12\">\n                <div class=\"form-group\">\n                  <label for=\"ContactForm-username\">User Name<\/label>\n                  <input type=\"text\" class=\"form-control\" id=\"ContactForm-username\" name=\"contact[User Name]\" placeholder=\"User name\" required=\"\">\n                <\/div>\n              <\/div>\n              <div class=\"col-lg-12 col-md-12\">\n                <label class=\"field__label\" for=\"ContactForm-email\">Email <span aria-hidden=\"true\">*<\/span><\/label>\n                <div class=\"form-group\">\n                  <input autocomplete=\"email\" type=\"email\" id=\"ContactForm-email\" class=\"form-control\" name=\"contact[email]\" spellcheck=\"false\" autocapitalize=\"off\" value=\"simarjit.shinedezign@gmail.com\" aria-required=\"true\" placeholder=\"Email Address\">\n                <\/div>\n              <\/div>\n              <div class=\"col-lg-12 col-md-12\">\n                <label for=\"ContactForm-body\">Comment<\/label>\n                <div class=\"form-group\">\n                  <textarea id=\"ContactForm-body\" class=\"form-control\" name=\"contact[Comment]\" placeholder=\"Comment\" rows=\"3\"><\/textarea>\n                <\/div>\n                <input type=\"submit\" class=\"btn button\" value=\"SEND MESSAGE\">\n              <\/div>\n\n            <\/div>\n          <\/form>"
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "All Products",
+        "subheading": "See the latest!",
+        "collection": "summer-collection",
+        "col_size": 5,
+        "row_size": 2,
+        "show_second_image": true,
+        "view_all_btn": true,
+        "view_all_btn_text": "View all"
       }
     }
   },
   "order": [
     "slider",
-    "1638355202411997bd",
-    "featured-collection",
     "16345626467f5a91b7",
+    "1638355202411997bd",
     "collection-list",
     "163456266607727edf",
+    "1637836948779ea0e5",
     "163678842797a17b64",
     "testimonials",
     "video-banner",
     "1638256036636fff66",
     "16378358938771729e",
-    "1637836948779ea0e5",
     "16378395879fc0118a",
     "16378396162c4cd192",
     "1637909437c24c2665",
@@ -893,6 +893,7 @@
     "multicolumn-content",
     "offer-section",
     "1638255644cb8d3175",
-    "16382724245dbd108e"
+    "16382724245dbd108e",
+    "featured-collection"
   ]
 }

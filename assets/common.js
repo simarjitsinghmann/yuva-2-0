@@ -511,25 +511,22 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
   }
   var slider = jQuery(parent).find('[data-slider]');
   if(event.type == "shopify:block:select"){
-  console.log('block Select')
     var sectionId = event.detail.sectionId
     block = jQuery(event.target);
     var slider = jQuery('#shopify-section-'+sectionId).find('[data-slider]');
-    slideIndex = jQuery(event.target).data('slick-index');
+    slideIndex = jQuery(event.target).index();
     console.log(slideIndex)
     setTimeout(function(){
     slider.slick('slickGoTo',slideIndex)
     },500);
   }
   else if(event.type == "shopify:section:load"){
-  console.log('section load')
     if(block != ''){
       slideIndex = undefined;
     }
     slickSlider(jQuery(slider),slideIndex);
   }
   else{
-  console.log('refresh')
     slider.slick('refresh');
   }
 });
