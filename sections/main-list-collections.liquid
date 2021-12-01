@@ -1,10 +1,10 @@
 <!-- {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }} -->
-{% assign custom = collections %}
+{% assign limit = section.settings.collections_per_page %}
 {% if section.settings.show_collections == 'selected' %}
-{% assign custom = section.blocks %}
+{% assign limit = 100 %}
 {% endif %}
-{% paginate custom by section.settings.collections_per_page %}
+{% paginate collections by limit %}
 <div class="main-collection-category-section">
 <div class="container">
   <div class="shopify__top__section section-heading-box">
