@@ -6,8 +6,8 @@
 {%- assign section_onboarding = true -%}
 {%- assign onboarding_title = 'Example Product Title' -%}
 {% endif %}
+<div class="section-spacer">
   <div class="container ">
-<!--         <h4>Featured Product</h4> -->
     <div class="box-shadow feature-product product_content_section ">
       <div class="row  no-margin ">
         <div class="col-md-7 no-padding-left no-padding-right background-img-color euqal-height">
@@ -170,27 +170,13 @@
       </div>
     </div>
   </div>  
-{% comment %}
-<script>
-    $(document).ready(function(){
-        $('#feature__product-{{section.id}}').owlCarousel({
-            loop: true,
-            items: 1,
-            thumbs: true,
-            thumbImage: true,
-            thumbContainerClass: 'owl-thumbs',
-            thumbItemClass: 'owl-thumb-item',
-            margin:10
-         });
-    })
-</script>
-{% endcomment %}
+</div>
 {% schema %}
 
 {
   "name": "t:sections.featured-product.name",
   "tag": "section",
-  "class":"feature-section",
+  "class":"feature-section featured-product-section",
   "settings": [
     {
       "type": "product",
