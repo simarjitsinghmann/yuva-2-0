@@ -1,109 +1,109 @@
-<div class="container section-{{section.id}}">
-            <div class="collection page-width">
-                <div class="collection-section-header section-heading-box">                  
-                  {% if section.settings.heading != blank %}
-                  <h2 class="title">{{section.settings.heading}}</h2>
-                  {% endif %}
-                  {% if section.settings.btntext != blank and section.settings.btnlink != blank %}
-                  <a class="view-all" href="{{section.settings.btnlink}}">{{section.settings.btntext}}</a>
-                  {% endif %}
-                </div>
-                <div class="collection-gutter">
-                  {% if section.settings.m_collection != blank or section.settings.m_collection != false %}
-                    <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col" role="list">
-                      {% include 'featured-collection-grid'
+<div class="container">
+  <div class="collection page-width">
+    <div class="collection-section-header section-heading-box">                  
+      {% if section.settings.heading != blank %}
+      <h2 class="title">{{section.settings.heading}}</h2>
+      {% endif %}
+      {% if section.settings.btntext != blank and section.settings.btnlink != blank %}
+      <a class="view-all" href="{{section.settings.btnlink}}">{{section.settings.btntext}}</a>
+      {% endif %}
+    </div>
+    <div class="collection-gutter">
+      {% if section.settings.m_collection != blank or section.settings.m_collection != false %}
+      <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col" role="list">
+        {% include 'featured-collection-grid'
                       	m_collection:section.settings.m_collection,
-                      custom:section.settings.custom,
-                      mc_image:section.settings.mc_image,
-                      mc_heading:section.settings.mc_heading,
-                      mc_desc:section.settings.mc_desc,
-                      mc_btntext:section.settings.mc_btntext,
-                      mc_btnlink:section.settings.mc_btnlink
-                      %}
-                    </div>
-                  {% endif %}
-                  {% if section.blocks.size > 0 %}
-                    <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col " role="list">
-                      {% if section.blocks.size > 1 %}
-                        <ul class="collection__right__list block-count{{section.blocks.size}}" role="list">
-                          {% for block in section.blocks %}
-                            {% assign collection = ''%}
-                            {% if block.settings.collection != blank %}
-                            {% assign collection = block.settings.collection %}
-                            {% endif %}
-                            {% capture image_content %}
-                            <div class="collection-image ">
-                              {% if block.settings.custom == false and collection.featured_image != blank %} 
-                              {% assign feature_image = collection.featured_image | img_url:'master' %}
-                              {% elsif block.settings.custom == true and block.settings.image == blank and collection.featured_image != blank %}
-                              {% assign feature_image = collection.featured_image | img_url:'master' %}
-                                {% elsif block.settings.image != blank  %}
-                                {% assign feature_image = block.settings.image | img_url:'master' %}
-                                {%else%}
-                                {% assign feature_image = 'collection2.svg' | asset_url %}
-                              {% endif %}
-                              <img src="{{feature_image}}" alt="">
-                            </div>
-                            {% endcapture %}
-                            <li class="grid__item__list">
-                                <div class="card-wrapper">
-                                    <div class="card__warpper__detail right__sided block-{{forloop.index}}">                                        
-                                      {{image_content}}
-                                    <div class="collection-detail-right">
-                                      <h5>
-                                          {% if block.settings.custom == false %}
-                                            {{collection.title}}
-                                            {% elsif block.settings.custom and block.settings.heading != blank  %}
-                                            {{block.settings.heading}}
-                                          {% endif %}
-                                      </h5>
-                                        <small>
-                                          {% if block.settings.custom == false %}
-                                            {{collection.description | strip_html | truncatewords: 15, "" }}
-                                            {% elsif block.settings.custom and block.settings.desc != blank  %}
-                                            {{block.settings.desc}}
-                                          {% endif %}
-                                        </small> 
-                                        {% if block.settings.btntext != blank %}
-                                        
-                                          {% if block.settings.custom and block.settings.btnlink != blank  %}
-                                            {% assign btnlink = block.settings.btnlink %}
-                                      {% else %}
-                                      {% assign btnlink = collection.url %}
-                                        {% endif%}               
-                                        
-                                      <a href="{{btnlink}}" class="mainColbutton-{{section.id}}">    
-                                          <span>
-                                            {% if section.settings.button_icon %}
-                                            <svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> 
-                                            {% endif %}
-                                            {{block.settings.btntext }}
-                                          </span>
-                                        </a>
-                                      {% endif %}
-                                    </div>
-                                    </div>
-                                </div>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                      {% else %}
-                      {% for block in section.blocks %}
-                      {% include 'featured-collection-grid'
-                      	m_collection:block.settings.collection,
-                      custom:block.settings.custom,
-                      mc_image:block.settings.image,
-                      mc_heading:block.settings.heading,
-                      mc_desc:block.settings.desc,
-                      mc_btntext:block.settings.btntext,
-                      mc_btnlink:block.settings.btnlink
-                      %}
-                      {% endfor %}
+        custom:section.settings.custom,
+        mc_image:section.settings.mc_image,
+        mc_heading:section.settings.mc_heading,
+        mc_desc:section.settings.mc_desc,
+        mc_btntext:section.settings.mc_btntext,
+        mc_btnlink:section.settings.mc_btnlink
+        %}
+      </div>
+      {% endif %}
+      {% if section.blocks.size > 0 %}
+      <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col " role="list">
+        {% if section.blocks.size > 1 %}
+        <ul class="collection__right__list block-count{{section.blocks.size}}" role="list">
+          {% for block in section.blocks %}
+          {% assign collection = ''%}
+          {% if block.settings.collection != blank %}
+          {% assign collection = block.settings.collection %}
+          {% endif %}
+          {% capture image_content %}
+          <div class="collection-image ">
+            {% if block.settings.custom == false and collection.featured_image != blank %} 
+            {% assign feature_image = collection.featured_image | img_url:'master' %}
+            {% elsif block.settings.custom == true and block.settings.image == blank and collection.featured_image != blank %}
+            {% assign feature_image = collection.featured_image | img_url:'master' %}
+            {% elsif block.settings.image != blank  %}
+            {% assign feature_image = block.settings.image | img_url:'master' %}
+            {%else%}
+            {% assign feature_image = 'collection2.svg' | asset_url %}
+            {% endif %}
+            <img src="{{feature_image}}" alt="">
+          </div>
+          {% endcapture %}
+          <li class="grid__item__list">
+            <div class="card-wrapper">
+              <div class="card__warpper__detail right__sided block-{{forloop.index}}">                                        
+                {{image_content}}
+                <div class="collection-detail-right">
+                  <h5>
+                    {% if block.settings.custom == false %}
+                    {{collection.title}}
+                    {% elsif block.settings.custom and block.settings.heading != blank  %}
+                    {{block.settings.heading}}
+                    {% endif %}
+                  </h5>
+                  <small>
+                    {% if block.settings.custom == false %}
+                    {{collection.description | strip_html | truncatewords: 15, "" }}
+                    {% elsif block.settings.custom and block.settings.desc != blank  %}
+                    {{block.settings.desc}}
+                    {% endif %}
+                  </small> 
+                  {% if block.settings.btntext != blank %}
+
+                  {% if block.settings.custom and block.settings.btnlink != blank  %}
+                  {% assign btnlink = block.settings.btnlink %}
+                  {% else %}
+                  {% assign btnlink = collection.url %}
+                  {% endif%}               
+
+                  <a href="{{btnlink}}" class="mainColbutton-{{section.id}}">    
+                    <span>
+                      {% if section.settings.button_icon %}
+                      <svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> 
                       {% endif %}
-                    </div>
+                      {{block.settings.btntext }}
+                    </span>
+                  </a>
                   {% endif %}
                 </div>
+              </div>
             </div>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        {% for block in section.blocks %}
+        {% include 'featured-collection-grid'
+                      	m_collection:block.settings.collection,
+        custom:block.settings.custom,
+        mc_image:block.settings.image,
+        mc_heading:block.settings.heading,
+        mc_desc:block.settings.desc,
+        mc_btntext:block.settings.btntext,
+        mc_btnlink:block.settings.btnlink
+        %}
+        {% endfor %}
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
 </div>
   <style>
 .mainColbutton-{{section.id}} {
@@ -119,7 +119,7 @@
 {
   "name": "t:sections.collection-list.name",
   "tag": "section",
-  "class":"spaced-section collection-list-section",
+  "class":"collection-list-section",
 	"max_blocks":3,
   "settings": [
     {
