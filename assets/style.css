@@ -1416,7 +1416,8 @@ padding-top: 20px;
   color: var(--black);
     font-weight: var(--medium);
       }
-.product-detail .panel-title a:after {
+.product-detail .panel-title a:after,
+.product-detail .panel-title a:before{
   content: '';
   position: absolute;
   top: calc(50% - 1px);
