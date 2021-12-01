@@ -41,26 +41,8 @@
       var moneyFormat = '{{shop.money_format}}';
     </script>
     <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+{% include 'theme-style' %}
 
-    {{ 'base.css' | asset_url | stylesheet_tag }}
-
-    {{ 'common.css' | asset_url | stylesheet_tag }}
-
-    {{ 'header.css' | asset_url | stylesheet_tag }}
-
-    {{ 'footer.css' | asset_url | stylesheet_tag }}
-
-    {{ 'style.css' | asset_url | stylesheet_tag }}
-
-    {{ 'variable.css' | asset_url | stylesheet_tag }}
-
-    {{ 'element.css' | asset_url | stylesheet_tag }}
-
-    {{ 'slick.min.css' | asset_url | stylesheet_tag }}
-
-    {{ 'fonts.css' | asset_url | stylesheet_tag }}
-
-    {{ 'style-responsive.css' | asset_url | stylesheet_tag }}
     
     {{ content_for_header }}
 
