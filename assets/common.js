@@ -340,6 +340,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
   
   	productVariants=function() {
     var productOptions = document.getElementsByClassName('productOption');
+          console.log(productOptions)
     if(productOptions){
       var options=[];
       Array.from(productOptions).forEach(function(productOption) {
@@ -347,7 +348,6 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
                                        var _productParent = productOption.closest('.product_content_section');
         setTimeout(function(){
           const fieldsets = Array.from(_productParent.querySelectorAll('.product-loop-variants'));
-          console.log(fieldsets)
           options=fieldsets.map((fieldset) => {
             return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
           });
