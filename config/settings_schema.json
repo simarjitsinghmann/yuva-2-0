@@ -427,6 +427,12 @@
         "id": "shipping_rate",
         "default": "2000",
         "label": "t:settings_schema.cartDrawer.settings.shipping_rate.label"
+      },
+      {
+        "type": "textarea",
+        "id": "shipping_text",
+        "default": "Spend ||amount|| more and get free shipping!",
+        "label": "t:settings_schema.cartDrawer.settings.shipping_rate.label"
       }
     ]
   },
