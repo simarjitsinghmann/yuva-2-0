@@ -169,7 +169,10 @@ label {
   -ms-user-select: none;
   user-select: none;
 }
-
+.sidebar-widget-product li.disabled {
+    text-decoration: line-through;
+    color: var(--dark-gray);
+}
 /* Hide the browser's default checkbox */
 .sidebar-widget-product li input {
 	position: absolute;
