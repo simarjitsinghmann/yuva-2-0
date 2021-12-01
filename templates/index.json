@@ -519,14 +519,6 @@
     "testimonials": {
       "type": "testimonials",
       "blocks": {
-        "quote": {
-          "type": "quote",
-          "settings": {
-            "message": "We were dolor sit amet, consectetur theme adipiscing elit, sed do eiusmod tempor and incididunt ut labore.",
-            "author": "Anderson smith1",
-            "image": "shopify:\/\/shop_images\/client-image.png"
-          }
-        },
         "quote1": {
           "type": "quote",
           "settings": {
@@ -573,23 +565,30 @@
             "message": "We were dolor sit amet, consectetur theme adipiscing elit, sed do eiusmod tempor and incididunt ut labore.",
             "author": "Anderson smith7"
           }
+        },
+        "quote": {
+          "type": "quote",
+          "settings": {
+            "message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem",
+            "author": "Anderson smith11"
+          }
         }
       },
       "block_order": [
-        "quote",
         "quote1",
         "quote2",
         "quote3",
         "quote4",
         "8f276b0f-5c04-4526-8b17-1bc211ed9099",
-        "5559dd76-d28a-437d-91ea-2de616bff4a2"
+        "5559dd76-d28a-437d-91ea-2de616bff4a2",
+        "quote"
       ],
       "settings": {
         "style": "style2",
         "subheading": "Happy Client’s",
         "heading": "What Our Customers Say",
         "description": "Developer best Ut enim ad minim veniam, qui nostrud exercitated andullamco laboris nisi ut aliquip ex ea commodo and consequat.",
-        "bgcolor": "#e9e9e9",
+        "bgcolor": "#fce1e1",
         "rotate": false,
         "arrows": true,
         "dots": false
