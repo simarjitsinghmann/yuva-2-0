@@ -1,49 +1,50 @@
+<div class="section-spacer">
 <div class="container">
-        <div class="shopify__top__section section-heading-box text__center">
-            <h2>{{section.settings.title}}</h2>
-            <p class="instagramUserName">{{section.settings.handle}}</p>
-        </div>
-        {% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
+  <div class="shopify__top__section section-heading-box text__center">
+    <h2>{{section.settings.title}}</h2>
+    <p class="instagramUserName">{{section.settings.handle}}</p>
+  </div>
+  {% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
   <div class="instagram-post-list"><ul id="instafeed"></ul></div>
-        {% else %}
-        <div class="instagram-post-list">
-            <ul>
-                <li>
-                    <div class="instagram-post-detail">
-                        <img src="https://yova.shinedezign.pro/assets/images/insta-post1.jpg" alt="">
-                        <div class="insta-icon"><i class="fab fa-instagram"></i></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="instagram-post-detail">
-                        <img src="https://yova.shinedezign.pro/assets/images/insta-post2.jpg" alt="">
-                        <div class="insta-icon"><i class="fab fa-instagram"></i></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="instagram-post-detail">
-                        <img src="https://yova.shinedezign.pro/assets/images/insta-post3.jpg" alt="">
-                        <div class="insta-icon"><i class="fab fa-instagram"></i></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="instagram-post-detail">
-                        <img src="https://yova.shinedezign.pro/assets/images/insta-post4.jpg" alt="">
-                        <div class="insta-icon"><i class="fab fa-instagram"></i></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="instagram-post-detail">
-                        <img src="https://yova.shinedezign.pro/assets/images/insta-post1.jpg" alt="">
-                        <div class="insta-icon"><i class="fab fa-instagram"></i></div>
-                    </div>
-                </li>
-            </ul>
+  {% else %}
+  <div class="instagram-post-list">
+    <ul>
+      <li>
+        <div class="instagram-post-detail">
+          <img src="https://yova.shinedezign.pro/assets/images/insta-post1.jpg" alt="">
+          <div class="insta-icon"><i class="fab fa-instagram"></i></div>
         </div>
-      {% endif %}
+      </li>
+      <li>
+        <div class="instagram-post-detail">
+          <img src="https://yova.shinedezign.pro/assets/images/insta-post2.jpg" alt="">
+          <div class="insta-icon"><i class="fab fa-instagram"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="instagram-post-detail">
+          <img src="https://yova.shinedezign.pro/assets/images/insta-post3.jpg" alt="">
+          <div class="insta-icon"><i class="fab fa-instagram"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="instagram-post-detail">
+          <img src="https://yova.shinedezign.pro/assets/images/insta-post4.jpg" alt="">
+          <div class="insta-icon"><i class="fab fa-instagram"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="instagram-post-detail">
+          <img src="https://yova.shinedezign.pro/assets/images/insta-post1.jpg" alt="">
+          <div class="insta-icon"><i class="fab fa-instagram"></i></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  {% endif %}
+</div>
 </div>
 
-                
 {% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
 <script>
   var userFeed = new Instafeed({
