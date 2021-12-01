@@ -3409,7 +3409,8 @@ min-height: 15px;
     border-radius: 9px;
     border:0;
     box-shadow:none;
-    background-color: var(--black);
+    background-color: var(--white);
+      border:1px solid var(--black);
   }
     #slider-round .noUi-handle:before,
   #slider-round .noUi-handle:after {
