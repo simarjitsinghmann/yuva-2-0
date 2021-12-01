@@ -1417,22 +1417,16 @@ padding-top: 20px;
     font-weight: var(--medium);
       }
 .product-detail .panel-title a:after {
+  content: '';
   position: absolute;
-  top: 30%;
-  right: 5px;
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-color: var(--black);
-    border-style: solid;
-    border-width: 0 0 1px 1px;
-    margin: -4px 0 0;
-    vertical-align: middle;
-    transform: rotate(-135deg);
-    transform-origin: 50% 50%;
-    transition: all .4s;
-    }
+  top: calc(50% - 1px);
+  right: 0;
+  width: 11px;
+  height: 1px;
+  background-color: currentColor;
+  transition: .3s ease;
+  transition-property: transform,opacity;
+}
 .product-detail .panel-title.active a:after {
   transform: rotate(-45deg);
 }
