@@ -39,9 +39,8 @@
                               <input type="hidden" name="contact[tags]" value="newsletter">
 
                                 <div class="input-news-letter">
-                                    {{ form.errors | default_errors }}
                                     {% if form.posted_successfully? %}
-                                        <p>{{ 'newsletter.success' | t }}</p>
+                                        <span class="sucess_message">{{ 'newsletter.success' | t }}</span>
                                     {% else %}
                                         <input name="contact[tags]" type="hidden" value="newsletter">
                                   		<div class="form-group">
@@ -49,6 +48,10 @@
                                              value="{% if customer.email != blank %}{{ customer.email }}{% else %}{{ form.email }}{% endif %}" 
                                                placeholder="{{ 'newsletter.email_placeholder' | t }}" autocapitalize="off" class="form-control enter-email" required>
                                   		</div>
+                                  
+                                  {%- if form.errors -%}
+                                  <span class="newsletter-form__message form__message error_message" id="Newsletter-error--{{ section.id }}">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
+                                  {%- endif -%}
                                       <button class="button black-btn btn-block" id="SubscribeBtn" name="commit">
                                         <span>{{'newsletter.button_label' | t }}</span>
                                       </button>
