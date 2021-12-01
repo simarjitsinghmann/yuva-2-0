@@ -24,7 +24,7 @@
             
             {%- for value in filter.values -%}
             
-            <li {% if forloop.index > 5 %}class="hideOptions {% if value.count == 0 and value.active == false %}disabled{% endif %}" style="display:none"{% endif %}>
+            <li class="{% if forloop.index > 5 %}hideOptions{% endif %} {% if value.count == 0 and value.active == false %}disabled{% endif %}" {% if forloop.index > 5 %}style="display:none"{% endif %}>
               
               <input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" id="Filter-{{ filter.label | escape }}-{{ forloop.index }}"
                      {% if value.active %}checked{% endif %}
