@@ -296,7 +296,7 @@ $(document).ready(function(){
 		
 	///product-size-select///
 	$('body').on('click','.dropdown-selected',function(){
-		$(".productOptionSelectList").slideUp("fast");
+		$('body').find(".productOptionSelectList").slideUp("fast");
 		// $(this).find(".size-select").slideToggle("fast");
 		$(this).siblings('.productOptionSelectList').css({"display": "block"});
 	});
@@ -517,7 +517,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     slideIndex = jQuery(event.target).index();
     slider.slick('slickGoTo',slideIndex)
   }
-  if(event.type == "shopify:section:load"){
+  else if(event.type == "shopify:section:load"){
     if(block != ''){
       slideIndex = undefined;
     }
