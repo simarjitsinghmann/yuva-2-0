@@ -5,6 +5,9 @@
 main .shopify-section {
 	padding:25px 0;
 }
+main .shopify-section:first-child {
+	padding:0;
+}
 img {
 	max-width:100%;
 }
