@@ -62,6 +62,8 @@
 <style>
   #shopify-section-{{section.id}}{
     background-color:{{section.settings.bgcolor}};
+    padding-top:{{secton.settings.top_space}}px;
+    padding-bottom:{{secton.settings.bottom_space}}px;
   }
   .instagram-post-list {
     display: flex;
@@ -115,6 +117,24 @@
         "id": "bgcolor",
         "label": "t:sections.instagram.settings.bgcolor.label",
         "default":"#ffffff"
+      },
+      {
+        "type": "range",
+        "id": "top_space",
+        "label": "t:sections.instagram.settings.top_space.label",
+        "default":30,
+        "min":0,
+        "max":60,
+        "step":5
+      },
+      {
+        "type": "range",
+        "id": "bottom_space",
+        "label": "t:sections.instagram.settings.bottom_space.label",
+        "default":30,
+        "min":0,
+        "max":60,
+        "step":5
       }
     
     ],
