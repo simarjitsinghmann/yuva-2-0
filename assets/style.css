@@ -3484,6 +3484,11 @@ body #shopify-product-reviews {
     font-size:0;
 }
 .slick-dots li button:after {
-	position: absolute;
-  content:"";
+    position: absolute;
+    content: "";
+    width: 100%;
+    background-color: #000;
+    height: 2px;
+    top: 50%;
+    left: 0;
 }
