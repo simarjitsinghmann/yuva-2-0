@@ -80,6 +80,22 @@
     "name": "Typography",
     "settings": [
       {
+        "type": "radio",
+        "id": "custom_font_family",
+        "label": "Choose Font",
+        "default": "custom",
+        "options": [
+          {
+            "value": "custom",
+            "label": "Predefined Font"
+          },
+          {
+            "value": "select",
+            "label": "Custom Font"
+          }
+        ]
+      },
+      {
         "type": "font_picker",
         "id": "type_font_family",
         "label": "Font",
