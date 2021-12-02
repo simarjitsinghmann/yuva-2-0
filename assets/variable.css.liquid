@@ -5,7 +5,7 @@
     --white:#ffffff;
     --gray: #ececec;
     --dark-gray: #7b7b7b;
-    --theme-color: #000;
+    --theme-color: {{ settings.color_theme | default: '#000' }};
     --green:#6cad61;
     --red:#ec7c7c;
     --font-family:'Jost', sans-serif;
