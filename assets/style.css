@@ -3476,8 +3476,6 @@ body #shopify-product-reviews {
 }
 .slick-dots li button {
   position:relative;
-	width:20px;
-  	height:15px;
   	margin:0 5px;
   background-color: transparent;
   font-family: var(--font-family);
@@ -3486,9 +3484,9 @@ body #shopify-product-reviews {
 .slick-dots li button:after {
     position: absolute;
     content: "";
-    width: 20px;
+    width: 10px;
     background-color: #000;
-    height: 20px;
+    height: 10px;
     top: 50%;
     left: 0;
 }
