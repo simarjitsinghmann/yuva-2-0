@@ -717,6 +717,11 @@
         line-height: 20px;
         font-size: 15px;
     }
+    .post-information-image, .post-information-image .animate_hvrbr {
+        min-height: 165px;
+        max-height: 165px;
+        overflow: hidden;
+    }
 	/*  featured blog end  */
 	/* banner css start   */
     .banner.banner-section.item {
