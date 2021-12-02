@@ -48,8 +48,12 @@
     width: 100%;
     display: block;
 }
+  
   .site-nav-dropdown .inner.dropdown .sub-menu-list .site-nav-dropdown li a:hover{
     color:{{section.settings.sub_hover_color}} !important;
+  }
+.side-menu, .side-menu .inner-side .nav-item.dropdown ul.child, .side-menu .inner-side .nav-item.dropdown ul.grandchild{
+    background-color:{{section.settings.header_bgcolor | default:'#fff'}};
   }
 </style>
   <script>
