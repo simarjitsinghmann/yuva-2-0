@@ -1156,6 +1156,14 @@
     },
     "rich-text": {
       "name": "Rich Text",
+      "settings": {
+        "top_space": {
+          "label": "Section Top Space"
+        },
+        "bottom_space": {
+          "label": "Section Bottom Space"
+        }
+      },
       "blocks": {
         "richtext": {
           "name": "Text",
@@ -1192,6 +1200,12 @@
         },
         "bgcolor": {
           "label": "Background Color"
+        },
+        "top_space": {
+          "label": "Section Top Space"
+        },
+        "bottom_space": {
+          "label": "Section Bottom Space"
         }
       },
       "presets": {
