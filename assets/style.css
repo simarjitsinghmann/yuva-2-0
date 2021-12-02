@@ -2919,6 +2919,13 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
   padding: 15px;
   width: 100%;
   background: linear-gradient(0deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%) ;
+  opacity: 0;
+  transform: translateY(100%);
+    transition: 1s ease all;
+}
+.collection-list-view-card:hover .list-view-content {
+  opacity: 1;
+    transform: translateY(0);
 }
 .collection-list-view-card a.link {
     font-size: 13px;
