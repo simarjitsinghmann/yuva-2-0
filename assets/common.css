@@ -137,6 +137,7 @@ html {
 /* Set core body defaults */
 body {
   background-color:var(--colorBody);
+  color:var(--colorBody);
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
@@ -827,5 +828,8 @@ padding-right: 15px;
 }
 a {
 	color: var(--theme-color);
+}
+img {
+	background-color: var(--colorImageBg);
 }
 /* end */
