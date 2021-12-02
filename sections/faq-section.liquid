@@ -27,6 +27,12 @@
   </div> 
 </div>
 {% endif %}
+<style>
+  #shopify-section-{{section.id}} {
+    padding-top:{{secton.settings.top_space}}px;
+    padding-bottom:{{secton.settings.bottom_space}}px;
+  }
+</style>
  <script>
       var tabHead = document.getElementsByClassName('faq-{{section.id}}');
       if(tabHead.length > 0 ){
