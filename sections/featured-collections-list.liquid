@@ -37,13 +37,14 @@
           </div>
           
           <div class="col-sm-12 col-md-6">
-                     <div class="collection-list-view-wrapper">
+            
         <div class="row">
           {% for block in section.blocks %}
           {% unless forloop.first %}
           {% if block.settings.collection != blank %}
           {% assign collection = block.settings.collection %}
           <div id="block-{{block.id}}" class="col-sm-12 col-md-6" {{ block.shopify_attributes }}>
+            <div class="collection-list-view-wrapper">
               <div class="collection-list-view-card" >
                 {% if block.settings.image != blank %}
                 <img src="{{ block.settings.image | img_url:'master'}}" />
