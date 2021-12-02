@@ -54,7 +54,7 @@
 {
     "name": "t:sections.featured-article.name",
     "tag": "section",
-    "class":"blog-post",
+    "class":"blog-post featured-articles-section",
     "max_blocks":3,
     "settings": [
       {
@@ -85,6 +85,24 @@
         "id": "color",
         "label": "t:sections.featured-article.settings.color.label",
         "default":"#ffffff"
+      },
+      {
+        "type": "range",
+        "id": "top_space",
+        "label": "t:sections.featured-article.settings.top_space.label",
+        "default":30,
+        "min":0,
+        "max":60,
+        "step":5
+      },
+      {
+        "type": "range",
+        "id": "bottom_space",
+        "label": "t:sections.featured-article.settings.bottom_space.label",
+        "default":30,
+        "min":0,
+        "max":60,
+        "step":5
       }
     ],
     "blocks":[
