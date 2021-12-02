@@ -44,6 +44,14 @@
   header a{ 
     color:{{section.settings.header_textcolor | default:'red'}};
   }
+  header a::after,
+  header a::before{ 
+    border-color:{{section.settings.header_textcolor | default:'red'}};
+  }
+  header a:hover::after,
+  header a:hover::before{ 
+    border-color:{{section.settings.header_textcolor_hover | default:'green'}};
+  }
    header a:hover{ 
     color:{{section.settings.header_textcolor_hover| default:'green'}};
    }
