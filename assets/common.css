@@ -667,28 +667,6 @@ label {
 header button.navbar-toggler {
     background: transparent;
 }
-header button.navbar-toggler span.navbar-toggler-icon, header button.navbar-toggler span.navbar-toggler-icon:before, header button.navbar-toggler span.navbar-toggler-icon:after {
-    width: 27px;
-    height: 2px;
-}
-header button.navbar-toggler span.navbar-toggler-icon:before, header button.navbar-toggler span.navbar-toggler-icon:after {
-    content: "";
-    position: absolute;
-    bottom: 7px;
-    left: 0;
-    background: #2f2f2f;
-    transition: bottom .3s .1s cubic-bezier(.23, 1, .32, 1),transform .3s cubic-bezier(.23, 1, .32, 1),width 150ms linear,background 150ms linear;
-}
-header button.navbar-toggler span.navbar-toggler-icon:after {
-    top: 7px;
-    bottom: auto;
-}
-.header-top .header-left .menu-toggle header button.navbar-toggler:hover .span.navbar-toggler-icon:before {
-    width: 17px;
-}
-header button.navbar-toggler:hover .span.navbar-toggler-icon:after {
-    width: 20px;
-}
 
 @media only screen and (min-width:768px){
 .container,.custom-container {
