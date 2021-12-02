@@ -487,7 +487,10 @@ slickSlider = function(selector,slideIndex){
   var options = JSON.parse(html);
   selector.slick(options);
   if(slideIndex){
-  selector.slick('slickGoTo',slideIndex);
+  selector.slick(options).slick('slickGoTo',slideIndex);
+  }
+  else{
+  selector.slick(options);
   }
 }
 
