@@ -3475,9 +3475,15 @@ body #shopify-product-reviews {
     width: 100%;
 }
 .slick-dots li button {
+  position:relative;
 	width:20px;
   	height:20px;
   	margin:0 5px;
   background-color: transparent;
   font-family: var(--font-family);
+    font-size:0;
+}
+.slick-dots li button:after {
+	position: absolute;
+  content:"";
 }
