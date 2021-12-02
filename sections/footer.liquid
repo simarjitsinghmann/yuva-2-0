@@ -152,7 +152,10 @@
   #shopify-section-{{section.id}} a,
   #shopify-section-{{section.id}} span,
   #shopify-section-{{section.id}} p{
-    background-color:{{section.settings.footer_text}};
+    background-color:{{section.settings.footer_text}} !important;
+  }
+  #shopify-section-{{section.id}} a:hover{
+    background-color:{{section.settings.footer_text_hover}} !important;
   }
 </style>
 {% schema %}
