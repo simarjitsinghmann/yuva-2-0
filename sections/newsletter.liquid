@@ -49,6 +49,12 @@
     </div>
   </div>
 </div>
+<style>
+  #shopify-section-{{section.id}} {
+    padding-top:{{secton.settings.top_space}}px;
+    padding-bottom:{{secton.settings.bottom_space}}px;
+  }
+</style>
 {% schema %}
 {
   "name": "t:sections.newsletter.name",
@@ -78,6 +84,24 @@
       "id": "btn",
       "default": "Subscribe",
       "label": "t:sections.newsletter.settings.btn.label"
+    },
+    {
+      "type": "range",
+      "id": "top_space",
+      "label": "t:sections.newsletter.settings.top_space.label",
+      "default":30,
+      "min":0,
+      "max":60,
+      "step":5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space",
+      "label": "t:sections.newsletter.settings.bottom_space.label",
+      "default":30,
+      "min":0,
+      "max":60,
+      "step":5
     }
   ],
   "presets": [
