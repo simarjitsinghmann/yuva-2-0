@@ -3510,10 +3510,12 @@ body #shopify-product-reviews {
   	height:10px;
   	margin:5px 0px;
 }
+.widget-content {
+   transition: 1s ease;
+}
 .widget-content .list-tags.more-options {
     max-height: 0;
     overflow: hidden;
-    transition: 1s ease;
 }
 .widget-content.show .list-tags.more-options{
     max-height: 1000px;
