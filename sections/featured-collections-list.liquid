@@ -13,8 +13,7 @@
           {% if forloop.first %}
           {% if block.settings.collection != blank %}
           {% assign collection = block.settings.collection %}
-          <div id="block-{{block.id}}"  {{ block.shopify_attributes }}>
-            <div class="collection-list-view-wrapper">
+            <div class="collection-list-view-wrapper" id="block-{{block.id}}"  {{ block.shopify_attributes }}>
               <div class="collection-list-view-card" >
                 {% if block.settings.image != blank %}
                 <img src="{{ block.settings.image | img_url:'master'}}" />
@@ -32,7 +31,6 @@
                 </div>
               </div>
             </div>
-          </div>
           {% endif %}
           {% endif %}
           {% endfor%}
