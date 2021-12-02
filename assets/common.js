@@ -485,7 +485,6 @@ function hideOptions(){
 slickSlider = function(selector,slideIndex){
   var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
   var options = JSON.parse(html);
-  selector.slick(options);
   if(slideIndex){
   selector.slick(options).slick('slickGoTo',slideIndex);
   }
