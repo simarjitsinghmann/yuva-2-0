@@ -160,24 +160,8 @@
         "step": 0.1
       },
       {
-        "type": "checkbox",
-        "id": "type_header_capitalize",
-        "label": "Capitalize"
-      },
-      {
-        "type": "checkbox",
-        "id": "type_headers_align_text",
-        "label": "Center headings"
-      },
-      {
         "type": "header",
         "content": "Body text"
-      },
-      {
-        "type": "font_picker",
-        "id": "type_base_font_family",
-        "label": "Font",
-        "default": "poppins_n5"
       },
       {
         "type": "select",
@@ -257,76 +241,6 @@
       },
       {
         "type": "header",
-        "content": "Extras"
-      },
-      {
-        "type": "select",
-        "id": "type_navigation_style",
-        "label": "Navigation font",
-        "default": "body",
-        "options": [
-          {
-            "value": "body",
-            "label": "Body"
-          },
-          {
-            "value": "heading",
-            "label": "Heading"
-          }
-        ]
-      },
-      {
-        "type": "range",
-        "id": "type_navigation_size",
-        "label": "Navigation size",
-        "default": 18,
-        "min": 12,
-        "max": 40,
-        "unit": "px"
-      },
-      {
-        "type": "select",
-        "id": "type_product_style",
-        "label": "Product grid font",
-        "default": "body",
-        "options": [
-          {
-            "value": "body",
-            "label": "Body"
-          },
-          {
-            "value": "heading",
-            "label": "Heading"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "type_collection_font",
-        "label": "Collection grid font",
-        "default": "heading",
-        "options": [
-          {
-            "value": "body",
-            "label": "Body"
-          },
-          {
-            "value": "heading",
-            "label": "Heading"
-          }
-        ]
-      },
-      {
-        "type": "range",
-        "id": "type_collection_size",
-        "label": "Collection grid size",
-        "default": 25,
-        "min": 15,
-        "max": 35,
-        "unit": "px"
-      },
-      {
-        "type": "header",
         "content": "Buttons"
       },
       {
@@ -350,58 +264,6 @@
           {
             "value": "angled",
             "label": "Angled"
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "content": "Icons"
-      },
-      {
-        "type": "select",
-        "id": "icon_weight",
-        "label": "Weight",
-        "default": "5px",
-        "options": [
-          {
-            "value": "2px",
-            "label": "Extra-light"
-          },
-          {
-            "value": "3px",
-            "label": "Light"
-          },
-          {
-            "value": "4px",
-            "label": "Regular"
-          },
-          {
-            "value": "5px",
-            "label": "Semi-bold"
-          },
-          {
-            "value": "6px",
-            "label": "Bold"
-          },
-          {
-            "value": "7px",
-            "label": "Extra-bold"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "icon_linecaps",
-        "label": "Edges",
-        "default": "miter",
-        "options": [
-          {
-            "value": "miter",
-            "label": "Sharp"
-          },
-          {
-            "value": "round",
-            "label": "Round"
           }
         ]
       }
