@@ -514,11 +514,14 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     var sectionId = event.detail.sectionId
     block = jQuery(event.target);
     var slider = jQuery('#shopify-section-'+sectionId).find('[data-slider]');
-    slideIndex = jQuery(event.target).data('slick-index')
-    setTimeout(function(){
+    slideIndex = jQuery(event.target).index();
+    var Index = jQuery(event.target).data('slick-index')
+    if(Index){
+    	slideIndex = Index;
+    }
     slider.slick('slickGoTo',slideIndex);
-      slider.slick('slickPause');
-    },200);
+      slider.slick('slickPause')
+    
   }
   else if(event.type == "shopify:section:load"){
     if(block != ''){
