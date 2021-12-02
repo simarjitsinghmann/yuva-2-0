@@ -42,7 +42,8 @@
     width: 190px;
 }
   header a,
-  .side-menu .back-btn { 
+  .side-menu .back-btn,
+  .side-menu .close-btn{ 
     color:{{section.settings.header_textcolor | default:'red'}};
   }
   header a::after,
@@ -58,7 +59,8 @@
     border-color:{{section.settings.header_textcolor_hover | default:'green'}} !important;
   }
    header a:hover,
-  .side-menu .back-btn:hover{ 
+  .side-menu .back-btn:hover,
+  .side-menu .close-btn:hover{ 
     color:{{section.settings.header_textcolor_hover| default:'green'}};
    }
     .menuLinks-wrapper {
