@@ -2921,14 +2921,14 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
   background: linear-gradient(0deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%) ;
 }
 .collection-list-view-card a.link {
-  font-size:15px;
-  text-decoration:none;
-  background: var(--white);
-    padding: 8px 20px;
+    font-size: 13px;
+    text-decoration: none;
+    background: var(--white);
+    padding: 5px 12px;
     color: var(--black);
-      border: 0px;
-      font-weight: var(--medium);
-        }
+    border: 0;
+    font-weight: var(--medium);
+}
 /* featured collection list end */
 /* collection page start */
 .collection_list_outer {
