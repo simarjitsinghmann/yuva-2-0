@@ -47,7 +47,30 @@
           
           
           {%- if filter.values.size > 5 -%}
-          
+          <ul class="list-tags">
+            
+            {%- for value in filter.values -%}
+            {% unless forloop.index < 5 %}
+            <li class=" {% if value.count == 0 and value.active == false %}disabled{% endif %}">
+              
+              <input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" id="Filter-{{ filter.label | escape }}-{{ forloop.index }}"
+                     {% if value.active %}checked{% endif %}
+                     {% if value.count == 0 and value.active == false %}disabled{% endif %}
+                     >
+              
+              <span class="checkmark"></span>
+              
+              <label for="Filter-{{ filter.label | escape }}-{{ forloop.index }}">
+                
+                {{ value.label | escape }} ({{ value.count }})
+                
+              </label>
+              
+            </li>
+            {% endunless %}
+            {% endfor %}
+            
+          </ul>
           <div class="br_more_filter hide">
             
             <div class="showMore">{% render 'icon-plus' %} Show More</div>
