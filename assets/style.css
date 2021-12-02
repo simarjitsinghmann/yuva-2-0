@@ -1239,7 +1239,13 @@ ul.gallery-item li a > img {background: #f6f4f3;}
     padding-left: 7px;
     line-height: 1.3;
     } 
-.prizebox #get_price .main-price {  font-size: 20px; line-height: 20px; font-weight: 400; margin: 0 16px 0 21px; } 
+.prizebox #get_price .main-price {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    margin: 0 16px 0 21px;
+    color: var(--dark-gray);
+}
 .percent-off {
     color: var(--colorTextSavings);
 }
