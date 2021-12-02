@@ -44,6 +44,9 @@
   header a{ 
     color:{{section.settings.header_textcolor | default:'red'}};
   }
+   header a:hover{ 
+    color:{{section.settings.header_textcolor_hover| default:'green'}};
+   }
     .menuLinks-wrapper {
     width: 100%;
     display: block;
@@ -55,6 +58,7 @@
 .side-menu, .side-menu .inner-side .nav-item.dropdown ul.child, .side-menu .inner-side .nav-item.dropdown ul.grandchild{
     background-color:{{section.settings.header_bgcolor | default:'#fff'}};
   }
+  
 </style>
   <script>
       ///Sticky-header//
@@ -206,6 +210,11 @@
       "type": "color",
       "id": "header_textcolor",
       "label": "t:sections.header.settings.header_textcolor.label"
+    },
+    {
+      "type": "color",
+      "id": "header_textcolor_hover",
+      "label": "t:sections.header.settings.header_textcolor_hover.label"
     },
     {
       "type": "color",
