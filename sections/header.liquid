@@ -47,12 +47,14 @@
   header a::after,
   header a::before,
   header a .caret::before,
-  header a .caret::after,{ 
+  header a .caret::after{ 
     border-color:{{section.settings.header_textcolor | default:'red'}} !important;
   }
   header a:hover::after,
-  header a:hover::before{ 
-    border-color:{{section.settings.header_textcolor_hover | default:'green'}};
+  header a:hover::before,
+  header a:hover .caret::before,
+  header a:hover .caret::after{ 
+    border-color:{{section.settings.header_textcolor_hover | default:'green'}} !important;
   }
    header a:hover{ 
     color:{{section.settings.header_textcolor_hover| default:'green'}};
