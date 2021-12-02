@@ -515,7 +515,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     block = jQuery(event.target);
     var slider = jQuery('#shopify-section-'+sectionId).find('[data-slider]');
     slideIndex = jQuery(event.target).index();
-    var Index = jQuery(event.target).data('slick-index')
+    var Index = jQuery(event.target).not('.slick-cloned').data('slick-index')
     if(Index){
     	slideIndex = Index;
     }
