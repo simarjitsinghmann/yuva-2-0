@@ -22,9 +22,8 @@
 <style>
     #shopify-section-{{section.id}}{
       background-color:{{section.settings.bgcolor}};
-      {%- if section.settings.show_divider -%}
-      border-bottom: 1px solid {{section.settings.textcolor | color_lighten: 80}};
-      {%- endif -%}
+    padding-top:{{secton.settings.top_space}}px;
+    padding-bottom:{{secton.settings.bottom_space}}px;
     }
     #shopify-section-{{section.id}} .service__column .col h6,
     #shopify-section-{{section.id}} .service__column .col p{
