@@ -46,6 +46,13 @@
     padding-top:{{section.settings.top_space}}px;
     padding-bottom:{{section.settings.bottom_space}}px;
   }
+  @media only screen and (max-width:575px) {
+    #shopify-section-{{section.id}}{
+      background-color:{{section.settings.color}};
+      padding-top:{{section.settings.top_space}}px;
+      padding-bottom:{{section.settings.bottom_space}}px;
+    }
+  }
 </style>
 {% schema %}
 {
