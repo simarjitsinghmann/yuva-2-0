@@ -43,13 +43,15 @@
 <style>
   #shopify-section-{{section.id}}{
     background-color:{{section.settings.color}};
+    padding-top:{{secton.settings.top_space}}px;
+    padding-bottom:{{secton.settings.bottom_space}}px;
   }
 </style>
 {% schema %}
 {
   "name": "t:sections.offer-section.name",
   "tag": "section",
-  "class":"category-section",
+  "class":"category-section offer-section",
   "max_blocks":3,
   "settings": [
     {
