@@ -483,13 +483,16 @@ function hideOptions(){
 // sliders
 
 slickSlider = function(selector,slideIndex){
-  var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
-  var options = JSON.parse(html);
-  if(slideIndex){
-  selector.slick(options).slick('slickGoTo',slideIndex);
-  }
-  else{
-  selector.slick(options);
+  var optionContainer = selector.closest('.shopify-section').find('[name="slider-json"]')[0];
+  if(optionContainer){
+    var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
+    var options = JSON.parse(html);
+    if(slideIndex){
+      selector.slick(options).slick('slickGoTo',slideIndex);
+    }
+    else{
+      selector.slick(options);
+    }
   }
 }
 
