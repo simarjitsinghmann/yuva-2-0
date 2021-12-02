@@ -47,6 +47,16 @@
   .header_3 .nav__btn .menu_title{ 
     color:{{section.settings.header_textcolor | default:'red'}};
   }
+  .header_3 button.navbar-toggler span.navbar-toggler-icon,
+  .header_3 button.navbar-toggler span.navbar-toggler-icon:after, 
+  .header_3 button.navbar-toggler span.navbar-toggler-icon:before{
+    background-color:{{section.settings.header_textcolor | default:'red'}};
+  }
+  .header_3 button.navbar-toggler:hover span.navbar-toggler-icon,
+  .header_3 button.navbar-toggler:hover span.navbar-toggler-icon:after, 
+  .header_3 button.navbar-toggler:hover span.navbar-toggler-icon:before{
+    background-color:{{section.settings.header_textcolor | default:'red'}};
+  }
   header a::after,
   header a::before,
   header a .caret::before,
@@ -62,7 +72,7 @@
    header a:hover,
   .side-menu .back-btn:hover,
   .side-menu .close-btn:hover,
-  .header_3 .nav__btn .menu_title:hover{ 
+  .header_3 .nav__btn:hover .menu_title{ 
     color:{{section.settings.header_textcolor_hover| default:'green'}};
    }
     .menuLinks-wrapper {
