@@ -10,7 +10,7 @@
             {% assign footlogo = true %}
             <div class="grid__item full__item col-sm-12 col-md-3">
               {% assign width = section.settings.image_width | append:'px' %}
-              <img src="{{section.settings.image | img_url:'master'}}" width="{{width}}">
+              <img src="{{section.settings.image | img_url:'master'}}" class="Yuva-logo" width="{{width}}">
             </div>
             {% endif %}
             {% if section.settings.subtext != blank %}
