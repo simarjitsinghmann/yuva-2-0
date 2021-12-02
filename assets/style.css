@@ -2878,6 +2878,10 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
 .colllection-list-view .col-md-6 .row .col-md-6{
 	margin-bottom:30px;
 }
+
+.colllection-list-view .col-md-6 .row .col-md-6:last-child {
+	margin-bottom:0;
+}
 .collection-list-view-wrapper {
 	height:100%;
 }
