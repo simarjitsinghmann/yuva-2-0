@@ -517,7 +517,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     slideIndex = jQuery(event.target).index();
     setTimeout(function(){
     slider.slick('slickGoTo',slideIndex)
-    },500);
+    },200);
   }
   else if(event.type == "shopify:section:load"){
     if(block != ''){
