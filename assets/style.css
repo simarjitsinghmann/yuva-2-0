@@ -2923,7 +2923,8 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
   opacity: 1;
    transform: scale(1);
 }
-.collection-list-view-card a.link {
+.collection-list-view-card a.link,
+.collection-list-btn {
     font-size: 13px;
     text-decoration: none;
     background: var(--white);
