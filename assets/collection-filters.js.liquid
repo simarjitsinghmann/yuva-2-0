@@ -22,11 +22,11 @@
       accordion.addEventListener("click", ()=>{	   
                                  if(accordion.classList.contains('show')){
         accordion.classList.remove('show');
-        accordion.closest('.widget-content').classList.remove('show')
+        accordion.parentNode.classList.remove('show')
         accordion.classList.add('hide'); 
       }else{	
         accordion.classList.remove('hide');
-        accordion.closest('.widget-content').classList.add('show')
+        accordion.parentNode.classList.add('show')
         accordion.classList.add('show');
       }
     });
