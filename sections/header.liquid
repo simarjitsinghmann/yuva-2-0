@@ -42,7 +42,7 @@
     width: 190px;
 }
   header .navbar-expand-md .nav-item .list-menu__item{
-    color:{{section.settings.header_textcolor}};
+    color:{{section.settings.header_textcolor | default:'#000'}};
   }
     .menuLinks-wrapper {
     width: 100%;
@@ -201,7 +201,6 @@
     {
       "type": "color",
       "id": "header_textcolor",
-      "default": "#000000",
       "label": "t:sections.header.settings.header_textcolor.label"
     },
     {
