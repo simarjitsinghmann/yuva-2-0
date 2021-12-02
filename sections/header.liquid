@@ -28,7 +28,9 @@
     position: sticky;
     top: 0;
     z-index: 5; 
+    background-color:{{section.settings.header_bgcolor}};
   }
+  
 .site-nav-dropdown .inner.dropdown .sub-menu-list {
     width: 250px;
   	padding:0 10px;
@@ -39,6 +41,9 @@
 .site-nav-dropdown .inner.dropdown.col-md-9 .sub-menu-list {
     width: 190px;
 }
+  header .navbar-expand-md .nav-item .list-menu__item{
+    color:{{section.settings.header_textcolor}};
+  }
     .menuLinks-wrapper {
     width: 100%;
     display: block;
@@ -187,6 +192,17 @@
           "value": "center"
         }
       ]    
+    },
+    {
+      "type": "color",
+      "id": "header_bgcolor",
+      "label": "t:sections.header.settings.header_bgcolor.label"
+    },
+    {
+      "type": "color",
+      "id": "header_textcolor",
+      "default": "#000000",
+      "label": "t:sections.header.settings.header_textcolor.label"
     },
     {
       "type": "color",
