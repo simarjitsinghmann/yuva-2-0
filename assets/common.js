@@ -521,8 +521,6 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     	slideIndex = Index;
     }
     
-      // Go to selected slide, pause autoplay
-      $slideshow.slick('slickGoTo', slideIndex).slick('slickPause');
     slider.slick('slickGoTo',slideIndex);
       slider.slick('slickPause')
     
