@@ -25,6 +25,12 @@
     </div>
   </div>
 </div>
+<style>
+  #shopify-section-{{section.id}} {
+    padding-top:{{secton.settings.top_space}}px;
+    padding-bottom:{{secton.settings.bottom_space}}px;
+  }
+</style>
 {% schema %}
 {
   "name": "t:sections.featured-collection.name",
@@ -83,6 +89,24 @@
       "id": "view_all_btn_text",
       "default": "View all",
       "label": "t:sections.featured-collection.settings.view_all_btn_text.label"
+    },
+    {
+      "type": "range",
+      "id": "top_space",
+      "label": "t:sections.featured-collection.settings.top_space.label",
+      "default":30,
+      "min":0,
+      "max":60,
+      "step":5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space",
+      "label": "t:sections.featured-collection.settings.bottom_space.label",
+      "default":30,
+      "min":0,
+      "max":60,
+      "step":5
     }
   ],
   "presets": [
