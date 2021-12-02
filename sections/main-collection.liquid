@@ -2,6 +2,7 @@
 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
 <div class="CollectionProductGrid {{sort_by}} {{collection.default_sort_by}} " id="CollectionProductsContainer" data-id="{{section.id}}" data-view="grid-layout-5">
   <div class="container">
+    {% if collection.collection.all_products_count > 0 %}
     <div class="product-toolbar-box">
       
       {% if section.settings.enable_filtering %}
@@ -168,6 +169,14 @@
         {% endif %}
       </div>
     </div>
+    {% else %}
+    <div class="nodatafound_wrapper">
+      <div class="nodatafound_box">
+        <img src="" />
+        <h5>No Product Found</h5>
+      </div>
+    </div>
+    {% endif %}
   </div>
 </div>
 
