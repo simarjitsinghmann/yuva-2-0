@@ -141,9 +141,9 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
   font-family: var(--font-family);
-  letter-spacing:0.2px;
+  font-weight: var(--font-weight);
+  font-style: var(--font-style);
 }
 label {
 	font-size: var(--small-text);
