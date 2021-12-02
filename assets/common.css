@@ -138,14 +138,12 @@ html {
 body {
   background-color:var(--colorBody);
   color:var(--colorBody);
-  min-height: 100vh;
   scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: var(--font-family);
   font-weight: var(--font-weight);
   font-style: var(--font-style);
-  letter-spacing:0.2px;
+  letter-spacing:0px;
 }
 label {
 	font-size: var(--small-text);
