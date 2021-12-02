@@ -45,8 +45,10 @@
     color:{{section.settings.header_textcolor | default:'red'}};
   }
   header a::after,
-  header a::before{ 
-    border-color:{{section.settings.header_textcolor | default:'red'}};
+  header a::before,
+  header a .caret::before,
+  header a .caret::after,{ 
+    border-color:{{section.settings.header_textcolor | default:'red'}} !important;
   }
   header a:hover::after,
   header a:hover::before{ 
