@@ -28,6 +28,12 @@
     </div>
   </div>
 </div>
+<style>
+  #shopify-section-{{section.id}} {
+    padding-top:{{secton.settings.top_space}}px;
+    padding-bottom:{{secton.settings.bottom_space}}px;
+  }
+</style>
 {% schema %}
   {
     "name": "Image With Text",
@@ -65,6 +71,24 @@
             "type":"richtext",
             "id":"content",
             "label":"Content"
+        },
+        {
+          "type": "range",
+          "id": "top_space",
+          "label": "t:sections.image-with-text.settings.top_space.label",
+          "default":30,
+          "min":0,
+          "max":60,
+          "step":5
+        },
+        {
+          "type": "range",
+          "id": "bottom_space",
+          "label": "t:sections.image-with-text.settings.bottom_space.label",
+          "default":30,
+          "min":0,
+          "max":60,
+          "step":5
         }
   	],
     "presets": [
