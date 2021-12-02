@@ -2862,8 +2862,13 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
     }
 /* end */
 /* featured collection list start */
-.colllection-list-view .col-md-6 .row .col-md-6{
-  margin-bottom:30px;
+.colllection-list-view .col-md-6 .row{
+    margin:0 -7px;
+}
+
+.colllection-list-view .col-md-6 .row .col-md-6 {
+    margin-bottom: 15px;
+    padding: 0 7px;
 }
 
 .colllection-list-view .col-md-6 .row .col-md-6:last-child {
