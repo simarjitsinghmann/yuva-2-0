@@ -551,8 +551,7 @@ visibility: visible;
 .customer-content .ct-login .form-group { margin-bottom: 15px; } 
 .customer-content .ct-login input { font-size:var(--small-text); border: 1px solid var(--black); background-color: var(--color_text_field); color: var(--color_text_field_text); border-radius: 0; height: auto; max-width: 100%; line-height: 40px; padding: 0 15px; max-height: 35px; background-clip: unset; }
 .customer-title .close-customer .icon, .cart-product-title .close-customer .icon, .side-menu .icon { width: 12px; fill:var(--black);     margin-right: 10px; color:var(--black); opacity:1; } 
-.side-menu .icon { margin-right: 10px; width: 12px;}
-.customer-title .close-customer .icon:hover, .cart-product-title .close-customer .icon:hover, .side-menu .close-btn:hover .icon,media-link{ fill:var(--theme-color); color:var(--theme-color); }
+.side-menu .icon { margin-right: 10px; width: 12px; fill:currentcolor}
 .customer-content .ct-login .action-btn .forgot-password { margin: 0 0 15px; display: inline-block; text-decoration: none; } 
 .customer-content .ct-login .action-btn .forgot-password span { font-size: var(--small-text); line-height: 18px; letter-spacing: .04em; color: var(--black); border-bottom: 1px solid var(--black); } 
 .customer-content  .ct-login .btn-login, .customer-content  .ct-register .btn { max-width: 100%; color: var(--white); line-height: normal; padding: 10px; background-repeat: no-repeat; background-size: 200% 100%; background-position: right bottom; transition: background-position 0.25s ease-out; font-size: var(--med-text); min-height: initial; max-height: inherit; text-transform: uppercase; letter-spacing: 0.2px; border:0; } 
