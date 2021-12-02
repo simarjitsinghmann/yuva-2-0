@@ -28,7 +28,7 @@
     position: sticky;
     top: 0;
     z-index: 5; 
-    background-color:{{section.settings.header_bgcolor}};
+    background-color:{{section.settings.header_bgcolor | default:'#fff'}};
   }
   
 .site-nav-dropdown .inner.dropdown .sub-menu-list {
