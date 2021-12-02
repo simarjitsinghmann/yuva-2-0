@@ -513,10 +513,11 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
   if(event.type == "shopify:block:select"){
     var sectionId = event.detail.sectionId
     block = jQuery(event.target);
-    console.log(jQuery(event.target).not('.slick-cloned'));
     var slider = jQuery('#shopify-section-'+sectionId).find('[data-slider]');
 //     slideIndex = jQuery(event.target).index();
-     slideIndex = $('.slideshow__slide--' + event.detail.blockId + ':not(.slick-cloned)').data('slick-index');
+    slideIndex  = $('.slideshow__slide--' + event.detail.blockId + ':not(.slick-cloned)').data('slick-index');
+    
+    console.log($('.slideshow__slide--' + event.detail.blockId + ':not(.slick-cloned)'),slideIndex);
 //     if(Index){
 //     	slideIndex = Index;
 //     }
