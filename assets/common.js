@@ -516,10 +516,13 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     console.log(jQuery(event.target).not('.slick-cloned'));
     var slider = jQuery('#shopify-section-'+sectionId).find('[data-slider]');
     slideIndex = jQuery(event.target).index();
-    var Index = jQuery(event.target).not('.slick-cloned').data('slick-index')
+    var Index = $('.slideshow__slide--' + event.detail.blockId + ':not(.slick-cloned)').data('slick-index');
     if(Index){
     	slideIndex = Index;
     }
+    
+      // Go to selected slide, pause autoplay
+      $slideshow.slick('slickGoTo', slideIndex).slick('slickPause');
     slider.slick('slickGoTo',slideIndex);
       slider.slick('slickPause')
     
