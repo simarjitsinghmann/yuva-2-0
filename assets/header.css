@@ -89,8 +89,7 @@
       font-family: var(--font-family); 
       padding: 28px 15px;
       font-size:13px; 
-      margin: 0 8px;
-      color:var(--black); 
+      margin: 0 8px; 
       line-height:32px; 
       text-decoration:none;
       font-weight:var(--medium);
@@ -275,8 +274,8 @@
 /**header 3**/
 .side-menu .inner-side, .side-menu .nav-item.dropdown ul.inner { height: 100%; padding: 40px 60px;}
 .header_3 .side-menu .inner-side ul li { margin: 0; position: static; } 
-.header_3 .nav__btn .menu_title { margin-left: 18px; font-size: var(--med-text); font-weight: var(--semibold); color: var(--black);padding-top: 3px; } 
-.header_3 .side-menu .inner-side ul li a { text-decoration: none; font-weight: var(--medium); font-size: 25px; color: var(--black); display: block; 
+.header_3 .nav__btn .menu_title { margin-left: 18px; font-size: var(--med-text); font-weight: var(--semibold);padding-top: 3px; } 
+.header_3 .side-menu .inner-side ul li a { text-decoration: none; font-weight: var(--medium); font-size: 25px; display: block; 
   position: relative; padding: 0; margin: 0; border: 0; text-transform: capitalize; }
 .header_3 .side-menu .inner-side ul li a.list-menu__item {padding:10px 0;}
 .header_3 .side-menu .inner-side ul li:last-child { border-bottom: 0; } 
