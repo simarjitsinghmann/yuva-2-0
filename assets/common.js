@@ -525,6 +525,8 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     if(block != ''){
       slideIndex = undefined;
     }
+    var index = jQuery(event.target).data('slick-index')
+    console.log(slideIndex,index)
     slickSlider(jQuery(slider),slideIndex);
   }
   else{
