@@ -3507,6 +3507,15 @@ body #shopify-product-reviews {
   	border-radius:20px;
 }
 .shopify-section-slider .slick-dots {
-	position:absolute;
-  	bottom:20px;
+    position: absolute;
+    bottom: 20px;
+    writing-mode: vertical-rl;
+    height: 100%;
+    width: 40px;
+    right: 0;
+}
+.shopify-section-slider .slick-dots li button {
+	width:15px;
+  	height:20px;
+  	margin:5px 0px;
 }
