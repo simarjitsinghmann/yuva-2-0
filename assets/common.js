@@ -515,11 +515,11 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     block = jQuery(event.target);
     console.log(jQuery(event.target).not('.slick-cloned'));
     var slider = jQuery('#shopify-section-'+sectionId).find('[data-slider]');
-    slideIndex = jQuery(event.target).index();
-    var Index = $('.slideshow__slide--' + event.detail.blockId + ':not(.slick-cloned)').data('slick-index');
-    if(Index){
-    	slideIndex = Index;
-    }
+//     slideIndex = jQuery(event.target).index();
+     slideIndex = $('.slideshow__slide--' + event.detail.blockId + ':not(.slick-cloned)').data('slick-index');
+//     if(Index){
+//     	slideIndex = Index;
+//     }
     
     slider.slick('slickGoTo',slideIndex);
       slider.slick('slickPause')
@@ -529,8 +529,8 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     if(block != ''){
       slideIndex = undefined;
     }
-    var index = block.data('slick-index')
-    console.log(slideIndex,index)
+//     var index = block.data('slick-index')
+//     console.log(slideIndex,index)
     slickSlider(jQuery(slider),slideIndex);
   }
   else{
