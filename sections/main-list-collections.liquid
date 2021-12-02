@@ -1,4 +1,4 @@
-{{collections.size}}
+
 {% assign limit = section.settings.collections_per_page %}
 {% if section.settings.show_collections == 'selected' %}
 {% assign limit = 100 %}
@@ -24,15 +24,23 @@
 
   <ul class="collection-list grid grid--1-col grid--3-col-tablet" role="list">
     {% if section.settings.show_collections == 'all' %}
+    {% if collection.size > 0 %}
     {%- for collection in collections -%}
     {% include 'collection-grid' collection:collection %}
     {%- endfor -%}
     {% else %}
+    {% render 'not-found'  item:'Collection'%}
+    {% endif %}
+    {% else %}
+    {% if section.blocks.size > 0 %}
     {% for block in section.blocks %}
     {% if block.settings.collection != blank %}
     {% include 'collection-grid' collection:block.settings.collection,collectionImage:block.settings.image %}
     {% endif %}
     {% endfor %}
+    {% else %}
+    {% render 'not-found'  item:'Collection'%}
+    {% endif %}
     {% endif %}
   </ul>
 </div>
