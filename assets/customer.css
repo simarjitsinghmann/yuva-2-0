@@ -636,13 +636,16 @@ label[for="AddressProvinceNew"] {
     border: 1px solid var(--gray);
     margin-bottom: 20px;
 }
-.address-bill-status{
+.address-bill-status 
   display:flex;
   justify-content:space-between;
     background-color: #00800017;
     padding: 3px 12px;
     font-size: 13px;
     display: flex;
+}
+.address-bill-status p {
+	padding:0;
 }
 .order-detail-address p:last-child{
     background-color: transparent;
