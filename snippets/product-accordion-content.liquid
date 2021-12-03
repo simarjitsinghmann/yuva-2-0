@@ -8,7 +8,7 @@
             Description
           </a>
         </h6>
-        <div id="accordion-content-description" class="content productSection-content" style="display:none;">
+        <div id="accordion-content-description" class="content productSection-content" style="max-height:0;">
           <div class="panel-body">
             {{product.description}}
           </div>
@@ -26,7 +26,7 @@
             {{block.settings.content_heading}}
           </a>
         </h6>
-        <div id="accordion-content-contentwrapper"  class="content productSection-content"  style="display:none;">
+        <div id="accordion-content-contentwrapper"  class="content productSection-content"  style="max-height:0;">
           <div class="panel-body">
             {{block.settings.content}}
           </div>
@@ -44,7 +44,7 @@
             Reviews
           </a>
         </h6>
-        <div id="accordion-content-reviews" class="content productSection-content" style="display:none;">
+        <div id="accordion-content-reviews" class="content productSection-content" style="max-height:0;">
           <div class="panel-body">
             <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
           </div>
