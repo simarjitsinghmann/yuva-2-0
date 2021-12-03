@@ -608,13 +608,14 @@ label[for="AddressProvinceNew"] {
     text-transform: capitalize;
     font-size: 14px;
     color: var(--black);
+      border-bottom:2px solid transperent;
 }
 .account-header-tabs a:hover{
 	background-color: var(--gray);
 }
 .account-header-tabs a.active {
    font-weight: var(--medium);
-   background-color: var(--gray);
+     border-color: var(--black);
 }
 .account-pages-content h2 {
 	margin-bottom:30px;
