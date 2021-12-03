@@ -5458,10 +5458,14 @@ body #shopify-product-reviews {
    content: "";
    width: 10px;
    background-color: #000;
+   opacity:0.5;
    height: 10px;
    top: 0;
    left: 0;
    border-radius: 20px;
+}
+.slick-active li button:after {
+	opacity:1;
 }
 .shopify-section-slider .slick-dots {
    position: absolute;
