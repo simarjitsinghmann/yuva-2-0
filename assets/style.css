@@ -2528,6 +2528,9 @@ textarea.form-control {
   position: relative;
   box-shadow: 0 2px 4px rgb(0 0 0 / 21%);
 }
+.faq .set .panel-title.active+.faqSection-content {
+    padding: 10px 0 22px !important;
+}
 .faq .set .content {
   border-bottom:0;   
   overflow: hidden;
