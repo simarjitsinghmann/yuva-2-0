@@ -96,7 +96,6 @@
               <li data-cart-discount>{{'sections.cart.discount' | t}}['{{ discount.title }}'] <strong>-{{discount.total_allocated_amount | money}}</strong></li>
               {%- endfor -%}
               {% endif %}
-              <!-- <li>Convenience Fee Know More<strong>49FREE</strong></li> -->
               <li class="total" data-cart-total>
                  <p>{{'sections.cart.new_subtotal' | t}}</p>
                  <strong data-cart-total-price>{{cart.total_price | money}}</strong>
