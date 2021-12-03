@@ -696,100 +696,6 @@
         "bottom_space": 40
       }
     },
-    "video-banner": {
-      "type": "video-banner",
-      "disabled": true,
-      "settings": {
-        "videofile": "https:\/\/cdn.shopify.com\/s\/files\/1\/2018\/8867\/files\/ice.mp4",
-        "poster": "shopify:\/\/shop_images\/about.png",
-        "title": "Video with text overlay",
-        "full_width": true,
-        "autoplay": false,
-        "overlay": true,
-        "bgcolor": "#707070",
-        "opacity": 40,
-        "link_text": "View products"
-      }
-    },
-    "1638256036636fff66": {
-      "type": "newsletter",
-      "disabled": true,
-      "settings": {
-        "heading": "Join Our Newsletter",
-        "description": "Sign up it only takes a second to be the news.",
-        "placeholder": "Email Address",
-        "btn": "Subscribe",
-        "top_space": 30,
-        "bottom_space": 30
-      }
-    },
-    "16378358938771729e": {
-      "type": "faq-section",
-      "disabled": true,
-      "blocks": {
-        "7969094b-3d16-4dff-9ec1-176409fe418e": {
-          "type": "faq",
-          "settings": {
-            "heading": "How long will it take to get my package?",
-            "answer": ""
-          }
-        },
-        "004e44ef-87c3-4160-8443-d69ae672d9bb": {
-          "type": "faq",
-          "settings": {
-            "heading": "What shipping methods are availbale?",
-            "answer": "<p><em>Lorem Ipsum<\/em>is simply dummy<em>text<\/em>of the printing and typesetting industry. ... et Malorum\" by Cicero are also reproduced in their exact<em>original<\/em>form, ...<\/p>"
-          }
-        },
-        "61f74ca6-0390-42e7-b646-0097482ffa52": {
-          "type": "faq",
-          "settings": {
-            "heading": "How long will it take to get my package?",
-            "answer": "<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.<\/p>"
-          }
-        },
-        "d1a52af9-d094-4f1e-8882-b626567684a5": {
-          "type": "faq",
-          "settings": {
-            "heading": "What payment methods are accepted?",
-            "answer": "<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.<br\/><br\/>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "7969094b-3d16-4dff-9ec1-176409fe418e",
-        "004e44ef-87c3-4160-8443-d69ae672d9bb",
-        "61f74ca6-0390-42e7-b646-0097482ffa52",
-        "d1a52af9-d094-4f1e-8882-b626567684a5"
-      ],
-      "settings": {
-        "heading": "Frequently Asked Questions",
-        "top_space": 30,
-        "bottom_space": 30
-      }
-    },
-    "16378395879fc0118a": {
-      "type": "image-with-text",
-      "disabled": true,
-      "settings": {
-        "image": "shopify:\/\/shop_images\/about.png",
-        "image_alignment": "left",
-        "heading": "Yuva Our Story We treat all of our stackholders with an enduring sense of fairness and integrity",
-        "content": "<p>Synth ethical biodiesel poutine. Bitters beard salvia lo-fi. Palo santo literally plaid edison bulb, pitchfork drinking vinegar authentic pabst street art subway tile craft beer single-origin offee shaman dreamcatcher.<\/p><p><\/p><p>ara and Matt Fells founded St. Agni in 2014, with the intention of creating pieces they couldn’t find. A vision conceived from the idea of designing functionally refined pieces to exist in<br\/><br\/>Agni in 2014, with the intention of creating pieces they could idea of designing functionally.<\/p><p><\/p>",
-        "top_space": 30,
-        "bottom_space": 30
-      }
-    },
-    "16378396162c4cd192": {
-      "type": "featured-text",
-      "disabled": true,
-      "settings": {
-        "content": "\"Synth ethical biodiesel poutine. Bitters beard salvia lo-fi. Palo santo literally plaid edison bulb, pitchfork drinking vinegar authentic pabst street art subway tile craft beer single-origin coffee shaman dreamcatcher. \"",
-        "bgcolor": "#e9e9e9",
-        "top_space": 30,
-        "bottom_space": 30
-      }
-    },
     "1637909437c24c2665": {
       "type": "featured-articles",
       "blocks": {
@@ -887,25 +793,6 @@
         "top_space": 30,
         "bottom_space": 30
       }
-    },
-    "1638255644cb8d3175": {
-      "type": "rich-text",
-      "disabled": true,
-      "settings": {
-        "top_space": 30,
-        "bottom_space": 30
-      }
-    },
-    "16382724245dbd108e": {
-      "type": "custom-liquid",
-      "disabled": true,
-      "settings": {
-        "custom_liquid": "{{shop.name}}\n<form method=\"post\" action=\"\/contact#ContactForm\" id=\"ContactForm\" accept-charset=\"UTF-8\" class=\"contact-form\">\n<input type=\"hidden\" name=\"form_type\" value=\"contact\"><input type=\"hidden\" name=\"utf8\" value=\"✓\"><div class=\"row\">\n              <div class=\"col-lg-12 col-md-12\">\n                <div class=\"form-group\">\n                  <label for=\"ContactForm-username\">User Name<\/label>\n                  <input type=\"text\" class=\"form-control\" id=\"ContactForm-username\" name=\"contact[User Name]\" placeholder=\"User name\" required=\"\">\n                <\/div>\n              <\/div>\n              <div class=\"col-lg-12 col-md-12\">\n                <label class=\"field__label\" for=\"ContactForm-email\">Email <span aria-hidden=\"true\">*<\/span><\/label>\n                <div class=\"form-group\">\n                  <input autocomplete=\"email\" type=\"email\" id=\"ContactForm-email\" class=\"form-control\" name=\"contact[email]\" spellcheck=\"false\" autocapitalize=\"off\" value=\"simarjit.shinedezign@gmail.com\" aria-required=\"true\" placeholder=\"Email Address\">\n                <\/div>\n              <\/div>\n              <div class=\"col-lg-12 col-md-12\">\n                <label for=\"ContactForm-body\">Comment<\/label>\n                <div class=\"form-group\">\n                  <textarea id=\"ContactForm-body\" class=\"form-control\" name=\"contact[Comment]\" placeholder=\"Comment\" rows=\"3\"><\/textarea>\n                <\/div>\n                <input type=\"submit\" class=\"btn button\" value=\"SEND MESSAGE\">\n              <\/div>\n\n            <\/div>\n          <\/form>",
-        "top_space_desktop": 30,
-        "bottom_space_desktop": 30,
-        "top_space_mobile": 30,
-        "bottom_space_mobile": 30
-      }
     }
   },
   "order": [
@@ -919,15 +806,8 @@
     "163678842797a17b64",
     "featured-collection",
     "testimonials",
-    "video-banner",
-    "1638256036636fff66",
-    "16378358938771729e",
-    "16378395879fc0118a",
-    "16378396162c4cd192",
     "1637909437c24c2665",
     "instagram",
-    "multicolumn-content",
-    "1638255644cb8d3175",
-    "16382724245dbd108e"
+    "multicolumn-content"
   ]
 }
