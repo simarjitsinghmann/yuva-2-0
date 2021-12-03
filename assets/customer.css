@@ -126,8 +126,11 @@
     padding-top: 16px;
     padding-bottom: 16px;
     font-size: 16px;
-    color: #7b7b7b;
     font-weight: 400;
+  }
+   .customer tfoot tr:first-of-type td:first-of-type,
+  .customer tfoot tr:first-of-type th:first-of-type {
+    color: #7b7b7b;
   }
     .customer tfoot tr:last-of-type td,
   .customer tfoot tr:last-of-type th {
