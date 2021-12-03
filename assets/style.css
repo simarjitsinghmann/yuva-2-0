@@ -2536,12 +2536,16 @@ textarea.form-control {
   box-shadow: 0 2px 4px rgb(0 0 0 / 21%);
 }
 .faq-detail .accordion-container .set .panel-title.active+.faqSection-content {
-    padding: 10px 0 22px;
+  padding: 10px 0 22px;
+  -webkit-transition: max-height .5s ease;
+  transition: max-height .5s ease;
 }
 .faq .set .content {
   border-bottom:0;   
   overflow: hidden;
   padding: 0;
+  -webkit-transition: max-height .5s ease;
+  transition: max-height .5s ease;
 }
 .faq .panel-title a {
   color: var(--black);
