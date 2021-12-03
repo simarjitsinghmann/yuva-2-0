@@ -1,4 +1,10 @@
 $(document).ready(function(){
+  	$('.search-form').click(function(){
+		var _class=$(this).data('search-drawer');
+		$('body').toggleClass(_class);		
+		$('input.form-control.search-input').trigger('click input focus');
+		$('#recent_search_list').html('');
+	});
   $('.search-input').bind('focusin focusout', function(e){
     $(this).closest('.search-box').toggleClass('focus', e.type == 'focusin');
   });
