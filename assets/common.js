@@ -369,7 +369,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             var priceContainer=_productParent.querySelector('[data-price-wrapper]');
             var showSavedAmount = '';
             var savedAmountStyle = '';
-            if(priceContainer == 'true'){
+            if(priceContainer){
               showSavedAmount = priceContainer.getAttribute('data-saved');
               savedAmountStyle = priceContainer.getAttribute('data-saved-style');
             }
