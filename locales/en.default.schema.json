@@ -1895,31 +1895,14 @@
     "main-blog": {
       "name": "Blog posts",
       "settings": {
-        "show_image": {
-          "label": "Show Banner image",
-          "info": "For best results, use an image with a 2:3 aspect ratio."
+        "show_author": {
+          "label": "Show Article Author"
         },
-        "banner_image": {
-          "label": "Banner Image"
-        }
-      },
-      "blocks": {
-        "title": {
-          "name": "Title",
-          "settings": {
-            "show_date": {
-              "label": "Show date"
-            },
-            "show_author": {
-              "label": "Show author"
-            }
-          }
+        "show_date": {
+          "label": "Show Article Published Date"
         },
-        "summary": {
-          "name": "Excerpt"
-        },
-        "link": {
-          "name": "Link"
+        "show_tags": {
+          "label": "Show Article Tags"
         }
       }
     },
