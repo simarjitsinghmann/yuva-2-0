@@ -510,7 +510,10 @@
 .order dd s {
   color: var(--color-foreground-70);
 }
-
+.fulfillment span {
+    color: var(--dark-gray);
+    font-size: 12px;
+}
 /* Addresses */
 label[for="AddressCountryNew"],
 label[for="AddressProvinceNew"] {

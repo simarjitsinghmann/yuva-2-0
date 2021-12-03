@@ -10,28 +10,13 @@
       </a>
     </div>
     <div class="post-information__wrapper text__left">
-              {% if section.settings.show_date %}
       <div class="post-date">
         <h4 class="custom-title">{{article.published_at | date: "%d" }} {{article.published_at | date: " %b %Y" }} </h4>
       </div>
-      {% endif %}
       <div class="post-name">
         <h6><a href="{{article.url}}">{{article.title| truncatewords: 6}}</a></h6>
         <p>{{article.excerpt_or_content | strip_html | truncatewords: 6}}</p>
-
-        {% if section.settings.show_author %}
-        <span class="" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <span itemprop="name">Posted By {{ article.author }}</span>
-        </span>
-        {% endif %}
       </div>
-        {% if section.settings.show_tags %}
-            <ul class="article_tags">
-            	{% for tag in article.tags %}
-              <li><a href="{{blog.url}}/tagged/{{tag}}">{{tag}}</a></li>
-              {% endfor %}
-            </ul>
-        {% endif %}
     </div>
   </div>
 </div>
