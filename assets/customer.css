@@ -636,6 +636,9 @@ label[for="AddressProvinceNew"] {
     border: 1px solid var(--gray);
     margin-bottom: 20px;
 }
+.order-detail-address h5 {
+    padding: 8px 20px;
+}
 .order-detail-address p{
     background-color: transparent;
     padding: 13px;
@@ -661,6 +664,7 @@ label[for="AddressProvinceNew"] {
 	padding:0;
     text-transform: uppercase;
    font-weight: 600;
+  font-size:12px;
 }
 .order-detail-address .address-bill-status.success p{
     color: green;
