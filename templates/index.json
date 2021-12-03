@@ -118,6 +118,7 @@
           "type": "video",
           "settings": {
             "videofile": "https:\/\/cdn.shopify.com\/s\/files\/1\/0597\/9668\/5009\/files\/file_example_MP4_1280_10MG.mp4?v=1637651556",
+            "poster": "shopify:\/\/shop_images\/col_2_11d6ec28-0462-4105-ac7f-f94d6d7d6f3c.jpg",
             "title": "Video Banner",
             "subtitle": "",
             "description": "This area is used to describe your store.",
@@ -338,13 +339,14 @@
         "heading": "What's More",
         "color": "#ececec",
         "style": "style1",
-        "top_space": 50,
-        "bottom_space": 50
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "1638355202411997bd": {
       "type": "contact-form",
-      "disabled": true,
       "settings": {
         "form_heading": "Get In Touch",
         "form_button": "SEND MESSAGE",
@@ -495,7 +497,6 @@
     },
     "1637836948779ea0e5": {
       "type": "featured-content",
-      "disabled": true,
       "blocks": {
         "66898c31-882c-4957-b02f-a0444d586590": {
           "type": "featured-content",
@@ -900,8 +901,10 @@
       "disabled": true,
       "settings": {
         "custom_liquid": "{{shop.name}}\n<form method=\"post\" action=\"\/contact#ContactForm\" id=\"ContactForm\" accept-charset=\"UTF-8\" class=\"contact-form\">\n<input type=\"hidden\" name=\"form_type\" value=\"contact\"><input type=\"hidden\" name=\"utf8\" value=\"✓\"><div class=\"row\">\n              <div class=\"col-lg-12 col-md-12\">\n                <div class=\"form-group\">\n                  <label for=\"ContactForm-username\">User Name<\/label>\n                  <input type=\"text\" class=\"form-control\" id=\"ContactForm-username\" name=\"contact[User Name]\" placeholder=\"User name\" required=\"\">\n                <\/div>\n              <\/div>\n              <div class=\"col-lg-12 col-md-12\">\n                <label class=\"field__label\" for=\"ContactForm-email\">Email <span aria-hidden=\"true\">*<\/span><\/label>\n                <div class=\"form-group\">\n                  <input autocomplete=\"email\" type=\"email\" id=\"ContactForm-email\" class=\"form-control\" name=\"contact[email]\" spellcheck=\"false\" autocapitalize=\"off\" value=\"simarjit.shinedezign@gmail.com\" aria-required=\"true\" placeholder=\"Email Address\">\n                <\/div>\n              <\/div>\n              <div class=\"col-lg-12 col-md-12\">\n                <label for=\"ContactForm-body\">Comment<\/label>\n                <div class=\"form-group\">\n                  <textarea id=\"ContactForm-body\" class=\"form-control\" name=\"contact[Comment]\" placeholder=\"Comment\" rows=\"3\"><\/textarea>\n                <\/div>\n                <input type=\"submit\" class=\"btn button\" value=\"SEND MESSAGE\">\n              <\/div>\n\n            <\/div>\n          <\/form>",
-        "top_space": 30,
-        "bottom_space": 30
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     }
   },
