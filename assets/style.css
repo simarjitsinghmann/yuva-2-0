@@ -4891,6 +4891,9 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
     margin: 0 30px;
     padding: 0;
 }
+.tabs-inner-box li.active {
+	border-color: var(--black);
+}
 .tabs-inner-box li button {
     display: inline-block;
     padding: 12px 24px;
