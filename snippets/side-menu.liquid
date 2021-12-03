@@ -20,7 +20,7 @@
            {% endif %}
            {% endfor %}
             <li class="nav-item {% if link.links != blank or menuDropdown  %}dropdown{% endif %} {% if link.current %}active{% endif %}">
-               <a class="list-menu__item {% if link.links != blank  or menuDropdown %}toggle open-menu-drop{% endif %}" href="{% if link.links != blank or menuDropdown  %}javascript:void(0){%else%}{{ link.url }}{% endif %}">{{link.title | split:"{badge" | first | escape | capitalize }}</a>
+               <a class="list-menu__item {% if link.links != blank  or menuDropdown %}toggle open-menu-drop{% endif %}" {% unless link.links != blank or menuDropdown  %}href="{{ link.url }}"{% endunless%}>{{link.title | split:"{badge" | first | escape | capitalize }}</a>
                {%- if link.links != blank or menuDropdown  -%}
                <ul class="inner child">                  
                   <div class="inner-child-menu">
