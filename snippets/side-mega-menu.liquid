@@ -10,7 +10,7 @@
 {% if block.settings[menu] != blank %}
 {% assign mainMenu = block.settings[menu] %}
 <li>
-    <a class="toggle-level" href="javascript:void(0)">
+    <a class="toggle-level">
         {% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %} <span class="caret"></span></a>
         
     {%- if mainMenu.links != blank -%}
