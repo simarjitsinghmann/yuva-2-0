@@ -37,9 +37,12 @@
                           <p>{{article.excerpt_or_content | strip_html | truncatewords: 6}}</p>
 
                           {% if section.settings.show_author %}
-                          <span class="" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                          <p class="" itemprop="author" itemscope itemtype="http://schema.org/Person">
                             <span itemprop="name">Posted By {{ article.author }}</span>
-                          </span>
+                          </p>
+                          {% endif %}
+                          {% if section.settings.show_comment_count %}
+                          <p>{{ article.comments_count }}</p>
                           {% endif %}
                         </div>
                         {% if section.settings.show_tags %}

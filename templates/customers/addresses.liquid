@@ -108,11 +108,11 @@
           </div>
           <div class="form-group">
             <label for="AddressZip_{{ form.id }}">{{ 'customer.addresses.zip' | t }}</label>
-            <input type="text" id="AddressZip_{{ form.id }}" name="address[zip]" value="{{ form.zip }}" autocapitalize="characters" autocomplete="postal-code" placeholder="{{ 'customer.addresses.zip' | t }}">
+            <input type="text" class="form-control" id="AddressZip_{{ form.id }}" name="address[zip]" value="{{ form.zip }}" autocapitalize="characters" autocomplete="postal-code" placeholder="{{ 'customer.addresses.zip' | t }}">
           </div>
           <div class="form-group">
             <label for="AddressPhone_{{ form.id }}">{{ 'customer.addresses.phone' | t }}</label>
-            <input type="tel" id="AddressPhone_{{ form.id }}"  name="address[phone]" value="{{ form.phone }}" autocomplete="tel" placeholder="{{ 'customer.addresses.phone' | t }}">
+            <input type="tel" class="form-control" id="AddressPhone_{{ form.id }}"  name="address[phone]" value="{{ form.phone }}" autocomplete="tel" placeholder="{{ 'customer.addresses.phone' | t }}">
           </div>
           <div class="form-group">
             {{ form.set_as_default_checkbox }}
