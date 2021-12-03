@@ -257,14 +257,13 @@
         </div>
         <div class="col-12 col-sm-5 col-md-4 col-lg-3">
           <div class="order-detail-address">
-            {{order.financial_status_label}}
             <h4>{{ 'customer.order.billing_address' | t }}</h4>
             <div class="address-bill-status 
-                        {% if order.financial_status_label == 'paid' or order.financial_status_label == 'authorized' or order.financial_status_label == 'partially_paid'%}
+                        {% if order.financial_status_label == 'Paid' or order.financial_status_label == 'Authorized' or order.financial_status_label == 'Partially_paid'%}
                         success
-                        {% elsif order.financial_status_label == 'refunded' or order.financial_status_label == 'partially_refunded' %}
+                        {% elsif order.financial_status_label == 'refunded' or order.financial_status_label == 'Partially_refunded' %}
                         refund
-                        {% elsif order.financial_status_label == 'pending' or order.financial_status_label == 'voided'  %}
+                        {% elsif order.financial_status_label == 'Pending' or order.financial_status_label == 'Voided'  %}
                         warning
                         {% endif %}">
               <strong>{{ 'customer.order.payment_status' | t }}:</strong>
