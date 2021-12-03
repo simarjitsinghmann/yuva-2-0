@@ -1,4 +1,10 @@
-<div class="section-spacer">
+,
+        {
+          "type": "color",
+          "id": "bgcolor",
+          "label": "t:sections.featured-text.settings.bgcolor.label",
+          "default":"#ffffff"
+        }<div class="section-spacer">
   <div class="container">
     {% for block in section.blocks %}
     <div class="right-text-content"  {{ block.shopify_attributes }}>
@@ -17,6 +23,7 @@
 </div>
 <style>
   #shopify-section-{{section.id}} {
+    background-color:{{section.settings.bgcolor}};
     padding-top:{{section.settings.top_space_desktop}}px;
     padding-bottom:{{section.settings.bottom_space_desktop}}px;
   }
@@ -33,6 +40,12 @@
     "tag": "section",
     "class":"rich-text-section",
     "settings": [
+        {
+          "type": "color",
+          "id": "bgcolor",
+          "label": "t:sections.rich-text.settings.bgcolor.label",
+          "default":"#ffffff"
+        },
       {
         "type": "range",
         "id": "top_space_desktop",
