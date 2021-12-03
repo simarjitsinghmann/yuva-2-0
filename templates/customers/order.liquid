@@ -258,7 +258,7 @@
         <div class="col-12 col-sm-5 col-md-4 col-lg-3">
           <div class="order-detail-address">
             <h4>{{ 'customer.order.billing_address' | t }}</h4>
-            <div class="address-bill-status success 
+            <div class="address-bill-status 
                         {% if order.financial_status_label == 'paid' or order.financial_status_label == 'authorized' or order.financial_status_label == 'partially_paid'%}
                         success
                         {% elsif order.financial_status_label == 'refunded' or order.financial_status_label == 'partially_refunded' %}
