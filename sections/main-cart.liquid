@@ -90,7 +90,7 @@
            <textarea class="seller-box" name="note" id="Cart-note" placeholder="Special instructions for seller">{{ cart.note }}</textarea>
           {% endif %}
            <ul>
-              <li data-cart-original>Total <strong data-cart-original-price>{{cart.original_total_price | money}}</strong></li>
+              <li data-cart-original>{{'sections.cart.subtotal' | t}} <strong data-cart-original-price>{{cart.original_total_price | money}}</strong></li>
               {%- if cart.cart_level_discount_applications.size > 0 -%}
               {%- for discount in cart.cart_level_discount_applications -%}
               <li data-cart-discount>Discount['{{ discount.title }}'] <strong>-{{discount.total_allocated_amount | money}}</strong></li>
@@ -98,12 +98,12 @@
               {% endif %}
               <!-- <li>Convenience Fee Know More<strong>49FREE</strong></li> -->
               <li class="total" data-cart-total>
-                 <p>Total Amount</p>
+                 <p>{{'sections.cart.subtotal' | t}}</p>
                  <strong data-cart-total-price>{{cart.total_price | money}}</strong>
               </li>
            </ul>
            <div class="cart-btn">
-              <button type="submit" name="checkout" id="cartCheckout" form="cart" class="button black-btn btn-block">Checkout</button>
+              <button type="submit" name="checkout" id="cartCheckout" form="cart" class="button black-btn btn-block">{{'sections.cart.subtotal' | t}}</button>
               <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
                 {{ content_for_additional_checkout_buttons }}
               </div>
