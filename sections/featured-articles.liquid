@@ -48,10 +48,14 @@
 <style>
   #shopify-section-{{section.id}}{
     background-color:{{section.settings.color}};
+    padding-top:{{section.settings.top_space_desktop}}px;
+    padding-bottom:{{section.settings.bottom_space_desktop}}px;
   }
-  #shopify-section-{{section.id}} {
-    padding-top:{{section.settings.top_space}}px;
-    padding-bottom:{{section.settings.bottom_space}}px;
+  @media only screen and (max-width:575px) {
+    #shopify-section-{{section.id}}{
+      padding-top:{{section.settings.top_space_mobile}}px;
+      padding-bottom:{{section.settings.bottom_space_mobile}}px;
+    }
   }
 </style>
 {% schema %}
