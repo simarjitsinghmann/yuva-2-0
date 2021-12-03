@@ -179,7 +179,12 @@ if (!Shopify.formatMoney) {
 }
 
 function truncate(str, no_words) {
-    return str.split(" ").splice(0,no_words).join(" ");
+  var length = str.split(" ").length;
+  var _value = str.split(" ").splice(0,no_words).join(" ");
+  if(length > no_words){
+  	_value = _value+'..'
+  }
+    return _value;
 }
 
 function toggleDropdown(id) {
