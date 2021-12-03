@@ -1,9 +1,9 @@
 <div class="nodatafound_wrapper">
   <div class="nodatafound_box">
     <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/chat-empty.png?v=1638447039" alt=""/>
-    {% if template == 'search' %}
-    <h3>No Result Found</h3>
-    <p>{{ 'templates.search.no_results' | t: terms: search.terms }}</p>
+    {% if template == 'search' %}    
+    <h3>{{ 'templates.search.no_results' | t: terms: search.terms }}</h3>    
+    <p>{{ 'templates.search.no_results_sub' | t }}</p>
     {% else %}
     <h3>No {{item}} Found</h3>
     {% endif %}
