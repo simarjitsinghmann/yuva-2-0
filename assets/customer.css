@@ -510,6 +510,9 @@
 .order dd s {
   color: var(--color-foreground-70);
 }
+.fulfillment {
+	margin-top:5px;
+}
 .fulfillment span {
     color: var(--dark-gray);
     font-size: 12px;
@@ -679,6 +682,7 @@ label[for="AddressProvinceNew"] {
     text-transform: uppercase;
    font-weight: 600;
   font-size:12px;
+  line-height:18px;
 }
 .order-detail-address .address-bill-status.success strong {
 	font-weight: var(--medium);
