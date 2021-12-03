@@ -608,7 +608,7 @@ label[for="AddressProvinceNew"] {
     text-transform: capitalize;
     font-size: 14px;
     color: var(--black);
-      border-bottom:2px solid transperent;
+    border-bottom:2px solid transperent;
 }
 .account-header-tabs a:hover{
 	background-color: var(--gray);
@@ -643,13 +643,13 @@ label[for="AddressProvinceNew"] {
 }
 .order-detail-address p{
     background-color: transparent;
-    padding: 13px;
+    padding: 13px 20px;
     color: var(--dark-gray);
 }
 .order-detail-address .address-bill-status {
   display:flex;
   justify-content:space-between;
-    padding: 3px 12px;
+    padding: 3px 20px;
     font-size: 13px;
     display: flex;
 }
