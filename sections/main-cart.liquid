@@ -93,7 +93,7 @@
               <li data-cart-original>{{'sections.cart.subtotal' | t}} <strong data-cart-original-price>{{cart.original_total_price | money}}</strong></li>
               {%- if cart.cart_level_discount_applications.size > 0 -%}
               {%- for discount in cart.cart_level_discount_applications -%}
-              <li data-cart-discount>Discount['{{ discount.title }}'] <strong>-{{discount.total_allocated_amount | money}}</strong></li>
+              <li data-cart-discount>{{'sections.cart.discount' | t}}['{{ discount.title }}'] <strong>-{{discount.total_allocated_amount | money}}</strong></li>
               {%- endfor -%}
               {% endif %}
               <!-- <li>Convenience Fee Know More<strong>49FREE</strong></li> -->
