@@ -34,7 +34,9 @@
                         {% endif %}
                         <div class="post-name">
                           <h6><a href="{{article.url}}">{{article.title| truncatewords: 6}}</a></h6>
+                          {% if section.settings.show_comment_count %}
                           <p>{{article.excerpt_or_content | strip_html | truncatewords: 6}}</p>
+                          {% endif %}
 
                           {% if section.settings.show_author %}
                           <p class="" itemprop="author" itemscope itemtype="http://schema.org/Person">
