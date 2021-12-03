@@ -1,4 +1,16 @@
 /* common */
+.item.slick-slide .col {
+   padding: 0 10px;
+}
+.testimonial-slider .slick-slide,
+.colllection-list-view .slick-slide {
+   margin: 0 10px;
+}
+.testimonial-slider .slick-list,
+.product-recommendations .slick-list,
+.colllection-list-view .slick-list {
+   margin: 0 -10px;
+}
 img {
    max-width: 100%;
 }
@@ -1718,11 +1730,6 @@ a.wishlist-view .fas {
    display: block;
    margin-bottom: 5px;
 }
-.testimonial-slider .slick-slide,
-.colllection-list-view .slick-slide {
-   margin: 0 10px;
-}
-/* the parent */
 .testimonial-slider .slick-arrow {
    width: 35px;
    height: 35px;
