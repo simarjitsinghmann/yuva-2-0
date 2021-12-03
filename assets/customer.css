@@ -666,8 +666,8 @@ label[for="AddressProvinceNew"] {
 .order-detail-address .address-bill-status.warning {
     background-color: #c9090917;
 }
-.order-detail-address .address-bill-status.failed {
-    background-color: #c9090917;
+.order-detail-address .address-bill-status.refund {
+    background-color: #ddd;
 }
 .order-detail-address .address-bill-status p {
 	padding:0;
@@ -685,8 +685,8 @@ label[for="AddressProvinceNew"] {
 .order-detail-address .address-bill-status.warning p{
     color: #f7190e;
 }
-.order-detail-address .address-bill-status.failed p{
-    color: #f7190e;
+.order-detail-address .address-bill-status.refund p{
+    color: #aaa;
 }
 .table-responsive {
 	margin: 0 0 20px;
