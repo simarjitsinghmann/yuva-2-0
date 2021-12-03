@@ -4883,12 +4883,7 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
     margin-top: 4px;
 }
 .tabs-inner-box li {
-    background: #ebebeb;
     margin: 3px;
-}
-.tabs-inner-box li:hover, 
-.tabs-inner-box li.active {
-    background: #3c3c3c;
 }
 .tabs-inner-box li button {
     display: inline-block;
@@ -4896,19 +4891,12 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
     font-size: 14px;
     background: inherit;
     margin-left: -1px;
-    color: #767676;
-}
-  
-.tabs-inner-box li:hover button, 
-.tabs-inner-box li.active button {
-    color: #fff;
-}
+}  
 .result_product .grid__item .grid-item.col {
     padding-left: 0;
     padding-right: 0;
 }
 /* search page css end */
-
 /* challenge page css start */
 .shopify-challenge__container {
    max-width: 500px;

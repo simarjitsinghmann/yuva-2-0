@@ -41,16 +41,11 @@
       var moneyFormat = '{{shop.money_format}}';
     </script>
     <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
-{% include 'theme-style' %}
-
     
     {{ content_for_header }}
 
-    {%- liquid
-      assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-      assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-      assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-    %}
+{% include 'theme-style' %}
+
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
 	{% include 'theme-scripts' %}
