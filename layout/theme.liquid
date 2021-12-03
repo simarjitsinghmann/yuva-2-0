@@ -37,15 +37,12 @@
     {% endif %}
 
     {% render 'meta-tags' %}
-    <script>
-      var moneyFormat = '{{shop.money_format}}';
-    </script>
     <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
     
     {{ content_for_header }}
 
-{% include 'theme-style' %}
-
+    {% include 'theme-style' %}
+    
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
 	{% include 'theme-scripts' %}
