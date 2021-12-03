@@ -1748,27 +1748,12 @@ a.wishlist-view .fas {
    -ms-transform: translateY(-50%);
    transform: translateY(-50%);
 }
-.testimonial .testimonial-slider .slick-arrow {
-   background: #ffffff !important;
-   transition: 0.3s ease all;
-}
-.testimonial-slider .slick-arrow.slick-prev {
-   left: -17px;
-}
-.testimonial-slider .slick-arrow.slick-next {
-   right: -17px;
-}
-.testimonial .testimonial-slider .slick-arrow:hover {
-   background: var(--black) !important;
-   color: var(--white);
-}
-.testimonial .shopify__top__section small {
-   margin-bottom: 4px;
-}
 .testimonial-slider .slick-arrow {
    display: flex;
    align-items: center;
    justify-content: center;
+    background: #ffffff !important;
+   transition: 0.3s ease all;
 }
 .testimonial .testimonial-slider .slick-arrow span {
    width: 20px;
@@ -1780,6 +1765,16 @@ a.wishlist-view .fas {
 .testimonial .testimonial-slider .slick-arrow span svg {
    width: 20px;
    height: 20px;
+}
+.testimonial-slider .slick-arrow.slick-prev {
+   left: -17px;
+}
+.testimonial-slider .slick-arrow.slick-next {
+   right: -17px;
+}
+.testimonial .testimonial-slider .slick-arrow:hover {
+   background: var(--black) !important;
+   color: var(--white);
 }
 .testimonial-client-slide .slider-item {
    text-align: center;
