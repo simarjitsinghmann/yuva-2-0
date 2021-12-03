@@ -599,6 +599,7 @@ label[for="AddressProvinceNew"] {
 .account-header-tabs {
     display: flex;
     justify-content: flex-start;
+  position:relative;
 }
 .account-header-tabs {
 	border-bottom: 1px solid var(--gray);
@@ -616,6 +617,12 @@ label[for="AddressProvinceNew"] {
 .account-header-tabs a.active {
    font-weight: var(--medium);
      border-color: var(--black);
+}
+.account-header-tabs a:last-child {
+    position: absolute;
+    right: 0;
+    background-color: var(--black);
+    color: var(--white);
 }
 .account-pages-content h4 {
 	margin-bottom:15px;
