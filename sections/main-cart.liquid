@@ -7,6 +7,7 @@
      <a href="/collections/all" class="button black-btn">continue shopping</a>
   </div>
   
+                    {{ 'sections.cart.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
   {% if cart.item_count > 0 %}
   <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
   <div class="row">    
