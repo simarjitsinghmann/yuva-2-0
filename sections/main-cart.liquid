@@ -11,7 +11,9 @@
   <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
   <div class="row">    
      <div class="col-sm-12 col-md-12 col-lg-8">
-        <h3>Shopping Cart <span>In your bag <span data-cart-item-count>{{cart.item_count}}</span> items</span></h3>
+        <h3>
+          {{'sections.cart.heading' | t: itemCount :cart.item_count}}
+       </h3>
         <div class="inner-box">
            <table>
               <tbody>
