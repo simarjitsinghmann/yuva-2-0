@@ -103,7 +103,6 @@
   {%- if search.performed and search.results.size > 0 -%}
     {% paginate search.results by 50 %}
       <div class="template-search__results">
-        <div class="container">
           <div class="tabs-box">
             <ul class="tabs-inner-box">
               {% if productResults %}
@@ -180,7 +179,6 @@
           {%- if paginate.pages > 1 -%}
             {% render 'pagination', paginate: paginate %}
           {%- endif -%}
-        </div>
       </div>
     {% endpaginate %}
   {%- endif -%}
