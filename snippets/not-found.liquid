@@ -3,7 +3,7 @@
     <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/chat-empty.png?v=1638447039" alt=""/>
     {% if template == 'search' %}
     
-    {{ 'templates.search.no_results' | t: terms: search.terms }}
+    <h3>{{ 'templates.search.no_results' | t: terms: search.terms }}</h3>
     {% else %}
     <h3>No {{item}} Found</h3>
     {% endif %}
