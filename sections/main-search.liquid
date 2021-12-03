@@ -36,10 +36,7 @@
       <h1 class="h2">{{ 'general.search.search' | t }}</h1>
       {%- endif -%}
       <div class="template-search__search">
-        {%- if settings.predictive_search_enabled -%}
-        <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
-          {%- endif -%} 
-          <form action="{{ routes.search_url }}" method="get" role="search" class="search">
+        <form action="{{ routes.search_url }}" method="get" role="search" class="search">
             <div class="form-group">
               <div class="search-result-input">
                 <input
@@ -84,10 +81,6 @@
               </div>
             </div>
           </form>
-          {%- if settings.predictive_search_enabled -%}
-        </predictive-search>
-        {%- endif -%} 
-
       </div>
       {%- if search.performed -%}
       <p class="status-text" role="status">
