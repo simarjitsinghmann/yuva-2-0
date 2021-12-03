@@ -636,7 +636,7 @@ label[for="AddressProvinceNew"] {
     border: 1px solid var(--gray);
     margin-bottom: 20px;
 }
-.address-bill-status 
+.address-bill-status {
   display:flex;
   justify-content:space-between;
     background-color: #00800017;
@@ -648,6 +648,7 @@ label[for="AddressProvinceNew"] {
 	padding:0;
 }
 .order-detail-address p:last-child{
+    background-color: transparent;
     padding: 13px;
     color: var(--dark-gray);
 }
