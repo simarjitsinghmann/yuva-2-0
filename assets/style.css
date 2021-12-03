@@ -1681,9 +1681,6 @@ a.wishlist-view .fas {
    font-size: 22px;
 }
 /*===============testimonial section css start=============*/
-.testimonial-section {
-   background: var(--gray);
-}
 .testimonial-slider {
    max-width: 100%;
    margin: 0 auto;
@@ -4837,6 +4834,9 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
 }
 /* collection page end */
 /* search page css start */
+element.style {
+    padding: 65px 0;
+}
 .template-search__search {
    margin: 0 auto;
    max-width: 100%;
@@ -4847,12 +4847,6 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
 .template-search .grid__item--small:not(:last-child) {
    padding-bottom: 0.5rem;
 }
-@media screen and (min-width: 750px) {
-   .template-search .grid__item--small:not(:last-child) {
-      padding-bottom: 1rem;
-   }
-}
-
 .search__button .icon {
    height: 1.8rem;
 }
