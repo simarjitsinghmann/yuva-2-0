@@ -1859,7 +1859,7 @@ a.wishlist-view .fas {
    width: 100%;
 }
 .testimonial-client-slide .slider-item .slider-box h5 {
-   text-transform: uppercase;
+   text-transform: capitalize;
    margin-top: 15px;
    font-weight: var(--medium);
    word-break: break-word;
@@ -1874,9 +1874,6 @@ a.wishlist-view .fas {
 }
 .testimonial-client-slide .slider-item .slider-box h6 {
    font-size: var(--small-text);
-}
-.testimonial-client-slide .slider-item .slider-box h5 {
-   text-transform: capitalize;
 }
 .testimonial-client-slide .slider-item .slider-box p {
      font-size: 15px;
