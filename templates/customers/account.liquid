@@ -4,7 +4,7 @@
   <div class="container">
     {% include 'account-header' %}
     <div class="account-pages-content">
-        <h2>{{ 'customer.orders.title' | t }}</h2>
+        <h4>{{ 'customer.orders.title' | t }}</h4>
 
         {% paginate customer.orders by 20 %}
         {%- if customer.orders.size > 0 -%}
