@@ -600,19 +600,16 @@ label[for="AddressProvinceNew"] {
 	border-bottom: 1px solid var(--gray);
 }
 .account-header-tabs a {
-    padding: 15px 30px;
-    margin: 0 10px;
+    padding: 8px 30px;
     text-transform: capitalize;
-    font-size: 18px;
+    font-size: 14px;
     color: var(--black);
-      border-bottom: 1px solid transparent;
 }
 .account-header-tabs a:hover{
 	background-color: var(--gray);
 }
 .account-header-tabs a.active {
-    border-color: var(--black);
-      font-weight: var(--medium);
+   font-weight: var(--medium);
 }
 .account-pages-content h2 {
 	margin-bottom:30px;
