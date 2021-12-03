@@ -1,44 +1,41 @@
 <div class="section-spacer">
-<div class="container">
-        <div class="category-list shopify__top__section text__center">
-          <div class="section-heading-box">
-            <small>{{section.settings.subheading}}</small>
-            <h2>{{section.settings.heading}}</h2>
+  <div class="container">
+    <div class="category-list shopify__top__section text__center">
+      <div class="section-heading-box">
+        <small>{{section.settings.subheading}}</small>
+        <h2>{{section.settings.heading}}</h2>
+      </div>
+      <ul class="grid grid--3-col-tablet grid--3-col-desktop d-flex justify-content-center {% if section.settings.style == 'style2' %}style_variation_2{% endif %}" role="list">
+        {% for block in section.blocks%}
+        <li id="offer-block-{{block.id}}"  class="grid__item" {{ block.shopify_attributes }}>
+          <div class="card-wrapper">
+            <div class="card-information">
+              <div class="card-information-image">
+                <a href="{{block.settings.link}}" class="animate_hvrbr">
+                  {% if block.settings.image != blank %}
+                  <img src="{{block.settings.image | img_url:'master'}}" alt="">
+                  {% else %}
+                  <img src="{{ 'featured_image.png' | asset_url}}" alt="">                              
+                  {% endif %}
+                </a>
+              </div>
+              {% unless block.settings.heading == blank and block.settings.subheading == blank %}
+              <div class="card-information__wrapper text__left content-border-{{section.settings.show_border}} {% if section.settings.style == 'style1' %}{{block.settings.info_position}}{% endif %}">
+                {% if block.settings.heading != blank %}
+                <h5>{{block.settings.heading}}</h5>
+                {% endif%}
+                {% if block.settings.subheading != blank %}
+                {{block.settings.subheading}}
+                {% endif%}
+              </div>
+              {% endunless %}
+            </div>
           </div>
-            <ul class="grid grid--3-col-tablet grid--3-col-desktop d-flex justify-content-center {% if section.settings.style == 'style2' %}style_variation_2{% endif %}" role="list">
-                {% for block in section.blocks%}
-                 
-                <li id="offer-block-{{block.id}}"  class="grid__item" {{ block.shopify_attributes }}>
-                    <div class="card-wrapper">
-                        <div class="card-information">
-                        <div class="card-information-image">
-                            <a href="{{block.settings.link}}" class="animate_hvrbr">
-                              {% if block.settings.image != blank %}
-                              <img src="{{block.settings.image | img_url:'master'}}" alt="">
-                            {% else %}
-                              <img src="{{ 'featured_image.png' | asset_url}}" alt="">
-                              
-                              {% endif %}
-                            </a>
-                        </div>
-                          {% unless block.settings.heading == blank and block.settings.subheading == blank %}
-                            <div class="card-information__wrapper text__left content-border-{{section.settings.show_border}} {% if section.settings.style == 'style1' %}{{block.settings.info_position}}{% endif %}">
-                              {% if block.settings.heading != blank %}
-                                <h5>{{block.settings.heading}}</h5>
-                                {% endif%}
-                                {% if block.settings.subheading != blank %}
-                                {{block.settings.subheading}}
-                                {% endif%}
-                            </div>
-                          {% endunless %}
-                        </div>
-                    </div>
-                </li>
-              {% endfor%}
-            </ul>
-
-        </div>
-</div>
+        </li>
+        {% endfor%}
+      </ul>
+    </div>
+  </div>
 </div>
 <style>
   #shopify-section-{{section.id}}{
