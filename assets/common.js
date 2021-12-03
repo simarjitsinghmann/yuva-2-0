@@ -408,7 +408,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
                 paymentButtonWrapper.removeAttribute("disabled");
               }
               if(paymentButton){
-                paymentButton.innerHTML  = "Add to Cart";
+                paymentButton.innerHTML  = addToCartText;
               }
             }else{
 
@@ -419,7 +419,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
                 paymentButtonWrapper.setAttribute("disabled", true);
               }
               if(paymentButton){
-                paymentButton.innerHTML  = "Sold Out";  
+                paymentButton.innerHTML  = soldOutText;  
               } 
             }
           }
@@ -431,7 +431,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
               paymentButtonWrapper.setAttribute("disabled", true);
             }
             if(paymentButton){
-              paymentButton.innerHTML  = "Unavailable"; 
+              paymentButton.innerHTML  = unavailableText; 
             }   
           }
         },100)
