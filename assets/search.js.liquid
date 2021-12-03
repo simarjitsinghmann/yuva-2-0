@@ -2,8 +2,7 @@ $(document).ready(function(){
   	$('.search-form').click(function(){
 		var _class=$(this).data('search-drawer');
 		$('body').toggleClass(_class);		
-      console.log($('input.search-input'))
-		$('input.search-input').trigger('click input focus');
+		$('input.search-input').trigger('focusin');
 		$('#recent_search_list').html('');
 	});
   $('.search-input').bind('focusin focusout', function(e){
