@@ -14,7 +14,7 @@
                 <span class="iconMinus">{% render 'icon-minus' %}</span>
               </a>
             </h6>
-            <div class="content faqSection-content" id="faq-content-{{block.id}}" style="display:none;">
+            <div class="content faqSection-content" id="faq-content-{{block.id}}" style="max-height:0;">
               <div class="panel-body">
                 {{block.settings.answer}}
               </div>
@@ -54,7 +54,7 @@
              clearActive();
              btn.classList.add("active");
              var _value = btn.getAttribute("content");
-             document.getElementById(_value).style.display = "block";
+             document.getElementById(_value).style.maxHeight = "none";
            }
          });
          });
@@ -65,7 +65,7 @@
            item.classList.remove('active');
          });
          Array.from(tabsContent).forEach(function(item) {
-           item.style.display = 'none';
+           item.style.maxHeight = '0';
          });
        }
       }
