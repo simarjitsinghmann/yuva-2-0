@@ -2529,8 +2529,9 @@ textarea.form-control {
   box-shadow: 0 2px 4px rgb(0 0 0 / 21%);
 }
 .faq .set .content {
-  border-bottom:0;
-  padding: 10px 0 22px;
+  border-bottom:0;   
+  overflow: hidden;
+  padding: 0;
 }
 .faq .panel-title a {
   color: var(--black);
