@@ -460,8 +460,10 @@
       ],
       "settings": {
         "product": "ayers-chambray",
-        "top_space": 40,
-        "bottom_space": 60
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "16345626467f5a91b7": {
@@ -549,8 +551,10 @@
       ],
       "settings": {
         "heading": "Collection list",
-        "top_space": 40,
-        "bottom_space": 20
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "featured-collection": {
@@ -564,8 +568,10 @@
         "show_second_image": true,
         "view_all_btn": true,
         "view_all_btn_text": "View all",
-        "top_space": 30,
-        "bottom_space": 30
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "testimonials": {
@@ -643,8 +649,10 @@
         "rotate": false,
         "arrows": true,
         "dots": false,
-        "top_space": 50,
-        "bottom_space": 50
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "1637909437c24c2665": {
@@ -694,8 +702,10 @@
         "insta_user_id": "4661831087243391",
         "insta_access_Token": "IGQVJYZAk1RUmhoQ3BOSDNjc2dnV3BmWG9kdmxvZADVWSy1ENmNPOWNVWThPRmtSdzJQZADJINWh6b3hLelVKeEJIQzhETk4yODNjQ01JV0dHT3lEMlJhMnhWN2x4NkpDcUFMd3pZAOGx5TUJFNU80OEpJZAQZDZD",
         "bgcolor": "#ffffff",
-        "top_space": 40,
-        "bottom_space": 20
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "multicolumn-content": {
@@ -743,8 +753,32 @@
       "settings": {
         "bgcolor": "#ececec",
         "textcolor": "#000000",
-        "top_space": 25,
-        "bottom_space": 25
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
+    "1638512539bc8ef2ab": {
+      "type": "faq-section",
+      "blocks": {
+        "37a56bd7-ff4c-48cc-b268-935b8e45c0a1": {
+          "type": "faq",
+          "settings": {
+            "heading": "asdas",
+            "answer": "<p>adasd<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "37a56bd7-ff4c-48cc-b268-935b8e45c0a1"
+      ],
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     }
   },
@@ -759,6 +793,7 @@
     "testimonials",
     "1637909437c24c2665",
     "instagram",
-    "multicolumn-content"
+    "multicolumn-content",
+    "1638512539bc8ef2ab"
   ]
 }
