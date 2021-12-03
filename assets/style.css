@@ -355,7 +355,7 @@ span.tag-line {
 .card__warpper__detail.right__sided .collection-image { width: 50%; float: left; background-color: var(--gray) } 
 .card__warpper__detail.right__sided .collection-detail-right { width: 50%; display: flex; 
   justify-content: center; align-items: flex-start; 
-  flex-direction: column; padding: 10px 30px;border: 2px solid #f5f4f3; border-left:0;} 
+  flex-direction: column; padding: 10px 30px;border: 2px solid #f5f4f3; border-left:0; background-color:var(--white); } 
 .card-information .card-information-image a > img { width: 100%; height:100%; object-fit:cover; } 
 .card__warpper__detail.left__sided {  } 
 .card__warpper__detail.left__sided .collection-image { width: 100%; background-color: var(--gray);  max-height:630px; display:flex; align-items:center;} 
@@ -3519,6 +3519,7 @@ body #shopify-product-reviews {
   font-family: var(--font-family);
     font-size:0;
 }
+slick-active
 .slick-dots li button:after {
     position: absolute;
     content: "";
