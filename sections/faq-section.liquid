@@ -8,7 +8,7 @@
           {% if block.settings.heading != blank or block.settings.answer != blank%}
           <div class="set">
             <h6 class="panel-title faq-{{section.id}}" content="faq-content-{{block.id}}">
-              <a href="javascript:void(0)">
+              <a>
                 {{block.settings.heading }}
                 <span class="iconPlus">{% render 'icon-plus' %}</span>
                 <span class="iconMinus">{% render 'icon-minus' %}</span>
