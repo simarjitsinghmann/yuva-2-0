@@ -259,20 +259,20 @@
           <div class="order-detail-address">
             <h4>{{ 'customer.order.billing_address' | t }}</h4>
             <div class="address-bill-status">
-            <p>
+              <strong>{{ 'customer.order.payment_status' | t }}:</strong>
+              <p>
               {{ order.financial_status_label }}
             </p>
-              <strong>{{ 'customer.order.payment_status' | t }}:</strong>
             </div>
             {{ order.billing_address | format_address }}
           </div>
           <div class="order-detail-address">
             <h4>{{ 'customer.order.shipping_address' | t }}</h4>
             <div class="address-bill-status">
-            <p>
+            <strong>{{ 'customer.order.fulfillment_status' | t }}:</strong>
+              <p>
               {{ order.fulfillment_status_label }}
             </p>
-            <strong>{{ 'customer.order.fulfillment_status' | t }}:</strong>
             </div>
             {{ order.shipping_address | format_address }}
           </div>
