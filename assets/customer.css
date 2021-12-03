@@ -644,16 +644,26 @@ label[for="AddressProvinceNew"] {
 .order-detail-address .address-bill-status {
   display:flex;
   justify-content:space-between;
-    background-color: #00800017;
     padding: 3px 12px;
     font-size: 13px;
     display: flex;
 }
+.order-detail-address .address-bill-status.success {
+    background-color: #00800017;
+}
+.order-detail-address .address-bill-status.warning {
+    background-color: #00800017;
+}
+.order-detail-address .address-bill-status.failed {
+    background-color: #00800017;
+}
 .order-detail-address .address-bill-status p {
 	padding:0;
-    color: green;
     text-transform: uppercase;
    font-weight: 600;
+}
+.order-detail-address .address-bill-status.success p{
+    color: green;
 }
 .table-responsive {
 	margin: 0 0 20px;
