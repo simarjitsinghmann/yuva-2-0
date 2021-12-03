@@ -271,12 +271,7 @@ $(document).ready(function(){
   });
 		
 	///search-top//
-	$('.search-form').click(function(){
-		var _class=$(this).data('search-drawer');
-		$('body').toggleClass(_class);		
-		$('input.form-control.search-input').trigger('click input focus');
-		$('#recent_search_list').html('');
-	});
+
 	$('.HeaderProClose').click(function(){
 		$("body").removeClass("addsearch");
 		$("body").removeClass("small_search");
