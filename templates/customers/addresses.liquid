@@ -47,6 +47,7 @@
         </button>
         
         <div id="EditAddress_{{ address.id }}" class="addressPopUp">
+          address-side-drawer-body
           {%- form 'customer_address', address -%}
           <div class="form-group">
             <label for="AddressFirstName_{{ form.id }}">{{ 'customer.addresses.first_name' | t }}</label>
@@ -124,6 +125,7 @@
             <button class="button" type="reset">{{ 'customer.addresses.cancel' | t }}</button>
           </div>
           {%- endform -%}
+          </div>
         </div>
         </div>
       </li>
@@ -146,6 +148,7 @@
         <p>{{ 'customer.addresses.add_new' | t }}</p>
       </button>
       <div id="AddAddress" class="addressPopUp">
+        <div class="address-side-drawer-body">
         {%- form 'customer_address', customer.new_address, aria-labelledBy: 'AddressNewHeading' -%}
         <div class="field">
           <label for="AddressFirstNameNew">{{ 'customer.addresses.first_name' | t }}</label>
@@ -213,6 +216,7 @@
           <button class="button" type="reset">{{ 'customer.addresses.cancel' | t }}</button>
         </div>
         {%- endform -%}
+        </div>
       </div>
     </li>
     </ul>
