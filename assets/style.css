@@ -1737,22 +1737,12 @@ a.wishlist-view .fas {
    display: flex !important;
    align-content: center;
    justify-content: center;
-   -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
    position: absolute;
    top: 50%;
    z-index: 2;
-   -moz-transform: translateY(-50%);
-   -webkit-transform: translateY(-50%);
-   -o-transform: translateY(-50%);
-   -ms-transform: translateY(-50%);
    transform: translateY(-50%);
-}
-.testimonial-slider .slick-arrow {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-    background: #ffffff !important;
+      background: #ffffff !important;
    transition: 0.3s ease all;
 }
 .testimonial .testimonial-slider .slick-arrow span {
