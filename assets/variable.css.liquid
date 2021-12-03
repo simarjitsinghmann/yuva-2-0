@@ -51,41 +51,13 @@
       letter-spacing: {{ settings.type_header_spacing | default: "25" | divided_by: 1000.00 }}em;
       line-height:  {{ settings.type_header_line_height | default: 1.4 }};
     }
-      
-   
-      /*================ Color variables ================*/
-
-
-/*================ Typography ================*/
-
-/* Font-face header styles */
-
-
-/* Non font-face header styles */
-
-
-/* Font-face base styles */
-
---type_base_family: {{ settings.type_base_font_family.family }};
-
---type_base_fallback: {{ settings.type_base_font_family.fallback_families }};
-
---type_base_stack: #{"'" + --type_base_family + "', " + --type_base_fallback};
-
---type_base_weight: {{ settings.type_base_font_family.weight }};
-
-/* Non font-face base styles */
-
---type_body_text_center: {{ settings.type_body_align_text | default: false }};
-
---type_base_spacing: {{ settings.type_base_spacing | default: "50" | divided_by: 1000.00 }}em;
-
---type_base_line_height: {{ settings.type_base_line_height | default: 1.4 }};
-
---type_base_size: {{ settings.type_base_size | default: 16 }}px;
-
---icon_weight: {{ settings.icon_weight | default: '5px' }};
-
---icon_linecaps: {{ settings.icon_linecaps | default: 'miter' }};
-
-      {% endcomment %}
+	/*================ Typography ================*/
+  --type_base_family: {{ settings.type_base_font_family.family }};
+  --type_base_fallback: {{ settings.type_base_font_family.fallback_families }};
+  --type_base_stack: #{"'" + --type_base_family + "', " + --type_base_fallback};
+  --type_base_weight: {{ settings.type_base_font_family.weight }};
+  --type_body_text_center: {{ settings.type_body_align_text | default: false }};
+  --type_base_spacing: {{ settings.type_base_spacing | default: "50" | divided_by: 1000.00 }}em;
+  --type_base_line_height: {{ settings.type_base_line_height | default: 1.4 }};
+  --type_base_size: {{ settings.type_base_size | default: 16 }}px;
+{% endcomment %}
