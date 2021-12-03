@@ -99,7 +99,6 @@
       </p>
     {%- endif -%}
     </div>
-  </div>
   {%- if search.performed and search.results.size > 0 -%}
     {% paginate search.results by 50 %}
       <div class="template-search__results">
@@ -182,6 +181,7 @@
       </div>
     {% endpaginate %}
   {%- endif -%}
+</div>
 </div>
 
    <script>
