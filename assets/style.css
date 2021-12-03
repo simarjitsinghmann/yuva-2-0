@@ -1819,14 +1819,14 @@ a.wishlist-view .fas {
    font-size: var(--small-text);
 }
 .client-say-left {
-   display: flex;
-   align-content: center;
-   padding-right: 35px;
-   justify-content: flex-start;
-   height: 100%;
-   align-items: center;
-   flex-wrap: wrap;
-   padding-bottom: 50px;
+    display: flex;
+    padding-right: 35px;
+    justify-content: flex-start;
+    height: 100%;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    flex-direction: column;
 }
 .testimonial-client-slide .slider-item {
    padding: 20px 10px;
