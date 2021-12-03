@@ -4900,9 +4900,12 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
     font-size: 14px;
     background: inherit;
     margin-left: -1px;
-      color: #bdbdbd;
-    font-weight: 400;
-}  
+    color: #bdbdbd;
+  font-weight: 400;
+}
+.tabs-inner-box li.active button {
+	font-weight: 600;
+}
 .result_product .grid__item .grid-item.col {
     padding-left: 0;
     padding-right: 0;
