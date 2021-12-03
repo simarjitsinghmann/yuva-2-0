@@ -45,7 +45,7 @@
                            {% if childlink.links != blank %}
                               {% assign childlink_url = 'javascript:void(0)'%}
                            {% endif%}
-                           <a class="toggle-level" href="{%- if childlink.links != blank -%}javascript:void(0){% else %}{{ childlink_url }}{% endif %}">
+                           <a class="toggle-level" {%- unless childlink.links != blank -%}href="{{ childlink_url }}"{% endunless %}>
                               {{ childlink.title | split:"{badge" | first | escape | captilize }} <span class="caret"></span></a>
                              
                            {%- if childlink.links != blank -%}
