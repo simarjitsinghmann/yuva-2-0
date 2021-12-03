@@ -276,7 +276,7 @@
           <div class="order-detail-address">
             <h4>{{ 'customer.order.shipping_address' | t }}</h4>
             <div class="address-bill-status 
-                        {% if order.fulfillment_status == 'paid' %}
+                        {% if order.fulfillment_status == 'fulfilled' %}
                         success
                         {% elsif order.fulfillment_status == 'unfulfilled'  %}
                         warning
