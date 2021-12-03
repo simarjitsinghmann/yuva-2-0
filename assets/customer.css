@@ -85,14 +85,13 @@
 .customer tbody {
   color: var(--black);
 }
-.customer th,
-.customer td {
-  font-weight: 400;
-  line-height: 1;
-  border: none;
-  padding: 25px 20px;
-  text-align:left;
-  font-size:14px;
+.customer td, .customer th {
+    font-weight: 400;
+    line-height: 1;
+    border: none;
+    padding: 25px 20px;
+    text-align: left;
+    font-size: 13px;
 }
 .customer td:empty {
   display: initial;
