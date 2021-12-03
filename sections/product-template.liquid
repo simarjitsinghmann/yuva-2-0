@@ -167,7 +167,7 @@
             </script>
             {% when 'quantity' %}
             <div class="select__quantity">
-              <p class="small-size size_title">SELECT Quantity</p>                              
+              <p class="small-size size_title">  {{ 'products.product.quantity' | t }}</p>                              
               <div class="quantity">
                 <input type="number" name="quantity" min="1" max="50" step="1" value="1" form="{{product_form_id}}">
                 <div class="quantity-nav">
