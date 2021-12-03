@@ -4887,7 +4887,9 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
     margin-top: 4px;
 }
 .tabs-inner-box li {
-    margin: 3px;
+    border-bottom: 2px solid #000;
+    margin: 0 30px;
+    padding: 0;
 }
 .tabs-inner-box li button {
     display: inline-block;
