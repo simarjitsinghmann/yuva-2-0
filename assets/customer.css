@@ -668,6 +668,9 @@ label[for="AddressProvinceNew"] {
    font-weight: 600;
   font-size:12px;
 }
+.order-detail-address .address-bill-status.success strong {
+	font-weight: var(--medium);
+}
 .order-detail-address .address-bill-status.success p{
     color: green;
 }
