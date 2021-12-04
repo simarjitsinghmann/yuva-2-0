@@ -319,6 +319,9 @@
 .collapse:not(.show) {
   display: none;
 }
+.header__icons > div {
+    margin-left: 20px;
+}
 .header__icons svg {
   width: 24px;
   cursor: pointer;
@@ -358,7 +361,7 @@
   font-family: var(--font-family);
   opacity: 1;
 }
-.search-form .btn.icon-search {
+/* .search-form .btn.icon-search {
   padding: 0;
   width: auto;
   position: absolute;
@@ -373,10 +376,10 @@
   max-height: inherit;
   letter-spacing: 0;
   min-width: initial;
-}
-.search-form {
+} */
+/* .search-form {
   position: relative;
-}
+} */
 #currency_form select {
   border: none;
   background: transparent;
