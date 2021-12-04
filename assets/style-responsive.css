@@ -1111,6 +1111,12 @@
     min-height: 290px;
     max-height: 290px;
 }
+  .product-toolbar-box {
+    padding: 7px 10px;
+}
+  .toolbox-left {
+    display: none;
+}
 }
 @media screen and (max-width:480px){
 #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item .card-wrapper-img {
