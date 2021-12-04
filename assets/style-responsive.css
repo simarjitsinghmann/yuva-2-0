@@ -1042,6 +1042,10 @@
         width: 50%;
     }
 	/*  common end  */
+    #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item .card-wrapper-img {
+        min-height: 330px;
+        max-height: 330px;
+    }
 }
 @media (min-width: 768px) and (max-width:1199px){
 	.banner-caption .center-left,
