@@ -1438,17 +1438,19 @@ div#countdown {
   margin: 0 5px;
 }
 .header__icons .wrapper-top-cart span.cartCount {
-  line-height: 1.8;
-  background: var(--cartDotColor);
-  width: 17px;
-  height: 17px;
-  color: var(--cartDotText);
-  font-size: var(--extra-small);
-  position: absolute;
-  text-align: center;
-  right: -7px;
-  top: -10px;
-  font-size: 10px;
+    line-height: 1.8;
+    background: var(--cartDotColor);
+    width: 14px;
+    height: 14px;
+    color: var(--cartDotText);
+    font-size: var(--extra-small);
+    position: absolute;
+    text-align: center;
+    right: -5px;
+    top: -5px;
+    font-size: 0;
+    border-radius: 100%;
+    border: 2px solid #fff;
 }
 .header__icons .wrapper-top-cart a.cart-icon {
   text-decoration: none;
