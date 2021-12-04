@@ -17,13 +17,13 @@
       <img src="{{feature_image}}" alt="">
     </div>
     <div class="collection-detail">
-      <h4>
+      <h2>
         {% if custom == false %}
         {{collection.title}}
         {% elsif custom and mc_heading != blank  %}
         {{mc_heading}}
         {% endif %}
-      </h4>
+      </h2>
       <small>
         {% if custom == false %}
         {{collection.description | strip_html | truncatewords: 15, "" }}
