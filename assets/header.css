@@ -291,7 +291,6 @@
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-  margin-left: 47px;
 }
 .navbar-expand-md .nav-item .list-menu__item {
   position: relative;
@@ -1144,6 +1143,7 @@ div.lower-nav .nav-item .userful__links {
     flex-grow: 1;
     -ms-flex-align: center;
     align-items: center;
+    max-width: 70%;
   }
   .navbar-expand-md .navbar-toggler {
     display: none;
