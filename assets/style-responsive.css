@@ -1018,6 +1018,10 @@
   #nav_style_3 .navigation__header {
       justify-content: center!important;
   }
+    element.style {
+      position: absolute;
+      left: 0;
+  }
     .side-menu, .side-menu .inner-side .nav-item.dropdown ul.child, .side-menu .inner-side .nav-item.dropdown ul.grandchild {
         max-width: 340px;
         left: -340px;
