@@ -283,6 +283,10 @@
 .mx-auto {
   margin-right: auto !important;
 }
+.top-header .navbar {
+  width: 100%;
+  padding:15px 0;
+}
 .navbar-nav {
   display: -ms-flexbox;
   display: flex;
@@ -1311,10 +1315,6 @@ div.lower-nav .nav-item .userful__links {
 .top-header {
   position: relative;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
-}
-.top-header .navbar {
-  width: 100%;
-  padding:15px 0;
 }
 .list-menu--inline .nav-item .sub-menu {
   top: 100%;
