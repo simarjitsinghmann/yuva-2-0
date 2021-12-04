@@ -315,16 +315,12 @@
     }
 	/*   banner end */
     /*  header start  */
-    .navbar-nav {
-        margin-left: 10px;
-    }
-    .navbar-expand-md .nav-item .list-menu__item {
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      font-size: 12px;
-    }
+.navbar-expand-md .nav-item .list-menu__item {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 11px;
+    line-height: 16px;
+}
     .navbar-nav .nav-item span.sf-menu__arrow {
         right: 0px;
     }
