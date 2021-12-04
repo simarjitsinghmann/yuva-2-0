@@ -1118,6 +1118,9 @@
   body .shopify-section.collection-grid-section {
   	padding:0;
   }
+  .template_collection .breadcrumb {
+  	display:none;
+  }
 }
 @media screen and (max-width:575px){
 #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item .card-wrapper-img {
