@@ -216,7 +216,10 @@
     }
 }
 @media screen and (max-width:1367px){
-
+  #CollectionProductsContainer[data-view=grid-layout-3] .products-grid .product_columns .grid-item .card-wrapper-img {
+      min-height: 370px;
+      max-height: 370px;
+  }
 }
 @media screen and (max-width:1199px){
 	/*  common start  */
