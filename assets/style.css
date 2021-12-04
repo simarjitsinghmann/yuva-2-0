@@ -5424,15 +5424,14 @@ body #shopify-product-reviews {
    font-size: 0;
 }
 .slick-dots li button:after {
-   position: absolute;
-   content: "";
-   width: 10px;
-   background-color: #000;
-   opacity:0.5;
-   height: 10px;
-   top: 0;
-   left: 0;
-   border-radius: 20px;
+    position: absolute;
+    content: "";
+    width: 3px;
+    background-color: #000;
+    opacity: .5;
+    height: 15px;
+    top: 0;
+    left: 0;
 }
 .slick-dots li.slick-active button:after {
 	opacity:1;
