@@ -1011,7 +1011,10 @@
         max-height: 210px;
     }
 	/*   pdp page end */
-  	/*  side menu start  */
+/*  header css start  */
+    .nav-menu-btn {
+      display: block;
+  }
     .side-menu, .side-menu .inner-side .nav-item.dropdown ul.child, .side-menu .inner-side .nav-item.dropdown ul.grandchild {
         max-width: 340px;
         left: -340px;
@@ -1019,7 +1022,7 @@
     .side-menu .inner-side, .side-menu .nav-item.dropdown ul.inner {
         padding: 30px 40px;
     }
-	/*  side menu end  */
+	/*  header menu end  */
 }
 @media screen and (max-width:767px){
 	.banner-caption .center-left,
