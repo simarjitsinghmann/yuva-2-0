@@ -1108,6 +1108,10 @@
   .header__heading-link img {
     max-width: 65px;
 }
+  button.navbar-toggler span.navbar-toggler-icon, button.navbar-toggler span.navbar-toggler-icon:after, button.navbar-toggler span.navbar-toggler-icon:before {
+    width: 19px;
+    height: 2px;
+}
 }
 @media screen and (max-width:575px){
 #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item .card-wrapper-img {
