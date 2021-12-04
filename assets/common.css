@@ -858,10 +858,12 @@ img {
     text-align: center;
     margin: 0 auto;
 }
-.nodatafound_box h4 {
+.nodatafound_box h4,
+.template-404 h4{
 	margin:15px 0 7PX;
 }
-.nodatafound_box p {
+.nodatafound_box p,
+.template-404 p{
     color: var(--dark-gray);
 }
 /* end */
