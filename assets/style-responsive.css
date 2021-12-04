@@ -1045,10 +1045,10 @@
         min-height: 330px;
         max-height: 330px;
     }
-  .product-content {
-      max-width: 100%;
-      flex: 0 0 100%;
-  }
+    .product-content {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
 	.shop-sidebar {
       max-width: 100%;
       flex: 0 0 100%;
@@ -1066,17 +1066,9 @@
       transform: translateY(100%);
       transition: 1s ease all;
   }
-/*   .list-tags {
-    display: flex;
-    align-items: center;
+  #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item {
+    padding: 0 3px;
   }
-  .list-tags li {
-    margin: 0 10px 0 0;
-  }
-  .sidebar-widget-product {
-    padding: 0 0px 9px 0;
-    margin: 0 0 9px;
-  } */
 }
 @media screen and (max-width:575px){
 #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item .card-wrapper-img {
