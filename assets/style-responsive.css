@@ -1097,6 +1097,9 @@
 /*       transform: translateY(100%); */
       transition: 1s ease all;
   }
+  .shop-sidebar-inside {
+    border-right: 0;
+}
   #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item {
     padding: 0 3px;
   }
