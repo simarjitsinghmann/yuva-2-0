@@ -315,14 +315,18 @@
     }
 	/*   banner end */
     /*  header start  */
-.navbar-expand-md .nav-item .list-menu__item {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 11px;
-    line-height: 16px;
-}
+  .navbar-expand-md .nav-item .list-menu__item {
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 11px;
+      line-height: 16px;
+      margin: 0 2px;
+  }
     .navbar-nav .nav-item span.sf-menu__arrow {
         right: 0px;
+    }
+    .header__icons svg {
+        width: 16px;
     }
 	/*  side menu start  */
     .side-menu, .side-menu .inner-side .nav-item.dropdown ul.child, .side-menu .inner-side .nav-item.dropdown ul.grandchild {
