@@ -1,3 +1,9 @@
+@media screen and (max-width:1600px){
+    .template_collection .card-wrapper-img {
+        min-height: 260px;
+        max-height: 260px;
+    }
+}
 @media screen and (max-width:1440px){
     /* common  */
     .card-wrapper-img {
@@ -84,10 +90,6 @@
     }
     /*  collection end  */
 	/*  product listing start  */
-    .template_collection .card-wrapper-img {
-        min-height: 260px;
-        max-height: 260px;
-    }
     .product-loop-variants .color_option span {
         width: 19px;
         height: 19px;
