@@ -734,26 +734,26 @@
   flex-direction: column;
   width: 100%;
 }
-.header_3 button.navbar-toggler {
+button.navbar-toggler {
   background: transparent;
   position: relative;
   height: 22px;
 }
-.header_3 button.navbar-toggler span.navbar-toggler-icon,
-.header_3 button.navbar-toggler span.navbar-toggler-icon:before,
-.header_3 button.navbar-toggler span.navbar-toggler-icon:after {
+button.navbar-toggler span.navbar-toggler-icon,
+button.navbar-toggler span.navbar-toggler-icon:before,
+button.navbar-toggler span.navbar-toggler-icon:after {
   width: 27px;
   height: 2px;
   position: relative;
 }
-.header_3 button.navbar-toggler span.navbar-toggler-icon {
+button.navbar-toggler span.navbar-toggler-icon {
   position: relative;
   background: #2f2f2f;
   transition: all 0s 0.1s, width 150ms linear;
   display: block;
 }
-.header_3 button.navbar-toggler span.navbar-toggler-icon:before,
-.header_3 button.navbar-toggler span.navbar-toggler-icon:after {
+button.navbar-toggler span.navbar-toggler-icon:before,
+button.navbar-toggler span.navbar-toggler-icon:after {
   content: "";
   position: absolute;
   bottom: 7px;
@@ -763,17 +763,17 @@
     transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), width 150ms linear,
     background 150ms linear;
 }
-.header_3 button.navbar-toggler span.navbar-toggler-icon:after {
+button.navbar-toggler span.navbar-toggler-icon:after {
   top: 7px;
   bottom: auto;
 }
-.header_3 button.navbar-toggler:hover span.navbar-toggler-icon::before {
+button.navbar-toggler:hover span.navbar-toggler-icon::before {
   width: 17px;
 }
-.header_3 button.navbar-toggler:hover span.navbar-toggler-icon::after {
+button.navbar-toggler:hover span.navbar-toggler-icon::after {
   width: 20px;
 }
-.header_3 button.navbar-toggler:hover span.navbar-toggler-icon {
+button.navbar-toggler:hover span.navbar-toggler-icon {
   width: 31px;
 }
 .header_3 .header__heading-link {
@@ -853,7 +853,7 @@
 .header_3 .side-menu .inner-side ul li .inner li .inner li a {
   font-weight: 400;
 }
-.header_3 .navbar-expand-md .navbar-toggler {
+.navbar-expand-md .navbar-toggler {
   display: block;
   position: relative;
   min-width: 32px;
