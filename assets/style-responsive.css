@@ -1105,6 +1105,9 @@
     background-color: #fff;
     margin:0 -20px;
   }
+  .header__heading-link img {
+    max-width: 60px;
+}
 }
 @media screen and (max-width:575px){
 #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item .card-wrapper-img {
@@ -1119,6 +1122,9 @@
 }
   .toolbox-left {
     display: none;
+}
+  .header__icons svg {
+    width: 14px;
 }
 }
 @media screen and (max-width:480px){
