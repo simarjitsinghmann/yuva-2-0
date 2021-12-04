@@ -1064,8 +1064,10 @@
   .list-tags {
     display: flex;
     align-items: center;
-    margin: 0 10px;
-}
+  }
+  .list-tags li {
+  	margin: 0 10px;
+  }
 }
 @media (min-width: 768px) and (max-width:1199px){
 	.banner-caption .center-left,
