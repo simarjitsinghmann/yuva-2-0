@@ -1109,12 +1109,15 @@
     margin:0 -20px;
   }
   .header__heading-link img {
-    max-width: 65px;
+    max-width: 70px;
 }
   button.navbar-toggler span.navbar-toggler-icon, button.navbar-toggler span.navbar-toggler-icon:after, button.navbar-toggler span.navbar-toggler-icon:before {
     width: 19px;
     height: 2px;
 }
+  .collection-grid-section {
+  	padding:0;
+  }
 }
 @media screen and (max-width:575px){
 #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item .card-wrapper-img {
