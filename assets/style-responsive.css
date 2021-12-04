@@ -1075,6 +1075,13 @@
   #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item {
     padding: 0 3px;
   }
+  .product-toolbar-box {
+  	  position: sticky;
+    	padding:top:10px;
+      top: 100px;
+      z-index: 99;
+      background-color: #fff;
+  }
 }
 @media screen and (max-width:575px){
 #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item .card-wrapper-img {
