@@ -1094,11 +1094,17 @@
       min-height: 100%;
       overflow-y: auto;
       padding:0 20px;
-      transform: translateY(100%);
+/*       transform: translateY(100%); */
       transition: 1s ease all;
   }
   #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item {
     padding: 0 3px;
+  }
+    .CollectionProductGrid .product-collection.grid-view {
+      padding-top: 0px;
+  }
+    .product-content {
+      padding-top: 10px;
   }
   .product-toolbar-box {
     position: sticky;
