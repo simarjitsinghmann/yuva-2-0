@@ -1167,6 +1167,10 @@
   .header_2 .nav-top-header {
     padding: 15px 0;
 }
+  .results-similarGrid li.product-base picture {
+    max-height: 150px;
+    min-height: 150px;
+}
 }
 @media screen and (max-width:480px){
 #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item .card-wrapper-img {
