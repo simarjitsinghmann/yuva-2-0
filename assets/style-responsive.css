@@ -1061,6 +1061,11 @@
       transform: translateY(100%);
       transition: 1s ease all;
   }
+  .list-tags {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
 }
 @media (min-width: 768px) and (max-width:1199px){
 	.banner-caption .center-left,
