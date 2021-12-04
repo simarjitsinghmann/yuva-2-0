@@ -849,8 +849,11 @@ img {
   padding: 20px;
 }
 .nodatafound_box img {
-	background-color: transparent;
-  	max-width:200px;
+    background-color: transparent;
+    max-width: 200px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
 }
 .nodatafound_box h3 {
 	margin:15px 0;
