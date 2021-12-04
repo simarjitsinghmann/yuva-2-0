@@ -1084,6 +1084,12 @@
     max-height: 290px;
 }
 }
+@media screen and (max-width:480px){
+#CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item .card-wrapper-img {
+    min-height: 260px;
+    max-height: 260px;
+}
+}
 @media (min-width: 768px) and (max-width:1199px){
 	.banner-caption .center-left,
   	.carousel-caption .center-left{
