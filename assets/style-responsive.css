@@ -1045,7 +1045,7 @@
         min-height: 330px;
         max-height: 330px;
     }
-    .shop-sidebar {
+	.shop-sidebar {
       max-width: 100%;
       flex: 0 0 100%;
       position: fixed;
@@ -1056,6 +1056,10 @@
       padding: 0;
       top: 0;
       bottom: 0;
+      min-height: 100%;
+      overflow-y: auto;
+      transform: translateY(100%);
+      transition: 1s ease all;
   }
 }
 @media (min-width: 768px) and (max-width:1199px){
