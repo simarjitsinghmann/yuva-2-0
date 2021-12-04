@@ -127,12 +127,12 @@
     margin-top: 25px;
 }
 .custom-checkbox {
-    display: block;
+    display: inline-block;
     position: relative;
     padding-left: 25px;
     margin-bottom: 0px;
     cursor: pointer;
-    font-size: 13x;
+    font-size: 13px;
   	line-height:18px;
     padding-bottom: 0;
 }
@@ -140,8 +140,8 @@
   position: absolute;
   opacity: 0;
   cursor: pointer;
-  height: 0;
-  width: 0;
+  height: 100%;
+  width: 100%;
 }
 .checkmark {
   position: absolute;
