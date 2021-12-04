@@ -1,11 +1,13 @@
 <div class="container">
-  <div class="template-404">
-    <img class="pencel mx-auto" src="{{'not_found.png' | asset_url }}" alt="not found">
-    <h4>{{ 'templates.404.tag' | t }}</h4>
-    <h6>{{ 'templates.404.title' | t }}</h6>
-    <p>{{ 'templates.404.subtext_html' | t }}</p>
-    <div class="back-to-home-box">
-      <a href="{{ routes.root_url}}" class="button black-btn small-btn">{{ 'templates.404.button_txt' | t }}</a>
+  <div class="template-404-wrapper">
+    <div class="template-404">
+      <img class="pencel mx-auto" src="{{'not_found.png' | asset_url }}" alt="not found">
+      <h4>{{ 'templates.404.tag' | t }}</h4>
+      <h6>{{ 'templates.404.title' | t }}</h6>
+      <p>{{ 'templates.404.subtext_html' | t }}</p>
+      <div class="back-to-home-box">
+        <a href="{{ routes.root_url}}" class="button black-btn small-btn">{{ 'templates.404.button_txt' | t }}</a>
+      </div>
     </div>
   </div>
 </div>
