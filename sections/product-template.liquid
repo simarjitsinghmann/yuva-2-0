@@ -83,7 +83,7 @@
               <label class="visually-hidden" data-price-text>{{ 'Price' }}</label>
               {% if current_variant.compare_at_price > current_variant.price %}
               <h3 id="get_price">
-                {{current_variant.price | money }}
+                <span data-regular-price>{{current_variant.price | money }}</span>
                 <span class="main-price">
                   <del>{{current_variant.compare_at_price | money }}</del>
                 </span>
