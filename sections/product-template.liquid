@@ -310,7 +310,8 @@
                            clearActive();
       btn.classList.add("active");
       var _value = btn.getAttribute("content");
-      document.getElementById(_value).style.display = "block";
+      
+        DOMAnimations.slideDown( document.getElementById(_value));
     });
   });
   }
