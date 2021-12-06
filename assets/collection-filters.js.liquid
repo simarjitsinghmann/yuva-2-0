@@ -16,9 +16,11 @@
   }
   
   function hideShowFilters(){
-    var parent = document.getElementById('filterHeading');
+    var filterHeading = document.getElementById('filterHeading');
     if(window.innerWidth < 768){
-      parent.setAttribute("data-view", "grid-layout-2")
+      filterHeading.addEventListener("click", ()=>{	
+                             getFilterData(filterForm,input,sectionId)
+    });
     }
   }
   changeGridLayout();
