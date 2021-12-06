@@ -19,7 +19,9 @@
     var filterHeading = document.getElementById('filterHeading');
     if(window.innerWidth < 768){
       filterHeading.addEventListener("click", ()=>{	
-    	var filters = document.getElementById('filterSideBar');
+        var filters = document.getElementById('filterSideBar');
+
+          filters.parentNode.classList.add('active')
     });
     }
   }
