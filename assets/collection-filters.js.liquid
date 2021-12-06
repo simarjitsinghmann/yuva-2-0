@@ -21,10 +21,12 @@
     if(window.innerWidth < 768){
       filterHeading.addEventListener("click", ()=>{	
                                      filters.classList.add('active')
+      document.querySelector('body').classList.add('open-filter-sort');
     });
     var cancelFiltes = document.getElementById('cancelFilters');
     cancelFiltes.addEventListener("click", ()=>{	
                                   filters.classList.remove('active')
+      document.querySelector('body').classList.remove('open-filter-sort');
   });
 }
  }
