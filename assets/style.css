@@ -3594,14 +3594,10 @@ section.feature-section {
    border-radius: 0;
    font-weight: var(--normal);
 }
-.select__size
-   .product-loop-variants.size
-   .variant_option
-   input:checked
-   + span.option {
-   background: #000;
-   border-color: #000;
-   color: #fff;
+.product-loop-variants .variant_option input:checked + span.option {
+  background: #000;
+  border-color: #000;
+  color: #fff;
 }
 .feature-product .quantity a#quantity_minus {
    font-size: 50px;
