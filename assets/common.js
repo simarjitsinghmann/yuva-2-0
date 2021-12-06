@@ -347,16 +347,16 @@ if (!Element.prototype.fadeOut) {
 
 function hideallMenus(menus,current){
   Array.from(menus).forEach(function(menu) {
-      var menuList = menu.nextElementSibling;
-      var menuParent = menu.parentNode;
+    var menuList = menu.nextElementSibling;
+    var menuParent = menu.parentNode;
     if(menu && menu == current){
       return;
     }
-    else{;
-         menuParent.classList.remove('active');
-         DOMAnimations.slideUp(menuList);
+    else{
+      menuParent.classList.remove('active');
+      DOMAnimations.slideUp(menuList);
 
-        }
+    }
   });
 }
 
