@@ -31,11 +31,9 @@
                         <div class="post-date">
                           <h4 class="custom-title">{{article.published_at | date: "%d" }} {{article.published_at | date: " %b %Y" }} </h4>
                           
-                          {% if section.settings.show_comment_count %}
-                          {%- if article.comments_count > 0 and blog.comments_enabled? -%}
+                          {%- if article.comments_count > 0 and blog.comments_enabled? and section.settings.show_comment_count-%}
                           <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
                           {%- endif -%}
-                          {% endif %}
                         </div>
                         {% endif %}
                         <div class="post-name">
@@ -48,9 +46,6 @@
                           <p class="" itemprop="author" itemscope itemtype="http://schema.org/Person">
                             <span itemprop="name">Posted By {{ article.author }}</span>
                           </p>
-                          {% endif %}
-                          {% if section.settings.show_comment_count %}
-                          <p>{{ article.comments_count }}</p>
                           {% endif %}
                         </div>
                         {% if section.settings.show_tags %}
