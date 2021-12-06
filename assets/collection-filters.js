@@ -52,13 +52,13 @@ Array.from(accordions).forEach(function(accordion) {
     setTimeout(function(){
     accordion.classList.remove('show');
     accordion.classList.add('hide'); 
-    },300);
+    },500);
   }else{	
     accordion.parentNode.classList.add('show')
     setTimeout(function(){
     accordion.classList.remove('hide');
     accordion.classList.add('show');
-    },300);
+    },500);
   }
 });
 });  
