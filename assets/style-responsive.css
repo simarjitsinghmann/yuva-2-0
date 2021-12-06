@@ -1105,6 +1105,9 @@
       transform: translateY(100%);
       transition: 1s ease all;
   }
+  .shop-sidebar.active {
+  	transform: translateY(0);
+  }
   .shop-sidebar-inside {
     border-right: 0;
 }
