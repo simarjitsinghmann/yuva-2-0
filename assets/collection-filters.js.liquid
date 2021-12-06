@@ -194,3 +194,10 @@ function getFilterData(filterForm,input,sectionId,remove){
 }
 collectionFilters();
 }());
+
+$(document).on("click", function(event){
+  var $trigger = $(".toolbox-sort");
+  if($trigger !== event.target && !$trigger.has(event.target).length){
+    $("#sort__list").slideUp("fast").removeClass('active');
+  }          				
+});
