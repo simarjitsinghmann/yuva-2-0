@@ -276,7 +276,7 @@ var DOMAnimations = {
 
             return this.slideUp(element, duration);
         }
-    }
+    },
   
    classToggle: function (element,className) {
 
