@@ -315,17 +315,17 @@ Array.from(footerMenus).forEach(function(menu) {
       	var menuList = menu.nextElementSibling;
       	var menuParent = menu.parentNode;
       if(!(menuParent.classList.contains('active'))){
-      hideallMenus(footerMenus)
-      setTimeout(function(){
-      
-      DOMAnimations.classToggle(menuParent,'active');
-      
-      DOMAnimations.slideToggle(menuList);
-      },500);
+        hideallMenus(footerMenus)
+        setTimeout(function(){
+
+          DOMAnimations.classToggle(menuParent,'active');
+
+          DOMAnimations.slideToggle(menuList);
+        },500);
       }
       else{
-      
-      hideallMenus('footer-menu-head')
+
+        hideallMenus(footerMenus)
       }
       
     });
