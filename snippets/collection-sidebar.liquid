@@ -95,17 +95,25 @@
 
       {% assign max_value = filter.range_max |money_without_currency %} 
 
+      {% assign max_value_formatted = filter.range_max |money %} 
+      
       {% assign min_value = filter.range_min |money_without_currency %}
+      
+      {% assign min_value_formatted = filter.range_max |money %}
 
       {%- if filter.max_value.value -%} 
 
       {% assign max_value = filter.max_value.value |money_without_currency  %} 
+
+      {% assign max_value_formatted = filter.max_value.value |money %}       
 
       {%- endif -%}
 
       {%- if filter.min_value.value -%}
 
       {% assign min_value = filter.min_value.value |money_without_currency %}
+      
+      {% assign min_value_formatted = filter.min_value.value |money %}
 
       {%- endif -%}
 
