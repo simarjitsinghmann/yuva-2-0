@@ -942,7 +942,6 @@ span.tag-line {
 .product-loop-variants.square {
    display: flex;
 }
-.select__color .product-loop-variants .color_option,
 .product-loop-variants .color_option,
 .product-loop-variants .denominations_option{
    margin: 0 9px 3px 0;
@@ -955,7 +954,7 @@ span.tag-line {
 .product__view__option li button svg {
    margin-top: 6px;
 }
-.select__color .product-loop-variants .color_option input,
+.product-loop-variants .color_option input,
 .product-loop-variants .color_option input,
 .product-loop-variants .denominations_option input {
    opacity: 0;
@@ -1018,8 +1017,8 @@ span.tag-line {
 .product-add-to-cart-right p {
    margin-bottom: 6px;
 }
-.select__color .product-loop-variants.square .color_option span,
-.select__color .product-loop-variants.circle .color_option span {
+.product-loop-variants.square .color_option span,
+.product-loop-variants.circle .color_option span {
    overflow: hidden;
    padding: 0;
 }
@@ -2370,7 +2369,7 @@ ul.gallery-item li a > img {
    width: 36px;
    height: 36px;
 }
-.select__size .product-loop-variants.size .variant_option input,
+.product-loop-variants .variant_option input,
 .product-loop-variants .material_option .productOption {
    opacity: 0;
    position: absolute;
