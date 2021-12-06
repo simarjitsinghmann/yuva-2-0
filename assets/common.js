@@ -303,8 +303,9 @@ Array.from(footerMenus).forEach(function(menu) {
         event.preventDefault();
       
       	var menuList = menu.querySelector('ul');
+      	var menuParent = menu.parentNode;
 
-        DOMAnimations.classToggle(menu,'active');
+        DOMAnimations.classToggle(menuParent,'active');
       
         DOMAnimations.slideToggle(menuList);
     });
