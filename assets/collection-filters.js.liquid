@@ -122,7 +122,7 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
 })
 
 
-  if(window.innerWidth > 767){
+if(window.innerWidth > 767){
 
 var prices = filterForm.querySelectorAll('input[type=number]');
 Array.from(prices).forEach(function(price) {
@@ -137,7 +137,13 @@ var inputs = filterForm.querySelectorAll('input[type=checkbox]');
                            getFilterData(filterForm,input,sectionId)
   });
 });
-
+}
+else{
+	filterForm.addEventListener("submit", (e)=>{
+      e.preventDefault();
+                           getFilterData(filterForm,sectionId)
+  });
+}
 var sortBy = section.querySelectorAll('[name="sort_by"]');
 Array.from(sortBy).forEach(function(sort) {
   sort.addEventListener("click", ()=>{	
