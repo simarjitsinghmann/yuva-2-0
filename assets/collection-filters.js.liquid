@@ -201,3 +201,8 @@ $(document).on("click", function(event){
     $("#sort__list").slideUp("fast").removeClass('active');
   }          				
 });
+
+  $('body').on('click','.toolbox-sort',function(){
+		$(this).find("#sort__list").slideToggle("fast");
+		$('#sort__list').css({"display": "block"});
+	});

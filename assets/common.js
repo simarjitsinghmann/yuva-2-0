@@ -201,12 +201,6 @@ $(document).on("click", function(event){
     $(".currency-menu").slideUp("fast");
   }          				
 });
-$(document).on("click", function(event){
-  var $trigger = $(".toolbox-sort");
-  if($trigger !== event.target && !$trigger.has(event.target).length){
-    $("#sort__list").slideUp("fast");
-  }          				
-});
 
 $(document).ready(function(){
 //   $('.navbar-toggler').click(function(){
@@ -288,11 +282,6 @@ $(document).ready(function(){
 		$(this).find(".currency-menu").slideToggle("fast");
 		$('.currency-menu').css({"display": "block"});
 	});
-  $('body').on('click','.toolbox-sort',function(){
-		$(this).find("#sort__list").slideToggle("fast");
-		$('#sort__list').css({"display": "block"});
-	});
-
 		
 	///product-size-select///
 	$('body').on('click','.dropdown-selected',function(){
