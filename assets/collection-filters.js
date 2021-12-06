@@ -47,10 +47,9 @@ function collectionFilters(){
 var accordions = filterForm.querySelectorAll('.br_more_filter');
 Array.from(accordions).forEach(function(accordion) {
   accordion.addEventListener("click", ()=>{	   
-                             console.log('help')
-                             var showMore = accordion.querySelector('.showMore');
-                             var showless = accordion.querySelector('.showLess');
-                             if(accordion.classList.contains('show')){
+  var showMore = accordion.querySelector('.showMore');
+  var showless = accordion.querySelector('.showLess');
+                             if(accordion.parentNode.classList.contains('show')){
     accordion.parentNode.classList.remove('show')
     DOMAnimations.slideUp(showless);
     DOMAnimations.slideDown(showMore);
