@@ -363,28 +363,29 @@ function hideallMenus(menus,current){
 document.addEventListener("DOMContentLoaded", function() {
 
     var footerMenus = document.getElementsByClassName('footer-menu-head');
-	
-Array.from(footerMenus).forEach(function(menu) {
+  if(window.width() < 768 ){
+    Array.from(footerMenus).forEach(function(menu) {
 
-    menu.addEventListener('click', function(event) {
+      menu.addEventListener('click', function(event) {
 
         event.preventDefault();
-      	var menuList = menu.nextElementSibling;
-      	var menuParent = menu.parentNode;
-      if(!(menuParent.classList.contains('active'))){
-        hideallMenus(footerMenus,menu)
+        var menuList = menu.nextElementSibling;
+        var menuParent = menu.parentNode;
+        if(!(menuParent.classList.contains('active'))){
+          hideallMenus(footerMenus,menu)
 
           DOMAnimations.classToggle(menuParent,'active');
 
           DOMAnimations.slideToggle(menuList);
-      }
-      else{
+        }
+        else{
 
-        hideallMenus(footerMenus)
-      }
-      
+          hideallMenus(footerMenus)
+        }
+
+      });
     });
-});
+  }
 });
 
 function truncate(str, no_words) {
