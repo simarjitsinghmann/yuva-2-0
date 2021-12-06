@@ -104,6 +104,7 @@ var sortMenu = document.getElementById('toolbox-sort');
       sortMenu.style.display = 'none';
     }else{
       sortMenu.classList.remove('active');
+      document.querySelector('body').classList.remove('open-filter-sort');
     }
   }
   else{
@@ -112,6 +113,7 @@ var sortMenu = document.getElementById('toolbox-sort');
       sortMenu.style.display = 'block';
     }else{
       sortMenu.classList.add('active');
+      document.querySelector('body').classList.add('open-filter-sort');
     }
   }
 });
