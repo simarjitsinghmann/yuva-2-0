@@ -1198,13 +1198,16 @@
       font-weight: var(--medium);
   }
 /*  ============= footer css start ============  */
+  .footer-innner-continer {
+      margin-top: 20px;
+  }
   .footer__column.footer__column--info {
-    text-align: center;
-}
+      text-align: center;
+  }
   .list-payment {
-    justify-content: center;
-    margin-top: 10px;
-}
+      justify-content: center;
+      margin-top: 10px;
+  }
 /*  ============= footer css end =============  */
 }
 @media screen and (max-width:575px){
