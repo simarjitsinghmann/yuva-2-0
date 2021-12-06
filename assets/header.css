@@ -1122,7 +1122,7 @@ div.lower-nav .nav-item .userful__links {
 .nav-open .side-menu .inner-side .nav-item.dropdown ul.grandchild.show {
   left: 0;
 }
-.slide-menu-outer {
+.nav-open:after {
   position: fixed;
   background: #00000057;
   width: 100%;
@@ -1130,13 +1130,6 @@ div.lower-nav .nav-item .userful__links {
   left: 0;
   bottom: 0;
   z-index: 9;
-  opacity: 0;
-  visibility: hidden;
-}
-.nav-open .slide-menu-outer {
-  opacity: 1;
-  visibility: visible;
-  left: 0;
 }
 .customer-title h5 {
   padding-top: 20px;
