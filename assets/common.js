@@ -315,7 +315,7 @@ Array.from(footerMenus).forEach(function(menu) {
       	var menuList = menu.nextElementSibling;
       	var menuParent = menu.parentNode;
       if(!(menuParent.classList.contains('active'))){
-      hideallMenus('footer-menu-head')
+      hideallMenus(footerMenus)
       setTimeout(function(){
       
       DOMAnimations.classToggle(menuParent,'active');
