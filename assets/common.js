@@ -320,7 +320,7 @@ Array.from(footerMenus).forEach(function(menu) {
         DOMAnimations.classToggle(menuParent,'active');
       
         DOMAnimations.slideToggle(menuList);
-      },500);
+      },300);
     });
 });
 });
