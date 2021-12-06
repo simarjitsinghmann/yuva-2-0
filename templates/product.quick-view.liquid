@@ -42,7 +42,7 @@
         <h3 id="get_price">
           <span data-regular-price>{{current_variant.price | money }}</span>
           <span class="main-price">
-            <del>{{current_variant.compare_at_price | money }}</del>
+            {{current_variant.compare_at_price | money }}
           </span>
         </h3>
         {% if settings.show_saved_amount %}        
