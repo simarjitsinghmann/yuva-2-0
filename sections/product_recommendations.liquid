@@ -6,7 +6,7 @@
       <div class="recent-product-header shopify__top__section">
         <h4>Recent Products</h4>
       </div>
-      <div class="recent-product-slide" data-slidessr>
+      <div class="recent-product-slide" data-slider>
         {%- for product in recommendations.products -%}
         <div class="item">
           <div class="slider-content">
@@ -62,7 +62,7 @@
     $(document).ready(function(){
       var recomend = setInterval(function(){
         if($('.recent-product-slide').length > 0 ){ 
-          $('.recent-product-slide').slick({
+          $('.recent-product-slideeee').slick({
               slidesToShow:7,
               slidesToScroll:1,
               autoplay:true,
