@@ -47,17 +47,18 @@ function collectionFilters(){
 var accordions = filterForm.querySelectorAll('.br_more_filter');
 Array.from(accordions).forEach(function(accordion) {
   accordion.addEventListener("click", ()=>{	   
-  var showMore = accordion.querySelector('.showMore');
-  var showless = accordion.querySelector('.showLess');
-                             if(accordion.parentNode.classList.contains('show')){
+                             if(accordion.classList.contains('show')){
     accordion.parentNode.classList.remove('show')
-    DOMAnimations.slideUp(showless);
-    DOMAnimations.slideDown(showMore);
+//     setTimeout(function(){
+    accordion.classList.remove('show');
+    accordion.classList.add('hide'); 
+//     },300);
   }else{	
-    accordion.parentNode.classList.add('show');
-   
-    DOMAnimations.slideDown(showless);
-    DOMAnimations.slideUp(showMore);
+    accordion.parentNode.classList.add('show')
+//     setTimeout(function(){
+    accordion.classList.remove('hide');
+    accordion.classList.add('show');
+//     },300);
   }
 });
 });  
