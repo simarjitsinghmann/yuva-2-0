@@ -317,7 +317,7 @@ Array.from(footerMenus).forEach(function(menu) {
     menu.addEventListener('click', function(event) {
 
         event.preventDefault();
-      hideallMenus(footerMenus)
+      hideallMenus('footer-menu-head')
       	var menuList = menu.nextElementSibling;
       	var menuParent = menu.parentNode;
 		
