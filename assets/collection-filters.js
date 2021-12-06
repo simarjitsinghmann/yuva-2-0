@@ -51,12 +51,14 @@ Array.from(accordions).forEach(function(accordion) {
                              var showless = accordion.querySelector('.showLess');
                              if(accordion.classList.contains('show')){
     accordion.parentNode.classList.remove('show')
-    accordion.classList.remove('show');
-    accordion.classList.add('hide'); 
+
+    DOMAnimations.slideUp(showless);
+    DOMAnimations.slideDown(showMore);
   }else{	
-    accordion.parentNode.classList.add('show
-    accordion.classList.remove('hide');
-    accordion.classList.add('show');
+    accordion.parentNode.classList.add('show');
+   
+    DOMAnimations.slideUp(showless);
+    DOMAnimations.slideDown(showMore);
   }
 });
 });  

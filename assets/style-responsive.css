@@ -1293,6 +1293,13 @@
   .footer-menu-head:before {
       transform: rotate(-90deg);
   }
+  .footer-menu-accordion.active .footer-menu-head:before {
+      transform: rotate(90deg);
+      opacity: 0;
+  }
+  .footer-menu-accordion.active .footer-menu-head:after {
+      transform: rotate(180deg);
+  }
 /*  ============= footer css end =============  */
 }
 @media screen and (max-width:575px){
