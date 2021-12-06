@@ -2,6 +2,7 @@
 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
 <div class="CollectionProductGrid {{sort_by}} {{collection.default_sort_by}} " id="CollectionProductsContainer" data-id="{{section.id}}" data-view="grid-layout-5">
   <div class="container">
+    {% if collection.products_count > 0 %}
     <div class="product-toolbar-box">
       
       {% if section.settings.enable_filtering %}
@@ -160,13 +161,9 @@
         <div class="product-collection grid-view">
           <div class="products-grid" style="display:block">
             <div class="row product_columns">
-              {% if collection.products_count > 0 %}
               {% for product in collection.products %}
               {% render 'product-grid',product: product %}
               {% endfor %}
-              {% else %}
-              {% render 'not-found'  item:'Product'%}
-              {% endif %}
             </div>
           </div>
         </div>
@@ -175,6 +172,9 @@
         {% endif %}
       </div>
     </div>
+    {% else %}
+    {% render 'not-found'  item:'Product'%}
+    {% endif %}
   </div>
 </div>
 
