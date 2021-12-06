@@ -118,7 +118,13 @@ Array.from(sortMenu).forEach(function(menu) {
 });
 }); 
 
-
+document.getElementById('outer-container').onclick = function(e) {
+  if(e.target != document.getElementById('content-area')) {
+    document.getElementById('content-area').innerHTML = 'You clicked outside.';          
+  } else {
+    document.getElementById('content-area').innerHTML = 'Display Contents';   
+  }
+}
 var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
 Array.from(priceRangeBars).forEach(function(rangeBar) {
   var el = rangeBar;
