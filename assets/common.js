@@ -296,11 +296,14 @@ function hideallMenus(menus,current){
   Array.from(menus).forEach(function(menu) {
       var menuList = menu.nextElementSibling;
       var menuParent = menu.parentNode;
-    if(menu && menu != current){
-
-      menuParent.classList.remove('active');
-      DOMAnimations.slideUp(menuList);
+    if(menu && menu == current){
+      continue
     }
+    else{;
+         menuParent.classList.remove('active');
+         DOMAnimations.slideUp(menuList);
+
+        }
   });
 }
 
