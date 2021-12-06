@@ -280,14 +280,14 @@ var DOMAnimations = {
   
    classToggle: function (element,className) {
 
-        if (window.getComputedStyle(element).classList.contains(className)) {
+        if (element.classList.contains(className)) {
 
-        window.getComputedStyle(element).classList.remove(className)
+        element.classList.remove(className)
 
 
       } else {
 
-        window.getComputedStyle(element).classList.add(className)
+        element.classList.add(className)
       }
     }
 }
