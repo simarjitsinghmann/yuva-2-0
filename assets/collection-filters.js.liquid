@@ -99,8 +99,9 @@ Array.from(layouts).forEach(function(layout) {
 var sortMenu = section.querySelectorAll('.toolbox-sort');
 Array.from(sortMenu).forEach(function(menu) {
   menu.addEventListener("click", ()=>{	
-                          var _thisLayout = layout.dataset.value;
-                          section.setAttribute('data-view',_thisLayout)
+  var sortMenu = document.getElementById('sort__list');
+  sortMenu.style.display = 'block';
+  sortMenu.classList.add('active');
 });
 }); 
 
@@ -203,14 +204,3 @@ function getFilterData(filterForm,input,sectionId,remove){
 collectionFilters();
 }());
 
-$(document).on("click", function(event){
-  var $trigger = $(".toolbox-sort");
-  if($trigger !== event.target && !$trigger.has(event.target).length){
-    $("#sort__list").slideUp("fast").removeClass('active');
-  }          				
-});
-
-  $('body').on('click','.toolbox-sort',function(){
-		$(this).find("#sort__list").slideToggle("fast");
-		$('#sort__list').css({"display": "block"});
-	});
