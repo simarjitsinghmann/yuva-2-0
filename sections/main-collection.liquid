@@ -101,6 +101,7 @@
           </div>
           <div class="toolbox-item toolbox-sort select-box">
             <ul class="" id="sort__list">
+              <li class="mobile-sort-heading"><h6>Sort By</h6></li>
               {%- for option in collection.sort_options -%}
               <li class="{% if option.value == sort_by %}selected{%- assign sort_name = option.name | escape  -%}{% endif %}" value="{{ option.name | escape }}">
                 <input type="radio" name="sort_by" value="{{ option.value | escape }}" data-name="{{ option.name | escape }}" form="CollectionFiltersForm"{% if option.value == sort_by %}checked{% endif %} hidden/>
