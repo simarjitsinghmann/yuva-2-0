@@ -296,7 +296,6 @@ function hideallMenus(menus){
   var menuList = document.getElementsByClassName(menus);
   Array.from(menuList).forEach(function(menu) {
 
-
       var menuList = menu.nextElementSibling;
       var menuParent = menu.parentNode;
 
@@ -317,10 +316,11 @@ Array.from(footerMenus).forEach(function(menu) {
       hideallMenus('footer-menu-head')
       	var menuList = menu.nextElementSibling;
       	var menuParent = menu.parentNode;
-		
+      setTimeout(function(){
         DOMAnimations.classToggle(menuParent,'active');
       
         DOMAnimations.slideToggle(menuList);
+      },500);
     });
 });
 });
