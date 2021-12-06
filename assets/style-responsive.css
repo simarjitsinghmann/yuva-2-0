@@ -845,7 +845,10 @@
     .button .fa-arrow-right {
         margin-left: 12px;
     }
-    .button {
+  .button, .shopify-challenge__button {
+        padding: 7px 20px;
+        min-height: 20px;
+        line-height: 20px;
         font-size: 12px;
     }
     .single-banner-section.banner-section p,
