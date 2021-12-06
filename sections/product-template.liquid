@@ -340,7 +340,8 @@
       item.classList.remove('active');
     });
     Array.from(accordionContents).forEach(function(item) {
-      item.style.maxHeight = '0';
+      
+        DOMAnimations.slideDown(item);
     });
   }
   }
