@@ -1249,6 +1249,15 @@
     z-index: 2;
   }
 /*  ============= footer css start ============  */
+    .Yuva-logo {
+  	max-width:70px;
+  }
+  footer {
+      padding: 20px 0 0;
+  }
+  .footer__content-top {
+      padding-bottom: 10px;
+  }
   .footer-innner-continer {
       margin-top: 20px;
   }
@@ -1303,12 +1312,6 @@
   .footer-menu-accordion.active .footer-menu-head:after {
       transform: rotate(180deg);
   }
-  .Yuva-logo {
-  	max-width:70px;
-  }
-  footer {
-    padding: 20px 0 0;
-}
 /*  ============= footer css end =============  */
 }
 @media screen and (max-width:575px){
