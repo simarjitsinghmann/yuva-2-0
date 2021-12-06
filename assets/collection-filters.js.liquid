@@ -122,6 +122,8 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
 })
 
 
+  if(window.innerWidth > 767){
+
 var prices = filterForm.querySelectorAll('input[type=number]');
 Array.from(prices).forEach(function(price) {
   price.addEventListener("change", ()=>{	
