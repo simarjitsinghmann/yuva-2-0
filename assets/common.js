@@ -296,16 +296,12 @@ function hideallMenus(menus){
   var menuList = document.getElementsByClassName(menus);
   Array.from(menuList).forEach(function(menu) {
 
-    menu.addEventListener('click', function(event) {
-
-      event.preventDefault();
 
       var menuList = menu.nextElementSibling;
       var menuParent = menu.parentNode;
 
       menuParent.classList.remove('active');
       DOMAnimations.slideUp(menuList);
-    });
   });
 }
 
