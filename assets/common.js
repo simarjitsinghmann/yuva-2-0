@@ -293,6 +293,7 @@ var DOMAnimations = {
 }
 
 function hideallMenus(menus){
+  var menuList = document.getElementsByClassName(menus);
   Array.from(menus).forEach(function(menu) {
 
     menu.addEventListener('click', function(event) {
