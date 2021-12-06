@@ -9,7 +9,7 @@
 {% assign heading = 'menu_heading'|append:i %}
 {% if block.settings[menu] != blank %}
 {% assign mainMenu = block.settings[menu] %}
-<li>
+<li class="nav-item {%- if mainMenu.links != blank -%}dropdown{% endif %}">
     <a class="toggle-level">
         {% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</a>
         
