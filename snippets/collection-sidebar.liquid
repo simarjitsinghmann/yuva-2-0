@@ -120,7 +120,7 @@
         {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
 			
         <p class="price-widget-mobile">
-          <span data-min-value>{{ filter.range_min | money_without_currency | replace: ',', '' | floor}}</span>
+          <span data-min-value>{{min_value | replace:',','' | floor}}</span>
 
           <span class="pipe" style="">--</span>
           <span data-max-value>{{filter.range_max |money_without_currency | replace:',','' | floor}}</span></p>
