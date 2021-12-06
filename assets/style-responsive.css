@@ -1125,8 +1125,16 @@
   	transform: translateY(0);
   }
   .shop-sidebar-inside {
-    border-right: 0;
-}
+      border-right: 0;
+      width: 100%;
+      background: #fff;
+      max-width: 100%;
+      position: relative;
+      height: 100%;
+      overflow: scroll;
+      padding: 49px 0 43px;
+      overflow-x: hidden;
+  }
   #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item {
     padding: 0;
       border-right:1px solid #e1e1e1;
