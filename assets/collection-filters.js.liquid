@@ -14,10 +14,18 @@
       parent.setAttribute("data-view", "grid-layout-5")
     }
   }
-  changeGridLayout()
-
+  
+  function hideShowFilters(){
+    var parent = document.getElementById('CollectionProductsContainer');
+    if(window.innerWidth < 768){
+      parent.setAttribute("data-view", "grid-layout-2")
+    }
+  }
+  changeGridLayout();
+hideShowFilters();
   window.addEventListener('resize', function(event){
-    changeGridLayout()
+    changeGridLayout();
+    hideShowFilters();
   });
   function collectionFilters(){  
     var section = document.getElementById('CollectionProductsContainer')
