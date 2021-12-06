@@ -116,16 +116,7 @@ var sortMenu = document.getElementById('toolbox-sort');
   }
 });
 
-document.querySelector('body').onclick = function(e) {
-  if(e.target != document.getElementById('toolbox-sort')) {   
-  var sortMenu = document.getElementById('sort__list'); 
-    if(window.innerWidth > 767){
-      sortMenu.style.display = 'none';
-    }else{
-      sortMenu.classList.remove('active');
-    } 
-  } 
-}
+
 var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
 Array.from(priceRangeBars).forEach(function(rangeBar) {
   var el = rangeBar;
