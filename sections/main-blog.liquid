@@ -30,6 +30,10 @@
                         {% if section.settings.show_date %}
                         <div class="post-date">
                           <h4 class="custom-title">{{article.published_at | date: "%d" }} {{article.published_at | date: " %b %Y" }} </h4>
+                          
+                          {% if section.settings.show_comment_count %}
+                          <p>{{ article.comments_count }} Comments</p>
+                          {% endif %}
                         </div>
                         {% endif %}
                         <div class="post-name">
