@@ -21,8 +21,7 @@
                 <span data-regular-price>{{current_variant.price | money}}</span>
                 {% if current_variant.compare_at_price > current_variant.price %}
                 <span data-compare-price>
-                  <s>{{ current_variant.compare_at_price | money }}
-                  </s>
+                  {{ current_variant.compare_at_price | money }}
                 </span>
                 {% if settings.show_saved_amount %}        
                 {% if settings.saved_amount_style == 'percentage' %}
