@@ -55,7 +55,7 @@ Array.from(accordions).forEach(function(accordion) {
 //     accordion.classList.remove('show');
 //     accordion.classList.add('hide'); 
     
-         showLess.fadeOut(100);
+         showLess.fadeOut(10);
          showMore.fadeIn(300);
 //     },300);
   }else{	
@@ -63,7 +63,7 @@ Array.from(accordions).forEach(function(accordion) {
 //     setTimeout(function(){
 //     accordion.classList.remove('hide');
 //     accordion.classList.add('show');
-         showMore.fadeOut(100);
+         showMore.fadeOut(10);
          showLess.fadeIn(300);
 //     },300);
   }
