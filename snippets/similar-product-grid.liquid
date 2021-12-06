@@ -17,17 +17,22 @@
           {% endcomment %}
           <div class="product-product small-size">{{product.title}}</div>
           <div class="product-price">
-            {% if current_variant.compare_at_price < current_variant.price %}
-            <span class="small-size product-price-detail">
-              <span class="product-discountedPrice">{{current_variant.price | money}}</span>
-              <span class="product-strike"><del>{{current_variant.compare_at_price}}</del></span>
-            </span>
-            <span class="small-size product-discountPercentage">({{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}})</span>
-            {% else %}
-            <span class="small-size product-price-detail">
-              <span class="product-discountedPrice">{{current_variant.price | money}}</span>
-            </span>
-            {% endif %}
+              <span class="price-item price-item--regular">
+                <span data-regular-price>{{current_variant.price | money}}</span>
+                {% if current_variant.compare_at_price > current_variant.price %}
+                <span data-compare-price>
+                  <s>{{ current_variant.compare_at_price | money }}
+                  </s>
+                </span>
+                {% if settings.show_saved_amount %}        
+                {% if settings.saved_amount_style == 'percentage' %}
+                <span class="percent-off">{{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}}</span>
+                {% else %}
+                <span class="percent-off">({{ product.compare_at_price | minus: product.price | money}})</span>
+                {% endif %}
+                {% endif %}
+                {% endif %}
+              </span>
           </div>
         </div>
       </a>
