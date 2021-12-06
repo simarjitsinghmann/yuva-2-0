@@ -64,13 +64,13 @@
             {% assign downOption = option.name | downcase %}
             {% assign optionIndex = forloop.index %}
             {% assign varOptionIndex = 'option'|append:forloop.index %}
-            <div class="select__{{downOption}}">
+            <div class="select__{{downOption}} product-option-selector">
               <p class="small-size size_title">SELECT {{option.name}}</p>
               {% if settings.option_style == 'swatch' %}
               <ul class="product-loop-variants {{downOption}} variants {{settings.color_swatch_style}} _small list-unstyled">                            
                 {%- for value in option.values -%}  
-                <li class="{{downOption}}_option">
-                  <input class="productOption {% unless downOption == 'color' or  downOption == 'colour'%}variant_option{% endunless%}" type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
+                <li class="{{downOption}}_option  {% unless downOption == 'color' or  downOption == 'colour'%}variant_option{% endunless%}">
+                  <input class="productOption" type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
                   {% assign variantImage = '' %}
                   {% if settings.variant_image %}                                                                                  
                   {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
