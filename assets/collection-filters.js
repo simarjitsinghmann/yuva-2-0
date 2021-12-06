@@ -49,16 +49,16 @@ Array.from(accordions).forEach(function(accordion) {
   accordion.addEventListener("click", ()=>{	   
                              if(accordion.classList.contains('show')){
     accordion.parentNode.classList.remove('show')
-    setTimeout(function(){
-    accordion.classList.remove('show');
-    accordion.classList.add('hide'); 
-    },300);
+//     setTimeout(function(){
+    accordion.classList.remove('show',500);
+    accordion.classList.add('hide',500); 
+//     },300);
   }else{	
     accordion.parentNode.classList.add('show')
-    setTimeout(function(){
-    accordion.classList.remove('hide');
-    accordion.classList.add('show');
-    },300);
+//     setTimeout(function(){
+    accordion.classList.remove('hide',500);
+    accordion.classList.add('show',500);
+//     },300);
   }
 });
 });  
