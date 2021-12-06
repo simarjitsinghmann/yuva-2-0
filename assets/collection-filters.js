@@ -56,7 +56,7 @@ Array.from(accordions).forEach(function(accordion) {
 //     accordion.classList.add('hide'); 
     
          showLess.style.display = 'none';
-         showMore.fadeIn(300);
+         showMore.fadeIn(500);
 //     },300);
   }else{	
     accordion.parentNode.classList.add('show')
@@ -64,7 +64,7 @@ Array.from(accordions).forEach(function(accordion) {
 //     accordion.classList.remove('hide');
 //     accordion.classList.add('show');
          showMore.style.display = 'none';
-         showLess.fadeIn(300);
+         showLess.fadeIn(500);
 //     },300);
   }
 });
