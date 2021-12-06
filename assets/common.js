@@ -302,8 +302,7 @@ function hideallMenus(menus){
       var menuList = menu.nextElementSibling;
       var menuParent = menu.parentNode;
 
-      DOMAnimations.classToggle(menuParent,'active');
-
+      menuParent.classList.remove('active');
       DOMAnimations.slideUp(menuList);
     });
   });
