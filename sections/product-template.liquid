@@ -302,7 +302,7 @@
         item.classList.remove('active');
       });
       Array.from(tabContent).forEach(function(item) {
-        DOMAnimations.slideUp(item);
+        item.style.display = 'none';
       });
     }
     Array.from(tabHead).forEach(function(btn) {
@@ -310,8 +310,7 @@
                            clearActive();
       btn.classList.add("active");
       var _value = btn.getAttribute("content");
-      
-        DOMAnimations.slideDown( document.getElementById(_value));
+      document.getElementById(_value).style.display = "block";
     });
   });
   }
