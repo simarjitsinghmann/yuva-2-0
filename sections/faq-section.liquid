@@ -51,10 +51,10 @@
              clearActive();
            }
            else{
-             clearActive(btn, document.getElementById(_value));
              btn.classList.add("active");
              var _value = btn.getAttribute("content");
-        DOMAnimations.slideDown( document.getElementById(_value));
+             clearActive(btn, document.getElementById(_value));
+        DOMAnimations.slideDown(document.getElementById(_value));
            }
          });
          });
