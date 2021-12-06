@@ -1193,12 +1193,18 @@
   	display:none;
   }
   .toolbox-item.toolbox-sort.select-box ul {
-      position: fixed;
-      bottom: 0;
-      display:block;
-      top:unset;
-      transform: translateY(100%);
-      transition:0.5s ease all;
+    position: fixed;
+    padding:0;
+    bottom: 0;
+    display:block;
+    top:unset;
+    transform: translateY(100%);
+    transition:0.5s ease all;
+  }
+  .mobile-sort-heading {
+      background-color: #ececec;
+      display: flex;
+      justify-content: space-between;
   }
   .toolbox-item.toolbox-sort.select-box ul.active {
   	 transform: translateY(0);
