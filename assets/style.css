@@ -2369,8 +2369,7 @@ ul.gallery-item li a > img {
    width: 36px;
    height: 36px;
 }
-.product-loop-variants .variant_option input,
-.product-loop-variants .material_option .productOption {
+.product-loop-variants .variant_option input {
    opacity: 0;
    position: absolute;
    cursor: pointer;
@@ -2405,7 +2404,7 @@ ul.gallery-item li a > img {
    padding: 1px 5px;
    background: var(--white);
 }
-.select__size {
+.product-options {
    margin-bottom: 16px;
 }
 .select__color .size_title {
