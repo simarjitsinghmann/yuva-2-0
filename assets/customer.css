@@ -575,16 +575,20 @@
   }
 }
 @media only screen and (max-width:767px){
-.customer.login, .customer.register {
+  .customer.login, .customer.register {
     padding: 40px 0;
-}
-.new__customer {
+  }
+  .new__customer {
     padding: 25px 0 0;
-} 
+  } 
   .customer.login .grid__item, .customer.register .grid__item {
     width: 100%;
     max-width: 100%;
-}
+  }
+  #registerForm, .forgetPassword__form, .login__form {
+    padding: 0;
+    border: 0;
+  }
 }
 
 /* account page after login css start */
