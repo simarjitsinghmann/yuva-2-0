@@ -525,7 +525,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
   if ($this.next().hasClass('show')) {
     $this.next().removeClass('show');
   } else {
-    $this.parent().parent().find('li .inner').removeClass('show');
+    $this.closest('li').find('.inner').removeClass('show');
     $this.next().toggleClass('show');
   }
 
