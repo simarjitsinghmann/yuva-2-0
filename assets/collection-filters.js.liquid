@@ -141,7 +141,7 @@ var inputs = filterForm.querySelectorAll('input[type=checkbox]');
 else{
 	filterForm.addEventListener("submit", (e)=>{
       e.preventDefault();
-                           getFilterData(filterForm,sectionId)
+                           getFilterData(filterForm,filterForm,sectionId)
   });
 }
 var sortBy = section.querySelectorAll('[name="sort_by"]');
