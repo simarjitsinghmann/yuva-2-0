@@ -317,10 +317,10 @@ Array.from(footerMenus).forEach(function(menu) {
     menu.addEventListener('click', function(event) {
 
         event.preventDefault();
-      
+      hideallMenus(footerMenus)
       	var menuList = menu.nextElementSibling;
       	var menuParent = menu.parentNode;
-
+		
         DOMAnimations.classToggle(menuParent,'active');
       
         DOMAnimations.slideToggle(menuList);
