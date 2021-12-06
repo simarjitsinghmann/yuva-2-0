@@ -108,9 +108,11 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
       max: [parseInt(el.dataset.max)]
     }
   });
+  if(window.innerWidth > 767){
   sliderEventListener.on('change',  function(values){
     getFilterData(filterForm,rangeBar,sectionId);
   })
+  }
   sliderEventListener.on("update", function(values){
     var minVal =  parseInt(values[0]);
     section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = minVal;
