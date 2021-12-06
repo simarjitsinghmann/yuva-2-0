@@ -279,6 +279,21 @@ var DOMAnimations = {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+
+    var button = document.getElementById('slideToggle');
+
+    var cardElement = document.getElementById('firstCard');
+
+    button.addEventListener('click', function(event) {
+
+        event.preventDefault();
+
+        DOMAnimations.slideToggle(cardElement);
+    });
+
+});
+
 function truncate(str, no_words) {
   var length = str.split(" ").length;
   var _value = str.split(" ").splice(0,no_words).join(" ");
