@@ -282,12 +282,13 @@ var DOMAnimations = {
 
         if (window.getComputedStyle(element).classList.contains(className)) {
 
-            return this.slideDown(element, duration);
+        window.getComputedStyle(element).classList.remove(className)
 
-        } else {
 
-            return this.slideUp(element, duration);
-        }
+      } else {
+
+        window.getComputedStyle(element).classList.add(className)
+      }
     }
 }
 
