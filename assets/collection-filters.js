@@ -46,12 +46,14 @@ function collectionFilters(){
     
 var accordions = filterForm.querySelectorAll('.br_more_filter');
 Array.from(accordions).forEach(function(accordion) {
-  accordion.addEventListener("click", ()=>{	   
-                             if(accordion.classList.contains('show')){
+  accordion.addEventListener("click", ()=>{
+                             var showMore = accordion.querySelector('.showMore');
+                             var showLess = accordion.querySelector('.showLess');
+                             if(accordion.parentNode.classList.contains('show')){
     accordion.parentNode.classList.remove('show')
 //     setTimeout(function(){
-    accordion.classList.remove('show');
-    accordion.classList.add('hide'); 
+//     accordion.classList.remove('show');
+//     accordion.classList.add('hide'); 
 //     },300);
   }else{	
     accordion.parentNode.classList.add('show')
