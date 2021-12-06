@@ -110,7 +110,7 @@
               {% if settings.option_style == 'swatch' %}
               <ul class="product-loop-variants {{downOption}} variants {{settings.color_swatch_style}} _small list-unstyled">                            
                 {%- for value in option.values -%}  
-                <li class="{{downOption}}_option {% unless downOption == 'color' or  downOption == 'colour'%}variant_option{% endunless%}">
+                <li class="{{downOption}}_option variant_option">
                   <input class="productOption" type="radio" title="{{value}}" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
                   {% assign variantImage = '' %}
                   {% if settings.variant_image %}                                                                                  
