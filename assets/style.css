@@ -2023,6 +2023,13 @@ li.breadcrumb-item a {
    width: 8px;
    fill: var(--theme-color);
 }
+.mobile-filter-apply {
+    justify-content: space-between;
+  	display:none;
+}
+.mobile-filter-apply button {
+  max-width:48%;
+}
 .toolbox-item.toolbox-sort.select-box ul li input {
    width: 100%;
    height: 100%;
