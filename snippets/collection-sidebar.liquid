@@ -128,10 +128,10 @@
         {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
 			
         <p class="price-widget-mobile">
-          <span data-min-value>{{ filter.min_value.value | money }}</span>
+          <span data-min-value>{{ min_value_formatted }}</span>
 
           <span class="pipe" style="">--</span>
-          <span data-max-value>{{ filter.max_value.value |money }}</span></p>
+          <span data-max-value>{{ max_value_formatted }}</span></p>
 
         <div class="mall-slider-handles" id="slider-round"
              data-start="{{min_value | replace:',','' | floor}}" 
