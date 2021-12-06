@@ -2370,7 +2370,7 @@ ul.gallery-item li a > img {
    width: 36px;
    height: 36px;
 }
-.select__size .product-loop-variants.size .size_option input,
+.select__size .product-loop-variants.size .variant_option input,
 .product-loop-variants .material_option .productOption {
    opacity: 0;
    position: absolute;
@@ -2387,13 +2387,13 @@ ul.gallery-item li a > img {
    margin-top: -4px;
    margin-bottom: 6px;
 }
-.select__size .size_option {
+.variant_option {
    display: inline-block;
    margin-right: 9px;
    margin-bottom: 9px;
    position: relative;
 }
-.size_option .option,
+.variant_option .option,
 .product-loop-variants .material_option .option {
    min-width: 32px;
    font-size: 12px;
@@ -2414,7 +2414,7 @@ ul.gallery-item li a > img {
 }
 .select__size
    .product-loop-variants.size
-   .size_option
+   .variant_option
    input:checked
    + span.option {
    background: var(--gray);
@@ -3606,7 +3606,7 @@ section.feature-section {
    letter-spacing: 0.4px;
 }
 
-.size_option .option {
+.variant_option .option {
    border: 1px solid #000;
    background: transparent;
    border-radius: 0;
@@ -3614,7 +3614,7 @@ section.feature-section {
 }
 .select__size
    .product-loop-variants.size
-   .size_option
+   .variant_option
    input:checked
    + span.option {
    background: #000;
@@ -3769,7 +3769,7 @@ button.Sd_addProduct:disabled {
    align-content: center;
    justify-content: center;
 }
-.product-wrap .size_option .option {
+.product-wrap .variant_option .option {
    min-width: 25px;
    line-height: 20px;
    padding-top: 2px;
