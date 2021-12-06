@@ -118,7 +118,7 @@ Array.from(sortMenu).forEach(function(menu) {
 });
 }); 
 
-document.getElementById('outer-container').onclick = function(e) {
+document.querySelector('body').onclick = function(e) {
   if(e.target != document.getElementById('content-area')) {
     document.getElementById('content-area').innerHTML = 'You clicked outside.';          
   } else {
