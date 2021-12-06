@@ -60,7 +60,7 @@
        function clearActive(currentHead,currentContent){
          var tabs = document.getElementsByClassName('faq-{{section.id}}');
          var tabsContent =  document.getElementsByClassName('faqSection-content');
-         Array.from(accordionHead).forEach(function(item) {
+         Array.from(tabs).forEach(function(item) {
            if(item == currentHead){
              return;
            }
@@ -68,7 +68,7 @@
              item.classList.remove('active');
            }
          });
-         Array.from(accordionContents).forEach(function(item) {
+         Array.from(tabsContent).forEach(function(item) {
            if(item == currentContent){
              return;
            }
