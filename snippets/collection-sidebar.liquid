@@ -1,6 +1,5 @@
 <div class="shop-sidebar-inside">
 
-
   <form id="CollectionFiltersForm" class="collectionFilters__form" >
     {%- for filter in collection.filters -%}
     
@@ -179,11 +178,11 @@
     
     {% endfor %}
     
-    <noscript>
+    <div class="mobile-filter-apply">
       
       <button type="submit" class=" button button--tertiary">{{ 'sections.collection_template.filter_button' | t }}</button>
       
-    </noscript>
+    </div>
     
   </form>
   
