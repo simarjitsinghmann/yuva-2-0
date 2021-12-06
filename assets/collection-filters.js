@@ -50,14 +50,14 @@ Array.from(accordions).forEach(function(accordion) {
                              if(accordion.classList.contains('show')){
     accordion.parentNode.classList.remove('show')
 //     setTimeout(function(){
-//     accordion.removeClass('show',500);
-//     accordion.addClass('hide',2000); 
+    accordion.classList.remove('show',50000);
+    accordion.classList.add('hide',20000); 
 //     },300);
   }else{	
     accordion.parentNode.classList.add('show')
 //     setTimeout(function(){
-//     accordion.removeClass('hide',500);
-//     accordion.addClass('show',2000);
+    accordion.classList.remove('hide',50000);
+    accordion.classList.add('show',20000);
 //     },300);
   }
 });
