@@ -49,7 +49,7 @@
                               {{ childlink.title | split:"{badge" | first | escape | captilize }}</a>
                              
                            {%- if childlink.links != blank -%}
-                           <ul class="inner grandchild">
+                           <div class="inner grandchild">
                               
                            <div class="inner-child-menu">
                               <div class="menu_back_btn">
@@ -71,12 +71,14 @@
                                     <h4>{{ childlink.title | split:"{badge" | first | escape | captilize }}</h4>
                               </div>
                            </div>
+                             <ul>
                               {%- for grandchildlink in childlink.links -%}
                               <li>
                                     <a href="{{ grandchildlink.url }}">{{ grandchildlink.title | split:"{badge" | first | escape | captilize }}</a>
                               </li>
                               {%- endfor -%}
-                           </ul>
+                             </ul>
+                           </div>
                         {% endif %}
                         </li>
                   {%- endfor-%}	
