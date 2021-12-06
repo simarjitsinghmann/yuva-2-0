@@ -51,13 +51,13 @@ Array.from(accordions).forEach(function(accordion) {
     accordion.parentNode.classList.remove('show')
 //     setTimeout(function(){
     accordion.classList.remove('show',500);
-    accordion.classList.add('hide',500); 
+    accordion.classList.add('hide',2000); 
 //     },300);
   }else{	
     accordion.parentNode.classList.add('show')
 //     setTimeout(function(){
     accordion.classList.remove('hide',500);
-    accordion.classList.add('show',500);
+    accordion.classList.add('show',2000);
 //     },300);
   }
 });
