@@ -1162,6 +1162,9 @@
   .product-information__wrapper .caption-with-letter-spacing {
     padding-top: 6px;
 }
+  .toolbox-right .toolbox-item.toolbox-sort.select-box label {
+  	display:none;
+  }
 }
 @media screen and (max-width:575px){
     #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item .card-wrapper-img {
