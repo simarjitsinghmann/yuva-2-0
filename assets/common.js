@@ -316,13 +316,14 @@ Array.from(footerMenus).forEach(function(menu) {
       hideallMenus('footer-menu-head')
       	var menuList = menu.nextElementSibling;
       	var menuParent = menu.parentNode;
-      
+      setTimeout(function(){
       if(!(menuParent.classList.contains('active'))){
       
       DOMAnimations.classToggle(menuParent,'active');
       
       DOMAnimations.slideToggle(menuList);
       }
+      },500);
       
     });
 });
