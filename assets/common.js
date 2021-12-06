@@ -277,6 +277,18 @@ var DOMAnimations = {
             return this.slideUp(element, duration);
         }
     }
+  
+   classToggle: function (element,className) {
+
+        if (window.getComputedStyle(element).classList.contains(className)) {
+
+            return this.slideDown(element, duration);
+
+        } else {
+
+            return this.slideUp(element, duration);
+        }
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
