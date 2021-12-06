@@ -73,7 +73,7 @@
                            </div>
                               {%- for grandchildlink in childlink.links -%}
                               <li>
-                                    <a href="{{ grandchildlink.url }}"><span>{{ grandchildlink.title | split:"{badge" | first | escape | captilize }}</span></a>
+                                    <a href="{{ grandchildlink.url }}">{{ grandchildlink.title | split:"{badge" | first | escape | captilize }}</a>
                               </li>
                               {%- endfor -%}
                            </ul>
