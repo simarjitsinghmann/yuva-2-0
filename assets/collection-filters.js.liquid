@@ -101,12 +101,19 @@ Array.from(sortMenu).forEach(function(menu) {
   menu.addEventListener("click", ()=>{	
   var sortMenu = document.getElementById('sort__list');
   if(sortMenu.classList.contains('active')){
-    sortMenu.style.display = 'none';
-    sortMenu.classList.remove('active');
+    if(window.innerWidth > 767){
+      sortMenu.style.display = 'none';
+    }else{
+      sortMenu.classList.remove('active');
+    }
   }
   else{
-    sortMenu.style.display = 'block';
-    sortMenu.classList.add('active');
+
+    if(window.innerWidth > 767){
+      sortMenu.style.display = 'block';
+    }else{
+      sortMenu.classList.add('active');
+    }
   }
 });
 }); 
