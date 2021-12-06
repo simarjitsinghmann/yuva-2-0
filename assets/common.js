@@ -296,19 +296,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var footerMenus = document.getElementsByClassName('footer-menu-accordion');
 
-Array.from(accordions).forEach(function(accordion) {
+Array.from(footerMenus).forEach(function(menu) {
 
-    button.addEventListener('click', function(event) {
+    menu.addEventListener('click', function(event) {
 
         event.preventDefault();
       
-      	var 
+      	var menuList = menu.querySelector('ul');
 
-        DOMAnimations.classToggle(cardElement,'active');
+        DOMAnimations.classToggle(menu,'active');
       
-        DOMAnimations.slideToggle(cardElement);
+        DOMAnimations.slideToggle(menuList);
     });
-
+});
 });
 
 function truncate(str, no_words) {
