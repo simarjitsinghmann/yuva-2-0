@@ -292,6 +292,59 @@ var DOMAnimations = {
     }
 }
 
+if (!Element.prototype.fadeIn) {
+    Element.prototype.fadeIn = function(){
+        let ms = !isNaN(arguments[0]) ? arguments[0] : 400,
+            func = typeof arguments[0] === 'function' ? arguments[0] : (
+                typeof arguments[1] === 'function' ? arguments[1] : null
+            );
+
+        this.style.opacity = 0;
+        this.style.filter = "alpha(opacity=0)";
+        this.style.display = "inline-block";
+        this.style.visibility = "visible";
+
+        let $this = this,
+            opacity = 0,
+            timer = setInterval(function() {
+            opacity += 50 / ms;
+            if( opacity >= 1 ) {
+                clearInterval(timer);
+                opacity = 1;
+
+                if (func) func('done!');
+            }
+            $this.style.opacity = opacity;
+            $this.style.filter = "alpha(opacity=" + opacity * 100 + ")";
+        }, 50 );
+    }
+}
+
+if (!Element.prototype.fadeOut) {
+    Element.prototype.fadeOut = function(){
+        let ms = !isNaN(arguments[0]) ? arguments[0] : 400,
+            func = typeof arguments[0] === 'function' ? arguments[0] : (
+                typeof arguments[1] === 'function' ? arguments[1] : null
+            );
+
+        let $this = this,
+            opacity = 1,
+            timer = setInterval( function() {
+            opacity -= 50 / ms;
+            if( opacity <= 0 ) {
+                clearInterval(timer);
+                opacity = 0;
+                $this.style.display = "none";
+                $this.style.visibility = "hidden";
+
+                if (func) func('done!');
+            }
+            $this.style.opacity = opacity;
+            $this.style.filter = "alpha(opacity=" + opacity * 100 + ")";
+        }, 50 );
+    }
+}
+
 function hideallMenus(menus,current){
   Array.from(menus).forEach(function(menu) {
       var menuList = menu.nextElementSibling;
