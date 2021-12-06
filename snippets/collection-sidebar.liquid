@@ -118,6 +118,12 @@
         </h6>
 
         {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
+			
+        <p class="price-widget-mobile">
+          <span data-min-value>$67.99</span>
+
+          <span class="pipe" style="">--</span>
+          <span data-max-value>$664.908</span></p>
 
         <div class="mall-slider-handles" id="slider-round"
              data-start="{{min_value | replace:',','' | floor}}" 
