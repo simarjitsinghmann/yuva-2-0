@@ -294,13 +294,15 @@ var DOMAnimations = {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    var button = document.getElementById('slideToggle');
+    var footerMenus = document.getElementsByClassName('footer-menu-accordion');
 
-    var cardElement = document.getElementById('firstCard');
+Array.from(accordions).forEach(function(accordion) {
 
     button.addEventListener('click', function(event) {
 
         event.preventDefault();
+      
+      	var 
 
         DOMAnimations.classToggle(cardElement,'active');
       
