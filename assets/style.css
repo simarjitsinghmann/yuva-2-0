@@ -2025,7 +2025,13 @@ li.breadcrumb-item a {
 }
 .mobile-filter-apply {
     justify-content: space-between;
-  	display:none;
+    display:none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    background-color: #fff;
 }
 .mobile-filter-apply button {
   max-width:48%;
