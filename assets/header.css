@@ -880,7 +880,7 @@ body.nav-open {
 .header_3 .side-menu div.lower-nav .nav-item .userful__links + ul {
   padding-top: 10px;
 }
-.side-menu .nav-item.dropdown ul.inner .back-btn {
+.side-menu .nav-item.dropdown .inner .back-btn {
   background: 0 0;
   z-index: 99;
   align-content: center;
@@ -890,12 +890,12 @@ body.nav-open {
   font-weight: var(--normal);
   font-family: var(--font-family);
 }
-.side-menu .nav-item.dropdown ul.inner .back-btn svg {
+.side-menu .nav-item.dropdown .inner .back-btn svg {
   margin-right: 10px;
   width: 15px;
   fill: currentColor;
 }
-.header_3 .side-menu .nav-item.dropdown ul.inner.grandchild li a {
+.header_3 .side-menu .nav-item.dropdown .inner.grandchild li a {
   font-size: 17px;
   margin-bottom: 8px;
 }
