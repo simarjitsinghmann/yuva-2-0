@@ -1290,6 +1290,9 @@
     transition: .3s ease;
     transition-property: transform;
   }
+  .footer-menu-head:before {
+      transform: rotate(-90deg);
+  }
 /*  ============= footer css end =============  */
 }
 @media screen and (max-width:575px){
