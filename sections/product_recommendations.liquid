@@ -30,11 +30,8 @@
 }
 </style>
   {% javascript %}
-    const handleIntersection = (entries, observer) => {
-  
-  
-      observer.unobserve(productRecommendationsSection);
-  
+    
+    const productRecommendationsSection = document.querySelector('.product-recommendations');
       const url = productRecommendationsSection.dataset.url;
   
       fetch(url)
@@ -53,10 +50,6 @@
         });
     };
   
-    const productRecommendationsSection = document.querySelector('.product-recommendations');
-    const observer = new IntersectionObserver(handleIntersection, {rootMargin: '0px 0px 0px 0px'});
-  
-    observer.observe(productRecommendationsSection);
   {% endjavascript %}
   <script>
     $(document).ready(function(){
