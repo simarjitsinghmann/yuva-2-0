@@ -125,6 +125,8 @@
       </form>
       {% endif %}
       <div class="product-content main-content">
+        
+        {% if active %}
         <div class="toolbox-item toolbox-layout">
           <div class="filter-actions">
             <div class="select-items">
@@ -155,6 +157,7 @@
             </div>
           </div>
         </div>
+        {% endif %}
         <div class="product-collection grid-view">
           <div class="products-grid" style="display:block">
             <div class="row product_columns">
