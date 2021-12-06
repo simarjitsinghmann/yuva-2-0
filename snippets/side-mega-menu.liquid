@@ -36,7 +36,7 @@
             </div>
             {%- for childlink in mainMenu.links -%}
             <li>
-                <a href="{{ childlink.url }}"><span>{{ childlink.title | split:"{badge" | first | escape | captilize }}</span></a>
+                <a href="{{ childlink.url }}">{{ childlink.title | split:"{badge" | first | escape | captilize }}</a>
             </li>
             {%- endfor -%}
         </div>
