@@ -58,7 +58,7 @@
            }
          });
          });
-       function clearActive(){
+       function clearActive(currentHead,currentContent){
          var tabs = document.getElementsByClassName('faq-{{section.id}}');
          var tabsContent =  document.getElementsByClassName('faqSection-content');
          Array.from(accordionHead).forEach(function(item) {
