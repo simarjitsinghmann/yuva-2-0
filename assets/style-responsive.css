@@ -1203,13 +1203,14 @@
   }
   .close-mobile-sort, .close-mobile-sort svg {
   	background-color: transparent;
-    width:20px;
-    height:20px;
+    width:16px;
+    height:16px;
   }
   .mobile-sort-heading {
       background-color: #ececec;
       display: flex;
       justify-content: space-between;
+    padding:10px 0;
   }
   .toolbox-item.toolbox-sort.select-box ul.active {
   	 transform: translateY(0);
