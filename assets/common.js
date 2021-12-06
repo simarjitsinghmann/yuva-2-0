@@ -293,8 +293,7 @@ var DOMAnimations = {
 }
 
 function hideallMenus(menus){
-  var menuList = document.getElementsByClassName(menus);
-  Array.from(menuList).forEach(function(menu) {
+  Array.from(menus).forEach(function(menu) {
 
       var menuList = menu.nextElementSibling;
       var menuParent = menu.parentNode;
