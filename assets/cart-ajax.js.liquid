@@ -215,7 +215,7 @@ buildCart = function (cart,showCart) {
     // totalCartDiscount: cart.total_discount === 0 ? 0 : `"translation missing: en.cart.general.savings_html"`.replace('[savings]',),
     totalCartDiscountApplied: cart.total_discount === 0 ? false : true
   }
-  $('[data-cart-count]').text(cart.item_count).show();
+  $('[data-cart-count]').show();
   $('body').find('[data-drawer-body]').html(template(data));
   if(showCart){
     $('body').addClass('side_Drawer_open');
