@@ -272,6 +272,11 @@
     .add_to_cart.button, .buy_now.button {
         line-height: 20px;
     }
+    .button, .shopify-challenge__button {
+        padding: 8px 20px;
+        min-height: 24px;
+        line-height: 24px;
+    }
 	/*  common end  */
 	/*  banner start */
     .banner.banner-section.item {
@@ -405,10 +410,6 @@
         top: -50px;
         width: 37px;
         height: 37px;
-    }
-    .owl-carousel .owl-nav button svg {
-        width: 19px;
-        height: 19px;
     }
 	/*  collection css end  */
 	/*  featured-blog start  */
