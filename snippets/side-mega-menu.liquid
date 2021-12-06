@@ -14,7 +14,7 @@
         {% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</a>
         
     {%- if mainMenu.links != blank -%}
-    <ul class="inner grandchild">        
+    <div class="inner grandchild">        
         <div class="inner-child-menu">
             <div class="menu_back_btn">
                 <button class="back-btn">
@@ -34,13 +34,15 @@
             <div class="category_title">
                 <h4>{% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</h4>
             </div>
+          	<ul>
             {%- for childlink in mainMenu.links -%}
             <li>
                 <a href="{{ childlink.url }}">{{ childlink.title | split:"{badge" | first | escape | captilize }}</a>
             </li>
             {%- endfor -%}
+          </ul>
         </div>
-    </ul>
+    </div>
     {% endif %}
 </li>
 {% endif %}
