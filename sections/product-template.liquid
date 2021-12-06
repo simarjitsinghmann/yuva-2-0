@@ -333,19 +333,23 @@
       }
     });
   });
-  function clearAccordion(current){
+  function clearAccordion(currentHead,currentContent){
     var accordionHeads = document.getElementsByClassName('accordion-{{section.id}}');
                                                          var accordionContents =  document.getElementsByClassName('productSection-content');
     Array.from(accordionHead).forEach(function(item) {
+      if(item == currentHead){
+        return;
+      }
+      else{
       item.classList.remove('active');
+      }
     });
     Array.from(accordionContents).forEach(function(item) {
-      if(item == current){
+      if(item == currentContent){
         return;
       }
       else{
         DOMAnimations.slideUp(item);
-
       }
     });
   }
