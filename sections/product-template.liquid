@@ -340,8 +340,14 @@
       item.classList.remove('active');
     });
     Array.from(accordionContents).forEach(function(item) {
-      
-        DOMAnimations.slideUp(item);
+      if(item == current){
+        return;
+      }
+      else{
+        menuParent.classList.remove('active');
+        DOMAnimations.slideUp(menuList);
+
+      }
     });
   }
   }
