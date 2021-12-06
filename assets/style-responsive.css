@@ -1262,6 +1262,13 @@
   .collectionFilters__form .widget__price {
   	display:none;
   }
+  .price-widget-mobile,.price-widget-mobile span {
+  	font-weight: var(--medium);
+      font-size:13px;
+  }
+  .price-widget-mobile span.pipe {
+  	margin:0 5px;
+  }
 /*  ============= footer css end =============  */
 }
 @media screen and (max-width:575px){
