@@ -302,6 +302,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         event.preventDefault();
 
+        DOMAnimations.classToggle(cardElement,'active');
+      
         DOMAnimations.slideToggle(cardElement);
     });
 
