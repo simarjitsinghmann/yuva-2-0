@@ -1074,8 +1074,8 @@
     }
 	/*  common end  */
     #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item .card-wrapper-img {
-        min-height: 330px;
-        max-height: 330px;
+        min-height: 430px;
+        max-height: 430px;
     }
   .aside-title {
       max-width: initial;
@@ -1161,10 +1161,10 @@
 }
 }
 @media screen and (max-width:575px){
-#CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item .card-wrapper-img {
-    min-height: 290px;
-    max-height: 290px;
-}
+    #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item .card-wrapper-img {
+        min-height: 330px;
+        max-height: 330px;
+    }
   .select-language {
     display: none;
 }
