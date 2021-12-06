@@ -117,7 +117,7 @@
     <div class="product-listing-box filters-{{section.settings.enable_filtering}}">
       
       {% if section.settings.enable_filtering %}
-      <aside class="sidebar sidebar-fixed shop-sidebar sticky-sidebar-wrapper">
+      <aside id="filterSideBar" class="sidebar sidebar-fixed shop-sidebar sticky-sidebar-wrapper">
         {% include 'collection-sidebar' %}
       </aside>
       {% else %}
