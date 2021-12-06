@@ -100,8 +100,14 @@ var sortMenu = section.querySelectorAll('.toolbox-sort');
 Array.from(sortMenu).forEach(function(menu) {
   menu.addEventListener("click", ()=>{	
   var sortMenu = document.getElementById('sort__list');
-  sortMenu.style.display = 'block';
-  sortMenu.classList.add('active');
+  if(sortMenu.classList.contains('active')){
+    sortMenu.style.display = 'none';
+    sortMenu.classList.remove('active');
+  }
+  else{
+    sortMenu.style.display = 'block';
+    sortMenu.classList.add('active');
+  }
 });
 }); 
 
