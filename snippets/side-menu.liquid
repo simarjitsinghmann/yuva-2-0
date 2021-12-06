@@ -40,7 +40,7 @@
                   </div>
                  <ul>
                    {%- for childlink in link.links -%}
-                   <li>
+                   <li class="inner">
                      {% assign childlink_url = childlink.url %}
                      {% if childlink.links != blank %}
                      {% assign childlink_url = 'javascript:void(0)'%}
