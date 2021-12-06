@@ -115,7 +115,7 @@
       </nav>
     </div>
     <div class="product-listing-box filters-{{section.settings.enable_filtering}}">
-      
+      {{collection.filters.size}}
       {% if section.settings.enable_filtering and collection.filters.size > 0 %}
       <aside id="filterSideBar" class="sidebar sidebar-fixed shop-sidebar sticky-sidebar-wrapper">
         {% include 'collection-sidebar' %}
