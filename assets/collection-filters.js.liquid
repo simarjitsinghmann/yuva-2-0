@@ -22,6 +22,11 @@
         var filters = document.getElementById('filterSideBar');
           filters.classList.add('active')
     });
+    var cancelFiltes = document.getElementById('cancelFilters');
+    cancelFiltes.addEventListener("click", ()=>{	
+        var filters = document.getElementById('filterSideBar');
+          filters.classList.remove('active')
+    });
     }
   }
   changeGridLayout();
