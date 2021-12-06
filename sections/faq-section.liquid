@@ -51,6 +51,7 @@
              clearActive();
            }
            else{
+        clearAccordion(btn, document.getElementById(_value));
              btn.classList.add("active");
              var _value = btn.getAttribute("content");
            }
