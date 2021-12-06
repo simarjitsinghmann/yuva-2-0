@@ -292,14 +292,15 @@ var DOMAnimations = {
     }
 }
 
-function hideallMenus(menus){
+function hideallMenus(menus,current){
   Array.from(menus).forEach(function(menu) {
-
+    if(menu != current){
       var menuList = menu.nextElementSibling;
       var menuParent = menu.parentNode;
 
       menuParent.classList.remove('active');
       DOMAnimations.slideUp(menuList);
+    }
   });
 }
 
@@ -315,13 +316,11 @@ Array.from(footerMenus).forEach(function(menu) {
       	var menuList = menu.nextElementSibling;
       	var menuParent = menu.parentNode;
       if(!(menuParent.classList.contains('active'))){
-        hideallMenus(footerMenus)
-        setTimeout(function(){
+        hideallMenus(footerMenus,menu)
 
           DOMAnimations.classToggle(menuParent,'active');
 
           DOMAnimations.slideToggle(menuList);
-        },500);
       }
       else{
 
