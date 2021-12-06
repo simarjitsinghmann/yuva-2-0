@@ -3,6 +3,7 @@
 <div class="CollectionProductGrid {{sort_by}} {{collection.default_sort_by}} 
               {% if collection.products_count == 0 %}no-results{% endif %}" id="CollectionProductsContainer" data-id="{{section.id}}" data-view="grid-layout-5">
   <div class="container">
+    {% if collection.products_count > 0 and collection.filters.size > 0 %}
     <div class="product-toolbar-box">
       
       {% if section.settings.enable_filtering %}
@@ -124,7 +125,7 @@
       </form>
       {% endif %}
       <div class="product-content main-content">
-        
+
         {% if active %}
         <div class="toolbox-item toolbox-layout">
           <div class="filter-actions">
@@ -175,6 +176,9 @@
         {% endif %}
       </div>
     </div>
+    {% else %}
+    {% render 'not-found'  item:'Product'%}
+    {% endif %}
   </div>
 </div>
 
