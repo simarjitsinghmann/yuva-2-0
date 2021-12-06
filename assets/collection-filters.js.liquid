@@ -96,9 +96,8 @@ Array.from(layouts).forEach(function(layout) {
 });
 }); 
 
-var sortMenu = section.querySelectorAll('.toolbox-sort');
-Array.from(sortMenu).forEach(function(menu) {
-  menu.addEventListener("click", ()=>{	
+var sortMenu = document.getElementById('toolbox-sort');
+  sortMenu.addEventListener("click", ()=>{	
   var sortMenu = document.getElementById('sort__list');
   if(sortMenu.classList.contains('active')){
     if(window.innerWidth > 767){
@@ -116,7 +115,6 @@ Array.from(sortMenu).forEach(function(menu) {
     }
   }
 });
-}); 
 
 document.querySelector('body').onclick = function(e) {
   if(e.target != document.getElementById('toolbox-sort')) {   
