@@ -14,54 +14,54 @@
       parent.setAttribute("data-view", "grid-layout-5")
     }
   }
-  
+
   function hideShowFilters(){
     var filterHeading = document.getElementById('filterHeading');
-        var filters = document.getElementById('filterSideBar');
+    var filters = document.getElementById('filterSideBar');
     if(window.innerWidth < 768){
       filterHeading.addEventListener("click", ()=>{	
-          filters.classList.add('active')
+                                     filters.classList.add('active')
     });
     var cancelFiltes = document.getElementById('cancelFilters');
     cancelFiltes.addEventListener("click", ()=>{	
-          filters.classList.remove('active')
-    });
-    }
-  }
-  changeGridLayout();
-hideShowFilters();
-  window.addEventListener('resize', function(event){
-    changeGridLayout();
-    hideShowFilters();
+                                  filters.classList.remove('active')
   });
-  function collectionFilters(){  
-    
+}
+ }
+ changeGridLayout();
 hideShowFilters();
-    var section = document.getElementById('CollectionProductsContainer')
-    var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
-    const filterForm = document.getElementById('CollectionFiltersForm'); 
-    var inputs = filterForm.querySelectorAll('input[type=checkbox]');
-    Array.from(inputs).forEach(function(input) {
-      input.addEventListener("click", ()=>{	
-                             getFilterData(filterForm,input,sectionId)
-    });
-  });  
-  var accordions = filterForm.querySelectorAll('.br_more_filter');
-    Array.from(accordions).forEach(function(accordion) {
-      accordion.addEventListener("click", ()=>{	   
-                                 if(accordion.classList.contains('show')){
-        accordion.classList.remove('show');
-        accordion.parentNode.classList.remove('show')
-        accordion.classList.add('hide'); 
-      }else{	
-        accordion.classList.remove('hide');
-        accordion.parentNode.classList.add('show')
-        accordion.classList.add('show');
-      }
-    });
-  });  
-  
- 	showMultipleOptions = function(){
+window.addEventListener('resize', function(event){
+  changeGridLayout();
+  hideShowFilters();
+});
+function collectionFilters(){  
+
+  hideShowFilters();
+  var section = document.getElementById('CollectionProductsContainer')
+  var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
+  const filterForm = document.getElementById('CollectionFiltersForm'); 
+  var inputs = filterForm.querySelectorAll('input[type=checkbox]');
+  Array.from(inputs).forEach(function(input) {
+    input.addEventListener("click", ()=>{	
+                           getFilterData(filterForm,input,sectionId)
+  });
+});  
+var accordions = filterForm.querySelectorAll('.br_more_filter');
+Array.from(accordions).forEach(function(accordion) {
+  accordion.addEventListener("click", ()=>{	   
+                             if(accordion.classList.contains('show')){
+    accordion.classList.remove('show');
+    accordion.parentNode.classList.remove('show')
+    accordion.classList.add('hide'); 
+  }else{	
+    accordion.classList.remove('hide');
+    accordion.parentNode.classList.add('show')
+    accordion.classList.add('show');
+  }
+});
+});  
+
+showMultipleOptions = function(){
   var showOptions = document.getElementsByClassName('showOptions');
   if(showOptions){		
     Array.from(showOptions).forEach(function(option) {
@@ -90,23 +90,23 @@ function hideOptions(){
   });
 }
 }
-    showMultipleOptions(); 
-  
-  var layouts = section.querySelectorAll('a.btn-layout');
-    Array.from(layouts).forEach(function(layout) {
-      layout.addEventListener("click", ()=>{	
-                              var _thisLayout = layout.dataset.value;
-                              section.setAttribute('data-view',_thisLayout)
-    });
-  }); 
-  var prices = filterForm.querySelectorAll('input[type=number]');
-  Array.from(prices).forEach(function(price) {
-    price.addEventListener("change", ()=>{	
-                           getFilterData(filterForm,price,sectionId)
-  });
+showMultipleOptions(); 
+
+var layouts = section.querySelectorAll('a.btn-layout');
+Array.from(layouts).forEach(function(layout) {
+  layout.addEventListener("click", ()=>{	
+                          var _thisLayout = layout.dataset.value;
+                          section.setAttribute('data-view',_thisLayout)
+});
+}); 
+var prices = filterForm.querySelectorAll('input[type=number]');
+Array.from(prices).forEach(function(price) {
+  price.addEventListener("change", ()=>{	
+                         getFilterData(filterForm,price,sectionId)
+});
 });  
 
-  var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
+var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
 Array.from(priceRangeBars).forEach(function(rangeBar) {
   var el = rangeBar;
   var sliderEventListener = noUiSlider.create(el, {
@@ -127,7 +127,7 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
     var maxVal =  parseInt(values[1]);
     section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = maxVal;
   })
-    })
+})
 
 var sortBy = section.querySelectorAll('[name="sort_by"]');
 Array.from(sortBy).forEach(function(sort) {
@@ -146,7 +146,7 @@ Array.from(removeFilters).forEach(function(removeFilter) {
 }); 
 
 
-   
+
 }
 
 function rangeInputChangeEventHandler(e,section){
@@ -169,32 +169,32 @@ function rangeInputChangeEventHandler(e,section){
   section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = maxVal;
 }
 
-  function fetchFilterData(url){
-    return fetch(url)
-    .then(response => response.text())
+function fetchFilterData(url){
+  return fetch(url)
+  .then(response => response.text())
+}
+function getFilterData(filterForm,input,sectionId,remove){    	
+  const formData = new FormData(filterForm);
+  var searchParameters = new URLSearchParams(formData).toString();
+
+  var url = window.location.pathname+'?section_id='+sectionId+'&'+searchParameters;
+  var _updateUrl = window.location.pathname+'?'+searchParameters;
+  if(remove){
+    url =remove;
+    _updateUrl = remove;
   }
-   function getFilterData(filterForm,input,sectionId,remove){    	
-      const formData = new FormData(filterForm);
-      var searchParameters = new URLSearchParams(formData).toString();
-     
-     var url = window.location.pathname+'?section_id='+sectionId+'&'+searchParameters;
-     var _updateUrl = window.location.pathname+'?'+searchParameters;
-     if(remove){
-       url =remove;
-       _updateUrl = remove;
-     }
-     const html = fetchFilterData(url).
-     then((responseText) => {
-       const resultData = new DOMParser().parseFromString(responseText, 'text/html');
-       var itemResultCount = resultData.getElementsByClassName('filter-total-result');
-       document.getElementById('CollectionProductsContainer').innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
-       
-       
-       history.pushState({}, null, _updateUrl);
-//        var focusedElement =document.getElementById(input.getAttribute('id'));
-//        focusedElement.scrollIntoView()
-       collectionFilters();
-     });
-    }
-  collectionFilters();
+  const html = fetchFilterData(url).
+  then((responseText) => {
+    const resultData = new DOMParser().parseFromString(responseText, 'text/html');
+    var itemResultCount = resultData.getElementsByClassName('filter-total-result');
+    document.getElementById('CollectionProductsContainer').innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
+
+
+    history.pushState({}, null, _updateUrl);
+    //        var focusedElement =document.getElementById(input.getAttribute('id'));
+    //        focusedElement.scrollIntoView()
+    collectionFilters();
+  });
+}
+collectionFilters();
 }());
