@@ -1122,8 +1122,12 @@ div.lower-nav .nav-item .userful__links {
 .nav-open .side-menu .inner-side .nav-item.dropdown ul.grandchild.show {
   left: 0;
 }
+.nav-open {
+position:relative
+}
 .nav-open:after {
-  position: fixed;
+  position: absolute;
+  content: "";
   background: #00000057;
   width: 100%;
   height: 100%;
