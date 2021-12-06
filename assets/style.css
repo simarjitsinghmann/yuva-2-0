@@ -2623,16 +2623,18 @@ ul.gallery-item li a > img {
    border-bottom: 1px solid #f0f0f0;
    padding: 10px 0px 13px;
 }
-.product-detail .set .panel-title.active + .productSection-content {
+/* .product-detail .set .panel-title.active + .productSection-content {
    padding: 10px 0 22px;
    -webkit-transition: max-height 0.5s ease;
    transition: max-height 0.5s ease;
-}
+} */
 .product-detail .set .content {
-   padding: 0;
+/*    padding: 0; */
+     padding: 10px 0 22px;
    overflow: hidden;
-   -webkit-transition: max-height 0.5s ease;
-   transition: max-height 0.5s ease;
+/*    -webkit-transition: max-height 0.5s ease;
+   transition: max-height 0.5s ease; */
+  display:none;
 }
 .single__product__right .set h4.panel-title a i {
    font-size: 13px;
