@@ -295,7 +295,7 @@ var DOMAnimations = {
 document.addEventListener("DOMContentLoaded", function() {
 
     var footerMenus = document.getElementsByClassName('footer-menu-head');
-
+	
 Array.from(footerMenus).forEach(function(menu) {
 
     menu.addEventListener('click', function(event) {
