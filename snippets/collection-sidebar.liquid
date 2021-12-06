@@ -1,7 +1,4 @@
 <div class="mobile-filter-heading"><h6>Filter</h6>
-  {% if active %}
-  <a href="{{ collection.url }}?sort_by={{ sort_by }}" class="select-item filter-clean text-primary">Clear All</a>
-  {% endif %}
 </div>
 <div class="shop-sidebar-inside">
   <form id="CollectionFiltersForm" class="collectionFilters__form" >
@@ -184,7 +181,7 @@
 
     <div class="mobile-filter-apply">
       <button type="submit" class=" button black-btn small-btn btn-block">{{ 'sections.collection_template.filter_button' | t }}</button>
-      <button type="button" class=" button white-btn small-btn btn-block" id="cancelFilters">{{ 'sections.collection_template.filter_cancel_button' | t }}</button>
+      <a href="{{ collection.url }}?sort_by={{ sort_by }}" class="button white-btn small-btn btn-block">Clear All</a>
     </div>
 
   </form>
