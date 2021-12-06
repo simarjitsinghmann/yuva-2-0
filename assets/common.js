@@ -315,14 +315,13 @@ Array.from(footerMenus).forEach(function(menu) {
         event.preventDefault();
       	var menuList = menu.nextElementSibling;
       	var menuParent = menu.parentNode;
-      if(!(menuParent.classList.contains('active'))){
       hideallMenus('footer-menu-head')
       setTimeout(function(){
       
       DOMAnimations.classToggle(menuParent,'active');
       
       DOMAnimations.slideToggle(menuList);
-      },500);
+      
       }
       else{
       
