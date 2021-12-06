@@ -297,7 +297,7 @@ function hideallMenus(menus,current){
       var menuList = menu.nextElementSibling;
       var menuParent = menu.parentNode;
     if(menu && menu == current){
-      continue;
+      return;
     }
     else{;
          menuParent.classList.remove('active');
