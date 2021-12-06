@@ -32,7 +32,9 @@
                           <h4 class="custom-title">{{article.published_at | date: "%d" }} {{article.published_at | date: " %b %Y" }} </h4>
                           
                           {% if section.settings.show_comment_count %}
-                          <p>{{ article.comments_count }} Comments</p>
+                          {%- if article.comments_count > 0 and blog.comments_enabled? -%}
+                          <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
+                          {%- endif -%}
                           {% endif %}
                         </div>
                         {% endif %}
