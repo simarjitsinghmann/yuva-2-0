@@ -11,7 +11,7 @@
 {% assign mainMenu = block.settings[menu] %}
 <li>
     <a class="toggle-level">
-        {% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %} <span class="caret"></span></a>
+        {% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</a>
         
     {%- if mainMenu.links != blank -%}
     <ul class="inner grandchild">        
