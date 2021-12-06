@@ -1222,6 +1222,9 @@
       border-color: #f1f1f1;
       text-align: center;
   }
+  .toolbox-item.toolbox-sort.select-box ul li.selected {
+  	 font-weight: var(--medium);
+  }
   .toolbox-right .toolbox-item.toolbox-sort.select-box span {
       font-weight: var(--medium);
   }
