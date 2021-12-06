@@ -302,7 +302,7 @@
         item.classList.remove('active');
       });
       Array.from(tabContent).forEach(function(item) {
-        item.style.display = 'none';
+        DOMAnimations.slideUp(item);
       });
     }
     Array.from(tabHead).forEach(function(btn) {
