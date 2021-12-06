@@ -49,16 +49,12 @@ Array.from(accordions).forEach(function(accordion) {
   accordion.addEventListener("click", ()=>{	   
                              if(accordion.classList.contains('show')){
     accordion.parentNode.classList.remove('show')
-    setTimeout(function(){
     accordion.classList.remove('show');
     accordion.classList.add('hide'); 
-    },500);
   }else{	
-    accordion.parentNode.classList.add('show')
-    setTimeout(function(){
+    accordion.parentNode.classList.add('show
     accordion.classList.remove('hide');
     accordion.classList.add('show');
-    },500);
   }
 });
 });  
