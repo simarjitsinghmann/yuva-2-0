@@ -1199,6 +1199,9 @@
       top:unset;
       transform: translateY(100%);
   }
+  .toolbox-item.toolbox-sort.select-box ul.active {
+  	 transform: translateY(0);
+  }
   .toolbox-item.toolbox-sort.select-box ul li {
       font-size: 12px;
       padding: 7px 12px;
