@@ -518,7 +518,7 @@ $(document).ready(function(){
 
 ///slide-nav///
 $('.back-btn').click(function(){
-	$(this).closest('ul').removeClass('show')
+	$(this).closest('.inner').removeClass('show')
 })
 $('.toggle.open-menu-drop,.toggle-level').click(function(){
   var $this = $(this);
