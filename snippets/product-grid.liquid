@@ -176,7 +176,7 @@
                 {% if settings.saved_amount_style == 'percentage' %}
                 <span class="percent-off">{{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}}</span>
                 {% else %}
-                <span class="percent-off">({{ product.compare_at_price | minus: product.price | money}})</span>
+                <span class="percent-off">{{ product.compare_at_price | minus: product.price | money}}</span>
                 {% endif %}
                 {% endif %}
                 {% endif %}
