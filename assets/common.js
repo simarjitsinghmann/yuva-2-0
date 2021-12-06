@@ -581,10 +581,10 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             console.log('priceContainer',priceContainer,'showSavedAmount',showSavedAmount)
             if(showSavedAmount == 'true'){
             	if(savedAmountStyle == 'percentage'){
-              savedAmountHtml +=`<span class="percent-off">(${percentage})</span>`;
+              savedAmountHtml +=`<span class="percent-off">${percentage}</span>`;
                 }
               else{              	
-              savedAmountHtml +=`<span class="percent-off">(${savedAmount})</span>`;
+              savedAmountHtml +=`<span class="percent-off">${savedAmount}</span>`;
               }
             }
             if(compareAtPrice > price){
