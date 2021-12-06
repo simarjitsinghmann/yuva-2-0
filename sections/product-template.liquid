@@ -325,10 +325,10 @@
         clearAccordion();
       }
       else{
-        clearAccordion( document.getElementById(_value));
         btn.classList.add("active");
         var _value = btn.getAttribute("content");
         
+        clearAccordion(btn, document.getElementById(_value));
         DOMAnimations.slideDown( document.getElementById(_value));
       }
     });
