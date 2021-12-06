@@ -1169,14 +1169,17 @@
   	display:none;
   }
   .toolbox-item.toolbox-sort.select-box ul {
-    position: fixed;
-    bottom: 0;
+      position: fixed;
+      bottom: 0;
   }
   .toolbox-item.toolbox-sort.select-box ul li {
-    font-size: 12px;
-    padding: 7px 12px;
-    border: 0;
-}
+      font-size: 12px;
+      padding: 7px 12px;
+      border: 0;
+  }
+  .toolbox-right .toolbox-item.toolbox-sort.select-box span {
+      font-weight: var(--medium);
+  }
 }
 @media screen and (max-width:575px){
     #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item .card-wrapper-img {
