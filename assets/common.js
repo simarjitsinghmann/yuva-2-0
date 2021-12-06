@@ -349,7 +349,7 @@ function hideallMenus(menus,current){
   Array.from(menus).forEach(function(menu) {
     var menuList = menu.nextElementSibling;
     var menuParent = menu.parentNode;
-    if(menu && menu == current){
+    if(menu == current){
       return;
     }
     else{
