@@ -96,6 +96,14 @@ Array.from(layouts).forEach(function(layout) {
 });
 }); 
 
+var layouts = section.querySelector('.toolbox-sort');
+Array.from(layouts).forEach(function(layout) {
+  layout.addEventListener("click", ()=>{	
+                          var _thisLayout = layout.dataset.value;
+                          section.setAttribute('data-view',_thisLayout)
+});
+}); 
+
 
 var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
 Array.from(priceRangeBars).forEach(function(rangeBar) {
