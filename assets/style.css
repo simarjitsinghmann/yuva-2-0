@@ -2425,6 +2425,11 @@ ul.gallery-item li a > img {
 .select__quantity {
    margin-bottom: 25px;
 }
+.add_to_cart.button,
+.buy_now.button {
+   letter-spacing: 1.9px;
+   text-transform: uppercase;
+}
 .product_button .shopify-payment-button__button {
    min-width: 208px;
    padding: 9px 20px;
@@ -4324,7 +4329,7 @@ textarea.form-control {
    position: relative;
    box-shadow: 0 2px 4px rgb(0 0 0 / 21%);
 }
-.faq-detail
+/* .faq-detail
    .accordion-container
    .set
    .panel-title.active
@@ -4332,13 +4337,15 @@ textarea.form-control {
    padding: 10px 0 22px;
    -webkit-transition: max-height 0.5s ease;
    transition: max-height 0.5s ease;
-}
+} */
 .faq .set .content {
    border-bottom: 0;
-   overflow: hidden;
-   padding: 0;
-   -webkit-transition: max-height 0.5s ease;
-   transition: max-height 0.5s ease;
+/*    overflow: hidden; */
+/*    padding: 0; */
+      padding: 10px 0 22px;
+/*    -webkit-transition: max-height 0.5s ease; */
+/*    transition: max-height 0.5s ease; */
+  
 }
 .faq .panel-title a {
    color: var(--black);
@@ -5126,8 +5133,8 @@ body #shopify-product-reviews {
 #dropdown-customer,
 #similar__product,
 .side-menu,
-.side-menu .inner-side .nav-item.dropdown .child,
-.side-menu .inner-side .nav-item.dropdown .grandchild {
+.side-menu .inner-side .nav-item.dropdown ul.child,
+.side-menu .inner-side .nav-item.dropdown ul.grandchild {
    width: 100%;
    max-width: 464px;
    position: fixed;
