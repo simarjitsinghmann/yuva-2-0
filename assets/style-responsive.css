@@ -1201,6 +1201,11 @@
     transform: translateY(100%);
     transition:0.5s ease all;
   }
+  .close-mobile-sort, .close-mobile-sort svg {
+  	background-color: transparent;
+    width:20px;
+    height:20px;
+  }
   .mobile-sort-heading {
       background-color: #ececec;
       display: flex;
