@@ -119,11 +119,9 @@ Array.from(sortMenu).forEach(function(menu) {
 }); 
 
 document.querySelector('body').onclick = function(e) {
-  if(e.target != document.getElementById('toolbox-sort')) {
-//     document.getElementById('content-area').innerHTML = 'You clicked outside.';          
-  } else {
-//     document.getElementById('content-area').innerHTML = 'Display Contents';   
-  }
+  if(e.target != document.getElementById('toolbox-sort')) {   
+  var sortMenu = document.getElementById('sort__list');  
+  } 
 }
 var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
 Array.from(priceRangeBars).forEach(function(rangeBar) {
