@@ -1247,7 +1247,7 @@
   }
 /*  ============= footer css start ============  */
   .footer-innner-continer {
-  	display:none;
+      margin-top: 20px;
   }
   .footer__column.footer__column--info {
       text-align: center;
@@ -1285,6 +1285,15 @@
     max-height: 150px;
     min-height: 150px;
 }
+/*  ============= footer css start =============  */
+  .footer-logo-box {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+    .footer-innner-continer {
+  	display:none;
+  }
+  /*  ============= footer css end =============  */
 }
 @media screen and (max-width:480px){
 #CollectionProductsContainer[data-view=grid-layout-2] .products-grid .product_columns .grid-item .card-wrapper-img {
