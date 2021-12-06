@@ -55,16 +55,16 @@ Array.from(accordions).forEach(function(accordion) {
 //     accordion.classList.remove('show');
 //     accordion.classList.add('hide'); 
     
-         DOMAnimations.fadeOut(showLess);
-         DOMAnimations.fadeIn(showMore);
+         showLess.fadeOut();
+         showMore.fadeIn();
 //     },300);
   }else{	
     accordion.parentNode.classList.add('show')
 //     setTimeout(function(){
 //     accordion.classList.remove('hide');
 //     accordion.classList.add('show');
-         DOMAnimations.fadeOut(showMore);
-         DOMAnimations.fadeIn(showLess);
+         showMore.fadeOut();
+         showLess.fadeIn();
 //     },300);
   }
 });
