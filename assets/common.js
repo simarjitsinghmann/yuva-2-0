@@ -294,9 +294,9 @@ var DOMAnimations = {
 
 function hideallMenus(menus,current){
   Array.from(menus).forEach(function(menu) {
-    if(menu != current){
       var menuList = menu.nextElementSibling;
       var menuParent = menu.parentNode;
+    if(menu && menu != current){
 
       menuParent.classList.remove('active');
       DOMAnimations.slideUp(menuList);
