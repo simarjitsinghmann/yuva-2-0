@@ -41,10 +41,10 @@ changeCartItem = function(line, quantity) {
         if(cart.item_count == 0 ){
           $('#cart[cart-form]').hide();
           $('[cart-empty]').show();                    
-          $('[data-cart-count]').hide().text('');
+          $('[data-cart-count]').hide();
         }
         else{ 
-          $('[data-cart-count]').show().text(cart.item_count);
+          $('[data-cart-count]').show();
 
           var item = cart.items[line-1];
           if(item){
