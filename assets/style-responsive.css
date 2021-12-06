@@ -1198,6 +1198,7 @@
       display:block;
       top:unset;
       transform: translateY(100%);
+      transition:1s ease all;
   }
   .toolbox-item.toolbox-sort.select-box ul.active {
   	 transform: translateY(0);
