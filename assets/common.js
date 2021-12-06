@@ -292,6 +292,23 @@ var DOMAnimations = {
     }
 }
 
+function hideallMenus(menus){
+  Array.from(menus).forEach(function(menu) {
+
+    menu.addEventListener('click', function(event) {
+
+      event.preventDefault();
+
+      var menuList = menu.nextElementSibling;
+      var menuParent = menu.parentNode;
+
+      DOMAnimations.classToggle(menuParent,'active');
+
+      DOMAnimations.slideUp(menuList);
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function() {
 
     var footerMenus = document.getElementsByClassName('footer-menu-head');
