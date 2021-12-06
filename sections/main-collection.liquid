@@ -101,7 +101,11 @@
           </div>
           <div class="toolbox-item toolbox-sort select-box">
             <ul class="" id="sort__list">
-              <li class="mobile-sort-heading"><h6>Sort By</h6></li>
+              <li class="mobile-sort-heading"><h6>Sort By</h6>
+                <button class="close-mobile-sort">
+                  <svg class="MobileCrossSvg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50" style=" fill:#000000;"><g><path style=" " d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z "></path></g></svg>
+                </button>
+              </li>
               {%- for option in collection.sort_options -%}
               <li class="{% if option.value == sort_by %}selected{%- assign sort_name = option.name | escape  -%}{% endif %}" value="{{ option.name | escape }}">
                 <input type="radio" name="sort_by" value="{{ option.value | escape }}" data-name="{{ option.name | escape }}" form="CollectionFiltersForm"{% if option.value == sort_by %}checked{% endif %} hidden/>
