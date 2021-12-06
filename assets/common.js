@@ -509,13 +509,11 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     var sectionId = event.detail.sectionId
     block = jQuery(event.target);
     var slider = jQuery('#shopify-section-'+sectionId).find('[data-slider]');
-//     slideIndex = jQuery(event.target).index();
+
     slideIndex  = $('.slideshow__slide--' + event.detail.blockId + ':not(.slick-cloned)').data('slick-index');
     
     console.log($('.slideshow__slide--' + event.detail.blockId + ':not(.slick-cloned)'),slideIndex);
-//     if(Index){
-//     	slideIndex = Index;
-//     }
+
     
     slider.slick('slickGoTo',slideIndex);
       slider.slick('slickPause')
