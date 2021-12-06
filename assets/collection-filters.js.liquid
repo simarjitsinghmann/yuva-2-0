@@ -120,7 +120,12 @@ Array.from(sortMenu).forEach(function(menu) {
 
 document.querySelector('body').onclick = function(e) {
   if(e.target != document.getElementById('toolbox-sort')) {   
-  var sortMenu = document.getElementById('sort__list');  
+  var sortMenu = document.getElementById('sort__list'); 
+    if(window.innerWidth > 767){
+      sortMenu.style.display = 'none';
+    }else{
+      sortMenu.classList.remove('active');
+    } 
   } 
 }
 var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
