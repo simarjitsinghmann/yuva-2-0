@@ -413,9 +413,6 @@ $(document).on("click", function(event){
 });
 
 $(document).ready(function(){
-//   $('.navbar-toggler').click(function(){
-//     $('.navbar-collapse').toggleClass('show');
-//   });
   $('.nav-button').click(function(){
     $('body').toggleClass('nav-open');
   });
