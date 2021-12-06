@@ -302,7 +302,7 @@ Array.from(footerMenus).forEach(function(menu) {
 
         event.preventDefault();
       
-      	var menuList = menu.querySelector('ul');
+      	var menuList = menu.nextElementSibling;
       	var menuParent = menu.parentNode;
 
         DOMAnimations.classToggle(menuParent,'active');
