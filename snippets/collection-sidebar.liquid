@@ -1,5 +1,8 @@
 <div class="shop-sidebar-inside">
 
+  {% if active %}
+  <a href="{{ collection.url }}?sort_by={{ sort_by }}" class="select-item filter-clean text-primary">Clear All</a>
+  {% endif %}
   <form id="CollectionFiltersForm" class="collectionFilters__form" >
     {%- for filter in collection.filters -%}
     
