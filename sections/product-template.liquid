@@ -328,7 +328,8 @@
         clearAccordion();
         btn.classList.add("active");
         var _value = btn.getAttribute("content");
-        document.getElementById(_value).style.maxHeight  = "none";
+        
+        DOMAnimations.slideDown( document.getElementById(_value));
       }
     });
   });
