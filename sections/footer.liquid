@@ -25,7 +25,7 @@
         {% when 'link_list'%}
         <div class="grid__item full__item col-sm-12 col-md-3 col-lg-2 footer-menu-accordion" {{ block.shopify_attributes }}>
           {% if block.settings.heading != blank %}
-          <h5>{{block.settings.heading}}</h5>
+          <h5 class="footer-menu-head">{{block.settings.heading}}</h5>
           {% endif %}
           {% if block.settings.menu != blank %}
           <ul>
