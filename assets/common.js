@@ -363,7 +363,7 @@ function hideallMenus(menus,current){
 document.addEventListener("DOMContentLoaded", function() {
 
     var footerMenus = document.getElementsByClassName('footer-menu-head');
-  if(window.width() < 768 ){
+  if(window.innerWidth() < 768 ){
     Array.from(footerMenus).forEach(function(menu) {
 
       menu.addEventListener('click', function(event) {
