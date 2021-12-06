@@ -57,8 +57,8 @@ Array.from(accordions).forEach(function(accordion) {
   }else{	
     accordion.parentNode.classList.add('show');
    
-    DOMAnimations.slideUp(showless);
-    DOMAnimations.slideDown(showMore);
+    DOMAnimations.slideDown(showless);
+    DOMAnimations.slideUp(showMore);
   }
 });
 });  
