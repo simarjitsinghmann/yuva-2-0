@@ -40,16 +40,16 @@
         <label class="visually-hidden" data-price-text>{{ 'Price' }}</label>
         {% if current_variant.compare_at_price > current_variant.price %}
         <h3 id="get_price">
-          {{current_variant.price | money }}
+          <span data-regular-price>{{current_variant.price | money }}</span>
           <span class="main-price">
             <del>{{current_variant.compare_at_price | money }}</del>
           </span>
         </h3>
         {% if settings.show_saved_amount %}        
         {% if settings.saved_amount_style == 'percentage' %}
-        <span class="percent-off">({{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}})</span>
+        <span class="percent-off">{{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}}</span>
         {% else %}
-        <span class="percent-off">({{ product.compare_at_price | minus: product.price | money}})</span>
+        <span class="percent-off">{{ product.compare_at_price | minus: product.price | money}}</span>
         {% endif %}
         {% endif %}
         {% else %}
