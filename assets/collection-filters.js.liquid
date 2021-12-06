@@ -34,18 +34,13 @@ window.addEventListener('resize', function(event){
   changeGridLayout();
   hideShowFilters();
 });
-function collectionFilters(){  
-
+function collectionFilters(){ 
   hideShowFilters();
+  
   var section = document.getElementById('CollectionProductsContainer')
   var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
   const filterForm = document.getElementById('CollectionFiltersForm'); 
-  var inputs = filterForm.querySelectorAll('input[type=checkbox]');
-  Array.from(inputs).forEach(function(input) {
-    input.addEventListener("click", ()=>{	
-                           getFilterData(filterForm,input,sectionId)
-  });
-});  
+    
 var accordions = filterForm.querySelectorAll('.br_more_filter');
 Array.from(accordions).forEach(function(accordion) {
   accordion.addEventListener("click", ()=>{	   
@@ -99,12 +94,7 @@ Array.from(layouts).forEach(function(layout) {
                           section.setAttribute('data-view',_thisLayout)
 });
 }); 
-var prices = filterForm.querySelectorAll('input[type=number]');
-Array.from(prices).forEach(function(price) {
-  price.addEventListener("change", ()=>{	
-                         getFilterData(filterForm,price,sectionId)
-});
-});  
+
 
 var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
 Array.from(priceRangeBars).forEach(function(rangeBar) {
@@ -129,6 +119,21 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
   })
 })
 
+
+var prices = filterForm.querySelectorAll('input[type=number]');
+Array.from(prices).forEach(function(price) {
+  price.addEventListener("change", ()=>{	
+                         getFilterData(filterForm,price,sectionId)
+});
+});  
+
+var inputs = filterForm.querySelectorAll('input[type=checkbox]');
+  Array.from(inputs).forEach(function(input) {
+    input.addEventListener("click", ()=>{	
+                           getFilterData(filterForm,input,sectionId)
+  });
+});
+
 var sortBy = section.querySelectorAll('[name="sort_by"]');
 Array.from(sortBy).forEach(function(sort) {
   sort.addEventListener("click", ()=>{	
@@ -147,26 +152,6 @@ Array.from(removeFilters).forEach(function(removeFilter) {
 
 
 
-}
-
-function rangeInputChangeEventHandler(e,section){
-  var minBtn = e.closest('.rangeslider').querySelectorAll('.min')[0],
-      maxBtn = e.closest('.rangeslider').querySelectorAll('.max')[0],
-      minVal = parseInt(minBtn.value),
-      maxVal = parseInt(maxBtn.value),
-      origin = e.getAttribute('class');
-  if(origin === 'min' && minVal > maxVal-15){
-    minBtn.value = maxVal-15;
-  }
-
-
-  if(origin === 'max' && maxVal-15 < minVal){
-    maxBtn.value = 15+ minVal;
-  }
-  var minVal =  parseInt(minBtn.value);
-  section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = minVal;
-  var maxVal =  parseInt(maxBtn.value);
-  section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = maxVal;
 }
 
 function fetchFilterData(url){
