@@ -105,7 +105,7 @@
            <textarea class="seller-box" name="note" id="Cart-note" placeholder="Special instructions for seller">{{ cart.note }}</textarea>
           {% endif %}
            <ul>
-              <li data-cart-original>{{'sections.cart.subtotal' | t}} <strong data-cart-original-price>{{cart.original_total_price | money}}</strong></li>
+              <li data-cart-original>{{'sections.cart.subtotal' | t}} <strong data-cart-original-price>{{cart.total_price | money}}</strong></li>
               {%- if cart.cart_level_discount_applications.size > 0 -%}
               {%- for discount in cart.cart_level_discount_applications -%}
               <li data-cart-discount>{{'sections.cart.discount' | t}}['{{ discount.title }}'] <strong>-{{discount.total_allocated_amount | money}}</strong></li>
