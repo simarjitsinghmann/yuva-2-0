@@ -79,7 +79,7 @@ $(document).ready(function(){
               if(_drawer != 'small_search '){
                 $row += '<h5>Products</h5>';
               }
-                console.log(index,item.id,item.itemHtml)
+                console.log(data.results,JSON.stringify(data.results))
               $.each(JSON.stringify(data.results), function(index, item){
                 console.log(index,item.id,item.itemHtml)
                 $row +=JSON.stringify(item.itemHtml);
