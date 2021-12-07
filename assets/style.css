@@ -905,6 +905,9 @@ span.tag-line {
     align-items: center;
     flex-wrap: wrap;
 }
+.product-information__wrapper .price-item span {
+	margin-right:6px;
+}
 .price__regular span[data-compare-price] {
    font-weight: var(--normal);
    color: rgba(7, 7, 7, 0.6);
