@@ -1640,6 +1640,10 @@
     border-left: 0;
     padding-left: 0;
 }
+    .instagram-post-list ul li {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
 }
 @media screen and (max-width: 480px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
