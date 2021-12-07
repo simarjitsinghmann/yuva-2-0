@@ -1450,9 +1450,6 @@
     max-height: 150px;
     min-height: 150px;
   }
-/*  whats more css start  */
-
-/*  whats more css end  */
   /*  ============= footer css start =============  */
   .yuva-logo {
     max-width: 70px;
@@ -1469,6 +1466,12 @@
     height: 20px;
   }
   /*  ============= footer css end =============  */
+/*  colection list css start  */
+  .collection-gutter .grid--2-col {
+    width: 100%;
+    max-width: 100%;
+}
+  /*  colection list css end  */
 }
 @media screen and (max-width: 480px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
