@@ -43,7 +43,7 @@
       super();
       this.elements = {
         input: this.querySelector('input[name="locale_code"], input[name="country_code"]'),
-        button: this.querySelector('button'),
+        button: this.querySelector('label'),
         panel: this.querySelector('ul'),
       };
       this.elements.button.addEventListener('click', this.openSelector.bind(this));
@@ -79,7 +79,7 @@
     }
 
     closeSelector(event) {
-      const shouldClose = event.relatedTarget && event.relatedTarget.nodeName === 'BUTTON';
+      const shouldClose = event.relatedTarget && event.relatedTarget.nodeName === 'LABEL';
       if (event.relatedTarget === null || shouldClose) {
         this.hidePanel();
       }
