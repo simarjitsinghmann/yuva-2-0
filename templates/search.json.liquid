@@ -7,48 +7,52 @@ The final file name would be search.json.liquid
 {% paginate search.results by 10 %}
  {% capture output %}
  {% for result in search.results %}
-        {% assign product = result %}
-        {% assign current_variant = product.selected_or_first_available_variant %}
-
-        <div class="grid-item col collection-product-grid">
-          <div class="card-wrapper">
-            <div class="card card--text-only card--soft card--product text__left">
-              <div class="card-wrapper-img">
-                <a href="{{product.url | within: collection}}">
-                  <img src="{{product.featured_image | img_url:'large'}}" alt="{{product.title}}">        
-                </a>
-              </div>
-              <div class="product-information">
-                <div class="product-information__wrapper">
-                  <a href="{{product.url}}"><div class="caption-with-letter-spacing light"title="{{product.title}}">{{product.title}}</div></a>
-                  <div class="price">
-                    <div class="price__regular">
-                      <span class="price-item price-item--regular">
-                        <span data-regular-price>{{current_variant.price | money}}</span>
-                        {% if current_variant.compare_at_price > current_variant.price %}
-                        <span data-compare-price>
-                          {{ current_variant.compare_at_price | money }}
-                        </span>
-                        {% if settings.show_saved_amount %}        
-                        {% if settings.saved_amount_style == 'percentage' %}
-                        <span class="percent-off">{{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}}</span>
-                        {% else %}
-                        <span class="percent-off">{{ product.compare_at_price | minus: product.price | money}}</span>
-                        {% endif %}
-                        {% endif %}
-                        {% endif %}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
+        {% assign resultURL = result.url %}
+        {% assign thumbURL = result.images[0] | product_img_url: 'large' %}
+{%- capture productResult -%}
+<div class="grid-item col collection-product-grid">
+  <div class="card-wrapper">
+    <div class="card card--text-only card--soft card--product text__left">
+      <div class="card-wrapper-img">
+        <a href="{{product.url | within: collection}}">
+          <img src="{{product.featured_image | img_url:'large'}}" alt="{{product.title}}">        
+        </a>
+      </div>
+      <div class="product-information">
+        <div class="product-information__wrapper">
+          <a href="{{product.url}}"><div class="caption-with-letter-spacing light"title="{{product.title}}">{{product.title}}</div></a>
+          <div class="price">
+            <div class="price__regular">
+              <span class="price-item price-item--regular">
+                <span data-regular-price>{{current_variant.price | money}}</span>
+                {% if current_variant.compare_at_price > current_variant.price %}
+                <span data-compare-price>
+                  {{ current_variant.compare_at_price | money }}
+                </span>
+                {% if settings.show_saved_amount %}        
+                {% if settings.saved_amount_style == 'percentage' %}
+                <span class="percent-off">{{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}}</span>
+                {% else %}
+                <span class="percent-off">{{ product.compare_at_price | minus: product.price | money}}</span>
+                {% endif %}
+                {% endif %}
+                {% endif %}
+              </span>
             </div>
           </div>
         </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{%- endcapture -%}
+        {"id":{{result.id}},
+			"itemHtml":"{{productResult | json}}"}
+{% unless forloop.last %},{% endunless %}
     {% endfor %}
 {% endcapture %}
 
 {% comment %} Output the json object {% endcomment %}
-{"results_total":{{paginate.items}},"results":[{{ output | json }}]}
+{"results_total":{{paginate.items}},"results":[{{ output | strip_newlines }}]}
 {% endpaginate %}
