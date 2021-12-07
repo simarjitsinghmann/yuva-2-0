@@ -1442,9 +1442,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-color:transparent;
 }
   .card__warpper__detail.right__sided .collection-detail-right img {
   	border: 2px solid #FFF;
+  }
+  .card__warpper__detail.right__sided .collection-detail-right:first-child {
+  	background-color: #f556562e;
   }
   /*  common end  */
   #CollectionProductsContainer[data-view="grid-layout-2"]
