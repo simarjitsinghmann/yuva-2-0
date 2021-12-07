@@ -1,14 +1,77 @@
+<localization-form>
+  {% form 'localization' %}
+    <div class="disclosure">
+      <button type="button" class="disclosure__button" aria-expanded="false" aria-controls="LanguageList">
+        {{ localization.language.endonym_name | capitalize }}
 
-       {% form 'localization' %}
-  <select name="language_code">
-        {% for country in localization.available_countries %}
-      <option value="{{ country.iso_code }}"
-        {% if country.iso_code == localization.country.iso_code %}  selected="selected"{% endif %}
-      >
-      {{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})
-      </option>
-    {% endfor %}
-  </select>
+        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+        </svg>
+      </button>
 
-  <input type="submit" value="Update">
-{% endform %}
+      <ul id="LanguageList" role="list" class="disclosure__list" hidden>
+        {% for language in localization.available_languages %}
+          <li class="disclosure__item" tabindex="-1">
+            <a href="#"{% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %} hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}" data-value="{{ language.iso_code }}">
+              {{ language.endonym_name | capitalize }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <input type="hidden" name="language_code" value="{{ localization.language.iso_code }}">
+    </div>
+  {% endform %}
+</localization-form>
+
+<script>
+class LocalizationForm extends HTMLElement {
+  constructor() {
+    super();
+    this.elements = {
+      input: this.querySelector('input[name="locale_code"], input[name="country_code"]'),
+      button: this.querySelector('button'),
+      panel: this.querySelector('ul'),
+    };
+    this.elements.button.addEventListener('click', this.openSelector.bind(this));
+    this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
+    this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
+
+    this.querySelectorAll('a').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));
+  }
+
+  hidePanel() {
+    this.elements.button.setAttribute('aria-expanded', 'false');
+    this.elements.panel.setAttribute('hidden', true);
+  }
+
+  onContainerKeyUp(event) {
+    if (event.code.toUpperCase() !== 'ESCAPE') return;
+
+    this.hidePanel();
+    this.elements.button.focus();
+  }
+
+  onItemClick(event) {
+    event.preventDefault();
+    const form = this.querySelector('form');
+    this.elements.input.value = event.currentTarget.dataset.value;
+    if (form) form.submit();
+  }
+
+  openSelector() {
+    this.elements.button.focus();
+    this.elements.panel.toggleAttribute('hidden');
+    this.elements.button.setAttribute('aria-expanded', (this.elements.button.getAttribute('aria-expanded') === 'false').toString());
+  }
+
+  closeSelector(event) {
+    const shouldClose = event.relatedTarget && event.relatedTarget.nodeName === 'BUTTON';
+    if (event.relatedTarget === null || shouldClose) {
+      this.hidePanel();
+    }
+  }
+}
+
+customElements.define('localization-form', LocalizationForm);
+</script>
