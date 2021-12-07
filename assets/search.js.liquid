@@ -81,7 +81,7 @@ $(document).ready(function(){
                 $row += '<h5>Products</h5>';
               }
               var results = JSON.stringify(data.results)
-              console.log('thhere',data,data.results,data['results'])
+              console.log('thhere',data,data.results,data['results'],results)
               $.each(results, function(index, item){
                 console.log('hereaaaaa',JSON.stringify(item.itemHtml))
                 console.log(index,item.id,item.itemHtml)
