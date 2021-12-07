@@ -3,6 +3,9 @@
 {%else%}
 {% render 'banner-placeholder'%}
 {% endif %} 
+{% if block.settings.image_mob != blank %}
+<img class="slide-image-mobie}" data-lazy="{{block.settings.image_mob | img_url:'master'}}" alt="">
+{% endif %}
 <div class="carousel-caption">
   <div class="container">
     <div class="">
