@@ -557,6 +557,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
               var image= getVariant.featured_media['preview_image']['id'];
               image= image.replace("https:", ""); 
               var imageSource = _productParent.querySelector("img[data-id='"+image+"']");
+              console.log(imageSource)
               if(imageSource){
                 imageSource.click();
               }
