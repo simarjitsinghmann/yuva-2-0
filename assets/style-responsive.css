@@ -1477,8 +1477,11 @@
     width: 100%;
     max-width: 100%;
 }
-  .card-wrapper.left-sided{
+  .card-wrapper.left-sided {
   	padding-right:0;
+  }
+  .card-wrapper.left-sided ..card__warpper__detail.left__sided {
+  	margin-bottom:12px;
   }
   /*  colection list css end  */
 }
