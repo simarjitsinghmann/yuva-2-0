@@ -1532,6 +1532,9 @@
     min-height: 260px;
     max-height: 260px;
   }
+  .card__warpper__detail.left__sided .collection-image {
+    max-height: 340px;
+}
 }
 @media screen and (max-width: 414px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
