@@ -55,6 +55,7 @@
   /*  COmmon end  */
   /* whats more css start */
     .card-information .card-information-image {
+      min-height: 250px;
       max-height: 250px;
   }
   .card-information__wrapper {
@@ -388,7 +389,8 @@
   /*  header end  */
   /*  Whats more start  */
   .card-information .card-information-image {
-      max-height: 230px;
+    min-height: 230px;  
+    max-height: 230px;
   }
   .card-information__wrapper {
     width: 135px;
