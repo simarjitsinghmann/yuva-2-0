@@ -1,9 +1,9 @@
 <div id="banner-{{section.id}}">
   <div class="item">
     {% if section.settings.image != blank %}
-    <img src="{{section.settings.image | img_url:'master'}}" alt="">
+    <img class="{% if section.settings.image_mob != blank %}slide-image-desktop{% endif %}" src="{{section.settings.image | img_url:'master'}}" alt="">
     {%else%}
-    <div class="{% if block.settings.image_mob != blank %}slide-image-desktop{% endif %}">{% render 'banner-placeholder'%}</div>
+    <div class="{% if section.settings.image_mob != blank %}slide-image-desktop{% endif %}">{% render 'banner-placeholder'%}</div>
     {% endif %} 
 {% if section.settings.image_mob != blank %}
 <img class="slide-image-mobile" data-lazy="{{section.settings.image_mob | img_url:'master'}}" alt="">
