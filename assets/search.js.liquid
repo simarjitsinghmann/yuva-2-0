@@ -64,7 +64,6 @@ $(document).ready(function(){
           success: function(data){
 //             currReqObj = null;
             $('.note').remove();
-            data = JSON.stringify(data);
             if(data.results_total == 0) {
               //No results
               $resultsBox.html('<div class="note">No result found.</div>');
