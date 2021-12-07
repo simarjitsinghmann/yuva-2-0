@@ -826,16 +826,16 @@ $(document).ready(function()
       _url = _url[0]
     }
     $('.Quick_loader').fadeIn('slow');
+      setTimeout(function(){
     $('[data-drawer-body]').load(_url+'?view=quick-view', function() {
       $(window).trigger('resize');
-      setTimeout(function(){
         drawer.querySelector('[data-drawer-body]').classList.remove('searching');
         Shopify.PaymentButton.init()
 
         productVariants();
         showMultipleOptions(); 
-      },1500)
     });
+      },1500)
   });
 
   $(document).on('click', '.quickViewClose',function(evt) {
