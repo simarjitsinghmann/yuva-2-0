@@ -81,7 +81,6 @@ $(document).ready(function(){
               }
               data= JSON.stringify(data)
               var results = JSON.stringify(data.results)
-                console.log(data,results)
               $.each(results, function(index, item){
                 console.log(index,item.id,item.itemHtml)
                 $row +=JSON.stringify(item.itemHtml);
