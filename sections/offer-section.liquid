@@ -5,7 +5,7 @@
         <small>{{section.settings.subheading}}</small>
         <h2>{{section.settings.heading}}</h2>
       </div>
-      <ul class="grid grid--3-col-tablet grid--3-col-desktop d-flex justify-content-center {% if section.settings.style == 'style2' %}style_variation_2{% endif %}" role="list">
+      <ul class="grid grid--3-col-tablet grid--3-col-desktop d-flex justify-content-center {% if section.settings.style == 'style2' %}style_variation_2{% endif %}" role="list" data-slider>
         {% for block in section.blocks%}
         <li id="offer-block-{{block.id}}"  class="grid__item" {{ block.shopify_attributes }}>
           <div class="card-wrapper">
