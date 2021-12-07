@@ -56,8 +56,13 @@ $(document).ready(function(){
         currReqObj = $.ajax({
           url: $form.attr('action')+'/suggest.json',
           data: {
-            type: 'product',
             q: term,
+            resources: {
+              type: "product",
+              options: {
+                unavailable_products: "hide"
+              }
+            }
           },
           dataType: "json",
           success: function(data){
