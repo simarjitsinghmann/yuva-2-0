@@ -5,8 +5,8 @@
     {%else%}
     {% include 'banner-placeholder'%}
     {% endif %} 
-{% if block.settings.image_mob != blank %}
-<img class="slide-image-mobile" data-lazy="{{block.settings.image_mob | img_url:'master'}}" alt="">
+{% if section.settings.image_mob != blank %}
+<img class="slide-image-mobile" data-lazy="{{section.settings.image_mob | img_url:'master'}}" alt="">
 {% endif %}
     <div class="banner-caption ">
       <div class="container">
