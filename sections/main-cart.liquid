@@ -62,9 +62,24 @@
                        </div>
                     </td>
                     <td class="cart-price">
+                      
                        <div class="price">
-                          {{item.original_price | money}}
-                       </div>
+                    {%- if item.original_price != item.final_price -%}
+                      <s class="cart-item__old-price product-option">
+                          {{- item.original_price | money -}}
+                        </s>
+                        <span class="visually-hidden">
+                          {{ 'products.product.price.sale_price' | t }}
+                        </span>
+                        <strong class="cart-item__final-price product-option">
+                          {{ item.final_price | money }}
+                        </strong>
+                         {% else %}
+                        <strong class="cart-item__final-price product-option">
+                          {{ item.original_price | money }}
+                        </strong>
+                         {% endif %}
+                      </div>
                     </td>
                     <td class="cart-remove">
                        <div class="remove line_item_remove" data-line="{{forloop.index}}">
