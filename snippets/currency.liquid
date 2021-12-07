@@ -8,8 +8,8 @@
 
       <ul id="CountryList" role="list" class="disclosure__list dropdown-menu currency-menu" hidden>
         {% for country in localization.available_countries %}
-        <li class="disclosure__item dropdown-item" tabindex="-1">
-          <a href="#"{% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
+        <li class="disclosure__item" tabindex="-1">
+          <a class="dropdown-item" href="#"{% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
             {{ country.currency.iso_code }}
           </a>
         </li>
@@ -20,21 +20,6 @@
     </div>
     {% endform %}
   </localization-form>
-<div class="btn-group currency-dropdown">
-<label class="dropdown-toggle dropdown-label" data-language-label="">AUD</label>
-<div class="dropdown-menu currency-menu" id="currencies" style="display: none;">
-<a class="dropdown-item" href="javascript:void(0)" data-currency="aud"><span class="text">AUD</span></a>
-<a class="dropdown-item" href="javascript:void(0)" data-currency="cad"><span class="text">CAD</span></a>
-<a class="dropdown-item" href="javascript:void(0)" data-currency="dkk"><span class="text">DKK</span></a>
-<a class="dropdown-item" href="javascript:void(0)" data-currency="gbp"><span class="text">GBP</span></a>
-<a class="dropdown-item" href="javascript:void(0)" data-currency="hkd"><span class="text">HKD</span></a>
-<a class="dropdown-item" href="javascript:void(0)" data-currency="jpy"><span class="text">JPY</span></a>
-<a class="dropdown-item" href="javascript:void(0)" data-currency="nzd"><span class="text">NZD</span></a>
-<a class="dropdown-item" href="javascript:void(0)" data-currency="sek"><span class="text">SEK</span></a>
-<a class="dropdown-item" href="javascript:void(0)" data-currency="sgd"><span class="text">SGD</span></a>
-<a class="dropdown-item" href="javascript:void(0)" data-currency="usd"><span class="text">USD</span></a>
-</div>
-</div>
 </div>
 
 <script>
