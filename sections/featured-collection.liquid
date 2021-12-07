@@ -12,7 +12,7 @@
       {% if section.settings.collection != blank %}
       {% assign collection = section.settings.collection %}
         <div class="products-grid ">
-          <div class="row column-{{section.settings.col_size}} product_column">
+          <div class="row column-{{section.settings.col_size}} product_columns">
             {% assign limit = section.settings.col_size | times : section.settings.row_size%}
             {% for product in collection.products limit:limit%}
             {% include 'product-grid' %}
