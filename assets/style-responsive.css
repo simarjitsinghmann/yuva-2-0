@@ -1485,16 +1485,6 @@
     font-size: 13px;
 }
 /*  colection list css start  */
-  .card-wrapper .collection-detail {
-      background: rgba(255, 255, 255, 0.9);
-      width: 96%;
-      left: 2%;
-      bottom: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
   .collection-detail h2 {
   	color: var(--black);
     margin: 0 0 5px;
@@ -1533,7 +1523,7 @@
     border-radius:6px;
   }
   .card__warpper__detail.right__sided .collection-detail-right,
-  .collection-detail{
+  .card-wrapper .collection-detail{
     width: 60%;
     display: flex;
     justify-content: center;
