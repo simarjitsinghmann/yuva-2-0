@@ -2412,31 +2412,7 @@ ul.gallery-item li a > img {
 .product_button .shopify-payment-button__button {
    min-width: 208px;
    padding: 9px 20px;
-   background-image: -moz-linear-gradient(
-      90deg,
-      #000 0,
-      #000 50%,
-      #fff 50%,
-      #fff 100%
-   );
-   background-image: -webkit-linear-gradient(
-      90deg,
-      #000 0,
-      #000 50%,
-      #fff 50%,
-      #fff 100%
-   );
-   background-image: linear-gradient(
-      90deg,
-      #000 0,
-      #000 50%,
-      #fff 50%,
-      #fff 100%
-   );
-   background-repeat: no-repeat;
-   background-size: 200% 100%;
-   background-position: right bottom;
-   transition: background-position 0.25s ease-out;
+   transition: 0.25s ease-out;
    min-height: 30px;
    line-height: 30px;
    text-align: center;
