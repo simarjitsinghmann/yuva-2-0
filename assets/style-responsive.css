@@ -1521,6 +1521,21 @@
   .card__warpper__detail.left__sided .collection-image {
     max-height: 420px;
 }
+  .list-view-content {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    padding: 15px;
+    width: 100%;
+    /* height: 100%; */
+    /* opacity: 0; */
+    transform: scale(1);
+    transition: 1s ease all;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
   /*  colection list css end  */
 }
 @media screen and (max-width: 480px) {
