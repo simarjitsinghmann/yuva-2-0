@@ -554,7 +554,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
           var advancePayment = paymentButtonWrapper.querySelector('.shopify-payment-button');
           if(getVariant != undefined){
             if(getVariant.featured_media != null){
-              var image= getVariant.featured_media['preview_image']['id']; 
+              var image= getVariant.featured_media['id']; 
               var imageSource = _productParent.querySelector("img[data-id='media-"+image+"']");
               console.log(imageSource)
               if(imageSource){
