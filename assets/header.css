@@ -418,7 +418,7 @@
   font-weight: var(--semibold);
   font-family: var(--font-family);
 }
-.currency-block label.dropdown-toggle {
+.currency-block .dropdown-toggle {
   position: relative;
   font-size: 12px;
   font-weight: var(--medium);
@@ -1012,7 +1012,7 @@ div.lower-nav .nav-item .userful__links {
   height: 14px;
   font-size: 9px;
 }
-.style5 .currency-block label.dropdown-toggle::after {
+.style5 .currency-block .dropdown-toggle::after {
   border-top: 1px solid #777;
   border-left: 1px solid #777;
   width: 6px;
@@ -1027,7 +1027,7 @@ div.lower-nav .nav-item .userful__links {
   line-height: 1;
   padding: 0 16px 0 16px;
 }
-.style5 .currency-block label.dropdown-toggle {
+.style5 .currency-block .dropdown-toggle {
   padding-right: 20px;
   color: #777;
   font-size: 13px;
