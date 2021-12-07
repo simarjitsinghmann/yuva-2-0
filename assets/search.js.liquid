@@ -47,7 +47,7 @@ $(document).ready(function(){
       var linkURL = $form.attr('action') + '?type=product&q=' + term;
 
       //Show loading
-      $resultsBox.html('<div class="load">'+preLoadLoadGif+'</div>');
+      $resultsBox.html(preLoadLoadGif);
       $('.header_icon_search').hide();
       $('.Search_loader').show();
       // Do next search (in X milliseconds)
