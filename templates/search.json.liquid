@@ -8,6 +8,7 @@ The final file name would be search.json.liquid
  {%- capture output -%}
  {%- for result in search.results -%}
         {%- assign product = result -%}
+        {%- assign current_variant = product.selected_or_first_available_variant %}
 {%- capture productResult -%}
 <div class="searc-item-box">
   <div class="card-wrapper">
