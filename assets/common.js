@@ -556,7 +556,6 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             if(getVariant.featured_media != null){
               var image= getVariant.featured_media.id; 
               var imageSource = _productParent.querySelector("[data-id='media-"+image+"']");
-              console.log(imageSource)
               if(imageSource){
                 imageSource.click();
               }
