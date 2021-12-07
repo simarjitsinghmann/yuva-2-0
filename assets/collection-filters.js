@@ -31,7 +31,7 @@
 }
  }
  
- window.addEventListener('onload', (event) => {
+ window.addEventListener('load', (event) => {
  changeGridLayout();
 hideShowFilters();
 });
