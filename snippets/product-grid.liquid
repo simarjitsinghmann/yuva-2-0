@@ -15,7 +15,7 @@
   <div class="card-wrapper">
     <div class="card card--text-only card--soft card--product text__left">
       <div class="card-wrapper-img {% if section.settings.show_second_image or show_second_image %}has-multiimage{% endif %}">
-        <a href="{{product.url }}">
+        <a href="{{product.url | within: collection}}">
           <img src="{{product.featured_image | img_url:'master'}}" alt="{{product.title}}" style="width: 100%;">
           {% if section.settings.show_second_image or show_second_image %}
           <img class="product-second-img" src="{{second_image}}" alt="{{product.title}}" style="width: 100%;">
