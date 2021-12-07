@@ -30,8 +30,11 @@
   });
 }
  }
+ 
+ window.addEventListener('load', (event) => {
  changeGridLayout();
 hideShowFilters();
+});
 window.addEventListener('resize', function(event){
   changeGridLayout();
   hideShowFilters();
