@@ -575,7 +575,6 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             var savedAmount = Shopify.formatMoney((compareAtPrice-price),moneyFormat);
             var priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}</h3>`;
             var savedAmountHtml = '';
-            console.log('priceContainer',priceContainer,'showSavedAmount',showSavedAmount)
             if(showSavedAmount == 'true'){
             	if(savedAmountStyle == 'percentage'){
               savedAmountHtml +=`<span class="percent-off">${percentage}</span>`;
