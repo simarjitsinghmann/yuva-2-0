@@ -80,6 +80,7 @@ $(document).ready(function(){
                 $row += '<h5>Products</h5>';
               }
               $.each(data.results, function(index, item){
+                console.log(index,item.id,item.itemHtml)
                 $row +=JSON.stringify(item.itemHtml);
                 //$row.append('<div class="d-price">'+Shopify.formatMoney(item.price, "")+'</div></div>`;
 
