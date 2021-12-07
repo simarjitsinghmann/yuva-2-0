@@ -87,7 +87,7 @@
     padding: 20px;
   }
   .collection-list-view-card h2 {
-    font-size: 21px !important;
+    font-size: 21px;
   }
   .colllection-list-view .owl-carousel .owl-nav button.owl-prev {
     right: 50px;
@@ -1566,6 +1566,9 @@
   	background-color: var(--black);
       color: var(--white)!important;
   }
+  .collection-list-view-card h2 {
+    font-size: 17px;
+}
   /*  colection list css end  */
 }
 @media screen and (max-width: 480px) {
