@@ -1519,16 +1519,17 @@
       max-height: initial;
   }
   .collection__right__list .grid__item__list {
-    height: 120px;
+    height: 150px;
 }
-    .card__warpper__detail.right__sided .collection-image {
+  .card__warpper__detail.right__sided .collection-image {
       width: 35%;
       float: left;
-      padding:10px;
-      background-color:#ececec;;
+      padding: 16px;
+      background-color: #ececec;
   }
   .card__warpper__detail.right__sided .collection-image  img {
   	border: 2px solid #FFF;
+    border-radous:6px;
   }
   .card__warpper__detail.right__sided .collection-detail-right {
     width: 65%;
