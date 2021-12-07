@@ -1588,6 +1588,12 @@
     font-size: 17px;
 }
   /*  colection list css end  */
+/*  products listing start  */
+  .products-grid .grid-item {
+    padding: 0;
+    border-right: 1px solid #e1e1e1;
+}
+/*  products listing end  */
 }
 @media screen and (max-width: 480px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
