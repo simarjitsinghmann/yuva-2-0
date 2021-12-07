@@ -1678,7 +1678,7 @@ div#countdown {
 .results-box .result-list {
   margin: 0 -20px;
 }
-.results-box .result-list searc-item-box {
+.results-box .result-list .searc-item-box {
   float: left;
   text-align: left;
   margin: 0 0px 20px;
@@ -1700,16 +1700,16 @@ div#countdown {
   justify-content: center;
   align-items: center;
 }
-.results-box .result-list searc-item-box .img img {
+.results-box .result-list .searc-item-box .img img {
   width: 100%;
   max-height: 100%;
   object-fit: cover;
 }
-.results-box .result-list searc-item-box .title_price {
+.results-box .result-list .searc-item-box .title_price {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.results-box .result-list searc-item-box .d-title {
+.results-box .result-list .searc-item-box .d-title {
   padding: 0 0;
   color: var(--black);
   font-size: 15px;
@@ -1720,7 +1720,7 @@ div#countdown {
   font-weight: 400;
   line-height: 20px;
 }
-.results-box .result-list searc-item-box .d-price {
+.results-box .result-list .searc-item-box .d-price {
   color: var(--black);
   font-size: 14px;
   font-weight: var(--semibold);
