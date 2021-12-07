@@ -45,7 +45,7 @@
             {% for block in section.blocks limit:1 %}  
             {% if block.settings.article != blank %}  
             {% assign article = block.settings.article %}
-            {% include 'featured-article-grid' %}
+            {% include 'featured-article-grid' desc_limit:30 %}
             {% else %}
             <div class="item grid__item style1">
               <div class="post-wrapper">
