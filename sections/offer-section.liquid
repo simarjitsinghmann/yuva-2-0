@@ -5,9 +5,9 @@
         <small>{{section.settings.subheading}}</small>
         <h2>{{section.settings.heading}}</h2>
       </div>
-      <ul class="grid grid--3-col-tablet grid--3-col-desktop d-flex justify-content-center {% if section.settings.style == 'style2' %}style_variation_2{% endif %}" role="list" data-slider>
+      <ul class=" {% if section.settings.style == 'style2' %}style_variation_2{% endif %}" role="list" data-slider>
         {% for block in section.blocks%}
-        <li id="offer-block-{{block.id}}"  class="grid__item slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
+        <li id="offer-block-{{block.id}}"  class=" slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
           <div class="card-wrapper">
             <div class="card-information">
               <div class="card-information-image">
