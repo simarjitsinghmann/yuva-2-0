@@ -33,20 +33,18 @@
                 <span class="item-variant-title">{{variation}}</span>
 				<h6 class="product__price">
                   {{#if discountsApplied}}
-                        <small class="ajaxcart-item__price-strikethrough"><s>{{{originalLinePrice}}}</s></small>
+                        <small class="item__price-strikethrough"><s>{{{originalLinePrice}}}</s></small>
                         <br><span>{{{linePrice}}}</span>
                       {{else}}
                         <span>{{{linePrice}}}</span>
                       {{/if}}
   				</h6>
                 {{#if discountsApplied}}
-                    <div class="grid--full display-table">
-                      <div class="grid__item text-right">
+                      <div class="text-right">
                         {{#each discounts}}
-                          <small class="ajaxcart-item__discount">{{ this.title }}</small><br>
+                          <small class="item__discount">{{ this.title }}</small><br>
                         {{/each}}
                       </div>
-                    </div>
                   {{/if}}
 				<div class="right-media-cart">
 					<div class="quantity">
