@@ -1489,12 +1489,7 @@
   	color: var(--black);
     margin: 0 0 5px;
   }
-  .card-wrapper.left-sided .collection-list-btn {
-    font-size: 13px;
-    background: var(--black);
-    padding: 5px 20px;
-    color: var(--white)!important;
-}
+
   .collection-gutter .grid--2-col {
     width: 100%;
     max-width: 100%;
@@ -1536,6 +1531,11 @@
   .card-wrapper .collection-detail {
   	position:unset;
     flex-direction: column;
+  }
+  .card-wrapper.left-sided .collection-list-btn {
+      font-size: 13px;
+      background: transparent;
+      padding: 0;
   }
   .card__warpper__detail.left__sided .collection-image {
     max-height: 420px;
