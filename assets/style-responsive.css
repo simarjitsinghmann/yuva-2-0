@@ -1431,6 +1431,17 @@
   .collection-section-header {
       margin-bottom: 10px;
   }
+  .card__warpper__detail.right__sided .collection-image {
+      width: 30%;
+      float: left;
+      background-color: transparent;
+  }
+  .card__warpper__detail.right__sided .collection-detail-right {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   /*  common end  */
   #CollectionProductsContainer[data-view="grid-layout-2"]
     .products-grid

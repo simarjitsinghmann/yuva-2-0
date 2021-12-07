@@ -52,7 +52,6 @@ $(document).ready(function(){
       $('.Search_loader').show();
       // Do next search (in X milliseconds)
       searchTimeoutID = setTimeout(function(){
-        console.log('help')
         //Ajax hit on search page
         currReqObj = $.ajax({
           url: $form.attr('action'),
@@ -64,7 +63,6 @@ $(document).ready(function(){
           dataType: "json",
           success: function(data){
 //             currReqObj = null;
-            console.log('successs',data)
             $('.note').remove();
             data = JSON.stringify(data);
             if(data.results_total == 0) {
@@ -82,7 +80,7 @@ $(document).ready(function(){
               if(_drawer != 'small_search '){
                 $row += '<h5>Products</h5>';
               }
-              var results = JSON.stringify(data['results'])
+              var results = JSON.stringify(data.results)
               console.log('thhere',results)
               $.each(results, function(index, item){
                 console.log('hereaaaaa',JSON.stringify(item.itemHtml))
