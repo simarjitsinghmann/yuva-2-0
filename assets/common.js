@@ -834,7 +834,7 @@ $(document).ready(function()
 
         productVariants();
         showMultipleOptions(); 
-      },500)
+      },1500)
     });
   });
 
