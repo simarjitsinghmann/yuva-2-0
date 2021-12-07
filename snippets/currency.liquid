@@ -1,7 +1,7 @@
 <localization-form>
   {% form 'localization' %}
-    <div class="disclosure">
-      <button type="button" class="disclosure__button" aria-expanded="false" aria-controls="CountryList">
+    <div class="disclosure btn-group currency-dropdown">
+      <button type="button" class="disclosure__button dropdown-toggle dropdown-label" aria-expanded="false" aria-controls="CountryList">
         {{ localization.country.name }} ({{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }})
 
         <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
@@ -23,7 +23,21 @@
     </div>
   {% endform %}
 </localization-form>
-
+<div class="btn-group currency-dropdown">
+        <label class="dropdown-toggle dropdown-label" data-language-label="">AUD</label>
+        <div class="dropdown-menu currency-menu" id="currencies" style="display: none;">
+          <a class="dropdown-item" href="javascript:void(0)" data-currency="aud"><span class="text">AUD</span></a>
+          <a class="dropdown-item" href="javascript:void(0)" data-currency="cad"><span class="text">CAD</span></a>
+          <a class="dropdown-item" href="javascript:void(0)" data-currency="dkk"><span class="text">DKK</span></a>
+          <a class="dropdown-item" href="javascript:void(0)" data-currency="gbp"><span class="text">GBP</span></a>
+          <a class="dropdown-item" href="javascript:void(0)" data-currency="hkd"><span class="text">HKD</span></a>
+          <a class="dropdown-item" href="javascript:void(0)" data-currency="jpy"><span class="text">JPY</span></a>
+          <a class="dropdown-item" href="javascript:void(0)" data-currency="nzd"><span class="text">NZD</span></a>
+          <a class="dropdown-item" href="javascript:void(0)" data-currency="sek"><span class="text">SEK</span></a>
+          <a class="dropdown-item" href="javascript:void(0)" data-currency="sgd"><span class="text">SGD</span></a>
+          <a class="dropdown-item" href="javascript:void(0)" data-currency="usd"><span class="text">USD</span></a>
+        </div>
+      </div>
 
 <script>
 class LocalizationForm extends HTMLElement {
