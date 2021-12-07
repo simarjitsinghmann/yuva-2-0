@@ -908,7 +908,9 @@ span.tag-line {
 .price__regular span[data-compare-price] {
    font-weight: var(--normal);
    color: rgba(7, 7, 7, 0.6);
-   margin-left: 3px;
+   font-size: 12px;
+}
+.product-information__wrapper .percent-off {
    font-size: 12px;
 }
 .product__view__option li button svg.svg-loader {
@@ -1130,10 +1132,6 @@ border: 1px solid #000;
 }
 .product-information__wrapper a {
    color: var(--dark-gray);
-}
-.product-information__wrapper .percent-off {
-   font-size: 12px;
-   margin-left: 5px;
 }
 #CollectionProductsContainer[data-view="grid-layout-4"]
    .products-grid
