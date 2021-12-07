@@ -5,6 +5,9 @@
     {%else%}
     {% include 'banner-placeholder'%}
     {% endif %} 
+{% if block.settings.image_mob != blank %}
+<img class="slide-image-mobile" data-lazy="{{block.settings.image_mob | img_url:'master'}}" alt="">
+{% endif %}
     <div class="banner-caption ">
       <div class="container">
         	<div class="banner-caption-outer">
@@ -81,6 +84,11 @@
          "type":"image_picker",
          "id":"image",
          "label":"t:sections.banner-section.settings.image.label"
+      },
+      {
+         "type":"image_picker",
+         "id":"image_mob",
+         "label":"t:sections.banner-section.settings.image_mob.label"
       },
       {
          "type":"text",
