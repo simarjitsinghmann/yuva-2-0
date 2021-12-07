@@ -3,7 +3,7 @@
     {% if section.settings.image != blank %}
     <img src="{{section.settings.image | img_url:'master'}}" alt="">
     {%else%}
-    {% include 'banner-placeholder'%}
+    <div class="{% if block.settings.image_mob != blank %}slide-image-desktop{% endif %}">{% render 'banner-placeholder'%}</div>
     {% endif %} 
 {% if section.settings.image_mob != blank %}
 <img class="slide-image-mobile" data-lazy="{{section.settings.image_mob | img_url:'master'}}" alt="">
