@@ -75,29 +75,16 @@ $(document).ready(function(){
               //Numerous results
               $resultsBox.empty();
               var $row='';
-		
+
               if(_drawer != 'small_search '){
                 $row += '<h5>Products</h5>';
               }
               $.each(data.results, function(index, item){
-                $row +=`<div class="grid-item col collection-product-grid">
-<div class="card-wrapper">
-<div class="card card--text-only card--soft card--product text__left">
-<div class="card-wrapper-img">
-<a href="${item.url}">
-<img src="${item.thumb}" alt="${item.title}">        
-</a>
-</div>
-<div class="product-information">
-<div class="product-information__wrapper">
-<a href="${item.url}"><div class="caption-with-letter-spacing light"title="${item.title}">${item.title}</div></a>
-</div>
-
-</div>
-</div>
-</div>
-</div>
-`;
+                $row +=`<a href="${item.url}" class="searc-item-box">
+<div class="img"><img src="${item.thumb}" /></div>
+<div class="title_price">
+<div class="d-title">${item.title}</div>
+<div class="d-price">${Shopify.formatMoney(item.price, moneyFormat)}</div></div></a>`;
                 //$row.append('<div class="d-price">'+Shopify.formatMoney(item.price, "")+'</div></div>`;
 
 
