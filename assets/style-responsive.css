@@ -1425,9 +1425,12 @@
     min-height: 42px;
     font-size: 13px;
   }
+  .shopify__top__section h2, .title {
+      margin-bottom: 15px;
+  }
   .collection-section-header {
-    margin-bottom: 10px;
-}
+      margin-bottom: 10px;
+  }
   /*  common end  */
   #CollectionProductsContainer[data-view="grid-layout-2"]
     .products-grid
