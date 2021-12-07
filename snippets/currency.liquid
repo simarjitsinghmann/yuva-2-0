@@ -9,7 +9,7 @@
         </svg>
       </button>
 
-      <ul id="CountryList" role="list" class="disclosure__list" hidden>
+      <ul id="CountryList" role="list" class="disclosure__list dropdown-menu currency-menu" hidden>
         {% for country in localization.available_countries %}
           <li class="disclosure__item" tabindex="-1">
             <a href="#"{% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
