@@ -1,10 +1,10 @@
 {% if block.settings.image != blank %}
 <img class="{% if block.settings.image_mob != blank %}slide-image-desktop{% endif %}" data-lazy="{{block.settings.image | img_url:'master'}}" alt="">
 {%else%}
-{% render 'banner-placeholder'%}
+<div class="{% if block.settings.image_mob != blank %}slide-image-desktop{% endif %}">{% render 'banner-placeholder'%}</div>
 {% endif %} 
 {% if block.settings.image_mob != blank %}
-<img class="slide-image-mobie}" data-lazy="{{block.settings.image_mob | img_url:'master'}}" alt="">
+<img class="slide-image-mobile" data-lazy="{{block.settings.image_mob | img_url:'master'}}" alt="">
 {% endif %}
 <div class="carousel-caption">
   <div class="container">
