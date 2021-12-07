@@ -91,7 +91,6 @@
     {% include 'mini-cart' %}
     
     {% endif %}
-    <localization-form>
   {% form 'localization' %}
     <div class="disclosure">
       <button type="button" class="disclosure__button" aria-expanded="false" aria-controls="CountryList">
@@ -115,7 +114,19 @@
       <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
     </div>
   {% endform %}
-</localization-form>
+       {% form 'localization' %}
+  <select name="language_code">
+    {% for language in localization.available_languages %}
+      <option value="{{ language.iso_code }}"
+        {%- if language == localization.language %} selected="selected"{% endif %}
+      >
+       {{ localization.country.name }} ({{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }})
+      </option>
+    {% endfor %}
+  </select>
+
+  <input type="submit" value="Update">
+{% endform %}
     <style>
       form button[type="submit"]:not([name="checkout"]) {
         position: relative;
