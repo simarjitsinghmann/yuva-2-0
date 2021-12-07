@@ -1,5 +1,6 @@
 <localization-form>
   {% form 'localization' %}
+  <div class="currency-block">
     <div class="disclosure btn-group currency-dropdown">
       <button type="button" class="disclosure__button dropdown-toggle dropdown-label" aria-expanded="false" aria-controls="CountryList">
         {{ localization.country.currency.iso_code }}
@@ -17,6 +18,7 @@
 
       <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
     </div>
+  </div>
   {% endform %}
 </localization-form>
 <!-- <div class="btn-group currency-dropdown">

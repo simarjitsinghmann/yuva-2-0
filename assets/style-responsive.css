@@ -1574,10 +1574,10 @@
   .collection-list-view-card h2, .collection-list-view-card h4 {
   	color: var(--black);
   }
-  .collection-list-view-card a.link {
-  	background-color: var(--black);
-      color: var(--white)!important;
-  }
+ .collection-list-view-card a.link {
+    background-color: transparent;
+    padding: 0;
+}
   .collection-list-view-card h2 {
     font-size: 17px;
 }
