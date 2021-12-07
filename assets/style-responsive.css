@@ -1503,7 +1503,8 @@
   .collection__right__list {
       max-height: initial;
   }
-  .collection__right__list .grid__item__list {
+  .collection__right__list .grid__item__list,
+  .card__warpper__detail.left__sided{
     height: 140px;
     border-radius: 8px;
 }
