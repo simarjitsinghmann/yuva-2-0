@@ -44,11 +44,9 @@
       
       <div class="blog-multi-slide mobile" role="list">  
         <div class="">
-          <div id="featuredBlog-{{section.id}}-mobile" class="blog__post grid grid--1-col grid--2-col-tablet grid--3-col-desktop">     
-            {%-assign count = 0 -%}
-            {% for block in section.blocks %}  
+          <div id="featuredBlog-{{section.id}}-mobile" class="blog__post grid grid--1-col grid--2-col-tablet grid--3-col-desktop">
+            {% for block in section.blocks limit:1 %}  
             {% if block.settings.article != blank %}  
-             {%-assign count = 1 -%}
             {% assign article = block.settings.article %}
             {% include 'featured-article-grid' %}
             {% else %}
@@ -72,6 +70,7 @@
               </div>
             </div>
             {% endif %}
+            
             {% endfor %}
           </div>
         </div>
