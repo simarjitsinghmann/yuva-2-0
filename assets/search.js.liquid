@@ -54,21 +54,15 @@ $(document).ready(function(){
       searchTimeoutID = setTimeout(function(){
         //Ajax hit on search page
         currReqObj = $.ajax({
-          url: $form.attr('action')+'/suggest.json',
+          url: $form.attr('action'),
           data: {
+            type: 'product',
+            view: 'json',
             q: term,
-            resources: {
-              type: "product",
-              options: {
-                unavailable_products: "hide"
-              }
-            }
           },
           dataType: "json",
           success: function(data){
-            console.log('test',data)
             currReqObj = null;
-            return false;
             $('.note').remove();
             if(data.results_total == 0) {
               //No results
