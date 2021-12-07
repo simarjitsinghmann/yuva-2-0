@@ -64,6 +64,7 @@ $(document).ready(function(){
           dataType: "json",
           success: function(data){
 //             currReqObj = null;
+            console.log('successs',data)
             $('.note').remove();
             if(data.results_total == 0) {
               //No results
