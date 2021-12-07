@@ -8,7 +8,7 @@ The final file name would be search.json.liquid
  {% capture output %}
  {% for result in search.results %}
         {% assign product = result %}
-        {% assign current_variant = result %}
+        {% assign current_variant = product.selected_or_first_available_variant %}
 
         <div class="grid-item col collection-product-grid">
           <div class="card-wrapper">
