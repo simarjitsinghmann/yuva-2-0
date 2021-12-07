@@ -81,7 +81,7 @@ $(document).ready(function(){
               }
               data= JSON.stringify(data)
               
-              console.log('thhere',data.results)
+              console.log('thhere',data['results'])
               $.each(data.results, function(index, item){
                 console.log('hereaaaaa')
                 console.log(index,item.id,item.itemHtml)
