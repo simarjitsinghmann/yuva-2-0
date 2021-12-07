@@ -1507,6 +1507,9 @@
       padding:10px;
       background-color:#ececec;;
   }
+  .card__warpper__detail.right__sided .collection-image  img {
+  	border: 2px solid #FFF;
+  }
   .card__warpper__detail.right__sided .collection-detail-right {
     width: 65%;
     display: flex;
@@ -1515,9 +1518,6 @@
     background-color: #ececec;
     border:0;
 }
-  .card__warpper__detail.right__sided .collection-detail-right img {
-  	border: 2px solid #FFF;
-  }
   .card__warpper__detail.left__sided .collection-image {
     max-height: 420px;
 }
