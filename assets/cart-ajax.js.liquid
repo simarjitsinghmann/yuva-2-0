@@ -181,10 +181,10 @@ buildCart = function (cart,showCart) {
       itemAdd: cartItem.quantity + 1,
       itemMinus: cartItem.quantity - 1,
       itemQty: cartItem.quantity,
-      // price: Shopify.formatMoney(cartItem.price, settings.moneyFormat),
+      price: Shopify.formatMoney(cartItem.price, settings.moneyFormat),
       vendor: cartItem.vendor,
       linePrice: Shopify.formatMoney(cartItem.line_price, moneyFormat),
-      // originalLinePrice: Shopify.formatMoney(cartItem.original_line_price, settings.moneyFormat),
+      originalLinePrice: Shopify.formatMoney(cartItem.original_line_price, settings.moneyFormat),
       discounts: cartItem.discounts,
       discountsApplied: cartItem.line_price === cartItem.original_line_price ? false : true
     };
@@ -212,7 +212,7 @@ buildCart = function (cart,showCart) {
     shipPendingPercentage:shipPendingPercentage+'%',
     total:cart.total_price, 
     totalPrice: Shopify.formatMoney(cart.total_price, moneyFormat),
-    totalCartDiscount: cart.total_discount === 0 ? 0 : `"translation missing: en.cart.general.savings_html"`.replace('[savings]',),
+    // totalCartDiscount: cart.total_discount === 0 ? 0 : `"translation missing: en.cart.general.savings_html"`.replace('[savings]',),
     totalCartDiscountApplied: cart.total_discount === 0 ? false : true
   }
   $('[data-cart-count]').show();
