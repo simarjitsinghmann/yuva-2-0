@@ -897,10 +897,13 @@ span.tag-line {
    cursor: not-allowed;
 }
 .product-information__wrapper .price-item {
-   font-size: 13px;
-   font-weight: var(--semibold);
-   color: var(--black);
-   line-height: 20px;
+    font-size: 12px;
+    font-weight: var(--semibold);
+    color: var(--black);
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .price__regular span[data-compare-price] {
    font-weight: var(--normal);
