@@ -9,7 +9,7 @@
       {%-if media.media_type == 'image'-%}
       <div class="item" >
         <div class="quickview_product_img">
-          <img src="{{media | img_url:'master'}}" alt="">
+          <img src="{{media | img_url:'master'}}" alt="{{ media.preview_image.alt | escape }}">
         </div>
       </div>
       {%-endif-%}
