@@ -57,12 +57,13 @@ $(document).ready(function(){
           url: $form.attr('action'),
           data: {
             type: 'product',
-            view: 'json',
             q: term,
           },
           dataType: "json",
           success: function(data){
             currReqObj = null;
+            console.log(data)
+            return false;
             $('.note').remove();
             if(data.results_total == 0) {
               //No results
@@ -75,7 +76,7 @@ $(document).ready(function(){
               //Numerous results
               $resultsBox.empty();
               var $row='';
-
+		
               if(_drawer != 'small_search '){
                 $row += '<h5>Products</h5>';
               }
