@@ -9,9 +9,42 @@
         {% endif %}
       </div>
       {% if section.blocks.size > 0  %}
-      <div class="blog-multi-slide " role="list">  
+      <div class="blog-multi-slide desktop" role="list">  
         <div class="">
           <div id="featuredBlog-{{section.id}}" class="blog__post grid grid--1-col grid--2-col-tablet grid--3-col-desktop">         
+            {% for block in section.blocks %}  
+            {% if block.settings.article != blank %}  
+            {% assign article = block.settings.article %}
+            {% include 'featured-article-grid' %}
+            {% else %}
+            <div class="item grid__item style1">
+              <div class="post-wrapper">
+                <div class="post-information">
+                  {% assign article_image = 'featured_image.png' | asset_url %}                
+                  <div class="post-information-image">
+                    <img src="{{article_image}}" alt="">
+                  </div>
+                  <div class="post-information__wrapper text__left">
+                    <div class="post-date">
+                      <h4 class="custom-title">12  Oct 2021 </h4>
+                    </div>
+                    <div class="post-name">
+                      <h6><a href="">Article Title</a></h6>
+                      <p>Loream ipsum Loream ipsum Loream ipsum</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      
+      <div class="blog-multi-slide mobile" role="list">  
+        <div class="">
+          <div id="featuredBlog-{{section.id}}-mobile" class="blog__post grid grid--1-col grid--2-col-tablet grid--3-col-desktop">         
             {% for block in section.blocks %}  
             {% if block.settings.article != blank %}  
             {% assign article = block.settings.article %}
