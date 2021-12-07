@@ -54,7 +54,7 @@ $(document).ready(function(){
       searchTimeoutID = setTimeout(function(){
         //Ajax hit on search page
         currReqObj = $.ajax({
-          url: $form.attr('action'),
+          url: $form.attr('action')+'/suggest.json',
           data: {
             type: 'product',
             q: term,
