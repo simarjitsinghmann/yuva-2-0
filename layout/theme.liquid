@@ -69,19 +69,7 @@
 
       </main>
       
-       {% form 'localization' %}
-  <select name="language_code">
-        {% for country in localization.available_countries %}
-      <option value="{{ country.iso_code }}"
-        {% if country.iso_code == localization.country.iso_code %}  selected="selected"{% endif %}
-      >
-      {{ country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})
-      </option>
-    {% endfor %}
-  </select>
-
-  <input type="submit" value="Update">
-{% endform %}
+{% include 'currency' %}
       {% section 'footer' %}
 
       {% include 'search-drawer' %}
