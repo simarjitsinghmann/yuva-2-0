@@ -80,25 +80,7 @@ $(document).ready(function(){
                 $row += '<h5>Products</h5>';
               }
               $.each(data.results, function(index, item){
-                $row +=`<div class="grid-item col collection-product-grid searc-item-box">
-                      <div class="card-wrapper">
-                        <div class="card card--text-only card--soft card--product text__left">
-                          <div class="card-wrapper-img">
-                            <a href="${item.url}">
-                            <img src="${item.thumb}" alt="${item.title}">        
-                            </a>
-                          </div>
-                          <div class="product-information">
-                            <div class="product-information__wrapper">
-                            	<a href="${item.url}">
-									<div class="caption-with-letter-spacing light"title="${item.title}">${item.title}</div>
-								</a>
-                            </div>
-
-                          </div>
-                        </div>
-                      </div>
-                    </div>`;
+                $row +=JSON.stringify(item.itemHtml);
                 //$row.append('<div class="d-price">'+Shopify.formatMoney(item.price, "")+'</div></div>`;
 
 
