@@ -1490,8 +1490,11 @@
   .card-wrapper.left-sided .card__warpper__detail.left__sided {
   	margin-bottom:12px;
   }
+  .collection__right__list {
+      max-height: initial;
+  }
   .collection__right__list .grid__item__list {
-    height: auto;
+    height: 120px;
 }
     .card__warpper__detail.right__sided .collection-image {
       width: 30%;
