@@ -81,7 +81,9 @@ $(document).ready(function(){
               }
               data= JSON.stringify(data)
               var results = JSON.stringify(data.results)
+              console.log('thhere')
               $.each(results, function(index, item){
+                console.log('hereaaaaa')
                 console.log(index,item.id,item.itemHtml)
                 $row +=JSON.stringify(item.itemHtml);
                 //$row.append('<div class="d-price">'+Shopify.formatMoney(item.price, "")+'</div></div>`;
@@ -99,7 +101,7 @@ $(document).ready(function(){
 
               });
               $resultsBox.html($row);
-
+              console.log('here')
 
               localStorage.setItem("Recent_search", JSON.stringify(retrievedSearch_v));                          
               $('.searc-item-box').wrapAll( "<div class='result-list' />" );                         	                          
