@@ -11,8 +11,6 @@
                         {% if collection.url %}
                             <li class="breadcrumb-item"> {{ collection.title | link_to: collection.url }}</li>
                         {% endif %}
-                        <li class="breadcrumb-item"> 
-                            <span>Products</span></li>
                             <li class="breadcrumb-item"> 
                                 <span>{{ product.title | truncatewords:5}}</span></li>
                         {% elsif template contains 'collection' and collection.handle %}
