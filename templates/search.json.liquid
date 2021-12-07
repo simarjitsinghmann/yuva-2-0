@@ -48,7 +48,7 @@ The final file name would be search.json.liquid
 </div>
 {%- endcapture -%}
         {"id":{{result.id}},
-			"itemHtml":"{{productResult | json}}"}
+			"itemHtml":'{{productResult | json}}'}
 {% unless forloop.last %},{% endunless %}
     {% endfor %}
 {% endcapture %}
