@@ -43,26 +43,7 @@
   {% endif %}
   {% if section.settings.show_currency %}
   <div class="select-language">
-    <div class="currency-block">
-      <label class="label-text">
-        Currency
-      </label>
-      <div class="btn-group currency-dropdown">
-        <label class="dropdown-toggle dropdown-label" data-language-label="">AUD</label>
-        <div class="dropdown-menu currency-menu" id="currencies" style="display: none;">
-          <a class="dropdown-item" href="javascript:void(0)" data-currency="aud"><span class="text">AUD</span></a>
-          <a class="dropdown-item" href="javascript:void(0)" data-currency="cad"><span class="text">CAD</span></a>
-          <a class="dropdown-item" href="javascript:void(0)" data-currency="dkk"><span class="text">DKK</span></a>
-          <a class="dropdown-item" href="javascript:void(0)" data-currency="gbp"><span class="text">GBP</span></a>
-          <a class="dropdown-item" href="javascript:void(0)" data-currency="hkd"><span class="text">HKD</span></a>
-          <a class="dropdown-item" href="javascript:void(0)" data-currency="jpy"><span class="text">JPY</span></a>
-          <a class="dropdown-item" href="javascript:void(0)" data-currency="nzd"><span class="text">NZD</span></a>
-          <a class="dropdown-item" href="javascript:void(0)" data-currency="sek"><span class="text">SEK</span></a>
-          <a class="dropdown-item" href="javascript:void(0)" data-currency="sgd"><span class="text">SGD</span></a>
-          <a class="dropdown-item" href="javascript:void(0)" data-currency="usd"><span class="text">USD</span></a>
-        </div>
-      </div>
-    </div>
+{% include 'currency' %}
   </div>
   {% endif %}
 </div>
