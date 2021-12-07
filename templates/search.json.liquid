@@ -48,13 +48,13 @@ The final file name would be search.json.liquid
 </div>
 {%- endcapture -%}
 {"id":{{result.id}},
-"itemHtml":{{productResult | json}}
+"itemHtml":{{productResult | strip_newlines }}
 }
-{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-{% endcapture %}
+{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+{%- endcapture -%}
 
 {% comment %} Output the json object{% endcomment %} 
-{"results_total":{{paginate.items}},"results":[{{ output }}]}
+{"results_total":{{paginate.items}},"results":[{{ output | strip_newlines }}]}
 
 {%- endpaginate -%}
