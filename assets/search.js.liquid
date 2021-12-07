@@ -79,8 +79,6 @@ $(document).ready(function(){
               if(_drawer != 'small_search '){
                 $row += '<h5>Products</h5>';
               }
-              data= JSON.stringify(data)
-              
               console.log('thhere',data['results'])
               $.each(data.results, function(index, item){
                 console.log('hereaaaaa')
