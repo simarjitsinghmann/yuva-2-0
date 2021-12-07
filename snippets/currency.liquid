@@ -2,11 +2,8 @@
   {% form 'localization' %}
     <div class="disclosure btn-group currency-dropdown">
       <button type="button" class="disclosure__button dropdown-toggle dropdown-label" aria-expanded="false" aria-controls="CountryList">
-        {{ localization.country.name }} ({{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }})
+        {{ localization.country.currency.iso_code }}
 
-        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-        </svg>
       </button>
 
       <ul id="CountryList" role="list" class="disclosure__list dropdown-menu currency-menu" hidden>
@@ -23,7 +20,7 @@
     </div>
   {% endform %}
 </localization-form>
-<div class="btn-group currency-dropdown">
+<!-- <div class="btn-group currency-dropdown">
         <label class="dropdown-toggle dropdown-label" data-language-label="">AUD</label>
         <div class="dropdown-menu currency-menu" id="currencies" style="display: none;">
           <a class="dropdown-item" href="javascript:void(0)" data-currency="aud"><span class="text">AUD</span></a>
@@ -37,7 +34,7 @@
           <a class="dropdown-item" href="javascript:void(0)" data-currency="sgd"><span class="text">SGD</span></a>
           <a class="dropdown-item" href="javascript:void(0)" data-currency="usd"><span class="text">USD</span></a>
         </div>
-      </div>
+      </div> -->
 
 <script>
 class LocalizationForm extends HTMLElement {
