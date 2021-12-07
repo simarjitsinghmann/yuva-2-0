@@ -50,5 +50,5 @@ The final file name would be search.json.liquid
 {% endcapture %}
 
 {% comment %} Output the json object {% endcomment %}
-{"results_total":{{paginate.items}},"results":[{{ output | strip_newlines }}]}
+{"results_total":{{paginate.items}},"results":[{{ output | json }}]}
 {% endpaginate %}
