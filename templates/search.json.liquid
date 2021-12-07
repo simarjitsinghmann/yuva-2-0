@@ -4,7 +4,7 @@ The final file name would be search.json.liquid
 {% endcomment %}
 {% layout none %}
 {% comment %} Inspired by: http://ecommerce.shopify.com/c/ecommerce-design/t/diy-implementing-autocomplete-with-search-144104 {% endcomment %}
-{% paginate search.results by 10 %}
+{%- paginate search.results by 10 -%}
  {% capture output %}
  {% for result in search.results %}
         {% assign resultURL = result.url %}
@@ -54,5 +54,5 @@ The final file name would be search.json.liquid
 {% endcapture %}
 
 {% comment %} Output the json object {% endcomment %}
-{"results_total":{{paginate.items}},"results":[{{ output | strip_newlines }}]}
-{% endpaginate %}
+{%- raw -%}{"results_total":{{paginate.items}},"results":[{{ output | strip_newlines }}]}{%- endraw -%}
+{%- endpaginate -%}
