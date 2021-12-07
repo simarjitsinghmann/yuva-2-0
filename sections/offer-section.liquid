@@ -50,6 +50,24 @@
     }
   }
 </style>
+  <script type="application/json" name="slider-json">
+         {
+          "slidesToShow":1,
+          "slidesToScroll":1,
+          "lazyLoad": "ondemand",
+          "infinite":true,
+          "margin":0,
+            "speed": 1000,
+            "fade": true,
+            "cssEase": "linear",
+         "dots":{{-section.settings.dots-}},
+          "autoplay":{{-section.settings.rotate-}},
+          "arrows":{{-section.settings.arrows-}},
+          "autoplaySpeed":{{-section.settings.rotate_speed | times:1000-}},
+          "prevArrow":"<button type=\"button\" class=\"slick-prev\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M15.526 18.966L8.559 12l6.967-6.967\"></path></svg></span></button>",
+          "nextArrow":"<button type=\"button\" class=\"slick-next\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M8.474 18.966L15.44 12 8.474 5.033\"></path></svg></span></button>"
+        }
+      </script>
 {% schema %}
 {
   "name": "t:sections.offer-section.name",
