@@ -1447,7 +1447,13 @@
   .card__warpper__detail.right__sided .collection-detail-right img {
   	border: 2px solid #FFF;
   }
-  .grid__item__list:first-child .card__warpper__detail.right__sided .collection-detail-right{
+  .collection-list-section .grid__item__list:nth-child(1) .card__warpper__detail.right__sided .collection-detail-right{
+  	background-color: #f556562e;
+  }
+  .collection-list-section .grid__item__list:nth-child(2) .card__warpper__detail.right__sided .collection-detail-right{
+  	background-color: #f556562e;
+  }
+  .collection-list-section .grid__item__list:nth-child(3) .card__warpper__detail.right__sided .collection-detail-right{
   	background-color: #f556562e;
   }
   /*  common end  */
