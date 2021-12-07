@@ -1170,11 +1170,11 @@
       outline: 0;
   }
   .offer-section .slick-list {
-  	margin:0 -8px;
+  	margin:0 -12px;
   }  
   .offer-section .slick-slide {
-      padding-left: 8px;
-      padding-right: 8px;
+      padding-left: 6px;
+      padding-right: 6px;
   }
   /*   whats more css end */
   #CollectionProductsContainer[data-view="grid-layout-2"]
@@ -1466,6 +1466,9 @@
     height: 20px;
   }
   /*  ============= footer css end =============  */
+  .card-information__wrapper p {
+    font-size: 13px;
+}
 /*  colection list css start  */
   .collection-gutter .grid--2-col {
     width: 100%;
