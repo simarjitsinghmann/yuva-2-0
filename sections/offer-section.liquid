@@ -5,9 +5,9 @@
         <small>{{section.settings.subheading}}</small>
         <h2>{{section.settings.heading}}</h2>
       </div>
-      <ul class=" {% if section.settings.style == 'style2' %}style_variation_2{% endif %}" role="list" data-slider>
+      <div class=" {% if section.settings.style == 'style2' %}style_variation_2{% endif %}" role="list" data-slider>
         {% for block in section.blocks%}
-        <li id="offer-block-{{block.id}}"  class=" slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
+        <div id="offer-block-{{block.id}}"  class=" slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
           <div class="card-wrapper">
             <div class="card-information">
               <div class="card-information-image">
@@ -31,9 +31,9 @@
               {% endunless %}
             </div>
           </div>
-        </li>
+        </div>
         {% endfor%}
-      </ul>
+      </div>
     </div>
   </div>
 </div>
