@@ -51,7 +51,13 @@
                         {%- endif -%}
                         {%- endfor -%}
                       </div>
-                      
+                      <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                      {%- for discount in item.discounts -%}
+                        <li class="discounts__discount">
+                          {{ discount.title }}
+                        </li>
+                      {%- endfor -%}
+                    </ul>
                        
                     </td>
                     <td class="cart-qty">
