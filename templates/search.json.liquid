@@ -53,6 +53,8 @@ The final file name would be search.json.liquid
     {% endfor %}
 {% endcapture %}
 
-{% comment %} Output the json object {% endcomment %}
-{%- raw -%}{"results_total":{{paginate.items}},"results":[{{ output }}]}{%- endraw -%}
+{% comment %} Output the json object 
+{% raw %}{"results_total":{{paginate.items}},"results":[{{ output }}]}{% endraw %}{% endcomment %}
+{"results_total":8,
+"results":112312}
 {%- endpaginate -%}
