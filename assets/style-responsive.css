@@ -1169,6 +1169,11 @@
   .card-information__wrapper.content-border-true {
       outline: 0;
   }
+    .offer-section .grid__item {
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-bottom: 0;
+  }
   /*   whats more css end */
   #CollectionProductsContainer[data-view="grid-layout-2"]
     .products-grid
@@ -1444,11 +1449,7 @@
     min-height: 150px;
   }
 /*  whats more css start  */
-  .offer-section .grid__item {
-    padding-left: 3px;
-    padding-right: 3px;
-    padding-bottom: 0;
-}
+
 /*  whats more css end  */
   /*  ============= footer css start =============  */
   .yuva-logo {
