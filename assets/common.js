@@ -459,7 +459,7 @@ $(document).ready(function(){
     drawer.classList.add('similar_product');
     drawer.classList.add('searching');
     document.querySelector('body').classList.add('side_Drawer_open');     
-    drawer.querySelector('[data-drawer-body]').innerHTML ='';
+    drawer.querySelector('[data-drawer-body]').innerHTML =preLoadLoadGif;
     drawer.querySelector('[data-drawer-title]').innerHTML ='Similar Products';
     var getID = $(this).attr('data-id'); 
     var getSection = $(this).attr('data-section'); 
