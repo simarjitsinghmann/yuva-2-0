@@ -18,7 +18,7 @@
       {%-if media.media_type == 'image'-%}
       <div class="item" data-id="media-{{media.id}}">
         <div class="quickview_product_img_thumb">
-          <img src="{{image | img_url:'100x'}}" alt="">
+          <img src="{{media | img_url: '150x'}}" alt="{{ media.preview_image.alt | escape }}">
         </div>
       </div>
       {%-endif-%}
