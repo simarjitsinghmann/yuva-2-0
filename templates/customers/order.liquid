@@ -38,12 +38,13 @@
                       data-label="{{ 'customer.order.product' | t }}"
                       colspan="2"
                       >
+                    <div class="line-item-details">
                     {% if line_item.image != blank %}
-                    <a class="lineItemImage" href="{{ line_item.product.url }}">
+                    <a class="line-item-image" href="{{ line_item.product.url }}">
                       <img src="{{line_item.image | img_url :'100x' }}">
                     </a>
                     {% endif %}
-                    <div>
+                    <div class="line-item-info">
                       {%- if line_item.product.url != blank -%}
                       <a href="{{ line_item.product.url }}">{{ line_item.title }}</a>
                       {%- else -%}
@@ -106,6 +107,7 @@
                         </span>
                       </div>
                       {%- endif -%}
+                    </div>
                     </div>
                   </td>
                   <td
