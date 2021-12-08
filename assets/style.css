@@ -465,8 +465,7 @@ span.tag-line {
    max-height: 300px;
    height: 100%;
 }
-
-.card-information .card-information__wrapper .offer-name span {
+/* .card-information .card-information__wrapper .offer-name span {
    font-family: var(--font-family);
    color: var(--theme-color);
    font-weight: bold;
@@ -481,13 +480,13 @@ span.tag-line {
    margin: 4px 0 1px;
    text-transform: capitalize;
    font-weight: var(--medium);
-}
+} */
 .card-information__wrapper {
    position: absolute;
    width: 195px;
    margin: 0 auto;
    background: var(--white);
-   padding: 24px;
+   padding: 25px;
 }
 .card-information__wrapper.content-border-true {
    outline: 2px dashed #c4c4c4;
@@ -504,11 +503,6 @@ span.tag-line {
    margin: 17px 0 18px;
    color: rgba(0, 0, 0, 0.6);
 }
-.category-list h3 {
-   padding-bottom: 25px;
-   font-weight: var(--bold);
-}
-
 /*============== variation 2 start ===============*/
 .style_variation_2 .card-information__wrapper {
    position: absolute;
