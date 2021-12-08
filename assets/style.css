@@ -1707,14 +1707,14 @@ a.wishlist-view .fas {
    -ms-flex: 0 0 20%;
    width: 20%;
 }
+.instagram-post-detail {
+   position: relative;
+   overflow: hidden;
+}
 .instagram-post-detail img {
    width: 100%;
    transform: scale(1);
    transition: 2s;
-}
-.instagram-post-detail {
-   position: relative;
-   overflow: hidden;
 }
 .instagram-post-detail .insta-icon {
    background: rgba(0, 0, 0, 0.6);
@@ -1741,11 +1741,6 @@ a.wishlist-view .fas {
 .instagram-post-detail:hover img {
    transform: scale(1.2);
    transition: 2s;
-}
-.instagram-post .shopify__top__section p {
-   margin-bottom: 10px;
-   text-align: center;
-   margin-top: 3px;
 }
 .instagramUserName {
     color: #999;
