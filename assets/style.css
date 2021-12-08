@@ -3337,27 +3337,9 @@ section.store__support {
   border-color: #000;
   color: #fff;
 }
-.quantity .q_down {
-   line-height: 50px;
-}
-.quantity .mini_q_up.sd_mini_quantity,
-.quantity .q_up {
-   right: 0;
-}
-.quantity svg {
-   fill: black;
-   height: 8px;
-   width: 10px;
-   opacity: 1;
-}
-.quantity .mini_q_down.sd_mini_quantity,
-.quantity .q_down {
-   left: 0;
-}
 button.Sd_addProduct:disabled {
    pointer-events: none;
 }
-
 .product-add-to-cart-right .form-group .btn-box {
    display: flex; /* margin: 0 0 25px; */
    align-items: center;
