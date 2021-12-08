@@ -551,18 +551,19 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
           var paymentButtonWrapper = _productParent.querySelector('.Sd_addProduct');
           var preorderStatus = buttonWrapper.getAttribute('data-preorder');
           var paymentButton = paymentButtonWrapper.querySelector('span');
+		console.log(getVariant.inventory_quantity)
           var advancePayment = paymentButtonWrapper.querySelector('.shopify-payment-button');
           if(getVariant != undefined){
             if(getVariant.featured_media != null){
               var image= getVariant.featured_media.id; 
               var imageSource = _productParent.querySelector("[data-id='media-"+image+"']");
               
+		console.log(image,imageSource)
               if(imageSource){
                 imageSource.click();
               }
             }
             
-		console.log(getVariant.inventory_quantity,image,imageSource)
             _productParent.querySelector('[name="id"]').value = getVariant.id;
             var priceContainer=_productParent.querySelector('[data-price-wrapper]');
             var showSavedAmount = '';
