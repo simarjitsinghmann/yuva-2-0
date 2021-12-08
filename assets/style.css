@@ -444,6 +444,14 @@ span.tag-line {
 .offer-section .slick-slide {
     padding: 0 15px;
 }
+.card-wrapper {
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   position: relative;
+   height: 100%;
+}
 .card-information .card-information-image {
    position: relative;
    transition: all 0.3s ease 0s;
@@ -566,14 +574,6 @@ span.tag-line {
    display: flex;
    -ms-flex-wrap: wrap;
    flex-wrap: wrap;
-}
-.card-wrapper {
-   display: -ms-flexbox;
-   display: flex;
-   -ms-flex-wrap: wrap;
-   flex-wrap: wrap;
-   position: relative;
-   height: 100%;
 }
 .collection-detail h2 {
    font-family: var(--font-family);
