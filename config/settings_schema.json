@@ -90,14 +90,14 @@
         ]
       },
       {
-        "type": "font_picker",
-        "id": "type_font_family",
-        "label": "Font",
-        "default": "joanna_sans_nova_n3"
-      },
-      {
         "type": "header",
         "content": "Headings"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_heading_font_family",
+        "label": "Font",
+        "default": "joanna_sans_nova_n3"
       },
       {
         "type": "select",
@@ -154,6 +154,12 @@
       {
         "type": "header",
         "content": "Body text"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_base_font_family",
+        "label": "Font",
+        "default": "joanna_sans_nova_n3"
       },
       {
         "type": "select",
