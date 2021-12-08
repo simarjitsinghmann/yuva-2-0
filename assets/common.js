@@ -604,10 +604,10 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
               }
               if(paymentButton){
                 if(preorder && getVariant.inventory_policy == "continue" && getVariant.inventory_quantity <= 0 ){
-                paymentButton.innerHTML  = preorderText;
+                  paymentButton.innerHTML  = preorderText;
                 }
                 else{
-                paymentButton.innerHTML  = addToCartText;
+                  paymentButton.innerHTML  = addToCartText;
                 }
               }
             }else{
