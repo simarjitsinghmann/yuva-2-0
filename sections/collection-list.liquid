@@ -51,13 +51,13 @@
               <div class="card__warpper__detail right__sided block-{{forloop.index}}">                                        
                 {{image_content}}
                 <div class="collection-detail-right">
-                  <h5>
+                  <h4>
                     {% if block.settings.custom == false %}
                     {{collection.title}}
                     {% elsif block.settings.custom and block.settings.heading != blank  %}
                     {{block.settings.heading}}
                     {% endif %}
-                  </h5>
+                  </h4>
                   <small>
                     {% if block.settings.custom == false %}
                     {{collection.description | strip_html | truncatewords: 15, "" }}
