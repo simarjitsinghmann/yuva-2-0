@@ -207,6 +207,7 @@ buildCart = function (cart,showCart) {
          title:cartDiscount.title,
          price:Shopify.formatMoney(cartDiscount.total_allocated_amount, moneyFormat)
        }
+       cartDiscounts.push(discount);
      });
   
   // Gather all cart data and add to DOM
