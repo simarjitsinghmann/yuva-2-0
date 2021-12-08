@@ -16,7 +16,7 @@
             {% assign article = block.settings.article %}
             {% include 'featured-article-grid' %}
             {% else %}
-            <div class="item grid__item style1">
+            <div class="item grid__item">
               <div class="post-wrapper">
                 <div class="post-information">
                   {% assign article_image = 'featured_image.png' | asset_url %}                
@@ -47,7 +47,7 @@
             {% assign article = block.settings.article %}
             {% include 'featured-article-grid' desc_limit:30 %}
             {% else %}
-            <div class="item grid__item style1">
+            <div class="item grid__item">
               <div class="post-wrapper">
                 <div class="post-information">
                   {% assign article_image = 'featured_image.png' | asset_url %}                
