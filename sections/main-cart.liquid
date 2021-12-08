@@ -27,10 +27,14 @@
                     <td class="cart-prd-details">
                        
                       <a href="{{item.url}}"><h5>{{item.product.title | truncatewords:5}}</h5></a>
+                      <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                        {%- for discount in item.discounts -%}
+                        <li class="discounts__discount">
+                          {{ discount.title }}
+                        </li>
+                        {%- endfor -%}
+                      </ul>
                       <div class="cart-item-product-details">
-                        {% if item.sku != blank %}
-                        <span>SKU: {{item.sku}}</span>
-                        {% endif %}
                         {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
                         {% for option in item.options_with_values %}
                         <span>{{option.name}}: {{option.value}}</span>
@@ -51,13 +55,6 @@
                         {%- endif -%}
                         {%- endfor -%}
                       </div>
-                      <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-                      {%- for discount in item.discounts -%}
-                        <li class="discounts__discount">
-                          {{ discount.title }}
-                        </li>
-                      {%- endfor -%}
-                    </ul>
                        
                     </td>
                     <td class="cart-qty">
