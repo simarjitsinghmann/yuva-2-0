@@ -64,16 +64,6 @@ h5 {
   color: var(--color-foreground);
   line-height: 1.3;
 }
-.caption {
-  font-size: 1rem;
-  letter-spacing: 0.07rem;
-  line-height: 1.7;
-}
-@media screen and (min-width: 750px) {
-  .caption {
-    font-size: 1.2rem;
-  }
-}
 .caption-with-letter-spacing {
   font-size: 1rem;
   letter-spacing: 0.13rem;
@@ -102,21 +92,6 @@ table:not([class]) td,
 table:not([class]) th {
   padding: 1em;
   border: 0.1rem solid var(--color-foreground-20);
-}
-@media screen and (max-width: 749px) {
-  .small-hide {
-    display: none !important;
-  }
-}
-@media screen and (min-width: 750px) and (max-width: 989px) {
-  .medium-hide {
-    display: none !important;
-  }
-}
-@media screen and (min-width: 990px) {
-  .large-up-hide {
-    display: none !important;
-  }
 }
 .center {
   text-align: center;
@@ -192,21 +167,6 @@ polyline:empty {
 .circle-divider:last-of-type::after {
   display: none;
 }
-
-hr {
-  border: none;
-  height: 0.1rem;
-  background-color: var(--color-foreground-20);
-  display: block;
-  margin: 5rem 0;
-}
-
-@media screen and (min-width: 750px) {
-  hr {
-    margin: 7rem 0;
-  }
-}
-
 .full-unstyled-link {
   text-decoration: none;
   color: currentColor;
@@ -308,64 +268,6 @@ summary::-webkit-details-marker {
   z-index: 100;
 }
 
-/* base-focus */
-/*
-  Focus ring - default (with offset)
-*/
-
-*:focus-visible {
-  outline: 0.2rem solid var(--color-foreground-50);
-  outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem var(--color-background),
-    0 0 0.5rem 0.4rem var(--color-foreground-30);
-}
-
-/* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
-*:focus {
-  outline: 0.2rem solid var(--color-foreground-50);
-  outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem var(--color-background),
-    0 0 0.5rem 0.4rem var(--color-foreground-30);
-}
-
-/* Negate the fallback side-effect for browsers that support :focus-visible */
-*:focus:not(:focus-visible) {
-  outline: 0;
-  box-shadow: none;
-}
-
-/*
-  Focus ring - inset
-*/
-
-.focus-inset:focus-visible {
-  outline: 0.2rem solid var(--color-foreground-50);
-  outline-offset: -0.2rem;
-  box-shadow: 0 0 0.2rem 0 var(--color-foreground-30);
-}
-
-/* Fallback */
-.focus-inset:focus {
-  outline: 0.2rem solid var(--color-foreground-50);
-  outline-offset: -0.2rem;
-  box-shadow: 0 0 0.2rem 0 var(--color-foreground-30);
-}
-
-.focus-inset:focus:not(:focus-visible) {
-  outline: 0;
-  box-shadow: none;
-}
-
-/*
-  Focus ring - none
-*/
-
-/* Dangerous for a11y - Use with care */
-.focus-none {
-  box-shadow: none !important;
-  outline: 0 !important;
-}
-
 /* component-title */
 .title,
 .title-wrapper-with-link {
@@ -398,15 +300,7 @@ summary::-webkit-details-marker {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-
-@media screen and (min-width: 750px) {
-  .title-wrapper--self-padded-mobile {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 992px) {
   .title,
   .title-wrapper-with-link {
     margin: 5rem 0 3rem;
@@ -447,7 +341,7 @@ summary::-webkit-details-marker {
   flex-shrink: 0;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 992px) {
   .title-wrapper-with-link.title-wrapper-with-link--no-heading {
     display: none;
   }
@@ -470,7 +364,7 @@ summary::-webkit-details-marker {
   list-style: none;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 768px) {
   .grid {
     margin-left: -1rem;
   }
@@ -506,37 +400,32 @@ summary::-webkit-details-marker {
   }
 }
 
-@media screen and (min-width: 750px) and (max-width: 989px) {
+@media screen and (min-width: 750px) and (max-width: 991px) {
   .grid--one-third-max.grid--3-col-tablet .grid__item {
     max-width: 33.33%;
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 992px) {
   .grid--quarter-max.grid--4-col-desktop .grid__item {
     max-width: 25%;
   }
 }
-
 .grid--1-col .grid__item {
   max-width: 100%;
   width: 100%;
 }
-
 .grid--3-col .grid__item {
   width: calc(33.33% - 0.5rem * 2 / 3);
 }
-
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 768px) {
   .grid--3-col .grid__item {
     width: calc(33.33% - 1rem * 2 / 3);
   }
 }
-
 .grid--2-col .grid__item {
   width: calc(50% - 0.5rem / 2);
 }
-
 @media screen and (min-width: 750px) {
   .grid--2-col .grid__item {
     width: calc(50% - 1rem / 2);
@@ -558,19 +447,16 @@ summary::-webkit-details-marker {
   
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 992px) {
   .grid--5-col-desktop .grid__item {
     max-width: 20%;
   }
-  
   .grid--4-col-desktop .grid__item {
     width: calc(25% - 1rem * 3 / 4);
   }
-
   .grid--3-col-desktop .grid__item {
     width: calc(33.33% - 1rem * 2 / 3);
   }
-
   .grid--2-col-desktop .grid__item {
     width: calc(50% - 1rem / 2);
   }
@@ -609,7 +495,7 @@ summary::-webkit-details-marker {
   }
 }
 
-@media screen and (min-width: 750px) and (max-width: 989px) {
+@media screen and (min-width: 750px) and (max-width: 991px) {
   .slider--tablet.grid--peek .grid__item {
     width: calc(25% - 4rem * 3 / 4);
   }
