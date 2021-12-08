@@ -4973,8 +4973,8 @@ body #shopify-product-reviews {
 }
 .slick-dots li button {
    position: relative;
-   width: 15px;
-   height: 15px;
+   width: 8px;
+   height: 8px;
    margin: 0 5px;
    background-color: transparent;
    font-family: var(--font-family);
@@ -4983,10 +4983,10 @@ body #shopify-product-reviews {
 .slick-dots li button:after {
     position: absolute;
     content: "";
-    width: 3px;
+    width: 100%;
     background-color: var(--black);
     opacity: .4;
-    height: 18px;
+    height: 100%;
     top: 0;
     left: 0;
     border-radius:100%;
@@ -5007,6 +5007,7 @@ body #shopify-product-reviews {
    height: 18px;
    margin: 4px 0px;
 }
+
 .widget-content .list-tags.more-options {
    transition: 500ms ease;
    max-height: 0;
@@ -5015,6 +5016,7 @@ body #shopify-product-reviews {
 .widget-content.show .list-tags.more-options {
    max-height: 1000px;
 }
+
 .load {
     text-align: center;
     margin: 0 auto;
