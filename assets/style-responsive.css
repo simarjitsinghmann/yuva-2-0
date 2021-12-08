@@ -831,14 +831,14 @@
   .blog__post .item.grid__item{
     margin: 0 0 20px;
   }
+  .post-wrapper {
+    box-shadow: none;
+    border: 1px solid #ebebeb;
+  }
   .post-information__wrapper .post-date .custom-title {
     font-size: 12px;
     line-height: 18px;
     padding: 2px 7px;
-  }
-  .post-wrapper {
-    box-shadow: none;
-    border: 1px solid #ebebeb;
   }
   .post-information__wrapper .post-name h6 a {
     line-height: 20px;
@@ -850,7 +850,7 @@
     max-height: 165px;
     overflow: hidden;
   }
-  /*  featured blog end  */
+  /*==============  featured blog end  ====================*/
   /* banner css start   */
   .banner.banner-section.item {
     min-height: 400px;
