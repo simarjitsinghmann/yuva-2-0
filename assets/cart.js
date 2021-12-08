@@ -19,7 +19,7 @@ changeItem = function(line, quantity, callback) {
 };
 
 
-updateLineItem = function(){
+updateLineItem = function(cart){
   var items = $('#cart').find('table tr');
   items.each(function(index){
     $(this).find('[data-line]').attr('data-line',(index + 1))
@@ -50,7 +50,7 @@ changeCartItem = function(line, quantity) {
           if(item){
             $('[name="item_quantity"][data-line="'+line+'"]').val(item.quantity);
           }
-          updateLineItem();
+          updateLineItem(cart);
           cartPageUpdate(cart);
         }
       });
