@@ -1248,13 +1248,13 @@
   .card__warpper__detail .collection-image, .card-wrapper .collection-detail {
   	background: #e520201c;
   }
-  .card__warpper__detail .collection-image, .card__warpper__detail.right__sided .collection-detail-right {
+  .card__warpper__detail .collection-image, .collection__right__list:nth-child(1) .card__warpper__detail.right__sided .collection-detail-right {
   	background: #dfeef2;
   }
-  .card__warpper__detail .collection-image, .card__warpper__detail.right__sided .collection-detail-right {
+  .card__warpper__detail .collection-image, .collection__right__list:nth-child(2) .card__warpper__detail.right__sided .collection-detail-right {
   	background: #81c2b82e;
   }
-  .card__warpper__detail .collection-image, .card__warpper__detail.right__sided .collection-detail-right {
+  .card__warpper__detail .collection-image, .collection__right__list:nth-child(3) .card__warpper__detail.right__sided .collection-detail-right {
   	background: #c6987d26;
   }
   .colllection-list-view .row:first-child .col-md-6:first-child,
