@@ -37,7 +37,7 @@
                       scope="row"
                       data-label="{{ 'customer.order.product' | t }}"
                       >
-                    {{line_item.image | img_url :'150x' | img_tag}}
+                    {{line_item.image | img_url :'100x' | img_tag}}
                     <div>
                       {%- if line_item.product.url != blank -%}
                       <a href="{{ line_item.product.url }}">{{ line_item.title }}</a>
