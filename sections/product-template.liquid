@@ -163,9 +163,6 @@
             </div>
             {% endfor %}
             {% endunless %}
-            <script>
-                              console.log('{{ product | json }}');
-            </script>
             <script type="application/json" name="variant-json">
                               {{ product.variants | json }}
             </script>
