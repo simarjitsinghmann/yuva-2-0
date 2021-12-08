@@ -384,6 +384,9 @@
   .card-information__wrapper p strong {
     font-size: 16px;
   }
+  .card-wrapper {
+    padding-bottom: 40px;
+}
   /*==============  Whats more end  ==============*/
   /*  product listing home start  */
   .products-grid .column-5 .grid-item {
@@ -727,17 +730,21 @@
     left: 0;
     bottom: -30px;
   }
-  .shopify__top__section .card-information__wrapper h5 {
+  .card-information__wrapper h5 {
     margin-bottom: 0;
   }
-  .category-section .slick-slide {
+  .offer-section .slick-slide {
     margin-bottom: 40px;
   }
   .card-information .card-information-image {
     border: 6px solid var(--white);
   }
-
   /* whats more cs end   */
+    /*==============  Whats more start  ==============*/
+  .card-wrapper {
+    padding-bottom: 40px;
+}
+  /*==============  Whats more end  ==============*/
   /*  product listing home start  */
   .products-grid .column-5 .grid-item,
   .products-grid .column-4 .grid-item{
