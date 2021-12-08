@@ -665,9 +665,6 @@
   p {
     font-size: 13px;
   }
-  .button {
-    min-width: 145px;
-  }
   .form-group {
     margin-bottom: 15px;
   }
@@ -820,12 +817,11 @@
     line-height: 18px;
     padding: 2px 7px;
   }
-  .style1 .post-wrapper {
-    margin: 0 7px;
+  .post-wrapper {
     box-shadow: none;
     border: 1px solid #ebebeb;
   }
-  .style1 .post-information__wrapper .post-name h6 a {
+  .post-information__wrapper .post-name h6 a {
     line-height: 20px;
     font-size: 15px;
   }
@@ -868,12 +864,13 @@
   .button .fa-arrow-right {
     margin-left: 12px;
   }
-  .button,
-  .shopify-challenge__button {
-    padding: 8px 20px;
-    min-height: 24px;
-    line-height: 24px;
-    font-size: 11px;
+  .button, .shopify-challenge__button {
+      padding: 6px 12px;
+      min-height: 22px;
+      line-height: 22px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      min-width: 125px;
   }
   .small-btn {
     padding: 5px 15px;
