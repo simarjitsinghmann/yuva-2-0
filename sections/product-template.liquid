@@ -162,6 +162,13 @@
             </div>
             {% endfor %}
             {% endunless %}
+            {% for selling_plan_group in product.selling_plan_groups %}
+            {{ selling_plan_group.name }} :
+
+            {% for selling_plan in selling_plan_group.selling_plans %}
+            - {{ selling_plan.name }}
+            {% endfor %}
+            {% endfor %}
             <script type="application/json" name="variant-json">
             {% render 'product-variants' product:product %}
             </script>
