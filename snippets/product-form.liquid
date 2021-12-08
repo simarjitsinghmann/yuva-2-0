@@ -206,10 +206,6 @@
     </div>
     {% endif %}
   </div>
-  {% when 'social-icons' %}
-  <div class="social-icons">
-    {% include 'social-sharing' , share_title: product.title, share_permalink: product.url, share_image: product%}
-  </div>
   {% when 'content' %}
   {% if block.settings.width == 'half' %}
   {% if block.settings.style == "accordion" %}

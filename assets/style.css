@@ -452,6 +452,9 @@ span.tag-line {
    position: relative;
    height: 100%;
 }
+.card-information {
+   position: relative;
+}
 .card-information .card-information-image {
    position: relative;
    transition: all 0.3s ease 0s;
@@ -505,9 +508,7 @@ span.tag-line {
    padding-bottom: 25px;
    font-weight: var(--bold);
 }
-.card-information {
-   position: relative;
-}
+
 /*============== variation 2 start ===============*/
 .style_variation_2 .card-information__wrapper {
    position: absolute;
