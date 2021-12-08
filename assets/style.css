@@ -3204,7 +3204,6 @@ section.store__support {
    line-height: 18px;
    font-weight: var(--normal);
 }
-
 .product-add-to-cart-right .ratingbox {
    display: flex;
    margin: 0;
@@ -3221,13 +3220,11 @@ section.store__support {
    width: auto;
 }
 .product-add-to-cart-right .prizebox h3 {
-   font-size: 26px;
-   line-height: 26px;
    letter-spacing: -0.2px;
-   font-weight: 700;
+   font-weight: var(--semibold);
    display: flex;
    align-items: center;
-   color: #15161d;
+   color: var(--black);
 }
 .product-add-to-cart-right .form-group {
    margin-bottom: 0;
