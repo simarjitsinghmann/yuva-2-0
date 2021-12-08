@@ -1694,7 +1694,8 @@
   .shopify-section-multicolumn-content .container {
   	padding:0;
   }
-.service__column .col {
+.service__column .col,
+  .service__column .col:first-child{
     border-left: 0;
     border-bottom: 1px solid #fff!important;
   	border-top: 1px solid #fff!important;
