@@ -547,7 +547,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
             return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
           });
           var getVariant = variantChange(options,_productParent);
-		console.log(getVariant.inventory_quantity)
+		console.log(getVariant)
           var buttonWrapper = _productParent.querySelector('[data-button-wrapper]');
           var paymentButtonWrapper = _productParent.querySelector('.Sd_addProduct');
           var preorderStatus = buttonWrapper.getAttribute('data-preorder');
