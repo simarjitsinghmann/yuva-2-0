@@ -1164,6 +1164,14 @@
   .carousel-caption .banner-slide p, .flex-absolute p {
     display: none;
 }
+  .shopify-section-slider .slick-dots {
+    position: absolute;
+    bottom: 20px;
+    writing-mode: horizontal-tb;
+    height: 10px;
+    width: 100%;
+    right: 0;
+}
   /*================ banner slider css end ================*/
   /*==================  whats more css start  =================*/
   .card-information .card-information-image {
