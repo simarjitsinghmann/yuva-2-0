@@ -1533,6 +1533,23 @@
       line-height: 35px;
   }
   /*===============  single banner css end  =============*/
+  /*============  multi column css start  ==========*/
+  .shopify-section-multicolumn-content .container,
+  .shopify-section-multicolumn-content{
+    padding:0!important;
+  }
+  .service__column .col,
+  .service__column .col:first-child{
+    border-left: 0;
+    border-bottom: 2px solid #fff!important;
+    border-top: 2px solid #fff!important;
+    padding: 20px 25px;
+  }
+  .service__column h6 {
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+  /*============  multi column css end  ==========*/
   .instagram-post-list ul li {
       flex: 0 0 33.3%;
       max-width: 33.3%;
@@ -1687,26 +1704,9 @@
     line-height: 25px;
   }
   /*===============  single banner css end  =============*/
-/*============  multi column css start  ==========*/
-  .shopify-section-multicolumn-content .container,
-  .shopify-section-multicolumn-content{
-  	padding:0!important;
-  }
-.service__column .col,
-  .service__column .col:first-child{
-    border-left: 0;
-    border-bottom: 2px solid #fff!important;
-  	border-top: 2px solid #fff!important;
-    padding: 20px 25px;
-}
-  .service__column h6 {
-    font-size: 15px;
-    margin-bottom: 3px;
-  }
-  /*============  multi column css end  ==========*/
-    .instagram-post-list ul li {
-      flex: 0 0 50%;
-      max-width: 50%;
+  .instagram-post-list ul li {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }
 @media screen and (max-width: 480px) {
