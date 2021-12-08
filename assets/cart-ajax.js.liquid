@@ -212,7 +212,7 @@ buildCart = function (cart,showCart) {
     shipPendingPercentage:shipPendingPercentage+'%',
     total:cart.total_price, 
     totalPrice: Shopify.formatMoney(cart.total_price, moneyFormat),
-    // totalCartDiscount: cart.total_discount === 0 ? 0 : `"translation missing: en.cart.general.savings_html"`.replace('[savings]',),
+    totalCartDiscount: cart.total_discount === 0 ? 0 : `"translation missing: en.cart.general.savings_html"`.replace('[savings]',),
     totalCartDiscountApplied: cart.total_discount === 0 ? false : true
   }
   $('[data-cart-count]').show();
