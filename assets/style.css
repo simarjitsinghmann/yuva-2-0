@@ -1224,10 +1224,12 @@ a.wishlist-view .fas {
    opacity: 1;
 }
 .product-loop-variants.circle .color_option input {
-   opacity: 0;
-   position: absolute;
-   cursor: pointer;
-   z-index: 9;
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+  z-index: 9;
+  width:100%;
+  height:100%;
 }
 .product-loop-variants .color_option input:checked + span.option,
 .product-loop-variants .color_option input:hover + span.option {
