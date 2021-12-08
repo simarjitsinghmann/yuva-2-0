@@ -3702,7 +3702,7 @@ button.Sd_addProduct:disabled {
    margin-bottom: 10px;
 }
 
-/**banner-section**/
+/*================ Single banner start ==============*/
 .single-banner-section.banner-section .item {
     position: relative;
     height: 600px;
@@ -3711,12 +3711,6 @@ button.Sd_addProduct:disabled {
 .single-banner-section.banner-section .item img {
    height: 100%;
    object-fit: cover;
-}
-.single-banner-section.banner-section .banner-caption-title.banner-slide h6 {
-   color: var(--white);
-   text-transform: uppercase;
-   font-weight: var(--normal);
-   letter-spacing: 0;
 }
 .single-banner-section.banner-section h1 {
    font-weight: var(--medium);
@@ -3732,7 +3726,6 @@ button.Sd_addProduct:disabled {
    margin-bottom: 5px;
    display: block;
    line-height: 85px;
-   color: #f17d35;
    border-bottom: 0 solid;
 }
 .single-banner-section.banner-section p {
