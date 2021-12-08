@@ -2166,6 +2166,14 @@ ul.gallery-item li a > img {
    margin-bottom: 6px;
    letter-spacing: 0.4px;
 }
+.product-loop-variants .variant_option input {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+}
 .product-loop-variants .color_option span{
    font-size: 0px;
    width: 18px;
