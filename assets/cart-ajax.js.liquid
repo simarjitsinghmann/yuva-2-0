@@ -158,7 +158,7 @@ buildCart = function (cart,showCart) {
   var items = [],
       item = {},
       data = {},
-      cartDiscounts = {},
+      cartDiscounts =[],
       source = $("#CartTemplate").html(),
       template = Handlebars.compile(source);
   // Add each item to our handlebars.js data
