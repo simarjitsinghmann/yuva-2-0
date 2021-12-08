@@ -17,7 +17,7 @@
             {% assign article = block.settings.article %}
             {% include 'featured-article-grid' %}
             {% else %}
-            <div class="item grid__item">
+            <div class="col-12 col-sm-12 col-md-4">
               <div class="post-wrapper">
                   {% assign article_image = 'featured_image.png' | asset_url %}                
                   <div class="post-information-image">
