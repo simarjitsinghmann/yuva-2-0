@@ -554,7 +554,6 @@ span.tag-line {
    font-size: 24px;
    color: var(--theme-color);
 }
-/*==================== offer css end ================*/
 .collection-gutter .grid--2-col {
    width: 50%;
    max-width: 50%;
@@ -573,9 +572,6 @@ span.tag-line {
    position: relative;
    height: 100%;
 }
-/* .card__warpper__detail.left__sided .collection-image {height: 100vh;} */
-/* .card__warpper__detail.left__sided .collection-image > img {height: 100vh;object-fit: cover;} */
-/* .title { font-family: var(--font-family);color: var(--black); line-height: 45px; text-align: left; font-weight: var(--semibold); margin:0;font-size:28px;}  */
 .collection-detail h2 {
    font-family: var(--font-family);
    color: var(--white);
@@ -583,7 +579,6 @@ span.tag-line {
    margin: 0 0 10px;
    letter-spacing: 0.2px;
 }
-
 .collection-detail small {
    font-family: var(--font-family);
    font-weight: var(--normal);
@@ -835,7 +830,7 @@ span.tag-line {
 .layout2 .collection-detail h6 {
    font-weight: var(--semibold);
 }
-/***END***/
+/*==================== offer css end ================*/
 /***sale section ***/
 .latest__sale {
    background: var(--white);
@@ -919,8 +914,7 @@ span.tag-line {
       stroke-dashoffset: 0;
    }
 }
-.product-loop-variants.circle,
-.product-loop-variants.square {
+.product-loop-variants {
    display: flex;
 }
 .product-loop-variants .color_option,
@@ -986,9 +980,6 @@ span.tag-line {
    height: 100%;
    object-fit: cover;
 }
-/* .product-loop-variants.square .color_option input:checked + span.option, .product-loop-variants.square .color_option input:hover + span.option {
-border: 1px solid #000;
-} */
 .latest__sale .grid--4-col-desktop .grid__item.full__item {
    width: 100%;
    max-width: 100%;
