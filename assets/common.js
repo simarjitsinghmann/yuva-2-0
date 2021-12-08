@@ -557,11 +557,12 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
               var image= getVariant.featured_media.id; 
               var imageSource = _productParent.querySelector("[data-id='media-"+image+"']");
               
-		console.log(getVariant.inventory_quantity,image,imageSource)
               if(imageSource){
                 imageSource.click();
               }
             }
+            
+		console.log(getVariant.inventory_quantity,image,imageSource)
             _productParent.querySelector('[name="id"]').value = getVariant.id;
             var priceContainer=_productParent.querySelector('[data-price-wrapper]');
             var showSavedAmount = '';
