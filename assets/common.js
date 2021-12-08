@@ -603,7 +603,12 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
                 paymentButtonWrapper.removeAttribute("disabled");
               }
               if(paymentButton){
+                if(preorder && getVariant.inventory_policy == "continue" && getVariant.inventory_quantity <= 0 ){
+                paymentButton.innerHTML  = preorderText;
+                }
+                else{
                 paymentButton.innerHTML  = addToCartText;
+                }
               }
             }else{
 
