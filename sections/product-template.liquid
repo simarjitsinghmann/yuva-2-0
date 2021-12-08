@@ -176,7 +176,7 @@
 "option1": "{{-variant.option1-}}",
 "option2": "{{-variant.option2-}}",
 "option3": "{{-variant.option3-}}",
-"options": "{{variant.options }}",
+"options": ["{{-variant.option1 -}}"{%- if variant.option2 -%},"{{variant.option2 }}"{%-endif-%}{%-if variant.option3 -%},"{{variant.option3 }}"{%-endif-%}],
 "price": {{-variant.price-}},
 "sku": "{{-variant.sku-}}",
 "title":"{{-variant.title-}}",
