@@ -636,7 +636,6 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
   }
   function variantChange(options,selector){
     var variantData = JSON.parse(selector.querySelector('[type="application/json"][name="variant-json"]').textContent);
-    console.log(variantData)
     return currentVariant = variantData.find((variant) => {
       return !variant.options.map((option, index) => {
         return options[index] === option;
