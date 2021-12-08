@@ -122,6 +122,17 @@ cartPageUpdate = function(cart){
   if(cart.item_count == 0){
     $('[data-cart-count').hide();
   }
+  else{
+    $.each(cart.items,function(index,item){
+      var price = Shopify.formatMoney(item.price,moneyFormat),
+      var vendor = item.vendor,
+      var linePrice = Shopify.formatMoney(item.final_line_price, moneyFormat),
+      var originalLinePrice = Shopify.formatMoney(item.original_line_price,moneyFormat),
+      var discounts = item.discounts,
+      var discountsApplied = item.original_line_price === item.final_line_price ? false : true;
+//       discounts += '<li data-cart-discount>Discount['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
+    })
+  }
   $('[data-cart-item-count]').text(cart.item_count);
   $('[data-cart-original-price]').text(Shopify.formatMoney(cart.original_total_price, moneyFormat));
   $('[data-cart-total-price]').text(Shopify.formatMoney(cart.total_price, moneyFormat));
