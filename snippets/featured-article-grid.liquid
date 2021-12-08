@@ -1,6 +1,5 @@
 <div class="item grid__item">
     <div class="post-wrapper">
-        <div class="post-information">
             {% assign article_image = 'featured_image.png' | asset_url %}
             {% if article.image %}
             {% assign article_image = article.image | img_url:'master' %}
@@ -21,7 +20,6 @@
                   <p>{{article.excerpt_or_content | strip_html | truncatewords: word_limit}}</p>
               </div>
             </div>
-        </div>
     </div>
 </div>
 
