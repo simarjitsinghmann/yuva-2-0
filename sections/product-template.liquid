@@ -186,7 +186,7 @@
             <input type="hidden" name="id" value="{{ current_variant.id }}">
             <div class="product_button">
               <div class="productErrors error_message" style="display:none"></div>
-              <div class="pdp-action-container {% unless current_variant.available %}disabled{% endunless %}" data-button-wrapper>
+              <div class="pdp-action-container {% unless current_variant.available %}disabled{% endunless %}" data-preorder="{{preorder}}" data-button-wrapper>
                 <div class="pdp-add-to-bag pdp-button pdp-flex pdp-center">
                   <button type="submit" class="Sd_addProduct add_to_cart black-btn button btn-block"{% unless current_variant.available %}disabled{% endunless %}>
                     <span>
