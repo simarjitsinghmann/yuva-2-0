@@ -132,7 +132,7 @@ cartPageUpdate = function(cart){
        discounts = item.discounts;
       var itemPriceHtml = '';
       var itemLinePriceHtml = '';
-      
+      var itemDiscounts = '';
       if(item.original_price === item.final_price){
       itemPriceHtml = `<strong class="cart-item__final-price product-option">
 						${originalPrice}
