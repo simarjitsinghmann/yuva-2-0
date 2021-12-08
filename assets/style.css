@@ -2226,12 +2226,13 @@ ul.gallery-item li a > img {
    font-size: 12px;
    color: var(--black);
    line-height: 28px;
-   font-weight: 400;
-   border: 1px solid #e2e2e2;
    text-align: center;
    display: inline-block;
    padding: 1px 5px;
    background: var(--white);
+     border: 1px solid #000;
+    border-radius: 0;
+    font-weight: var(--normal);
 }
 .product-option-selector {
    margin-bottom: 16px;
@@ -3362,12 +3363,6 @@ section.store__support {
    letter-spacing: 0.4px;
 }
 
-.variant_option .option {
-   border: 1px solid #000;
-   background: transparent;
-   border-radius: 0;
-   font-weight: var(--normal);
-}
 .product-loop-variants .variant_option input:checked + span.option {
   background: #000;
   border-color: #000;
