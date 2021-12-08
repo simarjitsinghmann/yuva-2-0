@@ -119,6 +119,9 @@ validateQty = function (qty) {
 };
 
 cartPageUpdate = function(cart){
+  if(cart.item_count == 0){
+    $('[data-cart-count').hide();
+  }
   $('[data-cart-item-count]').text(cart.item_count);
   $('[data-cart-original-price]').text(Shopify.formatMoney(cart.original_total_price, moneyFormat));
   $('[data-cart-total-price]').text(Shopify.formatMoney(cart.total_price, moneyFormat));
