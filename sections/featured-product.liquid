@@ -13,11 +13,7 @@
         <div class="col-md-7">
           <div class="product-image-left">
             {% unless product == empty %}          
-            <div id="feature__product-{{section.id}}" class="feature__product" data-slider-id="1">
-                <div class="item" >
-                    <img src="{{product.featured_image.src | img_url:'master'}}" alt="">
-                </div>
-            </div>
+            <img src="{{product.featured_image.src | img_url:'master'}}" alt="">
             {%else%}
             {{ 'product-' | append: 1 | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
             {%endunless%}
@@ -34,11 +30,11 @@
             {% when 'text' %}
             <p class="vendor_name">{{block.settings.text}}</p>
             {% when 'inventory' %}            
-              {% if current_variant.available %}
-              <span id="variant-inventory" class="product-instock product-stock">{{ 'products.product.in_stock' | t }}</span>
-              {% else %}
-              <span id="variant-inventory" class="product-outstock product-stock">{{ 'products.product.out_stock' | t }}</span>
-              {% endif %}
+            {% if current_variant.available %}
+            <span id="variant-inventory" class="product-instock product-stock">{{ 'products.product.in_stock' | t }}</span>
+            {% else %}
+            <span id="variant-inventory" class="product-outstock product-stock">{{ 'products.product.out_stock' | t }}</span>
+            {% endif %}
             {% when 'review-star' %}
             <div class="ratingbox">
               <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
@@ -199,146 +195,146 @@
 </style>
 {% schema %}
 {
-  "name": "t:sections.featured-product.name",
-  "tag": "section",
-  "class":"feature-section featured-product-section",
-  "settings": [
-    {
-      "type": "product",
-      "id": "product",
-      "label": "t:sections.featured-product.settings.product.label"
-    },
-    {
-      "type": "range",
-      "id": "top_space_desktop",
-      "label": "t:sections.featured-product.settings.top_space_desktop.label",
-      "default":30,
-      "min":0,
-      "max":60,
-      "step":5
-    },
-    {
-      "type": "range",
-      "id": "bottom_space_desktop",
-      "label": "t:sections.featured-product.settings.bottom_space_desktop.label",
-      "default":30,
-      "min":0,
-      "max":60,
-      "step":5
-    },
-    {
-      "type": "range",
-      "id": "top_space_mobile",
-      "label": "t:sections.featured-product.settings.top_space_mobile.label",
-      "default":30,
-      "min":0,
-      "max":60,
-      "step":5
-    },
-    {
-      "type": "range",
-      "id": "bottom_space_mobile",
-      "label": "t:sections.featured-product.settings.bottom_space_mobile.label",
-      "default":30,
-      "min":0,
-      "max":60,
-      "step":5
-    }
-  ],
-  "blocks": [
-    {
-      "type": "@app"
-    },
-    {
-      "type": "title",
-      "name": "t:sections.featured-product.blocks.title.name",
-      "limit":1
-    },
-    {
-      "type": "text",
-      "name": "t:sections.featured-product.blocks.text.name",
-      "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "label": "t:sections.featured-product.blocks.text.settings.text.label"
-        }
-      ]
-    },
-    {
-      "type": "price",
-      "name": "t:sections.featured-product.blocks.price.name",
-      "limit":1
-    },
-    {
-      "type": "review-star",
-      "name": "t:sections.featured-product.blocks.review-star.name",
-      "limit":1
-    },
-    {
-      "type": "social-icons",
-      "name": "t:sections.featured-product.blocks.social-icons.name",
-      "limit":1
-    },
-    {
-      "type": "variant",
-      "name": "t:sections.product-template.blocks.variant.name",
-      "limit":1
-    },
-    {
-      "type": "quantity",
-      "name": "t:sections.featured-product.blocks.quantity.name",
-      "limit":1
-    },
-    {
-      "type": "button",
-      "name": "t:sections.featured-product.blocks.button.name",
-      "limit":1,
-      "settings": [
-        {
-          "type": "checkbox",
-          "id": "dynamic_checkout_btn",
-          "default":true,
-          "label": "t:sections.featured-product.blocks.button.settings.dynamic_checkout_btn.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_view_detail",
-          "default":true,
-          "label": "t:sections.featured-product.blocks.button.settings.show_view_detail.label"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "t:sections.featured-product.presets.name",
-      "category": "Product",
- "blocks": [
-          {
-            "type": "title"
-          },
-          {
-            "type": "text"
-          },
-          {
-            "type": "review-star"
-          },
-          {
-            "type": "price"
-          },
-          {
-            "type": "variant"
-          },
-          {
-            "type": "quantity"
-          },
-          {
-            "type": "button"
-          }
-        ]
-    }
-  ]
-	
+"name": "t:sections.featured-product.name",
+"tag": "section",
+"class":"feature-section featured-product-section",
+"settings": [
+{
+"type": "product",
+"id": "product",
+"label": "t:sections.featured-product.settings.product.label"
+},
+{
+"type": "range",
+"id": "top_space_desktop",
+"label": "t:sections.featured-product.settings.top_space_desktop.label",
+"default":30,
+"min":0,
+"max":60,
+"step":5
+},
+{
+"type": "range",
+"id": "bottom_space_desktop",
+"label": "t:sections.featured-product.settings.bottom_space_desktop.label",
+"default":30,
+"min":0,
+"max":60,
+"step":5
+},
+{
+"type": "range",
+"id": "top_space_mobile",
+"label": "t:sections.featured-product.settings.top_space_mobile.label",
+"default":30,
+"min":0,
+"max":60,
+"step":5
+},
+{
+"type": "range",
+"id": "bottom_space_mobile",
+"label": "t:sections.featured-product.settings.bottom_space_mobile.label",
+"default":30,
+"min":0,
+"max":60,
+"step":5
+}
+],
+"blocks": [
+{
+"type": "@app"
+},
+{
+"type": "title",
+"name": "t:sections.featured-product.blocks.title.name",
+"limit":1
+},
+{
+"type": "text",
+"name": "t:sections.featured-product.blocks.text.name",
+"settings": [
+{
+"type": "text",
+"id": "text",
+"label": "t:sections.featured-product.blocks.text.settings.text.label"
+}
+]
+},
+{
+"type": "price",
+"name": "t:sections.featured-product.blocks.price.name",
+"limit":1
+},
+{
+"type": "review-star",
+"name": "t:sections.featured-product.blocks.review-star.name",
+"limit":1
+},
+{
+"type": "social-icons",
+"name": "t:sections.featured-product.blocks.social-icons.name",
+"limit":1
+},
+{
+"type": "variant",
+"name": "t:sections.product-template.blocks.variant.name",
+"limit":1
+},
+{
+"type": "quantity",
+"name": "t:sections.featured-product.blocks.quantity.name",
+"limit":1
+},
+{
+"type": "button",
+"name": "t:sections.featured-product.blocks.button.name",
+"limit":1,
+"settings": [
+{
+"type": "checkbox",
+"id": "dynamic_checkout_btn",
+"default":true,
+"label": "t:sections.featured-product.blocks.button.settings.dynamic_checkout_btn.label"
+},
+{
+"type": "checkbox",
+"id": "show_view_detail",
+"default":true,
+"label": "t:sections.featured-product.blocks.button.settings.show_view_detail.label"
+}
+]
+}
+],
+"presets": [
+{
+"name": "t:sections.featured-product.presets.name",
+"category": "Product",
+"blocks": [
+{
+"type": "title"
+},
+{
+"type": "text"
+},
+{
+"type": "review-star"
+},
+{
+"type": "price"
+},
+{
+"type": "variant"
+},
+{
+"type": "quantity"
+},
+{
+"type": "button"
+}
+]
+}
+]
+
 }
 {% endschema %}
