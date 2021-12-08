@@ -1577,9 +1577,9 @@
   }
 }
 @media screen and (max-width: 575px) {
-  /*  common  start  */
+  /*=============  common  start  ===============*/
   .shopify-section:not(.shopify-section-announcement-bar,.shopify-section-main-header,.shopify-section-slider,#shopify-section-footer,.password-section) {
-      padding: 20px 0;
+    padding: 20px 0;
   }
   .form-control {
     padding: 7px 15px;
@@ -1587,15 +1587,21 @@
     font-size: 13px;
   }
   .shopify__top__section h2 {
-      margin-bottom: 15px;
+    margin-bottom: 15px;
   }
   .collection-section-header {
-      margin-bottom: 10px;
+    margin-bottom: 10px;
   }
-    .shopify__top__section small {
+  .shopify__top__section small {
     display: none;
-}
-  /*  common end  */
+  }
+  .view-all.corner-view {
+    position: unset;
+    display: block;
+    margin: 10px 0;
+    border: 0;
+  }
+  /*==============  common end  =============*/
 /*=============  whats more css start  ===============*/
   .card-information__wrapper.content-border-true {
     padding:10px;
