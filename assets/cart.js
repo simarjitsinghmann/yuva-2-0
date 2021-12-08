@@ -159,6 +159,9 @@ cartPageUpdate = function(cart){
                         <strong class="cart-item__final-price product-option">
                          ${linePrice}
                         </strong>`;
+        $.each(discounts,function(index,item){
+        itemDiscounts =`<li class="discounts__discount">TEST</li>`;
+        }
       }
       $('[data-item-price-'+index+']').html(itemPriceHtml);
       $('[data-line-price-'+index+']').html(itemLinePriceHtml);
