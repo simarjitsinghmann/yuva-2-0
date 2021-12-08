@@ -31,6 +31,29 @@ img {
 .scrollHidden {
    overflow: hidden;
 }
+.shopify__top__section h2,
+.title {
+   display: block;
+   margin-bottom: 20px;
+   position: relative;
+}
+.title {
+   margin: 0;
+}
+.shopify__top__section p {
+   display: block;
+   margin-bottom: 30px;
+}
+.shopify__top__section small {
+   display: block;
+   letter-spacing: 1px;
+   margin-bottom: 0px;
+   text-transform: uppercase;
+   font-weight: var(--medium);
+   font-size: var(--small-text);
+   line-height: 20px;
+   color: #555555;
+}
 .button,
 .shopify-challenge__button {
    border: 1px solid var(--colorBtnPrimary);
@@ -425,29 +448,7 @@ span.tag-line {
    max-height: 300px;
    height: 100%;
 }
-.shopify__top__section h2,
-.title {
-   display: block;
-   margin-bottom: 20px;
-   position: relative;
-}
-.title {
-   margin: 0;
-}
-.shopify__top__section p {
-   display: block;
-   margin-bottom: 30px;
-}
-.shopify__top__section small {
-   display: block;
-   letter-spacing: 1px;
-   margin-bottom: 0px;
-   text-transform: uppercase;
-   font-weight: var(--medium);
-   font-size: var(--small-text);
-   line-height: 20px;
-   color: #555555;
-}
+
 .card-information .card-information__wrapper .offer-name span {
    font-family: var(--font-family);
    color: var(--theme-color);
