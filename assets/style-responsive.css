@@ -1682,10 +1682,16 @@
     display: block;
 }
 /*  blog css end  */
+/*============  multi column css start  ==========*/
   .service__column .col {
     border-left: 0;
     padding-left: 0;
 }
+  .service__column p {
+    font-size: 10px;
+    display: none;
+}
+  /*============  multi column css end  ==========*/
     .instagram-post-list ul li {
       flex: 0 0 50%;
       max-width: 50%;
