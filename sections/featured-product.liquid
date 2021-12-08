@@ -60,7 +60,7 @@
             {% assign optionIndex = forloop.index %}
             {% assign varOptionIndex = 'option'|append:forloop.index %}
             <div class="select__{{downOption}} product-option-selector">
-              <p class="variant_title">SELECT {{option.name}}</p>
+              <span class="variant_title">SELECT {{option.name}}</span>
               {% if settings.option_style == 'swatch' %}
               <ul class="product-loop-variants {{downOption}} variants {{settings.color_swatch_style}} _small list-unstyled">                            
                 {%- for value in option.values -%}  

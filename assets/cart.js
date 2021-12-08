@@ -162,7 +162,7 @@ cartPageUpdate = function(cart){
                         </strong>`;
         $.each(discounts,function(index,discount){
           itemDiscounts =`<li class="discounts__discount">${discount.title}</li>`;
-        }
+        })
       }
       $('[data-item-price-'+index+']').html(itemPriceHtml);
       $('[data-line-price-'+index+']').html(itemLinePriceHtml);
