@@ -38,7 +38,7 @@
                       data-label="{{ 'customer.order.product' | t }}"
                       >
                     {% if line_item.image != blank %}
-                    {{line_item.image | img_url :'100x' | img_tag}}
+                    {{line_item.image | img_url :'100x' | img_tag | link_to:line_item.product.url }}
                     {% endif %}
                     <div>
                       {%- if line_item.product.url != blank -%}
