@@ -23,7 +23,7 @@
     <h3 id="get_price" class="price-list">
       <span class="get-price">{{current_variant.price | money}}</span>
       <span class="main-price"> {{current_variant.compare_at_price | money}}</span>
-      <span class="percent-off">({{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}})</span>
+      <span class="percent-off">({{ current_variant.compare_at_price | minus: product.price | times: 100 | divided_by: current_variant.compare_at_price | append: "% OFF"}})</span>
     </h3>
     {% else %}
     <h3 id="get_price" class="price-list">{{current_variant.price | money}}</h3>
