@@ -2134,16 +2134,6 @@ ul.gallery-item li a > img {
    padding-left: 7px;
    line-height: 1.3;
 }
-.prizebox #get_price .main-price {
-   font-size: 18px;
-   line-height: 20px;
-   font-weight: 400;
-   margin: 0 12px 0 12px;
-   color: var(--dark-gray);
-}
-.percent-off {
-   color: var(--colorTextSavings);
-}
 .prizebox #get_price span[data-compare-price] {
    font-size: 16px;
    font-weight: var(--normal);
@@ -2156,6 +2146,14 @@ ul.gallery-item li a > img {
    align-items: center;
    margin-bottom: 15px;
   flex-wrap:wrap;
+}
+.prizebox .main-price {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    margin: 0 12px 0 12px;
+    color: var(--dark-gray);
+    text-decoration: line-through;
 }
 .prizebox .percent-off {
    line-height: 20px;
