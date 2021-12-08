@@ -438,6 +438,12 @@ span.tag-line {
 }
 /***END***/
 /*==================== offer css start ================*/
+.offer-section .slick-list{
+    margin: 0 -15px;
+}
+.offer-section .slick-slide {
+    padding: 0 15px;
+}
 .card-information .card-information-image {
    position: relative;
    transition: all 0.3s ease 0s;
@@ -546,12 +552,7 @@ span.tag-line {
    color: var(--black);
    font-family: var(--font-family);
 }
-.offer-section .slick-list{
-    margin: 0 -15px;
-}
-.offer-section .slick-slide {
-    padding: 0 15px;
-}
+
 .card-information__wrapper p strong {
    font-size: 24px;
    color: var(--theme-color);
