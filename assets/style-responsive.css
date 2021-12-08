@@ -1754,6 +1754,12 @@
     flex: 0 0 50%;
     max-width: 50%;
   }
+  .header__heading-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
   .customer-links {
     display: none;
   }
