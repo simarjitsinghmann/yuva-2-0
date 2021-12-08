@@ -143,6 +143,7 @@
       {{ form | payment_button }}
       {% endif %}
     </div>
+  {% endform %}
     {% if block.settings.show_view_detail %}
     <a href="{{product.url}}" class="link text__right">View Detail</a>
     {% endif %}
@@ -205,7 +206,6 @@
     </div>
     {% endif %}
   </div>
-  {% endform %}
   {% when 'social-icons' %}
   <div class="social-icons">
     {% include 'social-sharing' , share_title: product.title, share_permalink: product.url, share_image: product%}
