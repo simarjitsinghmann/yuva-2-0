@@ -43,7 +43,7 @@
                         {% endif %}
                       </div>
                       
-                      <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                      <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}" data-item-discount-{{forloop.index0}}>
                         {%- for discount in item.discounts -%}
                         <li class="discounts__discount">
                           {{ discount.title }}
