@@ -179,6 +179,10 @@
             </div>
             {% when 'button' %}
             {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+            {% assign preorder = false %}
+            {% if settings.enable_preorder and current_variant.inventory_policy == 'continue' and current_variant.available == false %}
+            {% assign preorder = true %}
+            {% endif %}
             <input type="hidden" name="id" value="{{ current_variant.id }}">
             <div class="product_button">
               <div class="productErrors error_message" style="display:none"></div>
