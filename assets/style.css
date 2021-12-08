@@ -2227,9 +2227,6 @@ ul.gallery-item li a > img {
 .product-option-selector {
    margin-bottom: 16px;
 }
-.select__quantity {
-    margin-bottom: 25px;
-}
 .product_button .shopify-payment-button__button {
    min-width: 208px;
    padding: 9px 20px;
@@ -2276,7 +2273,14 @@ ul.gallery-item li a > img {
    position: relative;
    display: inline-block;
 }
-
+.product__view__option .svg-loader {
+   width: 20px !important;
+   height: 18px !important;
+   top: -5px !important;
+}
+.select__quantity {
+    margin-bottom: 25px;
+}
 .select__quantity .quantity {
    position: relative;
    width: 100%;
@@ -2284,11 +2288,6 @@ ul.gallery-item li a > img {
    max-width: 160px;
    height: 51px;
    border-radius: 4px;
-}
-.product__view__option .svg-loader {
-   width: 20px !important;
-   height: 18px !important;
-   top: -5px !important;
 }
 .select__quantity .quantity input {
    width: 100%;
