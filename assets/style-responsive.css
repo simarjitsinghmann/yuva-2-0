@@ -1791,10 +1791,10 @@
 }
 @media screen and (max-width: 380px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
-    .products-grid
-    .product_columns
-    .grid-item
-    .card-wrapper-img,
+  .products-grid
+  .product_columns
+  .grid-item
+  .card-wrapper-img,
   .card-wrapper-img{
     min-height: 200px;
     max-height: 200px;
@@ -1802,7 +1802,13 @@
   .client-say-left h2 {
     font-size: 24px;
     line-height: 28px;
-}
+  }
+  .banner-section.item.slider-banner h1 {
+    font-size: 20px;
+  }
+  .banner-section.item.slider-banner h2 {
+    font-size: 45px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .banner-caption .center-left,
