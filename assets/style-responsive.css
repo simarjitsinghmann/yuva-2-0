@@ -1155,8 +1155,8 @@
     height: 26px;
   }
   /*  common end  */
-  /*  whats more css start  */
-  .shopify__top__section .card-information__wrapper h5 {
+  /*==================  whats more css start  =================*/
+  .card-information__wrapper h5 {
       font-size: 12px!important;
       line-height: 16px;
   }
@@ -1173,7 +1173,7 @@
       padding-left: 6px;
       padding-right: 6px;
   }
-  /*   whats more css end */
+  /*=============   whats more css end =================*/
   /*  colection list css start  */
   .collection-detail h2 {
   	color: var(--black);
@@ -1593,6 +1593,11 @@
     display: none;
 }
   /*  common end  */
+/*=============  whats more css start  ===============*/
+  .card-information__wrapper.content-border-true {
+    padding:10px;
+}
+  /*=============  whats more css end  ===============*/
   #CollectionProductsContainer[data-view="grid-layout-2"]
     .products-grid
     .product_columns
