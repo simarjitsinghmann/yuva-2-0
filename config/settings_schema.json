@@ -267,6 +267,13 @@
     "name": "t:settings_schema.product-variants.name",
     "settings": [
       {
+        "type": "checkbox",
+        "id": "enable_preorder",
+        "default": true,
+        "label": "t:settings.product-variants.enable_preorder.label",
+        "info": "t:settings.product-variants.enable_preorder.info"
+      },
+      {
         "type": "select",
         "id": "option_style",
         "label": "t:settings_schema.product-variants.option_style.label",
