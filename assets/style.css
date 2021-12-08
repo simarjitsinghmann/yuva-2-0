@@ -516,7 +516,6 @@ span.tag-line {
    margin: 17px 0 18px;
    color: rgba(0, 0, 0, 0.6);
 } */
-/*============== variation 2 start ===============*/
 .style_variation_2 .card-wrapper {
     padding-bottom: 60px;
 }
@@ -536,6 +535,17 @@ span.tag-line {
 .style_variation_2 .card-information .card-information-image {
    border: 0;
    border-radius: 10px;
+}
+/*==================== offer css end ================*/
+.collection-gutter .grid--2-col {
+   width: 50%;
+   max-width: 50%;
+}
+.collection-gutter {
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
 }
 .collection-detail h2 {
    font-family: var(--font-family);
