@@ -186,7 +186,7 @@ buildCart = function (cart,showCart) {
       linePrice: Shopify.formatMoney(cartItem.line_price, moneyFormat),
       originalLinePrice: Shopify.formatMoney(cartItem.original_line_price,moneyFormat),
       discounts: cartItem.discounts,
-      discountsApplied: cartItem.price === cartItem.original_price ? false : true
+      discountsApplied: cartItem.line_price === cartItem.original_line_price ? false : true
     };
 
     items.push(item);
