@@ -39,7 +39,9 @@
                       colspan="2"
                       >
                     {% if line_item.image != blank %}
-                    {{line_item.image | img_url :'100x' | img_tag | link_to:line_item.product.url }}
+                    <a class="lineItemImage" href="{{ line_item.product.url }}">
+                      <img src="{{line_item.image | img_url :'100x' }}">
+                    </a>
                     {% endif %}
                     <div>
                       {%- if line_item.product.url != blank -%}
