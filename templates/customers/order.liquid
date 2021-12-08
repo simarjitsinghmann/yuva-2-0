@@ -209,9 +209,6 @@
                   <td id="RowDiscount" role="rowheader" scope="row" colspan="4">
                     {{ 'customer.order.discount' | t }}
                     <span class="cart-discount">
-                      <svg aria-hidden="true" focusable="false" viewBox="0 0 12 12">
-                        <use href="#icon-discount" />
-                      </svg>
                       {{- discount_application.title -}}
                     </span>
                   </td>
@@ -219,9 +216,6 @@
                     <div>
                       <span>-{{ discount_application.total_allocated_amount | money }}</span>
                       <span class="cart-discount">
-                        <svg aria-hidden="true" focusable="false" viewBox="0 0 12 12">
-                          <use href="#icon-discount" />
-                        </svg>
                         {{- discount_application.title -}}
                       </span>
                     </div>

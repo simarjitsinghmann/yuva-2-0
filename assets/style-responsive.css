@@ -56,7 +56,7 @@
     min-height: 320px;
     max-height: 320px;
 }
-  /*  COmmon end  */
+  /*===========  Common css end  =============*/
   /* whats more css start */
     .card-information .card-information-image {
       min-height: 250px;
@@ -134,7 +134,7 @@
     width: 13px;
   }
   /*  product sidebar end   */
-  /*  home banner start  */
+  /*==============  home banner slider start  ===========*/
   .banner.banner-section.item {
     min-height: 650px;
     max-height: 650px;
@@ -145,7 +145,7 @@
   .banner-section.item.slider-banner h2 {
     font-size: 100px;
   }
-  /*  home banner end  */
+  /*==========  home banner slider end ============ */
   /*  Blog responsive start */
   .post-information__wrapper {
     padding: 15px 20px 20px;
@@ -159,18 +159,6 @@
     padding: 20px 15px;
   }
   /*  testimonial responsive end */
-  /*  testimonial responsive start */
-  /*  footer start  */
-
-  /*  footer end  */
-  /*   faq start */
-  .accordion-container .set {
-    padding: 10px 20px;
-  }
-  .faq .panel-title a {
-    font-size: 16px;
-  }
-  /*  faq end  */
   /*  contact css start  */
   .contact__us__section .tt-contact-info {
     padding: 25px 30px;
@@ -197,15 +185,10 @@
   }
   /*  multi column end  */
   /*  banner start  */
-  .single-banner-section.banner-section h1 {
-    font-size: 47px;
-    line-height: 52px;
-    /*         padding: 7px 37px 7px 15px; */
-    margin: 10px 0;
-  }
-  .single-banner-section.banner-section h2 {
-    font-size: 45px;
-    line-height: 45px;
+  .single-banner-section.banner-section .item {
+      position: relative;
+      height: 500px;
+      overflow: hidden;
   }
   /*  banner end  */
   #CollectionProductsContainer[data-view="grid-layout-4"]
