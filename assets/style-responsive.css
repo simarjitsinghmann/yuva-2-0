@@ -1656,8 +1656,9 @@
     padding: 20px 45px 20px;
     text-align: center;
 }
-  .post-wrapper {
-    border: 0px solid #ebebeb;
+.post-wrapper {
+    border: 0;
+    box-shadow: none;
 }
   .post-information__wrapper .post-name h6 a {
     line-height: 20px;
@@ -1679,9 +1680,9 @@
     padding-left: 0;
 }
     .instagram-post-list ul li {
-    flex: 0 0 50%;
-    max-width: 50%;
-}
+      flex: 0 0 50%;
+      max-width: 50%;
+  }
 }
 @media screen and (max-width: 480px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
