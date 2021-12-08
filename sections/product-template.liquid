@@ -168,6 +168,17 @@
             {% for selling_plan in selling_plan_group.selling_plans %}
             - {{ selling_plan.name }}
             {% endfor %}
+            
+            {% for option in selling_plan_group.options %}
+  <label>{{ option.name }}</label>
+  <select>
+    {% for value in option.values %}
+    <option {% if value == option.selected_value %}selected{% endif %}>
+      {{ value }}
+    </option>
+    {% endfor %}
+  </select>
+{% endfor %}
             {% endfor %}
             <script type="application/json" name="variant-json">
             {% render 'product-variants' product:product %}
