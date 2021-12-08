@@ -124,7 +124,7 @@ cartPageUpdate = function(cart){
   }
   else{
     $.each(cart.items,function(index,item){
-      var price = Shopify.formatMoney(item.final_price,moneyFormat),
+      var finalPrice = Shopify.formatMoney(item.final_price,moneyFormat),
       var originalPrice = Shopify.formatMoney(item.original_price,moneyFormat),
       var vendor = item.vendor,
       var linePrice = Shopify.formatMoney(item.final_line_price, moneyFormat),
@@ -133,13 +133,19 @@ cartPageUpdate = function(cart){
       var itemPriceHtml = '';
       var itemLinePriceHtml = '';
       
-      if()
+      if(item.original_price === item.final_price){
+      itemPriceHtml = `<strong class="cart-item__final-price product-option">
+						${originalPrice}
+                        </strong>`;
+      }
+      else{
       itemPriceHtml = `<s class="cart-item__old-price product-option">
-                          {{- item.original_price | money -}}
+                         ${originalPrice}
                         </s>
                         <strong class="cart-item__final-price product-option">
-                          {{ item.final_price | money }}
+                         ${finalPrice}
                         </strong>`;
+      }
 //       discounts += '<li data-cart-discount>Discount['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
     })
   }
