@@ -130,6 +130,8 @@ cartPageUpdate = function(cart){
       var originalLinePrice = Shopify.formatMoney(item.original_line_price,moneyFormat),
       var discounts = item.discounts,
       var discountsApplied = item.original_line_price === item.final_line_price ? false : true;
+      var itemPriceHtml = '';
+      var itemLinePriceHtml = '';
 //       discounts += '<li data-cart-discount>Discount['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
     })
   }
