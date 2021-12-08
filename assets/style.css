@@ -1470,10 +1470,6 @@ a.wishlist-view .fas {
    border-top: 0;
    background-color: var(--white);
 }
-.post-information__wrapper .post-date {
-   flex: 0 0 100%;
-   -ms-flex: 0 0 100%;
-}
 .post-information__wrapper .post-date .custom-title {
    font-size: 13px;
    line-height: 20px;
@@ -1491,19 +1487,6 @@ a.wishlist-view .fas {
    color: #000;
    font-weight: var(--medium);
    line-height: 14px;
-}
-.post-information__wrapper .post-name p a {
-   color: var(--black);
-   line-height: 26px;
-   text-decoration: none;
-   font-weight: var(--semibold);
-   font-size: var(--font-size);
-}
-.style1 .post-information__wrapper .post-name p a {
-   color: var(--black);
-   line-height: 24px;
-   font-weight: var(--normal);
-   font-size: var(--font-size);
 }
 .style1 .post-information__wrapper .post-name p {
    color: #6c6c6c;
@@ -1533,7 +1516,6 @@ a.wishlist-view .fas {
    object-fit: cover;
    heght: 100%;
 }
-
 /**blog-variation2**/
 .blog-variation2 .post-information__wrapper {
    border: 2px solid #ececec;
