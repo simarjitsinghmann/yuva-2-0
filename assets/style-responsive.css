@@ -1118,7 +1118,7 @@
   body {
     font-size: 12px;
   }
-  .banner-caption .center-left,
+/*   .banner-caption .center-left,
   .carousel-caption .center-left {
     left: 30px;
   }
@@ -1141,8 +1141,7 @@
   .banner-caption .bottom-right,
   .carousel-caption .bottom-right {
     right: 30px;
-  }
-  /*  start  */
+  } */
   .products-grid .column-5 .grid-item,
   .products-grid .column-4 .grid-item,
   .products-grid .column-3 .grid-item{
@@ -1155,6 +1154,12 @@
   }
   /*  common end  */
   /*================ banner slider css start ================*/
+  .banner-section .carousel-caption-title {
+    text-align: center;
+    width: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+  }
   .banner-section.item.slider-banner h1 {
     font-size: 23px;
     margin: 6px 0;
