@@ -33,9 +33,6 @@
                         <s class="cart-item__old-price product-option">
                           {{- item.original_price | money -}}
                         </s>
-                        <span class="visually-hidden">
-                          {{ 'products.product.price.sale_price' | t }}
-                        </span>
                         <strong class="cart-item__final-price product-option">
                           {{ item.final_price | money }}
                         </strong>
@@ -45,6 +42,7 @@
                         </strong>
                         {% endif %}
                       </div>
+                      
                       <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
                         {%- for discount in item.discounts -%}
                         <li class="discounts__discount">
@@ -84,22 +82,20 @@
                     </td>
                     <td class="cart-price">
                       
-                       <div class="price">
-                    {%- if item.original_price != item.final_price -%}
-                      <s class="cart-item__old-price product-option">
-                          {{- item.original_price | money -}}
+                      
+                      <div class="price">
+                        {%- if item.original_line_price != item.final_line_price -%}
+                        <s class="cart-item__old-price product-option">
+                          {{- item.original_line_price | money -}}
                         </s>
-                        <span class="visually-hidden">
-                          {{ 'products.product.price.sale_price' | t }}
-                        </span>
                         <strong class="cart-item__final-price product-option">
-                          {{ item.final_price | money }}
+                          {{ item.final_line_price | money }}
                         </strong>
-                         {% else %}
+                        {% else %}
                         <strong class="cart-item__final-price product-option">
-                          {{ item.original_price | money }}
+                          {{ item.original_line_price | money }}
                         </strong>
-                         {% endif %}
+                        {% endif %}
                       </div>
                     </td>
                     <td class="cart-remove">
