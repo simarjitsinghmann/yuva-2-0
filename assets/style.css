@@ -2347,6 +2347,12 @@ ul.gallery-item li a > img {
 .select__quantity .quantity-button.quantity-down {
    left: 14px;
 }
+.quantity svg {
+   fill: black;
+   height: 8px;
+   width: 10px;
+   opacity: 1;
+}
 .pdp-add-to-bag,
 .shopify-payment-button {
    width: 100%;
@@ -3326,11 +3332,6 @@ section.store__support {
    height: 100%;
    left: 0;
    top: 0;
-}
-.quantity .quantity_container {
-   position: relative;
-   left: -4px;
-   display: inline-block;
 }
 .product-loop-variants .variant_option input:checked + span.option {
   background: #000;
