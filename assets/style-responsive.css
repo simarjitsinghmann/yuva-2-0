@@ -294,7 +294,7 @@
     font-size: 12px;
   }
   /*  common end  */
-  /*  banner start */
+  /*================  banner slider css start ==============*/
   .banner.banner-section.item {
     min-height: 500px;
     max-height: 500px;
@@ -314,29 +314,22 @@
     padding-bottom: 24px;
     font-size: 16px;
   }
+  /*================= banner slider css end ====================*/
+  /*===============  single banner start  =============*/
+  .single-banner-section.banner-section .item {
+      height: 500px;
+  }
   .single-banner-section.banner-section h1 {
-    font-size: 35px;
-    line-height: 37px;
-    padding: 7px 27px 7px 15px;
-    margin: 5px 0 10px;
+      font-size: 60px;
+      line-height: 60px;
+      margin: 10px 0 10px;
+      letter-spacing: 0.4px;
   }
   .single-banner-section.banner-section h2 {
-    font-size: 33px;
-    line-height: 38px;
+      font-size: 80px;
+      line-height: 75px;
   }
-  .single-banner-section.banner-section p {
-    margin-bottom: 20px;
-    margin-top: 10px;
-    font-size: 16px;
-  }
-  .banner-product-slider .owl-theme .owl-nav button span {
-    width: 40px;
-    height: 40px;
-  }
-  .banner-product-slider .owl-theme .owl-nav button.owl-prev {
-    right: 75px;
-  }
-  /*   banner end */
+   /*===============  single banner start  =============*/
   /*  header start  */
   .header__heading-link img {
     max-width: 80px;
