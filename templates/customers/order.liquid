@@ -22,7 +22,6 @@
               <thead role="rowgroup">
                 <tr role="row">
                   <th id="ColumnProduct" scope="col" role="columnheader">{{ 'customer.order.product' | t }}</th>
-                  <th id="ColumnSku" scope="col" role="columnheader">{{ 'customer.order.sku' | t }}</th>
                   <th id="ColumnPrice" scope="col" role="columnheader">{{ 'customer.order.price' | t }}</th>
                   <th id="ColumnQuantity" scope="col" role="columnheader">{{ 'customer.order.quantity' | t }}</th>
                   <th id="ColumnTotal" scope="col" role="columnheader">{{ 'customer.order.total' | t }}</th>
@@ -102,13 +101,6 @@
                       </div>
                       {%- endif -%}
                     </div>
-                  </td>
-                  <td
-                      headers="Row{{ line_item.key }} ColumnSku"
-                      role="cell"
-                      data-label="{{ 'customer.order.sku' | t }}"
-                      >
-                    {{ line_item.sku }}
                   </td>
                   <td
                       headers="Row{{ line_item.key }} ColumnPrice"
