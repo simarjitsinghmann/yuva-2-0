@@ -1503,9 +1503,7 @@
 /*  colection list css start  */
   .collection-detail h2 {
   	color: var(--black);
-/*     margin: 0 0 5px; */
   }
-
   .collection-gutter .grid--2-col {
     width: 100%;
     max-width: 100%;
@@ -1630,6 +1628,9 @@
   .testimonial-client-slide .slider-item .slider-box {
     border: 0;
     background-color: transparent;
+}
+  .testimonial-client-slide .slider-item .slider-box p {
+    max-height: 95px;
 }
 /*  testimonial css end  */
   .post-information-image, .post-information-image .animate_hvrbr {
