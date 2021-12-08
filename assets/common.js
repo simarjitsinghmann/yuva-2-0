@@ -551,7 +551,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
           var paymentButtonWrapper = _productParent.querySelector('.Sd_addProduct');
           var preorderStatus = buttonWrapper.getAttribute('data-preorder');
           var paymentButton = paymentButtonWrapper.querySelector('span');
-		console.log(getVariant.inventory_quantity)
+		console.log(getVariant)
           var advancePayment = paymentButtonWrapper.querySelector('.shopify-payment-button');
           if(getVariant != undefined){
             if(getVariant.featured_media != null){
