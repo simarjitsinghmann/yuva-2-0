@@ -163,7 +163,27 @@
             {% endfor %}
             {% endunless %}
             <script type="application/json" name="variant-json">
-                              {{ product.variants | json }}
+                              {% for variant in product.variants %}
+                              {
+  available: {{variant.available}},
+  compare_at_price: {{variant.compare_at_price}},
+  featured_image: {{variant.image | json}},
+  id: {{variant.id}},
+  inventory_management: "{{variant.inventory_management}}",
+  inventory_policy: "{{variant.inventory_policy}}",
+  inventory_quantity: "{{variant.inventory_quantity}}",
+  name:"{{variant.product.title}} - {{variant.title}}",
+  option1: "{{variant.option1}}",
+  option2: "{{variant.option2}}",
+  option3: "{{variant.option3}}",
+  options: "{{variant.options}}",
+  price: {{variant.inventory_management}},
+  public_title: "{{variant.inventory_management}}",
+  sku: "{{variant.sku}}",
+  title:"{{variant.title}}",
+  store_availabilities:"{{variant.store_availabilities}}"
+}
+                              {% endfor %}
             </script>
             {% when 'quantity' %}
             <div class="select__quantity">
