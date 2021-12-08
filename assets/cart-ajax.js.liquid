@@ -202,7 +202,8 @@ buildCart = function (cart,showCart) {
       shipPendingPercentage= shipPendingPercentage - 5
     }
   }
-	var cartDiscounts = '';
+	 $.each(cart.cart_level_discount_applications, function(index, cartItem) {
+     });
   
   // Gather all cart data and add to DOM
   data = {
