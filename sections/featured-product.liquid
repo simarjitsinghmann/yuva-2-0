@@ -156,7 +156,12 @@
                       {% unless current_variant.available %}                      
                       {{ 'products.product.sold_out' | t }}
                       {% else %}
-                      {{ 'products.product.add_to_cart' | t }}{% endunless %}</span>
+                      {% if preorder %}
+                      {{ 'products.product.preorder' | t }}
+                      {% else %}
+                      {{ 'products.product.add_to_cart' | t }}
+                      {% endif %}
+                      {% endunless %}</span>
                     <svg height="38" width="38" class="svg-loader" style="display:none;">
                       <circle r="13" cx="14" cy="20"></circle>
                       <circle stroke-dasharray="103.964594 87.96459430051421" r="13" cx="14" cy="20"></circle>
