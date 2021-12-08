@@ -1523,9 +1523,6 @@
   .single-banner-section.banner-section .item {
     height: 300px;
   }
-  .feature-product .product-image-left {
-    padding-right: 0;
-}
   .single-banner-section.banner-section h1 {
       font-size: 22px;
       line-height: 22px;
@@ -1535,9 +1532,12 @@
       line-height: 35px;
   }
   /*===============  single banner css end  =============*/
-  /*============  feature Product css satrt ==============*/
+/*============  feature Product css satrt ==============*/
   .feature__product .item {
     max-height: 450px;
+  }
+  .feature-product .product-image-left {
+    padding-right: 0;
   }
   /*============  feature Product css end ==============*/
   /*============  multi column css start  ==========*/
