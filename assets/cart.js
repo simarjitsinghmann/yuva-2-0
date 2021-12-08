@@ -133,6 +133,7 @@ cartPageUpdate = function(cart){
       var itemPriceHtml = '';
       var itemLinePriceHtml = '';
       var itemDiscounts = '';
+      $('[data-item-discount-'+index+']').html(itemDiscounts);
       if(item.original_price === item.final_price){
       itemPriceHtml = `<strong class="cart-item__final-price product-option">
 						${originalPrice}
@@ -159,12 +160,13 @@ cartPageUpdate = function(cart){
                         <strong class="cart-item__final-price product-option">
                          ${linePrice}
                         </strong>`;
-        $.each(discounts,function(index,item){
-        itemDiscounts =`<li class="discounts__discount">TEST</li>`;
+        $.each(discounts,function(index,discount){
+          itemDiscounts =`<li class="discounts__discount">${discount.title}</li>`;
         }
       }
       $('[data-item-price-'+index+']').html(itemPriceHtml);
       $('[data-line-price-'+index+']').html(itemLinePriceHtml);
+      $('[data-item-discount-'+index+']').html(itemDiscounts);
 //       discounts += '<li data-cart-discount>Discount['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
     })
   }
