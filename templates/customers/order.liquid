@@ -79,9 +79,6 @@
                       <ul role="list" aria-label="{{ 'customer.order.discount' | t }}">
                         {%- for discount_allocation in line_item.line_level_discount_allocations -%}
                         <li>
-                          <svg aria-hidden="true" focusable="false" viewBox="0 0 12 12">
-                            <use href="#icon-discount" />
-                          </svg>
                           {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money -}})
                         </li>
                         {%- endfor -%}
