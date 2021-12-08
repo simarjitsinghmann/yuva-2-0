@@ -1,8 +1,8 @@
 <div class="section-spacer">
 <div class="container">
   <div class="shopify__top__section section-heading-box text__center">
-    <h2>{{section.settings.title}}</h2>
-    <p class="instagramUserName">{{section.settings.handle}}</p>
+    <h2>{{section.settings.heading}}</h2>
+    <p class="instagramUserName">{{section.settings.subheading}}</p>
   </div>
   {% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
   <div class="instagram-post-list"><ul id="instafeed"></ul></div>
@@ -98,13 +98,13 @@
     "settings": [
       {
         "type": "text",
-        "id": "title",
+        "id": "heading",
         "label": "t:sections.instagram.settings.title.label",
         "default": "Follow Us On Instagram"
       },
       {
         "type": "text",
-        "id": "handle",
+        "id": "subheading",
         "label": "t:sections.instagram.settings.handle.label",
 		    "default": "@themewexample"
       },
