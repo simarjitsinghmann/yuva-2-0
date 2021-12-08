@@ -1653,6 +1653,7 @@
     max-height: 95px;
 }
 /*  testimonial css end  */
+  /*==================  blog css start  ============*/
   .post-information-image, .post-information-image .animate_hvrbr {
     min-height: 220px;
     max-height: 220px;
@@ -1679,7 +1680,20 @@
   .blog-multi-slide.mobile {
     display: block;
 }
-/*  blog css end  */
+/*==================  blog css end  ============*/
+  /*===============  single banner css start  =============*/
+  .single-banner-section.banner-section .item {
+    height: 300px;
+  }
+  .single-banner-section.banner-section h1 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .single-banner-section.banner-section h2 {
+    font-size: 40px;
+    line-height: 35px;
+  }
+  /*===============  single banner css end  =============*/
 /*============  multi column css start  ==========*/
   .service__column .col {
     border-left: 0;
