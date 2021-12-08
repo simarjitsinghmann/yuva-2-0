@@ -1,232 +1,22 @@
-/* Derived from base colors (theme settings) */
-
-:root,
-.color-background-1 {
-  --color-foreground: var(--color-base-text);
-  --color-foreground-rgb: var(--color-base-text-rgb);
-  --color-background: var(--color-base-background-1);
-  --color-background-rbg: var(--color-base-background-1-rgb);
-  --payment-terms-background-color: var(--color-base-background-1);
-}
-
-.color-background-2 {
-  --color-background: var(--color-base-background-2);
-  --color-background-rbg: var(--color-base-background-2-rgb);
-}
-
-.color-inverse {
-  --color-foreground: var(--color-base-background-1);
-  --color-foreground-rgb: var(--color-base-background-1-rgb);
-  --color-background: var(--color-base-text);
-  --color-background-rbg: var(--color-base-text-rgb);
-}
-
-.color-accent-1 {
-  --color-foreground: var(--color-base-solid-button-labels);
-  --color-foreground-rgb: var(--color-base-solid-button-labels-rgb);
-  --color-background: var(--color-base-accent-1);
-  --color-background-rbg: var(--color-base-accent-1-rgb);
-}
-
-.color-accent-2 {
-  --color-foreground: var(--color-base-solid-button-labels);
-  --color-foreground-rgb: var(--color-base-solid-button-labels-rgb);
-  --color-background: var(--color-base-accent-2);
-  --color-background-rbg: var(--color-base-accent-2-rgb);
-}
-
-:root,
-.color-background-1,
-.color-background-2,
-.color-inverse,
-.color-accent-1,
-.color-accent-2 {
-  --color-foreground-75: rgba(var(--color-foreground-rgb), 0.75);
-  --color-foreground-70: rgba(var(--color-foreground-rgb), 0.7);
-  --color-foreground-55: rgba(var(--color-foreground-rgb), 0.55);
-  --color-foreground-50: rgba(var(--color-foreground-rgb), 0.5);
-  --color-foreground-40: rgba(var(--color-foreground-rgb), 0.4);
-  --color-foreground-30: rgba(var(--color-foreground-rgb), 0.3);
-  --color-foreground-20: rgba(var(--color-foreground-rgb), 0.2);
-  --color-foreground-10: rgba(var(--color-foreground-rgb), 0.1);
-  --color-foreground-8: rgba(var(--color-foreground-rgb), 0.08);
-  --color-foreground-4: rgba(var(--color-foreground-rgb), 0.04);
-  --color-foreground-3: rgba(var(--color-foreground-rgb), 0.03);
-}
-
-/* Links */
-
-:root,
-.color-background-1 {
-  --color-link: var(--color-base-outline-button-labels);
-  --color-link-hover: rgba(var(--color-base-outline-button-labels-rgb), 0.85);
-}
-
-.color-background-2,
-.color-inverse,
-.color-accent-1,
-.color-accent-2 {
-  --color-link: var(--color-foreground);
-  --color-link-hover: var(--color-foreground-70);
-}
-
-/* Primary button */
-
-:root,
-.color-background-1 {
-  --color-button-background: var(--color-base-accent-1);
-  --color-button-border: var(--color-base-accent-1);
-  --color-button-text: var(--color-base-solid-button-labels);
-  --color-button-text-rgb: var(--color-base-solid-button-labels-rgb);
-}
-
-.color-background-2,
-.color-inverse,
-.color-accent-1,
-.color-accent-2 {
-  --color-button-background: var(--color-foreground);
-  --color-button-border: var(--color-foreground);
-  --color-button-text: var(--color-background);
-  --color-button-text-rgb: var(--color-background-rbg);
-}
-
-/* Secondary button */
-
-.button--secondary {
-  --color-button-background: transparent;
-  --color-button-border: var(--color-base-outline-button-labels);
-  --color-button-text: var(--color-base-outline-button-labels);
-  --color-button-text-rgb: var(--color-base-outline-button-labels-rgb);
-}
-
-.color-background-2 .button--secondary,
-.color-inverse .button--secondary,
-.color-accent-1 .button--secondary,
-.color-accent-2 .button--secondary {
-  --color-button-border: var(--color-foreground);
-  --color-button-text: var(--color-foreground);
-  --color-button-text-rgb: var(--color-foreground-rgb);
-}
-
-/* Tertiary button */
-
-.button--tertiary {
-  --color-button-background: transparent;
-  --color-button-border: rgba(var(--color-base-outline-button-labels-rgb), 0.2);
-  --color-button-text: var(--color-base-outline-button-labels);
-  --color-button-text-rgb: var(--color-base-outline-button-labels-rgb);
-}
-
-.color-background-2 .button--tertiary,
-.color-inverse .button--tertiary,
-.color-accent-1 .button--tertiary,
-.color-accent-2 .button--tertiary {
-  --color-button-border: var(--color-foreground-20);
-  --color-button-text: var(--color-foreground);
-}
-
-/* Badges */
-
-:root,
-.color-background-1 {
-  --color-badge-background: var(--color-background);
-  --color-badge-border: var(--color-foreground-10);
-}
-
-.color-background-2,
-.color-inverse,
-.color-accent-1,
-.color-accent-2 {
-  --color-badge-background: var(--color-background);
-  --color-badge-border: var(--color-background);
-}
-
-/*  Cards and announcement bar */
-
-:root,
-.color-background-1,
-.color-background-2 {
-  --color-card-hover: rgba(var(--color-base-text-rgb), 0.06);
-}
-
-.color-inverse {
-  --color-card-hover: rgba(var(--color-base-background-1-rgb), 0.06);
-}
-
-.color-accent-1,
-.color-accent-2 {
-  --color-card-hover: rgba(var(--color-base-solid-button-labels-rgb), 0.06);
-}
-
 /* base */
-
 .no-js:not(html) {
   display: none !important;
 }
-
 html.no-js .no-js:not(html) {
   display: block !important;
 }
-
 .no-js-inline {
   display: none !important;
 }
-
 html.no-js .no-js-inline {
   display: inline-block !important;
 }
-
 html.no-js .no-js-hidden {
   display: none !important;
 }
-.page-width-desktop {
-  padding: 0;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 990px) {
-  .page-width--narrow {
-    max-width: 72.6rem;
-    padding: 0;
-  }
-
-  .page-width-desktop {
-    max-width: 120rem;
-    padding: 0 5rem;
-  }
-}
-
-.element-margin {
-  margin-top: 5rem;
-}
-
-
-
-.grid-auto-flow {
-  display: grid;
-  grid-auto-flow: column;
-}
-
-.page-margin,
-.shopify-challenge__container {
-  margin: 15rem auto;
-}
-
-.rte-width {
-  max-width: 82rem;
-  margin: 0 auto 2rem;
-}
-
-.list-unstyled {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .hidden {
   display: none !important;
 }
-
 .visually-hidden {
   position: absolute !important;
   overflow: hidden;
@@ -238,16 +28,13 @@ html.no-js .no-js-hidden {
   clip: rect(0 0 0 0);
   word-wrap: normal !important;
 }
-
 .visually-hidden--inline {
   margin: 0;
   height: 1em;
 }
-
 .overflow-hidden {
   overflow: hidden;
 }
-
 .skip-to-content-link:focus {
   z-index: 9999;
   position: inherit;
@@ -256,7 +43,6 @@ html.no-js .no-js-hidden {
   height: auto;
   clip: auto;
 }
-
 .full-width-link {
   position: absolute;
   top: 0;
@@ -1036,92 +822,6 @@ summary::-webkit-details-marker {
 .media.media--hover-effect > img + img {
   opacity: 0;
 }
-
-@media screen and (min-width: 990px) {
-  .media--cropped {
-    padding-bottom: 63%;
-  }
-}
-
-deferred-media {
-  display: block;
-}
-
-/* component-button */
-/* Button - default */
-.button:focus-visible {
-  box-shadow: 0 0 0 0.1rem var(--color-button-border),
-    0 0 0 0.3rem var(--color-background),
-    0 0 0.5rem 0.4rem var(--color-foreground-30);
-}
-
-.button:focus {
-  box-shadow: 0 0 0 0.1rem var(--color-button-border),
-    0 0 0 0.3rem var(--color-background),
-    0 0 0.5rem 0.4rem var(--color-foreground-30);
-}
-.button--tertiary {
-  font-size: 1.2rem;
-  padding: 1rem 1.5rem;
-  min-width: 9rem;
-  min-height: 3.5rem;
-}
-
-.button--small {
-  padding: 1.2rem 2.6rem;
-}
-
-/* Button - hover */
-
-.button:not([disabled]):hover,
-.shopify-challenge__button:hover,
-.customer button:hover {
-  box-shadow: 0 0 0 0.2rem var(--color-button-border);
-}
-
-/* Button - other */
-
-.button:disabled,
-.button[aria-disabled='true'],
-.button.disabled,
-.customer button:disabled,
-.customer button[aria-disabled='true'],
-.customer button.disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.button--full-width {
-  display: flex;
-  width: 100%;
-}
-
-.button.loading {
-  color: transparent;
-}
-
-.button.loading:after {
-  animation: loading var(--duration-long) infinite linear;
-  border: 0.5rem solid rgba(var(--color-button-text-rgb), 0.4);
-  border-left: 0.5rem solid var(--color-button-text);
-  border-radius: 100%;
-  box-sizing: content-box;
-  content: '';
-  display: block;
-  height: 2rem;
-  position: absolute;
-  width: 2rem;
-}
-
-@keyframes loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /* component-form */
 .field__input,
 .select__select {
