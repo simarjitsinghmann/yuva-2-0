@@ -42,15 +42,13 @@
             {% when 'price' %}
             <div class="prizebox" data-saved="{{settings.show_saved_amount}}"  data-saved-style="{{settings.saved_amount_style}}" data-price-wrapper="">
               {% if current_variant.compare_at_price > current_variant.price %}
-              <h3 id="get_price" class="get-price">
-                <span>{{current_variant.price | money}}</span>
-                <span class="main-price">
-                  {{current_variant.compare_at_price | money}}
-                </span>
+              <h3 id="get_price" class="price-list">
+                <span class="get-price">{{current_variant.price | money}}</span>
+                <span class="main-price"> {{current_variant.compare_at_price | money}}</span>
+                <span class="percent-off">({{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}})</span>
               </h3>
-              <span class="percent-off">({{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}})</span>
               {% else %}
-              <h3 id="get_price" class="get-price">{{current_variant.price | money}}</h3>
+              <h3 id="get_price" class="price-list">{{current_variant.price | money}}</h3>
               {% endif %}
             </div>
             {% when 'variant' %}
