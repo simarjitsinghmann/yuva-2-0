@@ -125,11 +125,11 @@ cartPageUpdate = function(cart){
   else{
     $.each(cart.items,function(index,item){
       var finalPrice = Shopify.formatMoney(item.final_price,moneyFormat),
-      var originalPrice = Shopify.formatMoney(item.original_price,moneyFormat),
-      var vendor = item.vendor,
-      var linePrice = Shopify.formatMoney(item.final_line_price, moneyFormat),
-      var originalLinePrice = Shopify.formatMoney(item.original_line_price,moneyFormat),
-      var discounts = item.discounts,
+      originalPrice = Shopify.formatMoney(item.original_price,moneyFormat),
+      vendor = item.vendor,
+      linePrice = Shopify.formatMoney(item.final_line_price, moneyFormat),
+      originalLinePrice = Shopify.formatMoney(item.original_line_price,moneyFormat),
+       discounts = item.discounts;
       var itemPriceHtml = '';
       var itemLinePriceHtml = '';
       
