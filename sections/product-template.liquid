@@ -163,7 +163,26 @@
             {% endfor %}
             {% endunless %}
             <script type="application/json" name="variant-json">
-                              {{ product.variants | json }}
+                             [ {%- for variant in product.variants -%}
+                              {
+  "available": {{-variant.available-}},
+  "compare_at_price": {{-variant.compare_at_price}},
+  "featured_image": {{-variant.image | json}},
+  "id": {{-variant.id}},
+  "inventory_management": "{{-variant.inventory_management-}}",
+  "inventory_policy": "{{-variant.inventory_policy-}}",
+  "inventory_quantity": "{{-variant.inventory_quantity-}}",
+  "name":"{{-product.title}} - {{variant.title-}}",
+  "option1": "{{-variant.option1-}}",
+  "option2": "{{-variant.option2-}}",
+  "option3": "{{-variant.option3-}}",
+  "options": "{{-variant.options-}}",
+  "price": {{-variant.price-}},
+  "sku": "{{-variant.sku-}}",
+  "title":"{{-variant.title-}}",
+  "store_availabilities":"{{-variant.store_availabilities-}}"
+}{%- unless forloop.last -%},{%- endunless -%}
+                              {%- endfor -%}]
             </script>
             {% when 'quantity' %}
             <div class="select__quantity">

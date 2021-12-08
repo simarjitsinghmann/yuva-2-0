@@ -3746,14 +3746,6 @@ button.Sd_addProduct:disabled {
    top: 0;
    height: 100%;
 }
-.banner-caption-title {
-   position: absolute;
-   padding: 20px 0;
-}
-.banner-caption-title .button {
-   text-transform: uppercase;
-   font-weight: var(--semibold);
-}
 .banner-caption .container,
 .carousel-caption .container {
    position: absolute;
@@ -3763,6 +3755,10 @@ button.Sd_addProduct:disabled {
    -moz-transform: translateX(-50%);
    -webkit-transform: translateX(-50%);
    transform: translateX(-50%);
+}
+.banner-caption-title {
+   position: absolute;
+   padding: 20px 0;
 }
 /*================ Single banner css end ==============*/
 .product_button.no-variants .shopify-payment-button__button,
