@@ -10,7 +10,7 @@
   <div class="container ">
     <div class="box-shadow feature-product product_content_section ">
       <div class="row  no-margin ">
-        <div class="col-md-7 no-padding-left no-padding-right background-img-color euqal-height">
+        <div class="col-md-7">
           <div class="product-image-left">
             {% unless product == empty %}          
             <div id="feature__product-{{section.id}}" class="feature__product" data-slider-id="1">
@@ -24,7 +24,7 @@
           </div>
         </div>
 
-        <div class="col-md-5 euqal-height right__side_bg">
+        <div class="col-md-5">
           {% unless section.settings.product == blank %}
           <div class="product-add-to-cart-right">
             {%- assign product_form_id = 'product-form-' | append: section.id -%}
