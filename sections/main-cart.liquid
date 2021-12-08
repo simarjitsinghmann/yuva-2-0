@@ -28,7 +28,7 @@
                        
                       <a href="{{item.url}}"><h5>{{item.product.title | truncatewords:5}}</h5></a>
 
-                      <div class="price">
+                      <div class="price item-price" data-item-price>
                         {%- if item.original_price != item.final_price -%}
                         <s class="cart-item__old-price product-option">
                           {{- item.original_price | money -}}
@@ -83,7 +83,7 @@
                     <td class="cart-price">
                       
                       
-                      <div class="price">
+                      <div class="price item-line-price" data-line-price>
                         {%- if item.original_line_price != item.final_line_price -%}
                         <s class="cart-item__old-price product-option">
                           {{- item.original_line_price | money -}}
