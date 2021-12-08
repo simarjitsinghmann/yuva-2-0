@@ -149,15 +149,15 @@ cartPageUpdate = function(cart){
       
       if(item.original_line_price === item.final_line_price){
       itemPriceHtml = `<strong class="cart-item__final-price product-option">
-						${originalPrice}
+						${originalLinePrice}
                         </strong>`;
       }
       else{
       itemPriceHtml = `<s class="cart-item__old-price product-option">
-                         ${originalPrice}
+                         ${originalLinePrice}
                         </s>
                         <strong class="cart-item__final-price product-option">
-                         ${finalPrice}
+                         ${linePrice}
                         </strong>`;
       }
 //       discounts += '<li data-cart-discount>Discount['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
