@@ -40,13 +40,13 @@
       </div>
       
       <div class="blog-multi-slide mobile" role="list">  
-          <div id="featuredBlog-{{section.id}}-mobile" class="blog__post grid grid--1-col grid--2-col-tablet grid--3-col-desktop">
+          <div id="featuredBlog-{{section.id}}-mobile" class="blog__post row">
             {% for block in section.blocks limit:1 %}  
             {% if block.settings.article != blank %}  
             {% assign article = block.settings.article %}
             {% include 'featured-article-grid' desc_limit:30 %}
             {% else %}
-            <div class="item grid__item">
+            <div class="item col-sm-12">
               <div class="post-wrapper">
                   {% assign article_image = 'featured_image.png' | asset_url %}                
                   <div class="post-information-image">
