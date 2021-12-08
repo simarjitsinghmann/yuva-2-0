@@ -83,7 +83,11 @@
                       {% if section_onboarding %}disabled="disabled"{% endif %} class="black-btn button small-btn Sd_addProduct">
                 <span>
                   {% if product.available %}
-                  {{ 'products.product.add_to_cart' | t }}
+                      {% if preorder %}
+                      {{ 'products.product.preorder' | t }}
+                      {% else %}
+                      {{ 'products.product.add_to_cart' | t }}
+                      {% endif %}
                   {% else %}
                   {{ 'products.product.sold_out' | t }}
                   {% endif %}
