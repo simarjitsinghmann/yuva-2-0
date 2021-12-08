@@ -131,9 +131,11 @@ cartPageUpdate = function(cart){
       discounts += '<li data-cart-discount>Discount['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
     })
     $('li[data-cart-discount]').remove();
+    $('li[data-cart-original]').removeClass('hidden');
     $(discounts).insertAfter('li[data-cart-original]')
   }
   else{
+    $('li[data-cart-original]').addClass('hidden');
     $('li[data-cart-discount]').remove();
   }
 }
