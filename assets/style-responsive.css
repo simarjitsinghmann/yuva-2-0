@@ -136,8 +136,7 @@
   /*  product sidebar end   */
   /*==============  home banner slider start  ===========*/
   .banner.banner-section.item {
-    min-height: 650px;
-    max-height: 650px;
+    height: 650px;
   }
   .banner-section.item.slider-banner h1 {
     font-size: 55px;
@@ -294,10 +293,6 @@
   /*  common end  */
   /*================  banner slider css start ==============*/
   .banner.banner-section.item {
-    min-height: 500px;
-    max-height: 500px;
-  }
-  .banner.slider-banner img {
     height: 500px;
   }
   .banner-section.item.slider-banner h1 {
@@ -850,11 +845,7 @@
   /*==============  featured blog end  ====================*/
   /* banner css start   */
   .banner.banner-section.item {
-    min-height: 400px;
-    max-height: 400px;
-  }
-  .banner.slider-banner img {
-    height: 400px;
+    height: 450px;
   }
   .banner-section .item {
     height: 300px;
