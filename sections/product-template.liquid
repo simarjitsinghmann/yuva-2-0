@@ -164,7 +164,7 @@
             {% endfor %}
             {% endunless %}
             <script type="application/json" name="variant-json">
-                              {{ product | json }}
+                              {{ product.variants | json }}
             </script>
             {% when 'quantity' %}
             <div class="select__quantity">
