@@ -1460,9 +1460,18 @@ a.wishlist-view .fas {
 }
 /***daily-offer-end***/
 
-/**blog-post-start**/
+/*================ blog post css start ============*/
 .blog-multi-slide.mobile {
 	display:none;
+}
+.blog__post .item.grid__item {
+   max-width: 100%;
+   padding: 0 15px;
+   height: 100%;
+}
+.post-wrapper {
+   box-shadow: 0 2px 3px rgb(0 0 0 / 10%);
+   height: 100%;
 }
 .post-information__wrapper {
    padding-top: 20px;
@@ -1516,20 +1525,8 @@ a.wishlist-view .fas {
    object-fit: cover;
    heght: 100%;
 }
-/**blog-variation2**/
-.blog__post .item.grid__item {
-   max-width: 100%;
-   padding: 0;
-   height: 100%;
-}
-.post-wrapper {
-   margin: 0 15px;
-   box-shadow: 0 2px 3px rgb(0 0 0 / 10%);
-   height: 100%;
-}
-/**END Blog-post**/
+/*================ Blog post css end ===================*/
 
-/**END Blog-post**/
 /**video-section**/
 .home-video-sec {
    position: absolute;
