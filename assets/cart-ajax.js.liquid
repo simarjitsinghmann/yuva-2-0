@@ -202,13 +202,13 @@ buildCart = function (cart,showCart) {
       shipPendingPercentage= shipPendingPercentage - 5
     }
   }
-	 $.each(cart.cart_level_discount_applications, function(index, cartDiscount) {
-       var discount ={
-         title:cartDiscount.title,
-         price:Shopify.formatMoney(cartDiscount.total_allocated_amount, moneyFormat)
-       }
-       cartDiscounts.push(discount);
-     });
+  $.each(cart.cart_level_discount_applications, function(index, cartDiscount) {
+    var discount ={
+      title:cartDiscount.title,
+      price:Shopify.formatMoney(cartDiscount.total_allocated_amount, moneyFormat)
+    }
+    cartDiscounts.push(discount);
+  });
   
   // Gather all cart data and add to DOM
   data = {
