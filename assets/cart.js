@@ -148,18 +148,20 @@ cartPageUpdate = function(cart){
       }
       
       if(item.original_line_price === item.final_line_price){
-      itemPriceHtml = `<strong class="cart-item__final-price product-option">
+      itemLinePriceHtml = `<strong class="cart-item__final-price product-option">
 						${originalLinePrice}
                         </strong>`;
       }
       else{
-      itemPriceHtml = `<s class="cart-item__old-price product-option">
+      itemLinePriceHtml = `<s class="cart-item__old-price product-option">
                          ${originalLinePrice}
                         </s>
                         <strong class="cart-item__final-price product-option">
                          ${linePrice}
                         </strong>`;
       }
+      $('[data-item-price-'+index+']').html(itemPriceHtml);
+      $('[data-line-price-'+index+']').html(itemLinePriceHtml);
 //       discounts += '<li data-cart-discount>Discount['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
     })
   }
