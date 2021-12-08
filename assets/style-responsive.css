@@ -1119,10 +1119,6 @@
   }
 }
 @media screen and (max-width: 767px) {
-/*   h2 {
-    font-size: 16px;
-    line-height: 21px;
-  } */
   h2 {
     font-size: 21px;
     line-height: 25px;
@@ -1206,7 +1202,7 @@
   }
   .collection__right__list .grid__item__list,
   .card__warpper__detail.left__sided{
-    height: 140px;
+    height: 180px;
     border-radius: 8px;
 }
   .card__warpper__detail.right__sided .collection-image,
@@ -1603,6 +1599,10 @@
   .collection-list-view-card img {
     min-height: 300px;
     max-height: 300px;
+}
+    .collection__right__list .grid__item__list,
+  .card__warpper__detail.left__sided{
+    height: 140px;
 }
   /*  collection css end */
 /*  products listing start  */
