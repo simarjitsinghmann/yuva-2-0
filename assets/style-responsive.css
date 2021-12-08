@@ -1691,11 +1691,19 @@
   }
   /*===============  single banner css end  =============*/
 /*============  multi column css start  ==========*/
-  .service__column .col {
+.service__column .col {
     border-left: 0;
     padding-left: 0;
-    flex-direction:column;
+    padding: 12px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e9e9e9!important;
 }
+  .service__column h6 {
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
   .service__column p {
     display: none;
 }
