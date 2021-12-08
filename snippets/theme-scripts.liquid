@@ -1,7 +1,8 @@
 <script>
   var moneyFormat = '{{shop.money_format}}';
   var addToCartText = '{{ 'products.product.add_to_cart' | t }}';  
-  var preorderText = '{{ 'products.product.preorder' | t }}';                 
+  var preorderText = '{{ 'products.product.preorder' | t }}';   
+  var preorderStatus = {{settings.enable_preorder}};                 
   var soldOutText = '{{ 'products.product.sold_out' | t }}';                 
   var unavailableText = '{{ 'products.product.unavailable' | t }}';
   var preLoadLoadGif = `<div class="load">
