@@ -313,7 +313,7 @@
     font-size: 16px;
   }
   /*================= banner slider css end ====================*/
-  /*===============  single banner start  =============*/
+  /*===============  single banner css start  =============*/
   .single-banner-section.banner-section .item {
       height: 400px;
   }
@@ -325,7 +325,7 @@
       font-size: 60px;
       line-height: 55px;
   }
-   /*===============  single banner start  =============*/
+   /*===============  single banner css end  =============*/
   /*  header start  */
   .header__heading-link img {
     max-width: 80px;
@@ -865,16 +865,6 @@
   .carousel-caption .style2 h5.bottom-title {
     padding-bottom: 20px;
   }
-  .single-banner-section.banner-section h1 {
-    font-size: 34px;
-    line-height: 35px;
-    padding: 5px 25px 5px 15px;
-    margin: 10px 0 10px;
-  }
-  .single-banner-section.banner-section h2 {
-    font-size: 30px;
-    line-height: 36px;
-  }
   .button .fa-arrow-right {
     margin-left: 12px;
   }
@@ -892,7 +882,6 @@
     font-size: 11px;
     min-width: 100px;
 }
-  .single-banner-section.banner-section p,
   .carousel-caption .banner-slide p,
   .flex-absolute p {
     font-size: 16px;
@@ -1106,6 +1095,19 @@
   nav.breadcrumb-nav {
     padding: 10px 0;
   }
+  /*===============  single banner css start  =============*/
+  .single-banner-section.banner-section .item {
+    height: 350px;
+  }
+  .single-banner-section.banner-section h1 {
+    font-size: 45px;
+    line-height: 45px;
+  }
+  .single-banner-section.banner-section h2 {
+    font-size: 60px;
+    line-height: 55px;
+  }
+  /*===============  single banner css end  =============*/
 }
 @media screen and (max-width: 767px) {
   h2 {
