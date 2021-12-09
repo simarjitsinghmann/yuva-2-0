@@ -5033,7 +5033,9 @@ body #shopify-product-reviews {
 }
 
 .select__color.product-option-selector .product-loop-variants.color .option {
-  box-shadow: 0 0 0 1px #e8e8e1;
+  box-shadow: 0 0 0 1px #e8e8e1;  
+  border: 2px solid #fff;
+  background-color: #fff;
 }
 
 .product-loop-variants .color_option input:checked+span.option, 
