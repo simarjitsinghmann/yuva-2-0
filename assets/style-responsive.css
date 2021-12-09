@@ -1245,7 +1245,6 @@
       font-size: 21px;
       line-height: 24px;
   }
-  .card-wrapper.left-sided .collection-list-btn, 
   .collection-detail-right a {
 /*       font-weight: var(--bold); */
     font-weight: 300;
@@ -1259,7 +1258,8 @@
       font-size: 13px;
       background: transparent;
       padding: 0;
-      font-weight: var(--bold);
+/*       font-weight: var(--bold); */
+    font-weight: 300;
   }
   .card__warpper__detail.left__sided .collection-image {
       max-height: 420px;
