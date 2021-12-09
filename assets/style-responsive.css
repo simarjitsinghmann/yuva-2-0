@@ -1614,14 +1614,9 @@
   .card-information__wrapper p strong {
     font-size: 14px;
   }
-  
   .card__warpper__detail.right__sided .collection-detail-right h5 {
-    font-size: 18px;
-    line-height: 24px;
-    margin: 0 0 10px;
     font-family: var(--heading-font-family);
   }
-  
   
 }
 @media screen and (max-width: 575px) {
@@ -1805,6 +1800,11 @@
   }
   .customer-links {
     display: none;
+  }
+  .card__warpper__detail.right__sided .collection-detail-right h5 {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 10px;
   }
 }
 @media screen and (max-width: 480px) {
