@@ -1657,6 +1657,11 @@
    	font-weight: var(--medium);
     letter-spacing: 1px;
   }
+  .center {
+    top: auto;
+    transform: translateY(-0%);
+    bottom: 0px;
+  }
   
 }
 @media screen and (max-width: 575px) {
