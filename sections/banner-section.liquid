@@ -16,11 +16,11 @@
             <span class="tag-line">{{section.settings.tag_line}}</span>
             {% endif %}
             {% if section.settings.heading != blank %}
-            <h1>{{section.settings.heading}}</h1>
+            <h2>{{section.settings.heading}}</h2>
             {% endif %}
 
             {% if section.settings.subheading != blank %}
-            <h2>{{section.settings.subheading}}</h2>
+            <h3>{{section.settings.subheading}}</h3>
             {% endif %}
 
             {% if section.settings.content != blank %}        
@@ -45,12 +45,12 @@
     {% endif %}
   }  
                 
-  #banner-{{section.id}} .banner-caption-title h2 { 
+  #banner-{{section.id}} .banner-caption-title h3 { 
     {% if section.settings.subh_text != blank %}
     color: {{ section.settings.subh_text }};
     {% endif %}
   }              
-  #banner-{{section.id}} .banner-caption-title h1 { 
+  #banner-{{section.id}} .banner-caption-title h2 { 
     {% if section.settings.h_text != blank %}
     color: {{ section.settings.h_text }};
     {% endif %}
