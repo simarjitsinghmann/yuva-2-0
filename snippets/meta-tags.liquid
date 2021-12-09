@@ -27,27 +27,27 @@
 {% if request.page_type == 'product' %}
   {%- assign og_type = 'product' -%}
   {% if product.images.size > 0 %}
-    {% for image in product.images limit:3 -%}<meta property="og:image" content="http:{{ image.src | product_img_url: '1200x1200' }}">{% endfor -%}
+    {% for image in product.images limit:3 -%}<meta property="og:image" content="https:{{ image.src | product_img_url: '1200x1200' }}">{% endfor -%}
     {% for image in product.images limit:3 -%}<meta property="og:image:secure_url" content="https:{{ image.src | product_img_url: '1200x1200' }}">{% endfor -%}
   {% endif %}
 
 {% elsif request.page_type == 'article' %}
   {%- assign og_type = 'article' -%}
   {% if article.image %}
-    <meta property="og:image" content="http:{{ article.image | img_url: '1200x1200' }}">
+    <meta property="og:image" content="https:{{ article.image | img_url: '1200x1200' }}">
     <meta property="og:image:secure_url" content="https:{{ article.image | img_url: '1200x1200' }}">
   {% endif %}
 
 {% elsif request.page_type == 'collection' %}
   {%- assign og_type = 'product.group' -%}
   {% if collection.image %}
-   <meta property="og:image" content="http:{{ collection.image | img_url: '1200x1200' }}">
+   <meta property="og:image" content="https:{{ collection.image | img_url: '1200x1200' }}">
     <meta property="og:image:secure_url" content="https:{{ collection.image | img_url: '1200x1200' }}">
   {% endif %}
 
 {% elsif request.page_type == 'password' %}
   {%- assign og_url = shop.url -%}
-  <meta property="og:image" content="http:{{ page_image | img_url: '1200x1200' }}">
+  <meta property="og:image" content="https:{{ page_image | img_url: '1200x1200' }}">
   <meta property="og:image:secure_url" content="https:{{ page_image | img_url: '1200x1200' }}">
 
 {% endif %}
