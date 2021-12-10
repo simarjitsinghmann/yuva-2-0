@@ -1,8 +1,9 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
-{%- assign pick_up_availabilities = current_variant.store_availabilities | where: 'pick_up_enabled', true -%}
+{{product_variant}}
+{%- assign pick_up_availabilities = product_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
 {%- if pick_up_availabilities.size > 0 -%}
-  <div class="pickup-availability-preview">
+  <pickup-availability-preview class="pickup-availability-preview">
     {%- liquid
       assign closest_location = pick_up_availabilities.first
 
@@ -29,17 +30,17 @@
         {%- endif -%}
       {%- endif -%}
     </div>
-  </div>
+  </pickup-availability-preview>
 
-  <div tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="PickupAvailabilityHeading">
+  <pickup-availability-drawer tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="PickupAvailabilityHeading">
     <div class="pickup-availability-header">
-      <h2 class="h3 pickup-availability-drawer-title" id="PickupAvailabilityHeading">{{ current_variant.product.title | escape }}</h2>
+      <h2 class="h3 pickup-availability-drawer-title" id="PickupAvailabilityHeading">{{ product_variant.product.title | escape }}</h2>
       <button class="pickup-availability-drawer-button" type="button" aria-label="{{ 'accessibility.close' | t }}">{%- render 'icon-close' -%}</button>
     </div>
 
-    {%- unless current_variant.product.has_only_default_variant -%}
+    {%- unless product_variant.product.has_only_default_variant -%}
       <p class="pickup-availability-variant">
-        {%- for product_option in current_variant.product.options_with_values -%}
+        {%- for product_option in product_variant.product.options_with_values -%}
           {{ product_option.name | escape }}:&nbsp;
           {%- for value in product_option.values -%}
             {%- if product_option.selected_value == value -%}
@@ -72,5 +73,5 @@
         </li>
       {%- endfor -%}
     </ul>
-  </div>
+  </pickup-availability-drawer>
 {%- endif -%}
