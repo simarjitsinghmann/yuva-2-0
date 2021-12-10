@@ -257,6 +257,10 @@ img {
    font-weight: var(--medium);
     margin-top:35px;
 }
+.banner .slide_container,
+.banner .slide_container >.row{
+   height: 100%;
+}
 .shopify-section-slider .slick-arrow {
    line-height: 10px;
    height: auto;
@@ -359,9 +363,6 @@ img {
    position: relative;
    margin: 0 0 0 -35px;
    top: -12px;
-}
-.banner .slide_container {
-   height: 100%;
 }
 .banner .slide_container > .row {
    height: 100%;
