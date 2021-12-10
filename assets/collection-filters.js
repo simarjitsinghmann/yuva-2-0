@@ -1,5 +1,4 @@
 (function () {
-  
   function changeGridLayout(){
     var parent = document.getElementById('CollectionProductsContainer');
     if(window.innerWidth < 768){
@@ -155,13 +154,11 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
   sliderEventListener.on("update", function(values){
     var minVal =  parseInt(values[0]);
     var newformatMoney = moneyFormat;
-    
     section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = minVal;
-    section.querySelector('[data-min-value]').innerHTML = textReplace(newformatMoney,minVal,'{{','}}');
+    section.querySelector('[data-min-value]').innerHTML = newformatMoney.replace('{{amount}}',minVal);
     var maxVal =  parseInt(values[1]);
     section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = maxVal;
-    section.querySelector('[data-max-value]').innerHTML = textReplace(newformatMoney,maxVal,'{{','}}');
-    console.log(newformatMoney,minVal,textReplace(newformatMoney,minVal,'{{','}}'),maxVal,textReplace(newformatMoney,maxVal,'{{','}}'))
+    section.querySelector('[data-max-value]').innerHTML = newformatMoney.replace('{{amount}}',maxVal);
   })
 })
 

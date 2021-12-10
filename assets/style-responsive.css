@@ -1601,7 +1601,8 @@
     padding: 20px 25px;
   }
   .service__column .col:last-child {
-    border: 0;
+    border-bottom: 0!important;
+    padding-right:25px;
   }
   .service__column h6 {
     font-size: 15px;
