@@ -152,10 +152,10 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
   })
   }
   sliderEventListener.on("update", function(values){
-    var minVal =  parseInt(values[0]);
+    var minVal =  parseInt(values[0])*100;
     var newformatMoney = moneyFormat;
-    section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = minVal;
-    section.querySelector('[data-min-value]').innerHTML = newformatMoney.replace('{{amount}}',minVal);
+    section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = Shopify.formatMoney(minVal,moneyFormatWithoutCurrency);
+    section.querySelector('[data-min-value]').innerHTML =  Shopify.formatMoney(minVal,moneyFormat);
     var maxVal =  parseInt(values[1]);
     section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = maxVal;
     section.querySelector('[data-max-value]').innerHTML = newformatMoney.replace('{{amount}}',maxVal);
