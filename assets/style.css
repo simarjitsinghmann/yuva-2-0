@@ -1681,6 +1681,9 @@ li.breadcrumb-item a {
     font-weight: var(--normal);
     line-height: 22px;
 }
+.price-widget-mobile span:not(:last-child) {
+	margin-right: 10px;
+}
 .widget-content li label {
    letter-spacing: 0.4px;
    color: #555;
