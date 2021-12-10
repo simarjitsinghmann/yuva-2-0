@@ -219,6 +219,15 @@ img {
 /* .slider-list {
    width: 100%;
 } */
+.banner.banner-section {
+    height: 800px;
+    overflow: hidden;
+}
+.banner.banner-section img {
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
 .carousel-caption h5 {
    color: var(--white);
    margin: 0;
@@ -340,10 +349,6 @@ img {
    text-transform: uppercase;
    font-weight: var(--medium);
 }
-.banner.banner-section.item {
-    height: 800px;
-    overflow: hidden;
-}
 .banner .slide_container {
    height: 100%;
 }
@@ -396,11 +401,7 @@ img {
 div#banner-slide > img {
    width: 100%;
 }
-.banner.slider-banner img {
-   height: 100%;
-   width: 100%;
-   object-fit: cover;
-}
+
 #product-slider .slider-item .item > img {
    -webkit-transition: all 5s;
    -moz-transition: all 5s;
