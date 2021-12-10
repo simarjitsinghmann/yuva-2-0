@@ -26,7 +26,7 @@
           const sectionInnerHTML = new DOMParser()
             .parseFromString(text, 'text/html')
             .querySelector('.shopify-section');
-          this.renderPreview(sectionInnerHTML);
+        console.log(sectionInnerHTML)
         })
         .catch(e => {
           const button = this.querySelector('button');
