@@ -140,11 +140,18 @@
           <span class="pipe" style="">--</span>
           <span data-max-value>{{ max_value_formatted }}</span></p>
 
-        <div class="mall-slider-handles" id="slider-round"
+        <div class="mall-slider-handles" id="slider-round"             
+             {%- if uses_comma -%}
+             data-start="{{min_value | replace:'.','' | replace:',','.' | floor}}" 
+             data-end="{{max_value| replace:'.','' | replace:',','.' | floor}}" 
+             data-min="{{ filter.range_min | money_without_currency | replace:'.','' | replace:',','.' | floor}}" 
+             data-max="{{filter.range_max |money_without_currency | replace:'.','' | replace:',','.'  | floor}}" 
+             {%- else -%}
              data-start="{{min_value | replace:',','' | floor}}" 
              data-end="{{max_value| replace:',','' | floor}}" 
              data-min="{{ filter.range_min | money_without_currency | replace: ',', '' | floor}}" 
-             data-max="{{filter.range_max |money_without_currency | replace:',','' | floor}}" 
+             data-max="{{filter.range_max |money_without_currency | replace:',','' | floor}}"
+             {%- endif -%}
              data-target="price" 
              ></div>
 
