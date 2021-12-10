@@ -13,6 +13,7 @@
         {% assign active = false %}
         {{active}}
         {%- for filter in collection.filters -%}
+        {{filter.active_values.size }}
         {% if filter.active_values.size > 0 %}
         {{filter.type}}
         {% assign active = true  %}
