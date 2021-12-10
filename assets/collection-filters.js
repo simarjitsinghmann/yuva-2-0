@@ -156,7 +156,6 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
     var newformatMoney = moneyFormat;
     
     section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = minVal;
-    console.log(newformatMoney,minVal,textReplace(newformatMoney,minVal,'{{','}}'))
     section.querySelector('[data-min-value]').innerHTML = textReplace(newformatMoney,minVal,'{{','}}');
     var maxVal =  parseInt(values[1]);
     section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = maxVal;
