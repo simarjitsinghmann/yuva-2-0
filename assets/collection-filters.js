@@ -4,7 +4,7 @@ function textReplace(string,replacement,start,ending)
 {
   replacement = start + ' ' + replacement;
 
-  var pattern = new RegExp(start + '[\\d\\D]' + ending + '),'g');
+  var pattern = new RegExp(start + '[\\d\\D]' + ending +','g');
 
   return string.replace(pattern, replacement + ' ');
 }
