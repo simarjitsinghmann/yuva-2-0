@@ -1394,12 +1394,17 @@ a.wishlist-view .fas {
    object-fit: cover;
 }
 .flex-absolute {
-   position: absolute;
-   z-index: 1;
-   max-width: 1000px;
-   width: 100%;
-   margin: 0 auto;
+  position: absolute;
+  z-index: 1;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .video-banner-section .home-video-sec {
    position: relative;
 }
