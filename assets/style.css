@@ -250,9 +250,12 @@ img {
     right: 10px;
 }
 .shopify-section-slider .slick-dots li button {
-    width: 4px;
+    width: 2px;
     height: 20px;
     margin: 5px 0px;
+}
+.shopify-section-slider .slick-dots li button:after {
+	border-radius:0;
 }
 .offer-box {
    margin-bottom: 33px;
