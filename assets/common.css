@@ -796,28 +796,27 @@ padding-right: 15px;
 .mr-auto, .mx-auto {
     margin-right: auto;
 }
-/* global css */
 .primary_btn {
-  	background-color: var(--colorBtnPrimary);
+  background-color: var(--colorBtnPrimary);
     border-color: var(--colorBtnPrimary);  
-    color: var(--colorBtnPrimaryText);
-}
+      color: var(--colorBtnPrimaryText);
+        }
 a {
-	color: var(--theme-color);
-      cursor:pointer;
-}
+  color: var(--theme-color);
+    cursor:pointer;
+    }
 p {
-	font-size: var(--text_size);
-}
+  font-size: var(--text_size);
+    }
 img {
-	background-color: var(--colorImageBg);
-}
+  background-color: var(--colorImageBg);
+    }
 .nodatafound_wrapper,
 .template-404-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  	margin:0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0 auto;
 }
 .nodatafound_box,
 .template-404{
@@ -827,34 +826,34 @@ img {
   padding: 20px;
 }
 .template-404 {
-	max-width:500px;
+  max-width:500px;
   margin-bottom:30px;
 }
 .nodatafound_box img,
 .template-404 img {
-    background-color: transparent;
-  	width:100%;
-    max-width: 200px;
-    display: block;
-    text-align: center;
-    margin: 0 auto;
+  background-color: transparent;
+  width:100%;
+  max-width: 200px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 }
 .template-404 img {
-	max-width:450px;
+  max-width:450px;
 }
 .nodatafound_box h4,
 .template-404 h4{
-	margin:15px 0 7PX;
+  margin:15px 0 7PX;
 }
 .nodatafound_box p,
 .template-404 p{
-    color: var(--dark-gray);
+  color: var(--dark-gray);
     margin-bottom:20px;
-}
+    }
 .template-404 h2 {
-margin-top:20px;
+  margin-top:20px;
 }
 .template-404-wrapper {
-	min-height:600px;
+  min-height:600px;
 }
-/* end */
+/*=================== global css end ================*/
