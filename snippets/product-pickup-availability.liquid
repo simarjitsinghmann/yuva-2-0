@@ -4,7 +4,7 @@
                      data-variant-id="{{ current_variant.id }}"
                      data-has-only-default-variant="{{ product.has_only_default_variant }}"
                      >
-    <div class="pickup-availability-preview">
+    <div id="pickup-availability-preview-container hidden">
       <div class="pickup-availability-info">
         <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
         <button class="pickup-availability-button link link--text underlined-link">{{ 'products.product.pickup_availability.refresh' | t }}</button>
