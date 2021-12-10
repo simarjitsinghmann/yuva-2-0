@@ -27,7 +27,7 @@
             .parseFromString(text, 'text/html')
             .querySelector('.shopify-section');
         const previewContainer = document.getElementById('pickup-availability-preview-container');
-        previewContainer.innerHTML = sectionInnerHTML;
+        previewContainer.innerHTML = sectionInnerHTML.innerHTML;
         previewContainer.classList.remove('hidden')
         })
         .catch(e => {
