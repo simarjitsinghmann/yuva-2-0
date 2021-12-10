@@ -69,7 +69,7 @@ Shopify.CountryProvinceSelector = function(country_domid, province_domid, option
   //   this.provinceEl        = document.querySelector('#'+province_domid+':last-child');
   //   this.provinceContainer = document.querySelector('#'+options['hideElement']+':last-child' || '#'+province_domid+':last-child');
 
-  console.log('test',this.countryEl,'test1',document.querySelectorAll('#'+country_domid) )
+//   console.log('test',this.countryEl,'test1',document.querySelectorAll('#'+country_domid) )
   Shopify.addListener(this.countryEl, 'change', Shopify.bind(this.countryHandler,this));
 
   this.initCountry();
@@ -653,7 +653,6 @@ function priceUpdate(priceContainer,getVariant,showSaved){
       }
     }
   }else{
-    console.log(getVariant,getVariant.allocation_value,getVariant.allocation_type)
     if(getVariant.allocation_type == 'percentage'){
       savedAmountHtml +=`<span class="percent-off">${getVariant.allocation_value}%</span>`;
     }
@@ -846,9 +845,6 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     var slider = jQuery('#shopify-section-'+sectionId).find('[data-slider]');
 
     slideIndex  = $('.slideshow__slide--' + event.detail.blockId + ':not(.slick-cloned)').data('slick-index');
-
-    console.log($('.slideshow__slide--' + event.detail.blockId + ':not(.slick-cloned)'),slideIndex);
-
 
     slider.slick('slickGoTo',slideIndex);
     slider.slick('slickPause')
