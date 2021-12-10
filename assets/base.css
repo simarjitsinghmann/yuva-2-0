@@ -881,62 +881,6 @@ input[type='checkbox'] {
     margin-top: 1.05rem;
   }
 }
-
-.header *[tabindex='-1']:focus {
-  outline: none;
-}
-
-.header__heading {
-  margin: 0;
-  line-height: 0;
-}
-
-.header > .header__heading-link {
-  line-height: 0;
-}
-
-.header__heading,
-.header__heading-link {
-  grid-area: heading;
-  justify-self: center;
-}
-
-.header__heading-link {
-  display: inline-block;
-  padding: 0.75rem;
-  text-decoration: none;
-  word-break: break-word;
-}
-
-.header__heading-link:hover .h2 {
-  color: var(--color-foreground);
-}
-
-.header__heading-link .h2 {
-  line-height: 1;
-  color: var(--color-foreground-75);
-}
-
-.header__heading-logo {
-  width: 100%;
-}
-
-@media screen and (min-width: 990px) {
-  .header__heading-link {
-    margin-left: -0.75rem;
-  }
-
-  .header__heading,
-  .header__heading-link {
-    justify-self: start;
-  }
-
-  .header--top-center .header__heading-link,
-  .header--top-center .header__heading {
-    justify-self: center;
-  }
-}
-
 /* Header icons */
 .header__icons {
   display: flex;
