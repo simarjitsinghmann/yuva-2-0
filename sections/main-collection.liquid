@@ -11,12 +11,14 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M0,1H16V3H0ZM0,7H16V9H0Zm0,6H16v2H0ZM7,0H9V4H7Zm3,6h2v4H10ZM5,12H7v4H5Z"/></g></g></svg>
         <p>Filters</p>
         {% assign active = false %}
-        {{active}}
         {%- for filter in collection.filters -%}
-        {{filter.active_values.size }}
         {% if filter.active_values.size > 0 %}
-        {{filter.type}}
         {% assign active = true  %}
+        {% endif %}
+        {% if filter.type == "price_range" %}
+        {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
+        {% assign active = true  %}
+        {%- endif -%}
         {% endif %}
         {% endfor %}
         {% if active %}
