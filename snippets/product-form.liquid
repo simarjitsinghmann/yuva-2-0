@@ -92,9 +92,6 @@
   </div>
   {% endfor %}
   {% endunless %}
-  <script type="application/json" name="variant-json">
-            {% render 'product-variants' product:product %}
-  </script>
   {% when 'quantity' %}
   <div class="select__quantity">
     <span class="variant_title">{{ 'products.product.quantity.label' | t }}</span>                              
@@ -114,6 +111,7 @@
   {% when 'button' %}
   <div class="product_button">
     {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+    {% render 'product-variants' product:product %}
     {% assign preorder = false %}
     {% if settings.enable_preorder and current_variant.inventory_policy == 'continue' and current_variant.inventory_quantity <= 0  %}
     {% assign preorder = true %}
