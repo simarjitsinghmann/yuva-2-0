@@ -4,7 +4,7 @@
                      data-variant-id="{{ current_variant.id }}"
                      data-has-only-default-variant="{{ product.has_only_default_variant }}"
                      >
-    <div id="pickup-availability-preview-container hidden">
+    <div id="pickup-availability-preview-container" class="hidden">
       <div class="pickup-availability-info">
         <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
         <button class="pickup-availability-button link link--text underlined-link">{{ 'products.product.pickup_availability.refresh' | t }}</button>
@@ -26,7 +26,7 @@
           const sectionInnerHTML = new DOMParser()
             .parseFromString(text, 'text/html')
             .querySelector('.shopify-section');
-        console.log(sectionInnerHTML)
+        document.querySelector('')
         })
         .catch(e => {
 //           const button = this.querySelector('button');
