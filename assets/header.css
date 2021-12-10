@@ -1958,29 +1958,7 @@ div#countdown {
   outline: 0;
 }
 .right-media-cart .quantity-button {
-  cursor: pointer;
-  text-align: center;
-  color: var(--black);
-  font-size: 24px;
-  line-height: 1;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  padding: 2px 5px;
-  margin: 0 10px;
-  top: 0px;
-  height: 100%;
-  position: absolute;
-  display: flex;
-  align-items: center;
-}
-.quantity-button.quantity-up {
-  right: 0;
-}
-.quantity-button.quantity-down {
-  left: 0;
+  top: 10px;
 }
 .right-media-cart h6 {
   font-weight: var(--font-semibold);
