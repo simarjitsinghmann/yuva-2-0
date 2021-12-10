@@ -1648,9 +1648,10 @@ li.breadcrumb-item a {
    max-width:11px;
 }
 .aside-title p {
-   letter-spacing: 0.2px;
-   font-weight: var(--medium);
-   text-transform: uppercase;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-weight: var(--semibold);
+    font-family: var(--heading-font-family);
 }
 .shop-sidebar {
    max-width: 20%;
