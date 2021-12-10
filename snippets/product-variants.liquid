@@ -62,7 +62,7 @@
 "unit_price_measurement":true,
 "unit_price":{{- variant.unit_price -}},
 "reference_value":{{-variant.unit_price_measurement.reference_value-}},
-"reference_unit":{{-variant.unit_price_measurement.reference_unit-}},
+"reference_unit":"{{-variant.unit_price_measurement.reference_unit-}}",
 {%-else-%}
 "unit_price_measurement":false,
 {%- endif-%}
