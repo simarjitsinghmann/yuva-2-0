@@ -1,14 +1,5 @@
 (function () {
   
-function textReplace(string,replacement,start,ending)
-{
-  replacement = start + ' ' + replacement;
-
-  var pattern = new RegExp(start + '[\\d\\D]' + ending +','g');
-
-  return string.replace(pattern, replacement + ' ');
-}
-
   function changeGridLayout(){
     var parent = document.getElementById('CollectionProductsContainer');
     if(window.innerWidth < 768){
