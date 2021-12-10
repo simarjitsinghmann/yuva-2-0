@@ -18,7 +18,7 @@
       if (!rootUrl.endsWith("/")) {
         rootUrl = rootUrl + "/";
       }
-      const variantSectionUrl = `${rootUrl}variantss/${variantId}/?section_id=pickup-availability`;
+      const variantSectionUrl = `${rootUrl}variants/${variantId}/?section_id=pickup-availability`;
 
       fetch(variantSectionUrl)
         .then(response => response.text())
