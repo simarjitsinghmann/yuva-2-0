@@ -664,7 +664,9 @@ function priceUpdate(priceContainer,getVariant,showSaved){
     priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}<span class="main-price"> <del>${Shopify.formatMoney(compareAtPrice, moneyFormat)}</del> </span> </h3>${savedAmountHtml}`;
   }
   if(getVariant.unit_price_measurement){
-  	 priceHtml += '<span class="unit-price">'+Shopify.formatMoney(getVariant.unit_price, moneyFormat)+' / '+getVariant.reference_value == 1 ? '' :getVariant.reference_value+''+getVariant.reference_unit+'</span>';
+    priceHtml += '<span class="unit-price">'+Shopify.formatMoney(getVariant.unit_price, moneyFormat)+' / ';
+    priceHtml += getVariant.reference_value == 1 ? '' :getVariant.reference_value;
+    priceHtml += getVariant.reference_unit+'</span>';
   }
   if(priceContainer){
     priceContainer.innerHTML = priceHtml;
