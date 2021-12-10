@@ -117,6 +117,11 @@
     {% assign preorder = true %}
     {% endif %}
 
+
+    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+   	{%- if template == 'product' -%}
+    <input type="hidden" name="selling_plan" value="">
+    
     {% assign currentVariantSellingGroups = ""  %}
     {% assign currentVariantSellingPlans = ""  %}
 
@@ -129,9 +134,6 @@
     {% assign currentVariantSellingPlans = currentVariantSellingPlans | append: selling_plan_allocation.selling_plan.id %}
     {% endunless %}
     {% endfor %}
-
-    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-    <input type="hidden" name="selling_plan" value="">
     <div class="selling_plan_wrapper" data-selling-plan-container>
       {% if current_variant.selling_plan_allocations.size > 0 %}
       <div class="selling_group active">
@@ -160,6 +162,8 @@
       {% endif %}
     </div>
     {% include 'product-pickup-availability' %}
+    
+    {%- endif -%}
     <div class="productErrors error_message" style="display:none"></div>
     <div class="pdp-action-container {% unless current_variant.available %}disabled{% endunless %}" data-button-wrapper>
       <div class="pdp-add-to-bag">
