@@ -13,10 +13,10 @@
         {% assign active = false %}
         {{active}}
         {%- for filter in results.filters -%}
-        {{active}}
+        {% if filter.active_values.size > 0 %}
         {{filter.type}}
         {% assign active = true  %}
-        {% break %}
+        {% endif %}
         {% endfor %}
         {% if active %}
         <a href="{{ collection.url }}?sort_by={{ sort_by }}" class="select-item filter-clean text-primary">Clear All</a>
