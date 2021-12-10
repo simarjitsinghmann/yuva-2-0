@@ -241,6 +241,15 @@ img {
   font-size: 130px;
   line-height: 1.01;
 }
+.carousel-caption-title p,
+.flex-absolute p {
+   margin-top: 8px;
+   margin-bottom: 35px;
+   font-weight: var(--medium);
+   letter-spacing: 1.3px;
+   font-size: 18px;
+   line-height: 26px;
+}
 .shopify-section-slider .slick-dots {
     position: absolute;
     bottom: 0;
@@ -318,16 +327,7 @@ img {
 .slider-list .top-title {
    margin-bottom: 10px;
 }
-.carousel-caption-title p,
-.flex-absolute p {
-   color: var(--black);
-   margin-top: 8px;
-   margin-bottom: 37px;
-   font-weight: var(--medium);
-   letter-spacing: 1.3px;
-   font-size: 18px;
-   line-height: 26px;
-}
+
 .carousel-caption-title a.black-btn.button {
    text-transform: uppercase;
    font-weight: var(--medium);
