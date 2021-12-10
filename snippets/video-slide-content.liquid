@@ -32,7 +32,7 @@
          <h2>{{block.settings.subtitle}}</h2>
           {% endif %}
          {% if block.settings.description != blank %}
-          <p class="content--overlay h5--body">{{ block.settings.description }}</p>
+          <p>{{ block.settings.description }}</p>
          {% endif %}
           {% unless block.settings.link_text == blank or block.settings.link == blank%}
           <a class="{{ block.settings.button_style }} cta--overlay btn--large uppercase black-btn button" href="{{ block.settings.link }}">{{ block.settings.link_text | escape }}</a>
@@ -66,7 +66,7 @@
       color:{{block.settings.subtitle_color}};    }
     
     
-    #banner-{{block.id}} p.content--overlay{
+    #banner-{{block.id}} p{
       color:{{block.settings.desc_color}};
     }
      #banner-{{block.id}} .button {
