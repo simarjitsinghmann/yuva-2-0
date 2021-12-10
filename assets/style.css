@@ -273,13 +273,12 @@ img {
    justify-content: center;
    align-items: flex-start;
 }
-.split-slider.slider-banner {
+.split-slider {
    position: relative;
    display: flex !important;
    align-items: center;
 }
-
-.split-slider.slider-banner:after {
+.split-slider:after {
    position: absolute;
    content: "";
    width: 50%;
