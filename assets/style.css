@@ -2490,17 +2490,15 @@ padding-top: 20px;
 }
 .share-icons li a {
    display: flex;
-   width: 30px;
-   height: 30px;
    text-align: center;
-   line-height: 23px;
    align-items: center;
    justify-content: center;
 }
 .social-icons .share-icons li a svg {
-   width: 14px;
-   height: auto;
-   fill: var(--black);
+    width: 19px;
+    height: auto;
+    fill: var(--black);
+    margin-right: 10px;
 }
 .social-icons .share-icons li a:hover,
 .social-icons .share-icons li a:hover svg {
