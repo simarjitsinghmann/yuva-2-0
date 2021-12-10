@@ -1,6 +1,6 @@
 <script>
   var moneyFormat = '{{shop.money_format}}';
-  var moneyFormatWithoutCurrency = '{{shop.money_format | remove:cart.currency.symbol}}';
+  var moneyFormatWithoutCurrency = '{{shop.money_format | remove:cart.currency.symbol | replace:'amount_with_comma_separator','amount'}}';
   var addToCartText = '{{ 'products.product.add_to_cart' | t }}';  
   var preorderText = '{{ 'products.product.preorder' | t }}';   
   var preorderStatus = {{settings.enable_preorder}};                 
