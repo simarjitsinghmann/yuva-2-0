@@ -257,6 +257,37 @@ img {
    font-weight: var(--medium);
     margin-top:35px;
 }
+.shopify-section-slider .slick-arrow {
+   line-height: 10px;
+   height: auto;
+   border: 0;
+   margin: 0;
+   position: absolute;
+   bottom: 20px;
+   cursor: pointer;
+   z-index: 2;
+}
+.shopify-section-slider .slick-arrow.slick-prev {
+   right: 70px;
+}
+.shopify-section-slider .slick-arrow.slick-next {
+   right: 20px;
+}
+.shopify-section-slider .slick-arrow span {
+   background: var(--white);
+   width: 40px;
+   height: 40px;
+   color: var(--black);
+   font-size: 27px;
+   border-radius: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.shopify-section-slider .slick-arrow:hover span {
+   background: var(--black);
+   color: var(--white);
+}
 .shopify-section-slider .slick-dots {
     position: absolute;
     bottom: 0;
@@ -350,37 +381,6 @@ img {
 }
 .banner .btn-box {
    clear: both;
-}
-.banner-product-slider .slick-arrow {
-   line-height: 10px;
-   height: auto;
-   border: 0;
-   margin: 0;
-   position: absolute;
-   bottom: 20px;
-   cursor: pointer;
-   z-index: 2;
-}
-.banner-product-slider .slick-arrow.slick-prev {
-   right: 70px;
-}
-.banner-product-slider .slick-arrow.slick-next {
-   right: 20px;
-}
-.banner-product-slider .slick-arrow span {
-   background: var(--white);
-   width: 40px;
-   height: 40px;
-   color: var(--black);
-   font-size: 27px;
-   border-radius: 0;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-.banner-product-slider .slick-arrow:hover span {
-   background: var(--black);
-   color: var(--white);
 }
 .home-video-sec .container,
 .video-sec .container {
