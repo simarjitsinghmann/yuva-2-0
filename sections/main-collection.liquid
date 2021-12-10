@@ -12,10 +12,8 @@
         <p>Filters</p>
         {% assign active = false %}
         {%- for filter in results.filters -%}
-        {%- for value in filter.active_values -%}
         {% assign active = true  %}
         {% break %}
-        {% endfor %}
         {% endfor %}
         {% if active %}
         <a href="{{ collection.url }}?sort_by={{ sort_by }}" class="select-item filter-clean text-primary">Clear All</a>
