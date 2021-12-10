@@ -155,10 +155,10 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
     var minVal =  parseInt(values[0]);
     var newformatMoney = moneyFormat;
     section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = minVal;
-    section.querySelector('[data-min-value]').innerHTML = newformatMoney.replace('{{amount}}',minVal);
+    section.querySelector('[data-min-value]').innerHTML = textReplace(newformatMoney,minVal,'{{','}}');
     var maxVal =  parseInt(values[1]);
     section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = maxVal;
-    section.querySelector('[data-max-value]').innerHTML = newformatMoney.replace('{{amount}}',maxVal);
+    section.querySelector('[data-max-value]').innerHTML = textReplace(newformatMoney,maxVal,'{{','}}');
   })
 })
 
