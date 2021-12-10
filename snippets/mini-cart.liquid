@@ -30,7 +30,12 @@
 				<h5 class="cart-item-link">
 					<a href="{{url}}">{{name}}</a>
 				</h5>
+                  {{#if variation}}
                 <span class="item-variant-title">{{variation}}</span>
+                  {{/if}}
+                  {{#if sellingPlan}}
+                <span class="item-variant-title">{{sellingPlan}}</span>
+                  {{/if}}
 				<h6 class="product__price">
                   {{#if discountsApplied}}
                         <small class="item__price-strikethrough"><s>{{{originalLinePrice}}}</s></small>
