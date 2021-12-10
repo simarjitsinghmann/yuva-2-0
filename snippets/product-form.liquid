@@ -29,7 +29,7 @@
     <h3 id="get_price" class="price-list">{{current_variant.price | money}}</h3>
     {% endif %}
     {% if current_variant.unit_price_measurement %}
-    <span>
+    <span class="unit-price">
   {{ current_variant.unit_price | money }}
   {% if current_variant.unit_price_measurement.reference_value != 1 %}
     {{ current_variant.unit_price_measurement.reference_value }}
