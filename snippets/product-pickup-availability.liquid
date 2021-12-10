@@ -12,9 +12,9 @@
   </div>
 </div>
 <script>
-  let this = document.querySelector('.product__pickup-availabilities')
-      let rootUrl = this.dataset.root-url;
-      let variantId = this.dataset.variant-id;
+  const pickUp = document.querySelector('.product__pickup-availabilities')
+      let rootUrl = pickUp.dataset.root-url;
+      let variantId = pickUp.dataset.variant-id;
       if (!rootUrl.endsWith("/")) {
         rootUrl = rootUrl + "/";
       }
@@ -29,8 +29,8 @@
         console.log(sectionInnerHTML)
         })
         .catch(e => {
-          const button = this.querySelector('button');
-          if (button) button.removeEventListener('click', this.onClickRefreshList);
-          this.renderError();
+//           const button = this.querySelector('button');
+//           if (button) button.removeEventListener('click', this.onClickRefreshList);
+//           this.renderError();
         });
 </script>
