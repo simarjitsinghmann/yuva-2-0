@@ -7,7 +7,7 @@
 <div class="shop-sidebar-inside">
   <form id="CollectionFiltersForm" class="collectionFilters__form" >
     {%- for filter in collection.filters -%}
-
+	{{filter.type}}
     {% case filter.type %}
 
     {% when 'list' %}
@@ -88,7 +88,6 @@
       </div>
 
     </div>
-
     {% when 'price_range' %}
 sdfsdfs
     <div class="widget sidebar-widget-product price">
