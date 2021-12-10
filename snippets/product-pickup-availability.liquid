@@ -11,3 +11,28 @@
       </div>
   </div>
 </div>
+<script>
+  const pickUp = document.querySelector('.product__pickup-availabilities')
+      let rootUrl = pickUp.dataset.rootUrl;
+      let variantId = pickUp.dataset.variantId;
+      if (!rootUrl.endsWith("/")) {
+        rootUrl = rootUrl + "/";
+      }
+      const variantSectionUrl = `${rootUrl}variants/${variantId}/?section_id=pickup-availability`;
+
+      fetch(variantSectionUrl)
+        .then(response => response.text())
+        .then(text => {
+          const sectionInnerHTML = new DOMParser()
+            .parseFromString(text, 'text/html')
+            .querySelector('.shopify-section');
+        const previewContainer = document.getElementById('pickup-availability-preview-container');
+        previewContainer.innerHTML = sectionInnerHTML;
+        previewContainer.classList.remove('hidden')
+        })
+        .catch(e => {
+//           const button = this.querySelector('button');
+//           if (button) button.removeEventListener('click', this.onClickRefreshList);
+//           this.renderError();
+        });
+</script>
