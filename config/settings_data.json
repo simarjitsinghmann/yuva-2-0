@@ -400,27 +400,25 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
-          "ef1fb592-1069-4e57-8624-62795edc5097": {
-            "type": "timer",
+          "2508bca9-1206-4b20-ba9e-a0e37b898444": {
+            "type": "announcement",
             "settings": {
               "icon": "horn",
-              "first_text": "Sale will go live after",
-              "date": "24\/12\/2021",
-              "last_text": "Go for It",
-              "btn": "SALE",
-              "link": "shopify:\/\/collections\/all"
+              "announcement": "<p>Sale will go live after<\/p>",
+              "btn": "",
+              "link": ""
             }
           }
         },
         "block_order": [
-          "ef1fb592-1069-4e57-8624-62795edc5097"
+          "2508bca9-1206-4b20-ba9e-a0e37b898444"
         ],
         "settings": {
           "show_bar": true,
           "auto_rotate": false,
           "show_close": true,
           "bg_style": "solid",
-          "bgcolor": "#000000",
+          "bgcolor": "#e7e3e3",
           "bgcolor2": "#f13535",
           "fontcolor": "#838787",
           "btn_bgcolor": "#f13535",
