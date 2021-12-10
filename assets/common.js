@@ -397,6 +397,15 @@ function truncate(str, no_words) {
   return _value;
 }
 
+function textReplace(string,replacement,start,ending)
+{
+    replacement = start + ' ' + replacement;
+
+     var pattern = new RegExp(start + ' \.+(?=' + ending + ')','g');
+
+    return string.replace(pattern, replacement + ' ');
+}
+
 function toggleDropdown(id) {
   var x = document.getElementById(id);
   if (x.style.display === "none") {
