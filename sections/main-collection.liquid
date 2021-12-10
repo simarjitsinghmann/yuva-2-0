@@ -12,6 +12,7 @@
         <p>Filters</p>
         {% assign active = false %}
         {%- for filter in results.filters -%}
+        {{filter.type}}
         {% assign active = true  %}
         {% break %}
         {% endfor %}
