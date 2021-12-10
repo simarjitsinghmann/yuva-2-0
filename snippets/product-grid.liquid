@@ -34,14 +34,16 @@
           {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
           <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
           <div class="form-group">
+            {% assign hideATC = false %}
             {% for option in product.options_with_values %}
             {% assign downOption = option.name | downcase %}
             {% assign optionIndex = forloop.index %}
             {% assign varOptionIndex = 'option'|append:forloop.index %}
             <div class="select__{{downOption}} product-option-selector">
               <p class="small-size size_title">SELECT {{option.name}}</p>
-              <ul class="product-loop-variants {{downOption}} variants {{ settings.color_swatch_style}} _small list-unstyled">                            
-                {%- for value in option.values -%}  
+              <ul class="product-loop-variants {{downOption}} variants {{ settings.color_swatch_style}} _small list-unstyled">
+                
+                {%- for value in option.values limit:7 -%}  
                 <li class="{{downOption}}_option variant_option">
                   <input class="productOption" type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
 
@@ -66,6 +68,10 @@
                   </span>
                 </li>
                 {% endfor %}
+                {%- if option.values.size > 7 -%}
+            {% assign hideATC = true %}
+                <li class="{{downOption}}_option variant_option"><a href="{{product.url | within:collection}}">7+ more</a></li>
+                {%- endif -%}
               </ul> 
             </div>
             {% endfor %}
