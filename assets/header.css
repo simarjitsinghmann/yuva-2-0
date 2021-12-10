@@ -251,6 +251,9 @@
 .navbar-toggler:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
+header button.navbar-toggler {
+    background: transparent;
+}
 .navbar-toggler {
   color: rgba(255, 255, 255, 0.5);
   border-color: rgba(255, 255, 255, 0.1);
