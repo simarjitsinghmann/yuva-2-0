@@ -156,9 +156,9 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
     var newformatMoney = moneyFormat;
     section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = Shopify.formatMoney(minVal,moneyFormatWithoutCurrency);
     section.querySelector('[data-min-value]').innerHTML =  Shopify.formatMoney(minVal,moneyFormat);
-    var maxVal =  parseInt(values[1]);
-    section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = maxVal;
-    section.querySelector('[data-max-value]').innerHTML = newformatMoney.replace('{{amount}}',maxVal);
+    var maxVal =  parseInt(values[1])*100;
+    section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = Shopify.formatMoney(maxVal,moneyFormatWithoutCurrency);
+    section.querySelector('[data-max-value]').innerHTML = Shopify.formatMoney(maxVal,moneyFormat);
   })
 })
 
