@@ -211,7 +211,7 @@ img {
    width: 50%;
    padding: 0 10px;
 }
-/***header_banner***/
+/*============= Slider banner css start ===============*/
 #product-slider,
 .daily-offer {
    padding: 0;
@@ -251,6 +251,15 @@ img {
    text-transform: uppercase;
    letter-spacing: 30px;
    padding: 10px 0 40px;
+}
+
+.shopify-section-slider .slick-dots {
+   position: absolute;
+   bottom: 20px;
+   writing-mode: vertical-rl;
+   height: 100%;
+   width: 20px;
+   right: 10px;
 }
 .offer-box {
    margin-bottom: 33px;
