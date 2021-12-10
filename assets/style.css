@@ -257,22 +257,6 @@ img {
    font-weight: var(--medium);
     margin-top:35px;
 }
-.banner.banner-section .slide_container,
-.banner.banner-section .slide_container >.row{
-   height: 100%;
-}
-.banner.banner-section .banner-left {
-   padding-right: 12px;
-   padding-left: 12px;
-}
-.banner-left .carousel-caption-title {
-   position: relative;
-   height: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: flex-start;
-}
 .split-slider {
    position: relative;
    display: flex !important;
@@ -288,6 +272,22 @@ img {
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
+}
+.banner.banner-section .slide_container,
+.banner.banner-section .slide_container >.row{
+   height: 100%;
+}
+.banner.banner-section .banner-left {
+   padding-right: 12px;
+   padding-left: 12px;
+}
+.banner-left .carousel-caption-title {
+   position: relative;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
 }
 .banner.banner-section .btn-box {
    clear: both;
