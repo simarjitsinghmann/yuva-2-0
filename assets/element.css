@@ -12,27 +12,27 @@ h6 {
    font-family: var(--heading-font-family);
 }
 h1 {
-   font-size: 60px;
-   line-height: 58px;
+  font-size: 60px;
+  line-height: 58px;
 }
 h2 {
-   font-size: 24px;
-   line-height: 35px;
+  font-size: 24px;
+  line-height: 35px;
 }
 h3 {
-   font-size: 22px;
-   line-height: 30px;
+  font-size: 22px;
+  line-height: 30px;
 }
 h4 {
-   font-size: 20px;
-   line-height: 30px;
+  font-size: 20px;
+  line-height: 30px;
 }
 h5 {
-    font-size: 18px;
-    line-height: 22px;
+  font-size: 18px;
+  line-height: 22px;
 }
 h6 {
-   font-size: 16px;
+  font-size: 16px;
 }
 .normal-font {
    font-size: 15px;
@@ -42,6 +42,18 @@ h6 {
 }
 .small-font {
    font-size: 12px;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.light {
+  opacity: 0.7;
 }
 em {
    font-style: italic;
