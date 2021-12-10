@@ -669,6 +669,7 @@ function priceUpdate(priceContainer,getVariant,showSaved){
 }
 
 function sellingPlans(variant,form){
+  if(variant.selling_plans){
   var sellingPlans = variant.selling_plans;
   var variantPlans=[],
       variantGroups=[];
@@ -714,6 +715,7 @@ function sellingPlans(variant,form){
       sellingHtmlContainer.innerHTML = sellingPlanHtml;
       sellingPlanChange();
     }
+  }
   }
 }
 function sellingPlanChange(){
