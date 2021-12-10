@@ -12,6 +12,7 @@
     
     <meta name="theme-color" content="">
     
+    {% render 'meta-tags' %}
     
     <link rel="canonical" href="{{ canonical_url }}">
 
@@ -37,7 +38,6 @@
 
     {% endif %}
 
-    {% render 'meta-tags' %}
     <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
     
     {{ content_for_header }}
