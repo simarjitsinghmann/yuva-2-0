@@ -30,13 +30,13 @@
     {% endif %}
     {% if current_variant.unit_price_measurement %}
     <span class="unit-price">
-  {{ current_variant.unit_price | money }} /
-  {% if current_variant.unit_price_measurement.reference_value != 1 %}
-    {{ current_variant.unit_price_measurement.reference_value }}
-  {% endif %}
-  {{ current_variant.unit_price_measurement.reference_unit }}
+      {{ current_variant.unit_price | money }} /
+      {% if current_variant.unit_price_measurement.reference_value != 1 %}
+      {{ current_variant.unit_price_measurement.reference_value }}
+      {% endif %}
+      {{ current_variant.unit_price_measurement.reference_unit }}
     </span>
-{% endif %}
+    {% endif %}
   </div>
   {% when 'variant' %}
   {% unless product.has_only_default_variant %}
