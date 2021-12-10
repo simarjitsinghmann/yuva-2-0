@@ -152,13 +152,13 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
   })
   }
   sliderEventListener.on("update", function(values){
-    var minVal =  parseInt(values[0])*100;
+    var minVal =  parseInt(values[0]);
     var newformatMoney = moneyFormat;
-    section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = Shopify.formatMoney(minVal,moneyFormatWithoutCurrency);
-    section.querySelector('[data-min-value]').innerHTML =  Shopify.formatMoney(minVal,moneyFormat);
+    section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = minVal;
+    section.querySelector('[data-min-value]').innerHTML =  Shopify.formatMoney(minVal*100,moneyFormat);
     var maxVal =  parseInt(values[1])*100;
-    section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = Shopify.formatMoney(maxVal,moneyFormatWithoutCurrency);
-    section.querySelector('[data-max-value]').innerHTML = Shopify.formatMoney(maxVal,moneyFormat);
+    section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = maxVal;
+    section.querySelector('[data-max-value]').innerHTML = Shopify.formatMoney(maxVal*100,moneyFormat);
   })
 })
 
