@@ -228,6 +228,9 @@ img {
    width: 100%;
    object-fit: cover;
 }
+.slick-slide  .slide-image-mobile {
+	display:none;
+}
 .carousel-caption h5 {
    color: var(--white);
    margin: 0;
@@ -398,20 +401,6 @@ img {
    align-items: center;
    justify-content: center;
 }
-div#banner-slide > img {
-   width: 100%;
-}
-
-#product-slider .slider-item .item > img {
-   -webkit-transition: all 5s;
-   -moz-transition: all 5s;
-   -ms-transition: all 5s;
-   -o-transition: all 5s;
-   transition: all 5s;
-   -webkit-transform: scale(1.05, 1.05);
-   -ms-transform: scale(1.05, 1.05);
-   transform: scale(1.05, 1.05);
-}
 .banner-product-slider .slick-arrow:hover span {
    background: var(--black);
    color: var(--white);
@@ -456,9 +445,7 @@ span.tag-line {
    padding-right: 12px;
    padding-left: 12px;
 }
-.slick-slide  .slide-image-mobile {
-	display:none;
-}
+
 /***END***/
 /*==================== offer css start ================*/
 .offer-section .slick-list{
