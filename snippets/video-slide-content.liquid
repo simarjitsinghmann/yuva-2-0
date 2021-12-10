@@ -59,7 +59,7 @@
       opacity:{{block.settings.opacity}}%;
     }
     {% endif %}
-    #banner-{{block.id}} h1.title--overlay{
+    #banner-{{block.id}} h1{
       color:{{block.settings.title_color}};
     }
     #banner-{{block.id}} h2{
@@ -69,11 +69,11 @@
     #banner-{{block.id}} p.content--overlay{
       color:{{block.settings.desc_color}};
     }
-     #banner-{{block.id}} a.button {
+     #banner-{{block.id}} .button {
     background-color:{{ block.settings.button_text_bk }};
     color: {{ block.settings.button_text_color }};
   }
-  #banner-{{block.id}} a.button:hover{
+  #banner-{{block.id}} .button:hover{
     color:  {{ block.settings.hvr_button_text_color }};
     background-color:{{ block.settings.hvr_button_text_bk }}
   }
