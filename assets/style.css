@@ -242,12 +242,17 @@ img {
   line-height: 1.01;
 }
 .shopify-section-slider .slick-dots {
-   position: absolute;
-   bottom: 20px;
-   writing-mode: vertical-rl;
-   height: 100%;
-   width: 20px;
-   right: 10px;
+    position: absolute;
+    bottom: 0;
+    writing-mode: vertical-rl;
+    height: 100%;
+    width: 20px;
+    right: 10px;
+}
+.shopify-section-slider .slick-dots li button {
+    width: 4px;
+    height: 20px;
+    margin: 5px 0px;
 }
 .offer-box {
    margin-bottom: 33px;
