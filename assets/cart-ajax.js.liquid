@@ -48,7 +48,7 @@ $(document).on('submit','[action="/cart/add"]', function(evt) {
       else {
         console.log(XMLHttpRequest);
         console.log(XMLHttpRequest.responseJSON.description);
-       $('body').find('.productErrors').html(XMLHttpRequest.responseJSON.description).show();
+        $('body').find('.productErrors').html(XMLHttpRequest.responseJSON.description).show();
       }
       setTimeout(function(){
         submit.removeClass('is-loading');
@@ -141,7 +141,7 @@ updateQuantity = function(line, qty,callback) {
 buildCart = function (cart,showCart) {
   var shipping = parseInt($('#mini_cart_shipping').data('shipping'));
   var shippingText = $('#mini_cart_shipping').attr("data-shipText");
-  
+
   $('body').find('[data-drawer-title]').html('Cart');
   $('body').find('[data-side-drawer]').attr('id','mini__cart').addClass('mini_cart');
   if (cart.item_count === 0) {
@@ -169,7 +169,10 @@ buildCart = function (cart,showCart) {
     } else {
       var prodImg = "//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif";
     }
-
+    var sellingPlan = '';
+    if(cartItem.selling_plan_allocation){
+      sellingPlan = cartItem.selling_plan_allocation.selling_plan.name;
+    }
     // Create item's data object and add to 'items' array
     item = {
       key: cartItem.key,
@@ -182,6 +185,7 @@ buildCart = function (cart,showCart) {
       itemAdd: cartItem.quantity + 1,
       itemMinus: cartItem.quantity - 1,
       itemQty: cartItem.quantity,
+      sellingPlan: sellingPlan,
       price: Shopify.formatMoney(cartItem.price,moneyFormat),
       vendor: cartItem.vendor,
       linePrice: Shopify.formatMoney(cartItem.final_line_price, moneyFormat),
@@ -209,7 +213,7 @@ buildCart = function (cart,showCart) {
     }
     cartDiscounts.push(discount);
   });
-  
+
   // Gather all cart data and add to DOM
   data = {
     items: items,
@@ -243,7 +247,7 @@ $(document).on('click', '.sd_mini_removeproduct', function(evt) {
   var $el = $(this),
       parent = $el.closest('.media-link'),
       line = $el.attr('line');
-  		parent.addClass('disabled')
+  parent.addClass('disabled')
   // If it has a data-line, update the cart
   if (line) {
     updateQuantity(line, 0,buildCart);
@@ -261,7 +265,7 @@ validateQty = function (qty) {
 };
 
 $(document).on('change ', '[name=note]', function(evt) {
-    var currentVal = $(this).val();
+  var currentVal = $(this).val();
   console.log('test',currentVal)
   $.ajax({
     url: '/cart/update.js',
