@@ -249,6 +249,10 @@ img {
    font-size: 18px;
    line-height: 26px;
 }
+.carousel-caption-title a.black-btn.button {
+   text-transform: uppercase;
+   font-weight: var(--medium);
+}
 .shopify-section-slider .slick-dots {
     position: absolute;
     bottom: 0;
@@ -322,14 +326,6 @@ img {
    position: relative;
    margin: 0 0 0 -35px;
    top: -12px;
-}
-.slider-list .top-title {
-   margin-bottom: 10px;
-}
-
-.carousel-caption-title a.black-btn.button {
-   text-transform: uppercase;
-   font-weight: var(--medium);
 }
 .banner .slide_container {
    height: 100%;
