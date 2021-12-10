@@ -35,7 +35,7 @@
           <p>{{ block.settings.description }}</p>
          {% endif %}
           {% unless block.settings.link_text == blank or block.settings.link == blank%}
-          <a class="{{ block.settings.button_style }} cta--overlay btn--large uppercase black-btn button" href="{{ block.settings.link }}">{{ block.settings.link_text | escape }}</a>
+          <a class="{{ block.settings.button_style }}black-btn button" href="{{ block.settings.link }}">{{ block.settings.link_text | escape }}</a>
           {% endunless %}
         </div>
       </div>
