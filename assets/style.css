@@ -249,9 +249,9 @@ img {
    font-size: 18px;
    line-height: 26px;
 }
-.carousel-caption-title a.black-btn.button {
-   text-transform: uppercase;
+.carousel-caption-title .button {
    font-weight: var(--medium);
+    margin-top:35px;
 }
 .shopify-section-slider .slick-dots {
     position: absolute;
@@ -1399,10 +1399,6 @@ a.wishlist-view .fas {
    max-width: 1000px;
    width: 100%;
    margin: 0 auto;
-}
-.flex-absolute h1 {
-   font-size: 50px;
-   margin-bottom: 10px;
 }
 .video-banner-section .home-video-sec {
    position: relative;
