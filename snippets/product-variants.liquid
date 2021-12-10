@@ -58,6 +58,14 @@
 "options": ["{{-variant.option1 -}}"{%- if variant.option2 -%},"{{variant.option2 }}"{%-endif-%}{%-if variant.option3 -%},"{{variant.option3 }}"{%-endif-%}],
 "price": {{-variant.price-}},
 "sku": "{{-variant.sku-}}",
+{% if variant.unit_price_measurement %}
+"unit_price_measurement":true,
+"unit_price":{{- variant.unit_price -}},
+"reference_value":{{-variant.unit_price_measurement.reference_value-}},
+"reference_unit":{{-variant.unit_price_measurement.reference_unit-}},
+{%-else-%}
+"unit_price_measurement":false,
+{%- endif-%}
 "title":"{{-variant.title-}}",
 "store_availabilities":"{{-variant.store_availabilities-}}",
 "selling_plans":{
