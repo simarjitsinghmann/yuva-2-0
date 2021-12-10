@@ -96,6 +96,9 @@ img {
 .shopify-challenge__button:hover:after {
    animation: wave 0.75s linear;
 }
+.button .fa-arrow-right {
+   margin-left: 20px;
+}
 @keyframes wave {
    0% {
       left: 150%;
@@ -273,9 +276,6 @@ img {
 /*============= Slider banner css end ===============*/
 .offer-box {
    margin-bottom: 33px;
-}
-.button .fa-arrow-right {
-   margin-left: 20px;
 }
 .offer-box .big-size {
    border-width: 4px;
