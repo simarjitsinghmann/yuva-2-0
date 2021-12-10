@@ -1697,6 +1697,11 @@
     border: 0;
   }
   /*==============  common end  =============*/
+/*===========  header css start ============*/
+  .header__heading-link img {
+    max-width: 60px;
+  }
+/*===========  header css end ============*/
     /*================ banner slider css start ================*/
   .carousel-caption-title {
     width: 100%;
@@ -1803,7 +1808,7 @@
   .testimonial-client-slide .slider-item .slider-box p {
     max-height: 95px;
 }
-/*  testimonial css end  */
+/*=====================  testimonial css end  =================*/
   /*==================  blog css start  ============*/
   .post-information-image, .post-information-image .animate_hvrbr {
     min-height: 220px;
