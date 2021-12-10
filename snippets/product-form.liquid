@@ -118,19 +118,20 @@
     {% if settings.enable_preorder and current_variant.inventory_policy == 'continue' and current_variant.inventory_quantity <= 0  %}
     {% assign preorder = true %}
     {% endif %}
-            
-            {% assign currentVariantSellingGroups = ""  %}
-            {% assign currentVariantSellingPlans = ""  %}
-            
-            {%- for selling_plan_allocation in current_variant.selling_plan_allocations -%}
-            {% unless currentVariantSellingGroups contains selling_plan_allocation.selling_plan_group_id %}
-            {% assign currentVariantSellingGroups = currentVariantSellingGroups | append: selling_plan_allocation.selling_plan_group_id %}
-            {% endunless %}
-            {% unless currentVariantSellingPlans contains selling_plan_allocation.selling_plan.id %}
-            
-            {% assign currentVariantSellingPlans = currentVariantSellingPlans | append: selling_plan_allocation.selling_plan.id %}
-            {% endunless %}
-            {% endfor %}
+
+    {% assign currentVariantSellingGroups = ""  %}
+    {% assign currentVariantSellingPlans = ""  %}
+
+    {%- for selling_plan_allocation in current_variant.selling_plan_allocations -%}
+    {% unless currentVariantSellingGroups contains selling_plan_allocation.selling_plan_group_id %}
+    {% assign currentVariantSellingGroups = currentVariantSellingGroups | append: selling_plan_allocation.selling_plan_group_id %}
+    {% endunless %}
+    {% unless currentVariantSellingPlans contains selling_plan_allocation.selling_plan.id %}
+
+    {% assign currentVariantSellingPlans = currentVariantSellingPlans | append: selling_plan_allocation.selling_plan.id %}
+    {% endunless %}
+    {% endfor %}
+
     <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
     <input type="hidden" name="selling_plan" value="">
     <div class="selling_plan_wrapper" data-selling-plan-container>
