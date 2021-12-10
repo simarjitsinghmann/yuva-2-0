@@ -1596,6 +1596,9 @@
   .shopify-section-multicolumn-content{
     padding:0!important;
   }
+  .service__column {
+    display: block;
+  }
   .service__column .col,
   .service__column .col:first-child{
     border-left: 0;
@@ -1614,7 +1617,7 @@
   .service__column .col img {
     margin-right:12px;
     margin-top: 5px;
-}
+  }
   /*============  multi column css end  ==========*/
   .instagram-post-list ul li {
       flex: 0 0 33.3%;
@@ -1646,7 +1649,6 @@
     margin-bottom: 6px;
 }
   .products-grid .column-5 .grid-item {
-
     padding: 0px 0px;
 }
   .banner-caption-title {
