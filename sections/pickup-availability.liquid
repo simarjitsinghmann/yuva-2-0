@@ -2,7 +2,7 @@
 {%- assign pick_up_availabilities = product_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
 {%- if pick_up_availabilities.size > 0 -%}
-  <pickup-availability-preview class="pickup-availability-preview">
+  <div class="pickup-availability-preview">
     {%- liquid
       assign closest_location = pick_up_availabilities.first
 
@@ -29,9 +29,9 @@
         {%- endif -%}
       {%- endif -%}
     </div>
-  </pickup-availability-preview>
+  </div>
 
-  <pickup-availability-drawer tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="PickupAvailabilityHeading">
+  <div tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="PickupAvailabilityHeading">
     <div class="pickup-availability-header">
       <h2 class="h3 pickup-availability-drawer-title" id="PickupAvailabilityHeading">{{ product_variant.product.title | escape }}</h2>
       <button class="pickup-availability-drawer-button" type="button" aria-label="{{ 'accessibility.close' | t }}">{%- render 'icon-close' -%}</button>
@@ -72,5 +72,5 @@
         </li>
       {%- endfor -%}
     </ul>
-  </pickup-availability-drawer>
+  </div>
 {%- endif -%}
