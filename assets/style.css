@@ -257,16 +257,9 @@ img {
    font-weight: var(--medium);
     margin-top:35px;
 }
-.banner .slide_container,
-.banner .slide_container >.row{
+.banner.banner-section .slide_container,
+.banner.banner-section .slide_container >.row{
    height: 100%;
-}
-.banner.banner-section .banner-right img {
-   height: 100%;
-   width: 100%;
-   background-size: cover;
-   background-position: center;
-   object-fit: cover;
 }
 .banner.banner-section .banner-left {
    padding-right: 12px;
