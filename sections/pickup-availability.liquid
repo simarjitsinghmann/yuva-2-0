@@ -11,17 +11,17 @@
       {%- if closest_location.available -%}
         <p class="caption-large">{{ 'products.product.pickup_availability.pick_up_available_at_html' | t: location_name: closest_location.location.name }}</p>
         <p class="caption">{{ closest_location.pick_up_time }}</p>
-        <button id="ShowPickupAvailabilityDrawer" class="pickup-availability-button link link--text underlined-link" aria-haspopup="dialog">
+        <span id="ShowPickupAvailabilityDrawer" class="pickup-availability-button link link--text underlined-link" aria-haspopup="dialog">
           {%- if pick_up_availabilities.size == 1 -%}
             {{ 'products.product.pickup_availability.view_store_info' | t }}
           {%- else -%}
             {{ 'products.product.pickup_availability.check_other_stores' | t }}
           {%- endif -%}
-        </button>
+        </span>
       {%- else -%}
         <p class="caption-large">{{ 'products.product.pickup_availability.pick_up_unavailable_at_html' | t: location_name: closest_location.location.name }}</p>
         {%- if pick_up_availabilities.size > 1 -%}
-          <button id="ShowPickupAvailabilityDrawer" class="pickup-availability-button link link--text underlined-link" aria-haspopup="dialog">{{ 'products.product.pickup_availability.check_other_stores' | t }}</button>
+          <span id="ShowPickupAvailabilityDrawer" class="pickup-availability-button link link--text underlined-link" aria-haspopup="dialog">{{ 'products.product.pickup_availability.check_other_stores' | t }}</span>
         {%- endif -%}
       {%- endif -%}
     </div>
@@ -30,7 +30,7 @@
   <div class="pickUpAvailabilityContent" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="PickupAvailabilityHeading">
     <div class="pickup-availability-header">
       <h2 class="h3 pickup-availability-drawer-title" id="PickupAvailabilityHeading">{{ product_variant.product.title | escape }}</h2>
-      <button class="pickup-availability-drawer-button" type="button" aria-label="{{ 'accessibility.close' | t }}">{%- render 'icon-close' -%}</button>
+      <button class="pickup-availability-drawer-button" aria-label="{{ 'accessibility.close' | t }}">{%- render 'icon-close' -%}</button>
     </div>
 
     {%- unless product_variant.product.has_only_default_variant -%}
@@ -53,7 +53,7 @@
           <h3 class="h4">{{ availability.location.name | escape }}</h3>
           <p class="pickup-availability-preview caption-large">
             {%- if availability.available -%}
-              {% render 'icon-tick' %} {{ 'products.product.pickup_availability.pick_up_available' | t }}, {{ availability.pick_up_time | downcase }}
+              {{ 'products.product.pickup_availability.pick_up_available' | t }}, {{ availability.pick_up_time | downcase }}
             {%- endif -%}
           </p>
 
