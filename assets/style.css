@@ -2486,18 +2486,12 @@ padding-top: 20px;
    margin-bottom: 0;
 }
 .social-icons .share-icons li {
-   transition: 0.8s;
-   margin-right: 7px;
-   list-style: none;
-   display: inline-block;
-   vertical-align: middle;
-   font-size: 12px;
+    display: inline-block;
 }
 .share-icons li a {
    display: flex;
    width: 30px;
    height: 30px;
-   background: #f3f3f3;
    text-align: center;
    line-height: 23px;
    align-items: center;
@@ -2506,7 +2500,7 @@ padding-top: 20px;
 .social-icons .share-icons li a svg {
    width: 14px;
    height: auto;
-   fill: #757575;
+   fill: #000;
 }
 .social-icons .share-icons li a:hover,
 .social-icons .share-icons li a:hover svg {
