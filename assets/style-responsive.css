@@ -1397,6 +1397,17 @@
   .filter-actions .select-items .select-item {
     margin-top: 5px;
   }
+    .collectionFilters__form .widget__price {
+    display: none;
+  }
+  .price-widget-mobile,
+  .price-widget-mobile span {
+    font-weight: var(--medium);
+    font-size: 13px;
+  }
+  .price-widget-mobile span.pipe {
+    margin: 0 5px;
+  }
   .header__heading-link img {
     max-width: 90px;
   }
@@ -1507,17 +1518,6 @@
   }
   .footer-block ul {
     display: none;
-  }
-  .collectionFilters__form .widget__price {
-    display: none;
-  }
-  .price-widget-mobile,
-  .price-widget-mobile span {
-    font-weight: var(--medium);
-    font-size: 13px;
-  }
-  .price-widget-mobile span.pipe {
-    margin: 0 5px;
   }
   footer .full__item h5 {
     font-size: 14px;
