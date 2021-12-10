@@ -147,6 +147,36 @@ img {
    color: var(--black);
    margin-bottom: 25px;
 }
+/*=============== slick slider dots css start =============*/
+.slick-dots {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+}
+.slick-dots li button {
+   position: relative;
+   width: 8px;
+   height: 8px;
+   margin: 0 5px;
+   background-color: transparent;
+   font-family: var(--font-family);
+   font-size: 0;
+}
+.slick-dots li button:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    background-color: var(--black);
+    opacity: .4;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius:100%;
+}
+.slick-dots li.slick-active button:after {
+	opacity:1;
+}
+/*=============== slick slider dots css end =============*/
 /*==================== common css end ====================*/
 #CollectionProductsContainer[data-view="grid-layout-5"]
    .products-grid
