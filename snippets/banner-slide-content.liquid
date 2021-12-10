@@ -31,7 +31,7 @@
 </div>
 <style>              
              
-  #banner-{{block.id}} .carousel-caption-title span.tag-line { 
+  #banner-{{block.id}} .carousel-caption-title .tag-line { 
     {% if block.settings.sh_bg != blank %}
     background: {{ block.settings.sh_bg }};
     {% endif %}
@@ -55,14 +55,14 @@
     color: {{ block.settings.c_text }};
     {% endif %}
   }        
-  #banner-{{block.id}} .carousel-caption-title a.button { 
+  #banner-{{block.id}} .carousel-caption-title .button { 
     {% if block.settings.btn_text != blank %}
     color: {{ block.settings.btn_text }};
     {% endif %}
     background-color:{{ block.settings.btn_bg }} ;
   }
 
-  #banner-{{block.id}} .carousel-caption-title a.button:hover { 
+  #banner-{{block.id}} .carousel-caption-title .button:hover { 
     {% if block.settings.btn_h_text != blank %}
     color: {{ block.settings.btn_h_text }};
     {% endif %}
