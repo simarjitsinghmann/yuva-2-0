@@ -154,6 +154,7 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
   sliderEventListener.on("update", function(values){
     var minVal =  parseInt(values[0]);
     var newformatMoney = moneyFormat;
+    
     section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = minVal;
     console.log(newformatMoney,minVal,textReplace(newformatMoney,minVal,'{{','}}'))
     section.querySelector('[data-min-value]').innerHTML = textReplace(newformatMoney,minVal,'{{','}}');
