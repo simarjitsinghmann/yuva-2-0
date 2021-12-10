@@ -45,7 +45,7 @@
     <meta property="og:image:secure_url" content="https:{{ collection.image | img_url: '300x' }}">
   {% endif %}
 
-{% elsif request.page_type == 'password' %}
+{% else %}
   {%- assign og_url = shop.url -%}
   <meta property="og:image" content="https:{{ page_image | img_url: '300x' }}">
   <meta property="og:image:secure_url" content="https:{{ page_image | img_url: '300x' }}">
