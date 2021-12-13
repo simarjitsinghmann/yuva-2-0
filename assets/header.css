@@ -66,8 +66,12 @@ div#countdown {
 .list-menu--inline .nav-item.menu-item--no-mega .sub-menu {
    padding: 15px 15px 15px;
 }
-
-/**top announcement_bar end**/
+.dropdown,
+.dropleft,
+.dropright,
+.dropup {
+   position: relative;
+}
 /*======================== header menu css start ==================*/
 #shopify-section-header {
    z-index: 999;
@@ -107,12 +111,7 @@ div#countdown {
    -ms-flex-direction: row;
    flex-direction: row;
 }
-.dropdown,
-.dropleft,
-.dropright,
-.dropup {
-   position: relative;
-}
+
 .top-header .navbar {
    width: 100%;
    padding: 15px 0;
@@ -285,7 +284,6 @@ div#countdown {
    animation-duration: 1s;
    animation-fill-mode: both;
 }
-/*.top-header.sticky-header { position: fixed; top: 0; z-index: 50; width: 100%; left: 0; box-shadow: 0 0 7px rgb(0 0 0 / 20%); animation-name: fadeInDown; background:var(--white); }*/
 .fixed-top {
    position: fixed;
    top: 0;

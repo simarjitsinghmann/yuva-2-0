@@ -833,7 +833,9 @@ sliders = function(){
   var sliders = jQuery('body').find('[data-slider]');
   if(sliders.length > 0){
     sliders.each(function(index) {
-      slickSlider(jQuery(this));
+      if (!jQuery(this).hasClass('slick-initialized')) {
+        slickSlider(jQuery(this));
+      }
     });
   }
 }
