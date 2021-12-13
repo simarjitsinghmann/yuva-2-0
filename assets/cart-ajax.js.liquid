@@ -147,8 +147,8 @@ buildCart = function (cart,showCart) {
   if (cart.item_count === 0) {
     $('[data-cart-count]').hide();
     $('body').find('[data-drawer-body]').html(`<div class="emptySideCart">
-<img class="emptyCartIcon" src="//cdn.shopify.com/s/files/1/0597/9668/5009/t/6/assets/cart.svg">
-<p>Your Cart is Empty</p>
+<img class="emptyCartIcon" src="{{'cart.svg' | asset_url}}">
+<p>{{'sections.cart.empty' | t}}</p>
 <a class="button black-btn" href="/">Continue Shopping</a>
 </div>`);
     return;
