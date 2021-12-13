@@ -1807,13 +1807,15 @@ header {
 
 }
 .mini_cart .bottom-cart-box ul .coupanName {
-    background-color: rgba();
-    padding: 1px 10px;
-    font-size: 13px;
-    letter-spacing: 0.6px;
+    background-color: #fff4f4;
+    padding: 0px 10px;
+    font-size: 12px;
+    letter-spacing: .6px;
+    color: var(--theme-color);
 }
 .mini_cart .bottom-cart-box ul .coupanName strong{
     text-transform: uppercase;
+      font-size: 11px;
 }
 .mini_cart .bottom-cart-box .cart-btn-container {
     margin: 10px 0 0;
