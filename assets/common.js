@@ -739,7 +739,9 @@ function sellingPlanChange(){
       Array.from(selectors).forEach(function(selector) {
         if(selector != _thisParent){
           selector.classList.remove('active');
-          selector.querySelector('.selling_plan').slideUp();
+          if(selector.querySelector('.selling_plan'){
+             selector.querySelector('.selling_plan').slideUp();
+        }
         }
       });
 
@@ -755,7 +757,9 @@ function sellingPlanChange(){
       }
       sellingPlanVariable.value = value;
       _thisParent.classList.add('active');
-          _thisParent.querySelector('.selling_plan').slideDown();
+          if(_thisParent.querySelector('.selling_plan'){
+             _thisParent.querySelector('.selling_plan').slideDown();
+        }
 
     }
   });
