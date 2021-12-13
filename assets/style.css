@@ -4690,27 +4690,7 @@ body #shopify-product-reviews {
    overflow-y: auto;
 }
 /* side drawer css end */
-#dropdown-customer,
-#similar__product,
-.side-menu,
-.side-menu .inner-side .nav-item.dropdown .child,
-.side-menu .inner-side .nav-item.dropdown .grandchild {
-   width: 100%;
-   max-width: 464px;
-   position: fixed;
-   top: 0;
-   right: -464px;
-   z-index: 99999;
-   background: var(--white);
-   height: 100vh;
-   webkit-transition: all 0.7s ease;
-   -moz-transition: all 0.7s ease;
-   -ms-transition: all 0.7s ease;
-   -o-transition: all 0.7s ease;
-   transition: all 0.7s ease;
-   overflow-x: hidden;
-   overflow-y: auto;
-}
+
 .minicart-open #mini__cart,
 .show__similar__products #similar__product {
    right: 0;
