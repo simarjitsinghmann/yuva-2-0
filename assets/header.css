@@ -34,6 +34,9 @@
     text-align: center;
     font-size: 12px;
 }
+.announcement-bar__message ul li span#dayHours {
+  background: transparent;
+}
 .announcement-bar .announce-btn {
   padding: 5px 10px;
   letter-spacing: 0;
@@ -47,9 +50,7 @@ div#countdown {
   display: inline-block;
 }
 
-.announcement-bar__message ul li span#dayHours {
-  background: transparent;
-}
+
 .announcement-bar .border-bg {
   border: 1px solid var(--white);
 }
