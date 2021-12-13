@@ -643,14 +643,13 @@
     opacity: 1;
   }
 }
-/**nav-humburger-menu**/
-/**header 3**/
+/*================= nav-humburger-menu ==============*/
 .side-menu .inner-side,
 .side-menu .nav-item.dropdown .inner {
   height: 100%;
   padding: 40px 60px;
 }
-.header_3 .side-menu .inner-side ul li {
+.side-menu .inner-side ul li {
   margin: 0;
   position: static;
 }
@@ -660,7 +659,7 @@
   font-weight: var(--semibold);
   padding-top: 3px;
 }
-.header_3 .side-menu .inner-side ul li a {
+.side-menu .inner-side ul li a {
   text-decoration: none;
   font-weight: var(--medium);
   font-size: 25px;
@@ -672,14 +671,14 @@
   border: 0;
   text-transform: capitalize;
 }
-.header_3 .side-menu .inner-side ul li:last-child {
+.side-menu .inner-side ul li:last-child {
   border-bottom: 0;
 }
-.header_3 .side-menu .inner-side ul li.dropdown .drop-dwn-open {
+.side-menu .inner-side ul li.dropdown .drop-dwn-open {
   padding: 20px 0 0;
   display: none;
 }
-.header_3 .side-menu .inner-side ul {
+.side-menu .inner-side ul {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -801,15 +800,15 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
   display: block;
   position: relative;
 }
-.header_3 .side-menu .list-menu--inline.lower-nav ul li {
+.side-menu .list-menu--inline.lower-nav ul li {
   padding: 4px 0;
 }
-.header_3 .side-menu .list-menu--inline.lower-nav ul li a {
+.side-menu .list-menu--inline.lower-nav ul li a {
   color: #000000;
   font-size: 20px;
   font-weight: var(--normal);
 }
-.header_3 .side-menu .social-links ul li a {
+.side-menu .social-links ul li a {
   font-size: var(--med-text);
   text-decoration: none;
   color: #ffffff;
@@ -818,7 +817,7 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
   letter-spacing: 0.2px;
   position: relative;
 }
-.header_3 .side-menu .social-links ul li {
+.side-menu .social-links ul li {
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -829,27 +828,27 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
   color: #fff;
   padding: 10px 0;
 }
-.header_3 .side-menu .social-links ul li a:hover {
+.side-menu .social-links ul li a:hover {
   color: #ffffff;
 }
-.header_3 .side-menu .social-links ul li.fb {
+.side-menu .social-links ul li.fb {
   background: var(--fb-bg);
 }
-.header_3 .side-menu .social-links ul li.twitter {
+.side-menu .social-links ul li.twitter {
   background: var(--twitter-bg);
 }
-.header_3 .side-menu .social-links ul li.linkedin {
+.side-menu .social-links ul li.linkedin {
   background: var(--linkedin-bg);
 }
-.header_3 .side-menu .social-links ul li.insta {
+.side-menu .social-links ul li.insta {
   background: var(--insta-bg);
 }
-.header_3 .side-menu .card.card--product {
+.side-menu .card.card--product {
   width: 100%;
   margin-top: 20px;
   margin-bottom: 0;
 }
-.header_3 .side-menu .card.card--product {
+.side-menu .card.card--product {
   border-top: 1px solid var(--gray);
   padding-top: 30px;
 }
@@ -859,7 +858,7 @@ body.nav-open {
 .menu__login__btn {
   margin-top: 52px;
 }
-.header_3 .side-menu div.lower-nav .nav-item .userful__links + ul {
+.side-menu div.lower-nav .nav-item .userful__links + ul {
   padding-top: 10px;
 }
 .side-menu .nav-item.dropdown .inner .back-btn {
@@ -877,7 +876,7 @@ body.nav-open {
   width: 15px;
   fill: currentColor;
 }
-.header_3 .side-menu .nav-item.dropdown .inner.grandchild li a {
+.side-menu .nav-item.dropdown .inner.grandchild li a {
   font-size: 17px;
   line-height: 22px;
 }
@@ -897,7 +896,7 @@ body.nav-open {
   text-transform: capitalize;
 }
 
-.header_3 .side-menu .inner-side ul li a.link {
+.side-menu .inner-side ul li a.link {
   font-size: 14px;
   color: #fff;
   border-bottom: 1px solid;
