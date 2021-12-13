@@ -66,7 +66,7 @@ $(document).ready(function(){
             $('.note').remove();
             if(data.results_total == 0) {
               //No results
-              $resultsBox.html('<div class="note">{{'templates.search.drawer_placeholder' | t}}</div>');
+              $resultsBox.html('<div class="note">{{'templates.search.drawer_no_results' | t}}</div>');
               $('.Search_loader').hide();                  
               $('.header_icon_search').show();
               $('.recent-search-list').removeClass('ActiveSearch');
