@@ -5,7 +5,7 @@
     {% include 'account-header' %}
     <div class="account-pages-content">
       <div class="d-flex">
-        <h6>{{ 'customer.order.title' | t: name: order.name }}</h6>
+        <h6>{{ 'customer.order.page_title' | t: name: order.name }}</h6>
         {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
         <p>({{ 'customer.order.date_html' | t: date: order_date }})</p>
         {%- if order.cancelled -%}
@@ -38,13 +38,13 @@
                       data-label="{{ 'customer.order.product' | t }}"
                       colspan="2"
                       >
-                    <div class="line-item-details">
+                    <div class="line-item-details-wrapper">
                     {% if line_item.image != blank %}
                     <a class="line-item-image" href="{{ line_item.product.url }}">
                       <img src="{{line_item.image | img_url :'100x' }}">
                     </a>
                     {% endif %}
-                    <div class="line-item-info">
+                    <div class="line-item-details">
                       {%- if line_item.product.url != blank -%}
                       <a href="{{ line_item.product.url }}">{{ line_item.title }}</a>
                       {%- else -%}
