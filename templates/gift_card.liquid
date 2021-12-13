@@ -40,7 +40,8 @@
     {{ 'template-giftcard.css' | asset_url | stylesheet_tag }}
   </head>
 
-  <body>
+  <body class="gift-card-page">
+    <div class="gift-card-outer">
     <header class="gift-card__title">
       <span class="h2">{{ shop.name }}</span>
       <h1 class="gift-card__heading">{{ 'gift_cards.issued.subtext' | t }}</h1>
@@ -114,6 +115,7 @@
 
     <div hidden>
       <span id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</span>
+    </div>
     </div>
   </body>
 </html>
