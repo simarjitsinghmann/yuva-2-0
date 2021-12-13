@@ -62,7 +62,9 @@
               <h2 class="form_title" tabindex="-1">
                 {{ 'customer.login_page.title' | t }}
               </h2> 
-              <p>If you've created an account with us, please enter.</p>
+            <p>
+              {{ 'customer.login_page.subtext' | t }}
+            </p>
               <div>
                 {%- if recover_success == true -%}
                 <div class="success-container">
