@@ -6,18 +6,21 @@
   overflow-x: hidden;
 }
 .announcement-bar__message {
-    padding: 5px 10px;
-    letter-spacing: 1px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
-.announcement-bar__message a {
-  font-weight: var(--medium);
-  text-decoration: none;
+.announcement-bar .announce-btn {
+  padding: 5px 10px;
+  letter-spacing: 0;
+  text-transform: uppercase;
   color: var(--white);
-  border-bottom: 1px solid var(--border-light-theme);
+  font-size: var(--small-text);
+  display: inline-block;
+  margin-left: 16px;
 }
 div#countdown {
   display: inline-block;
@@ -43,15 +46,7 @@ div#countdown {
 .announcement-bar .fill-bg {
   border: 1px solid var(--white);
 }
-.announcement-bar .announce-btn {
-  padding: 5px 10px;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  color: var(--white);
-  font-size: var(--small-text);
-  display: inline-block;
-  margin-left: 16px;
-}
+
 .announcement_icon {
   font-size: 18px;
   margin-right: 12px;
