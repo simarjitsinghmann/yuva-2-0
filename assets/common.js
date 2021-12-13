@@ -738,7 +738,8 @@ function sellingPlanChange(){
     else{
       Array.from(selectors).forEach(function(selector) {
         if(selector != _thisParent){
-          selector.classList.remove('active')
+          selector.classList.remove('active');
+          selector.querySelector('.selling_plan')
         }
       });
 
