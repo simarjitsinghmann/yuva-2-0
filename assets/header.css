@@ -18,7 +18,8 @@
   margin-right: 5px;
 }
 .announcement-bar__message p {
-    margin: 0 5px;
+  margin: 0 5px;
+  font-size:13px;
 }
 .announcement-bar__message ul {
   display: flex;
@@ -27,37 +28,37 @@
   min-width: 125px;
 }
 .announcement-bar__message ul li {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .announcement-bar__message ul li span {
-    background: rgba(255,255,255,.25);
-    color: var(--white);
+  background: rgba(255,255,255,.25);
+  color: var(--white);
     padding: 4px 2px;
     margin: 0 1px;
     min-width: 28px;
     border-radius: 4px;
     text-align: center;
     font-size: 12px;
-}
+    }
 .announcement-bar__message ul li span#dayHours {
   background: transparent;
 }
 .announcement-bar .announce-btn {
-    padding: 2px 8px;
-    font-size: 12px;
-    display: inline-block;
-    letter-spacing: 0;
+  padding: 2px 8px;
+  font-size: 12px;
+  display: inline-block;
+  letter-spacing: 0;
 }
 div#countdown {
   display: inline-block;
 }
 .announcement-bar .announce_close.close .icon-close {
   fill: var(--white);
-  width: 12px;
-  line-height: 1;
-  font-size: inherit;
-}
+    width: 12px;
+    line-height: 1;
+    font-size: inherit;
+    }
 .announcement-bar .announce_close.close {
   border: 0;
   float: none;
