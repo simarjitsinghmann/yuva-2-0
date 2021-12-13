@@ -80,7 +80,7 @@
       function pad2(number) {
         return (number < 10 ? '0' : '') + number
       }
-      function timer(){
+      function announcementTimer(){
         const second = 1000,
               minute = second * 60,
               hour = minute * 60,
@@ -135,7 +135,7 @@
       }
       {% if section.settings.date != blank %}
       window.onload = (event) => { 
-        timer();
+        announcementTimer();
       }
       {% endif %}
       $('.announce_close').click(function(){
