@@ -3740,28 +3740,8 @@ main .shopify-section.cstm-cart-sec {
    padding-top: 45px !important;
 }
 /* =========== contact page css start ============== */
-.top_page_title {
-   padding: 80px 10px;
-   min-height: 300px;
-   background-size: cover;
-   display: flex;
-   align-items: center;
-}
-.top_page_title.no-bg {
-   padding: 60px 0px 30px;
-   min-height: 150px;
-}
-.top_page_title .banner_title {
-   text-align: center;
-   width: 100%;
-}
-
-.top_page_title .banner_title h1 {
-   color: var(--white);
-   font-weight: var(--medium);
-}
-.top_page_title.no-bg .banner_title h1 {
-   color: var(--black);
+.contact-us-wrapper {
+   padding: 65px 0 65px;
 }
 .customer__service h3,
 .contact__form__title h3,
@@ -3860,9 +3840,7 @@ main .shopify-section.cstm-cart-sec {
 .faq .set .content .panel-body {
    max-width: 750px;
 }
-.contact-us-wrapper {
-   padding: 65px 0 65px;
-}
+
 /* =========== contact page css end ============== */
 /* =============== blog page css start  ================ */
 .shopify-blog-section {

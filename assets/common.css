@@ -842,3 +842,26 @@ img {
   min-height:600px;
 }
 /*=================== global css end ================*/
+.top_page_title {
+   padding: 80px 10px;
+   min-height: 300px;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+}
+.top_page_title.no-bg {
+   padding: 60px 0px 30px;
+   min-height: 150px;
+}
+.top_page_title .banner_title {
+   text-align: center;
+   width: 100%;
+}
+
+.top_page_title .banner_title h1 {
+   color: var(--white);
+   font-weight: var(--medium);
+}
+.top_page_title.no-bg .banner_title h1 {
+   color: var(--black);
+}
