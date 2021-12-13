@@ -78,7 +78,7 @@
          	<li class="coupanName">{%-endraw-%}{{'sections.cart.discount_label' | t}}{%-raw-%}<strong>{{title }}</strong></li>
             <li class="minicart__savings">{%-endraw-%}{{'sections.cart.discount' | t}}{%-raw-%} <strong>-{{price}}</strong></li>
           {{/totalCartDiscount}}
-			<li class="totle-price">Subtotal <strong>{{{totalPrice}}}</strong></li>
+			<li class="totle-price">{%-endraw-%}{{'sections.cart.subtotal' | t}}{%-raw-%} <strong>{{{totalPrice}}}</strong></li>
   </ul>
 		<small class="bottom-p">Shipping & taxes calculated at checkout</small>
 		<div class="cart-btn-container">
