@@ -16,8 +16,7 @@
                         {% elsif template contains 'collection' and collection.handle %}
                         
                         {% if current_tags %}
-                            {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
-                            <li class="breadcrumb-item"> {{ collection.title | link_to: url }}
+                      <li class="breadcrumb-item"> {{ collection.title | link_to: url }}
                             
                             <span>{{ current_tags | join: " + " }}</span></li>
                         {% else %}
