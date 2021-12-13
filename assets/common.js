@@ -739,7 +739,7 @@ function sellingPlanChange(){
       Array.from(selectors).forEach(function(selector) {
         if(selector != _thisParent){
           selector.classList.remove('active');
-          if(selector.querySelector('.selling_plan'){
+          if(selector.querySelector('.selling_plan')){
              selector.querySelector('.selling_plan').slideUp();
         }
         }
@@ -757,7 +757,7 @@ function sellingPlanChange(){
       }
       sellingPlanVariable.value = value;
       _thisParent.classList.add('active');
-          if(_thisParent.querySelector('.selling_plan'){
+          if(_thisParent.querySelector('.selling_plan')){
              _thisParent.querySelector('.selling_plan').slideDown();
         }
 
