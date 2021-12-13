@@ -77,6 +77,7 @@
       </div>
 </div>
     <script>
+          {% if section.settings.date != blank %}
       window.onload = (event) => { 
         function pad2(number) {
           return (number < 10 ? '0' : '') + number
@@ -134,6 +135,7 @@
         },500);
       }
       
+          {% endif %}
       $('.announce_close').click(function(){
         $('.announcement-bar').slideToggle();
         $('body').removeClass('announcement_open');
