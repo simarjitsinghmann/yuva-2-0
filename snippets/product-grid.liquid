@@ -4,7 +4,7 @@
 {% if images.size > 1 %}
 {% for image in images %}
 {% unless image.src == product.featured_image.src %}
-{% assign second_image = image.src | img_url:'master' %}
+{% assign second_image = image.src %}
 {% break %}
 {% endunless %}
 {% endfor %}
@@ -16,9 +16,11 @@
     <div class="card card--text-only card--soft card--product text__left">
       <div class="card-wrapper-img {% if section.settings.show_second_image or show_second_image %}has-multiimage{% endif %}">
         <a href="{{product.url | within: collection}}">
-          <img src="{{product.featured_image | img_url:'master'}}" alt="{{product.title}}" style="width: 100%;">
+          {% render 'lazy-image' image: product.featured_image %}
           {% if section.settings.show_second_image or show_second_image %}
-          <img class="product-second-img" src="{{second_image}}" alt="{{product.title}}" style="width: 100%;">
+          
+          {% render 'lazy-image' image: second_image ,class:'product-second-img' %}
+<!--           <img class="" src="{{second_image}}" alt="{{product.title}}" style="width: 100%;"> -->
           {% endif %} 
         </a>
         {% unless hide_options %}
