@@ -29,14 +29,14 @@
                       <div class="post-information__wrapper text__left">
                         {% if section.settings.show_date %}
                         <div class="post-date">
-                          <p>
+                          <div>
                             <span class="custom-title">{{article.published_at | date: "%d" }} {{article.published_at | date: " %b %Y" }} </span>
                             {% if section.settings.show_author %}
                           <p class="" itemprop="author" itemscope itemtype="http://schema.org/Person">
                             <span itemprop="name">Posted By {{ article.author }}</span>
                           </p>
                           {% endif %}
-                          </p>
+                          </div>
                           {%- if article.comments_count > 0 and blog.comments_enabled? and section.settings.show_comment_count-%}
                           <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
                           {%- endif -%}
