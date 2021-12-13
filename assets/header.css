@@ -1,4 +1,10 @@
 /*============== top announcement_bar =================*/
+.announcement-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
 .announcement-bar__message {
     padding: 5px 10px;
     letter-spacing: 1px;
@@ -20,20 +26,13 @@ div#countdown {
   display: inline-block;
   color: #fff;
 }
-.announcement-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow-x: hidden;
-}
-.announcement-bar ul {
-  min-width: 125px;
-}
+
 .announcement-bar__message ul {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 5px;
+  min-width: 125px;
 }
 .announcement-bar__message ul li span#dayHours {
   background: transparent;
