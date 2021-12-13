@@ -1325,19 +1325,18 @@ a.wishlist-view .fas {
   align-items: center;
 }
 .posted-by {
-	
+	color: var(--dark-gray);
 }
 .post-information__wrapper .post-date .custom-title {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 20px;
     background: var(--gray);
     padding: 3px 7px;
     display: inline-block;
 }
 .post-information__wrapper .post-name p {
-   color: #6c6c6c;
-   font-size: 15px;
-   margin: 0;
+   color: var(--dark-gray);
+    margin:0 0 10px;
 }
 .post-information__wrapper .post-name h6 a {
    color: var(--black);
