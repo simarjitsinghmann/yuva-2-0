@@ -1856,6 +1856,27 @@ header {
    overflow-y: auto;
    padding-right: 20px;
 }
+#mini__cart .emptySideCart h5 {
+   margin-bottom: 15px;
+}
+
+#mini__cart .emptySideCart {
+   text-align: center;
+   padding: 100px 20px 170px;
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+}
+.emptyCartIcon {
+   margin-left: -20px;
+   max-width: 70px;
+   text-align: center;
+   margin-bottom: 10px;
+  background-color:transparent;
+}
 /**END Minicart**/
 .product-add-to-cart-right .form-group .btn-box button:hover {
    border-color: var(--black);
