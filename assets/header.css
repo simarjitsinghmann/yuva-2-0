@@ -1796,15 +1796,14 @@ header {
    justify-content: flex-start;
 }
 .mini_cart .bottom-cart-box ul li {
-    font-size: 16px;
-    text-align: left;
+    font-size: 18px;
+      line-height: 27px;
+  display:flex;
+      letter-spacing: -.4px;
 }
 .mini_cart .bottom-cart-box ul li strong{
-    font-size: 21px;
-    text-align: left;
-    font-weight: var(--semibold);
-    line-height: 27px;
-    letter-spacing: -.4px;
+    
+
 }
 .mini_cart .bottom-cart-box .cart-btn-container {
     margin: 10px 0 0;
