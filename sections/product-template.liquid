@@ -22,7 +22,7 @@
                 </div>
               </div>
               <div class="main-container">
-                <div class="slider slider-main" data-mobile-only="true" data-slider>
+                <div class="slider slider-main" data-slider>
                   {%- for media in product.media -%}
                   {%-if media.media_type == 'image'-%}
                   <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
@@ -38,7 +38,7 @@
           </div>
           {% else %}
           <div class="left-product-images multiple-images">
-            <ul class="gallery-item" data-mobile-only="true" data-slider>
+            <ul class="gallery-item" data-slider>
               {%- if current_variant.featured_media != null -%}
               {%- assign media = current_variant.featured_media -%}
               <li>
