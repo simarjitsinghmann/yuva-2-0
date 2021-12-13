@@ -17,8 +17,8 @@
 		  <div class="progress-bar" role="progressbar"
 		  aria-valuemin="0" aria-valuemax="100" style="width:{{shipPendingPercentage}}">
 			<span class="sr-only">{{shipPendingPercentage}} Complete</span>
-		  </div>
-		</div>
+  </div>
+  </div>
         {% endraw %}
         {% endif %}
         {% raw %} 	
@@ -29,7 +29,7 @@
 			<div class="media-body">
 				<h5 class="cart-item-link">
 					<a href="{{url}}">{{name}}</a>
-				</h5>
+  </h5>
                   {{#if variation}}
                 <span class="item-variant-title">{{variation}}</span>
                   {{/if}}
@@ -43,13 +43,13 @@
                       {{else}}
                         <span>{{{linePrice}}}</span>
                       {{/if}}
-  				</h6>
+  </h6>
                 {{#if discountsApplied}}
                       <div class="text-right">
                         {{#each discounts}}
                           <small class="item__discount">{{ this.title }}</small><br>
                         {{/each}}
-  						</div>
+  </div>
                   {{/if}}
 				<div class="right-media-cart">
 					<div class="quantity">
@@ -57,38 +57,38 @@
 						<div class="quantity-nav">
 							<div class="quantity-button quantity-up ajaxcart__qty--plus"  data-id="{{key}}" data-line="{{line}}" data-qty="{{itemAdd}}"><svg width="24px" height="24px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="plusIconTitle" stroke="#909097" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" color="#000000"> <title id="plusIconTitle">Plus</title> <path d="M20 12L4 12M12 4L12 20"/> </svg></div>
 							<div class="quantity-button quantity-down ajaxcart__qty--minus" data-id="{{key}}" data-line="{{line}}" data-qty="{{itemMinus}}"><svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#909097" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
-						</div>
-					</div>
+  </div>
+  </div>
 					<div class="sd_mini_removeproduct" line="{{line}}" >Remove</div>
-				</div>
-			</div>
-			
-		</div>
+  </div>
+  </div>
+
+  </div>
 		{{/items}}	
-        </div>
-	</div>
+  </div>
+  </div>
 	<div class="bottom-cart-box">
 		<div class="leave-order-note">
 			<span>Leave a Note with Order</span>
 				<textarea class="form-control" rows = "3" name="note">{{{note}}}</textarea>
-		</div>
+  </div>
 		<ul>
-        
+
          {{#totalCartDiscount}}
          	<li class="coupanName">Coupan Code<strong>{{title }}</strong></li>
             <li class="minicart__savings">{%-endraw-%}{{'sections.cart.discount' | t}}{%-raw-%} <strong>-{{price}}</strong></li>
           {{/totalCartDiscount}}
 			<li class="totle-price">Subtotal <strong>{{{totalPrice}}}</strong></li>
-		</ul>
+  </ul>
 		<small class="bottom-p">Shipping & taxes calculated at checkout</small>
 		<div class="cart-btn-container">
 			<input type="submit" class="checkout-btn button black-btn" value="Checkout" name="checkout"/>
-		</div>
+  </div>
 			<a class="shopping_cont" href="/cart">View Cart</a>
-		</div>
-	</div>
-    </form>
-    </div>
+  </div>
+  </div>
+  </form>
+  </div>
 {% endraw %}
 </script>
 <script src="{{'cart-ajax.js' | asset_url}}" defer="defer"></script> 
