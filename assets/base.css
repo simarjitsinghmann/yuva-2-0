@@ -66,20 +66,6 @@ html.no-js .no-js-hidden {
   line-height: 1.5;
   letter-spacing: 0.04rem;
 }
-table:not([class]) {
-  table-layout: fixed;
-  border-collapse: collapse;
-  font-size: 1.4rem;
-  border-style: hidden;
-  box-shadow: 0 0 0 0.1rem var(--color-foreground-20);
-  /* draws the table border  */
-}
-
-table:not([class]) td,
-table:not([class]) th {
-  padding: 1em;
-  border: 0.1rem solid var(--color-foreground-20);
-}
 br:empty,
 hr:empty,
 iframe:empty,
