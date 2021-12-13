@@ -140,15 +140,15 @@
           </a>
         {%- endif -%}
         <div class="gift-card__buttons no-print">
-          <a
+          <p><a
             href="{{ shop.url }}"
-            class="button"
+            class=""
             target="_blank"
             rel="noopener"
             aria-describedby="a11y-new-window-message"
           >
             {{ 'gift_cards.issued.shop_link' | t }}
-          </a>
+            </a></p>
           <button
             class="button button--secondary"
             onclick="window.print();"
