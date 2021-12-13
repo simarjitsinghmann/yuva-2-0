@@ -76,8 +76,9 @@
                   {%- for comment in article.comments -%}
                   <article id="{{ comment.id }}" class="article-template__comments-comment">
                     {{ comment.content }}
-                    <div class="right">
-                      <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span><span class="caption-with-letter-spacing">{{ comment.created_at | time_tag: format: 'month_year' }}</span>
+                    <div class="commented-by">
+                      <span class="">{{ comment.author }}</span>
+                      <span class="">{{ comment.created_at | time_tag: format: 'month_year' }}</span>
                     </div>
                   </article>
                   {%- endfor -%}
