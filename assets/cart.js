@@ -176,7 +176,7 @@ cartPageUpdate = function(cart){
   if(cart.cart_level_discount_applications.length > 0){
     var discounts = '';
     $.each(cart.cart_level_discount_applications,function(index,discount){
-      discounts += '<li data-cart-discount>{{'sections.cart.discount' | t}}['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
+      discounts += '<li data-cart-discount>Discount['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
     })
     $('li[data-cart-discount]').remove();
     $('li[data-cart-original]').removeClass('hidden');
