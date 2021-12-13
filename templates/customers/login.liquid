@@ -149,9 +149,13 @@
             </div>
             <div class="grid__item">
               <div class="new__customer">
-                <h2>NEW CUSTOMER?</h2>
+                <h2>
+                    {{'customer.login_page.new_account_heading'| t}}
+                </h2>
                 <div class="new__customer__signup">
-                  <p>Registering for this site allows you to access your order status and history. We’ll get a new account set up for you in no time. For this will only ask you for information necessary to make the purchase process faster and easier</p>
+                  <p>
+                    {{'customer.login_page.new_account_subtext'| t}}                  
+                  </p>
                   <a href="{{routes.account_register_url}}" class="button black-btn btn-block">{{'customer.login_page.create_account'| t}}</a>
                 </div>
               </div>
