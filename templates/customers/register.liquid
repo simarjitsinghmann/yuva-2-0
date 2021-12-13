@@ -51,7 +51,7 @@
                      id="RegisterForm-FirstName"
                      {% if form.first_name %}value="{{ form.first_name }}"{% endif %}
                      autocomplete="given-name"
-                     placeholder="Full Name"
+                     placeholder="{{ 'customer.register.full_name' | t }}"
                      >
             </div>
             {% comment %}
