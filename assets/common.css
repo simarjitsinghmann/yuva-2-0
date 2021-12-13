@@ -680,6 +680,10 @@ label {
    color: #6c757d;
    position: relative;
 }
+textarea.form-control {
+   resize: none;
+   min-height: 100px;
+}
 .grid {
 	margin: 0 -15px;
 }
