@@ -30,13 +30,8 @@
                         {% if section.settings.show_date %}
                         <div class="post-date">
                           <p>
-                            {% if section.settings.show_author %}
-                              <p class="" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                                <span itemprop="name">{{ article.author }}</span>
-                              </p>
-                          	{% endif %}
-                          <span class="custom-title">{{article.published_at | date: "%d" }} {{article.published_at | date: " %b %Y" }} </span>
-                          </p>
+                            <span class="custom-title">{{article.published_at | date: "%d" }} {{article.published_at | date: " %b %Y" }} </span>
+                          <p>
                           {%- if article.comments_count > 0 and blog.comments_enabled? and section.settings.show_comment_count-%}
                           <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
                           {%- endif -%}
@@ -46,6 +41,12 @@
                           <h6><a href="{{article.url}}">{{article.title| truncatewords: 6}}</a></h6>
                           {% if section.settings.show_excerpt %}
                           <p>{{article.excerpt_or_content | strip_html | truncatewords: 6}}</p>
+                          {% endif %}
+
+                          {% if section.settings.show_author %}
+                          <p class="" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                            <span itemprop="name">Posted By {{ article.author }}</span>
+                          </p>
                           {% endif %}
                         </div>
                         {% if section.settings.show_tags %}
