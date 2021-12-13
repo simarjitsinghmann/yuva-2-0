@@ -237,19 +237,19 @@
           <div class="form-group">
             <div class="row">
               <div class="col-md-6 width-50">
-                <label for="ContactFormEmail">Email</label>
-                <input class="ask-me-form-control " type="email" name="contact[email]" id="ContactFormEmail" placeholder="Email" value="" spellcheck="false" autocomplete="off" autocapitalize="off" required="">
+                <label for="ContactFormEmail">{{'sections.contact.email' | t}}</label>
+                <input class="ask-me-form-control " type="email" name="contact[email]" id="ContactFormEmail" placeholder="{{'sections.contact.email' | t}}" value="" spellcheck="false" autocomplete="off" autocapitalize="off" required="">
 
               </div>
               <div class="col-md-6 width-50">
-                <label for="ContactFormPhone">Phone Number</label>
-                <input class="ask-me-form-control " type="tel" name="contact[phone]" id="ContactFormPhone" placeholder="Phone Number" value="" pattern="[0-9\-]*">
+                <label for="ContactFormPhone">{{'sections.contact.number' | t}}</label>
+                <input class="ask-me-form-control " type="tel" name="contact[phone]" id="ContactFormPhone" placeholder="{{'sections.contact.number' | t}}" value="" pattern="[0-9\-]*">
               </div>
             </div>
           </div>
           <div class="form-group">
-            <label for="ContactFormMessage">Message</label>
-            <textarea class="ask-me-form-control " rows="10" name="contact[body]" id="ContactFormMessage" placeholder="Message" required=""></textarea>
+            <label for="ContactFormMessage">{{'sections.contact.message' | t}}</label>
+            <textarea class="ask-me-form-control " rows="10" name="contact[body]" id="ContactFormMessage" placeholder="{{'sections.contact.message' | t}}" required=""></textarea>
           </div>
           <input type="submit" class="button black-btn submit-button" value="Send">
           {% endform %}
