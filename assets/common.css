@@ -663,14 +663,20 @@ label {
   }
 }
 .form-control {
-	display: block;
+  	display: block;
 	width: 100%;
-	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+   border: 1px solid var(--black);
+   padding: 12px 15px;
+   min-height: 51px;
+   font-size: 14px;
+   color: var(--black);
+   letter-spacing: 0.5px;
+   font-family: var(--font-family);
+   border-radius: 0;
 }
 .form-control::placeholder {
    color: #6c757d;
    position: relative;
-   transition: all 0.3s ease;
 }
 .grid {
 	margin: 0 -15px;
