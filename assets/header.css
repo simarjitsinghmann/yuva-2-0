@@ -13,6 +13,10 @@
   align-items: center;
   justify-content: center;
 }
+.announcement_icon {
+  font-size: 18px;
+  margin-right: 5px;
+}
 .announcement-bar__message p {
     margin: 0 5px;
 }
@@ -51,10 +55,7 @@
 div#countdown {
   display: inline-block;
 }
-.announcement_icon {
-  font-size: 18px;
-  margin-right: 12px;
-}
+
 .announcement-bar .announce_close.close .icon-close {
   fill: var(--white);
   width: 12px;
