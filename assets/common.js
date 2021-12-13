@@ -862,6 +862,9 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
       slideIndex = undefined;
     }
     slickSlider(jQuery(slider),slideIndex);
+    if(jQuery(parent).find('#announcementTimer').length > 0){
+    	announcementTimer();
+    }
   }
   else{
     slider.slick('refresh');
