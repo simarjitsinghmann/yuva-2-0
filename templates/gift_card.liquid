@@ -36,8 +36,42 @@
     {%- unless settings.type_header_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
-
-    {{ 'template-giftcard.css' | asset_url | stylesheet_tag }}
+<style>
+  /*=========== gift card page css start ================*/
+.gift-card-page {
+	background: #ededed;
+}
+.gift-card-outer {
+	background: #fff;
+    width: 630px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0px 0px 10px #00000014;
+}
+.gift-card__heading {
+    font-family: sans-serif;
+    margin-bottom: 11px;
+}
+.gift-card__price {
+    color: #cf6161;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 800;
+    padding: 0 0!important;
+    margin: 0px 0 20px;
+}
+.gift-card__qr-code {
+    text-align: center;
+    padding: 20px 0;
+}
+.gift-card__number {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+/*=========== gift card page css start ================*/
+    </style>
   </head>
 
   <body class="gift-card-page">
