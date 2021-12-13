@@ -76,10 +76,9 @@
             <p class="minicart__savings text-center">{%-endraw-%}{{'sections.cart.discount' | t}}{%-raw-%}['{{title }}'] <strong>-{{price}}</strong></p>
           {{/totalCartDiscount}}
 		<ul>
-			<li class="totle-title">Subtotal</li>
-			<li class="totle-price">{{{totalPrice}}}</li>
+			<li class="totle-price">Subtotal <strong>{{{totalPrice}}}</strong></li>
 		</ul>
-		<p class="bottom-p">Shipping & taxes calculated at checkout</p>
+		<small class="bottom-p">Shipping & taxes calculated at checkout</small>
 		<div class="cart-btn-container">
 			<a href="/cart" class="view-cart-btn button black-btn">View Cart</a>
 			<input type="submit" class="checkout-btn button white-btn" value="Checkout" name="checkout"/>
