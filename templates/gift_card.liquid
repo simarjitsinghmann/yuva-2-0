@@ -110,14 +110,15 @@
       </div>
       <div class="gift-card__qr-code" data-identifier="{{ gift_card.qr_identifier }}"></div>
       <div class="gift-card__information">
-        <input
+        
+        <div class="gift-card__copy-code">
+          <input
           type="text"
           class="gift-card__number"
           value="{{ gift_card.code | format_code }}"
           aria-label="{{ 'gift_cards.issued.gift_card_code' | t }}"
           readonly
         >
-        <div class="gift-card__copy-code">
           <button class="link gift-card__copy-link">{{ 'gift_cards.issued.copy_code' | t }}</button>
           <span class="gift-card__copy-success form__message" role="status"></span>
           <template>
