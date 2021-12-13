@@ -6,11 +6,36 @@
         "show_bar": {
           "label": "Show Announcement Bar"
         },
-        "auto_rotate": {
-          "label": "Auto Rotate"
-        },
         "show_close": {
           "label": "Show Close Icon"
+        },
+        "first_text": {
+          "label": "Text before Countdown"
+        },
+        "date": {
+          "label": "Countdown Date",
+          "info": "Date Format should be DD\/MM\/YYYY and should be future date"
+        },
+        "last_text": {
+          "label": "Text after Countdown"
+        },
+        "icon": {
+          "none": {
+            "label": "No Icon"
+          },
+          "horn": {
+            "label": "Horn"
+          },
+          "gift": {
+            "label": "Gift"
+          },
+          "label": "Icon"
+        },
+        "btn": {
+          "label": "Button Text"
+        },
+        "link": {
+          "label": "Button Link"
         },
         "bg_style": {
           "solid": {
@@ -46,67 +71,6 @@
         },
         "bborder_color": {
           "label": "Button Border Color"
-        }
-      },
-      "blocks": {
-        "announcement": {
-          "name": "Announcement",
-          "settings": {
-            "announcement": {
-              "label": "Text"
-            },
-            "icon": {
-              "none": {
-                "label": "No Icon"
-              },
-              "horn": {
-                "label": "Horn"
-              },
-              "gift": {
-                "label": "Gift"
-              },
-              "label": "Icon"
-            },
-            "btn": {
-              "label": "Button Text"
-            },
-            "link": {
-              "label": "Button Link"
-            }
-          }
-        },
-        "timer": {
-          "name": "Timer Announcement",
-          "settings": {
-            "first_text": {
-              "label": "Text before Countdown"
-            },
-            "date": {
-              "label": "Countdown Date",
-              "info": "Date Format should be DD\/MM\/YYYY and should be future date"
-            },
-            "last_text": {
-              "label": "Text after Countdown"
-            },
-            "icon": {
-              "none": {
-                "label": "No Icon"
-              },
-              "horn": {
-                "label": "Horn"
-              },
-              "gift": {
-                "label": "Gift"
-              },
-              "label": "Icon"
-            },
-            "btn": {
-              "label": "Button Text"
-            },
-            "link": {
-              "label": "Button Link"
-            }
-          }
         }
       }
     },
