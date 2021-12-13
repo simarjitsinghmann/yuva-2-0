@@ -75,6 +75,53 @@ html {
   font-feature-settings: "kern";
   font-size: var(--reg-text);
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   letter-spacing: var(--heading_spacing);
+   color: var(--heading_color);
+   font-family: var(--heading-font-family);
+}
+h1 {
+  font-size: 70px;
+  line-height: 75px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 35px;
+}
+h3 {
+  font-size: 22px;
+  line-height: 30px;
+}
+h4 {
+  font-size: 20px;
+  line-height: 30px;
+}
+h5 {
+  font-size: 18px;
+  line-height: 22px;
+}
+h6 {
+  font-size: 16px;
+}
+a {
+   text-decoration: none;
+}
+small,
+sub,
+sup {
+   font-size: 90%;
+}
+.form-control::placeholder {
+   color: #6c757d;
+   position: relative;
+   transition: all 0.3s ease;
+}
+
 .bottom-left {
 	bottom:17px;
     left: 17px;
