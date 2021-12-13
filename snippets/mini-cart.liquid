@@ -75,7 +75,8 @@
 		<ul>
         
          {{#totalCartDiscount}}
-            <li class="minicart__savings">{%-endraw-%}{{'sections.cart.discount' | t}}{%-raw-%}['{{title }}'] <strong>-{{price}}</strong></li>
+         	<li>{{title }}</li>
+            <li class="minicart__savings">{%-endraw-%}{{'sections.cart.discount' | t}}{%-raw-%} <strong>-{{price}}</strong></li>
           {{/totalCartDiscount}}
 			<li class="totle-price">Subtotal <strong>{{{totalPrice}}}</strong></li>
 		</ul>
