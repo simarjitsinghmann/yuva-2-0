@@ -77,18 +77,17 @@
       </div>
 </div>
     <script>
-          {% if section.settings.date != blank %}
-      window.onload = (event) => { 
-        function pad2(number) {
-          return (number < 10 ? '0' : '') + number
-        }
+      function pad2(number) {
+        return (number < 10 ? '0' : '') + number
+      }
+      function timer(){
         const second = 1000,
               minute = second * 60,
               hour = minute * 60,
               day = hour * 24;
 
         var eventdate = document.getElementById("eventDate");
-        
+
         if(eventdate) {
           const myArr = eventdate.value.split("/");
           let _day = myArr[0];
@@ -102,7 +101,7 @@
             }
             return false;
           }
-          
+
           x = setInterval(function() {    
 
             let now = new Date().getTime(),
@@ -130,12 +129,15 @@
         }
 
         setTimeout(function(){
-          
-        document.querySelector('body').classList.add('announcement_open');
+
+          document.querySelector('body').classList.add('announcement_open');
         },500);
       }
-      
-          {% endif %}
+      {% if section.settings.date != blank %}
+      window.onload = (event) => { 
+        timer();
+      }
+      {% endif %}
       $('.announce_close').click(function(){
         $('.announcement-bar').slideToggle();
         $('body').removeClass('announcement_open');
