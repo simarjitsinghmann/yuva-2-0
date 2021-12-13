@@ -11,6 +11,10 @@
      alt="{{ image.alt | escape }}"
      loading="lazy"
      class="{{class}}"
+     {%- if max_width != blank -%}
+     width="{{ max_width }}"
+     {% else %}
      width="{{ image.width }}"
+     {% endif %}
      height="{{ image.height }}"
      >
