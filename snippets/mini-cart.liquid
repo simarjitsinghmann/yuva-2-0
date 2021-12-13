@@ -72,10 +72,11 @@
 			<span>Leave a Note with Order</span>
 				<textarea class="form-control" rows = "3" name="note">{{{note}}}</textarea>
 		</div>
-         {{#totalCartDiscount}}
-            <p class="minicart__savings text-center">{%-endraw-%}{{'sections.cart.discount' | t}}{%-raw-%}['{{title }}'] <strong>-{{price}}</strong></p>
-          {{/totalCartDiscount}}
 		<ul>
+        
+         {{#totalCartDiscount}}
+            <li class="minicart__savings text-center">{%-endraw-%}{{'sections.cart.discount' | t}}{%-raw-%}['{{title }}'] <strong>-{{price}}</strong></li>
+          {{/totalCartDiscount}}
 			<li class="totle-price">Subtotal <strong>{{{totalPrice}}}</strong></li>
 		</ul>
 		<small class="bottom-p">Shipping & taxes calculated at checkout</small>
