@@ -52,9 +52,6 @@
             {{ gift_card.initial_value | money }}
           {% endif %}
         </p>
-        {%- if gift_card.enabled == false or gift_card.expired -%}
-          <p class="gift-card__label badge badge--{{ settings.sold_out_badge_color_scheme }}">{{ 'gift_cards.issued.expired' | t }}</p>
-        {%- endif -%}
       </div>
 
       {% if settings.currency_code_enabled %}
