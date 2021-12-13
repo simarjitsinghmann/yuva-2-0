@@ -7,7 +7,7 @@
   <div class="container">
     {% include 'account-header' %}
     <div class="account-pages-content">
-      <h4>Addresses</h4>
+      <h4>{{ 'customer.addresses.title' | t }}</h4>
 
     <ul role="list" class="address-list">
       {%- for address in customer.addresses -%}
