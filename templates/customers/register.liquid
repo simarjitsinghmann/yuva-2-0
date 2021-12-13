@@ -16,7 +16,7 @@
             <h2 class="form_title" tabindex="-1">
               {{ 'customer.register.title' | t }}
             </h2> 
-            <p>If you've created an account with us, please enter.</p>
+            <p>{{ 'customer.register.subtext' | t }}</p>
             {%- form 'create_customer', novalidate: 'novalidate' -%}
             {%- if form.errors -%}
             <div class="error-container">
