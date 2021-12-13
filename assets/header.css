@@ -1750,7 +1750,7 @@ header {
 }
 /**mini-search-end**/
 
-/**Minicart**/
+/*============= Minicart css start ================*/
 .right-media-cart .quantity {
    position: relative;
    width: auto;
@@ -1789,7 +1789,7 @@ header {
    height: 100%;
 }
 .mini_cart .bottom-cart-box ul {
-   padding: 20px 0px 0;
+   padding: 10px 0px;
    text-align: center;
    display: flex;
    flex-direction: column;
@@ -1800,13 +1800,11 @@ header {
     text-align: left;
 }
 .mini_cart .bottom-cart-box ul li.totle-price {
-    font-size: 24px;
-    color: var(--black);
+    font-size: 21px;
     text-align: left;
     font-weight: var(--semibold);
     line-height: 27px;
     letter-spacing: -.4px;
-    margin: 0px 0;
 }
 .mini_cart .bottom-cart-box .cart-btn-container {
    text-align: center;
@@ -1817,13 +1815,6 @@ header {
 }
 .cart-btn-container .button {
    margin-bottom: 10px;
-}
-.mini_cart .bottom-cart-box .bottom-p {
-   color: var(--black);
-   font-size: var(--reg-text);
-   text-align: left;
-   font-weight: var(--light);
-   margin: 5px 0 10px;
 }
 .shopping_cont {
    text-align: center;
