@@ -103,7 +103,7 @@
             let now = new Date().getTime(),
                 distance = countDown - now;
             if(distance > 0){
-              document.getElementsByClassName("announcement-bar")[0].classList.remove('hidden');
+              document.getElementById("announcementTimer").classList.remove('hidden');
               var leftDays = Math.floor(distance / (day));
               if(leftDays > 0){
                 document.getElementById("dayHours").textContent= 'Days';
@@ -117,7 +117,7 @@
                 document.getElementById("seconds").innerText = pad2(Math.floor((distance % (minute)) / second));
             }
             else{
-              document.getElementsByClassName("announcement-bar")[0].classList.add('hidden');
+              document.getElementById("announcementTimer").classList.add('hidden');
               document.getElementsByTagName('body')[0].classList.remove('announcement_open');
               clearInterval(x);
             }
