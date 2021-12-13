@@ -756,10 +756,6 @@ function sellingPlanChange(){
       _thisParent.classList.add('active');
 
     }
-    //         var variantId = productForm.querySelector('[name="id"]').getAttribute('value');
-
-    //         var variantSelected = variantChange(variantId,'id',productForm);
-
   });
 });
 var planSelectors = document.querySelectorAll('select.selling_plan_attribute');
