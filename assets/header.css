@@ -13,6 +13,27 @@
   align-items: center;
   justify-content: center;
 }
+.announcement-bar__message ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  min-width: 125px;
+}
+.announcement-bar__message ul li {
+    display: flex;
+    align-items: center;
+}
+.announcement-bar__message ul li span {
+    background: rgba(0,0,0,.4);
+    color: var(--white);
+    padding: 4px 2px;
+    margin: 0 1px;
+    min-width: 28px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 12px;
+}
 .announcement-bar .announce-btn {
   padding: 5px 10px;
   letter-spacing: 0;
@@ -25,18 +46,7 @@
 div#countdown {
   display: inline-block;
 }
-.announcement-bar.style-2 ul li {
-  display: inline-block;
-  color: #fff;
-}
 
-.announcement-bar__message ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 5px;
-  min-width: 125px;
-}
 .announcement-bar__message ul li span#dayHours {
   background: transparent;
 }
@@ -71,21 +81,6 @@ div#countdown {
   padding: 15px 15px 15px;
 }
 
-.announcement-bar__message ul li {
-  line-height: 18px;
-  display: flex;
-  align-items: center;
-}
-.announcement-bar__message ul li span {
-  background: #282828;
-  color: var(--white);
-  font-weight: var(--normal);
-  padding: 4px 2px;
-  margin: 0 1px;
-  min-width: 29px;
-  border-radius: 4px;
-  font-size: 13px;
-}
 /**top announcement_bar end**/
 /*======================== header menu css start ==================*/
 #shopify-section-header {
