@@ -1072,9 +1072,6 @@
   /*===============  single banner css end  =============*/
 }
 @media screen and (max-width: 767px) {
-  .blog-post h2 {
-    line-height: 40px;
-}
   p
   body {
     font-size: 12px;
@@ -1192,9 +1189,6 @@
   }
   .collection-detail-right a {
    font-weight: var(--medium);
-     
-    
-
   }
   .card-wrapper .collection-detail {
   	position:unset;
@@ -1616,6 +1610,9 @@
   }
   .product-option-selector {
     margin-bottom: 10px;
+}
+    .blog-post h2 {
+    line-height: 40px;
 }
 }
 @media screen and (max-width: 575px) {
