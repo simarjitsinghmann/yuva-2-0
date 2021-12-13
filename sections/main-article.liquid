@@ -171,13 +171,13 @@
                                   >{{ form.body }}</textarea>
 
                       </div>
+                      {%- if form.errors contains 'body' -%}
+                      <small id="CommentForm-body-error">
+                        <span class="form__message error_message">{{ 'blogs.article.message' | t }} {{ form.errors.messages['body'] }}.</span>
+                      </small>
+                      {%- endif -%}
                     </div>
                   </div>
-                  {%- if form.errors contains 'body' -%}
-                  <small id="CommentForm-body-error">
-                    <span class="form__message error_message">{{ 'blogs.article.message' | t }} {{ form.errors.messages['body'] }}.</span>
-                  </small>
-                  {%- endif -%}
                 </div>
 
                 <div class="d-flex justify-content-between align-items-center">
