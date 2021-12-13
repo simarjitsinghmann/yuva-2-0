@@ -1314,6 +1314,12 @@ a.wishlist-view .fas {
    border-top: 0;
    background-color: var(--white);
 }
+.post-information__wrapper .post-date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
 .post-information__wrapper .post-date .custom-title {
    font-size: 13px;
    line-height: 20px;
@@ -1321,7 +1327,6 @@ a.wishlist-view .fas {
    text-align: center;
    background: #f6f4f2;
    padding: 3px 7px;
-   margin: 0 0 10px;
    font-weight: var(--normal);
    letter-spacing: 0.4px;
    display: inline-block;
