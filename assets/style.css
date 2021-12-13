@@ -2250,7 +2250,7 @@ ul.gallery-item li a > img {
    font-family: var(--font-family);
 }
 .sellingPlanHeading {
-	margin-bottom:10px;
+  margin:0
 }
 .sellingPlanHeading label {
 	padding:0;
@@ -2261,6 +2261,9 @@ ul.gallery-item li a > img {
     margin: 0 0 10px;
     display: block;
   width:85%;
+}
+.selling_plan {
+	margin-top:20px;
 }
 .selling_plan_attribute{
     display: block;
