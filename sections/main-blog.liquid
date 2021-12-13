@@ -31,7 +31,7 @@
                         <div class="post-date">
                           <p>
                             <span class="custom-title">{{article.published_at | date: "%d" }} {{article.published_at | date: " %b %Y" }} </span>
-                          <p>
+                          </p>
                           {%- if article.comments_count > 0 and blog.comments_enabled? and section.settings.show_comment_count-%}
                           <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
                           {%- endif -%}
