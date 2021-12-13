@@ -1795,11 +1795,11 @@ header {
    flex-direction: column;
    justify-content: flex-start;
 }
-.mini_cart .bottom-cart-box ul li:first-child {
+.mini_cart .bottom-cart-box ul li {
     font-size: 16px;
     text-align: left;
 }
-.mini_cart .bottom-cart-box ul li.totle-price {
+.mini_cart .bottom-cart-box ul li strong{
     font-size: 21px;
     text-align: left;
     font-weight: var(--semibold);
