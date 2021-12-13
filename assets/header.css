@@ -53,15 +53,12 @@
 div#countdown {
   display: inline-block;
 }
-.announcement-bar .announce_close svg {
-  fill: var(--white);
-    width: 12px;
-    line-height: 1;
-    font-size: inherit;
-    }
 .announcement-bar .announce_close {
     cursor: pointer;
   	margin:0 10px;
+}
+.announcement-bar .announce_close svg {
+
 }
 /*============== announcement bar css end =================*/
 .list-menu--inline .nav-item.menu-item--no-mega .sub-menu {
