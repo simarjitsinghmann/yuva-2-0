@@ -13,6 +13,11 @@
                 %}
 <div class="shop-sidebar-inside">
   <form id="CollectionFiltersForm" class="collectionFilters__form" >
+    
+    {%- if results.terms -%}
+    <input type="hidden" name="q" value="{{ results.terms | escape }}">
+    <input name="options[prefix]" type="hidden" value="last">
+    {%- endif -%}
     {%- for filter in collection.filters -%}
 
     {% case filter.type %}
