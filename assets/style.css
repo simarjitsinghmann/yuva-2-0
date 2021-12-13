@@ -2180,7 +2180,8 @@ ul.gallery-item li a > img {
    margin-bottom: 6px;
    letter-spacing: 0.4px;
 }
-.product-loop-variants .variant_option input {
+.product-loop-variants .variant_option input,
+.sellingPlanHeading input{
     opacity: 0;
     position: absolute;
     cursor: pointer;
