@@ -29,7 +29,7 @@
                       <div class="post-information__wrapper text__left">
                         {% if section.settings.show_date %}
                         <div class="post-date">
-                          <h4 class="custom-title">{{article.published_at | date: "%d" }} {{article.published_at | date: " %b %Y" }} </h4>
+                          <span class="custom-title">{{article.published_at | date: "%d" }} {{article.published_at | date: " %b %Y" }} </span>
                           
                           {%- if article.comments_count > 0 and blog.comments_enabled? and section.settings.show_comment_count-%}
                           <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
