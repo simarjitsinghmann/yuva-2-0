@@ -142,7 +142,7 @@
            <p class="checkout-text">{{'sections.cart.taxes_and_shipping_at_checkout' | t}}</p>
           {%- if section.settings.payment_enable -%}
                 <div class="footer__payment">
-                  <span class="visually-hidden">Payment methods</span>
+                  <span class="visually-hidden">{{'sections.cart.payment' | t}}</span>
                   <ul class="list list-payment justify-content-center" role="list">
                     {%- for type in shop.enabled_payment_types -%}
                     <li class="list-payment__item">
