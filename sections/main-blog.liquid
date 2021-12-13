@@ -32,7 +32,7 @@
                           <div class="post-date-box">
                             <span class="custom-title">{{article.published_at | date: "%d" }} {{article.published_at | date: " %b %Y" }} </span>
                             {% if section.settings.show_author %}
-                          <p class="" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                          <p class="posted-by" itemprop="author" itemscope itemtype="http://schema.org/Person">
                             <span itemprop="name">{{ article.author }}</span>
                           </p>
                           {% endif %}
