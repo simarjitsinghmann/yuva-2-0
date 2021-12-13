@@ -114,12 +114,6 @@ sub,
 sup {
    font-size: 90%;
 }
-.form-control::placeholder {
-   color: #6c757d;
-   position: relative;
-   transition: all 0.3s ease;
-}
-
 .bottom-left {
 	bottom:17px;
     left: 17px;
@@ -672,6 +666,11 @@ label {
 	display: block;
 	width: 100%;
 	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.form-control::placeholder {
+   color: #6c757d;
+   position: relative;
+   transition: all 0.3s ease;
 }
 .grid {
 	margin: 0 -15px;
