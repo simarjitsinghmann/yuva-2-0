@@ -44,18 +44,14 @@
   background: transparent;
 }
 .announcement-bar .announce-btn {
-  padding: 5px 10px;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  color: var(--white);
-  font-size: 13px;
-  display: inline-block;
-  margin-left: 16px;
+    padding: 2px 8px;
+    font-size: 12px;
+    display: inline-block;
+    letter-spacing: 0;
 }
 div#countdown {
   display: inline-block;
 }
-
 .announcement-bar .announce_close.close .icon-close {
   fill: var(--white);
   width: 12px;
