@@ -18,8 +18,8 @@
               <div class="row">
                 <div class="col-lg-12 col-md-12">
                   <div class="form-group">
-                    <label for="ContactForm-username">User Name</label>
-                    <input type="text" class="form-control" id="ContactForm-username" name="contact[User Name]" placeholder="User name" required>
+                    <label for="ContactForm-username">{{'sections.contact.name' | t}}</label>
+                    <input type="text" class="form-control" id="ContactForm-username" name="contact[Name]" placeholder="{{'sections.contact.name' | t}}" required>
                   </div>
                 </div>
                 <div class="col-lg-12 col-md-12">
@@ -39,14 +39,14 @@
                            aria-invalid="true"
                            aria-describedby="ContactForm-email-error"
                            {% endif %}
-                           placeholder="Email Address"
+                           placeholder="{{'sections.contact.email' | t}}"
                            >
                   </div>
                 </div>
                 <div class="col-lg-12 col-md-12">
-                  <label for="ContactForm-body">Comment</label>
+                  <label for="ContactForm-body">{{'sections.contact.email' | t}}</label>
                   <div class="form-group">
-                    <textarea id="ContactForm-body" class="form-control" name="contact[Comment]"  placeholder="Comment" rows="3">{{form.body}}</textarea>
+                    <textarea id="ContactForm-body" class="form-control" name="contact[Comment]"  placeholder="{{'sections.contact.email' | t}}" rows="3">{{form.body}}</textarea>
                   </div>
                   <input type="submit" class="btn button" value="{{section.settings.form_button}}">
                 </div>
