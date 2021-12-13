@@ -1,10 +1,7 @@
 <div class="account-pages-header">
-<!--   <div class="shopify__top__section  section-heading-box">
-      <h2>{{ 'customer.account.title' | t }}</h2>
-  </div> -->
   <div class="account-header-tabs">
   <a href="{{ routes.account_url }}"  class="{% if request.path == routes.account_url or request.path contains '/orders/' %}active{% endif %}">
-       orders
+       {{ 'customer.orders.title' | t }}
       </a>
   <a href="{{ routes.account_addresses_url }}" class="{% if request.path == routes.account_addresses_url %}active{% endif %}">
         {{ 'customer.account.view_addresses' | t }}
