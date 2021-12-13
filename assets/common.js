@@ -837,7 +837,7 @@ slickSlider = function(selector,slideIndex){
   }
 }
 
-sliders = function(resize){
+sliders = function(){
   var sliders = jQuery('body').find('[data-slider]');
   if(sliders.length > 0){
     sliders.each(function(index) {
@@ -845,10 +845,8 @@ sliders = function(resize){
     });
   }
 }
-sliders(false);
-window.addEventListener('resize', function(event){
-  sliders(true);
-});
+sliders();
+
 var slideIndex = 0;
 var block = '';
 
