@@ -291,9 +291,7 @@ div#countdown {
    left: 0;
    z-index: 1030;
 }
-.nav-open .side-menu {
-   left: 0;
-}
+
 .site-nav-dropdown a > span.sale_on {
    background: var(--green);
 }
@@ -485,6 +483,27 @@ div#countdown {
    }
 }
 /*================= nav-humburger-menu ==============*/
+#dropdown-customer,
+#similar__product,
+.side-menu,
+.side-menu .inner-side .nav-item.dropdown .child,
+.side-menu .inner-side .nav-item.dropdown .grandchild {
+   width: 100%;
+   max-width: 464px;
+   position: fixed;
+   top: 0;
+   right: -464px;
+   z-index: 99999;
+   background: var(--white);
+   height: 100vh;
+   webkit-transition: all 0.7s ease;
+   -moz-transition: all 0.7s ease;
+   -ms-transition: all 0.7s ease;
+   -o-transition: all 0.7s ease;
+   transition: all 0.7s ease;
+   overflow-x: hidden;
+   overflow-y: auto;
+}
 .side-menu .inner-side,
 .side-menu .nav-item.dropdown .inner {
    height: 100%;
@@ -525,6 +544,9 @@ div#countdown {
    list-style: none;
    flex-direction: column;
    width: 100%;
+}
+.nav-open .side-menu {
+   left: 0;
 }
 button.navbar-toggler {
    background: transparent;
