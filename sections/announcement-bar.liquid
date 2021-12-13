@@ -3,263 +3,261 @@
 {% assign show_bar = true %}
 {% endunless %}
 {% if section.settings.show_bar and show_bar %}
-    <div id="shopify-section-announcement-bar"> 
-      <style>
-        #shopify-section-{{section.id}} .announcement-bar {
-          border-color:transparent !important;
-          {% if section.settings.bg_style == 'gradient' %}
-          background: -moz-linear-gradient(left, {{section.settings.bgcolor}} 0%, {{section.settings.bgcolor}} 33%, {{section.settings.bgcolor2}} 66%, {{section.settings.bgcolor2}} 100%);
-          background: -webkit-linear-gradient(left, {{section.settings.bgcolor}} 0%,{{section.settings.bgcolor}} 33%,{{section.settings.bgcolor2}} 66%,{{section.settings.bgcolor2}} 100%);
-          background: linear-gradient(to right, {{section.settings.bgcolor}} 0%,{{section.settings.bgcolor}} 33%,{{section.settings.bgcolor2}} 66%,{{section.settings.bgcolor2}} 100%);
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{{section.settings.bgcolor}}', endColorstr='{{section.settings.bgcolor2}}',GradientType=1 );
+<style>
+  #shopify-section-{{section.id}} .announcement-bar {
+    border-color:transparent !important;
+    {% if section.settings.bg_style == 'gradient' %}
+    background: -moz-linear-gradient(left, {{section.settings.bgcolor}} 0%, {{section.settings.bgcolor}} 33%, {{section.settings.bgcolor2}} 66%, {{section.settings.bgcolor2}} 100%);
+    background: -webkit-linear-gradient(left, {{section.settings.bgcolor}} 0%,{{section.settings.bgcolor}} 33%,{{section.settings.bgcolor2}} 66%,{{section.settings.bgcolor2}} 100%);
+    background: linear-gradient(to right, {{section.settings.bgcolor}} 0%,{{section.settings.bgcolor}} 33%,{{section.settings.bgcolor2}} 66%,{{section.settings.bgcolor2}} 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{{section.settings.bgcolor}}', endColorstr='{{section.settings.bgcolor2}}',GradientType=1 );
 
-            {% else %}
-            background-color:{{section.settings.bgcolor}};
-            {% endif %}
-            }
-       #shopify-section-{{section.id}} .announcement-bar .announcement-bar__message{
-          color:{{section.settings.fontcolor}};
-        }
-       #shopify-section-{{section.id}} .announcement-bar .announcement-bar__message p a{
-          color: {{section.settings.fontcolor}};
-          border-bottom: 1px solid {{section.settings.fontcolor}};
-        }
-       #shopify-section-{{section.id}} .announcement-bar .announcement-bar__message a.announce-btn{
-          color:{{section.settings.btn_fontcolor}};
-          background-color:{{section.settings.btn_bgcolor}};
-          border: 1px solid transparent;
-          border-color:{{section.settings.bborder_color}};
-        }
-        .announcement-bar__message p:last-of-type{
-          margin-left: 5px;
-        }
-      </style>
-      <div id="announcement{{section.id}}" class="announcement-bar" >
-
-        <div class="announcement-bar__message h5" >
-          {% unless section.settings.icon == 'none' %}
-          <span class="announcement_icon">
-            {% render 'icon-list' icon:section.settings.icon %}
-          </span>
-          {%endunless%}
-          {% if section.settings.first_text != blank %}
-          <p>
-            {{section.settings.first_text}}
-          </p>
-          {% endif %}
-          {% if section.settings.date != blank %}
-          <div id="announcementTimer" class="hidden">
-          <input type="hidden" id="eventDate" value="{{section.settings.date}}">
-          <ul>
-            <li><span id="days"></span>:</li>
-            <li><span id="hours"></span>:</li>
-            <li><span id="minutes"></span>:</li>
-            <li><span id="seconds"></span> <span id="dayHours">Hours</span></li>
-          </ul>
-          </div>
-          {% endif %}
-          {% if section.settings.last_text != blank %}
-          <p>
-            {{section.settings.last_text}}
-          </p>
-          {% endif %}
-
-
-          {% if section.settings.btn != blank and section.settings.link != blank %}
-          <a class="announce-btn" href="{{section.settings.link}}">{{section.settings.btn}}</a>
-          {% endif %}
-        </div>
-        {% if section.settings.show_close %}
-        <span href="javascript:void(0)" class="announce_close close">
-          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 40 40"><path d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z" class="layer"></path></svg>
-        </span>
-        {% endif %}
-      </div>
-</div>
-    <script>
-      function pad2(number) {
-        return (number < 10 ? '0' : '') + number
-      }
-      function announcementTimer(){
-        const second = 1000,
-              minute = second * 60,
-              hour = minute * 60,
-              day = hour * 24;
-
-        var eventdate = document.getElementById("eventDate");
-
-        if(eventdate) {
-          const myArr = eventdate.value.split("/");
-          let _day = myArr[0];
-          let _month = myArr[1];
-          let _year = myArr[2];
-          let _date = _month+"/"+_day+"/"+_year+" 00:00:00";
-          let countDown = new Date(_date).getTime();
-          if(isNaN(countDown)){
-            if(Shopify.designMode){
-              alert('Incorrect Date or Date Format');
-            }
-            return false;
-          }
-
-          x = setInterval(function() {    
-
-            let now = new Date().getTime(),
-                distance = countDown - now;
-            if(distance > 0){
-              document.getElementById("announcementTimer").classList.remove('hidden');
-              var leftDays = Math.floor(distance / (day));
-              if(leftDays > 0){
-                document.getElementById("dayHours").textContent= 'Days';
-              }
-              else{
-                document.getElementById("dayHours").textContent = 'Hours';
-              }
-              document.getElementById("days").innerText = pad2(leftDays),
-                document.getElementById("hours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
-                document.getElementById("minutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
-                document.getElementById("seconds").innerText = pad2(Math.floor((distance % (minute)) / second));
-            }
-            else{
-              document.getElementById("announcementTimer").classList.add('hidden');
-              document.querySelector('body').classList.remove('announcement_open');
-              clearInterval(x);
-            }
-          }, 0)
-        }
-
-        setTimeout(function(){
-
-          document.querySelector('body').classList.add('announcement_open');
-        },500);
-      }
-      {% if section.settings.date != blank %}
-      window.onload = (event) => { 
-        announcementTimer();
-      }
+      {% else %}
+      background-color:{{section.settings.bgcolor}};
       {% endif %}
-      $('.announce_close').click(function(){
-        $('.announcement-bar').slideToggle();
-        $('body').removeClass('announcement_open');
-      });
+      }
+  #shopify-section-{{section.id}} .announcement-bar .announcement-bar__message{
+    color:{{section.settings.fontcolor}};
+  }
+  #shopify-section-{{section.id}} .announcement-bar .announcement-bar__message p a{
+    color: {{section.settings.fontcolor}};
+    border-bottom: 1px solid {{section.settings.fontcolor}};
+  }
+  #shopify-section-{{section.id}} .announcement-bar .announcement-bar__message a.announce-btn{
+    color:{{section.settings.btn_fontcolor}};
+    background-color:{{section.settings.btn_bgcolor}};
+    border: 1px solid transparent;
+    border-color:{{section.settings.bborder_color}};
+  }
+  .announcement-bar__message p:last-of-type{
+    margin-left: 5px;
+  }
+</style>
+<div id="announcement{{section.id}}" class="announcement-bar" >
+
+  <div class="announcement-bar__message h5" >
+    {% unless section.settings.icon == 'none' %}
+    <span class="announcement_icon">
+      {% render 'icon-list' icon:section.settings.icon %}
+    </span>
+    {%endunless%}
+    {% if section.settings.first_text != blank %}
+    <p>
+      {{section.settings.first_text}}
+    </p>
+    {% endif %}
+    {% if section.settings.date != blank %}
+    <div id="announcementTimer" class="hidden">
+      <input type="hidden" id="eventDate" value="{{section.settings.date}}">
+      <ul>
+        <li><span id="days"></span>:</li>
+        <li><span id="hours"></span>:</li>
+        <li><span id="minutes"></span>:</li>
+        <li><span id="seconds"></span> <span id="dayHours">Hours</span></li>
+      </ul>
+    </div>
+    {% endif %}
+    {% if section.settings.last_text != blank %}
+    <p>
+      {{section.settings.last_text}}
+    </p>
+    {% endif %}
+
+
+    {% if section.settings.btn != blank and section.settings.link != blank %}
+    <a class="announce-btn" href="{{section.settings.link}}">{{section.settings.btn}}</a>
+    {% endif %}
+  </div>
+  {% if section.settings.show_close %}
+  <span href="javascript:void(0)" class="announce_close close">
+    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 40 40"><path d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z" class="layer"></path></svg>
+  </span>
+  {% endif %}
+</div>
+<script>
+  function pad2(number) {
+    return (number < 10 ? '0' : '') + number
+  }
+  function announcementTimer(){
+    const second = 1000,
+          minute = second * 60,
+          hour = minute * 60,
+          day = hour * 24;
+
+    var eventdate = document.getElementById("eventDate");
+
+    if(eventdate) {
+      const myArr = eventdate.value.split("/");
+      let _day = myArr[0];
+      let _month = myArr[1];
+      let _year = myArr[2];
+      let _date = _month+"/"+_day+"/"+_year+" 00:00:00";
+      let countDown = new Date(_date).getTime();
+      if(isNaN(countDown)){
+        if(Shopify.designMode){
+          alert('Incorrect Date or Date Format');
+        }
+        return false;
+      }
+
+      x = setInterval(function() {    
+
+        let now = new Date().getTime(),
+            distance = countDown - now;
+        if(distance > 0){
+          document.getElementById("announcementTimer").classList.remove('hidden');
+          var leftDays = Math.floor(distance / (day));
+          if(leftDays > 0){
+            document.getElementById("dayHours").textContent= 'Days';
+          }
+          else{
+            document.getElementById("dayHours").textContent = 'Hours';
+          }
+          document.getElementById("days").innerText = pad2(leftDays),
+            document.getElementById("hours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
+            document.getElementById("minutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
+            document.getElementById("seconds").innerText = pad2(Math.floor((distance % (minute)) / second));
+        }
+        else{
+          document.getElementById("announcementTimer").classList.add('hidden');
+          document.querySelector('body').classList.remove('announcement_open');
+          clearInterval(x);
+        }
+      }, 0)
+    }
+
+    setTimeout(function(){
+
+      document.querySelector('body').classList.add('announcement_open');
+    },500);
+  }
+  {% if section.settings.date != blank %}
+  window.onload = (event) => { 
+    announcementTimer();
+  }
+  {% endif %}
+  $('.announce_close').click(function(){
+    $('.announcement-bar').slideToggle();
+    $('body').removeClass('announcement_open');
+  });
 </script>
 {% endif %}
 
 {% schema %}
 {
-    "name": "t:sections.announcement-bar.name",
-	"class":"shopify-section-announcement-bar",
-    "settings": [
-        {
-            "type": "checkbox",
-            "id": "show_bar",
-            "default": true,
-            "label": "t:sections.announcement-bar.settings.show_bar.label"
-        },
-        {
-            "type": "checkbox",
-            "id": "show_close",
-            "default": true,
-            "label": "t:sections.announcement-bar.settings.show_close.label"
-        },
-                {
-                  "type": "select",
-                  "id": "icon",
-                  "label": "t:sections.announcement-bar.settings.icon.label",
-                  "default": "none",
-                  "options": [
-                    {
-                      "label": "t:sections.announcement-bar.settings.icon.none.label",
-                      "value": "none"
-                    },
-                    {
-                      "label": "t:sections.announcement-bar.settings.icon.horn.label",
-                      "value": "horn"
-                    },
-                    {
-                      "label": "t:sections.announcement-bar.settings.icon.gift.label",
-                      "value": "gift"
-                    }
-                  ]
-                },
-                {
-                    "type": "text",
-                    "id": "first_text",
-                    "label": "t:sections.announcement-bar.settings.first_text.label"
-                },
-                {
-                    "type": "text",
-                    "id": "date",
-                    "label": "t:sections.announcement-bar.settings.date.label",
-                    "info": "t:sections.announcement-bar.settings.date.info"
-                },
-                {
-                    "type": "text",
-                    "id": "last_text",
-                    "label": "t:sections.announcement-bar.settings.last_text.label"
-                },
-                {
-                    "type": "text",
-                    "id": "btn",
-                    "label": "t:sections.announcement-bar.settings.btn.label"
-                },
-                {
-                    "type": "url",
-                    "id": "link",
-                    "label": "t:sections.announcement-bar.settings.link.label"
-                },
-                {
-                  "type": "select",
-                  "id": "bg_style",
-                  "label": "t:sections.announcement-bar.settings.bg_style.label",
-                  "default": "solid",
-                  "options": [
-                    {
-                      "label": "t:sections.announcement-bar.settings.bg_style.solid.label",
-                      "value": "solid"
-                    },
-                    {
-                      "label": "t:sections.announcement-bar.settings.bg_style.gradient.label",
-                      "value": "gradient"
-                    }
-                  ]
-                },
-                {
-                    "type": "color",
-                    "id": "bgcolor",
-                    "default": "#f17e35",
-                    "label": "t:sections.announcement-bar.settings.bgcolor.label"
-                },
-                {
-                    "type": "color",
-                    "id": "bgcolor2",
-                    "default": "#f86f64",
-                    "label": "t:sections.announcement-bar.settings.bgcolor2.label",
-                    "info": "t:sections.announcement-bar.settings.bgcolor2.info"
-                },
-                {
-                    "type": "color",
-                    "id": "fontcolor",
-                    "default": "#ffffff",
-                    "label": "t:sections.announcement-bar.settings.fontcolor.label"
-                },
-                {
-                    "type": "color",
-                    "id": "btn_bgcolor",
-                    "default": "#f17e35",
-                    "label": "t:sections.announcement-bar.settings.btn_bgcolor.label"
-                },
-                {
-                    "type": "color",
-                    "id": "btn_fontcolor",
-                    "default": "#ffffff",
-                    "label": "t:sections.announcement-bar.settings.btn_fontcolor.label"
-                },
-                {
-                    "type": "color",
-                    "id": "bborder_color",
-                    "label": "t:sections.announcement-bar.settings.bborder_color.label"
-                }
-    ]
+"name": "t:sections.announcement-bar.name",
+"class":"shopify-section-announcement-bar",
+"settings": [
+{
+"type": "checkbox",
+"id": "show_bar",
+"default": true,
+"label": "t:sections.announcement-bar.settings.show_bar.label"
+},
+{
+"type": "checkbox",
+"id": "show_close",
+"default": true,
+"label": "t:sections.announcement-bar.settings.show_close.label"
+},
+{
+"type": "select",
+"id": "icon",
+"label": "t:sections.announcement-bar.settings.icon.label",
+"default": "none",
+"options": [
+{
+"label": "t:sections.announcement-bar.settings.icon.none.label",
+"value": "none"
+},
+{
+"label": "t:sections.announcement-bar.settings.icon.horn.label",
+"value": "horn"
+},
+{
+"label": "t:sections.announcement-bar.settings.icon.gift.label",
+"value": "gift"
+}
+]
+},
+{
+"type": "text",
+"id": "first_text",
+"label": "t:sections.announcement-bar.settings.first_text.label"
+},
+{
+"type": "text",
+"id": "date",
+"label": "t:sections.announcement-bar.settings.date.label",
+"info": "t:sections.announcement-bar.settings.date.info"
+},
+{
+"type": "text",
+"id": "last_text",
+"label": "t:sections.announcement-bar.settings.last_text.label"
+},
+{
+"type": "text",
+"id": "btn",
+"label": "t:sections.announcement-bar.settings.btn.label"
+},
+{
+"type": "url",
+"id": "link",
+"label": "t:sections.announcement-bar.settings.link.label"
+},
+{
+"type": "select",
+"id": "bg_style",
+"label": "t:sections.announcement-bar.settings.bg_style.label",
+"default": "solid",
+"options": [
+{
+"label": "t:sections.announcement-bar.settings.bg_style.solid.label",
+"value": "solid"
+},
+{
+"label": "t:sections.announcement-bar.settings.bg_style.gradient.label",
+"value": "gradient"
+}
+]
+},
+{
+"type": "color",
+"id": "bgcolor",
+"default": "#f17e35",
+"label": "t:sections.announcement-bar.settings.bgcolor.label"
+},
+{
+"type": "color",
+"id": "bgcolor2",
+"default": "#f86f64",
+"label": "t:sections.announcement-bar.settings.bgcolor2.label",
+"info": "t:sections.announcement-bar.settings.bgcolor2.info"
+},
+{
+"type": "color",
+"id": "fontcolor",
+"default": "#ffffff",
+"label": "t:sections.announcement-bar.settings.fontcolor.label"
+},
+{
+"type": "color",
+"id": "btn_bgcolor",
+"default": "#f17e35",
+"label": "t:sections.announcement-bar.settings.btn_bgcolor.label"
+},
+{
+"type": "color",
+"id": "btn_fontcolor",
+"default": "#ffffff",
+"label": "t:sections.announcement-bar.settings.btn_fontcolor.label"
+},
+{
+"type": "color",
+"id": "bborder_color",
+"label": "t:sections.announcement-bar.settings.bborder_color.label"
+}
+]
 }
 {% endschema %}
