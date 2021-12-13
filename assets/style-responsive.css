@@ -266,7 +266,8 @@
     height: 15px;
   }
   .button,
-  .shopify-challenge__button {
+  .shopify-challenge__button,
+  .product_button .shopify-payment-button__button{
     padding: 8px 20px;
     min-height: 24px;
     line-height: 24px;
@@ -674,7 +675,8 @@
     .button .fa-arrow-right {
     margin-left: 12px;
   }
-  .button, .shopify-challenge__button {
+  .button, .shopify-challenge__button,
+  .product_button .shopify-payment-button__button{
       padding: 6px 12px;
       min-height: 22px;
       line-height: 22px;
