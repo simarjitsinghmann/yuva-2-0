@@ -204,12 +204,12 @@
     {% if block.settings.show_contact and block.settings.form_text != blank %}
     <div class="product-contact-form">
       <div class="ask_about"> 
-        <span class="ask_this_product" data-name="{{product.title}}"> 
-          <i class="far fa-envelope"></i> {{block.settings.form_text}}</span>
+        <a class="ask_this_product" data-name="{{product.title}}"> 
+          <i class="far fa-envelope"></i> {{block.settings.form_text}}</a>
       </div>
       <div class="askmeMain" style="display: none;">
         <div class="askmecontainer">   
-          <a href="javascript:;" class="ask_cross">
+          <a class="ask_cross">
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
               <defs>
                 <style>
