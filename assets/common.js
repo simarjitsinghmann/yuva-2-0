@@ -821,12 +821,16 @@ slickSlider = function(selector,slideIndex){
     var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
     var options = JSON.parse(html);
     var mobileOnly = selector.data('mobile-only')
-       console.log('mobile -', mobileOnly )
-    if(slideIndex){
-      selector.slick(options).slick('slickGoTo',slideIndex);
+    if(mobileOnly == true ){
+    
     }
     else{
-      selector.slick(options);
+      if(slideIndex){
+        selector.slick(options).slick('slickGoTo',slideIndex);
+      }
+      else{
+        selector.slick(options);
+      }
     }
   }
 }
