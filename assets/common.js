@@ -840,7 +840,9 @@ sliders = function(){
   }
 }
 sliders();
-
+window.addEventListener('resize', function(event){
+  sliders();
+});
 var slideIndex = 0;
 var block = '';
 
