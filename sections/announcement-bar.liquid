@@ -43,7 +43,7 @@
         <li><span id="days"></span>:</li>
         <li><span id="hours"></span>:</li>
         <li><span id="minutes"></span>:</li>
-        <li><span id="seconds"></span> <span id="dayHours">Hours</span></li>
+        <li><span id="seconds"></span> <span id="dayHours"></span></li>
       </ul>
     </div>
     {% endif %}
@@ -98,10 +98,10 @@
           document.getElementById("announcementTimer").classList.remove('hidden');
           var leftDays = Math.floor(distance / (day));
           if(leftDays > 0){
-            document.getElementById("dayHours").textContent= 'Days';
+            document.getElementById("dayHours").textContent= '{{'general.days' | t}}';
           }
           else{
-            document.getElementById("dayHours").textContent = 'Hours';
+            document.getElementById("dayHours").textContent = '{{'general.hours' | t}}';
           }
           document.getElementById("days").innerText = pad2(leftDays),
             document.getElementById("hours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
