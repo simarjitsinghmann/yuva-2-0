@@ -822,7 +822,9 @@ slickSlider = function(selector,slideIndex){
     var options = JSON.parse(html);
     var mobileOnly = selector.data('mobile-only')
     if(mobileOnly == true ){
-    
+      if(window.innerWidth < 768 ){
+        selector.slick(options);
+      }
     }
     else{
       if(slideIndex){
