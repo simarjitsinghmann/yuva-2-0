@@ -44,7 +44,7 @@
           </p>
           {% endif %}
           {% if section.settings.date != blank %}
-          <div id="announcementTimer">
+          <div id="announcementTimer" class="hidden">
           <input type="hidden" id="eventDate" value="{{section.settings.date}}">
           <ul>
             <li><span id="days"></span>:</li>
@@ -118,7 +118,7 @@
             }
             else{
               document.getElementById("announcementTimer").classList.add('hidden');
-              document.getElementsByTagName('body')[0].classList.remove('announcement_open');
+              document.querySelector('body').classList.remove('announcement_open');
               clearInterval(x);
             }
           }, 0)
@@ -126,7 +126,7 @@
 
         setTimeout(function(){
           
-        document.getElementsByTagName('body')[0].classList.add('announcement_open');
+        document.querySelector('body').classList.add('announcement_open');
         },500);
       }
       
