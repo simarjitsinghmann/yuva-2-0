@@ -435,7 +435,7 @@ $(document).ready(function(){
   });
 
   ///ask-about-product//
-  $('.ask_this_product').click(function(){
+  $('body').on('click','.ask_this_product',function(){
     $('body').toggleClass('active_askme');
     $('body').addClass('scrollHidden');
     $('.askmeMain').toggleClass('slideAskme');
