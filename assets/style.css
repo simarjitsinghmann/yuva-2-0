@@ -3989,11 +3989,13 @@ main .shopify-section.cstm-cart-sec {
     margin-top: 20px;
   text-transform: capitalize;
 }
+.commented-by span {
+	color: var(--dark-gray);
+}
 .commented-by span:first-child{
     padding-right: 5px;
-    border-right: 1px solid var(--dark-gray);
+    border-right: 1px solid var(--gray);
     margin-right: 5px;
-    color: var(--dark-gray);
 }
 .relatedBlogPosts {
    background-color: var(--white);
