@@ -568,27 +568,11 @@ button.navbar-toggler:hover span.navbar-toggler-icon::after {
 button.navbar-toggler:hover span.navbar-toggler-icon {
    width: 31px;
 }
-.header_3 .header__heading-link {
-   position: absolute;
-   margin: 0 15px;
-   left: 50%;
-   transform: translateX(-50%);
-   margin: 0;
-}
-.header_3 .nav__btn {
-   display: flex;
-   align-items: center;
-}
 .nav-open .side-menu .inner-side {
    overflow-x: hidden;
    overflow-y: auto;
 }
-.header_3 #navbarCollapse {
-   padding-top: 40px;
-}
-.header_3 #nav_style_4 {
-   padding: 25px 0;
-}
+
 .side-menu .inner-side .close-btn {
    background: transparent;
    z-index: 99;
@@ -721,7 +705,23 @@ body.nav-open {
    font-size: 17px;
    line-height: 22px;
 }
-
+.header_3 .header__heading-link {
+   position: absolute;
+   margin: 0 15px;
+   left: 50%;
+   transform: translateX(-50%);
+   margin: 0;
+}
+.header_3 .nav__btn {
+   display: flex;
+   align-items: center;
+}
+.header_3 #navbarCollapse {
+   padding-top: 40px;
+}
+.header_3 #nav_style_4 {
+   padding: 25px 0;
+}
 .header_3 .inner-child-menu .category_title {
    padding-top: 30px;
    margin-bottom: 30px;
@@ -802,8 +802,7 @@ div.lower-nav .nav-item .userful__links {
    width: 160px;
 }
 /*============= nav-humburger-menu-end =====================*/
-
-/**nav-style5**/
+/* 
 .header-upper {
    background: #f7f7f7;
    padding: 5px;
@@ -887,7 +886,7 @@ div.lower-nav .nav-item .userful__links {
 #nav_style_5 ul.list-menu.right-side li.nav-item:last-child,
 #nav_style_5 ul.list-menu.right-side li.nav-item:last-child a {
    padding-right: 0;
-}
+} */
 /**Nav-style5-End**/
 /* mega menu start*/
 .samecategory {
