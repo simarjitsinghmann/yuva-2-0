@@ -42,7 +42,7 @@
             {%- endif -%}
             <div class="field form-group">   
               <label for="RegisterForm-FirstName">
-                 {{ 'customer.register.full_name' | t }}
+                 {{ 'customer.register.first_name' | t }}
               </label>   
               <input
                      type="text"
@@ -51,10 +51,9 @@
                      id="RegisterForm-FirstName"
                      {% if form.first_name %}value="{{ form.first_name }}"{% endif %}
                      autocomplete="given-name"
-                     placeholder="{{ 'customer.register.full_name' | t }}"
+                     placeholder="{{ 'customer.register.first_name' | t }}"
                      >
             </div>
-            {% comment %}
             <div class="field form-group">
               <label for="RegisterForm-LastName">
                 {{ 'customer.register.last_name' | t }}
@@ -69,7 +68,6 @@
                      placeholder="{{ 'customer.register.last_name' | t }}"
                      >
             </div>
-            {% endcomment %}
             <div class="field form-group">  
               <label for="RegisterForm-email">
                 {{ 'customer.register.email' | t }}
