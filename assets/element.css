@@ -50,12 +50,6 @@ h6 {
 .uppercase {
   text-transform: uppercase;
 }
-.light {
-  opacity: 0.7;
-}
-em {
-   font-style: italic;
-}
 a {
    text-decoration: none;
 }
@@ -64,16 +58,8 @@ sub,
 sup {
    font-size: 90%;
 }
-sub {
-   vertical-align: sub;
-}
-sup {
-   vertical-align: super;
-}
 .form-control::placeholder {
    color: #6c757d;
-   opacity: 1;
-   visibility: visible;
    position: relative;
    transition: all 0.3s ease;
 }
