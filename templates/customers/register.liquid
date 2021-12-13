@@ -42,7 +42,7 @@
             {%- endif -%}
             <div class="field form-group">   
               <label for="RegisterForm-FirstName">
-                Full Name
+                {{ form.full_name }}
               </label>   
               <input
                      type="text"
@@ -111,7 +111,7 @@
             </div>
 
             <button class="button black-btn btn-block">
-              Sign up
+              {{ 'customer.register.submit' | t }}
             </button>
             {%- endform -%}
             </div>
