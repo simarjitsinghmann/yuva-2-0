@@ -172,7 +172,9 @@
                       <div class="cart-item-product-details">
                       {{#if showoptions}}
                       {{#options}}
-                        <span>{{option.name}}: {{option.value}}</span>
+                    	{{#each this}}
+                        <span>{{@key}}: {{this}}</span>
+                    	{{/each}}
                   		{{/options}}
                         {{/if}}
                       <h6>{{sellingPlan}}</h6>
