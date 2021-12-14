@@ -114,59 +114,80 @@ validateQty = function (qty) {
 
 cartPageUpdate = function(cart){
   
-     var source = $("#mainCartTemplate").html(),
+     var items = [],
+      item = {},
+      data = {},
+      cartDiscounts =[],
+      source = $("#CartTemplate").html(),
       template = Handlebars.compile(source);
+  // Add each item to our handlebars.js data
+  $.each(cart.items, function(index, cartItem) {
+
+    if (cartItem.image != null){
+      var prodImg = cartItem.image.replace(/(\.[^.]*)$/, "_small$1").replace('http:', '');
+    } else {
+      var prodImg = "//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif";
+    }
+    var sellingPlan = '';
+    if(cartItem.selling_plan_allocation){
+      sellingPlan = cartItem.selling_plan_allocation.selling_plan.name;
+    }
+    // Create item's data object and add to 'items' array
+    item = {
+      key: cartItem.key,
+      line: index + 1, // Shopify uses a 1+ index in the API
+      url: cartItem.url,
+      img: prodImg,
+      name: truncate(cartItem.product_title,4),
+      variation: cartItem.variant_title,
+      properties: cartItem.properties,
+      itemAdd: cartItem.quantity + 1,
+      itemMinus: cartItem.quantity - 1,
+      itemQty: cartItem.quantity,
+      sellingPlan: sellingPlan,
+      price: Shopify.formatMoney(cartItem.price,moneyFormat),
+      vendor: cartItem.vendor,
+      linePrice: Shopify.formatMoney(cartItem.final_line_price, moneyFormat),
+      originalLinePrice: Shopify.formatMoney(cartItem.original_line_price,moneyFormat),
+      discounts: cartItem.discounts,
+      discountsApplied: cartItem.original_line_price === cartItem.final_line_price ? false : true
+    };
+
+    items.push(item);
+  });
+  var shippPending ='';
+  var shipPendingPercentage = '100';
+  if(cart.total_price < shipping){
+    shippPending = Shopify.formatMoney((shipping - cart.total_price), moneyFormat);
+    shippPending = shippingText.replace('||amount||','<strong>'+shippPending+'</strong>');
+    shipPendingPercentage = ((cart.total_price /shipping)*100);
+    if(shipPendingPercentage > 10){
+      shipPendingPercentage= shipPendingPercentage - 5
+    }
+  }
+  $.each(cart.cart_level_discount_applications, function(index, cartDiscount) {
+    var discount ={
+      title:cartDiscount.title,
+      price:Shopify.formatMoney(cartDiscount.total_allocated_amount, moneyFormat)
+    }
+    cartDiscounts.push(discount);
+  });
+
+  // Gather all cart data and add to DOM
+  data = {
+    items: items,
+    count:cart.item_count,
+    note: cart.note,
+    shipping:shipping,
+    shippPending:shippPending,
+    shipPendingPercentage:shipPendingPercentage+'%',
+    total:cart.total_price, 
+    totalPrice: Shopify.formatMoney(cart.total_price, moneyFormat),
+    totalCartDiscount: cartDiscounts,
+    totalCartDiscountApplied: cart.total_discount === 0 ? false : true
+  }
   if(cart.item_count == 0){
     $('[data-cart-count').hide();
-  }
-  else{
-    $.each(cart.items,function(index,item){
-      var finalPrice = Shopify.formatMoney(item.final_price,moneyFormat),
-      originalPrice = Shopify.formatMoney(item.original_price,moneyFormat),
-      vendor = item.vendor,
-      linePrice = Shopify.formatMoney(item.final_line_price, moneyFormat),
-      originalLinePrice = Shopify.formatMoney(item.original_line_price,moneyFormat),
-       discounts = item.discounts;
-      var itemPriceHtml = '';
-      var itemLinePriceHtml = '';
-      var itemDiscounts = '';
-      $('[data-item-discount-'+index+']').html(itemDiscounts);
-      if(item.original_price === item.final_price){
-      itemPriceHtml = `<strong class="cart-item__final-price product-option">
-						${originalPrice}
-                        </strong>`;
-      }
-      else{
-      itemPriceHtml = `<s class="cart-item__old-price product-option">
-                         ${originalPrice}
-                        </s>
-                        <strong class="cart-item__final-price product-option">
-                         ${finalPrice}
-                        </strong>`;
-      }
-      
-      if(item.original_line_price === item.final_line_price){
-      itemLinePriceHtml = `<strong class="cart-item__final-price product-option">
-						${originalLinePrice}
-                        </strong>`;
-      }
-      else{
-      itemLinePriceHtml = `<s class="cart-item__old-price product-option">
-                         ${originalLinePrice}
-                        </s>
-                        <strong class="cart-item__final-price product-option">
-                         ${linePrice}
-                        </strong>`;
-        $.each(discounts,function(index,discount){
-          itemDiscounts =`<li class="discounts__discount">${discount.title}</li>`;
-        })
-      }
-      $('[data-item-price="'+index+'"]').html(itemPriceHtml);
-      $('[data-line-quantity="'+index+'"]').val(item.quantity);
-      $('[data-line-price="'+index+'"]').html(itemLinePriceHtml);
-      $('[data-item-discount="'+index+'"]').html(itemDiscounts);
-//       discounts += '<li data-cart-discount>Discount['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
-    })
   }
   $('[data-cart-item-count]').text(cart.item_count);
   $('[data-cart-original-price]').text(Shopify.formatMoney(cart.original_total_price, moneyFormat));
