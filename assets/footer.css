@@ -29,6 +29,10 @@ footer ul li a {
    display: inline-block;
    margin-bottom: 10px;
 }
+#ContactFooter {
+   position: relative;
+   margin-top: 28px;
+}
 #ContactFooter #NewsletterForm--footer {
     padding: 13px 40px 13px 0;
     height: auto;
@@ -36,10 +40,7 @@ footer ul li a {
     color: var(--gray);
     border-bottom: 1px solid #585858;
 }
-#ContactFooter {
-   position: relative;
-   margin-top: 28px;
-}
+
 #ContactFooter #Subscribe {
    text-transform: none;
    top: 0;
