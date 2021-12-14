@@ -95,6 +95,7 @@
                           {{ item.original_line_price | money }}
                         </strong>
                         {% endif %}
+                      </div>
                         {%- if item.unit_price_measurement -%}
                           <small class="unit-price">
                           {{ item.variant.unit_price | money }}
@@ -105,7 +106,6 @@
                           {{ item.variant.unit_price_measurement.reference_unit }}
                           </small>
                       {%- endif -%}
-                      </div>
                     </td>
                     <td class="cart-remove">
                        <div class="remove line_item_remove" data-line="{{forloop.index}}">
