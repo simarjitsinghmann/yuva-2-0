@@ -628,7 +628,9 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
     }
   });
 }
-
+function roundToTwo(num) {    
+    return +(Math.round(num + "e+2")  + "e-2");
+}
 
 function priceUpdate(priceContainer,getVariant,showSaved){
   var showSavedAmount = '';
@@ -640,7 +642,7 @@ function priceUpdate(priceContainer,getVariant,showSaved){
   var compareAtPrice= parseInt(getVariant.compare_at_price);
   var price= parseInt(getVariant.price);
   
-  var percentage = (Math.round((((compareAtPrice-price)/compareAtPrice)*100) + "e+2")  + "e-2")+'% OFF';
+  var percentage = roundToTwo(((compareAtPrice-price)/compareAtPrice)*100)+'% OFF';
   var savedAmount = Shopify.formatMoney((compareAtPrice-price),moneyFormat);
   var priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}</h3>`;
   var savedAmountHtml = '';
