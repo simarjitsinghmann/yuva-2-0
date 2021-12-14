@@ -22,13 +22,10 @@
                   <div class="slider-item">
                     <div class="slider-box">
                       {% if block.settings.image != blank %}
-                      {% assign image_url = block.settings.image | img_url:'master' %}
-                      {% else %}
-                      {% assign image_url = "https://yova.shinedezign.pro/assets/images/client-image.png" %}
-                      {% endif %}
-                      <div class="client-image">            
-                        <img src="{{image_url}}" loading="lazy" alt="{{section.settings.author}}">                  
+                      <div class="client-image">  
+                        {% include 'lazy-image' image:block.settings.image %}                
                       </div>
+                      {% endif %}
                       <h5 class="author">{{block.settings.author}}</h5>
                       <p class="testimonial-title">{{block.settings.message}}</p>
                     </div>
