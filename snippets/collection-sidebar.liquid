@@ -18,7 +18,7 @@
     <input type="hidden" name="q" value="{{ results.terms | escape }}">
     <input name="options[prefix]" type="hidden" value="last">
     {%- endif -%}
-    {%- for filter in collection.filters -%}
+    {%- for filter in results.filters -%}
 
     {% case filter.type %}
 
