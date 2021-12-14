@@ -147,7 +147,6 @@ buildCart = function (cart,showCart) {
       unitPrice += cartItem.unit_price_measurement.reference_value > 1 ? cartItem.unit_price_measurement.reference_value : '';
       unitPrice += cartItem.unit_price_measurement.reference_unit;
     }
-    console.log(unitPriceExist,unitPrice)
     var sellingPlan = '';
     if(cartItem.selling_plan_allocation){
       sellingPlan = cartItem.selling_plan_allocation.selling_plan.name;
@@ -162,6 +161,8 @@ buildCart = function (cart,showCart) {
       variation: cartItem.variant_title,
       properties: cartItem.properties,
       itemAdd: cartItem.quantity + 1,
+      unitPriceExist:unitPriceExist,
+      unitPrice:unitPrice,
       itemMinus: cartItem.quantity - 1,
       itemQty: cartItem.quantity,
       sellingPlan: sellingPlan,
