@@ -71,38 +71,38 @@
     ]
   },
   {
-    "name": "Typography",
+    "name": "t:settings_schema.typography.name",
     "settings": [
       {
         "type": "radio",
         "id": "custom_font_family",
-        "label": "Choose Font",
+        "label": "t:settings_schema.typography.settings.custom_font_family.label",
         "default": "default",
         "options": [
           {
             "value": "default",
-            "label": "Default font"
+            "label": "t:settings_schema.typography.settings.custom_font_family.options.default.label"
           },
           {
             "value": "shopify",
-            "label": "Shopify font"
+            "label": "t:settings_schema.typography.settings.custom_font_family.options.shopify.label"
           }
         ]
       },
       {
         "type": "header",
-        "content": "Headings"
+        "content": "t:settings_schema.typography.settings.header1.content"
       },
       {
         "type": "font_picker",
         "id": "type_heading_font_family",
-        "label": "Heading Font",
+        "label": "t:settings_schema.typography.settings.type_heading_font_family.label",
         "default": "joanna_sans_nova_n3"
       },
       {
         "type": "select",
         "id": "type_header_spacing",
-        "label": "Letter spacing",
+        "label": "t:settings_schema.typography.settings.type_header_spacing.label",
         "default": "0",
         "options": [
           {
@@ -153,18 +153,18 @@
       },
       {
         "type": "header",
-        "content": "Body text"
+        "content": "t:settings_schema.typography.settings.header2.content"
       },
       {
         "type": "font_picker",
         "id": "type_base_font_family",
-        "label": "Body Font",
+        "label": "t:settings_schema.typography.settings.type_base_font_family.label",
         "default": "joanna_sans_nova_n3"
       },
       {
         "type": "select",
         "id": "type_base_spacing",
-        "label": "Letter spacing",
+        "label": "t:settings_schema.typography.settings.type_base_spacing.label",
         "default": "50",
         "options": [
           {
@@ -216,7 +216,7 @@
       {
         "type": "range",
         "id": "type_base_size",
-        "label": "Base size",
+        "label": "t:settings_schema.typography.settings.type_base_size.label",
         "default": 14,
         "min": 12,
         "max": 18,
@@ -225,7 +225,7 @@
       {
         "type": "range",
         "id": "type_base_line_height",
-        "label": "Line height",
+        "label": "t:settings_schema.typography.settings.type_base_line_height.label",
         "default": 1.5,
         "min": 1,
         "max": 2,
