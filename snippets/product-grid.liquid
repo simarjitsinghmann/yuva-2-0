@@ -14,13 +14,12 @@
 <div class="grid-item col collection-product-grid">
   <div class="card-wrapper">
     <div class="card card--text-only card--soft card--product text__left">
-      <div class="card-wrapper-img {% if section.settings.show_second_image or show_second_image %}has-multiimage{% endif %}">
+      <div class="card-wrapper-img {% unless settings.show_second_image == false or show_second_image == blank %} }has-multiimage{% endunless %} ">
         <a href="{{product.url | within: collection}}">
           {% render 'lazy-image' image: product.featured_image %}
-          {% if section.settings.show_second_image or show_second_image %}
-          
+          {% unless settings.show_second_image == false or show_second_image == blank %}          
           {% render 'lazy-image' image: second_image ,class:'product-second-img' %}
-          {% endif %} 
+          {% endunless %} 
         </a>
         {% unless hide_options and settings.show_quick_view == false and settings.show_atc == false %}
         {% unless has_only_default_variant or product.variants.size == 1 %}
