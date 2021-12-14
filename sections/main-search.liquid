@@ -112,19 +112,6 @@
           {%- when 'product' -%}
           {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
           {% include 'product-grid',product: item,  hideRelated:true %}
-          {%- when 'article' -%}
-          {% include 'article-grid' article:item %}
-          {%- when 'page' -%}
-          <a href="{{ item.url }}" class="card-wrapper">
-            <div class="card card--search card--soft card--text-only">
-              <div class="card__inner">
-                <div class="card__content"><h2 class="card__text h3">{{ item.title | truncate: 50 | escape }}</h2></div>
-                <div class="card__badge">
-                  <span class="badge color-background-1">{{ 'templates.search.page' | t }}</span>
-                </div>
-              </div>
-            </div>
-          </a>
           {%- endcase -%}
         </li>
         {%- endfor -%}
