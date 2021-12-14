@@ -1882,3 +1882,10 @@
     right: 40px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.service__column .col {
+    max-width: 50%;
+    flex: 0 0 50%;
+}
+}
