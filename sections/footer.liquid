@@ -116,28 +116,24 @@
 </div>
 <div class="footer-bottom-box">
   <div class="container">
-    <div class="footer__content-bottom">
-      <div class="footer__content-bottom-wrapper page-width">
-        <div class="footer__column footer__column--info d-flex justify-content-between align-items-center">
-          {%- if section.settings.copyright_content -%}
-          <div class="footer__copyright">
-            <p class="copyright-content">{{section.settings.copyright_content}}</p>
-          </div>
-          {%- endif -%}
-          {%- if section.settings.payment_enable -%}
-          <div class="footer__payment">
-            <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
-            <ul class="list list-payment" role="list">
-              {%- for type in shop.enabled_payment_types -%}
-              <li class="list-payment__item">
-                {{ type | payment_type_svg_tag: class: 'icon' }}
-              </li>
-              {%- endfor -%}
-            </ul>
-          </div>
-          {%- endif -%}
-        </div>
+    <div class="footer__column footer__column--info d-flex justify-content-between align-items-center">
+      {%- if section.settings.copyright_content -%}
+      <div class="footer__copyright">
+        <p class="copyright-content">{{section.settings.copyright_content}}</p>
       </div>
+      {%- endif -%}
+      {%- if section.settings.payment_enable -%}
+      <div class="footer__payment">
+        <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+        <ul class="list list-payment" role="list">
+          {%- for type in shop.enabled_payment_types -%}
+          <li class="list-payment__item">
+            {{ type | payment_type_svg_tag: class: 'icon' }}
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {%- endif -%}
     </div>
   </div>
 </div>
