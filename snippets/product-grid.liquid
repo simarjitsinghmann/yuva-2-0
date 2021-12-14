@@ -171,11 +171,11 @@
         {% endunless %}
         {% if product.available == false %}
         <div class="product__badge product__on__soldOut">
-          Sold Out
-        </div>
+          {{'products.product.sold_out' | t}}
+        </div> 
         {% elsif current_variant.compare_at_price > current_variant.price%}
         <div class="product__badge product__on__sale">
-          Sale
+          {{'products.product.on_sale' | t}}
         </div>
         {% endif %}
       </div>
