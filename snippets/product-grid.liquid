@@ -160,7 +160,7 @@
           </div>
 
         </div>  
-        {% unless hideRelated and settings.show_similar == false %}      
+        {% unless hideRelated or settings.show_similar == false %}      
         <div class="similar_options" data-section="{{section.id}}" data-id="{{product.id}}">
           <span class="vs-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.36 33"><defs></defs><g>
             <g>
@@ -210,7 +210,7 @@
     </div>
   </div>
   {% unless template contains 'collection'%}
-  {% unless hideRelated and settings.show_similar == false %}
+  {% unless hideRelated or settings.show_similar == false %}
   {% include 'similar-product-grid' %}
   {% endunless %}
   {% endunless %}
