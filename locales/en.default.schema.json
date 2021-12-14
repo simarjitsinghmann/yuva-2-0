@@ -2016,55 +2016,75 @@
     "colors": {
       "name": "Colors",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "Solid button label",
-          "info": "Used as foreground color on accent colors."
+        "header1": {
+          "content": "General"
         },
-        "colors_accent_1": {
-          "label": "Accent 1",
-          "info": "Used for solid button background."
+        "color_base": {
+          "label": "Base Color"
         },
-        "colors_accent_2": {
-          "label": "Accent 2"
+        "color_body_bg": {
+          "label": "Body Background"
         },
-        "header__1": {
-          "content": "Primary colors"
+        "color_body_text": {
+          "label": "Body Text"
         },
-        "header__2": {
-          "content": "Secondary colors"
+        "color_cart_dot": {
+          "label": "Cart dot Color"
         },
-        "colors_text": {
-          "label": "Text",
-          "info": "Used as foreground color on background colors."
+        "heading_color": {
+          "label": "Heading"
         },
-        "colors_outline_button_labels": {
-          "label": "Outline button",
-          "info": "Also used for text links."
+        "color_image_bg": {
+          "label": "Image background"
         },
-        "colors_background_1": {
-          "label": "Background 1"
+        "color_savings_text": {
+          "label": "Save price"
         },
-        "colors_background_2": {
-          "label": "Background 2"
+        "color_button": {
+          "label": "Buttons"
+        },
+        "color_button_text": {
+          "label": "Button Text"
         }
       }
     },
     "typography": {
       "name": "Typography",
       "settings": {
-        "type_header_font": {
-          "label": "Font",
-          "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+        "custom_font_family": {
+          "label": "Choose Font",
+          "options": {
+            "default": {
+              "label": "Default font"
+            },
+            "shopify": {
+              "label": "Shopify font"
+            }
+          }
         },
-        "header__1": {
+        "header1": {
           "content": "Headings"
         },
-        "header__2": {
-          "content": "Body"
+        "type_heading_font_family": {
+          "label": "Heading Font"
         },
-        "type_body_font": {
-          "label": "Font",
-          "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+        "type_header_spacing": {
+          "label": "Letter spacing"
+        },
+        "header2": {
+          "content": "Body text"
+        },
+        "type_base_font_family": {
+          "label": "Body Font"
+        },
+        "type_base_spacing": {
+          "label": "Letter spacing"
+        },
+        "type_base_size": {
+          "label": "Base size"
+        },
+        "type_base_line_height": {
+          "label": "Line height"
         }
       }
     },
