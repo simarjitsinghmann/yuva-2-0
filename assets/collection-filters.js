@@ -43,8 +43,8 @@ window.addEventListener('resize', function(event){
 function collectionFilters(){ 
   hideShowFilters();
   
-  var section = document.getElementById('CollectionProductsContainer')
-  var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
+  var section = document.getElementById('sectionContainer')
+  var sectionId = section.dataset.id;
   const filterForm = document.getElementById('FiltersForm'); 
     
 var accordions = filterForm.querySelectorAll('.br_more_filter');
