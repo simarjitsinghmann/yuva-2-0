@@ -82,11 +82,6 @@
                      {% endif %}
                      placeholder="{{block.settings.placeholder}}" 
                      required>
-              <label class="field__label" for="NewsletterForm--footer">
-                {% if block.settings.placeholder != blank %}
-                {{block.settings.placeholder}}
-                {% endif %}
-              </label>
             </div>                  
             {%- if form.errors -%}
             <span class="newsletter-form__message form__message error_message" id="Newsletter-error--{{ section.id }}">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
