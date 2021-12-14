@@ -25,7 +25,6 @@
       <span class="main-price"> {{current_variant.compare_at_price | money}}</span>
       {% if settings.show_saved_amount %}
       {% if settings.saved_amount_style == 'percentage' %}
-      {% assign comparePrice = current_variant.compare_at_price | times:1.0 %}
       <span class="percent-off">{{ current_variant.compare_at_price | minus: current_variant.price | times: 100.0 | divided_by: current_variant.compare_at_price| round:2 | append: "% OFF"}}</span>
       {% else %}
       <span class="percent-off">{{ current_variant.compare_at_price | minus: current_variant.price | money | append: " OFF"}}</span>
