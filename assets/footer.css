@@ -117,6 +117,10 @@ footer .grid__item:nth-last-child(2) {
    align-items: center;
    height: 100%;
 }
+.social-links li a {
+   font-size: 13px;
+}
+
 .footer-copyright-box {
 	display:flex;
   justify-content:space-between;
@@ -135,22 +139,6 @@ footer .grid__item:nth-last-child(2) {
 .list-payment li:last-child {
    padding-right: 0;
 }
-small.copyright__content {
-   color: #999;
-   letter-spacing: 0.2px;
-   font-size: 15px;
-   font-weight: var(--normal);
-}
-.footer__content-bottom:before {
-   position: absolute;
-   content: "";
-   top: 0;
-   width: calc(100vw + 50%);
-}
-.social-links li a {
-   font-size: 13px;
-}
-
 form#ContactFooter .newsletter-form__field-wrapper label.field__label {
    display: none;
 }
