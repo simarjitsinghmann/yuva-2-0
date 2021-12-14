@@ -44,7 +44,7 @@ changeCartItem = function(line, quantity) {
           if(item){
             $('[name="item_quantity"][data-line="'+line+'"]').val(item.quantity);
           }
-          updateLineItem();
+//           updateLineItem();
           cartPageUpdate(cart);
         }
       });
