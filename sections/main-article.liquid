@@ -93,7 +93,7 @@
                   <div class="row">
                     <div class="col-12 col-sm-6 col-md-6">
                       <div class="field field--with-error form-group">
-                                        <label class="field__label" for="CommentForm-author" aria-hidden="true">{{ 'blogs.article.name' | t }} <span aria-hidden="true">*</span></label>
+                                        <label class="field__label hidden" for="CommentForm-author">{{ 'blogs.article.name' | t }} <span aria-hidden="true">*</span></label>
                         <input
                                type="text"
                                name="comment[author]"
@@ -118,7 +118,7 @@
                     </div>
                     <div class="col-12 col-sm-6 col-md-6">
                       <div class="field field--with-error form-group">
-                        <!--                 <label class="field__label" for="CommentForm-email">{{ 'blogs.article.email' | t }} <span aria-hidden="true">*</span></label> -->
+                                        <label class="field__label hidden" for="CommentForm-email">{{ 'blogs.article.email' | t }} <span aria-hidden="true">*</span></label>
                         <input
                                type="email"
                                name="comment[email]"
@@ -145,7 +145,7 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-12">
                       <div class="field form-group field--with-error">
-                        <!--               <label class="form__label field__label" for="CommentForm-body">{{ 'blogs.article.message' | t }} <span aria-hidden="true">*</span></label> -->
+                                      <label class="form__label field__label hidden" for="CommentForm-body">{{ 'blogs.article.message' | t }} <span aria-hidden="true">*</span></label>
                         <textarea
                                   rows="5"
                                   name="comment[body]"
