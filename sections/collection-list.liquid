@@ -58,13 +58,13 @@
                     {{block.settings.heading}}
                     {% endif %}
                   </h4>
-                  <small>
+                  <p>
                     {% if block.settings.custom == false %}
                     {{collection.description | strip_html | truncatewords: 15, "" }}
                     {% elsif block.settings.custom and block.settings.desc != blank  %}
                     {{block.settings.desc}}
                     {% endif %}
-                  </small> 
+                  </p> 
                   {% if block.settings.btntext != blank %}
 
                   {% if block.settings.custom and block.settings.btnlink != blank  %}
