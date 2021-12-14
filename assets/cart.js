@@ -164,10 +164,10 @@ cartPageUpdate = function(cart){
           itemDiscounts =`<li class="discounts__discount">${discount.title}</li>`;
         })
       }
-      $('[data-item-price-'+index+']').html(itemPriceHtml);
-      $('[data-line-quantity-'+index+']').val(item.quantity);
-      $('[data-line-price-'+index+']').html(itemLinePriceHtml);
-      $('[data-item-discount-'+index+']').html(itemDiscounts);
+      $('[data-item-price="'+index+'"]').html(itemPriceHtml);
+      $('[data-line-quantity="'+index+'"]').val(item.quantity);
+      $('[data-line-price="'+index+'"]').html(itemLinePriceHtml);
+      $('[data-item-discount="'+index+'"]').html(itemDiscounts);
 //       discounts += '<li data-cart-discount>Discount['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
     })
   }
