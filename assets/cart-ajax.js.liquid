@@ -142,8 +142,12 @@ buildCart = function (cart,showCart) {
     var unitPrice = '';
     if(cartItem.unit_price){
       unitPriceExist = true;
-      unitPrice = '';
+      unitPrice += Shopify.formatMoney(cartItem.unit_price, moneyFormat);
+      unitPrice += ' / ';
+      unitPrice += cartItem.unit_price_measurement.reference_value > 1 ? cartItem.unit_price_measurement.reference_value : '';
+      unitPrice += cartItem.unit_price_measurement.reference_unit;
     }
+    console.log(unitPrice)
     var sellingPlan = '';
     if(cartItem.selling_plan_allocation){
       sellingPlan = cartItem.selling_plan_allocation.selling_plan.name;
