@@ -186,7 +186,7 @@ cartPageUpdate = function(cart){
     totalCartDiscountApplied: cart.total_discount === 0 ? false : true
   }
   
-  $('body').find('[data-drawer-body]').html(template(data));
+  $('body').find('[data-cart-items]').html(template(data));
   if(cart.item_count == 0){
     $('[data-cart-count').hide();
   }
