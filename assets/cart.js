@@ -19,16 +19,6 @@ changeItem = function(line, quantity, callback) {
 };
 
 
-updateLineItem = function(){
-  var items = $('#cart').find('table tr');
-  items.each(function(index){
-    $(this).find('[data-line]').attr('data-line',(index + 1));
-    $(this).find('[data-item-price]').attr('data-item-price',index);
-    $(this).find('[data-iline-quantity]').attr('data-line-quantity',index);
-    $(this).find('[data-line-price]').attr('data-line-price',index);
-    $(this).find('[data-item-discount]').attr('data-item-discount',index);
-  })
-};
 // Update quantity based on input on change
 
 changeCartItem = function(line, quantity) {    
@@ -123,6 +113,9 @@ validateQty = function (qty) {
 };
 
 cartPageUpdate = function(cart){
+  
+     var source = $("#mainCartTemplate").html(),
+      template = Handlebars.compile(source);
   if(cart.item_count == 0){
     $('[data-cart-count').hide();
   }
