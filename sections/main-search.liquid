@@ -110,13 +110,13 @@
           
           >
         {%- for item in search.results limit:50 -%}
-        <li class="grid__item search_result_items{% unless item.object_type == 'product' %} grid__item--small other_item{% else %} product_item{% endunless %}">
           {%- case item.object_type -%}
           {%- when 'product' -%}
+        <li class="grid__item search_result_items product_item">
           {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
           {% include 'product-grid',product: item,  hideRelated:true %}
-          {%- endcase -%}
         </li>
+          {%- endcase -%}
         {%- endfor -%}
       </ul>
         </div>
