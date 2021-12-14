@@ -654,10 +654,10 @@ function priceUpdate(priceContainer,getVariant,showSaved){
     }
   }else{
     if(getVariant.allocation_type == 'percentage'){
-      savedAmountHtml +=`<span class="percent-off">${getVariant.allocation_value}%</span>`;
+      savedAmountHtml +=`<span class="percent-off">${getVariant.allocation_value}% OFF</span>`;
     }
     else{              	
-      savedAmountHtml +=`<span class="percent-off">${Shopify.formatMoney(getVariant.allocation_value, moneyFormat)}</span>`;
+      savedAmountHtml +=`<span class="percent-off">${Shopify.formatMoney(getVariant.allocation_value, moneyFormat)} OFF</span>`;
     }
   }
   if(compareAtPrice > price){
