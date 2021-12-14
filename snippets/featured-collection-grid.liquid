@@ -24,13 +24,13 @@
         {{mc_heading}}
         {% endif %}
       </h2>
-      <small>
+      <p>
         {% if custom == false %}
         {{collection.description | strip_html | truncatewords: 15, "" }}
         {% elsif custom and mc_desc != blank  %}
         {{mc_desc}}
         {% endif %}
-      </small>
+      </p>
       {% if mc_btntext != blank %}
 
       {% if custom and mc_btnlink != blank  %}
