@@ -77,27 +77,15 @@ model-viewer:empty,
 polyline:empty {
   display: block;
 }
-
 .link {
-  cursor: pointer;
-  display: inline-block;
-  border: none;
-  box-shadow: none;
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-  color: var(--color-link);
-  background-color: transparent;
-  font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    box-shadow: none;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    background-color: transparent;
 }
-
-.link--text {
-  color: var(--color-foreground);
-}
-
-.link--text:hover {
-  color: var(--color-foreground-75);
-}
-
 .link-with-icon {
   display: inline-flex;
   font-size: 1.4rem;
