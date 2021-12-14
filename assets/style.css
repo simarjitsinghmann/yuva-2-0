@@ -4244,19 +4244,16 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
    opacity: 1;
    transform: scale(1);
 }
-.collection-list-view-card a.link,
-.card-wrapper.left-sided .collection-list-btn {
-   font-size: 13px;
-   text-decoration: none;
-   background: var(--white);
-   padding: 5px 12px;
-   color: var(--black);
-   border: 0;
-   font-weight: var(--medium);
-   display: inline-block;
+.card-wrapper.left-sided .collection-list-btn, .collection-list-view-card a.link {
+    text-decoration: none;
+    background: var(--white);
+    padding: 5px 12px;
+    color: var(--black);
+    border: 0;
+    display: inline-block;
 }
-/* featured collection list end */
-/* collection page start */
+/*================= featured collection list end =================*/
+/*=================== collection page start ==================*/
 .collection_list_outer {
    padding: 65px 0;
 }
