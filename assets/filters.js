@@ -104,6 +104,7 @@ Array.from(layouts).forEach(function(layout) {
 }); 
 
 var sortMenu = document.getElementById('toolbox-sort');
+if(sortMenu){
   sortMenu.addEventListener("click", ()=>{	
   var sortMenu = document.getElementById('sort__list');
   if(sortMenu.classList.contains('active')){
@@ -124,7 +125,7 @@ var sortMenu = document.getElementById('toolbox-sort');
     }
   }
 });
-
+}
 var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
 Array.from(priceRangeBars).forEach(function(rangeBar) {
   var el = rangeBar;
