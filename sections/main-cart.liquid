@@ -170,6 +170,11 @@
                        
                       <a href="{{url}}"><h5>{{name}}</h5></a>	
                       <div class="cart-item-product-details">
+                      {{#if showoptions}}
+                      {{#options}}
+                        <span>{{option.name}}: {{option.value}}</span>
+                  		{{/options}}
+                        {{/if}}
                       <h6>{{sellingPlan}}</h6>
                       <div class="price item-price">
                       {{#if discountsApplied}}
