@@ -147,8 +147,8 @@
 
         <div class="mall-slider-handles" id="slider-round"             
              {%- if uses_comma -%}
-             data-start="{{ filter.range_min | money_without_currency | replace:'.','' | split:',' | first | floor}}" 
-             data-end="{{ filter.range_max | money_without_currency | replace:'.','' | split:',' | first | floor}}" 
+             data-start="{{ filter.range_min | money_without_currency | replace:'.','' | replace:',','.' | floor}}" 
+             data-end="{{ filter.range_max | money_without_currency | replace:'.','' | replace:',','.' | floor}}" 
              data-min="{{ min_value | replace:'.','' | replace:',','.' | floor}}" 
              data-max="{{ max_value  | replace:'.','' | replace:',','.'  | floor}}" 
              {%- else -%}
