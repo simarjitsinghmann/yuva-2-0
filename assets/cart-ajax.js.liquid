@@ -138,6 +138,12 @@ buildCart = function (cart,showCart) {
     } else {
       var prodImg = "//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif";
     }
+    var unitPriceExist = false;
+    var unitPrice = '';
+    if(cartItem.unit_price){
+      unitPriceExist = true;
+      unitPrice = '';
+    }
     var sellingPlan = '';
     if(cartItem.selling_plan_allocation){
       sellingPlan = cartItem.selling_plan_allocation.selling_plan.name;
