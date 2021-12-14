@@ -60,7 +60,7 @@ footer ul li a {
 .social-links {
    margin-top: 30px;
 }
-.social-links ul li a{
+.social-links ul li {
    width: 30px;
    height: 30px;
    background: rgba(255, 255, 255, 0.1);
@@ -68,6 +68,9 @@ footer ul li a {
    display: inline-block;
    margin-right: 10px;
    color: #fff;
+}
+.social-links ul li:last-child {
+   margin-right: 0px;
 }
 .social-links ul li a,
 .social-links ul li a:hover {
