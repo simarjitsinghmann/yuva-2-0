@@ -169,8 +169,8 @@
                     <td class="cart-prd-details">
                        
                       <a href="{{url}}"><h5>{{name}}</h5></a>	
-                      <h6>{{item.selling_plan_allocation.selling_plan.name }}</h6>
-                      <div class="price item-price" data-item-price="{{forloop.index0}}">
+                      <h6>{{sellingPlan}}</h6>
+                      <div class="price item-price">
                         {%- if item.original_price != item.final_price -%}
                         <s class="cart-item__old-price product-option">
                           {{- item.original_price | money -}}
