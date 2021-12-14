@@ -639,7 +639,7 @@ function priceUpdate(priceContainer,getVariant,showSaved){
   }
   var compareAtPrice= parseInt(getVariant.compare_at_price);
   var price= parseInt(getVariant.price);
-  var percentage = (((compareAtPrice-price)/compareAtPrice)*100)+'% OFF';
+  var percentage = (((compareAtPrice-price)/compareAtPrice)*100).toFixed(2)+'% OFF';
   var savedAmount = Shopify.formatMoney((compareAtPrice-price),moneyFormat);
   var priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}</h3>`;
   var savedAmountHtml = '';
