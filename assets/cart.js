@@ -112,13 +112,12 @@ validateQty = function (qty) {
   return qty;
 };
 
-cartPageUpdate = function(cart){
-  
+cartPageUpdate = function(cart){  
      var items = [],
       item = {},
       data = {},
       cartDiscounts =[],
-      source = $("#CartTemplate").html(),
+      source = $("#mainCartTemplate").html(),
       template = Handlebars.compile(source);
   // Add each item to our handlebars.js data
   $.each(cart.items, function(index, cartItem) {
@@ -186,6 +185,8 @@ cartPageUpdate = function(cart){
     totalCartDiscount: cartDiscounts,
     totalCartDiscountApplied: cart.total_discount === 0 ? false : true
   }
+  
+  $('body').find('[data-drawer-body]').html(template(data));
   if(cart.item_count == 0){
     $('[data-cart-count').hide();
   }
