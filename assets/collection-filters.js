@@ -40,7 +40,7 @@ window.addEventListener('resize', function(event){
   hideShowFilters();
   collectionFilters();
 });
-function collectionFilters(){ 
+function applyFilters(){ 
   hideShowFilters();
   
   var section = document.getElementById('sectionContainer')
@@ -220,9 +220,9 @@ function getFilterData(filterForm,input,sectionId,remove){
     history.pushState({}, null, _updateUrl);
     //        var focusedElement =document.getElementById(input.getAttribute('id'));
     //        focusedElement.scrollIntoView()
-    collectionFilters();
+    applyFilters();
   });
 }
-collectionFilters();
+applyFilters();
 }());
 
