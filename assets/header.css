@@ -1453,9 +1453,8 @@ header {
    line-height: 1.2;
 }
 .leave-order-note span {
-    font-size: var(--small-text);
-    color: var(--black);
-    text-transform: uppercase;
+    text-transform: capitalize;
+    border-bottom: 1px solid;
 }
 .leave-order-note textarea {
    border: 1px solid #eaeaea;
