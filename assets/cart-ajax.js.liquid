@@ -100,37 +100,6 @@ $(document).on('change', '.ajaxcart__qty-num', function(evt) {
   }
 });
 
-changeCartItem = function(line, quantity) {    
-  var  params = {
-    type: 'POST',
-    url: '/cart/change.js',
-    data: 'quantity=' + quantity + '&line=' + line,
-    dataType: 'json',
-    success: function(cart) {
-      jQuery.getJSON('/cart.js', function (cart, textStatus) {
-        if(quantity == 0 ){ 
-          $('[name="item_quantity"][data-line="'+line+'"]').closest('tr').remove();
-        }
-        if(cart.item_count == 0 ){
-          $('#cart[cart-form]').hide();
-          $('[cart-empty]').show();                    
-          $('[data-cart-count]').hide();
-        }
-        else{ 
-          $('[data-cart-count]').show();
-          var item = cart.items[line-1];
-          $('[name="item_quantity"][data-line="'+line+'"]').val(item.quantity);
-          cartPageUpdate(cart);
-        }
-      });
-    },
-    error: function(XMLHttpRequest, textStatus) {
-    }
-  };
-  jQuery.ajax(params);
-};
-
-
 updateQuantity = function(line, qty,callback) {
   isUpdating = true;
   setTimeout(function() {
