@@ -4692,7 +4692,9 @@ body #shopify-product-reviews {
    margin-bottom: 25px;
 }
 .quickview_product_slider .quickview_product .item img {
-   width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .quickview_product_slider .quickview_product .quickview_product_img {
    max-height: 415px;
