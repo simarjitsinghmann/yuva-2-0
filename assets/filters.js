@@ -1,17 +1,19 @@
 (function () {
   function changeGridLayout(){
     var parent = document.getElementById('sectionContainer');
-    if(window.innerWidth < 768){
-      parent.setAttribute("data-view", "grid-layout-2")
-    }
-    else if(window.innerWidth >= 768 && window.innerWidth < 1200 ){
-      parent.setAttribute("data-view", "grid-layout-3")
-    }
-    else if(window.innerWidth >= 1200 && window.innerWidth < 1440 ){
-      parent.setAttribute("data-view", "grid-layout-4")
-    }
-    else if(window.innerWidth >= 1441  ){
-      parent.setAttribute("data-view", "grid-layout-5")
+    if(parent){
+      if(window.innerWidth < 768){
+        parent.setAttribute("data-view", "grid-layout-2")
+      }
+      else if(window.innerWidth >= 768 && window.innerWidth < 1200 ){
+        parent.setAttribute("data-view", "grid-layout-3")
+      }
+      else if(window.innerWidth >= 1200 && window.innerWidth < 1440 ){
+        parent.setAttribute("data-view", "grid-layout-4")
+      }
+      else if(window.innerWidth >= 1441  ){
+        parent.setAttribute("data-view", "grid-layout-5")
+      }
     }
   }
 
