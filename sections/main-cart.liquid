@@ -189,30 +189,14 @@
                         
                         {{#if discountsApplied}}
                         <li class="discounts__discount">
-                          {{ discount.title }}
+                        {{#each discounts}}
+                        <small class="item__discount">{{ discount.title }}</small>
+                          {{/each}}
                         </li>
                         {{/if}}
                       </ul>
                       <div class="cart-item-product-details">
-                        {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
-                        {% for option in item.options_with_values %}
-                        <span>{{option.name}}: {{option.value}}</span>
-                        {% endfor %}
-                        {% endunless %}
-                        {%- for property in item.properties -%}
-                        {%- assign property_first_char = property.first | slice: 0 -%}
-                        {%- if property.last != blank and property_first_char != '_' -%}
-                        <span><strong>{{ property.first }}</strong>: 
-                          {%- if property.last contains '/uploads/' -%}
-                          <a href="{{ property.last }}" target="_blank">
-                            {{ property.last | split: '/' | last }}
-                          </a>
-                          {%- else -%}
-                          {{ property.last }}
-                          {%- endif -%}
-                        </span>
-                        {%- endif -%}
-                        {%- endfor -%}
+                        
                       </div>
                        
                     </td>
