@@ -45,7 +45,7 @@ function collectionFilters(){
   
   var section = document.getElementById('CollectionProductsContainer')
   var sectionId = document.getElementById('CollectionProductsContainer').dataset.id;
-  const filterForm = document.getElementById('CollectionFiltersForm'); 
+  const filterForm = document.getElementById('FiltersForm'); 
     
 var accordions = filterForm.querySelectorAll('.br_more_filter');
 Array.from(accordions).forEach(function(accordion) {
