@@ -89,7 +89,7 @@
       {%- endif -%}
     </div>
     {%- if search.performed and search.results.size > 0 -%}
-    {% paginate search.results by 50 %}
+    {% paginate search.results by 25 %}
     <div class="template-search__results">
       <div class="tabs-box">
         <ul class="tabs-inner-box">
