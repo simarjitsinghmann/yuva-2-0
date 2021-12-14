@@ -151,7 +151,7 @@
              {%- if uses_comma -%}
              data-start="{{min_value | replace:'.','' | replace:',','.' | floor}}" 
              data-end="{{max_value| replace:'.','' | replace:',','.' | floor}}" 
-             data-min="{{ filter.range_min | money_without_currency | replace:'.','' | split:',','.' | floor}}" 
+             data-min="{{ filter.range_min | money_without_currency | replace:'.','' | replace:',','.' | floor}}" 
              data-max="{{filter.range_max |money_without_currency | replace:'.','' | replace:',','.'  | floor}}" 
              {%- else -%}
              data-start="{{min_value | replace:',','' | floor}}" 
