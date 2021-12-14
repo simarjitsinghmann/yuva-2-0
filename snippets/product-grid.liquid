@@ -209,7 +209,7 @@
     </div>
   </div>
   {% unless template contains 'collection'%}
-  {% unless hideRelated %}
+  {% unless hideRelated and settings.show_similar == false %}
   {% include 'similar-product-grid' %}
   {% endunless %}
   {% endunless %}
