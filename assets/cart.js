@@ -154,16 +154,7 @@ cartPageUpdate = function(cart){
 
     items.push(item);
   });
-  var shippPending ='';
-  var shipPendingPercentage = '100';
-  if(cart.total_price < shipping){
-    shippPending = Shopify.formatMoney((shipping - cart.total_price), moneyFormat);
-    shippPending = shippingText.replace('||amount||','<strong>'+shippPending+'</strong>');
-    shipPendingPercentage = ((cart.total_price /shipping)*100);
-    if(shipPendingPercentage > 10){
-      shipPendingPercentage= shipPendingPercentage - 5
-    }
-  }
+ 
   $.each(cart.cart_level_discount_applications, function(index, cartDiscount) {
     var discount ={
       title:cartDiscount.title,
@@ -177,9 +168,6 @@ cartPageUpdate = function(cart){
     items: items,
     count:cart.item_count,
     note: cart.note,
-    shipping:shipping,
-    shippPending:shippPending,
-    shipPendingPercentage:shipPendingPercentage+'%',
     total:cart.total_price, 
     totalPrice: Shopify.formatMoney(cart.total_price, moneyFormat),
     totalCartDiscount: cartDiscounts,
