@@ -871,6 +871,9 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
       slideIndex = undefined;
     }
     slickSlider(jQuery(slider),slideIndex);
+    if(jQuery(event.target).find('#instafeed').length > 0 ){
+    	instagramFeed();
+    }
   }
   else{
     slider.slick('refresh');
