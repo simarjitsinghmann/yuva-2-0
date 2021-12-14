@@ -24,13 +24,15 @@
     justify-content: center;
 }
 .login-bottom-box {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .login-bottom-box p{
     font-size: 15px;
 }
-.login-bottom-box p a{
+.login-bottom-box p a {
     color: var(--black);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 .content-for-layout {
     background: #fff;
