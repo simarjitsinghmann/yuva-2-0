@@ -42,7 +42,8 @@
                       {{else}}
                         <span>{{{linePrice}}}</span>
                       {{/if}}
-                      {{#if unitPrice}}
+                      {{#if unitPriceExist}}
+                      <small class="unit-price">{{unitPrice}}</small>
                       {{/if}}
   </h6>
                 {{#if discountsApplied}}
