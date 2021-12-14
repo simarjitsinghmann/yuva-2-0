@@ -1,6 +1,6 @@
 (function () {
   function changeGridLayout(){
-    var parent = document.getElementById('CollectionProductsContainer');
+    var parent = document.getElementById('sectionContainer');
     if(window.innerWidth < 768){
       parent.setAttribute("data-view", "grid-layout-2")
     }
