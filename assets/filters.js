@@ -40,7 +40,7 @@ hideShowFilters();
 window.addEventListener('resize', function(event){
   changeGridLayout();
   hideShowFilters();
-  collectionFilters();
+  applyFilters();
 });
 function applyFilters(){ 
   hideShowFilters();
