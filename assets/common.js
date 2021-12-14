@@ -637,6 +637,7 @@ function priceUpdate(priceContainer,getVariant,showSaved){
     showSavedAmount = priceContainer.getAttribute('data-saved');
     savedAmountStyle = priceContainer.getAttribute('data-saved-style');
   }
+  console.log(showSavedAmount,savedAmountStyle)
   var compareAtPrice= parseInt(getVariant.compare_at_price);
   var price= parseInt(getVariant.price);
   var percentage = (((compareAtPrice-price)/compareAtPrice)*100)+'% OFF';
@@ -661,7 +662,6 @@ function priceUpdate(priceContainer,getVariant,showSaved){
     }
   }
   if(compareAtPrice > price){
-    console.log('sss')
     priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}<span class="main-price"> <del>${Shopify.formatMoney(compareAtPrice, moneyFormat)}</del> </span> ${savedAmountHtml}</h3>`;
   }
   if(getVariant.unit_price_measurement){
