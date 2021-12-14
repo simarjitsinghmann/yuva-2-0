@@ -65,10 +65,10 @@
                       {% if block.settings.image != blank %}
                       {% assign image_url = block.settings.image | img_url:'master' %}
                       {% else %}
-                      {% assign image_url = "https://yova.shinedezign.pro/assets/images/client-image.png" %}
+                      {% assign image_url = 'user-icon.svg' | asset_url %}
                       {% endif %}
                       <div class="client-image">            
-                        <img src="{{image_url}}" alt="{{section.settings.author}}">                  
+                        {% include 'lazy-image' image:block.settings.image %}                 
                       </div>
                       <h5 class="author">{{block.settings.author}}</h5>
                       <p class="testimonial-title">{{block.settings.message}}</p>
