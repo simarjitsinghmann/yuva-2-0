@@ -189,6 +189,9 @@
                           {{{finalprice}}}
                         </strong>
                         {{/if}}
+                      {{#if unitPriceExist}}
+                      <small class="unit-price">{{unitPrice}}</small>
+                      {{/if}}
                       </div>
                       {{#properties}}
                     	{{#each this}}
