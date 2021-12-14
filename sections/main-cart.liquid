@@ -96,7 +96,7 @@
                         </strong>
                         {% endif %}
                         {%- if item.unit_price_measurement -%}
-                          <small class="unit-price">{{ 'products.product.price.unit_price' | t }}
+                          <small class="unit-price">
                           {{ item.variant.unit_price | money }}
                           /
                           {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
