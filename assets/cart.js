@@ -105,6 +105,15 @@ cartPageUpdate = function(cart){
     } else {
       var prodImg = "//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif";
     }
+    var unitPriceExist = false;
+    var unitPrice = '';
+    if(cartItem.unit_price){
+      unitPriceExist = true;
+      unitPrice += Shopify.formatMoney(cartItem.unit_price, moneyFormat);
+      unitPrice += ' / ';
+      unitPrice += cartItem.unit_price_measurement.reference_value > 1 ? cartItem.unit_price_measurement.reference_value : '';
+      unitPrice += cartItem.unit_price_measurement.reference_unit;
+    }
     var sellingPlan = '';
     if(cartItem.selling_plan_allocation){
       sellingPlan = cartItem.selling_plan_allocation.selling_plan.name;
@@ -122,6 +131,8 @@ cartPageUpdate = function(cart){
       properties: cartItem.properties,
       itemAdd: cartItem.quantity + 1,
       itemMinus: cartItem.quantity - 1,
+      unitPriceExist:unitPriceExist,
+      unitPrice:unitPrice,
       itemQty: cartItem.quantity,
       sellingPlan: sellingPlan,
       originalprice: Shopify.formatMoney(cartItem.original_price,moneyFormat),
