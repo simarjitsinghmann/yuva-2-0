@@ -165,13 +165,7 @@ cartPageUpdate = function(cart){
 
   // Gather all cart data and add to DOM
   data = {
-    items: items,
-    count:cart.item_count,
-    note: cart.note,
-    total:cart.total_price, 
-    totalPrice: Shopify.formatMoney(cart.total_price, moneyFormat),
-    totalCartDiscount: cartDiscounts,
-    totalCartDiscountApplied: cart.total_discount === 0 ? false : true
+    items: items
   }
   
   $('body').find('[data-cart-items]').html(template(data));
