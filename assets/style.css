@@ -747,18 +747,12 @@ img {
    position: relative;
 }
 .product-information__wrapper .caption-with-letter-spacing {
-   font-size: 13px;
-   line-height: 20px;
-   letter-spacing: 0.9px;
-   text-transform: unset;
-   opacity: 1;
-   padding-top: 10px;
-   padding-bottom: 2px;
-   font-weight: var(--normal);
-   width: 100%;
-   white-space: nowrap;
-   overflow: hidden;
-   text-overflow: ellipsis;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
 }
 .product__view__option li button:disabled {
    opacity: 0.3;
