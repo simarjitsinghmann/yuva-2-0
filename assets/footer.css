@@ -117,8 +117,10 @@ footer .grid__item:nth-last-child(2) {
    align-items: center;
    height: 100%;
 }
-.footer-block {
-   margin: 0 -15px;
+.footer-copyright-box {
+	display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 .list-payment {
    display: flex;
