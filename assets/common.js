@@ -645,6 +645,7 @@ function priceUpdate(priceContainer,getVariant,showSaved){
   var priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}</h3>`;
   var savedAmountHtml = '';
   if(showSaved){
+    console.log('help')
     if(showSavedAmount == 'true'){
       if(savedAmountStyle == 'percentage'){
         savedAmountHtml +=`<span class="percent-off">${percentage}</span>`;
