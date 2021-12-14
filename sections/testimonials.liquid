@@ -27,7 +27,7 @@
                       {% assign image_url = 'user-icon.svg' | asset_url %}
                       {% endif %}
                       <div class="client-image">            
-                        {% include 'lazy-image' image:block.settings.image %}                     
+                        {% include 'lazy-image' image:image_url %}                     
                       </div>
                       <h5 class="author">{{block.settings.author}}</h5>
                       <p class="testimonial-title">{{block.settings.message}}</p>
@@ -67,8 +67,9 @@
                       {% else %}
                       {% assign image_url = 'user-icon.svg' | asset_url %}
                       {% endif %}
+                      
                       <div class="client-image">            
-                        {% include 'lazy-image' image:block.settings.image %}                 
+                        {% include 'lazy-image' image:image_url %}                 
                       </div>
                       <h5 class="author">{{block.settings.author}}</h5>
                       <p class="testimonial-title">{{block.settings.message}}</p>
