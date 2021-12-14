@@ -662,6 +662,7 @@ function priceUpdate(priceContainer,getVariant,showSaved){
     }
   }
   if(compareAtPrice > price){
+    console.log('sss')
     priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}<span class="main-price"> <del>${Shopify.formatMoney(compareAtPrice, moneyFormat)}</del> </span> ${savedAmountHtml}</h3>`;
   }
   if(getVariant.unit_price_measurement){
