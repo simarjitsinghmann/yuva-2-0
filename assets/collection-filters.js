@@ -54,21 +54,12 @@ Array.from(accordions).forEach(function(accordion) {
                              var showLess = accordion.querySelector('.showLess');
                              if(accordion.parentNode.classList.contains('show')){
     accordion.parentNode.classList.remove('show')
-//     setTimeout(function(){
-//     accordion.classList.remove('show');
-//     accordion.classList.add('hide'); 
-    
          showLess.style.display = 'none';
          showMore.fadeIn(500);
-//     },300);
   }else{	
     accordion.parentNode.classList.add('show')
-//     setTimeout(function(){
-//     accordion.classList.remove('hide');
-//     accordion.classList.add('show');
          showMore.style.display = 'none';
          showLess.fadeIn(500);
-//     },300);
   }
 });
 });  
