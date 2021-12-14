@@ -214,7 +214,7 @@ function getFilterData(filterForm,input,sectionId,remove){
   then((responseText) => {
     const resultData = new DOMParser().parseFromString(responseText, 'text/html');
     var itemResultCount = resultData.getElementsByClassName('filter-total-result');
-    document.getElementById('CollectionProductsContainer').innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
+    document.getElementById('sectionContainer').innerHTML = resultData.getElementById('sectionContainer').innerHTML;
 
 
     history.pushState({}, null, _updateUrl);
