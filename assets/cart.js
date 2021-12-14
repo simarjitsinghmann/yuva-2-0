@@ -117,6 +117,8 @@ cartPageUpdate = function(cart){
       img: prodImg,
       name: truncate(cartItem.product_title,5),
       variation: cartItem.variant_title,
+      showoptions:cartItem.product_has_only_default_variant? false:true,
+      options: cartItem.variant_title,
       properties: cartItem.properties,
       itemAdd: cartItem.quantity + 1,
       itemMinus: cartItem.quantity - 1,
