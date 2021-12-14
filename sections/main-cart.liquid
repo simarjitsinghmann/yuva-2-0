@@ -185,6 +185,15 @@
                         {{/if}}
                       </div>
                       
+                      <div class="cart-item-product-details">
+                      {{#properties}}
+                    {{#each this}}
+                      {{#if this}}
+                        <span>{{@key}}: {{this}}</span>
+                      {{/if}}
+                    {{/each}}
+                  {{/properties}}
+                  </div>
                       <ul class="discounts list-unstyled" role="list" aria-label="{% endraw %}{{ 'customer.order.discount' | t }}{% raw %}">
                         
                         {{#if discountsApplied}}
