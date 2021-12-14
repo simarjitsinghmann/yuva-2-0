@@ -104,6 +104,16 @@
     {% when 'price_range' %}
 
     <div class="widget sidebar-widget-product">
+      {%- if uses_comma -%}
+      {% assign max_value = filter.range_max |money_without_currency  | replace:'.','' | replace:',','.' | floor%} 
+
+      {% assign min_value = filter.range_min |money_without_currency | replace:'.','' | replace:',','.' | floor %}
+      {%- else -%}
+      {% assign max_value = filter.range_max |money_without_currency %} 
+
+      {% assign min_value = filter.range_min |money_without_currency %}
+
+      {%- endif -%}
 
       {% assign max_value = filter.range_max |money_without_currency %} 
 
@@ -114,7 +124,7 @@
       {% assign min_value_formatted = filter.range_max |money %}
 
       {%- if filter.max_value.value -%} 
-max
+{{max_value}}
       {% assign max_value = filter.max_value.value |money_without_currency  %} 
 
       {% assign max_value_formatted = filter.max_value.value |money %}       
@@ -122,7 +132,6 @@ max
       {%- endif -%}
 
       {%- if filter.min_value.value -%}
-min
       {% assign min_value = filter.min_value.value |money_without_currency %}
       
       {% assign min_value_formatted = filter.min_value.value |money %}

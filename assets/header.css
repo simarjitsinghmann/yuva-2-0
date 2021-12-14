@@ -239,16 +239,10 @@ div#countdown {
 .currency-block .dropdown-menu a.dropdown-item:hover {
    background: var(--gray);
 }
-.currency-block .currency-dropdown label,
-.currency-block .currency-dropdown a {
-   color: var(--black);
-   font-weight: var(--semibold);
-   font-family: var(--font-family);
-}
 .currency-block .dropdown-toggle {
    position: relative;
    font-size: 12px;
-   font-weight: var(--medium);
+   font-weight: bold;
    background: var(--gray);
    padding: 5px 36px 5px 12px;
 }
