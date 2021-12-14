@@ -1,24 +1,3 @@
-// POST to cart/change.js returns the cart in JSON
-changeItem = function(line, quantity, callback) {
-  var $body = $(document.body),
-      params = {
-        type: 'POST',
-        url: '/cart/change.js',
-        data: 'quantity=' + quantity + '&line=' + line,
-        dataType: 'json',
-        success: function(cart) {
-          jQuery.getJSON('/cart.js', function (cart, textStatus) {
-            callback(cart); 
-          });
-        },
-        error: function(XMLHttpRequest, textStatus) {
-          console.log(XMLHttpRequest, textStatus);
-        }
-      };
-  jQuery.ajax(params);
-};
-
-
 // Update quantity based on input on change
 
 changeCartItem = function(line, quantity) {    
@@ -44,7 +23,6 @@ changeCartItem = function(line, quantity) {
           if(item){
             $('[name="item_quantity"][data-line="'+line+'"]').val(item.quantity);
           }
-//           updateLineItem();
           cartPageUpdate(cart);
         }
       });
