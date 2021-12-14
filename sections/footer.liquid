@@ -24,7 +24,7 @@
   </div>
 </div> 
 <div class="footer-middle-box">
-<div class="container">
+  <div class="container">
     <div class="footer-menu-list">
       <div class="row">
         {% for block in section.blocks %}
@@ -32,16 +32,16 @@
         {% when 'link_list'%}
         <div class="grid__item full__item col-sm-12 col-md-3 col-lg-2" {{ block.shopify_attributes }}>
           <div class="footer-menu-accordion">
-          {% if block.settings.heading != blank %}
-          <h5 class="footer-menu-head">{{block.settings.heading}}</h5>
-          {% endif %}
-          {% if block.settings.menu != blank %}
-          <ul>
-            {% for link in block.settings.menu.links %}
-            <li><a href="{{link.url}}">{{link.title | split: '{'| first }}</a></li>
-            {% endfor %}
-          </ul>
-          {% endif %}
+            {% if block.settings.heading != blank %}
+            <h5 class="footer-menu-head">{{block.settings.heading}}</h5>
+            {% endif %}
+            {% if block.settings.menu != blank %}
+            <ul>
+              {% for link in block.settings.menu.links %}
+              <li><a href="{{link.url}}">{{link.title | split: '{'| first }}</a></li>
+              {% endfor %}
+            </ul>
+            {% endif %}
           </div>
         </div>
         {% when 'newsletter'%}
@@ -114,6 +114,8 @@
     </div>
   </div>
 </div>
+<div class="footer-bottom-box">
+  <div class="container">
     <div class="footer__content-bottom">
       <div class="footer__content-bottom-wrapper page-width">
         <div class="footer__column footer__column--info d-flex justify-content-between align-items-center">
@@ -137,6 +139,8 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
 <style>
   #shopify-section-{{section.id}}{
     background-color:{{section.settings.footer_bg}};

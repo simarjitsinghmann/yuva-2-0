@@ -46,9 +46,7 @@
                           <h6><a href="{{article.url}}">{{article.title| truncatewords: 6}}</a></h6>
                           {% if section.settings.show_excerpt %}
                           <p>{{article.excerpt_or_content | strip_html | truncatewords: 6}}</p>
-                          {% endif %}
-
-                          
+                          {% endif %}                          
                         </div>
                         {% if section.settings.show_tags %}
                         <ul class="article_tags">
