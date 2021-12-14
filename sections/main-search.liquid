@@ -12,14 +12,14 @@
 {% endcase %}
 {%  endfor%}
 <style>
-  .search_result_items{
+  .resultContainer > div{
     display:none;
   }
 
-  #searchResultContainer[data-result="products"] .search_result_items.product_item{
+  #searchResultContainer[data-result="products"] .resultContainer .productResultContainer{
     display:block;
   }
-  #searchResultContainer[data-result="others"] .search_result_items.other_item{
+  #searchResultContainer[data-result="others"] .resultContainer .otherResultContainer{
     display:block;
   }
 </style>
