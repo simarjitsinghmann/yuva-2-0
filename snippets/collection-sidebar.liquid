@@ -121,7 +121,6 @@
       {% assign min_value_formatted = filter.range_max |money %}
 
       {%- if filter.max_value.value -%} 
-{{max_value}}
       {% assign max_value = filter.max_value.value |money_without_currency  %} 
 
       {% assign max_value_formatted = filter.max_value.value |money %}       
