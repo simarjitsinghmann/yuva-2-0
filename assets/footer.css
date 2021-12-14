@@ -1,77 +1,175 @@
-/***footer-section***/
 footer {
-  overflow: hidden;
-} 
+   overflow: hidden;
+}
 footer img {
-	background-color: transparent;
+   background-color: transparent;
 }
-footer .full__item h5 { font-size: 16px; font-weight: var(--bold); margin-bottom: 20px; color: #b9b9b9;line-height: 26px; } 
-footer ul li a, footer .grid__item p { font-size: 13px; text-decoration: none;
-  font-weight:var(--normal); line-height: 22px; letter-spacing: 0.2px; } 
-footer .grid__item p { line-height: 22px;margin-top: 0px; } 
+footer .full__item h5 {
+   font-size: 16px;
+   font-weight: var(--bold);
+   margin-bottom: 20px;
+   color: #b9b9b9;
+   line-height: 26px;
+}
+footer ul li a,
+footer .grid__item p {
+   font-size: 13px;
+   text-decoration: none;
+   font-weight: var(--normal);
+   line-height: 22px;
+   letter-spacing: 0.2px;
+}
+footer .grid__item p {
+   line-height: 22px;
+   margin-top: 0px;
+}
 .footer-logo-box {
-    border-bottom: 1px solid #1c1c1c;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
+   border-bottom: 1px solid #1c1c1c;
+   padding-bottom: 30px;
+   margin-bottom: 30px;
 }
-#ContactFooter .field { position: relative; width: 100%;  font-family: var(--font-family);} 
+#ContactFooter .field {
+   position: relative;
+   width: 100%;
+   font-family: var(--font-family);
+}
 #ContactFooter #NewsletterForm--footer {
-    padding: 13px 40px 13px 0;
-    height: auto;
-    background: transparent;
-    font-size: 13px;
-    min-height: 46px;
-    color: var(--gray);
-    border-bottom: 2px solid #2d2d2d;
+   padding: 13px 40px 13px 0;
+   height: auto;
+   background: transparent;
+   font-size: 13px;
+   min-height: 46px;
+   color: var(--gray);
+   border-bottom: 2px solid #2d2d2d;
 }
-#ContactFooter { position: relative; margin-top: 28px; } 
+#ContactFooter {
+   position: relative;
+   margin-top: 28px;
+}
 #ContactFooter #Subscribe {
-    text-transform: none;
-    top: 0;
-    position: absolute;
-    right: 0;
-    font-size: 13px;
-    line-height: 22px;
-    padding: 0;
-    height: 100%;
-    min-width: auto;
-    background: 0 0;
-    min-height: 46px;
-    border: 0;
+   text-transform: none;
+   top: 0;
+   position: absolute;
+   right: 0;
+   font-size: 13px;
+   line-height: 22px;
+   padding: 0;
+   height: 100%;
+   min-width: auto;
+   background: 0 0;
+   min-height: 46px;
+   border: 0;
 }
-.field .field__label { color: rgba(52, 52, 52, 0.50); font-size: 13px; font-weight: 400; top: 12px; left: 20px; letter-spacing:0.4px; } 
-.field__input:focus ~ .field__label, .field__input:not(:placeholder-shown) ~ .field__label, .field__input:-webkit-autofill ~ .field__label, .customer .field input:focus ~ label, .customer .field input:not(:placeholder-shown) ~ label, .customer .field input:-webkit-autofill ~ label {
-     font-size: 11px; top:0px; letter-spacing: 0.4px;
+.field .field__label {
+   color: rgba(52, 52, 52, 0.5);
+   font-size: 13px;
+   font-weight: 400;
+   top: 12px;
+   left: 20px;
+   letter-spacing: 0.4px;
+}
+.field__input:focus ~ .field__label,
+.field__input:not(:placeholder-shown) ~ .field__label,
+.field__input:-webkit-autofill ~ .field__label,
+.customer .field input:focus ~ label,
+.customer .field input:not(:placeholder-shown) ~ label,
+.customer .field input:-webkit-autofill ~ label {
+   font-size: 11px;
+   top: 0px;
+   letter-spacing: 0.4px;
 }
 #ContactFooter #Subscribe:hover {
-  color:#fff;
+   color: #fff;
 }
-footer .grid__item:nth-last-child(2) { position: relative; } 
+footer .grid__item:nth-last-child(2) {
+   position: relative;
+}
 /* footer .grid__item:nth-last-child(2)::after { content: ""; position: absolute; right: 0px; border-right: 1px solid #1d2329; width: 1px; height: 100%; top: 0px; } */
-.social-links ul li { width: 34px; height: 34px; background: #dadada; text-align: center; display: inline-block; margin-right: 10px; color: #fff; }
-.social-links ul li:last-child { margin-right: 0px;}
-.social-links { margin-top: 33px; } 
-.social-links ul li:hover { opacity:0.6; } 
-.social-links ul li.fb{ background: #222222; } 
-.social-links ul li.twitter{ background: #222222; } 
-.social-links ul li.linkedin{ background: #222222; } 
-.social-links ul li.insta{ background: #222222; } 
-.social-links ul li a, .social-links ul li a:hover{ text-decoration:none; color: #fff;display: flex;justify-content: center;align-items: center;height:100%; } 
-.footer-block { margin: 0 -15px; }      
-.list-payment { display: flex; } 
-.list-payment li{ padding: 0 6px; line-height: 0; } 
-.list-payment li a{ line-height: 0; } 
-.list-payment li:last-child{ padding-right: 0 ; } 
-small.copyright__content { color: #999; letter-spacing: 0.2px; font-size:15px; font-weight:var(--normal); } 
-.footer__content-bottom:before{ position: absolute; content: ""; top: 0; width: calc(100vw + 50%); } 
-.footer__content-top{ position: relative;padding-bottom:65px;} 
-.footer__content-bottom { position: relative; padding: 39px 0 23px;width: 100%; border-top: 1px solid #242424;}
-.social-links li a {font-size: 13px;}
+.social-links ul li {
+   width: 34px;
+   height: 34px;
+   background: #dadada;
+   text-align: center;
+   display: inline-block;
+   margin-right: 10px;
+   color: #fff;
+}
+.social-links ul li:last-child {
+   margin-right: 0px;
+}
+.social-links {
+   margin-top: 33px;
+}
+.social-links ul li:hover {
+   opacity: 0.6;
+}
+.social-links ul li.fb {
+   background: #222222;
+}
+.social-links ul li.twitter {
+   background: #222222;
+}
+.social-links ul li.linkedin {
+   background: #222222;
+}
+.social-links ul li.insta {
+   background: #222222;
+}
+.social-links ul li a,
+.social-links ul li a:hover {
+   text-decoration: none;
+   color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+}
+.footer-block {
+   margin: 0 -15px;
+}
+.list-payment {
+   display: flex;
+}
+.list-payment li {
+   padding: 0 6px;
+   line-height: 0;
+}
+.list-payment li a {
+   line-height: 0;
+}
+.list-payment li:last-child {
+   padding-right: 0;
+}
+small.copyright__content {
+   color: #999;
+   letter-spacing: 0.2px;
+   font-size: 15px;
+   font-weight: var(--normal);
+}
+.footer__content-bottom:before {
+   position: absolute;
+   content: "";
+   top: 0;
+   width: calc(100vw + 50%);
+}
+.footer__content-top {
+   position: relative;
+   padding-bottom: 65px;
+}
+.footer__content-bottom {
+   position: relative;
+   padding: 39px 0 23px;
+   width: 100%;
+   border-top: 1px solid #242424;
+}
+.social-links li a {
+   font-size: 13px;
+}
 footer ul li a {
-  display:inline-block;
-  margin-bottom:10px
+   display: inline-block;
+   margin-bottom: 10px;
 }
 form#ContactFooter .newsletter-form__field-wrapper label.field__label {
-    display: none;
+   display: none;
 }
 /***END***/
