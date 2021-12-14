@@ -185,12 +185,13 @@
                         {{/if}}
                       </div>
                       
-                      <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}" data-item-discount="{{forloop.index0}}">
-                        {%- for discount in item.discounts -%}
+                      <ul class="discounts list-unstyled" role="list" aria-label="{% endraw %}{{ 'customer.order.discount' | t }}{% raw %}">
+                        
+                        {{#if discountsApplied}}
                         <li class="discounts__discount">
                           {{ discount.title }}
                         </li>
-                        {%- endfor -%}
+                        {{/if}}
                       </ul>
                       <div class="cart-item-product-details">
                         {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
