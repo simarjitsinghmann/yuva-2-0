@@ -184,13 +184,10 @@ body {
   letter-spacing:var(--base_spacing);
 }
 label {
-	font-size: var(--small-text);
-	font-weight: var(--medium);
-	letter-spacing: .04em;
-	line-height: 20px;
-	color: #323232;
-	padding-bottom: 4px;
-	display: block;
+    line-height: 20px;
+    color: var(--black);
+    padding-bottom: 4px;
+    display: block;
 }
 .container,.container-fluid,.container-lg,.container-md,.container-sm,.container-xl, .custom-container{
     width:100%;
