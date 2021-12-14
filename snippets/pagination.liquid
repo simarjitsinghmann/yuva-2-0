@@ -10,7 +10,7 @@ Usage:
 <ul class="list--inline pagination">
   {% if paginate.previous.is_link %}
   <li>
-    <a href="{{ paginate.previous.url }}" class="btn btn--tertiary btn--narrow">
+    <a href="{{ paginate.previous.url }}{{ anchor }}" class="btn btn--tertiary btn--narrow">
       <span class="icon__fallback-text">{% render 'icon-left-arrow'%}</span>
     </a>
   </li>
@@ -18,7 +18,7 @@ Usage:
   {% for part in paginate.parts %}
   {% if part.is_link %}
   <li>
-    <a href="{{ part.url }}" class="btn btn--tertiary btn--narrow">
+    <a href="{{ part.url }}{{ anchor }}" class="btn btn--tertiary btn--narrow">
       <span class="icon__fallback-text">{{part.title}}</span>
     </a>
   </li>
@@ -35,7 +35,7 @@ Usage:
   {%endfor%}
   {% if paginate.next.is_link %}
   <li>
-    <a href="{{ paginate.next.url }}" class="btn btn--tertiary btn--narrow">
+    <a href="{{ paginate.next.url }}{{ anchor }}" class="btn btn--tertiary btn--narrow">
       <span class="icon__fallback-text">{% render 'icon-right-arrow'%}</span>
     </a>
   </li>
