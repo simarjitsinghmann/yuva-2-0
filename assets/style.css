@@ -1912,9 +1912,9 @@ li.breadcrumb-item a {
    position: relative;
 }
 .filter-actions .select-items .select-item span.close {
-   position: absolute;
-   top: -1px;
-   right: 10px;
+    position: absolute;
+    right: 10px;
+    top: -4px;
 }
 .filter-actions .select-items .select-item span.close #iconCross {
    width: 7px;
@@ -1933,20 +1933,18 @@ li.breadcrumb-item a {
    color: var(--theme-color);
 }
 .filter-actions .select-items .select-item {
-   margin-top: 10px;
-   text-decoration: none;
-   border: 1px solid #ddd;
-   border-radius: 40px;
-   color: var(--dark-gray);
-   font-weight: 400;
-   padding: 3px 12px;
-   letter-spacing: 0.1px;
-   position: relative;
-   margin-right: 9px;
-   display: inline-block;
-   font-size: 13px;
-   text-transform: capitalize;
-   padding-right: 30px;
+    margin-top: 10px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 40px;
+    color: var(--dark-gray);
+    padding: 3px 12px;
+    position: relative;
+    margin-right: 9px;
+    display: inline-block;
+    font-size: 11px;
+    text-transform: capitalize;
+    padding-right: 30px;
 }
 .filter-actions .select-items .select-item.filter-clean {
    padding-right: 12px;
