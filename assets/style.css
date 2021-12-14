@@ -2447,17 +2447,17 @@ ul.gallery-item li a > img {
    color: var(--black);
    font-weight: var(--medium);
 }
-.product-detail .panel-title a:after,
+.product-detail .panel-title a:after, 
 .product-detail .panel-title a:before {
-   content: "";
-   position: absolute;
-   top: calc(50% - 1px);
-   right: 0;
-   width: 11px;
-   height: 1px;
-   background-color: currentColor;
-   transition: 0.3s ease;
-   transition-property: transform;
+    content: "";
+    position: absolute;
+    top: calc(50% - 11px);
+    right: 0;
+    width: 9px;
+    height: 1px;
+    background-color: currentColor;
+    transition: .3s ease;
+    transition-property: transform;
 }
 .product-detail .panel-title a:before {
    transform: rotate(-90deg);
