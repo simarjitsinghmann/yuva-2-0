@@ -152,7 +152,7 @@ Array.from(priceRangeBars).forEach(function(rangeBar) {
     var newformatMoney = moneyFormat;
     section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = minVal;
     section.querySelector('[data-min-value]').innerHTML =  Shopify.formatMoney(minVal*100,moneyFormat);
-    var maxVal =  parseInt(values[1])*100;
+    var maxVal =  parseInt(values[1]);
     section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = maxVal;
     section.querySelector('[data-max-value]').innerHTML = Shopify.formatMoney(maxVal*100,moneyFormat);
   })
