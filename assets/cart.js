@@ -115,7 +115,7 @@ cartPageUpdate = function(cart){
       line: index + 1, // Shopify uses a 1+ index in the API
       url: cartItem.url,
       img: prodImg,
-      name: truncate(cartItem.product_title,4),
+      name: truncate(cartItem.product_title,5),
       variation: cartItem.variant_title,
       properties: cartItem.properties,
       itemAdd: cartItem.quantity + 1,
