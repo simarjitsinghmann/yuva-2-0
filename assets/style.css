@@ -746,6 +746,9 @@ img {
 .card.card--product {
    position: relative;
 }
+.product-information__wrapper a {
+   color: var(--dark-gray);
+}
 .product-information__wrapper .caption-with-letter-spacing {
     padding-top: 10px;
     padding-bottom: 2px;
@@ -960,9 +963,7 @@ img {
    min-height: 310px;
    max-height: 310px;
 }
-.product-information__wrapper a {
-   color: var(--dark-gray);
-}
+
 #CollectionProductsContainer[data-view="grid-layout-4"]
    .products-grid
    .product_columns
