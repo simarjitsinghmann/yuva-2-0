@@ -181,12 +181,12 @@
           </div>
         </div>
         {% if paginate.pages > 1 %}
-        {% include 'pagination' %}
+        {% include 'pagination' ,anchor: ''%}
         {% endif %}
       </div>
     </div>
     {% else %}
-    {% render 'not-found'  item:'Product',anchor: ''%}
+    {% render 'not-found'  item:'Product'%}
     {% endif %}
   </div>
 </div>
