@@ -147,7 +147,7 @@ buildCart = function (cart,showCart) {
       unitPrice += cartItem.unit_price_measurement.reference_value > 1 ? cartItem.unit_price_measurement.reference_value : '';
       unitPrice += cartItem.unit_price_measurement.reference_unit;
     }
-    console.log(unitPrice)
+    console.log(unitPriceExist,unitPrice)
     var sellingPlan = '';
     if(cartItem.selling_plan_allocation){
       sellingPlan = cartItem.selling_plan_allocation.selling_plan.name;
