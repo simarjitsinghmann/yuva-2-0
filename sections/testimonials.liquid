@@ -63,7 +63,7 @@
                   <div class="slider-item">
                     <div class="slider-box">
                       {% if block.settings.image != blank %}
-                      {% assign image_url = block.settings.image | img_url:'master' %}
+                      {% assign image_url = block.settings.image %}
                       {% else %}
                       {% assign image_url = 'user-icon.svg' | asset_url %}
                       {% endif %}
