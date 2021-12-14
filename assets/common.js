@@ -563,7 +563,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
 
             _productParent.querySelector('[name="id"]').value = getVariant.id;
             var priceContainer=_productParent.querySelector('[data-price-wrapper]');
-            priceUpdate(priceContainer,getVariant);
+            priceUpdate(priceContainer,getVariant,true);
             var baseUrl = window.location.pathname;
             if(baseUrl.indexOf('/products/') > -1){
               var _updateUrl = baseUrl+'?variant='+getVariant.id;
