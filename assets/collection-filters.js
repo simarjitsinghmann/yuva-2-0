@@ -128,11 +128,6 @@ var sortMenu = document.getElementById('toolbox-sort');
 var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
 Array.from(priceRangeBars).forEach(function(rangeBar) {
   var el = rangeBar;
-  console.log('start-',el.dataset.start);
-  console.log('end-', el.dataset.end);
-  
-  console.log('min-',el.dataset.min);
-  console.log('max-', el.dataset.max);
   var sliderEventListener = noUiSlider.create(el, {
     start: [el.dataset.start, el.dataset.end],
     connect: true,
