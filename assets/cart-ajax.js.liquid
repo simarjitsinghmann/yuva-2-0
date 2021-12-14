@@ -256,3 +256,9 @@ $(document).on('change ', '[name=note]', function(evt) {
     }
   });
 })
+
+
+$(document).on('click ', '.cartDrawerNote', function(evt) {
+  var textArea = $(this).siblings('textarea');
+  DOMAnimations.slideToggle(textArea);
+})
