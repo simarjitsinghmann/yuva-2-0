@@ -217,7 +217,7 @@ div#countdown {
    top: 100%;
    z-index: 3;
    padding: 3px 0px 3px;
-   min-width: 70px;
+   width: 100%;
    border: 1px solid #f0f0f0;
    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
@@ -226,15 +226,10 @@ div#countdown {
    display: none;
 }
 .currency-block .dropdown-menu a.dropdown-item {
-   font-family: var(--font-family);
-   width: 100%;
-   float: left;
-   text-align: center;
-   text-decoration: none;
-   color: var(--black);
-   font-size: var(--extra-small);
-   font-weight: var(--normal);
-   padding: 3px 0;
+    width: 100%;
+    font-size: 12px;
+    padding: 3px 10px;
+    display: inline-block;
 }
 .currency-block .dropdown-menu a.dropdown-item:hover {
    background: var(--gray);
