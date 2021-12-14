@@ -25,6 +25,10 @@ footer p {
    line-height: 22px;
    letter-spacing: 0.2px;
 }
+footer ul li a {
+   display: inline-block;
+   margin-bottom: 10px;
+}
 #ContactFooter .field {
    position: relative;
    width: 100%;
@@ -149,10 +153,7 @@ small.copyright__content {
 .social-links li a {
    font-size: 13px;
 }
-footer ul li a {
-   display: inline-block;
-   margin-bottom: 10px;
-}
+
 form#ContactFooter .newsletter-form__field-wrapper label.field__label {
    display: none;
 }
