@@ -739,10 +739,7 @@ img {
    font-weight: var(--semibold);
 }
 /*==================== offer css end ================*/
-/***sale section ***/
-.latest__sale {
-   background: var(--white);
-}
+/*================ sale section ==================*/
 .card.card--product .product__on__sale svg {
    width: 56px;
 }
@@ -769,10 +766,6 @@ img {
    cursor: not-allowed;
 }
 .product-information__wrapper .price-item {
-    font-size: 13px;
-    font-weight: var(--semibold);
-    color: var(--black);
-    line-height: 20px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
