@@ -125,11 +125,13 @@
           data-result="others"
           >
         {%- for item in search.results limit:50 -%}
-        <li class="grid__item search_result_items grid__item--small other_item">
           {%- case item.object_type -%}
           {%- when 'article' -%}
+        <li class="grid__item search_result_items grid__item--small other_item">
           {% include 'article-grid' article:item %}
+        </li>
           {%- when 'page' -%}
+        <li class="grid__item search_result_items grid__item--small other_item">
           <a href="{{ item.url }}" class="card-wrapper">
             <div class="card card--search card--soft card--text-only">
               <div class="card__inner">
@@ -140,8 +142,8 @@
               </div>
             </div>
           </a>
-          {%- endcase -%}
         </li>
+          {%- endcase -%}
         {%- endfor -%}
       </ul>
         </div>
