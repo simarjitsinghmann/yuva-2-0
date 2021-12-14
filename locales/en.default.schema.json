@@ -2013,6 +2013,42 @@
     }
   },
   "settings_schema": {
+    "colors": {
+      "name": "Colors",
+      "settings": {
+        "colors_solid_button_labels": {
+          "label": "Solid button label",
+          "info": "Used as foreground color on accent colors."
+        },
+        "colors_accent_1": {
+          "label": "Accent 1",
+          "info": "Used for solid button background."
+        },
+        "colors_accent_2": {
+          "label": "Accent 2"
+        },
+        "header__1": {
+          "content": "Primary colors"
+        },
+        "header__2": {
+          "content": "Secondary colors"
+        },
+        "colors_text": {
+          "label": "Text",
+          "info": "Used as foreground color on background colors."
+        },
+        "colors_outline_button_labels": {
+          "label": "Outline button",
+          "info": "Also used for text links."
+        },
+        "colors_background_1": {
+          "label": "Background 1"
+        },
+        "colors_background_2": {
+          "label": "Background 2"
+        }
+      }
+    },
     "social": {
       "name": "Social",
       "settings": {
@@ -2152,42 +2188,6 @@
           "percentage": {
             "label": "Percentage"
           }
-        }
-      }
-    },
-    "colors": {
-      "name": "Colors",
-      "settings": {
-        "colors_solid_button_labels": {
-          "label": "Solid button label",
-          "info": "Used as foreground color on accent colors."
-        },
-        "colors_accent_1": {
-          "label": "Accent 1",
-          "info": "Used for solid button background."
-        },
-        "colors_accent_2": {
-          "label": "Accent 2"
-        },
-        "header__1": {
-          "content": "Primary colors"
-        },
-        "header__2": {
-          "content": "Secondary colors"
-        },
-        "colors_text": {
-          "label": "Text",
-          "info": "Used as foreground color on background colors."
-        },
-        "colors_outline_button_labels": {
-          "label": "Outline button",
-          "info": "Also used for text links."
-        },
-        "colors_background_1": {
-          "label": "Background 1"
-        },
-        "colors_background_2": {
-          "label": "Background 2"
         }
       }
     },
