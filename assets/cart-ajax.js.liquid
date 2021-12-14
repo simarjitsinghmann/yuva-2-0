@@ -259,6 +259,6 @@ $(document).on('change ', '[name=note]', function(evt) {
 
 
 $(document).on('click ', '.cartDrawerNote', function(evt) {
-  var textArea = $(this).siblings('textarea');
+  var textArea = $(this).siblings('.cartNoteContainer');
   textArea.slideToggle(1000)
 })
