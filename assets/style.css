@@ -4269,6 +4269,10 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
 .productResultContainer {
 	display:flex;
 }
+.productResultContainer .result_product {
+    max-width: 82%;
+    flex: 0 0 82%;
+}
 .search-product-section{
     padding: 65px 0;
 }
