@@ -1,6 +1,6 @@
 {% assign current_variant = product.selected_or_first_available_variant %}
 {% assign images = product.media | where: "media_type", "image" %}
-
+{% assign second_image = '' %}
 {% if images.size > 1 %}
 {% for image in images %}
 {% unless image.src == product.featured_image.src %}
@@ -8,8 +8,6 @@
 {% break %}
 {% endunless %}
 {% endfor %}
-{% else %}
-{% assign second_image = product.featured_image | img_url:'master' %}
 {% endif %}
 <div class="grid-item col collection-product-grid">
   <div class="card-wrapper">
