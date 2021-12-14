@@ -40,7 +40,6 @@ footer ul li a {
     color: var(--gray);
     border-bottom: 1px solid #585858;
 }
-
 #ContactFooter button {
    text-transform: none;
    top: 0;
@@ -54,14 +53,6 @@ footer ul li a {
    background: 0 0;
    min-height: 46px;
    border: 0;
-}
-.field .field__label {
-   color: rgba(52, 52, 52, 0.5);
-   font-size: 13px;
-   font-weight: 400;
-   top: 12px;
-   left: 20px;
-   letter-spacing: 0.4px;
 }
 .field__input:focus ~ .field__label,
 .field__input:not(:placeholder-shown) ~ .field__label,
