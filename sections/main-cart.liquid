@@ -171,18 +171,18 @@
                       <a href="{{url}}"><h5>{{name}}</h5></a>	
                       <h6>{{sellingPlan}}</h6>
                       <div class="price item-price">
-                        {%- if item.original_price != item.final_price -%}
+                      {{#if discountsApplied}}
                         <s class="cart-item__old-price product-option">
-                          {{- item.original_price | money -}}
+                          {{{originalLinePrice}}}
                         </s>
                         <strong class="cart-item__final-price product-option">
-                          {{ item.final_price | money }}
+                          {{{linePrice}}}
                         </strong>
-                        {% else %}
+                        {{else}}
                         <strong class="cart-item__final-price product-option">
-                          {{ item.original_price | money }}
+                          {{{linePrice}}}
                         </strong>
-                        {% endif %}
+                        {{/if}}
                       </div>
                       
                       <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}" data-item-discount="{{forloop.index0}}">
