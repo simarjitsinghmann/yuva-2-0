@@ -210,18 +210,18 @@
                     <td class="cart-price">                 
                       
                       <div class="price item-line-price">
-                        {%- if item.original_line_price != item.final_line_price -%}
+                        {{#if discountsApplied}}
                         <s class="cart-item__old-price product-option">
-                          {{- item.original_line_price | money -}}
+                           {{{originalLinePrice}}}
                         </s>
                         <strong class="cart-item__final-price product-option">
-                          {{ item.final_line_price | money }}
+                          {{{linePrice}}}
                         </strong>
-                        {% else %}
+                        {{else}}
                         <strong class="cart-item__final-price product-option">
-                          {{ item.original_line_price | money }}
+                          {{{linePrice}}}
                         </strong>
-                        {% endif %}
+                        {{/if}}
                       </div>
                     </td>
                     <td class="cart-remove">
