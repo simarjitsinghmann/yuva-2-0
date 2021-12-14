@@ -169,6 +169,7 @@
                     <td class="cart-prd-details">
                        
                       <a href="{{url}}"><h5>{{name}}</h5></a>	
+                      <div class="cart-item-product-details">
                       <h6>{{sellingPlan}}</h6>
                       <div class="price item-price">
                       {{#if discountsApplied}}
@@ -184,8 +185,6 @@
                         </strong>
                         {{/if}}
                       </div>
-                      
-                      <div class="cart-item-product-details">
                       {{#properties}}
                     	{{#each this}}
                       	{{#if this}}

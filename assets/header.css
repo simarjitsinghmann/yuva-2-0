@@ -513,10 +513,6 @@ div#countdown {
    margin: 0;
    position: static;
 }
-.header_3 .nav__btn .menu_title {
-    margin-left: 15px;
-    font-size: 16px;
-}
 .side-menu .inner-side ul li a {
    text-decoration: none;
    font-weight: var(--medium);
@@ -724,6 +720,10 @@ body.nav-open {
 .side-menu .nav-item.dropdown .inner.grandchild li a {
    font-size: 17px;
    line-height: 22px;
+}
+.header_3 .nav__btn .menu_title {
+    margin-left: 15px;
+    font-size: 16px;
 }
 .header_3 .header__heading-link {
    position: absolute;
