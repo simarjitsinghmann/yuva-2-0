@@ -6,8 +6,10 @@
         {% if section.settings.image != blank %}
         {% assign footlogo = true %}
         <div class="col-sm-12 col-md-3">
+          <div class="footer-logo">
           {% assign width = section.settings.image_width | append:'px' %}
           <img src="{{section.settings.image | img_url:'master'}}" class="Yuva-logo" width="{{width}}">
+          </div>
         </div>
         {% endif %}
         {% if section.settings.subtext != blank %}
