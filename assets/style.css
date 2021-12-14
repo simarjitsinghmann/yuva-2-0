@@ -3057,10 +3057,11 @@ body.header2.announcement_open .single__product__right.sidebar-fixed {
 .feature-product .product-add-to-cart-right .form-group #Sd_addProduct,
 .shopify-payment-button__button {
    margin: 0 0 13px;
-   border: 1px solid var(--black);
-   color: var(--black);
-   background-color: var(--white);
+   border: 1px solid var(--colorBtnSecondary);
+   background-color: transparent;
    width:100%;
+   color: var(--colorBtnSecondaryText);
+   background-color: var(--colorBtnSecondary);
 }
 .product-add-to-cart-right .product-detail-title {
   	display:block;
