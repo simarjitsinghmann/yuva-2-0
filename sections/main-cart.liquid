@@ -159,6 +159,7 @@
   <script id="mainCartTemplate" type="text/template" >
     
                 {% raw %}
+                {{#items}}
                  <tr>
                     <td class="cart-img">
                       <a href="{{item.url}}">
@@ -246,6 +247,7 @@
                        </div>
                     </td>
                  </tr>
+                  {{/items}}
                  {% endraw %}
                           
   </script>
