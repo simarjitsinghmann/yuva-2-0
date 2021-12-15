@@ -3735,9 +3735,12 @@ main .shopify-section.cstm-cart-sec {
 }
 .faq-detail .accordion-container .set {
     margin-bottom: 20px;
-    padding: 15px 0px;
     position: relative;
     box-shadow: 0 2px 4px rgb(0 0 0 / 21%);
+}
+.faq-detail .accordion-container .set .panel-title {
+    padding: 15px 25px;
+    background-color: var(--gray);
 }
 .faq-detail
    .accordion-container
