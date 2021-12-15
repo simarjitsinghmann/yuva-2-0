@@ -555,9 +555,14 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
           sellingPlans(getVariant,_productParent);
             if(getVariant.featured_media != null){
               var image= getVariant.featured_media.id; 
-              var imageSource = _productParent.querySelector("[data-id='media-"+image+"']");
-              if(imageSource){
-                imageSource.click();
+              if(window.innerWidth > 767){
+                var imageSource = _productParent.querySelector("[data-id='media-"+image+"']");
+                if(imageSource){
+                  imageSource.click();
+                }
+              }
+              else{
+
               }
             }
 
