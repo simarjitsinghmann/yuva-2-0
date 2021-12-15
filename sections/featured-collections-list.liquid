@@ -28,7 +28,9 @@
                   {% else %}
                   <h2>{{collection.title}}</h2>
                   {% endif %}
+                  {% if block.settings.collection != blank %}
                   <a href="{{collection.url}}" class="link">{{block.settings.btntext}}</a>
+                  {% endif %}
                 </div>
               </div>
             </div>
