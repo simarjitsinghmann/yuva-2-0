@@ -699,9 +699,7 @@ padding-right: 15px;
     text-align: left;
     padding: 7px 15px;
 }
-.quality-select .caret, .dropdown.productOptionSelect .caret {
-    float: right;
-    margin-top: 4px;
+.dropdown.productOptionSelect .caret, .quality-select .caret {
     display: block;
     border-bottom: 1px solid #848484;
     border-left: 1px solid #848484;
@@ -711,8 +709,8 @@ padding-right: 15px;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     position: absolute;
-    right: 20px;
-    top: 16px;
+    right: 18px;
+    top: 14px;
 }
 .quality-select .dropdown-menu, .dropdown.productOptionSelect .dropdown-menu {
   width: 240px;
