@@ -16,12 +16,11 @@
           {% assign collection = block.settings.collection %}
             <div class="collection-list-view-wrapper" id="block-{{block.id}}"  {{ block.shopify_attributes }}>
               <div class="collection-list-view-card" >
+                
                 {% if block.settings.image != blank %}
-                {% include 'lazy-image' image:block.settings.image %}
-                {% elsif collection.featured_image %}
-                {% include 'lazy-image' image:collection.featured_image %}
+                <img src="{{ block.settings.image | img_url:'master'}}" />
                 {% else %}
-                <img src="{{ 'placeholder.svg' | asset_url }}" />
+                <img src="{{ collection.featured_image | img_url:'master'}}" />
                 {% endif %}
 
                 <div class="list-view-content text__{{block.settings.info_position}}">          
