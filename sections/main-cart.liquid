@@ -2,7 +2,7 @@
 <div class="container">  
   
   <div class="continue-shopping"{% if cart.item_count > 0 %}style="display:none"{% endif %} cart-empty>
-    <img class="emptyCartIcon" src="//cdn.shopify.com/s/files/1/0597/9668/5009/t/6/assets/cart.svg">
+    <img class="emptyCartIcon" src="{{ 'cart.svg' | asset_url}}">
      <h4>{{'sections.cart.empty' | t}}</h4>
      <a href="/collections/all" class="button black-btn">{{'general.continue_shopping' | t}}</a>
   </div>
