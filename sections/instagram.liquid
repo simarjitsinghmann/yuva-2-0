@@ -17,7 +17,7 @@
       get: 'user',
       userId: '{{ section.settings.insta_user_id}}',
       accessToken: '{{ section.settings.insta_access_Token}}',
-      limit: 6,
+      limit: {{section.settings.post_count}},
       resolution : 'standard_resolution',
       template:'<li><a href="{% raw %}{{link}}{% endraw %}"><div class="instagram-post-detail"><img src="{% raw %}{{image}}{% endraw %}" alt=""><div class="insta-icon"><i class="fab fa-instagram"></i></div></div></a></li>'
     });
@@ -84,6 +84,15 @@
         "type": "text",
         "id": "insta_access_Token",
         "label": "t:sections.instagram.settings.insta_access_Token.label"
+      },
+      {
+        "type": "range",
+        "id": "post_count",
+        "label": "t:sections.instagram.settings.post_count.label",
+        "default":6,
+        "min":6,
+        "max":18,
+        "step":1
       },
       {
         "type": "color",
