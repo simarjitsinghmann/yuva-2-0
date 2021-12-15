@@ -1,6 +1,6 @@
 (function () {
   function changeGridLayout(){
-    var parent = document.getElementById('sectionContainer');
+    var parent = document.getElementById('CollectionProductsContainer');
     if(parent){
       if(window.innerWidth < 768){
         parent.setAttribute("data-view", "grid-layout-2")
@@ -45,7 +45,7 @@ window.addEventListener('resize', function(event){
 function applyFilters(){ 
   hideShowFilters();
 
-  var section = document.getElementById('sectionContainer');
+  var section = document.getElementById('CollectionProductsContainer');
   if (section){
     var sectionId = section.dataset.id;
     const filterForm = document.getElementById('FiltersForm'); 
@@ -216,7 +216,7 @@ function getFilterData(filterForm,input,sectionId,remove){
   then((responseText) => {
     const resultData = new DOMParser().parseFromString(responseText, 'text/html');
     var itemResultCount = resultData.getElementsByClassName('filter-total-result');
-    document.getElementById('sectionContainer').innerHTML = resultData.getElementById('sectionContainer').innerHTML;
+    document.getElementById('CollectionProductsContainer').innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
 
 
     history.pushState({}, null, _updateUrl);
