@@ -562,12 +562,13 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
                 }
               }
               else{
-                var imageSource = _productParent.querySelector("#media-"+image);
+                var imageSource = jQuery("#media-"+image);
                 if(imageSource){
                   var imageIndex = imageSource.getAttribute('data-slick-index');
                   var slider = _productParent.querySelector('[data-slider]');
                   slider =  new DOMParser().parseFromString(slider, 'text/html');
                   console.log(imageIndex,slider)
+                  slider.slick
                 }
 
               }
