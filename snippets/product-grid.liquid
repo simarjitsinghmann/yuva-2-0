@@ -12,7 +12,7 @@
 <div class="grid-item col collection-product-grid">
   <div class="card-wrapper">
     <div class="card card--text-only card--soft card--product text__left">
-      <div class="card-wrapper-img {{settings.show_second_image}}-{{second_image}} {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{% endunless %} ">
+      <div class="card-wrapper-img {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{% endunless %} ">
         <a href="{{product.url | within: collection}}">
           {% render 'lazy-image' image: product.featured_image %}
           {% unless settings.show_second_image == false or second_image == blank %}          
