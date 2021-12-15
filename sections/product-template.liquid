@@ -58,9 +58,9 @@
                   <img class="responsive-image__image lazyload" src="{{media | img_url: 'master'}}" data-src="" data-sizes="auto" alt="{{ media.preview_image.alt | escape }}">
                 </a>
                   {%- when 'external_video' -%}
-                  {{media | external_video_tag}}
+                  {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
                   {%- when 'video' -%}
-                  {{ media | video_tag : controls: true}}
+                  {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
                   {%- when 'model' -%}
                   {{media | model_viewer_tag }}
                   {%- endcase -%}
