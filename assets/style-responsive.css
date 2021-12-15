@@ -1824,6 +1824,9 @@
   	.single__product__right {
   	padding-top:20px;
     }
+  .single__product__right.sidebar-fixed {
+    position: unset;
+}
   .single__product__right .product-content-tabs.sidebar-content {
     margin-bottom: 15px;
     border-bottom: 10px solid #e7e7e7;
