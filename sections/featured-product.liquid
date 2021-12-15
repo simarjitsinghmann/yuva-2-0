@@ -11,7 +11,7 @@
             {% unless product == empty %}          
             <img src="{{product.featured_image.src | img_url:'master'}}" alt="">
             {%else%}
-            {{ 'placeholder.svg' | asset_url }}
+            {{ 'placeholder.svg' | asset_url | img_tag }}
             {%endunless%}
           </div>
         </div>
