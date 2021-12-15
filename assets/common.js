@@ -562,6 +562,8 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
                 }
               }
               else{
+                var imageSource = _productParent.getElementById("media-"+image);
+                console.log(imageSource)
 
               }
             }
