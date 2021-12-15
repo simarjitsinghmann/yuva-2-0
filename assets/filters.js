@@ -67,7 +67,7 @@ function applyFilters(){
     });
   });  
 
-  showMultipleOptions = function(){
+ 	showMultipleOptions = function(){
     var showOptions = document.getElementsByClassName('showOptions');
     if(showOptions){		
       Array.from(showOptions).forEach(function(option) {
@@ -96,40 +96,39 @@ function hideOptions(){
   });
 }
 }
-showMultipleOptions(); 
+	showMultipleOptions(); 
 
-var layouts = section.querySelectorAll('a.btn-layout');
-Array.from(layouts).forEach(function(layout) {
-  layout.addEventListener("click", ()=>{	
-                          var _thisLayout = layout.dataset.value;
-                          section.setAttribute('data-view',_thisLayout)
-});
-}); 
+    var layouts = section.querySelectorAll('a.btn-layout');
+    Array.from(layouts).forEach(function(layout) {
+      layout.addEventListener("click", ()=>{	
+                              var _thisLayout = layout.dataset.value;
+                              section.setAttribute('data-view',_thisLayout)
+    });
+    }); 
 
-var sortMenu = document.getElementById('toolbox-sort');
-console.log(sortMenu)
-if(sortMenu){
-  sortMenu.addEventListener("click", ()=>{	
-                            var sortMenu = document.getElementById('sort__list');
-  if(sortMenu.classList.contains('active')){
-    if(window.innerWidth > 767){
-      sortMenu.style.display = 'none';
-    }else{
-      sortMenu.classList.remove('active');
-      document.querySelector('body').classList.remove('open-filter-sort');
+    var sortMenu = document.getElementById('toolbox-sort');
+    if(sortMenu){
+      sortMenu.addEventListener("click", ()=>{	
+                                var sortMenu = document.getElementById('sort__list');
+      if(sortMenu.classList.contains('active')){
+        if(window.innerWidth > 767){
+          sortMenu.style.display = 'none';
+        }else{
+          sortMenu.classList.remove('active');
+          document.querySelector('body').classList.remove('open-filter-sort');
+        }
+      }
+      else{
+
+        if(window.innerWidth > 767){
+          sortMenu.style.display = 'block';
+        }else{
+          sortMenu.classList.add('active');
+          document.querySelector('body').classList.add('open-filter-sort');
+        }
+      }
+    });
     }
-  }
-  else{
-
-    if(window.innerWidth > 767){
-      sortMenu.style.display = 'block';
-    }else{
-      sortMenu.classList.add('active');
-      document.querySelector('body').classList.add('open-filter-sort');
-    }
-  }
-});
-}
 var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
 Array.from(priceRangeBars).forEach(function(rangeBar) {
   var el = rangeBar;
