@@ -19,6 +19,7 @@
           {% unless section.settings.product == blank %}
           {% include 'product-form' %}
             {%else%}
+          <h4>{{'products.product.onboarding_product_text' | t}}</h4>
           {% endunless %}
         </div>
       </div>
