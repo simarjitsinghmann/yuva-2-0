@@ -28,14 +28,14 @@
     var cancelFiltes = document.getElementById('cancelFilters');
     cancelFiltes.addEventListener("click", ()=>{	
                                   filters.classList.remove('active')
-      document.querySelector('body').classList.remove('open-filter-sort');
+    document.querySelector('body').classList.remove('open-filter-sort');
   });
 }
  }
- 
+
  window.addEventListener('load', (event) => {
- changeGridLayout();
-hideShowFilters();
+  changeGridLayout();
+  hideShowFilters();
 });
 window.addEventListener('resize', function(event){
   changeGridLayout();
@@ -184,8 +184,8 @@ else{
 var sortBy = section.querySelectorAll('[name="sort_by"]');
 Array.from(sortBy).forEach(function(sort) {
   sort.addEventListener("click", ()=>{	
-  console.log('test',sort)
-                        getFilterData(filterForm,sort,sectionId);
+                        console.log('test',sort)
+  getFilterData(filterForm,sort,sectionId);
 });
 });   
 
@@ -218,12 +218,12 @@ function getFilterData(filterForm,input,sectionId,remove){
   then((responseText) => {
     const resultData = new DOMParser().parseFromString(responseText, 'text/html');
     var itemResultCount = resultData.getElementsByClassName('filter-total-result');
-      document.getElementById('CollectionProductsContainer').innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
-     
-      //        var focusedElement =document.getElementById(input.getAttribute('id'));
-      //        focusedElement.scrollIntoView()
-      applyFilters();
-     history.pushState({}, null, _updateUrl);
+    document.getElementById('CollectionProductsContainer').innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
+
+    //        var focusedElement =document.getElementById(input.getAttribute('id'));
+    //        focusedElement.scrollIntoView()
+    applyFilters();
+    history.pushState({}, null, _updateUrl);
   });
 }
 applyFilters();
