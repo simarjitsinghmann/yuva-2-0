@@ -142,6 +142,7 @@
             </div>
           </div>
           {%- endif -%}
+          {%- if productResults -%}
       <ul class="grid grid--5-col-desktop grid--3-col-tablet grid--2-col grid--one-third-max grid--quarter-max negative-margin product-grid result_product" 
           role="list">
         {%- for item in search.results  -%}
@@ -157,6 +158,10 @@
       {%- if paginate.pages > 1 -%}
       {% render 'pagination', paginate: paginate %}
       {%- endif -%}
+          {%- else -%}
+    {% render 'not-found'  item:'Product'%}
+          {%- endif -%}
+          
           </div>
     {% endpaginate %}
         </div>
