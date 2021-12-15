@@ -107,21 +107,18 @@
           </div>
         <div class="searchProductcontainer">
     {% paginate search.results by 25 %}
-
-          <div class="toolbox-item toolbox-layout">
-            <div class="filter-actions">
-                {%- for filter in search.filters -%}
+			{%- capture activeFilter -%}
+          {%- for filter in search.filters -%}
                 {%- for value in filter.active_values -%}
-                {% assign active = active | plus:1 %}
                 <a class="select-item" href="{{ value.url_to_remove }}">
                   {{ value.label | escape }}
                   <span class="close">
-                    {% render 'icon-cross' %}
+                    {%- render 'icon-cross' -%}
                   </span>
                 </a>
                 {%- endfor -%}
 
-                {% if filter.type == "price_range" %}
+                {%- if filter.type == "price_range" -%}
                 {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}                             
                 {% assign active = active | plus:1 %}
                 <a class="select-item" href="{{ filter.url_to_remove }}">
@@ -131,8 +128,11 @@
                   </span>
                 </a>
                 {%- endif -%}
-                {% endif %}
+                {%- endif -%}
                 {%- endfor -%}
+          {%- endcapture -%}
+          <div class="toolbox-item toolbox-layout">
+            <div class="filter-actions">
               <a href="{{'?q=' | append: search.terms | escape | append: '&options%5Bprefix%5D=last'}}" class="select-item filter-clean text-primary">{{ 'sections.collection_template.clear_all' | t }}</a>
             </div>
           </div>
