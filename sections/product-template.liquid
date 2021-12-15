@@ -37,7 +37,7 @@
                   </div>
                   {%- when 'video' -%}
                   <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
-                <a href="{{video_source}}" {{media | video_url | link}} class="image-popup-link" data-fancybox="gallery{{section.id}}">
+                <a href="{{video_source.url}}" {{media | video_url | link}} class="image-popup-link" data-fancybox="gallery{{section.id}}">
                   {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
                 </a>
                   </div>
