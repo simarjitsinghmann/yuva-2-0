@@ -65,15 +65,9 @@
                   {%- when 'video' -%}
                   {{ media | media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: true}}
                   {%- when 'model' -%}
-                  
+                  {{media | media_tag: image_size: "2048x", toggleable: true}}
                   {%- endcase -%}
                 </a>
-      when 'video'
-        echo
-      when 'model'
-        echo media | media_tag: image_size: "2048x", toggleable: true
-      endcase
-    -%}
               </li>
               {%-endunless-%}
               {%-endfor-%}
