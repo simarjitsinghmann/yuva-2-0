@@ -563,7 +563,12 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
               }
               else{
                 var imageSource = _productParent.querySelector("#media-"+image);
-                console.log(imageSource)
+                if(imageSource){
+                  var imageIndex = imageSource.getAttribute('data-slick-index');
+                  var slider = _productParent.querySelector('[data-slider]');
+                  slider.slick('slickGoTo',imageIndex)
+                  console.log(imageSource)
+                }
 
               }
             }
