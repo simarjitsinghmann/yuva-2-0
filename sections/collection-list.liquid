@@ -41,7 +41,7 @@
             {% elsif block.settings.image != blank  %}
             {% assign feature_image = block.settings.image | img_url:'master' %}
             {%else%}
-            {% assign feature_image = 'collection2.svg' | asset_url %}
+            {% assign feature_image = 'placeholder.svg' | asset_url %}
             {% endif %}
             <img src="{{feature_image}}" alt="">
           </div>

@@ -21,7 +21,7 @@
                 {% elsif collection.featured_image %}
                 {% include 'lazy-image' image:collection.featured_image %}
                 {% else %}
-                <img src="{{ 'collection1.svg' | asset_url }}" />
+                <img src="{{ 'placeholder.svg' | asset_url }}" />
                 {% endif %}
 
                 <div class="list-view-content text__{{block.settings.info_position}}">          
@@ -52,7 +52,7 @@
                     {% elsif collection.featured_image %}
                     {% include 'lazy-image' image:collection.featured_image %}
                     {% else %}
-                    <img src="{{ 'collection1.svg' | asset_url }}" />
+                    <img src="{{ 'placeholder.svg' | asset_url }}" />
                     {% endif %}
 
                     <div class="list-view-content text__{{block.settings.info_position}}">          
