@@ -107,6 +107,34 @@
           </div>
         <div class="searchProductcontainer">
     {% paginate search.results by 25 %}
+
+          <div class="toolbox-item toolbox-layout">
+            <div class="filter-actions">
+                {%- for filter in search.filters -%}
+                {%- for value in filter.active_values -%}
+                {% assign active = active | plus:1 %}
+                <a class="select-item" href="{{ value.url_to_remove }}">
+                  {{ value.label | escape }}
+                  <span class="close">
+                    {% render 'icon-cross' %}
+                  </span>
+                </a>
+                {%- endfor -%}
+
+                {% if filter.type == "price_range" %}
+                {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}                             
+                {% assign active = active | plus:1 %}
+                <a class="select-item" href="{{ filter.url_to_remove }}">
+                  {%- if filter.min_value.value -%}{{ filter.min_value.value | money }}{%- else -%}{{ 0 | money }}{%- endif -%}-{%- if filter.max_value.value -%}{{ filter.max_value.value | money }}{%- else -%}{{ filter.range_max | money }}{%- endif -%}
+                  <span class="close">
+                    {% render 'icon-cross' %}
+                  </span>
+                </a>
+                {%- endif -%}
+                {% endif %}
+                {%- endfor -%}
+            </div>
+          </div>
       <ul class="grid grid--5-col-desktop grid--3-col-tablet grid--2-col grid--one-third-max grid--quarter-max negative-margin product-grid result_product" 
           role="list">
         {%- for item in search.results  -%}
