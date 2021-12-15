@@ -131,7 +131,7 @@
                 {%- endif -%}
                 {%- endfor -%}
           {%- endcapture -%}
-          {%- if activeFilters -%}
+          {%- if activeFilters != '' -%}
           <div class="toolbox-item toolbox-layout">
             <div class="filter-actions">
               {{-activeFilters-}}
