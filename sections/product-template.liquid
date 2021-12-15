@@ -59,7 +59,7 @@
                   {%- when 'external_video' -%}
                   {{media | external_video_tag}}
                   {%- when 'video' -%}
-                  {{ media | media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: true}}
+                  {{ media | video_tag : image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: true}}
                   {%- when 'model' -%}
                   {{media | media_tag: image_size: "2048x", toggleable: true}}
                   {%- endcase -%}
