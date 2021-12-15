@@ -22,13 +22,30 @@
               <div class="main-container">
                 <div class="slider slider-main" mobile-only data-slider>
                   {%- for media in product.media -%}
-                  {%-if media.media_type == 'image'-%}
+                {%-case media.media_type-%}
+                  {%- when 'image' -%}
                   <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
                     <a href="{{media | img_url: 'master'}}" class="image-popup-link" data-fancybox="gallery{{section.id}}">
                       <img class="responsive-image__image lazyload" src="{{media | img_url: 'master'}}" alt="{{ media.preview_image.alt | escape }}">
                     </a>
                   </div>
-                  {%-endif-%}
+                  {%- when 'external_video' -%}
+                  <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
+                <a href="{{media | external_video_url}}" class="image-popup-link" data-fancybox="gallery{{section.id}}">
+                  {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
+                </a>
+                  </div>
+                  {%- when 'video' -%}
+                  <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
+                <a href="{{media.video_sources.url}}" class="image-popup-link" data-fancybox="gallery{{section.id}}">
+                  {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
+                </a>
+                  </div>
+                  {%- when 'model' -%}
+                  <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
+                  {{media | model_viewer_tag }}
+                  </div>
+                  {%-endcase-%}
                   {%-endfor-%}
                 </div>
               </div>
