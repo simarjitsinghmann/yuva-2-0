@@ -58,7 +58,7 @@
                   <img class="responsive-image__image lazyload" src="{{media | img_url: 'master'}}" data-src="" data-sizes="auto" alt="{{ media.preview_image.alt | escape }}">
                 </a>
                   {%- when 'external_video' -%}
-                <a href="{{media | img_url: 'master'}}" data-type="image" data-fancybox="gallery{{section.id}}">
+                <a href="{{media | external_video_url}}" data-type="image" data-fancybox="gallery{{section.id}}">
                   {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
                 </a>
                   {%- when 'video' -%}
