@@ -2435,27 +2435,27 @@ ul.gallery-item li a > img {
    margin-top: 0px;
    margin-bottom: 25px;
 }
-.single__product__right .ask_about {
+.ask_about {
    margin-bottom: 25px;
    position: relative;
    width: 100%;
 }
-.single__product__right .ask_about a {
+.ask_about a {
    color: #757575;
    font-size: 12px;
 }
-.single__product__right .ask_about a i {
+.ask_about a i {
    margin-right: 3px;
    display: inline-block;
 }
-.single__product__right .ask_about a:hover,
-.single__product__right .ask_about a:hover i {
+.ask_about a:hover,
+.ask_about a:hover i {
    color: var(--black);
 }
 .single__product__right form {
    clear: both;
 }
-.single__product__right .askmeMain {
+.askmeMain {
    -webkit-transition: all 0.3s linear;
    -moz-transition: all 0.3s linear;
    -ms-transition: all 0.3s linear;
@@ -2472,7 +2472,7 @@ ul.gallery-item li a > img {
    opacity: 1;
 }
 
-.single__product__right .askmeMain .askmecontainer a.ask_cross {
+.askmeMain .askmecontainer a.ask_cross {
    position: absolute;
    top: -14px;
    right: -14px;
@@ -2488,30 +2488,30 @@ ul.gallery-item li a > img {
    display: inline-block;
    text-shadow: none;
 }
-.single__product__right .askmeMain .askmecontainer a.ask_cross svg {
+.askmeMain .askmecontainer a.ask_cross svg {
    fill: #ffffff;
    margin-top: 12px;
 }
-.single__product__right .askmeMain .askmecontainer .productheading {
+.askmeMain .askmecontainer .productheading {
    font-size: 20px;
    font-weight: 600;
    margin-bottom: 20px;
 }
-.single__product__right .askmeMain .askmecontainer form#contact_form {
+.askmeMain .askmecontainer form#contact_form {
    padding: 0;
    border: 1px solid #eff0f3;
    margin-top: 0;
    float: left;
    width: 100%;
 }
-.single__product__right .askmeMain form#contact_form .form-group {
+.askmeMain form#contact_form .form-group {
    margin-bottom: 11.11111px;
 }
-.single__product__right .askmeMain form#contact_form .form-group label {
+.askmeMain form#contact_form .form-group label {
    display: none;
 }
-.single__product__right .askmeMain form#contact_form .form-group textarea,
-.single__product__right .askmeMain form#contact_form .form-group input {
+.askmeMain form#contact_form .form-group textarea,
+.askmeMain form#contact_form .form-group input {
    height: 50px;
    padding: 5px 20px;
    color: #000;
@@ -2540,7 +2540,6 @@ ul.gallery-item li a > img {
    resize: none;
    padding: 15px;
 }
-.single__product__right
    .askmeMain
    .askmecontainer
    form#contact_form
