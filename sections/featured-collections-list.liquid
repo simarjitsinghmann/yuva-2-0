@@ -43,18 +43,17 @@
             <div class="row">
               {% for block in section.blocks %}
               {% unless forloop.first %}
-              {% if block.settings.collection != blank %}
               {% assign collection = block.settings.collection %}
               <div id="block-{{block.id}}" class="col-sm-12 {% if section.blocks.size > 2 %}col-md-6{% else %}col-md-12{% endif %}" {{ block.shopify_attributes }}>
                 <div class="collection-list-view-wrapper">
                   <div class="collection-list-view-card" >
-                {% if block.settings.image != blank %}
-                {% include 'lazy-image' image:block.settings.image %}
-                {% elsif collection.featured_image %}
-                {% include 'lazy-image' image:collection.featured_image %}
-                {% else %}
-                <img src="{{ 'collection1.svg' | asset_url }}" />
-                {% endif %}
+                    {% if block.settings.image != blank %}
+                    {% include 'lazy-image' image:block.settings.image %}
+                    {% elsif collection.featured_image %}
+                    {% include 'lazy-image' image:collection.featured_image %}
+                    {% else %}
+                    <img src="{{ 'collection1.svg' | asset_url }}" />
+                    {% endif %}
 
                     <div class="list-view-content text__{{block.settings.info_position}}">          
                       {% if block.settings.heading != blank %}
@@ -62,12 +61,13 @@
                       {% else %}
                       <h4>{{collection.title}}</h4>
                       {% endif %}
+                  {% if block.settings.collection != blank %}
                       <a href="{{collection.url}}" class="link">{{block.settings.btntext}}</a>
                     </div>
+              {% endif %}
                   </div>
                 </div>
               </div>
-              {% endif %}
               {% endunless %}
               {% endfor%}
             </div>
