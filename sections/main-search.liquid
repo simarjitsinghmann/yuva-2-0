@@ -88,7 +88,7 @@
       </p>
       {%- endif -%}
     </div>
-    {%- if search.performed  -%}
+    {%- if search.performed -%}
     <div class="template-search__results">
       <div class="tabs-box">
         <ul class="tabs-inner-box">
@@ -169,6 +169,7 @@
       <ul class="grid grid--5-col-desktop grid--3-col-tablet grid--2-col grid--one-third-max grid--quarter-max negative-margin product-grid result_product" role="list" 
           data-result="others"
           >
+          {%- if otherResults -%}
         {%- for item in search.results limit:50 -%}
           {%- case item.object_type -%}
           {%- when 'article' -%}
@@ -190,6 +191,9 @@
         </li>
           {%- endcase -%}
         {%- endfor -%}
+          {%- else -%}
+    {% render 'not-found'  item:'Product'%}
+          {%- endif -%}
       </ul>
         </div>
       </div>
