@@ -1838,7 +1838,6 @@
     bottom: 0;
     background: #fff;
     padding: 20px;
-    box-shadow: 0px 1px 6px #d3d3d3;
 }
   .single__product__right .ask_about {
     margin-bottom: 15px;
@@ -1859,6 +1858,13 @@
   .single__product__right .ratingbox{
   	padding:0 20px;
   }
+.single__product__right  .variant_title {
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 15px;
+    color: var(--black);
+    margin-bottom: 10px;
+}
 /*  end  */
 }
 @media screen and (max-width: 480px) {
