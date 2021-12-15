@@ -9,36 +9,15 @@
   {% else %}
   <div class="instagram-post-list">
     <ul>
+      {% for i in (1..limit) %}
       <li>
         <div class="instagram-post-detail">
-          <img src="https://yova.shinedezign.pro/assets/images/insta-post1.jpg" alt="">
+          {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+          {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
           <div class="insta-icon"><i class="fab fa-instagram"></i></div>
         </div>
       </li>
-      <li>
-        <div class="instagram-post-detail">
-          <img src="https://yova.shinedezign.pro/assets/images/insta-post2.jpg" alt="">
-          <div class="insta-icon"><i class="fab fa-instagram"></i></div>
-        </div>
-      </li>
-      <li>
-        <div class="instagram-post-detail">
-          <img src="https://yova.shinedezign.pro/assets/images/insta-post3.jpg" alt="">
-          <div class="insta-icon"><i class="fab fa-instagram"></i></div>
-        </div>
-      </li>
-      <li>
-        <div class="instagram-post-detail">
-          <img src="https://yova.shinedezign.pro/assets/images/insta-post4.jpg" alt="">
-          <div class="insta-icon"><i class="fab fa-instagram"></i></div>
-        </div>
-      </li>
-      <li>
-        <div class="instagram-post-detail">
-          <img src="https://yova.shinedezign.pro/assets/images/insta-post1.jpg" alt="">
-          <div class="insta-icon"><i class="fab fa-instagram"></i></div>
-        </div>
-      </li>
+      {% endfor %}
     </ul>
   </div>
   {% endif %}
