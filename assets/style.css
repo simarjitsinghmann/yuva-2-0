@@ -997,7 +997,10 @@ img {
    height: auto;
 }
 .shop__options .product__view__option ul li a {
-   text-decoration: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .shop__options .product__view__option li i.fa-heart {
    font-size: 20px;
