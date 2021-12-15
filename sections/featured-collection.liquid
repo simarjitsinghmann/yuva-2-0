@@ -9,19 +9,17 @@
           {% endif %}
         </h2>
       </div>
-            {% assign limit = section.settings.col_size | times : section.settings.row_size%}
-      {% if section.settings.collection != blank %}
-      {% assign collection = section.settings.collection %}
         <div class="products-grid ">
           <div class="row column-{{section.settings.col_size}} product_columns">
+            {% assign limit = section.settings.col_size | times : section.settings.row_size%}
+            {% if section.settings.collection != blank %}
+            {% assign collection = section.settings.collection %}
             {% for product in collection.products limit:limit%}
             {% include 'product-grid' %}
             {% endfor %}
-          </div>
-        </div>
-      {% else %}
-      
-          {% for i in (1..total_products) %}
+            {% else %}
+
+            {% for i in (1..limit) %}
             <div class="grid__item product medium-up--one-third small--one-half text-center">
               <a href="/admin/products" class="product__image-wrapper">
                 {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
@@ -30,8 +28,11 @@
               <div class="product__title"><a href="/admin/products">{{ 'homepage.onboarding.product_title' | t | capitalize }}</a></div>
               <div class="product__price">$19.99</div>
             </div>
-          {% endfor %}
-      {% endif%}
+            {% endfor %}
+            {% endif%}
+          </div>
+        </div>
+      
     </div>
   </div>
 </div>
