@@ -22,17 +22,21 @@
             {% for i in (1..limit) %}
             <div class="grid-item col collection-product-grid">
               <div class="card-wrapper">
-                
+
                 <div class="card card--text-only card--soft card--product text__left">
                   <div class="card-wrapper-img ">
                     {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
                     {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
                   </div>
-                  <div class="caption-with-letter-spacing light">{{ 'onboarding.product_title' | t | capitalize }}</div>
-                  <div class="price__regular">
-                    <span data-regular-price>$19.99</span>
+                  <div class="product-information">
+                    <div class="product-information__wrapper">
+                      <div class="caption-with-letter-spacing light">{{ 'onboarding.product_title' | t | capitalize }}</div>
+                      <div class="price__regular">
+                        <span data-regular-price>$19.99</span>
+                      </div>
+                    </div>
                   </div>
-              </div>
+                </div>
               </div>
             </div>
             {% endfor %}
