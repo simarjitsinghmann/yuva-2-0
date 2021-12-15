@@ -53,10 +53,10 @@
           </div>
           {% else %}
           <div class="left-product-images multiple-images">
-            <ul class="gallery-item" mobile-only data-slider>
+            <div class="gallery-item" mobile-only data-slider>
               {%- if current_variant.featured_media != null -%}
               {%- assign media = current_variant.featured_media -%}
-              <li id="media-{{media.id}}">
+              <div id="media-{{media.id}}">
                 {%-case media.media_type-%}
                   {%- when 'image' -%}
                 <a href="{{media | img_url: 'master'}}" data-fancybox="gallery{{section.id}}">
@@ -73,11 +73,11 @@
                   {%- when 'model' -%}
                   {{media | model_viewer_tag }}
                   {%- endcase -%}
-              </li>
+              </div>
               {%endif%}                         
               {%- for media in product.media -%}
               {%- unless media.id == current_variant.featured_media.id -%}
-              <li id="media-{{media.id}}">
+              <div id="media-{{media.id}}">
                   {%-case media.media_type-%}
                   {%- when 'image' -%}
                 <a href="{{media | img_url: 'master'}}" data-fancybox="gallery{{section.id}}">
@@ -94,10 +94,10 @@
                   {%- when 'model' -%}
                   {{media | model_viewer_tag }}
                   {%- endcase -%}
-              </li>
+              </div>
               {%-endunless-%}
               {%-endfor-%}
-            </ul>
+            </div>
           </div>
           {% endif %}
           {% endif %}
