@@ -105,7 +105,7 @@
           </div>
           <div id="toolbox-sort" class="toolbox-item toolbox-sort select-box">
             <ul class="" id="sort__list">
-              <li class="mobile-sort-heading"><h6>Sort By</h6>
+              <li class="mobile-sort-heading"><h6>{{ 'sections.collection_template.sort_by_label' | t }}</h6>
                 <button class="close-mobile-sort">
                   <svg class="MobileCrossSvg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50" style=" fill:#000000;"><g><path style=" " d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z "></path></g></svg>
                 </button>
@@ -117,7 +117,7 @@
               </li>
               {%- endfor -%}
             </ul>
-            <span>Sort by</span>
+            <span>{{ 'sections.collection_template.sort_by_label' | t }}</span>
             <label for="SortBy">{{sort_name}}</label>
           </div>
         </div>
