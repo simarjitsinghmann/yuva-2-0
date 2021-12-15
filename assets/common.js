@@ -566,6 +566,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
                 if(imageSource){
                   var imageIndex = imageSource.getAttribute('data-slick-index');
                   var slider = _productParent.querySelector('[data-slider]');
+                  slider =  new DOMParser().parseFromString(slider, 'text/html');
                   console.log(imageIndex,slider)
                 }
 
