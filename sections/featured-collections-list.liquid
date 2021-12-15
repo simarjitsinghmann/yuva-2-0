@@ -61,9 +61,9 @@
                       {% else %}
                       <h4>{{collection.title}}</h4>
                       {% endif %}
-                  {% if block.settings.collection != blank %}
+                      {% if block.settings.collection != blank %}
                       <a href="{{collection.url}}" class="link">{{block.settings.btntext}}</a>
-              {% endif %}
+                      {% endif %}
                     </div>
                   </div>
                 </div>
@@ -202,9 +202,6 @@
     {
       "name": "t:sections.featured-collections-list.presets.name",
       "blocks": [
-        {
-          "type": "collection"
-        },
         {
           "type": "collection"
         },
