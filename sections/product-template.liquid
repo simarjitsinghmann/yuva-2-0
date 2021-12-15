@@ -88,10 +88,7 @@
                   {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
                 </a>
                   {%- when 'video' -%}
-                {% for source in media.sources %}
-                {{source.url}}<br>
-                {% endfor %}
-                <a href="{{media.sources[0].url}}" data-fancybox="gallery{{section.id}}">zoom
+                <a href="{{media.sources[1].url}}" data-fancybox="gallery{{section.id}}">zoom
                 </a>
                   {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
                   {%- when 'model' -%}
