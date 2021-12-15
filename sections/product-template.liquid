@@ -52,22 +52,24 @@
               {%- for media in product.media -%}
               {%- unless media.id == current_variant.featured_media.id -%}
               <li>
-                {%-if media.media_type == 'image'-%}
                 <a href="{{media | img_url: 'master'}}" data-fancybox="gallery{{section.id}}">
+                  {%-case media.media_type-%}
+                  {%- when 'image' -%}
                   <img class="responsive-image__image lazyload" src="{{media | img_url: 'master'}}" data-src="" data-sizes="auto" alt="{{ media.preview_image.alt | escape }}">
+                  {%- when 'external_video' -%}
+                  {%- if media.host == 'youtube'-%}
+                  {{media | external_video_url: autoplay: false, loop: loop, playlist: media.external_id | external_video_tag: class: video_class, loading: "lazy"}}
+                  {%- else -%}
+                  {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
+                  {%- endif -%}
+                  {%- when 'video' -%}
+                  {{ media | media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: true}}
+                  {%- when 'model' -%}
+                  
+                  {%- endcase -%}
                 </a>
-                {%-endif-%}
-                {%- liquid
-      case media.media_type
-      when 'external_video'
-        assign video_class = 'js-' | append: media.host
-        if media.host == 'youtube'
-          echo media | external_video_url: autoplay: false, loop: loop, playlist: media.external_id | external_video_tag: class: video_class, loading: "lazy"
-        else
-          echo media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"
-        endif
       when 'video'
-        echo media | media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: true
+        echo
       when 'model'
         echo media | media_tag: image_size: "2048x", toggleable: true
       endcase
