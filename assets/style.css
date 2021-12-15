@@ -2161,6 +2161,9 @@ ul.gallery-item li a > img {
 .product_button .shopify-payment-button__button:hover {
 	background-color:transparent;
 }
+.pdp-action-container.disabled .shopify-payment-button {
+	display:none;
+}
 .buy_now.button {
    min-width: 208px;
    background-color: #333333;
