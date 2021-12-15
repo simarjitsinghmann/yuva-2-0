@@ -1990,6 +1990,9 @@ ul.gallery-item li a > img {
    width: 50%;
    padding: 0 3px 6px;
 }
+.left-product-images.multiple-images ul.gallery-item li a{
+	display:block !important;
+}
 .left-product-images.multiple-images ul.gallery-item li:first-child {
    flex-grow: 1;
 }
