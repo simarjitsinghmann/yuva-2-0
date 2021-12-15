@@ -1,12 +1,14 @@
 <div class="section-spacer">
   {%- capture image_content -%}
-  {%- if section.settings.image != blank -%}
   <div class="col-12 col-sm-12 col-md-6">
     <div class="left-img-content">
-      <img src="{{section.settings.image | img_url:'master'}}" alt="{{section.settings.image.alt | default:shop.name}}" />
+  {%- if section.settings.image != blank -%}
+      {% include 'lazy-image' image:section.settings.image %}
+  {%- else -%}
+      <img src="{{'placeholder.svg' | asset_url}}" alt="{{shop.name}}" />
+  {%- endif -%}
     </div>
   </div>
-  {%- endif -%}
   {%- endcapture -%}
   <div class="container">
     <div class="inner-container">
