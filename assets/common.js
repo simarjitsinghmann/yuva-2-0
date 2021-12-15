@@ -562,7 +562,7 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
                 }
               }
               else{
-                var imageSource = _productParent.getElementById("media-"+image);
+                var imageSource = _productParent.querySelector("#media-"+image);
                 console.log(imageSource)
 
               }
