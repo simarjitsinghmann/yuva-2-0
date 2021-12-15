@@ -8,8 +8,8 @@
       <div class="row">
         <div class="col-md-7">
           <div class="product-image-left">
-            {% unless product == empty %}          
-            <img src="{{product.featured_image.src | img_url:'master'}}" alt="">
+            {% unless product == empty %}   
+      {% include 'lazy-image' image:product.featured_image.src %}  
             {%else%}
             {{ 'placeholder.svg' | asset_url | img_tag }}
             {%endunless%}
