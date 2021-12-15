@@ -52,18 +52,24 @@
               {%- for media in product.media -%}
               {%- unless media.id == current_variant.featured_media.id -%}
               <li>
-                <a href="{{media | img_url: 'master'}}" data-fancybox="gallery{{section.id}}">
                   {%-case media.media_type-%}
                   {%- when 'image' -%}
+                <a href="{{media | img_url: 'master'}}" data-fancybox="gallery{{section.id}}">
                   <img class="responsive-image__image lazyload" src="{{media | img_url: 'master'}}" data-src="" data-sizes="auto" alt="{{ media.preview_image.alt | escape }}">
-                  {%- when 'external_video' -%}
-                  {{media | external_video_tag}}
-                  {%- when 'video' -%}
-                  {{ media | video_tag : controls: true}}
-                  {%- when 'model' -%}
-                  {{media | model_viewer_tag }}
-                  {%- endcase -%}
                 </a>
+                  {%- when 'external_video' -%}
+                <a href="{{media | img_url: 'master'}}" data-fancybox="gallery{{section.id}}">
+                  {{media | external_video_tag}}
+                </a>
+                  {%- when 'video' -%}
+                <a href="{{media | img_url: 'master'}}" data-fancybox="gallery{{section.id}}">
+                  {{ media | video_tag : controls: true}}
+                </a>
+                  {%- when 'model' -%}
+                <a href="{{media | img_url: 'master'}}" data-fancybox="gallery{{section.id}}">
+                  {{media | model_viewer_tag }}
+                </a>
+                  {%- endcase -%}
               </li>
               {%-endunless-%}
               {%-endfor-%}
