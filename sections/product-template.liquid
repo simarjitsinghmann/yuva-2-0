@@ -56,7 +56,7 @@
             <ul class="gallery-item" mobile-only data-slider>
               {%- if current_variant.featured_media != null -%}
               {%- assign media = current_variant.featured_media -%}
-              <li>
+              <li id="media-{{media.id}}">
                 {%-case media.media_type-%}
                   {%- when 'image' -%}
                 <a href="{{media | img_url: 'master'}}" data-fancybox="gallery{{section.id}}">
@@ -77,7 +77,7 @@
               {%endif%}                         
               {%- for media in product.media -%}
               {%- unless media.id == current_variant.featured_media.id -%}
-              <li>
+              <li id="media-{{media.id}}">
                   {%-case media.media_type-%}
                   {%- when 'image' -%}
                 <a href="{{media | img_url: 'master'}}" data-fancybox="gallery{{section.id}}">
