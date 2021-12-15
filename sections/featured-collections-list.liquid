@@ -13,7 +13,6 @@
           <div class="col-sm-12 col-md-6">
           {% for block in section.blocks %}
           {% if forloop.first %}
-          {% if block.settings.collection != blank %}
           {% assign collection = block.settings.collection %}
             <div class="collection-list-view-wrapper" id="block-{{block.id}}"  {{ block.shopify_attributes }}>
               <div class="collection-list-view-card" >
@@ -33,7 +32,6 @@
                 </div>
               </div>
             </div>
-          {% endif %}
           {% endif %}
           {% endfor%}
           </div>
