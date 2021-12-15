@@ -823,6 +823,9 @@ slickSlider = function(selector,slideIndex){
   if(optionContainer){
     var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
     var options = JSON.parse(html);
+    if(selector.hasAttr('mobile-only')){
+    
+    }
     if(slideIndex){
       selector.slick(options).slick('slickGoTo',slideIndex);
     }
