@@ -10,7 +10,6 @@
   <div class="instagram-post-list">
     <ul id="instafeed">
       {% for i in (1..6) %}
-      {{i}}
       <li>
         <div class="instagram-post-detail">
           {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
