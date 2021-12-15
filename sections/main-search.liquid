@@ -89,7 +89,6 @@
       {%- endif -%}
     </div>
     {%- if search.performed and search.results.size > 0 -%}
-    {% paginate search.results by 25 %}
     <div class="template-search__results">
       <div class="tabs-box">
         <ul class="tabs-inner-box">
@@ -106,10 +105,12 @@
           <div class="searchresultFilter">
           {% include 'collection-sidebar' results:search %}
           </div>
+        
+    {% paginate search.results by 25 %}
       <ul class="grid grid--5-col-desktop grid--3-col-tablet grid--2-col grid--one-third-max grid--quarter-max negative-margin product-grid result_product" role="list" 
           
           >
-        {%- for item in search.results limit:50 -%}
+        {%- for item in search.results  -%}
           {%- case item.object_type -%}
           {%- when 'product' -%}
         <li class="grid__item search_result_items product_item">
@@ -119,6 +120,10 @@
           {%- endcase -%}
         {%- endfor -%}
       </ul>
+      {%- if paginate.pages > 1 -%}
+      {% render 'pagination', paginate: paginate %}
+      {%- endif -%}
+    {% endpaginate %}
         </div>
         <div class="otherResultContainer">
       <ul class="grid grid--5-col-desktop grid--3-col-tablet grid--2-col grid--one-third-max grid--quarter-max negative-margin product-grid result_product" role="list" 
@@ -148,11 +153,7 @@
       </ul>
         </div>
       </div>
-      {%- if paginate.pages > 1 -%}
-      {% render 'pagination', paginate: paginate %}
-      {%- endif -%}
     </div>
-    {% endpaginate %}
     {%- endif -%}
   </div>
 </div>
