@@ -89,8 +89,8 @@
                 </a>
                   {%- when 'video' -%}
                 <a href="{{media.video_sources.url}}" data-fancybox="gallery{{section.id}}">zoom
-                </a>
                   {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
+                </a>
                   {%- when 'model' -%}
                   {{media | model_viewer_tag }}
                   {%- endcase -%}
