@@ -159,7 +159,7 @@
       {% render 'pagination', paginate: paginate %}
       {%- endif -%}
           {%- else -%}
-    {% render 'not-found'  item:'Product'%}
+    {% render 'not-found'%}
           {%- endif -%}
           
           </div>
@@ -192,7 +192,7 @@
           {%- endcase -%}
         {%- endfor -%}
           {%- else -%}
-    {% render 'not-found'  item:'Product'%}
+    {% render 'not-found'%}
           {%- endif -%}
       </ul>
         </div>
