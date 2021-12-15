@@ -216,9 +216,9 @@ function getFilterData(filterForm,input,sectionId,remove){
   then((responseText) => {
     const resultData = new DOMParser().parseFromString(responseText, 'text/html');
     var itemResultCount = resultData.getElementsByClassName('filter-total-result');
-    document.getElementById('CollectionProductsContainer').innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
-
-
+    if(resultData.getElementById('CollectionProductsContainer')){
+      document.getElementById('CollectionProductsContainer').innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
+    }
     history.pushState({}, null, _updateUrl);
     //        var focusedElement =document.getElementById(input.getAttribute('id'));
     //        focusedElement.scrollIntoView()
