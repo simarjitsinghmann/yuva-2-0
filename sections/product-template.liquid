@@ -58,15 +58,15 @@
                   <img class="responsive-image__image lazyload" src="{{media | img_url: 'master'}}" data-src="" data-sizes="auto" alt="{{ media.preview_image.alt | escape }}">
                 </a>
                   {%- when 'external_video' -%}
-                <a href="{{media }}" data-type="iframe" data-fancybox="gallery{{section.id}}">
+                <a href="{{media.src }}" data-type="iframe" data-fancybox="gallery{{section.id}}">
                   {{media | external_video_tag}}
                 </a>
                   {%- when 'video' -%}
-                <a href="{{media }}" data-type="video" data-fancybox="gallery{{section.id}}">
+                <a href="{{media.url }}" data-type="video" data-fancybox="gallery{{section.id}}">
                   {{ media | video_tag : controls: true}}
                 </a>
                   {%- when 'model' -%}
-                <a href="{{media}}"  data-type="model" data-fancybox="gallery{{section.id}}">
+                <a href="{{media.url}}"  data-type="model" data-fancybox="gallery{{section.id}}">
                   {{media | model_viewer_tag }}
                 </a>
                   {%- endcase -%}
@@ -249,7 +249,6 @@
 <script>
   $(document).ready(function(){
     $('[data-fancybox="gallery{{section.id}}"]').fancybox({
-      type:$('[data-fancybox="gallery{{section.id}}"]'),
       buttons : [ 
       'close'
       ],
