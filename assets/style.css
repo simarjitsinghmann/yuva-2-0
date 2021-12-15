@@ -3897,10 +3897,12 @@ main .shopify-section.cstm-cart-sec {
 .commented-by span {
 	color: var(--dark-gray);
 }
-.commented-by span:first-child{
+.commented-by span:first-child {
     padding-right: 7px;
     border-right: 1px solid var(--gray);
     margin-right: 5px;
+    color: var(--black);
+    font-weight: bold;
 }
 .relatedBlogPosts {
    background-color: var(--white);
