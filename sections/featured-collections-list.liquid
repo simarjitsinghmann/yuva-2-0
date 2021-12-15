@@ -17,9 +17,9 @@
             <div class="collection-list-view-wrapper" id="block-{{block.id}}"  {{ block.shopify_attributes }}>
               <div class="collection-list-view-card" >
                 {% if block.settings.image != blank %}
-                <img src="{{ block.settings.image | img_url:'master'}}" />
+                {% include 'lazy-image' image:block.settings.image %}
                 {% elsif collection.featured_image %}
-                <img src="{{ collection.featured_image | img_url:'master'}}" />
+                {% include 'lazy-image' image:collection.featured_image %}
                 {% else %}
                 <img src="{{ 'collection1.svg' | asset_url }}" />
                 {% endif %}
@@ -48,11 +48,13 @@
               <div id="block-{{block.id}}" class="col-sm-12 {% if section.blocks.size > 2 %}col-md-6{% else %}col-md-12{% endif %}" {{ block.shopify_attributes }}>
                 <div class="collection-list-view-wrapper">
                   <div class="collection-list-view-card" >
-                    {% if block.settings.image != blank %}
-                    <img src="{{ block.settings.image | img_url:'master'}}" />
-                    {% else %}
-                    <img src="{{ collection.featured_image | img_url:'master'}}" />
-                    {% endif %}
+                {% if block.settings.image != blank %}
+                {% include 'lazy-image' image:block.settings.image %}
+                {% elsif collection.featured_image %}
+                {% include 'lazy-image' image:collection.featured_image %}
+                {% else %}
+                <img src="{{ 'collection1.svg' | asset_url }}" />
+                {% endif %}
 
                     <div class="list-view-content text__{{block.settings.info_position}}">          
                       {% if block.settings.heading != blank %}
