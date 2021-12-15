@@ -112,7 +112,7 @@
               </li>
               {%- for option in collection.sort_options -%}
               <li class="{% if option.value == sort_by %}selected{%- assign sort_name = option.name | escape  -%}{% endif %}" value="{{ option.name | escape }}">
-                <input type="radio" name="sort_by" value="{{ option.value | escape }}" data-name="{{ option.name | escape }}" form="FiltersForm"{% if option.value == sort_by %}checked{% endif %} hidden/>
+                <input type="radio" name="sort_by" value="{{ option.value | escape }}" data-name="{{ option.name | escape }}" form="FiltersForm"{% if option.value == sort_by %}checked{% endif %}/>
                 {{ option.name | escape }}
               </li>
               {%- endfor -%}
