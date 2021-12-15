@@ -66,7 +66,7 @@
                   {{ media | video_tag : controls: true}}
                 </a>
                   {%- when 'model' -%}
-                <a href="{{media.url}}"  data-type="model" data-fancybox="gallery{{section.id}}">
+                <a href="{{media | model_viewer_url}}"  data-type="model" data-fancybox="gallery{{section.id}}">
                   {{media | model_viewer_tag }}
                 </a>
                   {%- endcase -%}
