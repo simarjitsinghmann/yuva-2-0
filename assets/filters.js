@@ -129,57 +129,58 @@ function hideOptions(){
       }
     });
     }
-var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
-Array.from(priceRangeBars).forEach(function(rangeBar) {
-  var el = rangeBar;
-  var sliderEventListener = noUiSlider.create(el, {
-    start: [el.dataset.start, el.dataset.end],
-    connect: true,
-    tooltips: false,
-    range: {
-      min: [parseInt(el.dataset.min)],
-      max: [parseInt(el.dataset.max)]
-    }
-  });
-  if(window.innerWidth > 767){
-    sliderEventListener.on('change',  function(values){
-      getFilterData(filterForm,rangeBar,sectionId);
+    var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
+    Array.from(priceRangeBars).forEach(function(rangeBar) {
+      var el = rangeBar;
+      var sliderEventListener = noUiSlider.create(el, {
+        start: [el.dataset.start, el.dataset.end],
+        connect: true,
+        tooltips: false,
+        range: {
+          min: [parseInt(el.dataset.min)],
+          max: [parseInt(el.dataset.max)]
+        }
+      });
+      if(window.innerWidth > 767){
+        sliderEventListener.on('change',  function(values){
+          getFilterData(filterForm,rangeBar,sectionId);
+        })
+      }
+      sliderEventListener.on("update", function(values){
+        var minVal =  parseInt(values[0]);
+        var newformatMoney = moneyFormat;
+        section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = minVal;
+        section.querySelector('[data-min-value]').innerHTML =  Shopify.formatMoney(minVal*100,moneyFormat);
+        var maxVal =  parseInt(values[1]);
+        section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = maxVal;
+        section.querySelector('[data-max-value]').innerHTML = Shopify.formatMoney(maxVal*100,moneyFormat);
+      })
     })
-  }
-  sliderEventListener.on("update", function(values){
-    var minVal =  parseInt(values[0]);
-    var newformatMoney = moneyFormat;
-    section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = minVal;
-    section.querySelector('[data-min-value]').innerHTML =  Shopify.formatMoney(minVal*100,moneyFormat);
-    var maxVal =  parseInt(values[1]);
-    section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = maxVal;
-    section.querySelector('[data-max-value]').innerHTML = Shopify.formatMoney(maxVal*100,moneyFormat);
-  })
-})
 
 
-if(window.innerWidth > 767){
+    if(window.innerWidth > 767){
 
-  var prices = filterForm.querySelectorAll('input[type=number]');
-  Array.from(prices).forEach(function(price) {
-    price.addEventListener("change", ()=>{	
-                           getFilterData(filterForm,price,sectionId)
-  });
-});  
+      var prices = filterForm.querySelectorAll('input[type=number]');
+      Array.from(prices).forEach(function(price) {
+        price.addEventListener("change", ()=>{	
+                               getFilterData(filterForm,price,sectionId)
+      });
+    });  
 
-var inputs = filterForm.querySelectorAll('input[type=checkbox]');
-Array.from(inputs).forEach(function(input) {
-  input.addEventListener("click", ()=>{	
-                         getFilterData(filterForm,input,sectionId)
-});
-});
+    var inputs = filterForm.querySelectorAll('input[type=checkbox]');
+    Array.from(inputs).forEach(function(input) {
+      input.addEventListener("click", ()=>{	
+                             getFilterData(filterForm,input,sectionId)
+    });
+    });
 }
-else{
-  filterForm.addEventListener("submit", (e)=>{
-    e.preventDefault();
-    getFilterData(filterForm,filterForm,sectionId)
-  });
-}
+    else{
+      filterForm.addEventListener("submit", (e)=>{
+        e.preventDefault();
+        getFilterData(filterForm,filterForm,sectionId)
+      });
+    }
+
 var sortBy = section.querySelectorAll('[name="sort_by"]');
 Array.from(sortBy).forEach(function(sort) {
   sort.addEventListener("click", ()=>{	
@@ -187,7 +188,6 @@ Array.from(sortBy).forEach(function(sort) {
   getFilterData(filterForm,sort,sectionId);
 });
 });   
-
 var removeFilters = section.querySelectorAll('a.select-item');
 Array.from(removeFilters).forEach(function(removeFilter) {
   removeFilter.addEventListener("click", (e)=>{	
