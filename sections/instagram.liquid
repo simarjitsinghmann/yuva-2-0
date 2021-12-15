@@ -6,25 +6,57 @@
   </div>
   {% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
   <div class="instagram-post-list"><ul id="instafeed"></ul></div>
+  {% else %}
+  <div class="instagram-post-list">
+    <ul>
+      <li>
+        <div class="instagram-post-detail">
+          <img src="https://yova.shinedezign.pro/assets/images/insta-post1.jpg" alt="">
+          <div class="insta-icon"><i class="fab fa-instagram"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="instagram-post-detail">
+          <img src="https://yova.shinedezign.pro/assets/images/insta-post2.jpg" alt="">
+          <div class="insta-icon"><i class="fab fa-instagram"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="instagram-post-detail">
+          <img src="https://yova.shinedezign.pro/assets/images/insta-post3.jpg" alt="">
+          <div class="insta-icon"><i class="fab fa-instagram"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="instagram-post-detail">
+          <img src="https://yova.shinedezign.pro/assets/images/insta-post4.jpg" alt="">
+          <div class="insta-icon"><i class="fab fa-instagram"></i></div>
+        </div>
+      </li>
+      <li>
+        <div class="instagram-post-detail">
+          <img src="https://yova.shinedezign.pro/assets/images/insta-post1.jpg" alt="">
+          <div class="insta-icon"><i class="fab fa-instagram"></i></div>
+        </div>
+      </li>
+    </ul>
+  </div>
   {% endif %}
 </div>
 </div>
 
 {% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
 <script>
-  function instagramFeed(){
-    var userFeed = new Instafeed({
-      get: 'user',
-      userId: '{{ section.settings.insta_user_id}}',
-      accessToken: '{{ section.settings.insta_access_Token}}',
-      limit: 6,
-      resolution : 'standard_resolution',
-      template:'<li><a href="{% raw %}{{link}}{% endraw %}"><div class="instagram-post-detail"><img src="{% raw %}{{image}}{% endraw %}" alt=""><div class="insta-icon"><i class="fab fa-instagram"></i></div></div></a></li>'
-    });
-    userFeed.run();
-    setTimeout(function(){ $('#instafeed a').attr('target','_blank'); }, 1000);
-  }
-  instagramFeed();
+  var userFeed = new Instafeed({
+    get: 'user',
+    userId: '{{ section.settings.insta_user_id}}',
+    accessToken: '{{ section.settings.insta_access_Token}}',
+    limit: 6,
+    resolution : 'standard_resolution',
+    template:'<li><a href="{% raw %}{{link}}{% endraw %}"><div class="instagram-post-detail"><img src="{% raw %}{{image}}{% endraw %}" alt=""><div class="insta-icon"><i class="fab fa-instagram"></i></div></div></a></li>'
+  });
+  userFeed.run();
+  setTimeout(function(){ $('#instafeed a').attr('target','_blank'); }, 1000);
 </script>
 {% endif %}
 <style>
