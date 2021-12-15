@@ -1887,6 +1887,11 @@
   .selling_plan_wrapper {
     padding-bottom: 0;
 }
+.left-product-images.multiple-images .gallery-item .responsive-image__image{
+    min-height: 300px;
+    overflow: hidden;
+    max-height: 600px;
+}
 /*  end  */
 }
 @media screen and (max-width: 480px) {
