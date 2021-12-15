@@ -53,7 +53,8 @@
     });
     userFeed.run();
     setTimeout(function(){ 
-      $('#instafeed a').attr('target','_blank');                 
+      $('#instafeed a').attr('target','_blank');    
+      slickSlider($('#instafeed'))
                          }, 1000);
   }
   instagramFeed();
