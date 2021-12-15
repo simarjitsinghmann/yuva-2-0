@@ -183,6 +183,7 @@ else{
 }
 var sortBy = section.querySelectorAll('[name="sort_by"]');
 Array.from(sortBy).forEach(function(sort) {
+  console.log(sort)
   sort.addEventListener("click", ()=>{	
                         getFilterData(filterForm,sort,sectionId);
 });
