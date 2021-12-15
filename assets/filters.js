@@ -107,6 +107,7 @@ Array.from(layouts).forEach(function(layout) {
 }); 
 
 var sortMenu = document.getElementById('toolbox-sort');
+console.log(sortMenu)
 if(sortMenu){
   sortMenu.addEventListener("click", ()=>{	
                             var sortMenu = document.getElementById('sort__list');
