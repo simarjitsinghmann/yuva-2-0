@@ -18,8 +18,10 @@
               <div class="collection-list-view-card" >
                 {% if block.settings.image != blank %}
                 <img src="{{ block.settings.image | img_url:'master'}}" />
-                {% else %}
+                {% elsif collection.featured_image %}
                 <img src="{{ collection.featured_image | img_url:'master'}}" />
+                {% else %}
+                <img src="{{ 'collection1.svg' | asset_url }}" />
                 {% endif %}
 
                 <div class="list-view-content text__{{block.settings.info_position}}">          
