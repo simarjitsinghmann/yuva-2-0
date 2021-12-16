@@ -106,7 +106,9 @@
           <img src="{{block.settings[image] | img_url:'master'}}" style="width:100%"  class="menu-image">
           <div class="menu-content">
             <h4>{{block.settings[heading]}}</h4>
+            {% if block.settings[newLink] != blank and block.settings[button] != blank %}
             <a href="{{block.settings[newlink]}}" class="link">{{block.settings[button]}}</a>
+            {% endif %}
           </div>
         </div>
       </div>
