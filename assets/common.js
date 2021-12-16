@@ -961,8 +961,10 @@ $(document).ready(function()
                   {
   $('#toolbox-sort,.side_drawer_wrapper,.askmecontainer,.search-bar-container,.search-form,.newsletter-popup-inner,.side-menu').hover(function(){ 
     mouse_is_inside=true; 
+    console.log(mouse_is_inside)
   }, function(){ 
     mouse_is_inside=false; 
+    console.log(mouse_is_inside)
   });
 
   $("body").mouseup(function(){ 
