@@ -1374,17 +1374,17 @@ header {
    width: 100%;
 }
 .results-box .result-list {
-   margin: 0 -4px;
+    margin: 0 -5px;
+    display: flex;
+    overflow-y: auto;
+    flex-wrap: nowrap;
 }
 .results-box .result-list .searc-item-box {
-   float: left;
-   text-align: left;
-   margin: 0 0px 20px;
-   align-items: center;
-   flex-wrap: wrap;
-   width: 16.66%;
-   padding: 0 4px;
-   text-decoration: none;
+    text-align: left;
+    margin: 0 0 20px;
+    align-items: center;
+    max-width: 16.66%;
+    padding: 0 5px;
 }
 .results-box .result-list .searc-item-box .card-wrapper-img {
    min-height: 280px;
