@@ -1650,6 +1650,20 @@
     max-height: 200px;
   }
   /* ============ recent product css end =============== */
+  /*============= similar product drawer css start ===========*/
+  .side_drawer_wrapper.similar_product {
+    height: auto;
+    top: unset;
+    bottom: 0;
+}
+  .side_drawer_body {
+    height: auto;
+}
+  .results-similarGrid {
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+  /*============= similar product drawer css start ===========*/
 }
 @media screen and (max-width: 575px) {
   /*=============  common  start  ===============*/
