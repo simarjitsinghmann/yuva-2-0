@@ -1849,7 +1849,6 @@ li.fancybox-thumbs-loading {
     opacity: 1
 }
 
-@media (max-width: 800px) {
     .fancybox-thumbs {
         width:110px
     }
@@ -1861,8 +1860,6 @@ li.fancybox-thumbs-loading {
     .fancybox-thumbs>ul>li {
         max-width: calc(100% - 10px)
     }
-}
-@media all and (min-width: 800px) {
   .fancybox-thumbs {
     top: auto;
     width: auto;
@@ -1879,7 +1876,6 @@ li.fancybox-thumbs-loading {
     right: 0;
     bottom: 95px;
   }
-}
   
 /* 24-Nov-21 */
 .content-for-layout .customer.reset-password {
