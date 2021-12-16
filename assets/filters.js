@@ -185,7 +185,6 @@ function hideOptions(){
     }
 
 var sortBy = section.querySelectorAll('[name="sort_by"]');
-console.log(sortBy)
 Array.from(sortBy).forEach(function(sort) {
   sort.addEventListener("click", ()=>{	
                         
