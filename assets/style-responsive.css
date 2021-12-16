@@ -1641,13 +1641,13 @@
     top: unset;
     bottom: 0;
     max-width: 100%;
-    transform: translate(0, 100%);
+    transform: translate(0, 100%)!important;
   }
   .side_Drawer_open .side_drawer_wrapper.similar_product {
-    transform: translate(0,0);
+    transform: translate(0,0)!important;
   }
   .side_drawer_wrapper.similar_product .side_drawer_body {
-    height: auto;
+    height: auto!important;
   }
   .results-similarGrid {
     flex-wrap: nowrap;
