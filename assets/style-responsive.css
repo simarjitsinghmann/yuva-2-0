@@ -1581,20 +1581,24 @@
   .prizebox #get_price {
     font-size: 30px;
   }
-/* ============ recent product css start =============== */
-.recent-product-slide {
+  /* ============ recent product css start =============== */
+  .recent-product-slide {
     display: flex;
     flex-wrap: nowrap;
     overflow-y: auto;
-}
-.recent-product-slide .item {
+  }
+  .recent-product-slide .item {
     max-width: 23%;
     flex: 0 0 23%;
-}
-  .recent-product-slide .item .col {
-  	padding:0 5px;
   }
-/* ============ recent product css end =============== */
+  .recent-product-slide .item .col {
+    padding:0 5px;
+  }
+  .product-page-recommendations .card-wrapper-img {
+    min-height: 200px;
+    max-height: 200px;
+  }
+  /* ============ recent product css end =============== */
 }
 @media screen and (max-width: 575px) {
   /*=============  common  start  ===============*/
