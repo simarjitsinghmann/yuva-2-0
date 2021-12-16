@@ -4,6 +4,7 @@ $(document).ready(function(){
 		$('body').toggleClass(_class);		
 		$('input.search-input').focus();
 		$('#recent_search_list').html('');
+      recentSearch();
 	});
   $('.search-input').bind('focusin focusout', function(e){
     $(this).closest('.search-box').toggleClass('focus', e.type == 'focusin');
