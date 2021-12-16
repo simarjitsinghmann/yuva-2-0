@@ -8,23 +8,23 @@
 {% endif %}
 <div class="carousel-caption">
   <div class="container">
-      <div class="carousel-caption-title banner-slide {{block.settings.info_position}}">
+      <div class="carousel-caption-title banner-slide {{block.settings.info_position}}" data-aos="fade-up">
         {% if block.settings.tag_line != blank %}
-        <span class="tag-line" data-aos="fade-up">{{block.settings.tag_line}}</span>
+        <span class="tag-line">{{block.settings.tag_line}}</span>
         {% endif %}
         {% if block.settings.heading != blank %}
-        <h1 data-aos="fade-up">{{block.settings.heading}}</h1>
+        <h1>{{block.settings.heading}}</h1>
         {% endif %}
         
         {% if block.settings.subheading != blank %}
-         <h2 data-aos="fade-up">{{block.settings.subheading}}</h2>
+         <h2>{{block.settings.subheading}}</h2>
         {% endif %}
         
         {% if block.settings.content != blank %}        
-        <p data-aos="fade-up">{{block.settings.content}}</p>
+        <p>{{block.settings.content}}</p>
         {% endif %}
         {% if block.settings.btn != blank and block.settings.link != blank %}
-        <a href="{{block.settings.link}}" class="black-btn button" data-aos="fade-up">{{block.settings.btn}}<i class="fas fa-arrow-right"></i></a>
+        <a href="{{block.settings.link}}" class="black-btn button">{{block.settings.btn}}<i class="fas fa-arrow-right"></i></a>
         {% endif %}
       </div>
   </div>
