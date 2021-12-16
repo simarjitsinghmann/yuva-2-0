@@ -22,7 +22,7 @@
         {% endif %}
         {% endfor %}
         {% if active %}
-        <a href="{{ collection.url }}?sort_by={{ sort_by }}" class="select-item filter-clean desktop-only text-primary">{{ 'sections.collection_template.clear_all' | t }}</a>
+        <a href="{{ collection.url }}?sort_by={{ sort_by }}" class="select-item filter-clean d-none d-md-block d-lg-none text-primary">{{ 'sections.collection_template.clear_all' | t }}</a>
         {% endif %}
       </div>
       {% endif %}
