@@ -1459,8 +1459,9 @@ header {
   cursor:pointer;
 }
 .cartDrawerNote {
-	display:inline-block;
-  position:relative;
+    display: inline-block;
+    position: relative;
+    padding-right: 13px;
 }
 .cartDrawerNote:after {
   position:absolute;
@@ -1474,8 +1475,8 @@ header {
   transform: rotate(
     225deg);
   position: absolute;
-  right: 12px;
-    top: 10px;
+  right: 0;
+    top: 6px;
 }
 .cartNoteContainer {
     margin-top: 10px;
