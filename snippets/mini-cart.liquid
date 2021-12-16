@@ -48,7 +48,7 @@
   </h6>
                 {{#if discountsApplied}}
                       <div class="text-right">
-                          <small class="item__discount coupanName">{{ this.title }}</small><br>
+                          <small class="item__discount coupanName"><i class="fas fa-tag"></i> {{ this.title }}</small><br>
                         {{/each}}
   </div>
                   {{/if}}
@@ -80,7 +80,7 @@
 		<ul>
 
          {{#totalCartDiscount}}
-            <li class="minicart__savings">{%-endraw-%}{{'sections.cart.discount' | t}}{%-raw-%}<span class="coupanName">{{title }}</span> <strong>-{{price}}</strong></li>
+            <li class="minicart__savings">{%-endraw-%}{{'sections.cart.discount' | t}}{%-raw-%}<span class="coupanName"><i class="fas fa-tag"></i> {{title }}</span> <strong>-{{price}}</strong></li>
           {{/totalCartDiscount}}
 			<li class="totle-price">{%-endraw-%}{{'sections.cart.subtotal' | t}}{%-raw-%}<strong>{{{totalPrice}}}</strong></li>
   </ul>
