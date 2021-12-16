@@ -55,8 +55,7 @@
                     {% else %}
                     <img src="{{ 'placeholder.svg' | asset_url }}" />
                     {% endif %}
-		{{block.settings.collection }}--{{block.settings.heading }}--{{block.settings.btntext}}
-                    {% if block.settings.collection != blank or block.settings.heading != blank  or block.settings.btntext != blank  %}
+                    {% if block.settings.collection != blank or block.settings.heading != blank %}
                     <div class="list-view-content text__{{block.settings.info_position}}">          
                       {% if block.settings.heading != blank %}
                       <h4>{{block.settings.heading}}</h4>
