@@ -2007,6 +2007,12 @@
   .card__warpper__detail.left__sided .collection-image {
     max-height: 340px;
 }
+  /*===========  searchbar css start ==============*/
+  .results-box .result-list .searc-item-box {
+    max-width: 30%;
+    flex: 0 0 30%;
+}
+  /*===========  searchbar css start ==============*/
 }
 @media screen and (max-width: 414px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
