@@ -2742,12 +2742,9 @@ li.breadcrumb-item a {
    display: block;
 }
 /**top-galler-section end**/
-/**recent product**/
+/*=============recent product =================*/
 .recent-product {
    width: 100%;
-}
-.owl-item .slider-content .col {
-   padding: 0;
 }
 .recent-product-header h4 {
    margin-bottom: 5px;
@@ -4203,38 +4200,6 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
    padding: 10px 24px;
    z-index: 2;
    position: relative;
-}
-.colllection-list-view .owl-carousel .owl-stage {
-   display: flex;
-}
-.colllection-list-view .owl-carousel .owl-nav button.owl-next,
-.colllection-list-view .owl-carousel .owl-nav button.owl-prev,
-.recent-product .owl-carousel .owl-nav button.owl-next,
-.recent-product .owl-carousel .owl-nav button.owl-prev {
-   position: absolute;
-   top: -45px;
-   width: 35px;
-   height: 35px;
-   background-color: var(--gray);
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   color: var(--black);
-   border-radius: 0;
-   margin: 0;
-}
-.colllection-list-view .owl-carousel .owl-nav button.owl-next,
-.recent-product .owl-carousel .owl-nav button.owl-next {
-   right: 0;
-}
-.colllection-list-view .owl-carousel .owl-nav button.owl-prev,
-.recent-product .owl-carousel .owl-nav button.owl-prev {
-   right: 45px;
-}
-.colllection-list-view .owl-carousel .owl-nav button svg,
-.recent-product .owl-carousel .owl-nav button svg {
-   width: 20px;
-   height: 20px;
 }
 .collection-list-view-card:hover img {
    transform: scale(1.1);
