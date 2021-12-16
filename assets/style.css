@@ -123,10 +123,6 @@ img {
     line-height: 20px;
     font-size: 10px;
 }
-.shopify-section-slider .button,
-.single-banner-section .button {
-   border: 0;
-}
 .error-container {
    background-color: #ff00000a;
    padding: 10px 35px;
@@ -252,7 +248,10 @@ img {
    font-size: 18px;
    line-height: 26px;
 }
-.carousel-caption-title .button {
+.carousel-caption-title .button,
+.shopify-section-slider .button,
+.single-banner-section .button {
+   border: 0;
    font-weight: var(--medium);
     margin-top:35px;
 }
