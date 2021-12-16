@@ -973,10 +973,10 @@ $(document).ready(function()
       $('.newsletter-popup,.wrapper-overlay,.askmeMain.slideAskme').hide();
       $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper').attr('id','')
       if($(window).width < 768){
-        $('#sort__list').removeClass('active');
+        $('#sort__list').toggleClass('active');
       }
       else{
-        $('#sort__list').slideUp().removeClass('active');      
+        $('#sort__list').slideUp().toggleClass('active');      
       }
       $('body').removeClass('side_Drawer_open').removeClass('open-filter-sort');
     }
