@@ -52,7 +52,8 @@
                       <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}" data-item-discount="{{forloop.index0}}">
                         {%- for discount in item.discounts -%}
                         <li class="discounts__discount coupanName">
-                          <i class="fas fa-tag"></i> {{ discount.title }}
+                          <i class="fas fa-tag"></i> 
+                           <small class="item__discount">{{ discount.title }}</small>
                         </li>
                         {%- endfor -%}
                       </ul>
@@ -211,9 +212,9 @@
                       <ul class="discounts list-unstyled" role="list" aria-label="{% endraw %}{{ 'customer.order.discount' | t }}{% raw %}">
                         
                         {{#if discountsApplied}}
-                        <li class="discounts__discount">
+                        <li class="discounts__discount coupanName">
                         {{#each discounts}}
-                        <small class="item__discount">{{this.title}}</small>
+                        <small class="item__discount"><i class="fas fa-tag"></i> {{this.title}}</small>
                           {{/each}}
                         </li>
                         {{/if}}
