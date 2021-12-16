@@ -566,7 +566,6 @@ $('.toggle.open-menu-drop,.toggle-level').click(function(){
                 if(imageSource){
                   var imageIndex = imageSource.attr('data-slick-index');
                   var slider = imageSource.closest('[data-slider]');
-                  console.log(imageIndex,slider)
                   slider.slick('slickGoTo',imageIndex)
                 }
 
@@ -961,10 +960,8 @@ $(document).ready(function()
                   {
   $('#toolbox-sort,.side_drawer_wrapper,.askmecontainer,.search-bar-container,.search-form,.newsletter-popup-inner,.side-menu').hover(function(){ 
     mouse_is_inside=true; 
-    console.log(mouse_is_inside)
   }, function(){ 
     mouse_is_inside=false; 
-    console.log(mouse_is_inside)
   });
 
   $("body").mouseup(function(){ 
