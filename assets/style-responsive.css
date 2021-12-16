@@ -1902,7 +1902,9 @@
   .selling_plan_wrapper {
     padding-bottom: 0;
 }
-.left-product-images.multiple-images .gallery-item .responsive-image__image{
+.left-product-images.multiple-images .gallery-item .responsive-image__image,
+  .left-product-images.multiple-images .gallery-item .video,
+  .left-product-images.multiple-images .gallery-item iframe{
     height: 470px;
   object-fit:cover;
 }
