@@ -57,7 +57,7 @@ function applyFilters(){
       var showLess = accordion.querySelector('.showLess');
       if(accordion.parentNode.classList.contains('show')){
         accordion.parentNode.classList.remove('show')
-        showLess.fadeOut(200);
+        showLess.fadeOut(100);
         showMore.fadeIn(500);
       }else{	
         accordion.parentNode.classList.add('show')
