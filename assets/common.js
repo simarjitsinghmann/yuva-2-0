@@ -978,7 +978,7 @@ $(document).ready(function()
       else{
         $('#sort__list').slideUp().removeClass('active');      
       }
-        $('body').removeClass('side_Drawer_open').removeClass('.open-filter-sort');
+      $('body').removeClass('side_Drawer_open').removeClass('open-filter-sort');
     }
   });
   $(document).on('click','.side_drawer_close',function(){
