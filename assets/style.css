@@ -2152,12 +2152,14 @@ li.breadcrumb-item a {
 .selling_plan {
 	margin-top:10px;
 }
-.selling_plan_attribute{
+.selling_plan_attribute {
     display: block;
     padding: 10px 10px;
     border: 1px solid var(--gray);
     width: 100%;
     background-color: #eee;
+    border-radius: 0;
+    min-height: 34px;
 }
 .product_button .shopify-payment-button__button:hover {
 	background-color:transparent;
