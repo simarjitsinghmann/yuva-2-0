@@ -114,7 +114,8 @@ function hideOptions(){
                                 var sortMenu = document.getElementById('sort__list');
       if(sortMenu.classList.contains('active')){
         if(window.innerWidth > 767){
-          sortMenu.style.display = 'none';
+//           sortMenu.style.display = 'none';
+        DOMAnimations.slideUp(sortMenu);
         }else{
           sortMenu.classList.remove('active');
           document.querySelector('body').classList.remove('open-filter-sort');
@@ -123,7 +124,8 @@ function hideOptions(){
       else{
 
         if(window.innerWidth > 767){
-          sortMenu.style.display = 'block';
+//           sortMenu.style.display = 'block';
+        DOMAnimations.slideDown(sortMenu);
         }else{
           sortMenu.classList.add('active');
           document.querySelector('body').classList.add('open-filter-sort');
