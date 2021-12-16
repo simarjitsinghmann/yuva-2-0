@@ -1948,12 +1948,16 @@
   }
   
 /*  end  */
-/* ============ recent product css start =============== */
-  .recent-product-slide .slider-content.row {
+  /* ============ recent product css start =============== */
+  .recent-product-slide .item {
     max-width: 45%;
     flex: 0 0 45%;
-}
-/* ============ recent product css end =============== */
+  }
+  .product-page-recommendations .card-wrapper-img {
+    min-height: 200px;
+    max-height: 200px;
+  }
+  /* ============ recent product css end =============== */
 }
 @media screen and (max-width: 480px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]

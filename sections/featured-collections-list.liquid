@@ -23,7 +23,7 @@
                 {% else %}
                 <img src="{{ 'placeholder.svg' | asset_url }}" />
                 {% endif %}
-				{% unless collection == blank and block.settings.heading == blank  and block.settings.btntext == blank  %}
+                    {% if block.settings.collection != blank or block.settings.heading != blank %}
                 <div class="list-view-content text__{{block.settings.info_position}}">          
                   {% if block.settings.heading != blank %}
                   <h2>{{block.settings.heading}}</h2>
@@ -34,7 +34,7 @@
                   <a href="{{collection.url}}" class="link">{{block.settings.btntext}}</a>
                   {% endif %}
                 </div>
-                {% endunless %}
+                {% endif %}
               </div>
             </div>
           {% endif %}
