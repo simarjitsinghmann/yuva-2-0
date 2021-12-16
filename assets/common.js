@@ -974,12 +974,11 @@ $(document).ready(function()
       $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper').attr('id','')
       if($(window).width < 768){
         $('#sort__list').removeClass('active');
-        $('body').removeClass('side_Drawer_open')
       }
       else{
-        $('#sort__list').slideUp().removeClass('active');
-      
+        $('#sort__list').slideUp().removeClass('active');      
       }
+        $('body').removeClass('side_Drawer_open').removeClass('.open-filter-sort');
     }
   });
   $(document).on('click','.side_drawer_close',function(){
