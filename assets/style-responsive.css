@@ -1651,26 +1651,26 @@
   }
   /* ============ recent product css end =============== */
   /*============= similar product drawer css start ===========*/
-.side_drawer_wrapper.similar_product {
+  .side_drawer_wrapper.similar_product {
     height: auto;
     top: unset;
     bottom: 0;
     max-width: 100%;
     transform: translate(0, 100%);
-}
+  }
   .side_Drawer_open .side_drawer_wrapper.similar_product {
-       transform: translate(0,0);
-}
+    transform: translate(0,0);
+  }
   .side_drawer_wrapper.similar_product .side_drawer_body {
     height: auto;
-}
+  }
   .results-similarGrid {
     flex-wrap: nowrap;
     overflow: auto;
   }
   .results-similarGrid li.product-base {
     padding: 0 10px 0px;
-}
+  }
   /*============= similar product drawer css start ===========*/
 }
 @media screen and (max-width: 575px) {
