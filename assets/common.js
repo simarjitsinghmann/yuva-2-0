@@ -980,9 +980,12 @@ $(document).ready(function()
   });
   $(document).on('click','.side_drawer_close',function(){
     $('body').removeClass('side_Drawer_open');
-     setTimeout(function () {
-    $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper').attr('id','');
-       }, 2500);
+    
+       if($('body').find('[data-side-drawer]').hasClass("similar_product")) {
+           $('body').find('[data-side-drawer]').removeClass("similar_product");
+      }
+    //$('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper').attr('id','');
+      
   });
   $(document).on('click', '.quickView', function(evt) {
     evt.preventDefault();
