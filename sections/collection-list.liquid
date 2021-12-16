@@ -73,6 +73,7 @@
                   {% assign btnlink = collection.url %}
                   {% endif%}               
 
+                  {% if btnlink != blank %}
                   <a href="{{btnlink}}" class="mainColbutton-{{section.id}} collection-list-btn link">    
                     <span>
                       {% if section.settings.button_icon %}
@@ -82,6 +83,7 @@
                     </span>
 
                   </a>
+                  {% endif %}
                   {% endif %}
                 </div>
               </div>
