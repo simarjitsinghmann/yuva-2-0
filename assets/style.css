@@ -4453,11 +4453,11 @@ body #shopify-product-reviews {
    z-index: 999;
    background: var(--white);
    height: 100vh;
-   transform: translateX(100%);
+   transform: translate(100%, 0);
    transition: 0.7s ease;
 }
 .side_Drawer_open .side_drawer_wrapper {
-   transform: translateX(0);
+   transform: translate(0, 0);
 }
 .side_Drawer_open {
    position: relative;
