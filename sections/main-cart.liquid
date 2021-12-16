@@ -51,8 +51,8 @@
                       </div>
                       <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}" data-item-discount="{{forloop.index0}}">
                         {%- for discount in item.discounts -%}
-                        <li class="discounts__discount">
-                          {{ discount.title }}
+                        <li class="discounts__discount coupanName">
+                          <i class="fas fa-tag"></i> {{ discount.title }}
                         </li>
                         {%- endfor -%}
                       </ul>
