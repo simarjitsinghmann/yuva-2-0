@@ -56,11 +56,11 @@
                     <img src="{{ 'placeholder.svg' | asset_url }}" />
                     {% endif %}
 
-                    {% if collection != blank or block.settings.heading != blank  or block.settings.btntext != blank  %}
+                    {% if block.settings.collection != blank or block.settings.heading != blank  or block.settings.btntext != blank  %}
                     <div class="list-view-content text__{{block.settings.info_position}}">          
                       {% if block.settings.heading != blank %}
                       <h4>{{block.settings.heading}}</h4>
-                      {% elsif collection != blank  %}
+                      {% elsif block.settings.collection != blank  %}
                       <h4>{{collection.title}}</h4>
                       {% endif %}
                       {% if block.settings.collection != blank %}
