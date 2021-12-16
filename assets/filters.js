@@ -114,16 +114,20 @@ function hideOptions(){
                                 var sortMenu = document.getElementById('sort__list');
       if(sortMenu.classList.contains('active')){
         sortMenu.classList.remove('active');
+        if(window.innerWidth > 767){
+//           sortMenu.style.display = 'none';
         DOMAnimations.slideUp(sortMenu);
-        if(window.innerWidth < 768){
+        }else{
           document.querySelector('body').classList.remove('open-filter-sort');
         }
       }
       else{
 
           sortMenu.classList.add('active');
+        if(window.innerWidth > 767){
+//           sortMenu.style.display = 'block';
         DOMAnimations.slideDown(sortMenu);
-        if(window.innerWidth < 768){
+        }else{
           document.querySelector('body').classList.add('open-filter-sort');
         }
       }
