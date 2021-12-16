@@ -30,6 +30,38 @@
 }
 </style>
     
+    <script type="application/json" name="slider-json">    
+         {
+          "slidesToShow":7,
+          "slidesToScroll":1,
+          "infinite":true,
+          "draggable":false,
+          "cssEase": "linear",
+         "dots":false,
+          "autoplay":false,
+          "arrows":true,
+          "prevArrow":"<button type=\"button\" class=\"slick-prev\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M15.526 18.966L8.559 12l6.967-6.967\"></path></svg></span></button>",
+          "nextArrow":"<button type=\"button\" class=\"slick-next\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M8.474 18.966L15.44 12 8.474 5.033\"></path></svg></span></button>",
+          "responsive":[
+          	{
+            "breakpoint": 1440,
+              "settings": {
+              	"slidesToShow": 5
+              }
+            },
+          	{
+            "breakpoint": 1199,
+              "settings": {
+              	"slidesToShow": 4
+              }
+            },
+          	{
+            "breakpoint": 767,
+                "settings": 'unslick'
+            }
+          ]
+        }
+    </script>
   
   <script>
     
@@ -53,36 +85,37 @@
     $(document).ready(function(){
       var recomend = setInterval(function(){
         if($('.recent-product-slide').length > 0 ){ 
-          $('.recent-product-slide').slick({
-            slidesToShow:7,
-            slidesToScroll:1,
-            autoplay:false,
-            infinite:true,
-            autoplayHoverPause:false,
-            arrows: true,
-            dots: false,
-            draggable:false,
-            prevArrow:"<button type=\"button\" class=\"slick-prev\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M15.526 18.966L8.559 12l6.967-6.967\"></path></svg></span></button>",
-            nextArrow:"<button type=\"button\" class=\"slick-next\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M8.474 18.966L15.44 12 8.474 5.033\"></path></svg></span></button>",          
-            responsive:[
-              {
-                breakpoint:1440,
-                settings: {
-                  slidesToShow: 5
-                }
-              },
-              {
-                breakpoint:1199,
-                settings: {
-                  slidesToShow: 4
-                }
-              },
-              {
-                breakpoint:767,
-                settings: 'unslick'
-              }
-            ]
-          })
+          slickslider($('.recent-product-slide'))
+//           $('.recent-product-slide').slick({
+//             slidesToShow:7,
+//             slidesToScroll:1,
+//             autoplay:false,
+//             infinite:true,
+//             autoplayHoverPause:false,
+//             arrows: true,
+//             dots: false,
+//             draggable:false,
+//             prevArrow:"<button type=\"button\" class=\"slick-prev\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M15.526 18.966L8.559 12l6.967-6.967\"></path></svg></span></button>",
+//             nextArrow:"<button type=\"button\" class=\"slick-next\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M8.474 18.966L15.44 12 8.474 5.033\"></path></svg></span></button>",          
+//             responsive:[
+//               {
+//                 breakpoint:1440,
+//                 settings: {
+//                   slidesToShow: 5
+//                 }
+//               },
+//               {
+//                 breakpoint:1199,
+//                 settings: {
+//                   slidesToShow: 4
+//                 }
+//               },
+//               {
+//                 breakpoint:767,
+//                 settings: 'unslick'
+//               }
+//             ]
+//           })
           showMultipleOptions(); 
           clearInterval(recomend);
         }
