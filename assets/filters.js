@@ -124,7 +124,7 @@ function hideOptions(){
       else{
           sortMenu.classList.add('active');
         if(window.innerWidth > 767){
-        DOMAnimations.slideDown(sortMenu);
+          DOMAnimations.slideDown(sortMenu);
         }else{
 //           sortMenu.style.display = 'block';
           document.querySelector('body').classList.add('open-filter-sort');
