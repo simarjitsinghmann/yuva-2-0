@@ -57,11 +57,11 @@ function applyFilters(){
       var showLess = accordion.querySelector('.showLess');
       if(accordion.parentNode.classList.contains('show')){
         accordion.parentNode.classList.remove('show')
-        showLess.fadeOut(500);
+        showLess.fadeOut(200);
         showMore.fadeIn(500);
       }else{	
         accordion.parentNode.classList.add('show')
-        showMore.fadeOut(500);
+        showMore.fadeOut(200);
         showLess.fadeIn(500);
       }
     });
