@@ -1,6 +1,7 @@
 {% assign desktopClass = '' %}
 {% if block.settings.image_mob != blank %}
-{% assign desktopClass = 'slide-image-desktop' %}{% endif %}
+{% assign desktopClass = 'slide-image-desktop' %}
+{% endif %}
 {% if block.settings.image != blank %}
 {% include 'lazy-image' image:block.settings.image,class:desktopClass %}
 {%else%}
