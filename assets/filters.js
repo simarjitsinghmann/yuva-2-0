@@ -208,7 +208,7 @@ function fetchFilterData(url){
   .then(response => response.text())
 }
 function getFilterData(filterForm,input,sectionId,remove){   
-  document.getElementById('CollectionProductsContainer').querySelector('.filteredData').classList.add('filteringData')
+  document.getElementById('CollectionProductsContainer').querySelector('.filteredData').classList.add('filtering')
   const formData = new FormData(filterForm);
   var searchParameters = new URLSearchParams(formData).toString();
 
