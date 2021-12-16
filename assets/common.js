@@ -989,6 +989,9 @@ $(document).ready(function()
   });
   $(document).on('click', '.quickView', function(evt) {
     evt.preventDefault();
+    if($('body').find('[data-side-drawer]').hasClass("similar_product")) {
+           $('body').find('[data-side-drawer]').removeClass("similar_product");
+      }
 
     const drawer = document.querySelector('[data-side-drawer]');	
     drawer.setAttribute('id','quickView_product');
