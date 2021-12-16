@@ -142,7 +142,7 @@ $(document).ready(function(){
         $('.recent-search-list').html('');
       }else{
         recent_Html =  recent_Html.concat('<h5 style="">{{'templates.search.drawer_recent_title' | t}}</h5>');
-        recent_Html =  recent_Html.concat('<div class="recent-search-inner mCustomScrollbar"><div id="mCSB_9_container" class="mCSB_container mCS_x_hidden mCS_no_scrollbar_x"><ul>'); 
+        recent_Html =  recent_Html.concat('<div class="recent-search-inner mCustomScrollbar"><div id="mCSB_9_container" class="mCSB_container mCS_x_hidden mCS_no_scrollbar_x"><ul class="search-recent-list">'); 
         var Prev_search =recent_pro_val.reverse();
         $.each(Prev_search, function(index, value){   
           if(index<10){
