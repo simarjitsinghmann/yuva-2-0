@@ -1474,9 +1474,9 @@ header {
   display: inline-block;
   transform: rotate(
     225deg);
-  position: absolute;
   right: 0;
     top: 6px;
+  transition:.5s ease;
 }
 .cartDrawerNote.active:after {
 	  transform: rotate(
