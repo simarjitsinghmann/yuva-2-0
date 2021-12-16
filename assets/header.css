@@ -713,11 +713,12 @@ body.nav-open {
     font-size: 16px;
 }
 .header_3 .header__heading-link {
-   position: absolute;
-   margin: 0 15px;
-   left: 50%;
-   transform: translateX(-50%);
-   margin: 0;
+    position: absolute;
+    margin: 0 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    display: inherit;
 }
 .header_3 .nav__btn {
    display: flex;
