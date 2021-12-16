@@ -3,12 +3,13 @@
 {% assign desktopClass = 'slide-image-desktop' %}
 {% endif %}
 {% if block.settings.image != blank %}
-{% render 'lazy-image' image:block.settings.image%}
+{% render 'lazy-image' image:block.settings.image,class:desktopClass %}
 {%else%}
 <div class="{{desktopClass}}">{% render 'banner-placeholder'%}</div>
 {% endif %} 
 {% if block.settings.image_mob != blank %}
-{% endif %} 
+{% render 'lazy-image' image:block.settings.image_mob,class:'slide-image-mobile' %}
+{% endif %}
 <div class="carousel-caption">
   <div class="container">
       <div class="carousel-caption-title banner-slide {{block.settings.info_position}}">
