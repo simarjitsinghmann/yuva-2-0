@@ -1954,6 +1954,14 @@
     flex: 0 0 40%;
   }
   /* ============ recent product css end =============== */
+  #myBtn {
+    width: 30px;
+    height: 30px;
+}
+  #myBtn svg {
+    width: 15px;
+    height: 15px;
+}
 }
 @media screen and (max-width: 480px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
