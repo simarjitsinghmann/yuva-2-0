@@ -817,7 +817,7 @@ img {
 }
 .similar_options:hover .text-nowrap.similar {
    transition: 0.3s;
-   transform: translateX(1px);
+   transform: translateX(5px);
    width: 86px;
    right: 27px;
    top: 0;
@@ -826,21 +826,22 @@ img {
    height: 100%;
 }
 .text-nowrap.similar {
-   font-size: 11px;
-   padding: 0 4px 0 6px;
-   color: var(--white);
-   font-weight: var(--medium);
-   text-transform: capitalize;
-   visibility: hidden;
-   position: absolute;
-   top: 0px;
-   height: 100%;
-   background: var(--black);
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   right: 0;
-   transform: translateX(-10px);
+    font-size: 11px;
+    padding: 0 25px 0 6px;
+    color: var(--white);
+    font-weight: var(--medium);
+    text-transform: capitalize;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    transform: translateX(-10px);
+    border-radius: 20px;
 }
 .shop__options {
    position: absolute;
