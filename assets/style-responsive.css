@@ -1581,12 +1581,18 @@
   .prizebox #get_price {
     font-size: 30px;
   }
-  /* ============ recent product css start =============== */
-  .recent-product-slide .slider-content.row {
+/* ============ recent product css start =============== */
+.recent-product-slide {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+}
+.recent-product-slide .slider-content.row {
     max-width: 25%;
     flex: 0 0 25%;
-  }
-  /* ============ recent product css end =============== */
+    margin: 0 -5px;
+}
+/* ============ recent product css end =============== */
 }
 @media screen and (max-width: 575px) {
   /*=============  common  start  ===============*/
