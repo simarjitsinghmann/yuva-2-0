@@ -81,7 +81,7 @@
 		<ul>
 
          {{#totalCartDiscount}}
-            <li class="minicart__savings coupanName">{%-endraw-%}{{'sections.cart.discount' | t}}{%-raw-%}<strong>{{title }}</strong> <strong>-{{price}}</strong></li>
+            <li class="minicart__savings">{%-endraw-%}{{'sections.cart.discount' | t}}{%-raw-%}<span class="coupanName">{{title }}</span> <strong>-{{price}}</strong></li>
           {{/totalCartDiscount}}
 			<li class="totle-price">{%-endraw-%}{{'sections.cart.subtotal' | t}}{%-raw-%}<strong>{{{totalPrice}}}</strong></li>
   </ul>
