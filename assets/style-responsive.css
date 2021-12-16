@@ -1316,7 +1316,7 @@
     max-width: 100%;
     flex: 0 0 100%;
   }
-  .shop-sidebar {
+  .shop-sidebar{
     max-width: 100%;
     flex: 0 0 100%;
     position: fixed;
@@ -1332,7 +1332,8 @@
     transform: translateY(100%);
     transition: 0.5s ease all;
   }
-  .shop-sidebar.active {
+  .shop-sidebar.active,
+  .searchresultFilter.active{
     transform: translateY(0);
   }
   .shop-sidebar-inside {
