@@ -4,6 +4,7 @@ $(document).ready(function(){
 		$('body').toggleClass(_class);		
 		$('input.search-input').focus();
 		$('#recent_search_list').html('');
+      console.log('starts')
       recentSearch();
 	});
   $('.search-input').bind('focusin focusout', function(e){
@@ -133,6 +134,7 @@ $(document).ready(function(){
   });
   function recentSearch(){
     $('#recent_search_list').html('');
+      console.log('recenttest')
     var recent_Html = '';
     setTimeout(function(){ 
       var recent_pro = localStorage.getItem("Recent_search");
