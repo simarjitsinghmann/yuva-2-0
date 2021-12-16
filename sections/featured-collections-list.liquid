@@ -14,7 +14,7 @@
           {% for block in section.blocks %}
           {% if forloop.first %}
           {% assign collection = block.settings.collection %}
-            <div class="collection-list-view-wrapper" id="block-{{block.id}}"  {{ block.shopify_attributes }}>
+            <div class="collection-list-view-wrapper left-wrapper" id="block-{{block.id}}"  {{ block.shopify_attributes }}>
               <div class="collection-list-view-card" >
                 {% if block.settings.image != blank %}
                 {% include 'lazy-image' image:block.settings.image %}
@@ -45,7 +45,7 @@
               {% unless forloop.first %}
               {% assign collection = block.settings.collection %}
               <div id="block-{{block.id}}" class="col-sm-12 {% if section.blocks.size > 2 %}col-md-6{% else %}col-md-12{% endif %}" {{ block.shopify_attributes }}>
-                <div class="collection-list-view-wrapper">
+                <div class="collection-list-view-wrapper right-wrapper">
                   <div class="collection-list-view-card" >
                     {% if block.settings.image != blank %}
                     {% include 'lazy-image' image:block.settings.image %}

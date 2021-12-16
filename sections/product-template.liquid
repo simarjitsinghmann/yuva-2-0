@@ -80,7 +80,7 @@
               <div  class="gallery-item-product" id="media-{{media.id}}">
                   {%-case media.media_type-%}
                   {%- when 'image' -%}
-                <a href="{{media | img_url: 'master'}}" data-fancybox="gallery{{section.id}}">
+                <a href="{{media | img_url: 'master'}}" class="iframe-gallery-item" data-fancybox="gallery{{section.id}}">
                   <img class="responsive-image__image lazyload" src="{{media | img_url: 'master'}}" data-src="" data-sizes="auto" alt="{{ media.preview_image.alt | escape }}">
                 </a>
                   {%- when 'external_video' -%}
