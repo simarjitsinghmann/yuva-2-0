@@ -113,21 +113,21 @@ function hideOptions(){
       sortMenu.addEventListener("click", ()=>{	
                                 var sortMenu = document.getElementById('sort__list');
       if(sortMenu.classList.contains('active')){
+        sortMenu.classList.remove('active');
         if(window.innerWidth > 767){
 //           sortMenu.style.display = 'none';
         DOMAnimations.slideUp(sortMenu);
         }else{
-          sortMenu.classList.remove('active');
           document.querySelector('body').classList.remove('open-filter-sort');
         }
       }
       else{
 
+          sortMenu.classList.add('active');
         if(window.innerWidth > 767){
 //           sortMenu.style.display = 'block';
         DOMAnimations.slideDown(sortMenu);
         }else{
-          sortMenu.classList.add('active');
           document.querySelector('body').classList.add('open-filter-sort');
         }
       }
