@@ -976,7 +976,7 @@ $(document).ready(function()
         $('#sort__list').removeClass('active');
       }
       else{
-        $('#sort__list').slideUp();      
+        $('#sort__list').slideUp().removeClass('active');      
       }
       $('body').removeClass('side_Drawer_open').removeClass('open-filter-sort');
     }
