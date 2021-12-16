@@ -1714,7 +1714,7 @@
     line-height: 24px;
   }
   /*================  collection css end ===============*/
-/*   testimonial css start */
+/*=============   testimonial css start =============*/
 .client-say-left {
     align-items: center;
     justify-content: center;
@@ -1926,10 +1926,16 @@
     margin-bottom: 10px;
 }
   .price__regular span[data-regular-price] {
-  	font-size: 12px;
+    font-size: 12px;
   }
   
 /*  end  */
+/* ============ recent product css start =============== */
+  .recent-product-slide .slider-content.row {
+    max-width: 45%;
+    flex: 0 0 45%;
+}
+/* ============ recent product css end =============== */
 }
 @media screen and (max-width: 480px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
