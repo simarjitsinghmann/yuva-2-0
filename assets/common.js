@@ -971,7 +971,7 @@ $(document).ready(function()
       $('.newsletter-popup,.wrapper-overlay,.askmeMain.slideAskme').hide();
       $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper').attr('id','')
       if(window.innerWidth < 768){
-        $('#sort__list').removeClass('active');
+        $('#sort__list').slideUp().removeClass('active');
         $('body').removeClass('side_Drawer_open')
       }
     }
