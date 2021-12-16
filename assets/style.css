@@ -1976,26 +1976,26 @@ li.breadcrumb-item a {
    flex-wrap: wrap;
    margin: 0 -3px;
 }
-ul.gallery-item li a > img {
+.gallery-item .gallery-item-product a > img {
    background: #f6f4f3;
 }
-.left-product-images.multiple-images .gallery-item li {
+.left-product-images.multiple-images .gallery-item .gallery-item-product {
    flex: 0 0 50%;
    width: 50%;
    padding: 0 3px 6px;
 }
-.left-product-images.multiple-images .gallery-item li a{
+.left-product-images.multiple-images .gallery-item .gallery-item-product a{
 	display:block !important;
 }
-.left-product-images.multiple-images .gallery-item li:first-child {
+.left-product-images.multiple-images .gallery-item .gallery-item-product:first-child {
    flex-grow: 1;
 }
-.left-product-images.single-image .gallery-item li {
+.left-product-images.single-image .gallery-item .gallery-item-product {
    flex: 0 0 100%;
    width: 100%;
    padding: 0 9px 18px;
 }
-.left-product-images .gallery-item li iframe, .left-product-images .gallery-item li video {
+.left-product-images .gallery-item .gallery-item-product iframe, .left-product-images .gallery-item .gallery-item-product video {
     height: 100%;
     width: 100%;
     object-fit: cover;
