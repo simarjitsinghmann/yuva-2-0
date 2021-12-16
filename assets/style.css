@@ -240,7 +240,8 @@ img {
   line-height: 1.01;
 }
 .carousel-caption-title p,
-.flex-absolute p {
+.flex-absolute p,
+.single-banner-section.banner-section p{
    margin-top: 8px;
    font-weight: var(--medium);
    letter-spacing: 1.3px;
@@ -3353,14 +3354,6 @@ button.Sd_addProduct:disabled {
    height: 100%;
    object-fit: cover;
 }
-.single-banner-section.banner-section h1 {
-   font-weight: var(--medium);
-   font-size: 75px;
-   line-height: 75px;
-   padding: 8px 0px;
-   margin: 15px 0 16px;
-   letter-spacing: 0.8px;
-}
 .single-banner-section.banner-section h2 {
    font-weight: var(--bold);
    font-size: 50px;
@@ -3369,14 +3362,6 @@ button.Sd_addProduct:disabled {
    border-bottom: 0 solid;
    margin: 10px 0 10px;
    letter-spacing: .4px;
-}
-.single-banner-section.banner-section p {
-   font-weight: var(--normal);
-   color: var(--white);
-   margin-bottom: 29px;
-   letter-spacing: 0.8px;
-   margin-top: 14px;
-   font-size: 18px;
 }
 .banner-caption-title h3 {
     font-size: 100px;
