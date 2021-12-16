@@ -1478,6 +1478,10 @@ header {
   right: 0;
     top: 6px;
 }
+.cartDrawerNote.active:after {
+	  transform: rotate(
+    -225deg);
+}
 .cartNoteContainer {
     margin-top: 10px;
 }
