@@ -972,7 +972,7 @@ $(document).ready(function()
       $('body').removeClass('side_Drawer_open').removeClass('active_askme').removeClass('scrollHidden').removeClass('quickview-open').removeClass('nav-open').removeClass('addsearch').removeClass('small_search').removeClass('minicart-open').removeClass('customer-open').removeClass('NewsletterActive').removeClass('show__similar__products');
       $('.newsletter-popup,.wrapper-overlay,.askmeMain.slideAskme').hide();
       $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper').attr('id','')
-      if(window.innerWidth < 768){
+      if($(window).width < 768){
     console.log('test',mouse_is_inside)
         $('#sort__list').slideUp().removeClass('active');
         $('body').removeClass('side_Drawer_open')
