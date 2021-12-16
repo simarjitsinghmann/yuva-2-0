@@ -979,19 +979,11 @@ $(document).ready(function()
     }
   });
   $(document).on('click','.side_drawer_close',function(){
-    $('body').removeClass('side_Drawer_open');
-    
-       //if($('body').find('[data-side-drawer]').hasClass("similar_product")) {
-         //  $('body').find('[data-side-drawer]').removeClass("similar_product");
-   //   }
-    //$('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper').attr('id','');
-      
+    $('body').removeClass('side_Drawer_open')
+    $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper').attr('id','')
   });
   $(document).on('click', '.quickView', function(evt) {
     evt.preventDefault();
-    if($('body').find('[data-side-drawer]').hasClass("similar_product")) {
-           $('body').find('[data-side-drawer]').removeClass("similar_product");
-      }
 
     const drawer = document.querySelector('[data-side-drawer]');	
     drawer.setAttribute('id','quickView_product');
