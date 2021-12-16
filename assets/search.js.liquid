@@ -23,9 +23,7 @@ $(document).ready(function(){
     var _drawer = $('[data-search-drawer]').data('search-drawer');
 
     var retrievedSearch = localStorage.getItem("Recent_search");
-    var retrievedSearch_v = JSON.parse(retrievedSearch);   
-      $resultsBox.empty();
-      $('#recent-search-list').html(''); 
+    var retrievedSearch_v = JSON.parse(retrievedSearch);    
     if(retrievedSearch_v==null){
       var retrievedSearch_v = [];
     }
@@ -117,6 +115,8 @@ $(document).ready(function(){
       }, searchTimeoutThrottle);
     } else if ($(this).val().length <= 2) {
       //Deleted text? Clear results
+      $resultsBox.empty();
+      $('#recent-search-list').html('');
     }
   }).attr('autocomplete', 'off').data('oldval', '').bind('focusin', function(){
     //Focus, show results
