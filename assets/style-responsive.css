@@ -1155,12 +1155,6 @@
     justify-content: center;
     align-items: center;
 }
-  .banner-section .item .slide-image-desktop {
-	display:none;
-}
-    .banner-section .item .slide-image-mobile {
-	display:block;
-}
   /*================ banner slider css end ================*/
   /*==================  whats more css start  =================*/
   .card-information .card-information-image {
@@ -1882,6 +1876,12 @@
   }
   .banner-caption-title {
     padding: 20px;
+}
+    .banner-section .item .slide-image-desktop {
+	display:none;
+}
+    .banner-section .item .slide-image-mobile {
+	display:block;
 }
   /*===============  single banner css end  =============*/
   .instagram-post-list ul li {
