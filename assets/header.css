@@ -1332,6 +1332,10 @@ header {
    font-weight: var(--medium);
    margin-bottom: 0;
 }
+.search-recent-list {
+	display:flex;
+  	overflow-y:auto;
+}
 .search-bar-container
    .search-bar-box
    .AjaxSearchResponse
