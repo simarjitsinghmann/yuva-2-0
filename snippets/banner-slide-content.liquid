@@ -1,10 +1,13 @@
+{% assign desktopClass = '' %}
+{% if block.settings.image_mob != blank %}
+{% assign desktopClass = 'slide-image-desktop' %}{% endif %}
 {% if block.settings.image != blank %}
-<img class="{% if block.settings.image_mob != blank %}slide-image-desktop{% endif %}" data-lazy="{{block.settings.image | img_url:'master'}}" alt="">
+{% include 'lazy-image' image:,class:desktopClass %}
 {%else%}
-<div class="{% if block.settings.image_mob != blank %}slide-image-desktop{% endif %}">{% render 'banner-placeholder'%}</div>
+<div class="{{desktopClass}}">{% render 'banner-placeholder'%}</div>
 {% endif %} 
 {% if block.settings.image_mob != blank %}
-<img class="slide-image-mobile" data-lazy="{{block.settings.image_mob | img_url:'master'}}" alt="">
+{% include 'lazy-image' image:,block.settings.image_mob:'slide-image-mobile' %}
 {% endif %}
 <div class="carousel-caption">
   <div class="container">
