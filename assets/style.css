@@ -2004,13 +2004,13 @@ li.breadcrumb-item a {
    width: 100%;
 }
 .left-product-images.single-image
-   ul.gallery-item
-   li
+   .gallery-item
+   .gallery-item-product
    img.responsive-image__image {
    max-height: 934px;
    object-fit: cover;
 }
-.left-product-images ul.gallery-item li img.responsive-image__image {
+.left-product-images .gallery-item .gallery-item-product img.responsive-image__image {
    width: 100%;
    height: 100%;
    object-fit: contain;
