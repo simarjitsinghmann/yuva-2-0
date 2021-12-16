@@ -8,11 +8,9 @@
       </div>
       <div class="recent-product-slide">
         {%- for product in recommendations.products -%}
-        <div class="item">
           <div class="slider-content row">
             {% include 'product-grid' hideRelated:true,hideQuickView:true ,show_second_image : true %}
           </div>
-        </div>
       {%- endfor -%}
       </div>
     </div>
@@ -21,14 +19,14 @@
 
 </div>
 </div>
-<style>
+<!-- <style>
   .recent-product-slide[data-slider] {
     visibility: hidden;
 }
 .recent-product-slide[data-slider].slick-initialized {
     visibility: visible;
 }
-</style>
+</style> -->
     
   
   <script>
