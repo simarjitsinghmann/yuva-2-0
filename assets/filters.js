@@ -58,15 +58,11 @@ function applyFilters(){
       if(accordion.parentNode.classList.contains('show')){
         accordion.parentNode.classList.remove('show');       
         DOMAnimations.slideUp(accordion.parentNode.querySelector('.more-options'));
-//         showLess.fadeOut(100);
         DOMAnimations.slideUp(showLess);
         DOMAnimations.slideDown(showMore);
-//         showMore.fadeIn(500);
       }else{	
         accordion.parentNode.classList.add('show')
         DOMAnimations.slideDown(accordion.parentNode.querySelector('.more-options'));
-//         showMore.fadeOut(200);
-//         showLess.fadeIn(500);
         DOMAnimations.slideUp(showMore);
         DOMAnimations.slideDown(showLess);
       }
