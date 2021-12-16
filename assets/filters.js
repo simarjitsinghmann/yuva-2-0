@@ -115,18 +115,18 @@ function hideOptions(){
       if(sortMenu.classList.contains('active')){
         sortMenu.classList.remove('active');
         if(window.innerWidth > 767){
-//           sortMenu.style.display = 'none';
         DOMAnimations.slideUp(sortMenu);
         }else{
+          sortMenu.style.display = 'none';
           document.querySelector('body').classList.remove('open-filter-sort');
         }
       }
       else{
           sortMenu.classList.add('active');
         if(window.innerWidth > 767){
-//           sortMenu.style.display = 'block';
         DOMAnimations.slideDown(sortMenu);
         }else{
+          sortMenu.style.display = 'block';
           document.querySelector('body').classList.add('open-filter-sort');
         }
       }
