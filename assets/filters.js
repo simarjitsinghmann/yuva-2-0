@@ -117,7 +117,7 @@ function hideOptions(){
         if(window.innerWidth > 767){
         DOMAnimations.slideUp(sortMenu);
         }else{
-          sortMenu.style.display = 'none';
+//           sortMenu.style.display = 'none';
           document.querySelector('body').classList.remove('open-filter-sort');
         }
       }
@@ -126,7 +126,7 @@ function hideOptions(){
         if(window.innerWidth > 767){
         DOMAnimations.slideDown(sortMenu);
         }else{
-          sortMenu.style.display = 'block';
+//           sortMenu.style.display = 'block';
           document.querySelector('body').classList.add('open-filter-sort');
         }
       }
