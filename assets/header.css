@@ -1336,6 +1336,11 @@ header {
 	display:flex;
   	overflow-y:auto;
 }
+.recent-search-inner ul li {
+    margin-right: 20px;
+    max-width: 10%;
+    flex: 0 0 10%;
+}
 .search-bar-container
    .search-bar-box
    .AjaxSearchResponse
