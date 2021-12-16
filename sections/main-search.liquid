@@ -105,7 +105,7 @@
           <div class="searchresultFilter">
           {% include 'collection-sidebar' results:search %}
           </div>
-        <div class="searchProductcontainer">
+        <div class="searchProductcontainer filteredData">
     {% paginate search.results by 25 %}
 			{%- capture activeFilters -%}
           {%- for filter in search.filters -%}
