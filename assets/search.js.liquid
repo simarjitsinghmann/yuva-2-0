@@ -130,7 +130,7 @@ $(document).ready(function(){
     //Click anywhere on page, hide results
     //$resultsBox.fadeOut(200);
   });
-  $('body').on('focus', '.search-box .search-input', function(){
+  function recentSearch(){
     $('#recent_search_list').html('');
     var recent_Html = '';
     setTimeout(function(){ 
@@ -174,7 +174,7 @@ $(document).ready(function(){
 
       //   $('.recent-search-inner').mCustomScrollbar({ theme:"light", axis:"x"});
     }, 500);
-  });
+  }
   //Search box should mimic live search string: products only, partial match
   $('.search-form, #search-form').on('submit', function(e){
     e.preventDefault();
