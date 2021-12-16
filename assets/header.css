@@ -1463,9 +1463,19 @@ header {
   position:relative;
 }
 .cartDrawerNote:after {
-	position:absolute;
+  position:absolute;
   content:"";
-  
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  content: "";
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  transform: rotate(
+    225deg);
+  position: absolute;
+  right: 12px;
+    top: 10px;
 }
 .cartNoteContainer {
     margin-top: 10px;
