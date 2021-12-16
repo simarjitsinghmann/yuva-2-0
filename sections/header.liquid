@@ -22,12 +22,13 @@
     justify-content: {{section.settings.logo_position}};
   }
 </style>
-{% if section.settings.enable_sticky_header %}
 <style>
   header { 
+{% if section.settings.enable_sticky_header %}
     position: sticky;
     top: 0;
     z-index: 3; 
+{% endif %}
     background-color:{{section.settings.header_bgcolor | default:'#fff'}};
   }
   
@@ -90,6 +91,7 @@
   }
   
 </style>
+{% if section.settings.enable_sticky_header %}
   <script>
       ///Sticky-header//
     $('body').addClass('{{section.settings.header_style}}')
