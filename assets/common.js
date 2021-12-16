@@ -362,7 +362,7 @@ function hideallMenus(menus,current){
 
 document.addEventListener("DOMContentLoaded", function() {
 
-  var footerMenus = document.getElementsByClassName('footer-menu-head');
+  var footerMenus = document.getElementsByClassName('footer-menu-accordion-head');
   if(window.innerWidth < 768 ){
     Array.from(footerMenus).forEach(function(menu) {
 
