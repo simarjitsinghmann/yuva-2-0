@@ -1656,13 +1656,16 @@
     top: unset;
     bottom: 0;
 }
-  .side_drawer_body {
+  .side_drawer_wrapper.similar_product .side_drawer_body {
     height: auto;
 }
   .results-similarGrid {
     flex-wrap: nowrap;
     overflow: auto;
   }
+  .results-similarGrid li.product-base {
+    padding: 0 10px 0px;
+}
   /*============= similar product drawer css start ===========*/
 }
 @media screen and (max-width: 575px) {
