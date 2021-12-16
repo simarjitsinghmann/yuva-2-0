@@ -9,7 +9,7 @@
       <div class="recent-product-slide">
         {%- for product in recommendations.products -%}
         <div class="item">
-          <div class="slider-content">
+          <div class="slider-content row">
             {% include 'product-grid' hideRelated:true,hideQuickView:true ,show_second_image : true %}
           </div>
         </div>
