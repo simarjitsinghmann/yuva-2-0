@@ -1458,6 +1458,15 @@ header {
     border-bottom: 1px solid;
   cursor:pointer;
 }
+.cartDrawerNote {
+	display:inline-block;
+  position:relative;
+}
+.cartDrawerNote:after {
+	position:absolute;
+  content:"";
+  
+}
 .cartNoteContainer {
     margin-top: 10px;
 }
