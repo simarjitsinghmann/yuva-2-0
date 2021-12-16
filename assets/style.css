@@ -4781,14 +4781,6 @@ body #shopify-product-reviews {
    background: var(--gray);
 }
 /* scrollbar css end */
-/* .widget-content .list-tags.more-options {
-   transition: 500ms ease;
-   max-height: 0;
-   overflow: hidden;
-} */
-/* .widget-content.show .list-tags.more-options {
-   max-height: 1000px;
-} */
 .load {
     text-align: center;
     margin: 0 auto;
@@ -4820,3 +4812,10 @@ body #shopify-product-reviews {
 .instagram-post .shopify__top__section  h2 {
     margin-bottom: 4px;
 }
+/* ============ recent product css start =============== */
+.recent-product-slide {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+}
+/* ============ recent product css end =============== */
