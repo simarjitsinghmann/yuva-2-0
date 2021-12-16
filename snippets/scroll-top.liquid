@@ -20,6 +20,8 @@ html{
     color: var(--white);
     cursor: pointeR;
     border-radius: 4px;
+     justify-content:center;
+      align-items:center;
   }
 
   #myBtn:hover {
@@ -40,7 +42,7 @@ html{
 
   function scrollFunction() {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      mybutton.style.display = "block";
+      mybutton.style.display = "flex";
     } else {
       mybutton.style.display = "none";
     }
