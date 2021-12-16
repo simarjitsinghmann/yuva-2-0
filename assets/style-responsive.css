@@ -1651,12 +1651,12 @@
   }
   /* ============ recent product css end =============== */
   /*============= similar product drawer css start ===========*/
-  .side_drawer_wrapper.similar_product {
+.side_drawer_wrapper.similar_product {
     height: auto;
     top: unset;
     bottom: 0;
-    max-width:100%;
-    
+    max-width: 100%;
+    transform: translate(0, 100%);
 }
   .side_drawer_wrapper.similar_product .side_drawer_body {
     height: auto;
