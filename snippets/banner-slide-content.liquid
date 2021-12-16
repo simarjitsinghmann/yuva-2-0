@@ -3,7 +3,7 @@
 {% assign desktopClass = 'slide-image-desktop' %}
 {% endif %}
 {% if block.settings.image != blank %}
-{% include 'lazy-image' image:block.settings.image%}
+{% render 'lazy-image' image:block.settings.image%}
 {%else%}
 <div class="{{desktopClass}}">{% render 'banner-placeholder'%}</div>
 {% endif %} 
