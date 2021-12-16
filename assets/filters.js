@@ -122,7 +122,6 @@ function hideOptions(){
         }
       }
       else{
-
           sortMenu.classList.add('active');
         if(window.innerWidth > 767){
 //           sortMenu.style.display = 'block';
