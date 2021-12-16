@@ -223,9 +223,6 @@ function getFilterData(filterForm,input,sectionId,remove){
     const resultData = new DOMParser().parseFromString(responseText, 'text/html');
     var itemResultCount = resultData.getElementsByClassName('filter-total-result');
     document.getElementById('CollectionProductsContainer').innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
-
-    //        var focusedElement =document.getElementById(input.getAttribute('id'));
-    //        focusedElement.scrollIntoView()
     applyFilters();
     history.pushState({}, null, _updateUrl);
   });
