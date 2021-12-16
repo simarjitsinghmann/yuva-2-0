@@ -1658,6 +1658,9 @@
     max-width: 100%;
     transform: translate(0, 100%);
 }
+  .side_Drawer_open .side_drawer_wrapper.similar_product {
+       transform: translate(0,0);
+}
   .side_drawer_wrapper.similar_product .side_drawer_body {
     height: auto;
 }
