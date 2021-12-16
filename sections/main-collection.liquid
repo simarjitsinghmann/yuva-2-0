@@ -162,7 +162,8 @@
               </a>
               {%- endif -%}
               {% endif %}
-              {%- endfor -%}
+              {%- endfor -%} 
+              <a href="{{ collection.url }}?sort_by={{ sort_by }}" class="select-item filter-clean mobile-only text-primary">{{ 'sections.collection_template.clear_all' | t }}</a>
             </div>
           </div>
         </div>
