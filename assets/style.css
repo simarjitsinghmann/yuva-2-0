@@ -1290,7 +1290,7 @@ a.wishlist-view .fas {
 .video-sec video {
    object-fit: cover;
 }
-.flex-absolute {
+/* .flex-absolute {
   position: absolute;
   z-index: 1;
   max-width: 1000px;
@@ -1300,6 +1300,11 @@ a.wishlist-view .fas {
   display: flex;
   align-items: center;
   justify-content: center;
+} */
+.flex-absolute {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
 }
 
 .video-banner-section .home-video-sec {
