@@ -45,13 +45,12 @@
   						</small>
                       {%- endif -%}
   </h6>
-                {{#if discountsApplied}}                		
-                        {{#each discounts}}
+                {%- for discount in item.discounts -%}
                       <div class="text-right">
-                          <small class="item__discount coupanName">{{ this.title }}</small><br>
-                        {{/each}}
+                          <small class="item__discount coupanName">{{ discount.title }}</small><br>
+                        
   </div>
-                  {{/if}}
+                        {%- endfor -%}
 				<div class="right-media-cart">
 					<div class="quantity">
 						<input type="number" class="ajaxcart__qty-num" name="updates[]" min="1" max="9" step="1" value="{{itemQty}}" data-id="{{key}}" data-line="{{line}}">
