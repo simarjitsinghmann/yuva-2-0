@@ -101,7 +101,7 @@
           {% include 'social-media-icons' %}
         
            {%- if customer -%}
-             <a class="list-menu__item" href="{{-routes.account_url-}}">{{'customer.account.title' | t | capitalize }}</a>
+             <a class="list-menu__item" href="{{ routes.account_logout_url }}">{{'customer.log_out' | t | capitalize }}</a>
         {%- else -%}
         <a class="list-menu__item" href="{{routes.account_login_url}}">{{'customer.account.title' | t | capitalize }}</a>
            {%- endif -%}
