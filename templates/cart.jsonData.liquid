@@ -1,1 +1,94 @@
 {% layout 'none' %}
+<div id="mini__cartForm">
+  <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
+    <div class="cart-item-container">	
+      {% if settings.enable_shipping and settings.shipping_rate != blank %}
+
+      <p>{{{shippPending}}}</p>
+      <p>{{settings.free_shipping_text}}</p>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar"
+             aria-valuemin="0" aria-valuemax="100" style="width:">
+          <span class="sr-only"> Complete</span>
+        </div>
+      </div>
+      {% endif %}
+      <div class="cart-items-wrapper">
+        {% for item in cart.items %}
+        <div class="media-link" data-line="{{forloop.index}}">
+          <img src="{{item.image | img_url:'150x'}}" alt="{{name}}" width="65" height="73">
+          <div class="media-body">
+            <h5 class="cart-item-link">
+              <a href="{{item.url}}">{{item.product.title | truncatewords:5}}</a>
+            </h5>
+            {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
+            <span class="item-variant-title">{{item.variant.title}}</span>
+            {% endunless %}
+            <span class="item-variant-title">{{item.selling_plan_allocation.selling_plan.name }}</span>
+            <h6 class="product__price">
+              {%- if item.original_price != item.final_price -%}
+              <small class="item__price-strikethrough"><s>{{item.original_price| money}}</s></small><span>{{item.final_price| money}}</span>
+              {%else%}
+              <span>{{item.final_price | money}}</span>
+              {%- endif -%}
+
+              {%- if item.unit_price_measurement -%}
+              <small class="unit-price">
+                {{ item.variant.unit_price | money }}
+                /
+                {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
+                {{- item.variant.unit_price_measurement.reference_value -}}
+                {%- endif -%}
+                {{ item.variant.unit_price_measurement.reference_unit }}
+              </small>
+              {%- endif -%}
+            </h6>
+            {%- for discount in item.discounts -%}
+            <div class="text-right">
+              <small class="item__discount coupanName">{{ discount.title }}</small><br>
+
+            </div>
+            {%- endfor -%}
+            <div class="right-media-cart">
+              <div class="quantity">
+                <input type="number" class="ajaxcart__qty-num" name="updates[]" min="1" max="9" step="1" value="{{item.quantity}}" data-id="{{item.key}}" data-line="{{forloop.index}}">
+                <div class="quantity-nav">
+                  <div class="quantity-button quantity-up ajaxcart__qty--plus"  data-id="{{item.key}}" data-line="{{forloop.index}}" data-qty="{{item.quantity | plus: 1}}"><svg width="24px" height="24px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="plusIconTitle" stroke="#909097" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" color="#000000"> <title id="plusIconTitle">Plus</title> <path d="M20 12L4 12M12 4L12 20"/> </svg></div>
+                  <div class="quantity-button quantity-down ajaxcart__qty--minus" data-id="{{item.key}}" data-line="{{forloop.index}}" data-qty="{{item.quantity | minus: 1}}"><svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#909097" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+                </div>
+              </div>
+              <div class="sd_mini_removeproduct" line="{{forloop.index}}" >{{'sections.cart.remove' | t}}</div>
+            </div>
+          </div>
+
+        </div>
+        {% endfor %}	
+      </div>
+    </div>
+    <div class="bottom-cart-box">
+      <div class="leave-order-note">
+        <span class="cartDrawerNote">{{'sections.cart.note_heading' | t}}
+
+        </span>
+        <div class="cartNoteContainer" style="display:none">
+          <textarea class="form-control" rows = "3" name="note">{{cart.note}}</textarea>
+        </div>
+      </div>
+      <ul>
+
+        {%- if cart.cart_level_discount_applications.size > 0 -%}
+        {%- for discount in cart.cart_level_discount_applications -%}
+        <li class="minicart__savings">{{'sections.cart.discount' | t}}<span class="coupanName">{{{{ discount.title }} }}</span> <strong>-{{discount.total_allocated_amount | money}}</strong></li>
+
+        {% endfor %}	
+        {% endif %}
+        <li class="totle-price">{{'sections.cart.subtotal' | t}}<strong>{{{cart.total_price | money}}}</strong></li>
+      </ul>
+      <small class="bottom-p">{{'sections.cart.taxes_and_shipping_at_checkout' | t}}</small>
+      <div class="cart-btn-container">
+        <button type="submit" class="checkout-btn button black-btn">{{'sections.cart.checkout' | t}}</button>
+      </div>
+      <a class="shopping_cont" href="/cart">{{'sections.cart.view_cart' | t}}</a>
+    </div>
+  </form>
+</div>
