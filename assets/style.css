@@ -795,16 +795,17 @@ img {
    z-index: 1;
 }
 .similar_options .vs-icon {
-   width: 27px;
-    height: 27px;
+    width: 27px;
     background: var(--white);
     text-align: center;
     display: flex;
     align-content: center;
     border-radius: 50px;
-      justify-content:center;
+    justify-content: center;
     position: relative;
-      transition:0.3s ease;
+    transition: .3s ease;
+    padding: 4px;
+    overflow: hidden;
 }
 .similar_options .vs-icon:hover {
     width: 110px;
