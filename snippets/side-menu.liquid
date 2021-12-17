@@ -93,7 +93,7 @@
             {%- endfor-%}
            {%- if customer -%}
            <li class="nav-item {% if link.current %}active{% endif %}">
-             <a class="list-menu__item" href="{{-routes.account_url-}}">{{'customer.account.title' | capitalize | t }}</a>
+             <a class="list-menu__item" href="{{-routes.account_url-}}">{{'customer.account.title' | t | capitalize }}</a>
            </li>
            {%- endif -%}
          </ul>
