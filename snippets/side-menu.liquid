@@ -97,6 +97,14 @@
            </li>
            {%- endif -%}
          </ul>
+        
+          {% include 'social-media-icons' %}
+        
+           {%- if customer -%}
+             <a class="list-menu__item" href="{{-routes.account_url-}}">{{'customer.account.title' | t | capitalize }}</a>
+        {%- else -%}
+        <a class="list-menu__item" href="{{-routes.account_url-}}">{{'customer.account.title' | t | capitalize }}</a>
+           {%- endif -%}
          <div class="navigation-close-mob" style="display:none;">
             <a href="javascript:void(0)" title="close_navigation" class="close-btn">
                <svg aria-hidden="true" focusable="false" role="presentation" class="icon sidebar-icon icon-close" viewBox="0 0 40 40">
