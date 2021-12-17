@@ -133,7 +133,7 @@
   $('.announce_close').click(function(){
     $('.announcement-bar').slideToggle();
     var date = new Date();
-    date.setTime(date.getTime() + (parseInt(24 * 60 * 60 * 1000));
+    date.setTime(date.getTime() + (parseInt(24 * 60 * 60 * 1000)));
                                             Cookies.set('announcement_closed', 'true', { expires: date, path: '/' });
     $('body').removeClass('announcement_open');
   });
