@@ -460,6 +460,8 @@ $(document).ready(function(){
     drawer.setAttribute('id','similar_product');
     drawer.classList.add('similar_product');
     drawer.classList.add('searching'); 
+    setTimeout(function(){
+    document.querySelector('body').classList.add('side_Drawer_open');    
     drawer.querySelector('[data-drawer-body]').innerHTML =preLoadLoadGif;
     drawer.querySelector('[data-drawer-title]').innerHTML ='Similar Products';
     var getID = $(this).attr('data-id'); 
@@ -471,11 +473,10 @@ $(document).ready(function(){
       html.innerHTML = text;
       const recommendations = html.querySelector('.similarItemContainer');
       if (recommendations && recommendations.innerHTML.trim().length) {
-    document.querySelector('body').classList.add('side_Drawer_open');    
         drawer.querySelector('[data-drawer-body]').innerHTML = recommendations.innerHTML;   
         drawer.classList.remove('searching');
       }
-    });
+    });},500)
   });
 
   ///search-top//
