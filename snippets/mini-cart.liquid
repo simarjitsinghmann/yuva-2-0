@@ -1,38 +1,31 @@
 <div id="mini_cart_shipping" {% if settings.enable_shipping and settings.shipping_rate != blank %}data-shipping="{{settings.shipping_rate | times:100}}" data-shipText="{{settings.shipping_text}}"{% endif %}>
 </div>
 <script id="CartTemplate" type="text/template">
-    {% raw %}
   <div id="mini__cartForm">
-     <form action="{% endraw %}{{ routes.cart_url }}{% raw %}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
+     <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
 	<div class="cart-item-container">	
-    	{% endraw %}
         {% if settings.enable_shipping and settings.shipping_rate != blank %}
-        {% raw %}
-    	{{#if shippPending }}     
+    	   
 		 <p>{{{shippPending}}}</p>
-         {{else}}
-          <p>{% endraw %}{{settings.free_shipping_text}}{% raw %}</p>
-        {{/if}}
+          <p>{{settings.free_shipping_text}}</p>
 		 <div class="progress">
 		  <div class="progress-bar" role="progressbar"
-		  aria-valuemin="0" aria-valuemax="100" style="width:{{shipPendingPercentage}}">
-			<span class="sr-only">{{shipPendingPercentage}} Complete</span>
+		  aria-valuemin="0" aria-valuemax="100" style="width:">
+			<span class="sr-only"> Complete</span>
   </div>
   </div>
-        {% endraw %}
         {% endif %}
-        {% raw %} 	
         <div class="cart-items-wrapper">
-		{{#items}}
+        {% for item in cart.items %}
 		<div class="media-link" data-line="{{line}}">
-			<img src="{{img}}" alt="{{name}}" width="65" height="73">
+			<img src="{{item.image | img_url:'150x'}}" alt="{{name}}" width="65" height="73">
 			<div class="media-body">
 				<h5 class="cart-item-link">
-					<a href="{{url}}">{{name}}</a>
+					<a href="{{item.url}}">{{item.product.title | truncatewords:5}}</a>
   </h5>
-                  {{#if variation}}
-                <span class="item-variant-title">{{variation}}</span>
-                  {{/if}}
+                        {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
+                <span class="item-variant-title">{{item.variant.title}}</span>
+                  {% endunless %}
                   {{#if sellingPlan}}
                 <span class="item-variant-title">{{sellingPlan}}</span>
                   {{/if}}
@@ -61,17 +54,17 @@
 							<div class="quantity-button quantity-down ajaxcart__qty--minus" data-id="{{key}}" data-line="{{line}}" data-qty="{{itemMinus}}"><svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#909097" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
   </div>
   </div>
-					<div class="sd_mini_removeproduct" line="{{line}}" >{%-endraw-%}{{'sections.cart.remove' | t}}{%-raw-%}</div>
+					<div class="sd_mini_removeproduct" line="{{line}}" >{{'sections.cart.remove' | t}}</div>
   </div>
   </div>
 
   </div>
-		{{/items}}	
+		{% endfor %}	
   </div>
   </div>
 	<div class="bottom-cart-box">
 		<div class="leave-order-note">
-			<span class="cartDrawerNote">{%-endraw-%}{{'sections.cart.note_heading' | t}}{%-raw-%}
+			<span class="cartDrawerNote">{{'sections.cart.note_heading' | t}}
   
   </span>
             <div class="cartNoteContainer" style="display:none">
@@ -81,19 +74,18 @@
 		<ul>
 
          {{#totalCartDiscount}}
-            <li class="minicart__savings">{%-endraw-%}{{'sections.cart.discount' | t}}{%-raw-%}<span class="coupanName">{{title }}</span> <strong>-{{price}}</strong></li>
+            <li class="minicart__savings">{{'sections.cart.discount' | t}}<span class="coupanName">{{title }}</span> <strong>-{{price}}</strong></li>
           {{/totalCartDiscount}}
-			<li class="totle-price">{%-endraw-%}{{'sections.cart.subtotal' | t}}{%-raw-%}<strong>{{{totalPrice}}}</strong></li>
+			<li class="totle-price">{{'sections.cart.subtotal' | t}}<strong>{{{totalPrice}}}</strong></li>
   </ul>
-		<small class="bottom-p">{%-endraw-%}{{'sections.cart.taxes_and_shipping_at_checkout' | t}}{%-raw-%} </small>
+		<small class="bottom-p">{{{'sections.cart.taxes_and_shipping_at_checkout' | t}}</small>
 		<div class="cart-btn-container">
-			<button type="submit" class="checkout-btn button black-btn">{%-endraw-%}{{'sections.cart.checkout' | t}}{%-raw-%}</button>
+			<button type="submit" class="checkout-btn button black-btn">{{'sections.cart.checkout' | t}}</button>
   </div>
-			<a class="shopping_cont" href="/cart">{%-endraw-%}{{'sections.cart.view_cart' | t}}{%-raw-%}</a>
+			<a class="shopping_cont" href="/cart">{{'sections.cart.view_cart' | t}}</a>
   </div>
   </div>
   </form>
   </div>
-{% endraw %}
 </script>
 <script src="{{'cart-ajax.js' | asset_url}}" defer="defer"></script> 
