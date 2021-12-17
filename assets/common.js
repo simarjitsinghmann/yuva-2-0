@@ -472,9 +472,8 @@ $(document).ready(function(){
       html.innerHTML = text;
       const recommendations = html.querySelector('.similarItemContainer');
       if (recommendations && recommendations.innerHTML.trim().length) {
-        drawer.querySelector('[data-drawer-body]').innerHTML = recommendations.innerHTML;
-        
-    document.querySelector('body').classList.add('side_Drawer_open'); 
+        drawer.querySelector('[data-drawer-body]').innerHTML = recommendations.innerHTML;        
+        document.querySelector('body').classList.add('side_Drawer_open'); 
         drawer.classList.remove('searching');
       }
     });
