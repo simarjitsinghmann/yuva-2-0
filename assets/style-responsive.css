@@ -675,7 +675,7 @@
     line-height: 13px;
 }
   /*===========  searchbar css end ==============*/
-/*   banner */
+/*===========   banner css start ==========*/
   .carousel-caption-title .button, .shopify-section-slider .button, .single-banner-section .button {
     margin-top: 25px;
 }
@@ -683,7 +683,7 @@
     font-size: 14px;
     line-height: 22px;
 }
-/*  banner end  */
+/*===========  banner css end  ============*/
   /*==============  Whats more start  ==============*/
   .card-information .card-information-image {
     min-height: 170px;
@@ -720,8 +720,8 @@
     line-height: 16px;
     padding-bottom: 0;
   }
-  /*  product listing home end  */
-  /*  product detail start  */
+  /*===========  product listing home end  ============*/
+  /*===========  product detail start  =============*/
   .feature-product .product-add-to-cart-right p.vendor_name {
     margin: 0 0 5px;
   }
@@ -809,7 +809,7 @@
     height: 165px;
   }
   /*==============  featured blog end  ====================*/
-  /* banner css start   */
+  /*============ banner css start =============*/
   .banner.banner-section.item {
     height: 450px;
   }
@@ -887,7 +887,7 @@
     margin-bottom: 0;
   }
   /*  end  */
-  /*  product listing  page start  */
+  /*===========  product listing  page start  ============*/
   .toolbox-item.toolbox-layout .btn-layout {
     display: none;
   }
@@ -1010,8 +1010,8 @@
     min-height: 210px;
     max-height: 210px;
   }
-  /*   pdp page end */
-  /*  header css start  */
+  /*============   pdp page end =============*/
+  /*=================  header css start  =============*/
   .header_1 .navbar,
   .header_3 #nav_style_4 {
     padding: 20px 0;
@@ -1053,7 +1053,7 @@
   .menu_title {
     display: none;
   }
-  /*  header menu end  */
+  /*============  header menu end  ===========*/
   nav.breadcrumb-nav {
     padding: 10px 0;
   }
@@ -1065,6 +1065,11 @@
     font-size: 13px;
 }
   /*===============  single banner css end  =============*/
+/* collection  css start  */
+  .collection-list-view-wrapper.left-wrapper .collection-list-view-card {
+    height: 560px;
+  }
+/* collection  css end  */
 }
 @media screen and (max-width: 767px) {
   p
