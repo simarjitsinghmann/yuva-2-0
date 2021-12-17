@@ -867,7 +867,7 @@ function showPickupDrawer(){
       const showContainerButton = document.getElementById('ShowPickupAvailabilityDrawer');
       const previewContainer = document.getElementById('pickup-availability-preview-container');
     const drawer = document.querySelector('[data-side-drawer]');	
-  drawer.setAttribute('class','');
+  drawer.setAttribute('class','side_drawer_wrapper');
   console.log(showContainerButton)
   if(showContainerButton){
     showContainerButton.addEventListener("click", ()=>{
