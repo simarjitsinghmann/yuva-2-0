@@ -48,3 +48,19 @@
   --base_line_height: {{ settings.type_base_line_height | default: 1.4 }};
   --text_size: {{ settings.type_base_size | default: 14 }}px;
 }
+    
+    body.loading {
+    overflow: hidden;
+}
+
+body.loading:after {
+    content: "";
+    background-image: url(loader.svg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    top: 0;
+    overflow: hidden;
+    background-color: #78575791;
+}
