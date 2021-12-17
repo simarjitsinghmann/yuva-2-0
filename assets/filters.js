@@ -137,13 +137,12 @@ function hideOptions(){
     });
     }
 var closeSortMenu = document.querySelector('.close-mobile-sort');
-    console.log('closeSortMenu')
 if(closeSortMenu){
   closeSortMenu.addEventListener("click", (e)=>{	
     e.preventDefault();
     var sortMenu = document.getElementById('sort__list');
     if(window.innerWidth < 768){
-    console.log('asasas')
+    console.log(sortMenu)
         sortMenu.classList.remove('active');
                 document.querySelector('body').classList.remove('open-filter-sort');
       //         }
