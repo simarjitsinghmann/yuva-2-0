@@ -1824,8 +1824,8 @@ li.breadcrumb-item a {
    li:hover
    input:checked
    ~ .checkmark {
-   background-color: #000;
-   border-color: #000;
+   background-color: var(--theme-color);
+   border-color: var(--theme-color);
    box-shadow: none;
 }
 /***Sidebar-end**/
