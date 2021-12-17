@@ -93,7 +93,7 @@ validateQty = function (qty) {
 cartPageUpdate = function(cart){  
 
   $.ajax({
-    url: '/cart?view=jsonData',
+    url: '/cart',
     type: 'GET',
     dataType: 'html',
     success: function(result) {
