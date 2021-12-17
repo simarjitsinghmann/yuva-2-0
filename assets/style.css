@@ -429,12 +429,15 @@ img {
     padding-bottom: 60px;
 }
 .style_variation_2 .card-information__wrapper {
-  width: 90%;
-  left: 0;
-  right: 0;
-  bottom: -55px;
-  border-radius: 10px;
-  box-shadow: 0 2px 3px rgb(0 0 0 / 10%);
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+    background: transparent;
+    height: 100%;
+    outline: 1px solid #fff;
+    outline-offset: -13px;
 }
 .style_variation_2 .card-information .card-information-image {
    border: 0;
