@@ -746,6 +746,7 @@ function sellingPlans(variant,form){
 
 
 function pickUpAvialabiliy(status){
+  setTimeout(function(){
 	var pickUp = document.querySelector('.product__pickup-availabilities');
       var previewContainer = document.getElementById('pickup-availability-preview-container');
     if(pickUp && status){
@@ -753,7 +754,6 @@ function pickUpAvialabiliy(status){
         previewContainer.classList.add('hidden');
       var rootUrl = pickUp.dataset.rootUrl;
       var variantId = pickUp.closest('form').querySelector('[name=id]').value;
-     
       if (!rootUrl.endsWith("/")) {
         rootUrl = rootUrl + "/";
       }
@@ -772,6 +772,7 @@ function pickUpAvialabiliy(status){
         .catch(e => {
         });
     }
+  },500);
 }
 
 function sellingPlanChange(){
