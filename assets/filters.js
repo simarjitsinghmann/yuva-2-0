@@ -110,7 +110,6 @@ function hideOptions(){
 
     var sortMenu = document.getElementById('toolbox-sort');
     if(sortMenu){
-      console.log('sortMenu')
       sortMenu.addEventListener("click", (e)=>{	
         e.preventDefault();
                                 var sortMenu = document.getElementById('sort__list');
@@ -119,7 +118,6 @@ function hideOptions(){
         if(window.innerWidth > 767){
         DOMAnimations.slideUp(sortMenu);
         }else{
-//           sortMenu.style.display = 'none';
           document.querySelector('body').classList.remove('open-filter-sort');
         }
       }
@@ -128,7 +126,6 @@ function hideOptions(){
         if(window.innerWidth > 767){
           DOMAnimations.slideDown(sortMenu);
         }else{
-//           sortMenu.style.display = 'block';
           document.querySelector('body').classList.add('open-filter-sort');
         }
       }
