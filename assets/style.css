@@ -813,8 +813,17 @@ img {
    width: 17px;
 }
 .similar-text {
-   font-size: 11px;
-	opacity:0;
+    font-size: 11px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 25px;
+    top: 5px;
+    min-width: 80px;
+}
+.similar_options .vs-icon:hover .similar-text {
+	opacity:1;
+  visibility:visible;
 }
 .shop__options {
    position: absolute;
