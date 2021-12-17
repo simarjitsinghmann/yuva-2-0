@@ -36,12 +36,14 @@
  window.addEventListener('load', (event) => {
   changeGridLayout();
   hideShowFilters();
+  applyFilters();
 });
 window.addEventListener('resize', function(event){
   changeGridLayout();
   hideShowFilters();
   applyFilters();
 });
+
 function applyFilters(){ 
   hideShowFilters();
 
@@ -226,6 +228,5 @@ function getFilterData(filterForm,input,sectionId,remove){
     history.pushState({}, null, _updateUrl);
   });
 }
-applyFilters();
 }());
 
