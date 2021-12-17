@@ -627,24 +627,18 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
    display: block;
    position: relative;
 }
+.side-menu .social-links ul li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+}
 .side-menu .social-links ul li a {
-   font-size: var(--med-text);
    text-decoration: none;
-   color: #ffffff;
-   line-height: 11px;
+   color: var(--black);
    letter-spacing: 0.2px;
    position: relative;
-}
-.side-menu .social-links ul li {
-   width: 34px;
-   height: 34px;
-   border-radius: 50%;
-   background: #dadada;
-   text-align: center;
-   display: inline-block;
-   margin-right: 14px;
-   color: var(--black);
-   padding: 10px 0;
 }
 .side-menu .card.card--product {
    width: 100%;
