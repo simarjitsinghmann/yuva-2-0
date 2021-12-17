@@ -2883,7 +2883,7 @@ body.header2.announcement_open .single__product__right.sidebar-fixed {
    justify-content: center;
    overflow: hidden;
    min-height: 190px;
-   background-color: var(--gray);
+   background-color: var(--colorImageBg);
 }
 .results-similarGrid li.product-base picture.img-responsive img {
    width: 100%;
@@ -4092,8 +4092,6 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
    height: 100%;
    object-fit: cover;
    transition: 1s ease all;
-/*    min-height: 325px;
-   max-height: 670px; */
 }
 .list-view-content {
    position: absolute;
@@ -4183,7 +4181,7 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
    padding-left: 7px;
    padding-right: 7px;
 }
-/* collection page end */
+/*================ collection page end ===============*/
 /*=============== search page css start ==============*/
 .searchresultFilter {
     max-width: 20%;
@@ -4362,7 +4360,6 @@ body #shopify-product-reviews {
    display: inline;
 }
 #shopify-product-reviews .spr-form-input {
-   /*     border: 1px solid var(--gray); */
    padding: 10px 15px;
    font-family: var(--font-family);
    background-color: #f4f4f4;
@@ -4586,14 +4583,14 @@ body #shopify-product-reviews {
    justify-content: center;
    margin-bottom: 10px;
    overflow: hidden;
-   background-color: var(--gray);
+   background-color: var(--colorImageBg);
 }
 .quickview_product_img_thumb {
    display: flex;
    height: 80px;
    justify-content: center;
    margin: 0 10px 0 0;
-   background-color: var(--gray);
+   background-color: var(--colorImageBg);
 }
 .quickview_product_slider .slick-arrow {
    position: absolute;
