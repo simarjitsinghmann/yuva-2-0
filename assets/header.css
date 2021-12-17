@@ -981,6 +981,12 @@ body.nav-open {
    transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s,
       top 0.2s ease 0.1s;
 }
+.menuLinks-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 1000px;
+}
 .site-nav-dropdown .inner.dropdown .sub-menu-list .menu-mb-title span {
     margin-bottom: 8px;
     font-size: 14px;
