@@ -858,7 +858,7 @@ slickSlider = function(selector,slideIndex){
   $(selector).on('afterChange', function(event, slick, currentSlide){
   var video = $(this).find('.slick-current video');
     if(video.length > 0){
-    	video.trigger('pause')
+    	video.trigger('play')
     }
 });
 }
