@@ -796,14 +796,17 @@ img {
 }
 .similar_options .vs-icon {
    width: 27px;
-   height: 27px;
-   background: var(--white);
-   display: inline-block;
-   text-align: center;
-   display: flex;
-   align-content: center;
-   justify-content: center;
-     border-radius:100%;
+    height: 27px;
+    background: var(--white);
+    text-align: center;
+    display: flex;
+    align-content: center;
+    border-radius: 50px;
+    padding: 0 8px;
+    position: relative;
+}
+.similar_options .vs-icon:hover {
+    width: 110px;
 }
 .similar_options svg {
    fill: #1f2a2e;

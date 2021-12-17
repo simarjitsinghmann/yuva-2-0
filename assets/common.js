@@ -855,6 +855,9 @@ slickSlider = function(selector,slideIndex){
       }
     }
   }
+  $(selector).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  console.log(nextSlide);
+});
 }
 
 sliders = function(){
