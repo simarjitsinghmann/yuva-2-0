@@ -97,9 +97,7 @@ cartPageUpdate = function(cart){
     type: 'GET',
     dataType: 'html',
     success: function(result) {
-      console.log($(result).find('[data-cart-items]'));
-      return false
-      $('body').find('[data-cart-items]').html(result);
+      $('body').find('[data-cart-items]').html($(result).find('[data-cart-items]').html());
       if(cart.item_count == 0){
         $('[data-cart-count').hide();
       }
