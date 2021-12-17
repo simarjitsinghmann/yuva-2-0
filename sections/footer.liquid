@@ -134,13 +134,13 @@
 </div>
 <style>
   #shopify-section-{{section.id}} .footer-top-box{
-    background-color:{{section.settings.footer_bg}};
+    background-color:{{section.settings.footer_bg | color_lighten: 30 }};
   }
   #shopify-section-{{section.id}} .footer-middle-box{
     background-color:{{section.settings.footer_bg}};
   }
   #shopify-section-{{section.id}} .footer-bottom-box{
-    background-color:{{section.settings.footer_bg}};
+    background-color:{{section.settings.footer_bg | color_darken: 30 }};
   }
   
   #shopify-section-{{section.id}} a,
