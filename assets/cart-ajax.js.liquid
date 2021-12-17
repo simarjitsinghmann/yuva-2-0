@@ -123,8 +123,9 @@ buildCart = function (cart,showCart) {
   $.ajax({
     url: '/cart?view=jsonData',
     type: 'GET',
-    dataType: 'json',
+    dataType: 'html',
     success: function(result) { 
+      console.log(result)
     }
   });
   $('body').find('[data-drawer-body]').html(template(data));
