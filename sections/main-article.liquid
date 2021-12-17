@@ -34,11 +34,10 @@
             <ul class="article_tags">
             	{% for tag in article.tags %}
               <li><a href="{{blog.url}}/tagged/{{tag}}">{{tag}}</a></li>
-              {% endfor %}
+              {% endfor %} 
             </ul>
             {% if section.settings.show_social %}
             <div class="article-template__social-sharing page-width page-width--narrow social-icons">
-              <h5>Share</h5>
               {% render 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
             </div>
             {% endif %}
@@ -49,7 +48,7 @@
                 {%- if article.comments_count > 0 -%}
                 {%- assign anchorId = '#Comments-' | append: article.id -%}
 
-                <h5 id="Comments-{{ article.id }}">{{ 'blogs.article.comments' | t: count: article.comments_count }}</h5>
+                <h3 id="Comments-{{ article.id }}">{{ 'blogs.article.comments' | t: count: article.comments_count }}</h3>
                 {% paginate article.comments by 5 %}
                 <div class="article-template__comments">
                   {%- if comment.status == 'pending' and comment.content -%}
