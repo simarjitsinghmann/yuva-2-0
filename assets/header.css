@@ -982,17 +982,10 @@ body.nav-open {
       top 0.2s ease 0.1s;
 }
 .menuLinks-wrapper {
-  display: flex;
+  display: flex!important;
   flex-direction: column;
   flex-wrap: wrap;
   max-height: 1000px;
-}
-.site-nav-dropdown .inner.dropdown .sub-menu-list {
-    width: 150px;
-    background: #EC985A;
-    color: white;
-    margin: 0 1rem 1rem 0;
-    font-size: 2rem;
 }
 .site-nav-dropdown .inner.dropdown .sub-menu-list .menu-mb-title span {
     margin-bottom: 8px;
