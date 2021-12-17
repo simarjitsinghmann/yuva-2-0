@@ -1,4 +1,4 @@
-{% layout 'none' %}
+{% layout none %}
 <div id="mini__cartForm">
   <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
     <div class="cart-item-container">	
@@ -89,7 +89,7 @@
 
         {% endfor %}	
         {% endif %}
-        <li class="totle-price">{{'sections.cart.subtotal' | t}}<strong>{{cart.total_price | money}}}</strong></li>
+        <li class="totle-price">{{'sections.cart.subtotal' | t}}<strong>{{cart.total_price | money}}</strong></li>
       </ul>
       <small class="bottom-p">{{'sections.cart.taxes_and_shipping_at_checkout' | t}}</small>
       <div class="cart-btn-container">
