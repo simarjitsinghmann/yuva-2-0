@@ -152,8 +152,8 @@ if(closeSortMenu){
     Array.from(priceRangeBars).forEach(function(rangeBar) {
       var el = rangeBar;
       var sliderEventListener ='';
-      if(element.noUiSlider) {
-        sliderEventListener = element.noUiSlider;
+      if(el.noUiSlider) {
+        sliderEventListener = el.noUiSlider;
       }else{
       sliderEventListener = noUiSlider.create(el, {
         start: [el.dataset.start, el.dataset.end],
