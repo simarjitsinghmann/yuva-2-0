@@ -46,8 +46,8 @@
                       <small class="unit-price">{{unitPrice}}</small>
                       {{/if}}
   </h6>
-                {{#if discountsApplied}}
-                		{{eac}}
+                {{#if discountsApplied}}                		
+                        {{#each discounts}}
                       <div class="text-right">
                           <small class="item__discount coupanName">{{ this.title }}</small><br>
                         {{/each}}
