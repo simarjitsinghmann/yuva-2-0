@@ -456,9 +456,9 @@ $(document).ready(function(){
 
     const drawer = document.querySelector('[data-side-drawer]');
     
+    drawer.classList.add('similar_product');
     drawer.setAttribute('class','side_drawer_wrapper similar_product');
     drawer.setAttribute('id','similar_product');
-    drawer.classList.add('similar_product');
     drawer.classList.add('searching'); 
     setTimeout(function(){
     document.querySelector('body').classList.add('side_Drawer_open');    
