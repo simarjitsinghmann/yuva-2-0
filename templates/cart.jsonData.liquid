@@ -17,10 +17,10 @@
       {% endif %}
       <div class="progress">
         <div class="progress-bar" role="progressbar"
-             aria-valuemin="0" aria-valuemax="100" style="width:">
-          <span class="sr-only"> Complete</span>
+             aria-valuemin="0" aria-valuemax="100" style="width:{{shippingPercentage}}%">
+          <span class="sr-only">{{shippingPercentage}}% Complete</span>
         </div>
-      </div>c
+      </div>
       {% endif %}
       <div class="cart-items-wrapper">
         {% for item in cart.items %}
