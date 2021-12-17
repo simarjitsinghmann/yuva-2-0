@@ -46,11 +46,13 @@
   }  
                 
   #banner-{{section.id}} .banner-caption-title h3 { 
+    font-size:{{section.settings.subheading_font_size}}px;
     {% if section.settings.subh_text != blank %}
     color: {{ section.settings.subh_text }};
     {% endif %}
   }              
   #banner-{{section.id}} .banner-caption-title h2 { 
+    font-size:{{section.settings.heading_font_size}}px;
     {% if section.settings.h_text != blank %}
     color: {{ section.settings.h_text }};
     {% endif %}
