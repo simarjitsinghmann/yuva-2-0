@@ -85,11 +85,11 @@
 
         {%- if cart.cart_level_discount_applications.size > 0 -%}
         {%- for discount in cart.cart_level_discount_applications -%}
-        <li class="minicart__savings">{{'sections.cart.discount' | t}}<span class="coupanName">{{{{ discount.title }} }}</span> <strong>-{{discount.total_allocated_amount | money}}</strong></li>
+        <li class="minicart__savings">{{'sections.cart.discount' | t}}<span class="coupanName">{{ discount.title }}</span> <strong>-{{discount.total_allocated_amount | money}}</strong></li>
 
         {% endfor %}	
         {% endif %}
-        <li class="totle-price">{{'sections.cart.subtotal' | t}}<strong>{{{cart.total_price | money}}}</strong></li>
+        <li class="totle-price">{{'sections.cart.subtotal' | t}}<strong>{{cart.total_price | money}}}</strong></li>
       </ul>
       <small class="bottom-p">{{'sections.cart.taxes_and_shipping_at_checkout' | t}}</small>
       <div class="cart-btn-container">
