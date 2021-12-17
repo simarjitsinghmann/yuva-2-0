@@ -121,9 +121,9 @@ function hideOptions(){
         sortMenu.classList.remove('active');
           DOMAnimations.slideUp(sortMenu);
         }
-//         else{
-//           document.querySelector('body').classList.remove('open-filter-sort');
-//         }
+        else{
+          document.querySelector('body').classList.remove('open-filter-sort');
+        }
       }
       else{
           sortMenu.classList.add('active');
