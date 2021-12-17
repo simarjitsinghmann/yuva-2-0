@@ -266,7 +266,11 @@
 </style>
 <script>
   $(document).ready(function(){
-    $('[data-fancybox="gallery{{section.id}}"]').fancybox({
+    $('[data-fancybox="gallery{{section.id}}"]').fancybox({Toolbar: {
+    display: [
+      "close",
+    ],
+  },
       infobar: false,
       fitToView: true,
         arrows: true,
