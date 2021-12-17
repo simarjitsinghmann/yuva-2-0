@@ -746,7 +746,6 @@ function sellingPlans(variant,form){
 
 
 function pickUpAvialabiliy(status){
-  return false;
 	const pickUp = document.querySelector('.product__pickup-availabilities');
       const previewContainer = document.getElementById('pickup-availability-preview-container');
         previewContainer.innerHTML = '';
