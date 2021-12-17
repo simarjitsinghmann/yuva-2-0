@@ -361,7 +361,9 @@ function hideallMenus(menus,current){
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-
+  setTimeout(function(){
+  document.querySelector('body').classList.remove('loading')
+  },3000)
   var footerMenus = document.getElementsByClassName('footer-menu-accordion-head');
   if(window.innerWidth < 768 ){
     Array.from(footerMenus).forEach(function(menu) {
