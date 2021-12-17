@@ -126,10 +126,36 @@
     announcementTimer();
   }
   {% endif %}
+  var getnew_Pop = Cookies.get('Newsletter_closed');
+  if(getnew_Pop!="Newsletter_closed_val"){
+    $('.newsletter-popup').fadeIn('slow');  
+    $('body').addClass('NewsletterActive').addClass('scrollHidden'); 
+  }else{
+  }
+  $("body").on('click', '.newsletter-popup .pop_cross,.newsletter-popup .popclose', function (e) {
+    e.preventDefault();
+    var form = $(this).parent().find('form');
+    var date = new Date();
+    date.setTime(date.getTime() + (parseInt('{{settings.popup_cookie}}') * 24 * 60 * 60 * 1000));
+                                            Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: date, path: '/' });
+                                   $('.newsletter-popup').fadeOut('slow');
+                 $('body').removeClass('NewsletterActive').removeClass('scrollHidden');         
+  });
+  $('button[name="commit"]').click(function(e){
+    e.preventDefault();
+    var form = $(this).closest('form');
+    var date = new Date();
+    date.setDate(date.getTime() + parseInt('{{settings.popup_cookie}}') * 24 * 60 * 60 * 1000);
+                                           Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: date, path: '/' });
+                 form.submit();
+  })
+  
   $('.announce_close').click(function(){
     $('.announcement-bar').slideToggle();
     $('body').removeClass('announcement_open');
   });
+  
+
 </script>
 {% endif %}
 
