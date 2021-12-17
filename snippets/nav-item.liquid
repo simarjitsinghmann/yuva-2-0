@@ -32,11 +32,10 @@
           {%- endif -%}
           {% if menuLinkLists %}
           <div class="col-12 {{menuWidth}} col5 inner dropdown {{test}}">
-            <div class="masonry">
+            <div class="menuLinks-wrapper">
               {%- for childlink in link.links -%}
-              <div class="masonry-item">
-                
-                <div class="menu-mb-title ">
+              <div class="sub-menu-list">
+                <div class="menu-mb-title">
                   <span>{%- unless childlink.links != blank -%}<a href="{{ childlink.url }}">{% endunless %}{{ childlink.title | split:"{badge" | first | escape | captilize }}{%- unless childlink.links != blank -%}</a>{% endunless %}</span>
                 </div>
                 {%- if childlink.links != blank -%}
@@ -51,7 +50,7 @@
                   {%- endfor -%}
                 </ul>
                 {% endif %}
-                </div>
+              </div>
               {% endfor %}
               {% include 'mega-menu' content:'menu' %}
             </div>

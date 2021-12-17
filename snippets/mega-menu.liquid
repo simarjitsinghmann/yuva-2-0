@@ -10,8 +10,7 @@
             {% assign heading = 'menu_heading'|append:i %}
               {% if block.settings[menu] != blank %}
                 {% assign mainMenu = block.settings[menu] %}
-                <div class="masonry-item">
-               
+                <div class="sub-menu-list {{test}}">
                   <div class="menu-mb-title">
                     <span>{% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</span>
                   </div>
@@ -24,8 +23,7 @@
                     {%- endfor -%}
                   </ul>
                   {% endif %}
-                  </div>
-           
+                </div>
               {% endif %}
           {% endfor %}
       {% endcase %}
