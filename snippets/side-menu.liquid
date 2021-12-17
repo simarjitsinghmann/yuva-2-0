@@ -103,7 +103,7 @@
            {%- if customer -%}
              <a class="list-menu__item" href="{{-routes.account_url-}}">{{'customer.account.title' | t | capitalize }}</a>
         {%- else -%}
-        <a class="list-menu__item" href="{{-routes.account_url-}}">{{'customer.account.title' | t | capitalize }}</a>
+        <a class="list-menu__item" href="{{routes.account_login_url}}">{{'customer.account.title' | t | capitalize }}</a>
            {%- endif -%}
          <div class="navigation-close-mob" style="display:none;">
             <a href="javascript:void(0)" title="close_navigation" class="close-btn">
