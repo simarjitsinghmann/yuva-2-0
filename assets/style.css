@@ -804,8 +804,7 @@ text-transform: capitalize;
     margin: 0 0 10px;
     font-size: 12px;
 }
-.product-loop-variants.square .color_option span,
-.product-loop-variants.circle .color_option span {
+.product-loop-variants .color_option span {
    overflow: hidden;
    padding: 0;
 }
@@ -818,12 +817,12 @@ text-transform: capitalize;
    object-fit: cover;
   border-radius: 50%;
 }
+.product__pickup-availabilities {
+    margin-bottom: 25px;
+}
 .latest__sale .grid--4-col-desktop .grid__item.full__item {
    width: 100%;
    max-width: 100%;
-}
-.latest__sale .product-loop-variants.circle .color_option {
-   padding-top: 0;
 }
 .layout2 .collection-detail a.button span {
    padding-top: 4px;
