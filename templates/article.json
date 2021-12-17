@@ -7,11 +7,13 @@
         "show_date": true,
         "show_author": true,
         "show_social": true,
+        "show_tags": true,
         "show_related": true
       }
     },
     "1637917970297515ae": {
       "type": "collection-list",
+      "disabled": true,
       "blocks": {
         "1637917970f234d366-2": {
           "type": "collection",
@@ -67,7 +69,11 @@
         "mc_btnlink": "",
         "mc_image": "shopify:\/\/shop_images\/man-in-french-cuff-fashion.jpg",
         "button_icon": true,
-        "btn_text": "#121212"
+        "btn_text": "#121212",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "1637920171b1ae8b6a": {
@@ -94,11 +100,16 @@
         "54aeaf21-34b5-42cb-9ac9-1cecd66da7f0"
       ],
       "settings": {
-        "heading": "Frequently Asked Questions"
+        "heading": "Frequently Asked Questions",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "16381612949192efba": {
       "type": "featured-collections-list",
+      "disabled": true,
       "blocks": {
         "1638161294a0079030-0": {
           "type": "collection",
@@ -137,14 +148,24 @@
         "1638161294a0079030-2"
       ],
       "settings": {
-        "heading": "Collection list"
+        "heading": "Collection list",
+        "btntext": "View All",
+        "btnlink": "",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "163816272046854df0": {
       "type": "faq-section",
       "disabled": true,
       "settings": {
-        "heading": "Frequently Asked Questions"
+        "heading": "Frequently Asked Questions",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "16381627343af9e269": {
@@ -156,9 +177,12 @@
         "collection": "winter-collections",
         "col_size": 4,
         "row_size": 2,
-        "show_second_image": false,
         "view_all_btn": true,
-        "view_all_btn_text": "View all"
+        "view_all_btn_text": "View all",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "1638162845dadf64cc": {
@@ -179,15 +203,11 @@
       ],
       "settings": {
         "heading": "Why We Are Your Best Choice",
-        "bgcolor": "#e22120"
-      }
-    },
-    "16381634065f003776": {
-      "type": "featured-text",
-      "disabled": true,
-      "settings": {
-        "content": "Why We Are Your Best Choice",
-        "bgcolor": "#1878b9"
+        "bgcolor": "#e22120",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "163816374767ce84bd": {
@@ -197,7 +217,11 @@
         "image": "shopify:\/\/shop_images\/5_6813a79b-b5dc-40b8-928f-c9c6c56da0fa.jpg",
         "image_alignment": "left",
         "heading": "Yuva Our Story",
-        "content": ""
+        "content": "",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "16381638557c7adfc5": {
@@ -244,7 +268,10 @@
       "settings": {
         "bgcolor": "#e22120",
         "textcolor": "#000000",
-        "show_divider": true
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "1638164496941a7852": {
@@ -258,7 +285,6 @@
             "subheading": "<p><em><strong>Flat Up To<\/strong><\/em><\/p>",
             "image": "shopify:\/\/shop_images\/wooden-table-with-a-scale-and-pour-over-coffee.jpg",
             "link": "",
-            "show_border": true,
             "info_position": "bottom-left"
           }
         },
@@ -268,7 +294,6 @@
             "heading": "Heading",
             "subheading": "<p>Flat Up To<\/p>",
             "link": "",
-            "show_border": true,
             "info_position": "bottom-left"
           }
         },
@@ -279,7 +304,6 @@
             "heading": "Heading",
             "subheading": "<p><em><strong>Flat Up To<\/strong><\/em><\/p>",
             "link": "",
-            "show_border": true,
             "info_position": "bottom-left"
           }
         }
@@ -293,15 +317,24 @@
         "subheading": "BEST FOR YOU",
         "heading": "What's More",
         "color": "#efedeb",
-        "style": "style1"
+        "style": "style1",
+        "show_border": true,
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "1638165996a6090c4a": {
       "type": "rich-text",
       "disabled": true,
       "settings": {
-        "heading": "Yuva Our Story",
-        "content": "<p><em><strong>fsghdgakajdhesjehfuesfyuryfriufjcgfdjgcfdsj<\/strong><\/em><\/p>"
+        "bgcolor": "#ffffff",
+        "content_alignment": "left",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "16381661070788a567": {
@@ -420,7 +453,11 @@
         "bgcolor": "#f6f4f2",
         "rotate": true,
         "arrows": true,
-        "dots": true
+        "dots": true,
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "1638167995185dcbeb": {
@@ -505,18 +542,26 @@
         "1638168487bf163b3a-6"
       ],
       "settings": {
-        "product": "watch"
+        "product": "watch",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     },
     "1638169047d3ebdcc5": {
       "type": "instagram",
       "disabled": true,
       "settings": {
-        "title": "Follow Us On Instagram",
-        "handle": "@themewexample",
+        "heading": "Follow Us On Instagram",
+        "subheading": "",
         "insta_user_id": "",
         "insta_access_Token": "",
-        "bgcolor": "#f13535"
+        "bgcolor": "#f13535",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     }
   },
@@ -528,7 +573,6 @@
     "163816272046854df0",
     "16381627343af9e269",
     "1638162845dadf64cc",
-    "16381634065f003776",
     "163816374767ce84bd",
     "16381638557c7adfc5",
     "1638164496941a7852",
