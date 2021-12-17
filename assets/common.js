@@ -457,7 +457,7 @@ $(document).ready(function(){
 
     const drawer = document.querySelector('[data-side-drawer]');
     
-    drawer.setAttribute('class','side_drawer_wrapper');
+    drawer.setAttribute('class','side_drawer_wrapper similar_product');
     drawer.setAttribute('id','similar_product');
     drawer.classList.add('similar_product');
     drawer.classList.add('searching');
