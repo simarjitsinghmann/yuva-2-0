@@ -739,6 +739,36 @@ function sellingPlans(variant,form){
   }
   }
 }
+
+
+function pickUpAvialabiliy(status){
+	const pickUp = document.querySelector('.product__pickup-availabilities');
+      const previewContainer = document.getElementById('pickup-availability-preview-container');
+        previewContainer.innerHTML = '';
+        previewContainer.classList.add('hidden');
+    if(pickUp && status){
+      let rootUrl = pickUp.dataset.rootUrl;
+      let variantId = pickUp.closest('form').querySelector('[name=id]').value;
+      if (!rootUrl.endsWith("/")) {
+        rootUrl = rootUrl + "/";
+      }
+      const variantSectionUrl = `${rootUrl}variants/${variantId}/?section_id=pickup-availability`;
+
+      fetch(variantSectionUrl)
+      .then(response => response.text())
+      .then(text => {
+        const sectionInnerHTML = new DOMParser()
+        .parseFromString(text, 'text/html')
+        .querySelector('.shopify-section');
+        previewContainer.innerHTML = sectionInnerHTML.innerHTML;
+        previewContainer.classList.remove('hidden')
+        showPickupDrawer();
+        })
+        .catch(e => {
+        });
+    }
+}
+
 function sellingPlanChange(){
   var groupSelectors = document.querySelectorAll('[name="sellingPlanHeading"]');
   Array.from(groupSelectors).forEach(function(group) {
