@@ -627,14 +627,6 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
    display: block;
    position: relative;
 }
-.side-menu .list-menu--inline.lower-nav ul li {
-   padding: 4px 0;
-}
-.side-menu .list-menu--inline.lower-nav ul li a {
-   color: #000000;
-   font-size: 20px;
-   font-weight: var(--normal);
-}
 .side-menu .social-links ul li a {
    font-size: var(--med-text);
    text-decoration: none;
@@ -658,16 +650,16 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
    color: #ffffff;
 }
 .side-menu .social-links ul li.fb {
-   background: var(--fb-bg);
+   background: #4668b2;
 }
 .side-menu .social-links ul li.twitter {
-   background: var(--twitter-bg);
+   background: #1d98e6;
 }
 .side-menu .social-links ul li.linkedin {
-   background: var(--linkedin-bg);
+   background: #0076b4;
 }
 .side-menu .social-links ul li.insta {
-   background: var(--insta-bg);
+   background: #ca3174;
 }
 .side-menu .card.card--product {
    width: 100%;
@@ -683,9 +675,6 @@ body.nav-open {
 }
 .menu__login__btn {
    margin-top: 52px;
-}
-.side-menu div.lower-nav .nav-item .userful__links + ul {
-   padding-top: 10px;
 }
 .side-menu .nav-item.dropdown .inner .back-btn {
    background: 0 0;
@@ -749,15 +738,10 @@ body.nav-open {
 .menu__login__btn {
    margin-top: 52px;
 }
-div.lower-nav {
+.lower-nav {
    border-top: 2px dashed #d6d6d6;
    padding: 20px 0 0;
    margin-top: 23px;
-}
-div.lower-nav .nav-item .userful__links {
-   font-size: 32px;
-   color: #000;
-   font-weight: 600;
 }
 .sub-menu-list .menu-image-content {
    position: relative;
