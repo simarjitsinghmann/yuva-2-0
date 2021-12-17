@@ -438,6 +438,9 @@ img {
     height: 100%;
     outline: 2px solid #fff;
     outline-offset: -13px;
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .style_variation_2 .card-information .card-information-image {
    border: 0;
