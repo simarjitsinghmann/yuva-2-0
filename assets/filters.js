@@ -110,7 +110,7 @@ function hideOptions(){
     });
     }); 
 
-    var sortMenu = document.getElementById('toolbox-sort');
+    var sortMenu = document.getElementById('sort__list_label');
     if(sortMenu){
       sortMenu.addEventListener("click", (e)=>{	
         e.preventDefault();
