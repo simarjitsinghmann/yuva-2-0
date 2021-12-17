@@ -110,7 +110,7 @@ updateQuantity = function(line, qty,callback) {
 buildCart = function (cart,showCart) {
   var shipping = parseInt($('#mini_cart_shipping').data('shipping'));
   var shippingText = $('#mini_cart_shipping').attr("data-shipText");
-	$('body').find('[data-drawer-title]').attr('class','')
+	$('body').find('[data-drawer-title]').attr('class','side_drawer_wrapper')
   $('body').find('[data-drawer-title]').html('{{'sections.cart.title' | t}}');
   $('body').find('[data-side-drawer]').attr('id','mini__cart').addClass('mini_cart');
   if (cart.item_count === 0) {

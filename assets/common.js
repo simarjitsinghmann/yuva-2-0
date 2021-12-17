@@ -1049,7 +1049,7 @@ $(document).ready(function()
     evt.preventDefault();
 
     const drawer = document.querySelector('[data-side-drawer]');
-    drawer.setAttribute('class','');	
+    drawer.setAttribute('class','side_drawer_wrapper');	
     drawer.setAttribute('id','quickView_product');
     drawer.classList.add('quickView_product');
     drawer.querySelector('[data-drawer-body]').innerHTML = preLoadLoadGif;
