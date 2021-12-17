@@ -855,6 +855,8 @@ function hideOptions(){
   });
 }
 }
+
+pickUpAvialabiliy(true);
 productVariants();
 showMultipleOptions(); 
 sellingPlanChange();
