@@ -796,6 +796,8 @@ img {
 }
 .similar_options .vs-icon {
     width: 27px;
+      height: 27px;
+    line-height: 27px;
     background: var(--white);
     text-align: center;
     display: flex;
@@ -804,7 +806,6 @@ img {
     justify-content: center;
     position: relative;
     transition: .3s ease;
-    padding: 4px;
     overflow: hidden;
 }
 .similar_options .vs-icon:hover {
