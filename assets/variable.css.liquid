@@ -49,11 +49,11 @@
   --text_size: {{ settings.type_base_size | default: 14 }}px;
 }
     
-    body.loading {
+    body.loading .MainContent {
       overflow: hidden;
     }
 
-  body.loading:after {
+  body.loading .MainContent:after {
     content: "";
     background-image: url(loader.svg);
     position: fixed;
