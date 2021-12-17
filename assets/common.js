@@ -860,6 +860,21 @@ function hideOptions(){
 }
 }
 
+function showPickupDrawer(){
+      const showContainerButton = document.getElementById('ShowPickupAvailabilityDrawer');
+      const previewContainer = document.getElementById('pickup-availability-preview-container');
+    const drawer = document.querySelector('[data-side-drawer]');	
+  console.log(showContainerButton)
+  if(showContainerButton){
+    showContainerButton.addEventListener("click", ()=>{
+                                         var drawerHtml = previewContainer.querySelector('#pickUpAvailabilityMain').innerHTML;
+  	
+    drawer.querySelector('[data-drawer-title]').innerHTML ='Pick Up Availability';
+  drawer.querySelector('[data-drawer-body]').innerHTML = drawerHtml; 
+    document.querySelector('body').classList.add('side_Drawer_open'); 
+                                         });
+}
+}
 pickUpAvialabiliy(true);
 productVariants();
 showMultipleOptions(); 
