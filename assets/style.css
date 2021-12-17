@@ -802,12 +802,14 @@ img {
     display: flex;
     align-content: center;
     border-radius: 50px;
+      justify-content:center;
     position: relative;
       transition:1s ease;
 }
 .similar_options .vs-icon:hover {
     width: 110px;
     padding: 0 8px;
+  justify-content:flex-start;
 }
 .similar_options svg {
    fill: #1f2a2e;
