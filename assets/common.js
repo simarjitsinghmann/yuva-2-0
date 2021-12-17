@@ -922,9 +922,9 @@ sliders = function(){
   var sliders = jQuery('body').find('[data-slider]');
   if(sliders.length > 0){
     sliders.each(function(index) {
-      if (!jQuery(this).hasClass('slick-initialized')) {
+//       if (!jQuery(this).hasClass('slick-initialized')) {
         slickSlider(jQuery(this));
-      }
+//       }
     });
   }
 }
