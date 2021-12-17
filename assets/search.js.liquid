@@ -145,7 +145,6 @@ $(document).ready(function(){
 //       var recent_pro = localStorage.getItem("Recent_search");
         var recent_pro = Cookies.get('Recent_search');
       var recent_pro_val = JSON.parse(recent_pro);
-      console.log('recent',recent_pro_val)
       $('.recent-search-list').html(''); 
       if(recent_pro_val==null){  
         $('.recent-search-list').html('');
@@ -160,13 +159,15 @@ $(document).ready(function(){
               type: 'GET',
               url: '/admin/products/' + value + '.json',
               success: function(response) {
-               var product =response.product;
-                var imgSrc = '{{'placeholder.svg' | asset_url}}';
-                if(product.image){
-                  imgSrc = product.image.src;
+                if(response.product){
+                  var product =response.product;
+                  var imgSrc = '{{'placeholder.svg' | asset_url}}';
+                  if(product.image){
+                    imgSrc = product.image.src;
+                  }
+                  recent_Html +=`<li><a href="/products/${product.handle}" title="${product.title}">
+					<span><img src="${imgSrc}"></span>${truncate(product.title,2)}</a></li>`;     
                 }
-                recent_Html +=`<li><a href="/products/${product.handle}" title="${product.title}">
-				<span><img src="${imgSrc}"></span>${truncate(product.title,2)}</a></li>`;     
               },
               error: function(error) {
                 console.log("Error: "+ error);
