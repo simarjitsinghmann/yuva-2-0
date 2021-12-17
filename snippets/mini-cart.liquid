@@ -32,10 +32,18 @@
                         <small class="item__price-strikethrough"><s>{{item.original_price}}</s></small><span>{{item.final_price}}</span>
                       {{else}}
                         <span>{{item.final_price}}</span>
-                      {{/if}}
-                      {{#if unitPriceExist}}
-                      <small class="unit-price">{{unitPrice}}</small>
-                      {% endif %}
+                      {%- endif -%}
+                      
+                        {%- if item.unit_price_measurement -%}
+                          <small class="unit-price">
+                          {{ item.variant.unit_price | money }}
+                          /
+                          {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
+                            {{- item.variant.unit_price_measurement.reference_value -}}
+                          {%- endif -%}
+                          {{ item.variant.unit_price_measurement.reference_unit }}
+  						</small>
+                      {%- endif -%}
   </h6>
                 {{#if discountsApplied}}                		
                         {{#each discounts}}
