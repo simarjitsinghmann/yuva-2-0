@@ -49,7 +49,7 @@
                 {%- if article.comments_count > 0 -%}
                 {%- assign anchorId = '#Comments-' | append: article.id -%}
 
-                <h3 id="Comments-{{ article.id }}">{{ 'blogs.article.comments' | t: count: article.comments_count }}</h3>
+                <h5 id="Comments-{{ article.id }}">{{ 'blogs.article.comments' | t: count: article.comments_count }}</h5>
                 {% paginate article.comments by 5 %}
                 <div class="article-template__comments">
                   {%- if comment.status == 'pending' and comment.content -%}
