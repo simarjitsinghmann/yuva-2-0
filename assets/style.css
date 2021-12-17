@@ -1471,13 +1471,16 @@ a.wishlist-view .fas {
    width: 20%;
 }
 .instagram-post-detail {
-   position: relative;
-   overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
 }
 .instagram-post-detail img {
-   width: 100%;
-   transform: scale(1);
-   transition: 2s;
+    width: 100%;
+    transform: scale(1);
+    transition: 2s;
+    height: 100%;
+    object-fit: cover;
 }
 .instagram-post-detail .insta-icon {
    background: rgba(0, 0, 0, 0.6);
