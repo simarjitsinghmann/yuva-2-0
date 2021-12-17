@@ -928,6 +928,7 @@ sliders = function(){
     });
   }
 }
+sliders();
 window.addEventListener('resize', function(event){
   sliders();
 });
