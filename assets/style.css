@@ -4778,19 +4778,14 @@ body #shopify-product-reviews {
    	height:50px;
     border: none;
     outline: none;
-    background-color: var(--theme-color);
     color: var(--white);
     cursor: pointeR;
     border-radius: 4px;
      justify-content:center;
       align-items:center;
   }
-
-  #myBtn:hover {
-    background-color: #555;
-  }
    #myBtn svg {
     width: 25px;
     height: 25px;
-    fill: currentColor;
+    fill: var(--theme-color);
 }

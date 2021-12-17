@@ -115,10 +115,9 @@ function hideOptions(){
       sortMenu.addEventListener("click", (e)=>{	
         e.preventDefault();
                                 var sortMenu = document.getElementById('sort__list');
-      if(sortMenu.classList.contains('active')){
-        
-        if(window.innerWidth > 767){
+      if(sortMenu.classList.contains('active')){        
         sortMenu.classList.remove('active');
+        if(window.innerWidth > 767){
           DOMAnimations.slideUp(sortMenu);
         }
         else{
