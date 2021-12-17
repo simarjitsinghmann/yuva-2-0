@@ -102,7 +102,7 @@ $(document).ready(function(){
               localStorage.setItem("Recent_search", JSON.stringify(retrievedSearch_v));    
               
           var date = new Date();
-          date.setTime(date.getTime() + (3600 * 1000 * 24 * 365 )));
+          date.setTime(date.getTime() + (3600 * 1000 * 24 * 365 ));
 //           if(checked.length > 0){
             Cookies.set('Recent_search', JSON.stringify(retrievedSearch_v), { expires: date, path: '/' });
               $('.searc-item-box').wrapAll( "<div class='result-list' />" );                         	                          
