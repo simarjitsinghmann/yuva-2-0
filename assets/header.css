@@ -635,10 +635,12 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
     display: inline-block;
 }
 .side-menu .social-links ul li a {
-   text-decoration: none;
-   color: var(--black);
-   letter-spacing: 0.2px;
-   position: relative;
+    text-decoration: none;
+    color: var(--black);
+    letter-spacing: .2px;
+    position: relative;
+    padding: 0;
+    font-size: 16px;
 }
 .side-menu .card.card--product {
    width: 100%;
