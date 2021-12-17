@@ -29,9 +29,9 @@
                 <span class="item-variant-title">{{item.selling_plan_allocation.selling_plan.name }}</span>
 				<h6 class="product__price">
                    {%- if item.original_price != item.final_price -%}
-                        <small class="item__price-strikethrough"><s>{{item.original_price}}</s></small><span>{{item.final_price}}</span>
+                        <small class="item__price-strikethrough"><s>{{item.original_price| money}}</s></small><span>{{item.final_price| money}}</span>
                       {%else%}
-                        <span>{{item.final_price}}</span>
+                        <span>{{item.final_price | money}}</span>
                       {%- endif -%}
                       
                         {%- if item.unit_price_measurement -%}
@@ -53,10 +53,10 @@
                         {%- endfor -%}
 				<div class="right-media-cart">
 					<div class="quantity">
-						<input type="number" class="ajaxcart__qty-num" name="updates[]" min="1" max="9" step="1" value="{{item.quantity}}" data-id="{{key}}" data-line="{{forloop.index}}">
+						<input type="number" class="ajaxcart__qty-num" name="updates[]" min="1" max="9" step="1" value="{{item.quantity}}" data-id="{{item.key}}" data-line="{{forloop.index}}">
 						<div class="quantity-nav">
-							<div class="quantity-button quantity-up ajaxcart__qty--plus"  data-id="{{key}}" data-line="{{forloop.index}}" data-qty="{{item.quantity | plus: 1}}"><svg width="24px" height="24px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="plusIconTitle" stroke="#909097" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" color="#000000"> <title id="plusIconTitle">Plus</title> <path d="M20 12L4 12M12 4L12 20"/> </svg></div>
-							<div class="quantity-button quantity-down ajaxcart__qty--minus" data-id="{{key}}" data-line="{{forloop.index}}" data-qty="{{item.quantity | minus: 1}}"><svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#909097" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+							<div class="quantity-button quantity-up ajaxcart__qty--plus"  data-id="{{item.key}}" data-line="{{forloop.index}}" data-qty="{{item.quantity | plus: 1}}"><svg width="24px" height="24px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="plusIconTitle" stroke="#909097" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" color="#000000"> <title id="plusIconTitle">Plus</title> <path d="M20 12L4 12M12 4L12 20"/> </svg></div>
+							<div class="quantity-button quantity-down ajaxcart__qty--minus" data-id="{{item.key}}" data-line="{{forloop.index}}" data-qty="{{item.quantity | minus: 1}}"><svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#909097" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
   </div>
   </div>
 					<div class="sd_mini_removeproduct" line="{{forloop.index}}" >{{'sections.cart.remove' | t}}</div>
@@ -78,9 +78,12 @@
   </div>
 		<ul>
 
-         {{#totalCartDiscount}}
-            <li class="minicart__savings">{{'sections.cart.discount' | t}}<span class="coupanName">{{title }}</span> <strong>-{{price}}</strong></li>
-          {{/totalCartDiscount}}
+         {%- if cart.cart_level_discount_applications.size > 0 -%}
+              {%- for discount in cart.cart_level_discount_applications -%}
+            <li class="minicart__savings">{{'sections.cart.discount' | t}}<span class="coupanName">{{{{ discount.title }} }}</span> <strong>-{{discount.total_allocated_amount | money}}</strong></li>
+            
+		{% endfor %}	
+          {% endif %}
 			<li class="totle-price">{{'sections.cart.subtotal' | t}}<strong>{{{totalPrice}}}</strong></li>
   </ul>
 		<small class="bottom-p">{{{'sections.cart.taxes_and_shipping_at_checkout' | t}}</small>
