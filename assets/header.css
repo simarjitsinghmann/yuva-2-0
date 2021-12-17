@@ -1401,12 +1401,13 @@ header {
    font-weight: var(--semibold);
    margin-top: 5px;
 }
-
 .media-link {
-   position: relative;
-   float: left;
-   width: 100%;
-   padding-top: 15px;
+    position: relative;
+    width: 100%;
+    padding-top: 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 #mini__cartForm .media-link.disabled {
    cursor: not-allowed;
