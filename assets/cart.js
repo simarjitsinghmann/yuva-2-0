@@ -91,95 +91,36 @@ validateQty = function (qty) {
 };
 
 cartPageUpdate = function(cart){  
-     var items = [],
-      item = {},
-      data = {},
-      cartDiscounts =[],
-      source = $("#mainCartTemplate").html(),
-      template = Handlebars.compile(source);
-  // Add each item to our handlebars.js data
-  $.each(cart.items, function(index, cartItem) {
 
-    if (cartItem.image != null){
-      var prodImg = cartItem.image.replace(/(\.[^.]*)$/, "_small$1").replace('http:', '');
-    } else {
-      var prodImg = "//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif";
+  $.ajax({
+    url: '/cart?view=jsonData',
+    type: 'GET',
+    dataType: 'html',
+    success: function(result) {
+      $('body').find('[data-cart-items]').html(template(data));
+      if(cart.item_count == 0){
+        $('[data-cart-count').hide();
+      }
+      $('[data-cart-item-count]').text(cart.item_count);
+      $('[data-cart-original-price]').text(Shopify.formatMoney(cart.original_total_price, moneyFormat));
+      $('[data-cart-total-price]').text(Shopify.formatMoney(cart.total_price, moneyFormat));
+      if(cart.cart_level_discount_applications.length > 0){
+        var discounts = '';
+        $.each(cart.cart_level_discount_applications,function(index,discount){
+          discounts += '<li data-cart-discount>Discount['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
+        })
+        $('li[data-cart-discount]').remove();
+        $('li[data-cart-original]').removeClass('hidden');
+        $(discounts).insertAfter('li[data-cart-original]')
+      }
+      else{
+        $('li[data-cart-original]').addClass('hidden');
+        $('li[data-cart-discount]').remove();
+      }
     }
-    var unitPriceExist = false;
-    var unitPrice = '';
-    if(cartItem.unit_price){
-      unitPriceExist = true;
-      unitPrice += Shopify.formatMoney(cartItem.unit_price, moneyFormat);
-      unitPrice += ' / ';
-      unitPrice += cartItem.unit_price_measurement.reference_value > 1 ? cartItem.unit_price_measurement.reference_value : '';
-      unitPrice += cartItem.unit_price_measurement.reference_unit;
     }
-    var sellingPlan = '';
-    if(cartItem.selling_plan_allocation){
-      sellingPlan = cartItem.selling_plan_allocation.selling_plan.name;
-    }
-    // Create item's data object and add to 'items' array
-    item = {
-      key: cartItem.key,
-      line: index + 1, // Shopify uses a 1+ index in the API
-      url: cartItem.url,
-      img: prodImg,
-      name: truncate(cartItem.product_title,5),
-      variation: cartItem.variant_title,
-      showoptions:cartItem.product_has_only_default_variant? false:true,
-      options: cartItem.options_with_values,
-      properties: cartItem.properties,
-      itemAdd: cartItem.quantity + 1,
-      itemMinus: cartItem.quantity - 1,
-      unitPriceExist:unitPriceExist,
-      unitPrice:unitPrice,
-      itemQty: cartItem.quantity,
-      sellingPlan: sellingPlan,
-      originalprice: Shopify.formatMoney(cartItem.original_price,moneyFormat),
-      finalprice: Shopify.formatMoney(cartItem.final_price,moneyFormat),
-      vendor: cartItem.vendor,
-      linePrice: Shopify.formatMoney(cartItem.final_line_price, moneyFormat),
-      originalLinePrice: Shopify.formatMoney(cartItem.original_line_price,moneyFormat),
-      discounts: cartItem.discounts,
-      discountsApplied: cartItem.original_line_price === cartItem.final_line_price ? false : true
-    };
-
-    items.push(item);
   });
- 
-  $.each(cart.cart_level_discount_applications, function(index, cartDiscount) {
-    var discount ={
-      title:cartDiscount.title,
-      price:Shopify.formatMoney(cartDiscount.total_allocated_amount, moneyFormat)
-    }
-    cartDiscounts.push(discount);
-  });
-
-  // Gather all cart data and add to DOM
-  data = {
-    items: items
-  }
   
-  $('body').find('[data-cart-items]').html(template(data));
-  if(cart.item_count == 0){
-    $('[data-cart-count').hide();
-  }
-  $('[data-cart-item-count]').text(cart.item_count);
-  $('[data-cart-original-price]').text(Shopify.formatMoney(cart.original_total_price, moneyFormat));
-  $('[data-cart-total-price]').text(Shopify.formatMoney(cart.total_price, moneyFormat));
-  if(cart.cart_level_discount_applications.length > 0){
-    var discounts = '';
-    $.each(cart.cart_level_discount_applications,function(index,discount){
-      discounts += '<li data-cart-discount>Discount['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
-    })
-    $('li[data-cart-discount]').remove();
-    $('li[data-cart-original]').removeClass('hidden');
-    $(discounts).insertAfter('li[data-cart-original]')
-  }
-  else{
-    $('li[data-cart-original]').addClass('hidden');
-    $('li[data-cart-discount]').remove();
-  }
 }
 
 

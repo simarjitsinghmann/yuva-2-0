@@ -32,9 +32,9 @@
           {%- endif -%}
           {% if menuLinkLists %}
           <div class="col-12 {{menuWidth}} col5 inner dropdown {{test}}">
-            <div class="menuLinks-wrapper">
+            <div class="menuLinks-wrapper masonry">
               {%- for childlink in link.links -%}
-              <div class="sub-menu-list">
+              <div class="sub-menu-list masonry-item">
                 <div class="menu-mb-title">
                   <span>{%- unless childlink.links != blank -%}<a href="{{ childlink.url }}">{% endunless %}{{ childlink.title | split:"{badge" | first | escape | captilize }}{%- unless childlink.links != blank -%}</a>{% endunless %}</span>
                 </div>
