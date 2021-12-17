@@ -152,7 +152,7 @@ $(document).ready(function(){
             var getV = value;
             jQuery.ajax({
               type: 'GET',
-              url: '/admin/products/' + value + '.json',
+              url: '/products/' + value + '.json',
               success: function(response) {
                var product =response.product;
                 var imgSrc = '{{'placeholder.svg' | asset_url}}';
