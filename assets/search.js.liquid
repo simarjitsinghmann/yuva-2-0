@@ -142,7 +142,8 @@ $(document).ready(function(){
       console.log('recenttest')
     var recent_Html = '';
     setTimeout(function(){ 
-      var recent_pro = localStorage.getItem("Recent_search");
+//       var recent_pro = localStorage.getItem("Recent_search");
+        var recent_pro = Cookies.get('Recent_search');
       var recent_pro_val = JSON.parse(recent_pro);
       console.log('recent',recent_pro_val)
       $('.recent-search-list').html(''); 
