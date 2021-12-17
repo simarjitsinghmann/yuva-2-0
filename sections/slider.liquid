@@ -1,5 +1,5 @@
 <div id="product-slider" class="banner-product-slider">
-  <div id="slider-{{section.id}}" class=" fade slider-item {% if section.blocks.size > 1 %}{% endif %}"  {% if section.blocks.size > 1 %}data-slider{% endif %}>
+  <div id="slider-{{section.id}}" class=" fade slider-item {% if section.blocks.size > 1 %}slideShow{% endif %}"  {% if section.blocks.size > 1 %}data-slider{% endif %}>
         
       {% for block in section.blocks %}
       {% case block.type %}
@@ -53,6 +53,12 @@
 		position:relative;
 		overflow:hidden;
 	}
+      .slideShow[data-slider] {
+    visibility: hidden;display: flex;
+}
+.slideShow[data-slider].slick-initialized {
+    visibility: visible;
+}
     #slider-{{section.id}} .slider-banner h1{
     font-size:{{section.settings.heading_font_size}}px;
     }
