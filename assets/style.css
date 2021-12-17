@@ -2126,11 +2126,11 @@ li.breadcrumb-item a {
 }
 .variant_option .option {
     font-size: 12px;
-    color: var(--black);
+    color: var(--theme-color);
     text-align: center;
     display: inline-block;
     padding: 3px 9px;
-    border: 1px solid #000;
+    border: 1px solid var(--theme-color);
     border-radius: 0;
 }
 .product-option-selector {
@@ -3320,7 +3320,7 @@ button.Sd_addProduct:disabled {
    position: absolute;
    top: 0;
    right: 0;
-   background: var(--black);
+   background: var(--theme-color);
    padding: 7px;
 }
 .product-wrap .close-product-wrap:hover {
