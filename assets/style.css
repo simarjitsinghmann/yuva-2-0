@@ -211,6 +211,30 @@ img {
    width: 50%;
    padding: 0 5px;
 }
+#CollectionProductsContainer[data-view="grid-layout-4"]
+   .products-grid
+   .product_columns
+   .grid-item
+   .card-wrapper-img {
+   min-height: 380px;
+   max-height: 380px;
+}
+#CollectionProductsContainer[data-view="grid-layout-3"]
+   .products-grid
+   .product_columns
+   .grid-item
+   .card-wrapper-img {
+   min-height: 500px;
+   max-height: 500px;
+}
+#CollectionProductsContainer[data-view="grid-layout-2"]
+   .products-grid
+   .product_columns
+   .grid-item
+   .card-wrapper-img {
+   min-height: 650px;
+   max-height: 650px;
+}
 /*============= Slider banner css start ===============*/
 .banner.banner-section {
     height: 800px;
@@ -865,30 +889,7 @@ img {
    max-height: 310px;
 }
 
-#CollectionProductsContainer[data-view="grid-layout-4"]
-   .products-grid
-   .product_columns
-   .grid-item
-   .card-wrapper-img {
-   min-height: 380px;
-   max-height: 380px;
-}
-#CollectionProductsContainer[data-view="grid-layout-3"]
-   .products-grid
-   .product_columns
-   .grid-item
-   .card-wrapper-img {
-   min-height: 500px;
-   max-height: 500px;
-}
-#CollectionProductsContainer[data-view="grid-layout-2"]
-   .products-grid
-   .product_columns
-   .grid-item
-   .card-wrapper-img {
-   min-height: 650px;
-   max-height: 650px;
-}
+
 .product-page-recommendations .card-wrapper-img {
    min-height: 250px;
    max-height: 250px;
