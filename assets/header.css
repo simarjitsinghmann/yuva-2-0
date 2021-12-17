@@ -981,15 +981,15 @@ body.nav-open {
    transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s,
       top 0.2s ease 0.1s;
 }
-.menuLinks-wrapper {
+.masonry {
     display: grid!important;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
     grid-auto-rows: 0;
 }
-/* .site-nav-dropdown .inner.dropdown .sub-menu-list {
+.masonry-item {
      overflow: hidden;
-  } */
+  }
 .site-nav-dropdown .inner.dropdown .sub-menu-list .menu-mb-title span {
     margin-bottom: 8px;
     font-size: 14px;
