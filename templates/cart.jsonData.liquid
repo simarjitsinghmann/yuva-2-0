@@ -1,14 +1,15 @@
 {% layout none %}
 <div id="mini__cartForm">
   <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
-    <div class="cart-item-container">	
+    <div class="cart-item-container">
+      {% assign shippingTarget = settings.shipping_rate | times:100%}
       {% if settings.enable_shipping and settings.shipping_rate != blank %}
-      {% assign shippingPending = settings.shipping_rate | minus: cart.total_price | money %}
-      {% assign shippingPercentage = cart.total_price | times:100 | divided_by:settings.shipping_rate %}
+      {% assign shippingPending = shippingTarget | minus: cart.total_price | money %}
+      {% assign shippingPercentage = cart.total_price | times:100 | divided_by:shippingTarget %}
       {% if shippingPercentage > 10 and shippingPercentage < 100 %}
       {% assign shippingPercentage = shippingPercentage | minus:5 %}
       {% endif %}
-	{% if cart.total_price < settings.shipping_rate %}
+	{% if cart.total_price < shippingTarget %}
       <p>{{settings.shipping_text | replace : '||amount||',shippingPending}}</p>
       {% else %}
       <p>{{settings.free_shipping_text}}</p>
