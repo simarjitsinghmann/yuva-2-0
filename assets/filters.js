@@ -141,9 +141,9 @@ var closeSortMenu = document.querySelector('.close-mobile-sort');
 if(closeSortMenu){
   closeSortMenu.addEventListener("click", (e)=>{	
     e.preventDefault();
-    console.log('asasas')
     var sortMenu = document.getElementById('sort__list');
     if(window.innerWidth < 768){
+    console.log('asasas')
         sortMenu.classList.remove('active');
                 document.querySelector('body').classList.remove('open-filter-sort');
       //         }
