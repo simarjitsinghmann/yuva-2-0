@@ -151,8 +151,11 @@ if(closeSortMenu){
     var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
     Array.from(priceRangeBars).forEach(function(rangeBar) {
       var el = rangeBar;
-      console.log('not', el.noUiSlider )
-      var sliderEventListener = noUiSlider.create(el, {
+      var sliderEventListener ='';
+      if(element.noUiSlider) {
+        sliderEventListener = element.noUiSlider;
+      }else{
+      sliderEventListener = noUiSlider.create(el, {
         start: [el.dataset.start, el.dataset.end],
         connect: true,
         tooltips: false,
@@ -161,7 +164,7 @@ if(closeSortMenu){
           max: [parseInt(el.dataset.max)]
         }
       });
-      console.log('yes', el.noUiSlider )
+      }
       if(window.innerWidth > 767){
         sliderEventListener.on('change',  function(values){
           getFilterData(filterForm,rangeBar,sectionId);
