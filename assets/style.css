@@ -4026,6 +4026,10 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
 	display:flex;
   flex-wrap:wrap;
 }
+.small-collection-item {
+	max-width:50%;
+  flex:0 0 50%;
+}
 .colllection-list-view .col-md-6 .row,
 .colllection-list-view .small-collection-list{
    margin: 0 -4px;
