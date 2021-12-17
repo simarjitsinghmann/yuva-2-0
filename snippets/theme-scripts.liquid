@@ -29,11 +29,13 @@
 <script src="{{'handlebar.min.js' | asset_url}}"></script> 
 <script src="{{'modernizr.min.js' | asset_url}}"></script> 
 <script src="{{'masnory.min.js' | asset_url}}"></script> 
-<script src="{{'fancybox.min.js' | asset_url}}"></script> 
+
 <script src="{{'slick.min.js' | asset_url}}"></script> 
 <script src="{{'instafeed.min.js' | asset_url}}"></script> 
 <script src="{{'common.js' | asset_url}}" defer="defer"></script> 
-
+{% if template == 'product' %}
+<script src="{{'fancybox.min.js' | asset_url}}"></script> 
+{% endif %}
 {% if template == 'collection' or template == 'search' %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.min.css" />
