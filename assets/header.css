@@ -981,13 +981,13 @@ body.nav-open {
    transition: opacity 0.2s ease 0.1s, visibility 0.2s ease 0.1s,
       top 0.2s ease 0.1s;
 }
-.masonry {
+.menuLinks-wrapper {
     display: grid!important;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
     grid-auto-rows: 0;
 }
-.masonry-item {
+.site-nav-dropdown .inner.dropdown .sub-menu-list {
      overflow: hidden;
   }
 .site-nav-dropdown .inner.dropdown .sub-menu-list .menu-mb-title span {
