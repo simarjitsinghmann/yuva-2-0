@@ -817,13 +817,9 @@ img {
    width: 17px;
 }
 .similar-text {
-    font-size: 11px;
+    font-size: 0;
     opacity: 0;
     visibility: hidden;
-    position: absolute;
-    left: 25px;
-    top: 5px;
-    min-width: 80px;
 }
 .similar_options .vs-icon:hover .similar-text {
 	opacity:1;
