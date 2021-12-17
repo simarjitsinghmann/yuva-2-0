@@ -120,9 +120,7 @@ cartPageUpdate = function(cart){
         $('li[data-cart-discount]').remove();
       }
     }
-    })
-  });
-  
+    })  
 }
 
 

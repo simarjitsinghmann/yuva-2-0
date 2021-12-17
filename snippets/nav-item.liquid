@@ -35,6 +35,7 @@
             <div class="menuLinks-wrapper masonry">
               {%- for childlink in link.links -%}
               <div class="sub-menu-list masonry-item">
+                <div class="masonry-content">
                 <div class="menu-mb-title">
                   <span>{%- unless childlink.links != blank -%}<a href="{{ childlink.url }}">{% endunless %}{{ childlink.title | split:"{badge" | first | escape | captilize }}{%- unless childlink.links != blank -%}</a>{% endunless %}</span>
                 </div>
@@ -53,6 +54,7 @@
               </div>
               {% endfor %}
               {% include 'mega-menu' content:'menu' %}
+              </div>
             </div>
           </div>     
           {% endif %}
