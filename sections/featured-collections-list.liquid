@@ -41,11 +41,11 @@
           {% endfor%}
           </div>
           <div class="col-sm-12 col-md-6">
-            <div class="row">
+            <div class="row small-collection-list">
               {% for block in section.blocks %}
               {% unless forloop.first %}
               {% assign collection = block.settings.collection %}
-              <div id="block-{{block.id}}" class="col-sm-12 {% if section.blocks.size > 2 %}col-md-6{% else %}col-md-12{% endif %}" {{ block.shopify_attributes }}>
+              <div id="block-{{block.id}}" class="col-sm-12 small-collection-list {% if section.blocks.size > 2 %}col-md-6{% else %}col-md-12{% endif %}" {{ block.shopify_attributes }}>
                 <div class="collection-list-view-wrapper right-wrapper">
                   <div class="collection-list-view-card" >
                     {% if block.settings.image != blank %}
