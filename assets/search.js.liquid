@@ -99,7 +99,12 @@ $(document).ready(function(){
               });
               $resultsBox.html($row);
 
-              localStorage.setItem("Recent_search", JSON.stringify(retrievedSearch_v));                          
+              localStorage.setItem("Recent_search", JSON.stringify(retrievedSearch_v));    
+              
+          var date = new Date();
+          date.setTime(date.getTime() + (3600 * 1000 * 24 * 365 )));
+//           if(checked.length > 0){
+            Cookies.set('Recent_search', JSON.stringify(retrievedSearch_v), { expires: date, path: '/' });
               $('.searc-item-box').wrapAll( "<div class='result-list' />" );                         	                          
               //$('<div class="rightsearch"><p>This is collection</p></div>').insertAfter(".leftsearch");                           
               $resultsBox.append('<a href="' + linkURL + '" class="note">{{'templates.search.drawer_all_results' | t}}</a>');
