@@ -137,9 +137,11 @@ function hideOptions(){
     });
     }
 var closeSortMenu = document.querySelector('.close-mobile-sort');
+    console.log('closeSortMenu')
 if(closeSortMenu){
   closeSortMenu.addEventListener("click", (e)=>{	
     e.preventDefault();
+    console.log('asasas')
     var sortMenu = document.getElementById('sort__list');
     if(window.innerWidth < 768){
         sortMenu.classList.remove('active');
