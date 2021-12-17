@@ -107,11 +107,11 @@
           <li class="insta"><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
         </ul>
       </div>
-      <div class="menu__login__btn">
+      <div class="menu-login-btn">
         {%- if customer -%}
-        <a class="button black-btn" href="{{ routes.account_logout_url }}">{{'customer.log_out' | t | capitalize }}</a>
+        <a class="button black-btn drawer-login-btn" href="{{ routes.account_logout_url }}">{{'customer.log_out' | t | capitalize }}</a>
         {%- else -%}
-        <a class="button black-btn" href="{{routes.account_login_url}}">{{'customer.log_in' | t | capitalize }}</a>
+        <a class="button black-btn drawer-login-btn" href="{{routes.account_login_url}}">{{'customer.log_in' | t | capitalize }}</a>
         {%- endif -%}
       </div>
     </div>
