@@ -477,7 +477,7 @@ $(document).ready(function(){
         drawer.querySelector('[data-drawer-body]').innerHTML = recommendations.innerHTML;  
         drawer.classList.remove('searching');
       }
-    });},500)
+    });},1000)
   });
 
   ///search-top//
