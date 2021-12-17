@@ -103,6 +103,11 @@
         $("header").removeClass("sticky-header");
       }
     });
+    $(document).ready(function(){
+      $('.menuLinks-wrapper').masonry({
+        itemSelector: '.sub-menu-list'
+      });
+    })
   </script>
 {% endif %}
 
