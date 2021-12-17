@@ -204,7 +204,7 @@ var sortBy = section.querySelectorAll('[name="sort_by"]');
 Array.from(sortBy).forEach(function(sort) {
   sort.addEventListener("click", ()=>{	
                         
-                        console.log('test',sort)
+                        document.querySelector('body').classList.remove('open-filter-sort');
   getFilterData(filterForm,sort,sectionId);
 });
 });   
