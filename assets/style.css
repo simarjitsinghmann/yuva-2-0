@@ -2133,6 +2133,11 @@ li.breadcrumb-item a {
     border: 1px solid var(--theme-color);
     border-radius: 0;
 }
+.product-loop-variants .variant_option input:checked + span.option {
+  background: var(--theme-color);
+  border-color: var(--theme-color);
+  color: #fff;
+}
 .product-option-selector {
    margin-bottom: 16px;
 }
@@ -3208,11 +3213,7 @@ body.header2.announcement_open .single__product__right.sidebar-fixed {
    left: 0;
    top: 0;
 }
-.product-loop-variants .variant_option input:checked + span.option {
-  background: #000;
-  border-color: #000;
-  color: #fff;
-}
+
 button.Sd_addProduct:disabled {
    pointer-events: none;
 }
