@@ -857,6 +857,7 @@ slickSlider = function(selector,slideIndex){
   }
   $(selector).on('afterChange', function(event, slick, currentSlide){
   var video = $('.slick-current').find("video");
+    console.log(video,video.length)
     if(video.length > 0){
     	video.trigger('play')
     }
