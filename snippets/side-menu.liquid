@@ -98,7 +98,33 @@
            {%- endif -%}
          </ul>
       </div>
-      {% include 'social-media-icons' %}
+     <div class="lower-nav">
+       <ul class="navbar-nav mr-auto list-menu list-menu--inline lower-nav">
+         <li class="nav-item">
+           <span class="userful__links">Useful Links</span>
+           <ul>
+             <li><a href="#">My Account</a></li>
+             <li><a href="#">About Us</a></li>
+             <li><a href="#">Contact Us</a></li>
+             <li><a href="#">Support Policy</a></li>
+             <li><a href="#">FAQs</a></li>
+           </ul>
+         </li>
+       </ul>
+       <div class="social-links">
+         <ul>
+           <li class="fb"><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+           <li class="twitter"><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
+           <li class="linkedin"><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a></li>
+           <li class="insta"><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
+         </ul>
+       </div>
+       <div class="menu__login__btn">
+         <button type="submit" class="button button--secondary menu-login__button" name="login" id="login_btn">
+           Login
+         </button>
+       </div>
+     </div>
         
            {%- if customer -%}
              <a class="button black-btn" href="{{ routes.account_logout_url }}">{{'customer.log_out' | t | capitalize }}</a>
