@@ -119,20 +119,23 @@ function hideOptions(){
         sortMenu.classList.remove('active');
         if(window.innerWidth > 767){
         DOMAnimations.slideUp(sortMenu);
-        }else{
-          document.querySelector('body').classList.remove('open-filter-sort');
         }
+//         else{
+//           document.querySelector('body').classList.remove('open-filter-sort');
+//         }
       }
       else{
           sortMenu.classList.add('active');
         if(window.innerWidth > 767){
           DOMAnimations.slideDown(sortMenu);
-        }else{
+        }
+        else{
           document.querySelector('body').classList.add('open-filter-sort');
         }
       }
     });
     }
+	var closeSortMenu = document.querySelector('.close-mobile-sort');
     var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
     Array.from(priceRangeBars).forEach(function(rangeBar) {
       var el = rangeBar;
