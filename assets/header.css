@@ -583,16 +583,12 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
    overflow-x: hidden;
    overflow-y: auto;
 }
-
 .side-menu .inner-side .close-btn {
-   background: transparent;
-   z-index: 99;
-   align-content: center;
-   align-items: center;
-   display: flex;
-   font-size: 14px;
-   font-weight: var(--normal);
-   font-family: var(--font-family);
+    background: 0 0;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 16px;
 }
 .side-menu .inner-side ul li.dropdown > a::after {
    content: "";
