@@ -4022,6 +4022,10 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
 }
 /* end */
 /* featured collection list start */
+.small-collection-list {
+	display:flex;
+  flex-wrap:wrap;
+}
 .colllection-list-view .col-md-6 .row,
 .colllection-list-view .small-collection-list{
    margin: 0 -4px;
