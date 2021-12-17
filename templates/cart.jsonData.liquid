@@ -3,15 +3,22 @@
   <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
     <div class="cart-item-container">	
       {% if settings.enable_shipping and settings.shipping_rate != blank %}
-
-      <p>{{{shippPending}}}</p>
+      {% assign shippingPending = settings.shipping_rate | minus: cart.total_price | money %}
+      {% assign shippingPercentage = cart.total_price | times:100 | divided_by:settings.shipping_rate %}
+      {% if shippingPercentage > 10 and shippingPercentage < 100 %}
+      {% assign shippingPercentage = shippingPercentage | minus:5 %}
+      {% endif %}
+	{% if cart.total_price < settings.shipping_rate %}
+      <p>{{settings.shipping_text | replace : '||amount||',shippingPending}}</p>
+      {% else %}
       <p>{{settings.free_shipping_text}}</p>
+      {% endif %}
       <div class="progress">
         <div class="progress-bar" role="progressbar"
              aria-valuemin="0" aria-valuemax="100" style="width:">
           <span class="sr-only"> Complete</span>
         </div>
-      </div>
+      </div>c
       {% endif %}
       <div class="cart-items-wrapper">
         {% for item in cart.items %}
