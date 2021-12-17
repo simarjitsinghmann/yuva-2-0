@@ -91,6 +91,11 @@
                {% endif %}
             </li>	
             {%- endfor-%}
+           {%- if customer -%}
+           <li class="nav-item {% if link.current %}active{% endif %}">
+             <a class="list-menu__item" href="{{-routes.account_url-}}">{{'customer.account.title' | capitalize | t }}</a>
+           </li>
+           {%- endif -%}
          </ul>
          <div class="navigation-close-mob" style="display:none;">
             <a href="javascript:void(0)" title="close_navigation" class="close-btn">
