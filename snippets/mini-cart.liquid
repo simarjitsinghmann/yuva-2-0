@@ -17,7 +17,7 @@
         {% endif %}
         <div class="cart-items-wrapper">
         {% for item in cart.items %}
-		<div class="media-link" data-line="{{line}}">
+		<div class="media-link" data-line="{{forloop.index}}">
 			<img src="{{item.image | img_url:'150x'}}" alt="{{name}}" width="65" height="73">
 			<div class="media-body">
 				<h5 class="cart-item-link">
@@ -30,7 +30,7 @@
 				<h6 class="product__price">
                    {%- if item.original_price != item.final_price -%}
                         <small class="item__price-strikethrough"><s>{{item.original_price}}</s></small><span>{{item.final_price}}</span>
-                      {{else}}
+                      {%else%}
                         <span>{{item.final_price}}</span>
                       {%- endif -%}
                       
