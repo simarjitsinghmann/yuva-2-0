@@ -970,7 +970,7 @@ $(document).ready(function()
       $('.newsletter-popup,.wrapper-overlay,.askmeMain.slideAskme').hide();
       $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper').attr('id','')
       if($(window).width() < 768){
-        $('#sort__list').toggleClass('active');
+        $('#sort__list').removeClass('active');
       }
       else{
         $('#sort__list').slideUp();      
