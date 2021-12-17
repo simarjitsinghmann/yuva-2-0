@@ -111,7 +111,7 @@ function hideOptions(){
     var sortMenu = document.getElementById('toolbox-sort');
     if(sortMenu){
       sortMenu.addEventListener("click", (e)=>{	
-        e.prevenetDefault();
+        e.preventDefault();
                                 var sortMenu = document.getElementById('sort__list');
       if(sortMenu.classList.contains('active')){
         sortMenu.classList.remove('active');
