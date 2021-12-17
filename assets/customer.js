@@ -65,6 +65,7 @@ class CustomerAddresses {
     var newTarget = document.querySelector('[data-drawer-body]');
     
     var parent = document.querySelector('[data-side-drawer]');
+    parent.setAttribute('class','side_drawer_wrapper');
     parent.setAttribute('id','addressSection');
     parent.classList.add('addressSection');
     document.querySelector('[data-drawer-title]').innerHTML = target.getAttribute('data-title');
