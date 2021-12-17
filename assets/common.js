@@ -1047,8 +1047,7 @@ $(document).ready(function()
   $(document).on('click', '.quickView', function(evt) {
     evt.preventDefault();
 
-    const drawer = document.querySelector('[data-side-drawer]');
-    drawer.setAttribute('class','');	
+    const drawer = document.querySelector('[data-side-drawer]');	
     drawer.setAttribute('id','quickView_product');
     drawer.classList.add('quickView_product');
     drawer.querySelector('[data-drawer-body]').innerHTML = preLoadLoadGif;
