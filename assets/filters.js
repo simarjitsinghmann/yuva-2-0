@@ -135,7 +135,18 @@ function hideOptions(){
       }
     });
     }
-	var closeSortMenu = document.querySelector('.close-mobile-sort');
+var closeSortMenu = document.querySelector('.close-mobile-sort');
+if(closeSortMenu){
+  closeSortMenu.addEventListener("click", (e)=>{	
+    e.preventDefault();
+    var sortMenu = document.getElementById('sort__list');
+    sortMenu.classList.remove('active');
+    if(window.innerWidth < 768){
+      //           document.querySelector('body').classList.remove('open-filter-sort');
+      //         }
+    }
+  });
+}
     var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
     Array.from(priceRangeBars).forEach(function(rangeBar) {
       var el = rangeBar;
