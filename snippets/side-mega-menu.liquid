@@ -32,7 +32,7 @@
                 </button>
             </div>
             <div class="category_title">
-                <h4>{% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</h4>
+                <h2>{% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</h2>
             </div>
           	<ul>
             {%- for childlink in mainMenu.links -%}
