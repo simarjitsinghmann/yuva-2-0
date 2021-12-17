@@ -746,22 +746,23 @@ function sellingPlans(variant,form){
 
 
 function pickUpAvialabiliy(status){
-	const pickUp = document.querySelector('.product__pickup-availabilities');
-      const previewContainer = document.getElementById('pickup-availability-preview-container');
+	var pickUp = document.querySelector('.product__pickup-availabilities');
+      var previewContainer = document.getElementById('pickup-availability-preview-container');
     if(pickUp && status){
         previewContainer.innerHTML = '';
         previewContainer.classList.add('hidden');
-      let rootUrl = pickUp.dataset.rootUrl;
-      let variantId = pickUp.closest('form').querySelector('[name=id]').value;
+      var rootUrl = pickUp.dataset.rootUrl;
+      var variantId = pickUp.closest('form').querySelector('[name=id]').value;
+     
       if (!rootUrl.endsWith("/")) {
         rootUrl = rootUrl + "/";
       }
-      const variantSectionUrl = `${rootUrl}variants/${variantId}/?section_id=pickup-availability`;
+      var variantSectionUrl = `${rootUrl}variants/${variantId}/?section_id=pickup-availability`;
 
       fetch(variantSectionUrl)
       .then(response => response.text())
       .then(text => {
-        const sectionInnerHTML = new DOMParser()
+        var sectionInnerHTML = new DOMParser()
         .parseFromString(text, 'text/html')
         .querySelector('.shopify-section');
         previewContainer.innerHTML = sectionInnerHTML.innerHTML;
