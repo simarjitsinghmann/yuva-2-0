@@ -827,20 +827,7 @@ img {
 }
 .similar-text {
    font-size: 11px;
-   padding: 0 4px 0 6px;
-   color: var(--white);
-   font-weight: var(--medium);
-   text-transform: capitalize;
-   visibility: hidden;
-   position: absolute;
-   top: 0px;
-   height: 100%;
-   background: var(--black);
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   right: 0;
-   transform: translateX(-10px);
+	opacity:0;
 }
 .shop__options {
    position: absolute;
