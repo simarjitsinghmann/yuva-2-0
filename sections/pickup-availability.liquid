@@ -19,7 +19,7 @@
       {%- endif -%}
     </span>
     {%- else -%}
-    <p class="caption-large">{{ 'products.product.pickup_availability.pick_up_unavailable_at_html' | t: location_name: closest_location.location.name }}</p>
+    <p class="">{{ 'products.product.pickup_availability.pick_up_unavailable_at_html' | t: location_name: closest_location.location.name }}</p>
     {%- if pick_up_availabilities.size > 1 -%}
     <span id="ShowPickupAvailabilityDrawer" class="pickup-availability-button link link--text underlined-link" aria-haspopup="dialog">{{ 'products.product.pickup_availability.check_other_stores' | t }}</span>
     {%- endif -%}
