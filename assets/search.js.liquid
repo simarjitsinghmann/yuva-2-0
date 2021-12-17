@@ -159,8 +159,10 @@ $(document).ready(function(){
               type: 'GET',
               url: '/admin/products/' + value + '.json',
               success: function(response) {
+                console.log('reponse ',response.product)
                 if(response.product){
                   var product =response.product;
+                console.log('product ',product)
                   var imgSrc = '{{'placeholder.svg' | asset_url}}';
                   if(product.image){
                     imgSrc = product.image.src;
