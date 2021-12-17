@@ -4038,10 +4038,12 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
 	max-width:100%;
   flex:0 0 100%;
 }
-.collection-count-3 .collection-list-view-wrapper.right-wrapper .collection-list-view-card {
+.collection-count-3 .collection-list-view-wrapper.right-wrapper .collection-list-view-card ,
+.collection-count-2 .collection-list-view-wrapper.right-wrapper .collection-list-view-card {
     height: 100%;
 }
-.collection-count-3.colllection-list-view .col-md-6 .small-collection-item {
+.collection-count-3.colllection-list-view .col-md-6 .small-collection-item,
+.collection-count-2.colllection-list-view .col-md-6 .small-collection-item{
     padding: 0 4px 0px;
 }
 .collection-count-4 .small-collection-item:last-child {
