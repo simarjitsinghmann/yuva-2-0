@@ -809,7 +809,6 @@ img {
 }
 .similar_options .vs-icon:hover {
     width: 110px;
-    padding: 0 8px;
   justify-content:flex-start;
 }
 .similar_options svg {
@@ -824,6 +823,7 @@ img {
 .similar_options .vs-icon:hover .similar-text {
 	opacity:1;
   visibility:visible;
+      font-size:11px;
 }
 .shop__options {
    position: absolute;
