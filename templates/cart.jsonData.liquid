@@ -1,4 +1,5 @@
 {% layout none %}
+{% if cart.items_count > 0 %}
 <div id="mini__cartForm">
   <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
     <div class="cart-item-container">
@@ -9,7 +10,7 @@
       {% if shippingPercentage > 10 and shippingPercentage < 100 %}
       {% assign shippingPercentage = shippingPercentage | minus:5 %}
       {% endif %}
-	{% if cart.total_price < shippingTarget %}
+      {% if cart.total_price < shippingTarget %}
       <p>{{settings.shipping_text | replace : '||amount||',shippingPending}}</p>
       {% else %}
       <p>{{settings.free_shipping_text}}</p>
@@ -100,3 +101,10 @@
     </div>
   </form>
 </div>
+{% else %}
+<div class="emptySideCart">
+  <img class="emptyCartIcon" src="{{'cart.svg' | asset_url}}">
+  <p>{{'sections.cart.empty' | t}}</p>
+  <a class="button black-btn" href="/">{{'general.continue_shopping' | t}}</a>
+</div>
+{% endif %}
