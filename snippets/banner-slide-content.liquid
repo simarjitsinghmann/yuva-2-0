@@ -41,11 +41,13 @@
   }  
                 
   #banner-{{block.id}} .carousel-caption-title h2 { 
+    font-size:{{section.settings.heading_font_size}}px;
     {% if block.settings.subh_text != blank %}
     color: {{ block.settings.subh_text }};
     {% endif %}
   }  
   #banner-{{block.id}} .carousel-caption-title h1 { 
+    font-size:{{section.settings.subheading_font_size}}px;
     {% if block.settings.h_text != blank %}
     color: {{ block.settings.h_text }};
     {% endif %}
