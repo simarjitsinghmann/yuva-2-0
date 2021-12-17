@@ -1,5 +1,5 @@
 {% layout none %}
-{% if cart.items_count > 0 %}
+{% if cart.item_count > 0 %}
 <div id="mini__cartForm">
   <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
     <div class="cart-item-container">

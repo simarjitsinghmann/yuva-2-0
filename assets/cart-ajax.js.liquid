@@ -126,13 +126,13 @@ buildCart = function (cart,showCart) {
     dataType: 'html',
     success: function(result) { 
       console.log(result)
-    }
-  });
-  $('body').find('[data-drawer-body]').html(template(data));
+  $('body').find('[data-drawer-body]').html(result);
   if(showCart){
     $('body').addClass('side_Drawer_open');
     $('.wrapper-overlay').css({"display": "block"});
   }
+    }
+  });
 
 };
 $('body').on('click','.openCartDrawer',function(e){
