@@ -100,7 +100,8 @@ footer .footer-menu-accordion ul li a:hover:before {
   align-items:center;
 }
 .list-payment {
-   display: flex;
+    display: flex;
+    flex-wrap: wrap;
 }
 .list-payment li {
    padding: 0 6px;
