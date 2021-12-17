@@ -24,7 +24,7 @@
     border-color:{{section.settings.bborder_color}};
   }
 </style>
-<div id="announcement{{section.id}} " class="announcement-bar hidden" >
+<div id="announcement{{section.id}}" class="announcement-bar hidden" >
   <div class="announcement-bar__message" >
     {% unless section.settings.icon == 'none' %}
     <span class="announcement_icon">
@@ -126,25 +126,15 @@
     announcementTimer();
   }
   {% endif %}
-  var getnew_Pop = Cookies.get('Newsletter_closed');
-  if(getnew_Pop!="Newsletter_closed_val"){
-    $('.newsletter-popup').fadeIn('slow');  
-    $('body').addClass('NewsletterActive').addClass('scrollHidden'); 
-  }else{
+  var getnew_Pop = Cookies.get('announcement_closed');
+  if(getnew_Pop != "true"){
+    $('#announcement{{section.id}}').removeClass('hidden');
   }
-  $("body").on('click', '.newsletter-popup .pop_cross,.newsletter-popup .popclose', function (e) {
-    e.preventDefault();
-    var form = $(this).parent().find('form');
-    
-                                   $('.newsletter-popup').fadeOut('slow');
-                 $('body').removeClass('NewsletterActive').removeClass('scrollHidden');         
-  });
-  
   $('.announce_close').click(function(){
     $('.announcement-bar').slideToggle();
     var date = new Date();
     date.setTime(date.getTime() + (parseInt(24 * 60 * 60 * 1000));
-                                            Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: date, path: '/' });
+                                            Cookies.set('announcement_closed', 'true', { expires: date, path: '/' });
     $('body').removeClass('announcement_open');
   });
   
