@@ -54,8 +54,6 @@ $(document).ready(function(){
       $('.Search_loader').show();
       // Do next search (in X milliseconds)
       searchTimeoutID = setTimeout(function(){
-        
-        recentSearch();
         //Ajax hit on search page
         currReqObj = $.ajax({
           url: $form.attr('action'),
