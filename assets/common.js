@@ -748,9 +748,9 @@ function sellingPlans(variant,form){
 function pickUpAvialabiliy(status){
 	const pickUp = document.querySelector('.product__pickup-availabilities');
       const previewContainer = document.getElementById('pickup-availability-preview-container');
+    if(pickUp && status){
         previewContainer.innerHTML = '';
         previewContainer.classList.add('hidden');
-    if(pickUp && status){
       let rootUrl = pickUp.dataset.rootUrl;
       let variantId = pickUp.closest('form').querySelector('[name=id]').value;
       if (!rootUrl.endsWith("/")) {
