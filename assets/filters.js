@@ -116,9 +116,10 @@ function hideOptions(){
         e.preventDefault();
                                 var sortMenu = document.getElementById('sort__list');
       if(sortMenu.classList.contains('active')){
-        sortMenu.classList.remove('active');
+        
         if(window.innerWidth > 767){
-        DOMAnimations.slideUp(sortMenu);
+        sortMenu.classList.remove('active');
+          DOMAnimations.slideUp(sortMenu);
         }
 //         else{
 //           document.querySelector('body').classList.remove('open-filter-sort');
