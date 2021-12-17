@@ -115,99 +115,18 @@ buildCart = function (cart,showCart) {
   $('body').find('[data-side-drawer]').attr('id','mini__cart').addClass('mini_cart');
   if (cart.item_count === 0) {
     $('[data-cart-count]').hide();
-    $('body').find('[data-drawer-body]').html(`<div class="emptySideCart">
-<img class="emptyCartIcon" src="{{'cart.svg' | asset_url}}">
-<p>{{'sections.cart.empty' | t}}</p>
-<a class="button black-btn" href="/">{{'general.continue_shopping' | t}}</a>
-</div>`);
-    return;
   }
-
-  // Handlebars.js cart layout
-  var items = [],
-      item = {},
-      data = {},
-      cartDiscounts =[],
-      source = $("#CartTemplate").html(),
-      template = Handlebars.compile(source);
-  // Add each item to our handlebars.js data
-  $.each(cart.items, function(index, cartItem) {
-
-    if (cartItem.image != null){
-      var prodImg = cartItem.image.replace(/(\.[^.]*)$/, "_small$1").replace('http:', '');
-    } else {
-      var prodImg = "//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif";
-    }
-    var unitPriceExist = false;
-    var unitPrice = '';
-    if(cartItem.unit_price){
-      unitPriceExist = true;
-      unitPrice += Shopify.formatMoney(cartItem.unit_price, moneyFormat);
-      unitPrice += ' / ';
-      unitPrice += cartItem.unit_price_measurement.reference_value > 1 ? cartItem.unit_price_measurement.reference_value : '';
-      unitPrice += cartItem.unit_price_measurement.reference_unit;
-    }
-    var sellingPlan = '';
-    if(cartItem.selling_plan_allocation){
-      sellingPlan = cartItem.selling_plan_allocation.selling_plan.name;
-    }
-    // Create item's data object and add to 'items' array
-    item = {
-      key: cartItem.key,
-      line: index + 1, // Shopify uses a 1+ index in the API
-      url: cartItem.url,
-      img: prodImg,
-      name: truncate(cartItem.product_title,4),
-      variation: cartItem.variant_title,
-      properties: cartItem.properties,
-      itemAdd: cartItem.quantity + 1,
-      unitPriceExist:unitPriceExist,
-      unitPrice:unitPrice,
-      itemMinus: cartItem.quantity - 1,
-      itemQty: cartItem.quantity,
-      sellingPlan: sellingPlan,
-      price: Shopify.formatMoney(cartItem.price,moneyFormat),
-      vendor: cartItem.vendor,
-      linePrice: Shopify.formatMoney(cartItem.final_line_price, moneyFormat),
-      originalLinePrice: Shopify.formatMoney(cartItem.original_line_price,moneyFormat),
-      discounts: cartItem.discounts,
-      discountsApplied: cartItem.original_line_price === cartItem.final_line_price ? false : true
-    };
-
-    items.push(item);
-  });
-  var shippPending ='';
-  var shipPendingPercentage = '100';
-  if(cart.total_price < shipping){
-    shippPending = Shopify.formatMoney((shipping - cart.total_price), moneyFormat);
-    shippPending = shippingText.replace('||amount||','<strong>'+shippPending+'</strong>');
-    shipPendingPercentage = ((cart.total_price /shipping)*100);
-    if(shipPendingPercentage > 10){
-      shipPendingPercentage= shipPendingPercentage - 5
-    }
-  }
-  $.each(cart.cart_level_discount_applications, function(index, cartDiscount) {
-    var discount ={
-      title:cartDiscount.title,
-      price:Shopify.formatMoney(cartDiscount.total_allocated_amount, moneyFormat)
-    }
-    cartDiscounts.push(discount);
-  });
-
-  // Gather all cart data and add to DOM
-  data = {
-    items: items,
-    count:cart.item_count,
-    note: cart.note,
-    shipping:shipping,
-    shippPending:shippPending,
-    shipPendingPercentage:shipPendingPercentage+'%',
-    total:cart.total_price, 
-    totalPrice: Shopify.formatMoney(cart.total_price, moneyFormat),
-    totalCartDiscount: cartDiscounts,
-    totalCartDiscountApplied: cart.total_discount === 0 ? false : true
-  }
+  else{
   $('[data-cart-count]').show();
+  }
+
+  $.ajax({
+    url: '/cart?view=jsonData',
+    type: 'GET',
+    dataType: 'json',
+    success: function(result) { 
+    }
+  });
   $('body').find('[data-drawer-body]').html(template(data));
   if(showCart){
     $('body').addClass('side_Drawer_open');
