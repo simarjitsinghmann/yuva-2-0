@@ -1042,12 +1042,13 @@ $(document).ready(function()
   });
   $(document).on('click','.side_drawer_close',function(){
     $('body').removeClass('side_Drawer_open')
-    $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper').attr('id','')
+//     $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper').attr('id','')
   });
   $(document).on('click', '.quickView', function(evt) {
     evt.preventDefault();
 
-    const drawer = document.querySelector('[data-side-drawer]');	
+    const drawer = document.querySelector('[data-side-drawer]');
+    drawer.setAttribute('class','');	
     drawer.setAttribute('id','quickView_product');
     drawer.classList.add('quickView_product');
     drawer.querySelector('[data-drawer-body]').innerHTML = preLoadLoadGif;
@@ -1080,8 +1081,16 @@ $(document).ready(function()
 });
 
 
-
-// massonsry
+/**
+ * Set appropriate spanning to any masonry item
+ *
+ * Get different properties we already set for the masonry, calculate 
+ * height or spanning for any cell of the masonry grid based on its 
+ * content-wrapper's height, the (row) gap of the grid, and the size 
+ * of the implicit row tracks.
+ *
+ * @param item Object A brick/tile/cell inside the masonry
+ */
 function resizeMasonryItem(item){
   /* Get the grid object, its row-gap, and the size of its implicit rows */
   var grid = document.getElementsByClassName('masonry')[0],
@@ -1106,6 +1115,14 @@ function resizeMasonryItem(item){
   item.querySelector('.masonry-content').style.height = rowSpan * 10 + "px";
 }
 
+/**
+ * Apply spanning to all the masonry items
+ *
+ * Loop through all the items and apply the spanning to them using 
+ * `resizeMasonryItem()` function.
+ *
+ * @uses resizeMasonryItem
+ */
 function resizeAllMasonryItems(){
   // Get all item class objects in one list
   var allItems = document.getElementsByClassName('masonry-item');
@@ -1117,8 +1134,31 @@ function resizeAllMasonryItems(){
   for(var i=0;i>allItems.length;i++){
     resizeMasonryItem(allItems[i]);
   }
-} 
+}
+
+/**
+ * Resize the items when all the images inside the masonry grid 
+ * finish loading. This will ensure that all the content inside our
+ * masonry items is visible.
+ *
+ * @uses ImagesLoaded
+ * @uses resizeMasonryItem
+ */
+function waitForImages() {
+  var allItems = document.getElementsByClassName('masonry-item');
+  for(var i=0;i<allItems.length;i++){
+    imagesLoaded( allItems[i], function(instance) {
+      var item = instance.elements[0];
+      resizeMasonryItem(item);
+    } );
+  }
+}
+
+/* Resize all the grid items on the load and resize events */
 var masonryEvents = ['load', 'resize'];
 masonryEvents.forEach( function(event) {
   window.addEventListener(event, resizeAllMasonryItems);
 } );
+
+/* Do a resize once more when all the images finish loading */
+waitForImages();
