@@ -1691,7 +1691,10 @@
   }
   .article-template__comments-fields~.d-flex {
     flex-wrap: wrap;
-}
+  }
+  .blog-detail-content .article_tags {
+    justify-content: flex-start;
+  }
   /*============= blog detail css end =============*/
 }
 @media screen and (max-width: 575px) {
