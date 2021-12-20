@@ -1703,13 +1703,15 @@
     top: calc(50% - 27px);
     background:transparent;
   }
-  .left-product-images .slick-arrow span {
-  background: #FFF;
+.left-product-images .slick-arrow span {
+    background: #fff;
     border-radius: 100%;
     width: 20px;
     height: 20px;
-    display: inline-block;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
    .left-product-images .slick-arrow svg{
   width: 15px;
     height: 15px;
