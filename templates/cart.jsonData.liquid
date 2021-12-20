@@ -1,6 +1,5 @@
 {% layout none %}
-{{request.path}}
-{% if template == 'cart' %}
+{% if request.path == '/cart' %}
 {% for item in cart.items %}
 <tr>
   <td class="cart-img">
