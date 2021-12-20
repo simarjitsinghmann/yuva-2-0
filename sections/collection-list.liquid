@@ -34,16 +34,15 @@
           {% endif %}
           {% capture image_content %}
           <div class="collection-image ">
-            {% if block.settings.custom == false and collection.featured_image != blank %} 
-            {% assign feature_image = collection.featured_image | img_url:'master' %}
+            {% if block.settings.custom == false and collection.featured_image != blank %}
+            {% include 'lazy-image' image:collection.featured_image %} 
             {% elsif block.settings.custom == true and block.settings.image == blank and collection.featured_image != blank %}
-            {% assign feature_image = collection.featured_image | img_url:'master' %}
+            {% include 'lazy-image' image:collection.featured_image %}
             {% elsif block.settings.image != blank  %}
-            {% assign feature_image = block.settings.image %}
+            {% include 'lazy-image' image:block.settings.image %}
             {%else%}
-            {% assign feature_image = 'placeholder.svg' | asset_url %}
+            <img src="{{'placeholder.svg' | asset_url }}" >
             {% endif %}
-      {% include 'lazy-image' image:feature_image %}
           </div>
           {% endcapture %}
           <li class="grid__item__list">
