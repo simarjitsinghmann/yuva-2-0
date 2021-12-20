@@ -12,7 +12,7 @@
   <div class="container">
     <div class="blog-detail-box">
       <div class="row">
-        <div class="{% if section.settings.show_related %}col-12 col-sm-7 col-md-8{% else %}col-12 col-sm-12 col-md-12{% endif %}">
+        <div class="{% if section.settings.show_related %}col-12 col-sm-12 col-md-8{% else %}col-12 col-sm-12 col-md-12{% endif %}">
           <div class="blog-detail-content">
             <h3 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h3>
             <div class="blog-author">
@@ -183,7 +183,7 @@
         </div>
 
         {% if section.settings.show_related %}
-        <div class="col-12 col-sm-5 col-md-4">
+        <div class="col-12 col-sm-12 col-md-4">
           <div class="relatedBlogPosts">
             <h4>Related Posts</h4>
               {%- assign related_posts = "" -%}
