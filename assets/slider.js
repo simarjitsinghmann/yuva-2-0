@@ -3,7 +3,8 @@ var elements = document.getElementsByClassName('productImageSlideItem');
 
 var thumbs = document.getElementsByClassName('productThumbImage');
 
-window.onscroll = function() {
+
+window.addEventListener('scroll', function(event){
   findVisibleItems();
 };
 
