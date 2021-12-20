@@ -6,7 +6,7 @@ var thumbs = document.getElementsByClassName('productThumbImage');
 
 window.addEventListener('scroll', function(event){
   findVisibleItems();
-};
+});
 
 function findVisibleItems(){
   Array.from(elements).forEach(function(item) {
