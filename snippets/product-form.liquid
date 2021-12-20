@@ -222,6 +222,12 @@
     {% when 'highlights' %}
     <div class="product-highlights">
       <h3>{{block.settings.highlight_heading}}</h3>
+      <div class="highlights">
+        <div class="hightlight-point">
+          <span class="hightlight-point-name"></span>
+          <span class="hightlight-point-value"></span>
+        </div>
+      </div>
     </div>
   {% endcase %}
   {% endfor %}
