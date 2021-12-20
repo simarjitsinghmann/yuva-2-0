@@ -1678,14 +1678,17 @@
     right:0;
   }
 /*============= PDP css end ===============*/
-/*============= blog detail css start ==============*/
+  /*============= blog detail css start ==============*/
   .blog-detail-outer .row,
   .blog-detail-outer .container,
   .blog-detail-outer .col-12{
-  	padding:0;
+    padding:0;
     margin:0;
   }
-/*============= blog detail css end =============*/
+  .blog-detail-content {
+    padding: 25px 15px;
+  }
+  /*============= blog detail css end =============*/
 }
 @media screen and (max-width: 575px) {
   /*=============  common  start  ===============*/
