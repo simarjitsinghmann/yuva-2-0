@@ -22,6 +22,35 @@
               <div class="main-container">
                 <div class="slider slider-main" mobile-only data-slider>
                   {%- for media in product.media -%}
+                  {% if forloop.last %}
+                   {% for block in section.blocks %}
+                  {% case block.type %}
+                  {% when 'highlights' %}
+                  {% assign showHighlights = false %}
+                  {% capture highlights %}
+                  {% for i in (1..4) %}
+                  {% assign pointName = 'hp_name_' | append: i %}
+                  {% assign pointValue = 'hp_value_' | append: i %}
+                  {% if block.settings[pointName] != blank and block.settings[pointValue] != blank %}
+                  {% assign showHighlights = true %}
+                  <div class="hightlight-point">
+                    <span class="hightlight-point-name">{{block.settings[pointName]}}</span>
+                    <span class="hightlight-point-value">{{block.settings[pointValue]}}</span>
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+                  {% endcapture %}
+                  {% if showHighlights %}
+                  <div class="product-highlights">
+                    <h3>{{block.settings.highlight_heading}}</h3>
+                    <div class="highlights">
+                      {{highlights}}
+                    </div>
+                  </div>
+                  {% endif %}
+                  {% endcase %}
+                  {%-endfor-%}
+                  {% endif%}
                 {%-case media.media_type-%}
                   {%- when 'image' -%}
                   <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
