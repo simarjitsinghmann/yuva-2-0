@@ -454,6 +454,8 @@ $(document).ready(function(){
   $('body').on('click','.similar_options',function(){
     $('.wrapper-overlay').css({"display": "block"});
 
+    var getID = $(this).attr('data-id'); 
+    var getSection = $(this).attr('data-section'); 
     const drawer = document.querySelector('[data-side-drawer]');
     
     drawer.setAttribute('class','side_drawer_wrapper');
@@ -464,8 +466,6 @@ $(document).ready(function(){
     document.querySelector('body').classList.add('side_Drawer_open');     
     drawer.querySelector('[data-drawer-body]').innerHTML =preLoadLoadGif;
     drawer.querySelector('[data-drawer-title]').innerHTML ='Similar Products';
-    var getID = $(this).attr('data-id'); 
-    var getSection = $(this).attr('data-section'); 
     fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
     .then(response => response.text())
     .then((text) => {
