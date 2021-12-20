@@ -1,5 +1,5 @@
 <img
-     srcset="{%- if image.width >= 165 -%}{{ image | img_url: '165x' }} 165w,{%- endif -%}
+     data-srcset="{%- if image.width >= 165 -%}{{ image | img_url: '165x' }} 165w,{%- endif -%}
              {%- if image.width >= 360 -%}{{ image | img_url: '360x' }} 360w,{%- endif -%}
              {%- if image.width >= 533 -%}{{ image | img_url: '533x' }} 533w,{%- endif -%}
              {%- if image.width >= 720 -%}{{ image | img_url: '720x' }} 720w,{%- endif -%}
@@ -7,7 +7,7 @@
              {%- if image.width >= 1066 -%}{{ image | img_url: '1066x' }} 1066w,{%- endif -%}
              {{ image | img_url: 'master' }} {{ image.width }}w"
      src="{{ image | img_url: '533x' }}"
-     sizes="(min-width: 1900px) calc((100vw - 130px) / 4),(min-width: 1600px) calc((100vw - 130px) / 4),(min-width: 1200px) calc((100vw - 130px) / 4), (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+     data-sizes="(min-width: 1900px) calc((100vw - 130px) / 4),(min-width: 1600px) calc((100vw - 130px) / 4),(min-width: 1200px) calc((100vw - 130px) / 4), (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
      alt="{{ image.alt | escape }}"
      class="{{class}} lazyload"
      {%- if max_width != blank -%}
