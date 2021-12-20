@@ -10,6 +10,7 @@ window.onscroll = function() {
 function findVisibleItems(){
   Array.from(elements).forEach(function(item) {
     if (isOnScreen(item)) {
+      console.log(item)
       thumbs = document.getElementsByClassName('productThumbImage');
       Array.from(thumbs).forEach(function(thumb) {
         thumb.classList.remove('active');
