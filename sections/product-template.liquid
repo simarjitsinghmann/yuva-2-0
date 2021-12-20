@@ -23,6 +23,7 @@
                 <div class="slider slider-main" mobile-only data-slider>
                   {%- for media in product.media -%}
                   {% if forloop.last %}
+                  {% capture productHighlights %}
                    {% for block in section.blocks %}
                   {% case block.type %}
                   {% when 'highlights' %}
@@ -50,6 +51,7 @@
                   {% endif %}
                   {% endcase %}
                   {%-endfor-%}
+                  {% endcapture %}
                   {% endif%}
                 {%-case media.media_type-%}
                   {%- when 'image' -%}
