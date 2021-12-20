@@ -20,6 +20,7 @@
                   {% assign feature_image = 'featured_image.png' | asset_url %}
                   {% endif %}
                   {% render 'lazy-image' image: feature_image%}
+                </a>
               </div>
               {% unless block.settings.heading == blank and block.settings.subheading == blank %}
               <div class="card-information__wrapper {% if section.settings.style  == 'style2' %}text__{{section.settings.info_position}}{% else %}bottom-{{section.settings.info_position}}{% endif %} content-border-{{section.settings.show_border}}">
