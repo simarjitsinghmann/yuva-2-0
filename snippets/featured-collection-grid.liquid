@@ -6,11 +6,11 @@
   <div class="card__warpper__detail left__sided">
     <div class="collection-image">
       {% if custom == false and collection.featured_image != blank %} 
-      {% assign feature_image = collection.featured_image | img_url:'master' %}
+      {% assign feature_image = collection.featured_image %}
       {% elsif custom == true and mc_image == blank and collection.featured_image != blank %}
-      {% assign feature_image = collection.featured_image | img_url:'master' %}
+      {% assign feature_image = collection.featured_image  %}
       {% elsif custom and mc_image != blank  %}
-      {% assign feature_image = mc_image | img_url:'master' %}
+      {% assign feature_image = mc_image %}
       {%else%}
       {% assign feature_image = 'placeholder.svg' | asset_url %}
       {% endif %}
