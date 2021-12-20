@@ -767,7 +767,7 @@ function pickUpAvialabiliy(status){
         var sectionInnerHTML = new DOMParser()
         .parseFromString(text, 'text/html')
         .querySelector('.shopify-section');
-        console.log(text)
+        var container = sectionInnerHTML.querySelector('#pickUpAvailabilityPreview');
         previewContainer.innerHTML = sectionInnerHTML.innerHTML;
         previewContainer.classList.remove('hidden');
         pickUp.classList.remove('hidden')
