@@ -10,7 +10,6 @@ window.addEventListener('scroll', function(event){
 
 function findVisibleItems(){
   Array.from(elements).forEach(function(item) {
-      console.log(item)
     if (isOnScreen(item)) {
       thumbs = document.getElementsByClassName('productThumbImage');
       Array.from(thumbs).forEach(function(thumb) {
