@@ -50,7 +50,7 @@
               <div class="post-wrapper">
                   {% assign article_image = 'featured_image.png' | asset_url %}                
                   <div class="post-information-image">
-                    <img src="{{article_image}}" alt="">
+                    {% include 'lazy-image' image:'featured_image.png' | asset_url %}
                   </div>
                   <div class="post-information__wrapper text__left">
                     <div class="post-date">
