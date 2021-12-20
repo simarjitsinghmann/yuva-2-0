@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="offer-list">
-      <div class=" {% if section.settings.style == 'style2' %}style_variation_2{% endif %}" role="list" data-slider>
+      <div class=" {% if section.settings.style == 'style2' %}style_variation_2{%else%}style_variation_1{% endif %}" role="list" data-slider>
         {% for block in section.blocks%}
         <div id="offer-block-{{block.id}}"  class=" slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
           <div class="card-wrapper">
