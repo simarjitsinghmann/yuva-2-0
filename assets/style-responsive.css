@@ -1057,10 +1057,17 @@
     height: 277px;
   }
   /*========= collection  css end  ===========*/
+  /*========= contact us  css start  ===========*/
   .contact-us-wrapper .tt-contact-info {
     padding: 25px 20px;
-
   }
+  .contact-us-wrapper .tt-contact-info .contact_block {
+    padding-left: 12px;
+  }
+  .tt-contact-info .contact_block address, .tt-contact-info .contact_block p, .tt-contact-info .contact_block p a {
+    font-size: 14px;
+  }
+  /*========= contact us  css end  ===========*/
 }
 @media screen and (max-width: 767px) {
   p
