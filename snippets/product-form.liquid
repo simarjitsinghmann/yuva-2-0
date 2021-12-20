@@ -219,6 +219,10 @@
     </div>
     {% endif %}
   </div>
+    {% when 'highlights' %}
+    <div class="product-highlights">
+      <h3>{{block.settings.highlight_heading}}</h3>
+    </div>
   {% endcase %}
   {% endfor %}
 </div>
