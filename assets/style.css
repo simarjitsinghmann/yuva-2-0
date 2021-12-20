@@ -2177,7 +2177,7 @@ li.breadcrumb-item a {
   left: 0;
   height: 20px;
   width: 20px;
-  background-color: var(--theme-color);
+  background-color: var(--gray);
   border-radius: 50%;
 }
 .sellingPlanHeading label:before {
@@ -2192,6 +2192,9 @@ li.breadcrumb-item a {
   z-index: 1;
   opacity:0;
  }
+.selling_group.active .sellingPlanHeading label:after {
+	background-color: var(--theme-color);
+}
 .selling_group.active .sellingPlanHeading label:before {
 	opacity:1;
 }
