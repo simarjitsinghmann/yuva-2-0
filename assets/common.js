@@ -768,10 +768,12 @@ function pickUpAvialabiliy(status){
         .parseFromString(text, 'text/html')
         .querySelector('.shopify-section');
         var container = sectionInnerHTML.querySelector('#pickUpAvailabilityPreview');
-        previewContainer.innerHTML = sectionInnerHTML.innerHTML;
-        previewContainer.classList.remove('hidden');
-        pickUp.classList.remove('hidden')
-        showPickupDrawer();
+        if(container){
+          previewContainer.innerHTML = sectionInnerHTML.innerHTML;
+          previewContainer.classList.remove('hidden');
+          pickUp.classList.remove('hidden')
+          showPickupDrawer();
+        }
         })
         .catch(e => {
         });
