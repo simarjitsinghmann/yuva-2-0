@@ -228,8 +228,8 @@
         {% assign pointValue = 'hp_value_' | append: i %}
         {% if block.settings[pointName] != blank and block.settings[pointValue] != blank %}
         <div class="hightlight-point">
-          <span class="hightlight-point-name"></span>
-          <span class="hightlight-point-value"></span>
+          <span class="hightlight-point-name">{{block.settings[pointName]}}</span>
+          <span class="hightlight-point-value">{{block.settings[pointValue]}}</span>
         </div>
         {% endif %}
         {% endfor %}
