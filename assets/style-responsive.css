@@ -171,14 +171,8 @@
   .single-banner-section.banner-section .item {
       height: 500px;
   }
-  .single-banner-section.banner-section h1 {
-      font-size: 60px;
-      line-height: 60px;
-      margin: 10px 0 10px;
-      letter-spacing: 0.4px;
-  }
   .single-banner-section.banner-section h2 {
-      font-size: 40px;
+      font-size: 40px!important;
       line-height: 55px;
   }
   /*================  banner end  ==============*/
@@ -1534,7 +1528,7 @@
        font-weight: 800;
   }
   .single-banner-section.banner-section h2 {
-      font-size: 30px;
+      font-size: 30px!important;
       line-height: 35px;
   }
   /*===============  single banner css end  =============*/
@@ -1894,7 +1888,7 @@
     height: 380px;
   }
 .single-banner-section.banner-section h2 {
-    font-size: 25px;
+    font-size: 25px!important;
   margin: 10px 0;
 }
   .banner-caption-title h3 {
