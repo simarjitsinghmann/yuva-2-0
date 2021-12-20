@@ -39,11 +39,11 @@
             {% elsif block.settings.custom == true and block.settings.image == blank and collection.featured_image != blank %}
             {% assign feature_image = collection.featured_image | img_url:'master' %}
             {% elsif block.settings.image != blank  %}
-            {% assign feature_image = block.settings.image | img_url:'master' %}
+            {% assign feature_image = block.settings.image %}
             {%else%}
             {% assign feature_image = 'placeholder.svg' | asset_url %}
             {% endif %}
-            <img class="lazy" data-src="{{feature_image}}" alt="">
+      {% include 'lazy-image' image:feature_image %}
           </div>
           {% endcapture %}
           <li class="grid__item__list">
