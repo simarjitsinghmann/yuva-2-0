@@ -1,3 +1,4 @@
+{% unless collection == 'all' %}
 <div class="top_page_title collection-banner {% if collection.featured_image == blank %}no-bg{% endif %}" {% if collection.featured_image != blank %}style="background:url({{collection.featured_image | img_url:'master'}}) no-repeat center/cover"{% endif %}>
   <div class="container">
     <div class="contact-banner-text">
@@ -10,6 +11,7 @@
     </div>
   </div>
 </div>
+{% endunless %}
 {% paginate collection.products by section.settings.products_per_page %}
 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
 <div class="CollectionProductGrid {{sort_by}} {{collection.default_sort_by}} 
