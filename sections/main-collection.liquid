@@ -1,16 +1,22 @@
 {% unless collection.handle == 'all' %}
-<div class="top_page_title collection-banner {% if collection.featured_image == blank %}no-bg{% endif %}" {% if collection.featured_image != blank %}style="background:url({{collection.featured_image | img_url:'master'}}) no-repeat center/cover"{% endif %}>
+{% if section.settings.collection_image or section.settings.collection_description %}
+<div class="top_page_title collection-banner {% if collection.featured_image == blank and section.settings.collection_image %}no-bg{% endif %}" {% if collection.featured_image != blank and section.settings.collection_image %}style="background:url({{collection.featured_image | img_url:'master'}}) no-repeat center/cover"{% endif %}>
   <div class="container">
     <div class="contact-banner-text">
+      {% if section.settings.collection_image %}
       <div class="banner_title">
         <h1>{{collection.title}}</h1>
       </div>
+      {% endif %}
+      {% if section.settings.collection_description  %}
       <div class="container collection-description text__center">
       	{{collection.description}}
       </div>
+      {% endif %}
     </div>
   </div>
 </div>
+      {% endif %}
 {% endunless %}
 {% paginate collection.products by section.settings.products_per_page %}
 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
