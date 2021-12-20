@@ -1,5 +1,6 @@
-{% layout none %}
+
 {{request.path}}
+{% layout none %}
 {% if request.path == '/cart' %}
 {% for item in cart.items %}
 <tr>
