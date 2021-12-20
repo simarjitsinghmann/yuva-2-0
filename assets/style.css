@@ -2182,13 +2182,14 @@ li.breadcrumb-item a {
 }
 .sellingPlanHeading label:before {
     position: absolute;
-  content:"";
- 	top: 9px;
-	left: 9px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: white;
+    content: "";
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--dark-gray);
+    z-index: 1;
 }
 .selling_group {
     border-bottom: 1px solid #eee;
