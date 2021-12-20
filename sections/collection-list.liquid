@@ -43,7 +43,7 @@
             {%else%}
             {% assign feature_image = 'placeholder.svg' | asset_url %}
             {% endif %}
-            <img src="{{feature_image}}" alt="">
+            <img class="lazy" data-src="{{feature_image}}" alt="">
           </div>
           {% endcapture %}
           <li class="grid__item__list">
