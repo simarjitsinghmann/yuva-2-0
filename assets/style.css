@@ -2192,6 +2192,9 @@ li.breadcrumb-item a {
     z-index: 1;
       opacity:0;
 }
+.selling_group.active .sellingPlanHeading label:before {
+	opacity:1;
+}
 .selling_group {
     border-bottom: 1px solid #eee;
     padding: 12px;
