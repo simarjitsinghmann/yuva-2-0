@@ -1,5 +1,5 @@
 {% layout none %}
-{{template}}
+{{request.path}}
 {% if template == 'cart' %}
 {% for item in cart.items %}
 <tr>
