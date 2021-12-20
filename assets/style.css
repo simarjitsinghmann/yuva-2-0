@@ -2165,7 +2165,7 @@ li.breadcrumb-item a {
     align-items: center;
 }
 .sellingPlanHeading label {
-    padding: 0 0 0 10px;
+    padding: 0 0 0 30px;
     width: 100%;
     text-align: left;
   position:relative;
@@ -2175,9 +2175,9 @@ li.breadcrumb-item a {
   content:"";
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
+  height: 20px;
+  width: 20px;
+  background-color: var(--gray);
   border-radius: 50%;
 }
 .selling_group {
