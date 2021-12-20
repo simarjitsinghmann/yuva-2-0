@@ -1,3 +1,4 @@
+{{collection}}
 {% unless collection == 'all' %}
 <div class="top_page_title collection-banner {% if collection.featured_image == blank %}no-bg{% endif %}" {% if collection.featured_image != blank %}style="background:url({{collection.featured_image | img_url:'master'}}) no-repeat center/cover"{% endif %}>
   <div class="container">
