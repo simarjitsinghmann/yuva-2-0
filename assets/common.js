@@ -874,6 +874,7 @@ function showPickupDrawer(){
     showContainerButton.addEventListener("click", ()=>{
                                          var drawerHtml = previewContainer.querySelector('#pickUpAvailabilityMain').innerHTML;
   	
+  drawer.classList.add('pickup-availability-drawer');
     drawer.querySelector('[data-drawer-title]').innerHTML ='Pick Up Availability';
   drawer.querySelector('[data-drawer-body]').innerHTML = drawerHtml; 
     document.querySelector('body').classList.add('side_Drawer_open'); 
