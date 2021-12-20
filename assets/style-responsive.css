@@ -1657,14 +1657,14 @@
     flex-direction: column;
   }
   /*  ============= footer css end =============  */
-/*============== PDP css start ==============*/
+  /*============== PDP css start ==============*/
   .left-product-images.multiple-images .gallery-item .responsive-image__image,
   .left-product-images.multiple-images .gallery-item video,
   .left-product-images.multiple-images .gallery-item iframe{
     height: 470px;
     width:100%;
-  object-fit:cover;
-}
+    object-fit:cover;
+  }
   .left-product-images .slick-arrow {
     display: block;
     position: absolute;
@@ -1677,7 +1677,10 @@
   .left-product-images .slick-arrow.slick-next {
     right:0;
   }
-/*============= PDP css end ===============*/
+  .fancybox__thumbs {
+    display: none;
+  }
+  /*============= PDP css end ===============*/
   /*============= blog detail css start ==============*/
   .blog-detail-outer .row,
   .blog-detail-outer .container,
