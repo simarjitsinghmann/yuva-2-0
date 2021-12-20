@@ -1701,13 +1701,14 @@
     position: absolute;
     z-index: 1;
     top: calc(50% - 27px);
-        background:transparent;
+background: #FFF;
+    border-radius: 100%;
   }
   .left-product-images .slick-arrow.slick-prev  {
-    left: 0;
+    left: 10px;
   }
   .left-product-images .slick-arrow.slick-next {
-    right:0;
+    right:10px;
   }
   .fancybox__thumbs {
     display: none;
