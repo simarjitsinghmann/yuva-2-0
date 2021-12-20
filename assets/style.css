@@ -3881,8 +3881,9 @@ main .shopify-section.cstm-cart-sec {
 .shopify-blog-comments {
     margin-top: 30px;
 }
-.article-template__comments-fields ~ .d-flex {
-   flex-wrap: nowrap;
+.article-template__comments-fields~.d-flex {
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 #comment_form h3 {
    margin-bottom: 13px;
