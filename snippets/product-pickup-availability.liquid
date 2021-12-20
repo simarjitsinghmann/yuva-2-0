@@ -1,5 +1,6 @@
+{% if current_variant.available and pick_up_availabilities.size > 0 %} 
 <div class="product__pickup-availabilities no-js-hidden"
-     {% if current_variant.available and pick_up_availabilities.size > 0 %} available{% endif %}
+     available
      data-root-url="{{ routes.root_url }}"
      data-variant-id="{{ current_variant.id }}"
      data-has-only-default-variant="{{ product.has_only_default_variant }}"
@@ -11,3 +12,4 @@
     </div>
   </div>
 </div>
+{% endif %}
