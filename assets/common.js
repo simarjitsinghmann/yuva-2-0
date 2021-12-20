@@ -767,7 +767,8 @@ function pickUpAvialabiliy(status){
         .parseFromString(text, 'text/html')
         .querySelector('.shopify-section');
         previewContainer.innerHTML = sectionInnerHTML.innerHTML;
-        previewContainer.classList.remove('hidden')
+        previewContainer.classList.remove('hidden');
+        pickUp.classList.remove('hidden')
         showPickupDrawer();
         })
         .catch(e => {
