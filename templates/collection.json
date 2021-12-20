@@ -27,12 +27,38 @@
         "btn_text": "#ffffff",
         "btn_h_bg": "#000000",
         "btn_h_text": "#ffffff",
-        "info_position": "center-left"
+        "info_position": "center-left",
+        "heading_font_size": 50,
+        "subheading_font_size": 100
+      }
+    },
+    "1639998432e895e439": {
+      "type": "rich-text",
+      "blocks": {
+        "16399984327850134c-0": {
+          "type": "richtext",
+          "settings": {
+            "heading": "Rich text",
+            "content": "<p>Use this section to welcome customers to your store, say a bit about your brand, or share news and seasonal promotions.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16399984327850134c-0"
+      ],
+      "settings": {
+        "bgcolor": "#ffffff",
+        "content_alignment": "left",
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     }
   },
   "order": [
     "main-collection",
-    "163774707816571c51"
+    "163774707816571c51",
+    "1639998432e895e439"
   ]
 }
