@@ -30,7 +30,7 @@
                   {% else %}
                   <h2>{{collection.title}}</h2>
                   {% endif %}
-                  {% if block.settings.collection != blank %}
+                  {% if block.settings.collection != blank and block.settings.btntext != blank %}
                   <a href="{{collection.url}}" class="link">{{block.settings.btntext}}</a>
                   {% endif %}
                 </div>
@@ -62,7 +62,7 @@
                       {% elsif block.settings.collection != blank  %}
                       <h4>{{collection.title}}</h4>
                       {% endif %}
-                      {% if block.settings.collection != blank %}
+                      {% if block.settings.collection != blank and block.settings.btntext != blank %}
                       <a href="{{collection.url}}" class="link">{{block.settings.btntext}}</a>
                       {% endif %}
                     </div>
