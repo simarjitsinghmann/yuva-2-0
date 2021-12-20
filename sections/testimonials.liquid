@@ -23,7 +23,7 @@
                     <div class="slider-box">
                       <div class="client-image">   
                       {% if block.settings.image != blank %}    
-                        <img src="{{block.settings.image | img_url:'master'}}" loading="lazy" alt="{{section.settings.author}}">   
+                        {% render 'lazy-image' image:block.settings.image %}
                       {% else %}
                       {{ 'user-icon.svg' | asset_url | img_tag }}
                       {% endif %}                    
@@ -63,7 +63,7 @@
                     <div class="slider-box">
                       <div class="client-image">   
                       {% if block.settings.image != blank %}         
-                        {% include 'lazy-image' image:block.settings.image %} 
+                        {% render 'lazy-image' image:block.settings.image %}
                       {% else %}
                       {{ 'user-icon.svg' | asset_url | img_tag }}
                       {% endif %}                    
