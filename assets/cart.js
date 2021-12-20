@@ -93,40 +93,53 @@ validateQty = function (qty) {
 cartPageUpdate = function(cart){  
 
       $('[data-cart-items]').load('/cart?view=jsonData', function() {
-        $(window).trigger('resize');
-        drawer.querySelector('[data-drawer-body]').classList.remove('searching');
-        Shopify.PaymentButton.init()
-
-        productVariants();
-        showMultipleOptions(); 
+        if(cart.item_count == 0){
+          $('[data-cart-count').hide();
+        }
+        $('[data-cart-item-count]').text(cart.item_count);
+        $('[data-cart-original-price]').text(Shopify.formatMoney(cart.original_total_price, moneyFormat));
+        $('[data-cart-total-price]').text(Shopify.formatMoney(cart.total_price, moneyFormat));
+        if(cart.cart_level_discount_applications.length > 0){
+          var discounts = '';
+          $.each(cart.cart_level_discount_applications,function(index,discount){
+            discounts += '<li data-cart-discount>Discount['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
+          })
+          $('li[data-cart-discount]').remove();
+          $('li[data-cart-original]').removeClass('hidden');
+          $(discounts).insertAfter('li[data-cart-original]')
+        }
+        else{
+          $('li[data-cart-original]').addClass('hidden');
+          $('li[data-cart-discount]').remove();
+        }
       });
-  $.ajax({
-    url: '/cart',
-    type: 'GET',
-    dataType: 'html',
-    success: function(result){
-      $('body').find('[data-cart-items]').html($(result).find('[data-cart-items]').html());
-      if(cart.item_count == 0){
-        $('[data-cart-count').hide();
-      }
-      $('[data-cart-item-count]').text(cart.item_count);
-      $('[data-cart-original-price]').text(Shopify.formatMoney(cart.original_total_price, moneyFormat));
-      $('[data-cart-total-price]').text(Shopify.formatMoney(cart.total_price, moneyFormat));
-      if(cart.cart_level_discount_applications.length > 0){
-        var discounts = '';
-        $.each(cart.cart_level_discount_applications,function(index,discount){
-          discounts += '<li data-cart-discount>Discount['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
-        })
-        $('li[data-cart-discount]').remove();
-        $('li[data-cart-original]').removeClass('hidden');
-        $(discounts).insertAfter('li[data-cart-original]')
-      }
-      else{
-        $('li[data-cart-original]').addClass('hidden');
-        $('li[data-cart-discount]').remove();
-      }
-    }
-    })  
+//   $.ajax({
+//     url: '/cart',
+//     type: 'GET',
+//     dataType: 'html',
+//     success: function(result){
+//       $('body').find('[data-cart-items]').html($(result).find('[data-cart-items]').html());
+//       if(cart.item_count == 0){
+//         $('[data-cart-count').hide();
+//       }
+//       $('[data-cart-item-count]').text(cart.item_count);
+//       $('[data-cart-original-price]').text(Shopify.formatMoney(cart.original_total_price, moneyFormat));
+//       $('[data-cart-total-price]').text(Shopify.formatMoney(cart.total_price, moneyFormat));
+//       if(cart.cart_level_discount_applications.length > 0){
+//         var discounts = '';
+//         $.each(cart.cart_level_discount_applications,function(index,discount){
+//           discounts += '<li data-cart-discount>Discount['+discount.title+'] <strong>-'+Shopify.formatMoney(discount.total_allocated_amount, moneyFormat)+'</strong></li>';
+//         })
+//         $('li[data-cart-discount]').remove();
+//         $('li[data-cart-original]').removeClass('hidden');
+//         $(discounts).insertAfter('li[data-cart-original]')
+//       }
+//       else{
+//         $('li[data-cart-original]').addClass('hidden');
+//         $('li[data-cart-discount]').remove();
+//       }
+//     }
+//     })  
 }
 
 
