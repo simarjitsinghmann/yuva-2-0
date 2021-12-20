@@ -694,6 +694,13 @@
   .card-information .card-information-image {
     border: 6px solid var(--white);
       }
+  .style_variation_2 .card-information__wrapper p strong {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  .style_variation_2 .card-information__wrapper p {
+    font-size: 16px;
+  }
   /*==============  Whats more end  ==============*/
   /*  product listing home start  */
   .products-grid .column-5 .grid-item,
@@ -827,16 +834,6 @@
   .carousel-caption .banner-slide p,
   .flex-absolute p {
     font-size: 16px;
-  }
-  .banner-product-slider .owl-theme .owl-nav button span {
-    width: 35px;
-    height: 35px;
-  }
-  .banner-product-slider .owl-theme .owl-nav button {
-    bottom: 15px;
-  }
-  .banner-product-slider .owl-theme .owl-nav button.owl-prev {
-    right: 65px;
   }
   .banner-product-slider .slick-arrow.slick-prev {
     right: 60px;
@@ -1169,13 +1166,6 @@
   .offer-section .slick-slide {
     padding-left: 8px;
     padding-right: 8px;
-  }
-  .style_variation_2 .card-information__wrapper p strong {
-    font-size: 24px;
-    line-height: 1.2;
-  }
-  .style_variation_2 .card-information__wrapper p {
-    font-size: 16px;
   }
   /*=============   whats more css end =================*/
   /*============== colection list css start  =================*/
