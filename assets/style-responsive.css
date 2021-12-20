@@ -1679,7 +1679,12 @@
   }
 /*============= PDP css end ===============*/
 /*============= blog detail css start ==============*/
-  .article-template__hero-container
+  .article-template__hero-container .row,
+  .article-template__hero-container .container,
+  .article-template__hero-container .col-12{
+  	padding:0;
+    margin:0;
+  }
 /*============= blog detail css end =============*/
 }
 @media screen and (max-width: 575px) {
