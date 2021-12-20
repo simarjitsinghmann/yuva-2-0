@@ -752,6 +752,7 @@ function pickUpAvialabiliy(status){
       var previewContainer = document.getElementById('pickup-availability-preview-container');
     if(pickUp && status){
         previewContainer.innerHTML = '';
+        pickUp.classList.add('hidden')
         previewContainer.classList.add('hidden');
       var rootUrl = pickUp.dataset.rootUrl;
       var variantId = pickUp.closest('form').querySelector('[name=id]').value;
