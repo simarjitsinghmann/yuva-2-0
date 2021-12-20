@@ -92,6 +92,14 @@ validateQty = function (qty) {
 
 cartPageUpdate = function(cart){  
 
+      $('[data-cart-items]').load('/cart?view=jsonData', function() {
+        $(window).trigger('resize');
+        drawer.querySelector('[data-drawer-body]').classList.remove('searching');
+        Shopify.PaymentButton.init()
+
+        productVariants();
+        showMultipleOptions(); 
+      });
   $.ajax({
     url: '/cart',
     type: 'GET',
