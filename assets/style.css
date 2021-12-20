@@ -2170,6 +2170,16 @@ li.breadcrumb-item a {
     text-align: left;
   position:relative;
 }
+.sellingPlanHeading label:after {
+  position: absolute;
+  content:"";
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
 .selling_group {
     border-bottom: 1px solid #eee;
     padding: 12px;
