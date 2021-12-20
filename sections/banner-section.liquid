@@ -1,13 +1,17 @@
 <div id="banner-{{section.id}}">
   <div class="item">
+    {% assign desktopClass = '' %}
+    {% if section.settings.image_mob != blank %}
+    {% assign desktopClass = 'slide-image-desktop' %}
+    {% endif %}
     {% if section.settings.image != blank %}
-    <img class="{% if section.settings.image_mob != blank %}slide-image-desktop{% endif %}" src="{{section.settings.image | img_url:'master'}}" alt="">
+    {% render 'lazy-image' image:section.settings.image,class:desktopClass %}
     {%else%}
-    <div class="{% if section.settings.image_mob != blank %}slide-image-desktop{% endif %}">{% render 'banner-placeholder'%}</div>
+    <div class="{{desktopClass}}">{% render 'banner-placeholder'%}</div>
     {% endif %} 
-{% if section.settings.image_mob != blank %}
-<img class="slide-image-mobile" src="{{section.settings.image_mob | img_url:'master'}}" alt="">
-{% endif %}
+    {% if section.settings.image_mob != blank %}
+    {% render 'lazy-image' image:section.settings.image_mob,class:'slide-image-mobile' %}
+    {% endif %}
     <div class="banner-caption ">
       <div class="container">
         <div class="banner-caption-outer">
