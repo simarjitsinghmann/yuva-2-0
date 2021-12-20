@@ -51,9 +51,6 @@
               <div class="main-container">
                 <div class="slider slider-main" mobile-only data-slider>
                   {%- for media in product.media -%}
-                  {% if forloop.last %}
-                 {{productHighlights}}
-                  {% endif%}
                 {%-case media.media_type-%}
                   {%- when 'image' -%}
                   <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
