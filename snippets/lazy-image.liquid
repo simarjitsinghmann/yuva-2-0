@@ -6,7 +6,7 @@
              {%- if image.width >= 940 -%}{{ image | img_url: '940x' }} 940w,{%- endif -%}
              {%- if image.width >= 1066 -%}{{ image | img_url: '1066x' }} 1066w,{%- endif -%}
              {{ image | img_url: 'master' }} {{ image.width }}w"
-     src="{{ image | img_url: '533x' }}"
+     src="{{ image | img_url: '400x' }}"
      sizes="(min-width: 1900px) calc((100vw - 130px) / 4),(min-width: 1600px) calc((100vw - 130px) / 4),(min-width: 1200px) calc((100vw - 130px) / 4), (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
      alt="{{ image.alt | escape }}"
      loading=""
