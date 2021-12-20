@@ -66,7 +66,13 @@
     background-color: rgb(255 255 255 / 100%);
     background-position: center;
 }
-    .bg-image.lazy {
-   background-image: none;
-   background-color: #F1F1FA;
-}
+.blur-up {
+		-webkit-filter: blur(5px);
+		filter: blur(5px);
+		transition: filter 400ms, -webkit-filter 400ms;
+	}
+
+	.blur-up.lazyloaded {
+		-webkit-filter: blur(0);
+		filter: blur(0);
+	}
