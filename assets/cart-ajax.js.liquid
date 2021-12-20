@@ -118,18 +118,6 @@ buildCart = function (cart,showCart) {
   $('[data-cart-count]').show();
   }
 
-//   $.ajax({
-//     url: '/cart?view=jsonData',
-//     type: 'GET',
-//     dataType: 'html',
-//     success: function(result) {
-//       $('body').find('[data-drawer-body]').html(result);
-//       if(showCart){
-//         $('body').addClass('side_Drawer_open');
-//         $('.wrapper-overlay').css({"display": "block"});
-//       }
-//     }
-//   });
   
   $('[data-drawer-body]').load('/cart?view=jsonData', function() {
       if(showCart){
