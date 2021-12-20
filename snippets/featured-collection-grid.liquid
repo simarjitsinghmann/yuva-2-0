@@ -14,7 +14,8 @@
       {%else%}
       {% assign feature_image = 'placeholder.svg' | asset_url %}
       {% endif %}
-      <img class="lazy" data-src="{{feature_image}}" alt="">
+      
+      {% include 'lazy-image' image:feature_image %}
     </div>
     <div class="collection-detail">
       <h2>
