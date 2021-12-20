@@ -1688,6 +1688,9 @@
   .blog-detail-content {
     padding: 25px 15px;
   }
+  .article-template__comments-fields~.d-flex {
+    flex-wrap: wrap;
+}
   /*============= blog detail css end =============*/
 }
 @media screen and (max-width: 575px) {
