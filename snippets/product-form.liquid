@@ -219,6 +219,11 @@
     </div>
     {% endif %}
   </div>
+  {% endcase %}
+  {% endfor %}
+</div>
+   {% for block in section.blocks %}
+  {% case block.type %}
   {% when 'content' %}
   {% if block.settings.width == 'half' %}
   {% if block.settings.style == "accordion" %}
@@ -229,5 +234,4 @@
   {% endif %}
   {% endcase %}
   {% endfor %}
-</div>
 </div>
