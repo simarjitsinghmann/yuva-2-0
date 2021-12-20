@@ -2,11 +2,12 @@
     <div class="post-wrapper">
             {% assign article_image = 'featured_image.png' | asset_url %}
             {% if article.image %}
-            {% assign article_image = article.image | img_url:'master' %}
+            {% assign article_image = article.image %}
             {% endif %}
             <div class="post-information-image">
                 <a href="{{article.url}}" class="animate_hvrbr">
-                    <img src="{{article_image}}" alt="">
+                    
+                  {% include 'lazy-image' image:article_image%}
                 </a>
             </div>
             <div class="post-information__wrapper text__left">
