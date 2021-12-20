@@ -11,8 +11,8 @@
 {% if block.settings[pointName] != blank and block.settings[pointValue] != blank %}
 {% assign showHighlights = true %}
 <div class="hightlight-point">
-  <span class="hightlight-point-name">{{block.settings[pointName]}}</span>
-  <span class="hightlight-point-value">{{block.settings[pointValue]}}</span>
+  <p class="hightlight-point-name">{{block.settings[pointName]}}</p>
+  <p class="hightlight-point-value">{{block.settings[pointValue]}}</p>
 </div>
 {% endif %}
 {% endfor %}
