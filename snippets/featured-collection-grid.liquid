@@ -5,16 +5,15 @@
 <div class="card-wrapper left-sided">
   <div class="card__warpper__detail left__sided">
     <div class="collection-image">
-      
-            {% if block.settings.custom == false and collection.featured_image != blank %}
-            {% include 'lazy-image' image:collection.featured_image %} 
-            {% elsif block.settings.custom == true and block.settings.image == blank and collection.featured_image != blank %}
+      {% if custom == false and collection.featured_image != blank %} 
             {% include 'lazy-image' image:collection.featured_image %}
-            {% elsif block.settings.image != blank  %}
-            {% include 'lazy-image' image:block.settings.image %}
-            {%else%}
+      {% elsif custom == true and mc_image == blank and collection.featured_image != blank %}
+            {% include 'lazy-image' image:collection.featured_image %}
+      {% elsif custom and mc_image != blank  %}
+            {% include 'lazy-image' image:mc_image %}
+      {%else%}
             <img src="{{'placeholder.svg' | asset_url }}" >
-            {% endif %}
+      {% endif %}
     </div>
     <div class="collection-detail">
       <h2>
