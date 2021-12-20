@@ -82,6 +82,9 @@
                   {%- when 'model' -%}
                   <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
                   {{media | model_viewer_tag }}
+                  {% if forloop.last %}
+                 {{productHighlights}}
+                  {% endif%}
                   </div>
                   {%-endcase-%}
                   {%-endfor-%}
