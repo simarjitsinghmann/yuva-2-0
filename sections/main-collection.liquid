@@ -4,12 +4,12 @@
       <div class="banner_title">
         <h1>{{collection.title}}</h1>
       </div>
+      <div class="container collection-description text__center">
+      	{{collection.description}}
+      </div>
     </div>
   </div>
 </div>
-      <div class="container collection-description rte text__center">
-      	{{collection.description}}
-      </div>
 {% paginate collection.products by section.settings.products_per_page %}
 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
 <div class="CollectionProductGrid {{sort_by}} {{collection.default_sort_by}} 
