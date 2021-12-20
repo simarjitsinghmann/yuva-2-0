@@ -2236,6 +2236,14 @@ padding-top:40px;
 .pdp-action-container.disabled .shopify-payment-button {
 	display:none;
 }
+.product-highlights {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(69,69,69,1) 0%, rgba(40,39,39,0) 100%);
+}
 .gallery-item img {
     width: 100%;
 }
