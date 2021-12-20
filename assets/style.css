@@ -2180,6 +2180,14 @@ li.breadcrumb-item a {
   background-color: var(--gray);
   border-radius: 50%;
 }
+.sellingPlanHeading label:before {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
 .selling_group {
     border-bottom: 1px solid #eee;
     padding: 12px;
