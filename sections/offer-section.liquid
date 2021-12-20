@@ -15,9 +15,9 @@
               <div class="card-information-image">
                 <a href="{{block.settings.link}}" class="animate_hvrbr">
                   {% if block.settings.image != blank %}
-                  <img src="{{block.settings.image | img_url:'master'}}" alt="">
+                  <img class="lazy" data-src="{{block.settings.image | img_url:'master'}}" alt="">
                   {% else %}
-                  <img src="{{ 'featured_image.png' | asset_url}}" alt="">                              
+                  <img  class="lazy" data-src="{{ 'featured_image.png' | asset_url}}" alt="">                              
                   {% endif %}
                 </a>
               </div>
