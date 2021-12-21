@@ -415,12 +415,12 @@ $(document).on("click", function(event){
 });
 
 $(document).ready(function(){
-  $('.nav-button').click(function(){
+  $('body').on('click','.nav-button',function(){
     $('body').toggleClass('nav-open');
   });
 
   ///navigation-sidebar//
-  $('.navbar-toggler').click(function(){
+  $('body').on('click','.navbar-toggler',function(){
     $('.navbar-collapse-sidebar').toggleClass('show');
     $('body').toggleClass('nav-open');
     // 	$('.wrapper-overlay').css({"display": "block"});
