@@ -462,15 +462,17 @@ $(document).ready(function(){
     document.querySelector('body').classList.add('similar_Drawer_open');     
     drawer.querySelector('[similar-drawer-body]').innerHTML =preLoadLoadGif;
     fetch("/recommendations/products.json?product_id="+getID+"&limit=10")
-      .then(response => response.json())
-      .then((products) => {
-      	var html = '';
-        if (products.length > 0) {
-          console.log(products)
-        }
-      
-        drawer.querySelector('[similar-drawer-body]').innerHTML = html;   
-        drawer.classList.remove('searching');
+    .then(response => response.json())
+    .then((products) => {
+      var html = '';
+      if (products.length > 0) {
+        console.log(products)
+      }
+      else{
+
+      }
+      drawer.querySelector('[similar-drawer-body]').innerHTML = html;   
+      drawer.classList.remove('searching');
       }
     );
     fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
