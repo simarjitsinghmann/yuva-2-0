@@ -464,9 +464,13 @@ $(document).ready(function(){
     fetch("/recommendations/products.json?product_id="+getID+"&limit=10")
       .then(response => response.json())
       .then((products) => {
+      	var html = '';
         if (products.length > 0) {
           console.log(products)
         }
+      
+        drawer.querySelector('[similar-drawer-body]').innerHTML = html;   
+        drawer.classList.remove('searching');
       }
     );
     fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
