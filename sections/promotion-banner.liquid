@@ -16,7 +16,8 @@
 </div>
 <style>
   #promo-banner-{{section.id}}{
-    background-color:{{section.settings.bgcolor | color_modify: 'alpha', section.settings.bgcolor_opacity }};
+    {%- assign bgcolor_opacity = section.settings.bgcolor_opacity | divided_by: 100.00 -%}
+    background-color:{{section.settings.bgcolor | color_modify: 'alpha', bgcolor_opacity }};
   }
     #shopify-section-{{section.id}}.shopify-section {
     padding-top:{{section.settings.top_space_desktop}}px;
