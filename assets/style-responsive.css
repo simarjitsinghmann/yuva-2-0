@@ -690,7 +690,7 @@
     min-width: 100px;
 }
   /*  common css end  */
-    /*===========  searchbar css start ==============*/
+  /*===========  searchbar css start ==============*/
   .results-box .result-list .searc-item-box .card-wrapper-img {
     min-height: 160px;
     max-height: 160px;
@@ -698,17 +698,17 @@
   .recent-search-inner li a {
     font-size: 11px;
     line-height: 13px;
-}
+  }
   /*===========  searchbar css end ==============*/
-/*===========   banner css start ==========*/
+  /*===========   banner css start ==========*/
   .carousel-caption-title .button, .shopify-section-slider .button, .single-banner-section .button {
     margin-top: 25px;
-}
+  }
   .carousel-caption-title p, .flex-absolute p, .single-banner-section.banner-section p {
     font-size: 14px;
     line-height: 22px;
-}
-/*===========  banner css end  ============*/
+  }
+  /*===========  banner css end  ============*/
   /*==============  Whats more start  ==============*/
   .style_variation_1 .card-wrapper {
     padding-bottom: 35px;
@@ -732,7 +732,7 @@
     font-size: 16px;
   }
   /*==============  Whats more end  ==============*/
-  /*  product listing home start  */
+  /*===========  product listing home start  =============*/
   .products-grid .column-5 .grid-item,
   .products-grid .column-4 .grid-item{
     flex: 0 0 33.3%;
@@ -1111,6 +1111,10 @@
   /*=================== collection page start ==================*/
   .collection-card-box {
     height:350px;
+  }
+  .collection-card .collection-title {
+    font-size: 15px;
+    padding: 6px 18px;
   }
   /*=================== collection page end ==================*/
 }
