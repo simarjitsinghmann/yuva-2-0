@@ -466,10 +466,25 @@ $(document).ready(function(){
     .then(({ products }) => {
       var html = '';
           
-        	console.log(products.length)
       if (products.length > 0) {    
         products.forEach(function(product){
-        	console.log(product)
+        	html +=`<li class="product-base">
+            <a href="${product.url}">
+              <div class="product-imageSliderContainer">
+                <picture class="img-responsive" style="width: 100%; height: 100%; display: block;">
+                  <img src="${product.featured_image}" class="img-responsive" alt="${product.title}" title="${product.title}">
+                </picture>
+              </div>
+              <div class="product-productMetaInfo product-information__wrapper ">
+                <div class="caption-with-letter-spacing light">${product.title}</div>
+                <div class="product-price price__regular">
+                    <span class="price-item price-item--regular">`;
+          
+          
+        html +=`</div>
+        </div>
+      </a>
+    </li>`;
         })
       }
       else{
