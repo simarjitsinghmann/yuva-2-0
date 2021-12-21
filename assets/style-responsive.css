@@ -2196,6 +2196,20 @@
     width: ;
     justify-content:center;
   }
+  /*============= collection page css start ============*/
+  .collection-card-box {
+    height: 350px;
+    display: flex;
+    background-color: #faf4f0;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .collection-featured-img {
+    max-width: 40%;
+    flex: 0 0 40%;
+    padding: 20px;
+}
+  /*============= collection page css start ============*/
 }
 @media screen and (max-width: 480px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
