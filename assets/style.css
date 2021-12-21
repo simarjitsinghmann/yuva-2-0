@@ -334,7 +334,7 @@ img {
    background: var(--white);
    width: 40px;
    height: 40px;
-   color: var(--black);
+   color: var(--theme-color);
    font-size: 27px;
    border-radius: 0;
    display: flex;
@@ -342,8 +342,8 @@ img {
    justify-content: center;
 }
 .shopify-section-slider .slick-arrow:hover span {
-   background: var(--black);
-   color: var(--white);
+    background: var(--theme-color);
+    color: var(--white);
 }
 .shopify-section-slider .slick-dots {
     position: absolute;
