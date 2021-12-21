@@ -459,7 +459,6 @@ $(document).ready(function(){
     const drawer = document.querySelector('[data-similar-product-drawer]');
     
     drawer.classList.add('searching');
-    setTimeout(function(){
     document.querySelector('body').classList.add('similar_Drawer_open');     
     drawer.querySelector('[similar-drawer-body]').innerHTML =preLoadLoadGif;
     fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
@@ -472,7 +471,7 @@ $(document).ready(function(){
         drawer.querySelector('[similar-drawer-body]').innerHTML = recommendations.innerHTML;   
         drawer.classList.remove('searching');
       }
-    });},500)
+    });
   });
 
   ///search-top//
