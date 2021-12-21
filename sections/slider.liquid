@@ -8,7 +8,7 @@
       {% render 'banner-slide-content' block:block%}	
       </div>
       {% when 'split' %}
-      <div id="banner-{{block.id}}" class="banner-{{block.id}} banner banner-section item split-slider slider-banner bg-image lazy slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>	
+      <div id="banner-{{block.id}}" class="banner-{{block.id}} banner banner-section item split-slider slider-banner slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>	
         {% render 'split-slide-content' block:block%}	
       </div>
       {% when 'video' %}
@@ -28,7 +28,6 @@
           "margin":0,
             "speed": 1000,
             "fade": true,
-              "lazyLoad": "ondemand",
             "cssEase": "linear",
          "dots":{{-section.settings.dots-}},
           "autoplay":{{-section.settings.rotate-}},
