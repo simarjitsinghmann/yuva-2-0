@@ -465,9 +465,9 @@ $(document).ready(function(){
     .then(response => response.json())
     .then((products) => {
       var html = '';
-      if (products.length > 0) {
-        
+          
         	console.log(products)
+      if (products.length > 0) {    
         products.each(function(product){
         	console.log(product)
         })
