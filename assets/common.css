@@ -57,6 +57,16 @@ table {
   width: 100%;
       border: 1px solid var(--gray);
 }
+tr {
+border-bottom: 1px solid var(--gray);
+}
+tr td {
+  line-height: 1;
+  border: none;
+  padding: 20px 20px;
+  text-align: left;
+  font-size: 13px;
+}
 /* Core */
 html {
   margin: 0;
