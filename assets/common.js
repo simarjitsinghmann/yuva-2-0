@@ -426,7 +426,7 @@ $(document).ready(function(){
     // 	$('.wrapper-overlay').css({"display": "block"});
   });
 
-  $('.close-btn').click(function(){
+  $('body').on('click','.close-btn',function(){
     $('body').toggleClass('nav-open'), $('.navbar-collapse-sidebar').removeClass('show');
   });
 
