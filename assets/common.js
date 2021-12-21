@@ -487,7 +487,15 @@ $(document).ready(function(){
 				<span data-regular-price>${Shopify.formatMoney(product.price, moneyFormat)}</span>`;
           if(product.compare_at_price > product.price){
             html +=`<span data-compare-price>${Shopify.formatMoney(product.compare_at_price, moneyFormat)}</span>`;
-            if
+            if(showSavedAmount){
+              if(savedAmountStyle == 'percentage'){
+                var percentage = roundToTwo(((product.compare_at_price - product.price)/product.compare_at_price)*100)+'% OFF';
+              }
+              else
+              {              	
+                var savedAmount = Shopify.formatMoney((product.compare_at_price - product.price),moneyFormat);
+              }
+            }
           }
         html +=`</div>
         </div>
