@@ -880,7 +880,9 @@ showMultipleOptions = function(){
   var showOptions = document.getElementsByClassName('showOptions');
   if(showOptions){		
     Array.from(showOptions).forEach(function(option) {
+      console.log('option',option)
       option.addEventListener("click", ()=>{	
+      console.log('this',option)
                               hideOptions();
       var product = option.getAttribute("data-product");
       document.getElementById(product).style.display="block";
