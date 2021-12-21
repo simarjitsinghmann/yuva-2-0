@@ -37,6 +37,7 @@
   changeGridLayout();
   hideShowFilters();
   applyFilters();
+  sortBy()
 });
 window.addEventListener('resize', function(event){
 //   changeGridLayout();
