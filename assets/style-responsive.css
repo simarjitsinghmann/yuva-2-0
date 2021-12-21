@@ -2152,7 +2152,11 @@
   .results-similarGrid li.product-base {
     padding: 0 10px 0px;
   }
-  /*============= similar product drawer css start ===========*/
+  .results-similarGrid li.product-base {
+    width: 30%;
+    flex: 0 0 30%;
+}
+  /*============= similar product drawer css end ===========*/
   #myBtn {
     bottom: 10px;
     right: 10px;
