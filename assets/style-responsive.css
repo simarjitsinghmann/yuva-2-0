@@ -1672,28 +1672,6 @@
     max-height: 200px;
   }
   /* ============ recent product css end =============== */
-  /*============= similar product drawer css start ===========*/
-  .similar_drawer_wrapper {
-    height: auto !important;
-    top: unset;
-    bottom: 0;
-    max-width: 100%;
-    transform: translate(0, 100%)!important;
-  }
-  .similar_Drawer_open .similar_drawer_wrapper {
-    transform: translate(0,0)!important;
-  }
-  .similar_drawer_wrapper .similar_drawer_body {
-    height: auto!important;
-  }
-  .results-similarGrid {
-    flex-wrap: nowrap;
-    overflow: auto;
-  }
-  .results-similarGrid li.product-base {
-    padding: 0 10px 0px;
-  }
-  /*============= similar product drawer css start ===========*/
   /*  ============= footer css start =============  */
   .yuva-logo {
     max-width: 80px;
@@ -2153,6 +2131,28 @@
     flex: 0 0 40%;
   }
   /* ============ recent product css end =============== */
+  /*============= similar product drawer css start ===========*/
+  .similar_drawer_wrapper {
+    height: auto !important;
+    top: unset;
+    bottom: 0;
+    max-width: 100%;
+    transform: translate(0, 100%)!important;
+  }
+  .similar_Drawer_open .similar_drawer_wrapper {
+    transform: translate(0,0)!important;
+  }
+  .similar_drawer_wrapper .similar_drawer_body {
+    height: auto!important;
+  }
+  .results-similarGrid {
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+  .results-similarGrid li.product-base {
+    padding: 0 10px 0px;
+  }
+  /*============= similar product drawer css start ===========*/
   #myBtn {
     bottom: 10px;
     right: 10px;
