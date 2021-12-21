@@ -471,7 +471,7 @@ $(document).ready(function(){
       else{
 
       }
-      drawer.querySelector('[similar-drawer-body]').innerHTML = html;   
+//       drawer.querySelector('[similar-drawer-body]').innerHTML = html;   
       drawer.classList.remove('searching');
       }
     );
