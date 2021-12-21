@@ -468,7 +468,7 @@ $(document).ready(function(){
           
         	console.log(products.length)
       if (products.length > 0) {    
-        products.each(function(product){
+        products.forEach(function(product){
         	console.log(product)
         })
       }
