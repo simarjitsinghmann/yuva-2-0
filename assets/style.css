@@ -4581,7 +4581,8 @@ body #shopify-product-reviews {
 .similar_drawer_close:hover svg{
    fill: var(--theme-color);
 }
-.side_drawer_body {
+.side_drawer_body,
+.similar_drawer_body{
    height: calc(100vh - 55px);
    overflow-y: auto;
 }
@@ -4592,7 +4593,8 @@ body #shopify-product-reviews {
    text-transform: uppercase;
    letter-spacing: 0.8px;
 }
-.side_drawer_title {
+.side_drawer_title,
+.similar_drawer_title{
    border-bottom: 1px solid #ececf0;
 }
 
