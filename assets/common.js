@@ -463,10 +463,10 @@ $(document).ready(function(){
     drawer.querySelector('[similar-drawer-body]').innerHTML =preLoadLoadGif;
     fetch("/recommendations/products.json?product_id="+getID+"&limit=10")
     .then(response => response.json())
-    .then((products) => {
+    .then(({ products }) => {
       var html = '';
           
-        	console.log(products[0].length)
+        	console.log(products.length)
       if (products.length > 0) {    
         products.each(function(product){
         	console.log(product)
