@@ -466,7 +466,9 @@ $(document).ready(function(){
     .then((products) => {
       var html = '';
       if (products.length > 0) {
-        console.log(products)
+        products.forEach(function(product){
+        	console.log(product)
+        })
       }
       else{
         html = `<div class="SimilarNoResults" style="">
