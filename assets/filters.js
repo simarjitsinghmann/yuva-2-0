@@ -53,7 +53,8 @@ function sortBy(){
     sortMenu.addEventListener("click", (e)=>{	
       e.preventDefault();
       var sortMenu = document.getElementById('sort__list');
-      if(sortMenu.classList.contains('active')){        
+      if(sortMenu.classList.contains('active')){  
+        console.log('up')      
         sortMenu.classList.remove('active');
         if(window.innerWidth > 767){
           DOMAnimations.slideUp(sortMenu);
@@ -63,6 +64,7 @@ function sortBy(){
         }
       }
       else{
+        console.log('slideDown')
         sortMenu.classList.add('active');
         if(window.innerWidth > 767){
           DOMAnimations.slideDown(sortMenu);
