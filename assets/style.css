@@ -4566,16 +4566,19 @@ body #shopify-product-reviews {
 .side_drawer_title button {
    background-color: transparent;
 }
-.side_drawer_close {
+.side_drawer_close,
+.similar_drawer_close{
    position: absolute;
    top: 20px;
    right: 20px;
    color: var(--black);
 }
-.side_drawer_close svg {
+.side_drawer_close svg,
+.similar_drawer_close svg {
     width: 12px;
 }
-.side_drawer_close:hover svg {
+.side_drawer_close:hover svg,
+.similar_drawer_close:hover svg{
    fill: var(--theme-color);
 }
 .side_drawer_body {
