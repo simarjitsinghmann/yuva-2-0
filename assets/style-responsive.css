@@ -48,8 +48,12 @@
     min-height: 320px;
     max-height: 320px;
 }
+    .similar_options .vs-icon {
+    width: 26px;
+    height: 26px;
+  }
   /*===========  Common css end  =============*/
-  /* whats more css start */
+  /*============ whats more css start ============*/
     .card-information .card-information-image {
       min-height: 250px;
       max-height: 250px;
@@ -65,8 +69,8 @@
     font-size: 15px !important;
     line-height: 18px;
   }
-  /* whats more css end */
-  /*  collection start  */
+  /*============ whats more css end ============*/
+  /*==============  collection list css start  ===========*/
   .card__warpper__detail.right__sided .collection-detail-right {
     padding: 10px 25px;
   }
@@ -85,8 +89,8 @@
   .colllection-list-view .owl-carousel .owl-nav button.owl-prev {
     right: 50px;
   }
-  /*  collection end  */
-  /*  product listing start  */
+  /*=============  collection list css end  =============*/
+  /*============  product listing start  =============*/
   .CollectionProductGrid .product-collection.grid-view {
     padding-top: 15px;
   }
@@ -108,18 +112,17 @@
   .widget-content li label {
     font-size: 13px;
   }
-  /*  product listing end  */
-  /*  product detail start  */
+  /*=============  product listing end  ==============*/
+  /*==============  PDP css start  ============*/
   .product-add-to-cart-right .prizebox {
     margin: 0 0 10px;
   }
-  /*  product detail end  */
-  /*  product sidebar start  */
-  .similar_options .vs-icon {
-    width: 26px;
-    height: 26px;
+  /*============  PDP css end  ============*/
+  /*=================== collection page start ==================*/
+  .collection-card-box {
+    height:500px;
   }
-  /*  product sidebar end   */
+  /*=================== collection page ebd ==================*/
   /*==============  home banner slider start  ===========*/
   .banner.banner-section.item {
     height: 650px;
