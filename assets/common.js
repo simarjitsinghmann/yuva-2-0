@@ -466,7 +466,7 @@ $(document).ready(function(){
     .then((products) => {
       var html = '';
           
-        	console.log(products)
+        	console.log(products.length)
       if (products.length > 0) {    
         products.each(function(product){
         	console.log(product)
