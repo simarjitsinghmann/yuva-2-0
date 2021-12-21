@@ -4221,8 +4221,9 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
    position: relative;
   overflow:hidden;
    margin-bottom: 14px;
+  height:500px;
 }
-.collection-card-box:after {
+/* .collection-card-box:after {
    position: absolute;
    content: "";
    left: 0;
@@ -4236,9 +4237,12 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
 }
 .collection-card-box:hover:after {
    opacity: 0.15;
-}
+} */
 .collection-card-box img {
-   transition: 1s ease all;
+    transition: 1s ease all;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
 }
 .collection-card-box:hover img {
    transform: scale(1.1);
