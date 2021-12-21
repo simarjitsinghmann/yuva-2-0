@@ -495,6 +495,7 @@ $(document).ready(function(){
           <p>{{ 'general.no_similar_found' | t}}</p>
           </div>`;
       } 
+      console.log(html)
       drawer.classList.remove('searching');
       }
     );
