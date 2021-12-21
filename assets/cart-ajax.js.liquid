@@ -19,7 +19,7 @@ changeItem = function(line, quantity, callback) {
 };
 
 // POST to cart/add.js returns the cart in JSON
-$(document).on('submit','[action="/cart/add"]', function(evt) {
+$('body').on('submit','[action="/cart/add"]', function(evt) {
   evt.preventDefault();
   $('body').find('.productErrors').hide().html('');
   var submit = $(this).find('[type="submit"]');
@@ -108,22 +108,22 @@ updateQuantity = function(line, qty,callback) {
 }
 
 buildCart = function (cart,showCart) {
-	$('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper')
+  $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper')
   $('body').find('[data-drawer-title]').html('{{'sections.cart.title' | t}}');
-  $('body').find('[data-side-drawer]').attr('id','mini__cart').addClass('mini_cart');
+                                             $('body').find('[data-side-drawer]').attr('id','mini__cart').addClass('mini_cart');
   if (cart.item_count === 0) {
     $('[data-cart-count]').hide();
   }
   else{
-  $('[data-cart-count]').show();
+    $('[data-cart-count]').show();
   }
 
-  
+
   $('[data-drawer-body]').load('/cart?view=jsonData', function() {
-      if(showCart){
-        $('body').addClass('side_Drawer_open');
-        $('.wrapper-overlay').css({"display": "block"});
-      }
+    if(showCart){
+      $('body').addClass('side_Drawer_open');
+      $('.wrapper-overlay').css({"display": "block"});
+    }
   });
 
 };
