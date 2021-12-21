@@ -1,8 +1,8 @@
 <div id="promo-banner-{{section.id}}" class="promo-grid__container {% unless section.settings.full_width %}container{% endunless %}">
   <div class="type-banner__content text-center">
-    <div class="type-banner__text">
+    <div class="type-banner__text d-flex">
       {% if section.settings.heading != blank %}
-      <p class="h3">{{ section.settings.heading }}</p>
+      <h3>{{ section.settings.heading }}</h3>
       {% endif %}
       {% if section.settings.text != blank %}
       <p>{{ section.settings.text }}</p>
