@@ -14,11 +14,20 @@
     </div>
   </div>
 </div>
+<style>
+  
+</style>
 {% schema %}
 {
    "name":"Promotion Banner",
    "class":"promotion-banner",
    "settings":[
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full width",
+        "default": false
+      },
       {
          "type":"text",
          "id":"heading",
