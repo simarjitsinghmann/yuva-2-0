@@ -3,7 +3,7 @@
 <div class="top_page_title collection-banner {% if collection.featured_image == blank and section.settings.collection_image %}no-bg{% endif %}" {% if collection.featured_image != blank and section.settings.collection_image %}style="background:url({{collection.featured_image | img_url:'master'}}) no-repeat center/cover"{% endif %}>
   <div class="container">
     <div class="contact-banner-text">
-      {% if section.settings.collection_image %}
+      {% if section.settings.collection_image or section.settings.collection_description %}
       <div class="banner_title">
         <h1>{{collection.title}}</h1>
       </div>
