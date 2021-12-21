@@ -471,11 +471,11 @@ $(document).ready(function(){
         	html +=`<li class="product-base">
             <a href="${product.url}">
               <div class="product-imageSliderContainer">`;
-           if (product.featured_image  != null){
-      var prodImg = cartItem.image.replace(/(\.[^.]*)$/, "_small$1").replace('http:', '');
-    } else {
-      var prodImg = "//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif";
-    }
+          if (product.featured_image  != null){
+            var prodImg = cartItem.image.replace(/(\.[^.]*)$/, "_small$1").replace('http:', '');
+          } else {
+            var prodImg = "//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif";
+          }
               html +=`  <picture class="img-responsive" style="width: 100%; height: 100%; display: block;">
                   <img src="${prodImg}" class="img-responsive" alt="${product.title}" title="${product.title}">
                 </picture>
@@ -485,8 +485,10 @@ $(document).ready(function(){
                 <div class="product-price price__regular">
                     <span class="price-item price-item--regular">
 				<span data-regular-price>${Shopify.formatMoney(product.price, moneyFormat)}</span>`;
-          
-          
+          if(product.compare_at_price > product.price){
+            html +=`<span data-compare-price>${Shopify.formatMoney(product.compare_at_price, moneyFormat)}</span>`;
+            if
+          }
         html +=`</div>
         </div>
       </a>
