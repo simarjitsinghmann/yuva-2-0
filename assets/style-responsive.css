@@ -122,7 +122,7 @@
   .collection-card-box {
     height:500px;
   }
-  /*=================== collection page ebd ==================*/
+  /*=================== collection page end ==================*/
   /*==============  home banner slider start  ===========*/
   .banner.banner-section.item {
     height: 650px;
@@ -268,7 +268,7 @@
     line-height: 24px;
     font-size: 12px;
   }
-  /*  common end  */
+  /*============  common end =============*/
   /*===========  searchbar css start ==============*/
   .results-box .result-list .searc-item-box .card-wrapper-img {
     min-height: 220px;
@@ -381,7 +381,7 @@
     flex: 0 0 75%;
   }
   /*===========  product listing home end  ============*/
-  /*==================  collection css start  ===============*/
+  /*==================  collection list css start  ===============*/
   .card__warpper__detail.right__sided .collection-detail-right {
     padding: 15px 20px;
   }
@@ -396,13 +396,13 @@
   .collection-detail h4 {
     padding: 0 0 5px;
   }
-  /*=============  collection css end  ================*/
-  /*==============  featured-blog start  ==============*/
+  /*=============  collection list css end  ================*/
+  /*==============  featured-blog css start  ==============*/
   .post-information__wrapper {
     padding: 15px 15px 15px;
   }
-  /*============  end  =============*/
-  /*============= testimonial start  =============*/
+  /*============  featured blog css end  =============*/
+  /*============= testimonial css start  =============*/
   .shopify-section.testimonial {
     padding: 45px 0 45px;
   }
@@ -425,12 +425,12 @@
   .testimonial-slider .owl-nav .owl-next {
     right: -20px;
   }
-  /*============= testimonial end =============*/
-  /*===============  instagram post start  ==============*/
+  /*============= testimonial css end =============*/
+  /*===============  instagram post css start  ==============*/
   .instagram-post {
     padding: 45px 0 45px;
   }
-  /*===================  instagram post end  ==============*/
+  /*===================  instagram post css end  ==============*/
   /*============  multicolumn css start  ===========*/
   .service__column .col {
     padding: 10px 10px;
@@ -522,8 +522,8 @@
   .social-links li a {
     font-size: 10px;
   }
-  /*  footer end  */
-  /*  about page start  */
+  /*=============== footer end ===============*/
+  /*==========  about page start  ============*/
   .about-best-choice {
     padding: 45px 0;
   }
@@ -540,16 +540,16 @@
     font-size: 14px;
     padding: 0 10px;
   }
-  /*  about page end  */
-  /*  contact css tsart  */
+  /*===============  about page end ===========*/
+  /*============  contact css tsart  ===========*/
   .contact__us__section .tt-contact-info {
     padding: 20px 20px;
   }
   .get_in_touch input.btn.button {
     padding: 15px 12px;
   }
-  /*  contact css end  */
-  /*  blog detail start  */
+  /*===============  contact css end  ==============*/
+  /*============  blog detail start  ============*/
   .blog-detail-content {
     padding: 30px 25px;
   }
@@ -563,8 +563,8 @@
     line-height: 21px;
     font-size: 15px;
   }
-  /*  blog detail end  */
-  /*  product listing start */
+  /*===========  blog detail end  ==============*/
+  /*============== product listing start ===========*/
   .shop-sidebar,
   .aside-title {
     padding-right: 40px;
@@ -591,8 +591,8 @@
     min-height: 500px;
     max-height: 500px;
   }
-  /*   product listing end */
-  /*  quick view start  */
+  /*========== product listing end ==========*/
+  /*=============  quick view start  =============*/
   .quick_view {
     right: -650px;
     max-width: 650px;
@@ -603,12 +603,17 @@
   .quick_view .quickviewcontent .feature__product .item {
     height: 350px;
   }
-  /*  quick view end  */
+  /*============  quick view end ============== */
   /*============ contact css start ===========*/
   .contact-us-wrapper .tt-contact-info {
     padding: 30px 35px;
   }
   /*============ contact css end ===========*/
+  /*=================== collection page start ==================*/
+  .collection-card-box {
+    height:400px;
+  }
+  /*=================== collection page end ==================*/
 }
 @media screen and (max-width: 1024px) {
   #CollectionProductsContainer[data-view="grid-layout-3"]
@@ -1103,6 +1108,11 @@
     font-size: 14px;
   }
   /*========= contact us  css end  ===========*/
+  /*=================== collection page start ==================*/
+  .collection-card-box {
+    height:320px;
+  }
+  /*=================== collection page end ==================*/
 }
 @media screen and (max-width: 767px) {
   p
