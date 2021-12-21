@@ -1,8 +1,17 @@
-<div class="type-banner__content text-center">
-  <div class="type-banner__text">
-    <h3>Banner promotion</h3>
-    <p >Add the details of your promotion in smaller text</p>
-    <p class="btn">Shop now</p>
+<div class="promo-grid__container ">
+  <div class="type-banner__content text-center">
+    <div class="type-banner__text">
+      {% if section.settings.heading != blank %}
+      <p class="h3">{{ section.settings.heading }}</p>
+      {% endif %}
+      {% if section.settings.text != blank %}
+      <p>{{ section.settings.text }}</p>
+      {% endif %}
+      {% if section.settings.label != blank and section.settings.link != blank %}
+      <a href="{{ section.settings.link }}" class="type-banner__link">{{ section.settings.label }}
+      </a>
+      {% endif %}
+    </div>
   </div>
 </div>
 {% schema %}
