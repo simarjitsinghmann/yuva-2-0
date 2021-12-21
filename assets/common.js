@@ -1046,8 +1046,8 @@ $(document).ready(function()
       $('body').removeClass('side_Drawer_open').removeClass('open-filter-sort');
     }
   });
-  $(document).on('click','.side_drawer_close',function(){
-    $('body').removeClass('side_Drawer_open')
+  $(document).on('click','.side_drawer_close,.similar_drawer_close',function(){
+    $('body').removeClass('side_Drawer_open').removeClass('similar_Drawer_open')
 //     $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper').attr('id','')
   });
   $(document).on('click', '.quickView', function(evt) {
