@@ -1583,9 +1583,6 @@
     line-height: 26px;
     font-weight: var(--bold);
   }
-  .product_button{
-    text-align: center;
-  }
   .similar_options svg {
     width: 17px;
     margin:0;
@@ -2054,7 +2051,7 @@
     font-size: 13px;
     padding: 0 17px;
 }
-  /*======== PDP page css start ==========*/
+  /*================== PDP page css start ===================*/
   .product-section .container {
     padding:0;
   }
@@ -2148,7 +2145,9 @@
     min-height: 470px;
     max-height: 470px;
   }
-
+  .product_button{
+    text-align: center;
+  }
   /*============= PDP page css end  ===============*/
   /* ============ recent product css start =============== */
   .recent-product-slide .item {
