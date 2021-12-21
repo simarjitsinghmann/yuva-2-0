@@ -464,8 +464,7 @@ $(document).ready(function(){
     drawer.classList.add('searching');
     setTimeout(function(){
     document.querySelector('body').classList.add('side_Drawer_open');     
-    drawer.querySelector('[data-drawer-body]').innerHTML =preLoadLoadGif;
-    drawer.querySelector('[data-drawer-title]').innerHTML ='Similar Products';
+    drawer.querySelector('[similar-drawer-body]').innerHTML =preLoadLoadGif;
     fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
     .then(response => response.text())
     .then((text) => {
