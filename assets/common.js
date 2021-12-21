@@ -911,6 +911,8 @@ slickSlider = function(selector,slideIndex){
         selector.slick(options);
       }
     }
+    
+    jQuery(window).trigger('resize');
   }
   $(selector).on('afterChange', function(event, slick, currentSlide){
   var video = $(this).find('.slick-current video');
