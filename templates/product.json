@@ -50,8 +50,8 @@
         "62b81903-337b-415e-958a-8dbeff322a7d": {
           "type": "content",
           "settings": {
-            "width": "half",
-            "style": "accordion",
+            "width": "full",
+            "style": "tabs",
             "show_description": true,
             "content_heading": "Specification",
             "content": "<p>{{ product.metafields.my_fields.specifications | metafield_tag }}<\/p>",
@@ -86,7 +86,7 @@
         "fd19a320-8d78-4d93-a856-8ce38cca056e"
       ],
       "settings": {
-        "gallery_style": "stacked"
+        "gallery_style": "gallery"
       }
     },
     "product_recommendations": {
