@@ -1941,3 +1941,17 @@ header {
 .nav-menu-btn {
    display: none;
 }
+
+
+/* Scrollbar design css start */
+
+.side-menu .nav-item.dropdown .inner::-webkit-scrollbar {
+    width: 3px;
+    background-color: #cccccc;
+}
+
+.side-menu .nav-item.dropdown .inner::-webkit-scrollbar-thumb {
+    background-color: #4a4a4a;
+    border-radius: 5px;
+}
+/* Scrollbar design css End */
