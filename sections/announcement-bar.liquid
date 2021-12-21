@@ -117,8 +117,8 @@
     }
 
     setTimeout(function(){
-      let x = document.cookie['announcement_closed'];
-      consol.log(x)
+      let x = document.cookie;
+      console.log(x)
       document.querySelector('body').classList.add('announcement_open');
     },500);
   }
