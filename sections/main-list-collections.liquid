@@ -22,7 +22,7 @@
     endif
   -%}
 
-  <ul class="collection-list grid grid--1-col grid--3-col-tablet" role="list">
+  <ul class="collection-list row" role="list">
     {% if section.settings.show_collections == 'all' %}
     {% if collections.size > 0 %}
     {%- for collection in collections -%}
