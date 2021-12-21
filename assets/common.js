@@ -886,7 +886,8 @@ showMultipleOptions = function(){
                               hideOptions();
       var product = option.getAttribute("data-product");
       var wrapper =  option.closest('.card--product ');
-      wrapper.getElementById(product).style.display="block";
+      cono
+      wrapper.querySelector('#'+product).style.display="block";
     });
   });
 }
