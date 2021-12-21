@@ -1376,7 +1376,7 @@ a.wishlist-view .fas {
    top: 50%;
    z-index: 2;
    transform: translateY(-50%);
-      background: #ffffff !important;
+   background:var(--white);
    transition: 0.3s ease all;
 }
 .testimonial .testimonial-slider .slick-arrow span {
@@ -1395,7 +1395,7 @@ a.wishlist-view .fas {
    right: -17px;
 }
 .testimonial .testimonial-slider .slick-arrow:hover {
-   background: var(--black) !important;
+   background: var(--theme-color) !important;
    color: var(--white);
 }
 .testimonial-client-slide .slider-item {
