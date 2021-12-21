@@ -123,11 +123,10 @@
       }      
     },500);
   }
-  {% if section.settings.date != blank %}
   window.onload = (event) => { 
     announcementTimer();
+    initAnnouncement();
   }
-  {% endif %}
   function initAnnouncement(){
     var getnew_Pop = Cookies.get('announcement_closed');
     if(getnew_Pop != "true"){
