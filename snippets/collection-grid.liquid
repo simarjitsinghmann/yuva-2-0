@@ -4,17 +4,15 @@
 {% endif %}
 <li class="collection-list__item col-12 col-md-4"  {{ block.shopify_attributes }}>
   <a href="{{ collection.url }}" class="collection-card-box card animate-arrow{% if collection.featured_image != blank %} card--media{% else %}{% if section.settings.image_ratio != 'adapt' %} card--stretch{% endif %}{% endif %}{% unless section.settings.image_padding %} card--light-border{% endunless %}" >
-    <div class="card--stretch card-colored color-{{ section.settings.color_scheme }}">
-      <div class="">
-        {%- if featuredImage != blank -%}
-        {% render 'lazy-image' image: collection.featured_image %}
-        {% else %}
-        {{ 'collection1.svg' | asset_url | img_tag }}
-        {% endif %}
-      </div>
-      <div class="card__text card__text-spacing card__text-hover collection-card">
-        <h4 class="collection-title">{{- collection.title -}}</h4>
-      </div>
+    <div class="">
+      {%- if featuredImage != blank -%}
+      {% render 'lazy-image' image: collection.featured_image %}
+      {% else %}
+      {{ 'collection1.svg' | asset_url | img_tag }}
+      {% endif %}
+    </div>
+    <div class="card__text card__text-spacing card__text-hover collection-card">
+      <h4 class="collection-title">{{- collection.title -}}</h4>
     </div>
   </a>
 </li>
