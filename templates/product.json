@@ -1,5 +1,22 @@
 {
   "sections": {
+    "1640095094e3d7c888": {
+      "type": "promotion-banner",
+      "settings": {
+        "full_width": false,
+        "heading": "Promotion",
+        "text": "Add the details of your promotion",
+        "link": "",
+        "label": "Shop now",
+        "bgcolor": "#000",
+        "bgcolor_opacity": 8,
+        "border_radius": 5,
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
     "product-template": {
       "type": "product-template",
       "blocks": {
@@ -96,6 +113,7 @@
     }
   },
   "order": [
+    "1640095094e3d7c888",
     "product-template",
     "product_recommendations"
   ]
