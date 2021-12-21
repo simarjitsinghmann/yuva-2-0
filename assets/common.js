@@ -456,11 +456,8 @@ $(document).ready(function(){
 
     var getID = $(this).attr('data-id'); 
     var getSection = $(this).attr('data-section'); 
-    const drawer = document.querySelector('[data-side-drawer]');
+    const drawer = document.querySelector('[data-similar-product-drawer]');
     
-    drawer.setAttribute('class','side_drawer_wrapper');
-    drawer.setAttribute('id','similar_product');
-    drawer.classList.add('similar_product');
     drawer.classList.add('searching');
     setTimeout(function(){
     document.querySelector('body').classList.add('side_Drawer_open');     
