@@ -969,7 +969,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     }
   }
   else{
-    slider.slick('refresh');
+    slider.slick('unslick');
   }
 });
 }());
