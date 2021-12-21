@@ -461,6 +461,14 @@ $(document).ready(function(){
     drawer.classList.add('searching');
     document.querySelector('body').classList.add('similar_Drawer_open');     
     drawer.querySelector('[similar-drawer-body]').innerHTML =preLoadLoadGif;
+    fetch("/recommendations/products.json?product_id="+getID+"&limit=10")
+    .then(response => response.json())
+    .then((products) => {
+      if (products.length > 0) {
+    		console.log(products)
+      }
+    }
+         );
     fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
     .then(response => response.text())
     .then((text) => {
