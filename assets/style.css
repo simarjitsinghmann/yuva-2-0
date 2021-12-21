@@ -4216,12 +4216,10 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
 }
 /*================= featured collection list end =================*/
 /*=================== collection page start ==================*/
-.collection_list_outer {
-   padding: 65px 0;
-}
 .collection-card-box {
   display:block;
    position: relative;
+  overflow:hidden;
    margin-bottom: 14px;
 }
 .collection-card-box:after {
