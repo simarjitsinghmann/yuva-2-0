@@ -129,6 +129,7 @@
   var getnew_Pop = Cookies.get('announcement_closed');
   if(getnew_Pop != "true"){
     $('#announcement{{section.id}}').removeClass('hidden');
+      $('body').removeClass('announcement_open');
   }
   $('.announce_close').click(function(){
       $('.announcement-bar').slideToggle();
