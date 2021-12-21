@@ -886,7 +886,6 @@ showMultipleOptions = function(){
                               hideOptions();
       var product = option.getAttribute("data-product");
       var wrapper =  option.closest('.card--product ');
-      console.log(wrapper)
       wrapper.querySelector('#'+product).style.display="block";
     });
   });
@@ -897,7 +896,8 @@ if(closeOptions){
   Array.from(closeOptions).forEach(function(option) {
     option.addEventListener("click", ()=>{
                             var product = option.getAttribute("data-product");
-    document.getElementById(product).style.display="none";
+      var wrapper =  option.closest('.card--product ');
+    wrapper.querySelector('#'+product).style.display="none";
   });
 });
 }
