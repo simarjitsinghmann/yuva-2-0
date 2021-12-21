@@ -886,7 +886,7 @@ showMultipleOptions = function(){
                               hideOptions();
       var product = option.getAttribute("data-product");
       var wrapper =  option.closest('.card--product ');
-      cono
+      console.log(wrapper)
       wrapper.querySelector('#'+product).style.display="block";
     });
   });
