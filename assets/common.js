@@ -954,7 +954,6 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
   }
   var slider = jQuery(parent).find('[data-slider]');
   if(event.type == "shopify:block:select"){
-    console.log('block:select')
     var sectionId = event.detail.sectionId
     block = jQuery(event.target);
     var slider = jQuery('#shopify-section-'+sectionId).find('[data-slider]');
@@ -966,7 +965,6 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
 
   }
   else if(event.type == "shopify:section:load"){
-    console.log('section:load')
     if(block != ''){
       slideIndex = undefined;
     }
@@ -976,7 +974,6 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     }
   }
   else{
-    console.log('others')
     slider.slick('unslick');
   }
 });
