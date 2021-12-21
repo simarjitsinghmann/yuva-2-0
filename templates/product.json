@@ -47,12 +47,6 @@
           "settings": {
           }
         },
-        "a26ed278-8b5b-474f-8fa4-4b59ddf47781": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.my_fields.nisha.value }}"
-          }
-        },
         "62b81903-337b-415e-958a-8dbeff322a7d": {
           "type": "content",
           "settings": {
@@ -60,7 +54,7 @@
             "style": "accordion",
             "show_description": true,
             "content_heading": "Specification",
-            "content": "<p>{{ product.metafields.my_fields.specifications | metafield_tag }}{{ product.title }}{{ product.vendor }}{{ product.metafields.reviews.rating | metafield_tag }}{{ product.metafields.reviews.rating_count.value }}<\/p>",
+            "content": "",
             "show_reviews": true
           }
         },
@@ -71,11 +65,11 @@
             "hp_name_1": "Test",
             "hp_value_1": "Test value",
             "hp_name_2": "Test 2",
-            "hp_value_2": "Test 2 value{{ product.metafields.reviews.rating_count.value }}",
+            "hp_value_2": "Test 2 value",
             "hp_name_3": "Test 3 Name",
             "hp_value_3": "",
             "hp_name_4": "",
-            "hp_value_4": "Test 4 Value {{ product.metafields.reviews.rating_count.value }}"
+            "hp_value_4": "Test 4 Value"
           }
         }
       },
@@ -88,7 +82,6 @@
         "de11d30b-4897-43b8-8071-a7d2ce00690f",
         "6a876cb6-91ee-4ffe-a4b1-f8b7c7e8c9cd",
         "338f39d7-4ad9-438f-9dc8-e99fae01f87b",
-        "a26ed278-8b5b-474f-8fa4-4b59ddf47781",
         "62b81903-337b-415e-958a-8dbeff322a7d",
         "fd19a320-8d78-4d93-a856-8ce38cca056e"
       ],
