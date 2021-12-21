@@ -40,8 +40,10 @@
 });
 window.addEventListener('resize', function(event){
 //   changeGridLayout();
-  hideShowFilters();
   applyFilters();
+  
+  hideShowFilters()
+  sortBy()
 });
 
 function sortBy(){
@@ -88,8 +90,6 @@ function applyFilters(){
   var section = document.getElementById('CollectionProductsContainer');
   if (section){
     
-  hideShowFilters()
-  sortBy()
     var sectionId = section.dataset.id;
     const filterForm = document.getElementById('FiltersForm'); 
 
