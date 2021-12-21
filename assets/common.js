@@ -489,12 +489,13 @@ $(document).ready(function(){
             html +=`<span data-compare-price>${Shopify.formatMoney(product.compare_at_price, moneyFormat)}</span>`;
             if(showSavedAmount){
               if(savedAmountStyle == 'percentage'){
-                var percentage = roundToTwo(((product.compare_at_price - product.price)/product.compare_at_price)*100)+'% OFF';
+                var saved = roundToTwo(((product.compare_at_price - product.price)/product.compare_at_price)*100)+'% OFF';
               }
               else
               {              	
-                var savedAmount = Shopify.formatMoney((product.compare_at_price - product.price),moneyFormat);
+                var saved = Shopify.formatMoney((product.compare_at_price - product.price),moneyFormat) + ' OFF';
               }
+              html +=`<span class="percent-off">${saved}</span>`;
             }
           }
         html +=`</div>
