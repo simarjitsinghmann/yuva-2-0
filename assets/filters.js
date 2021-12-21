@@ -40,7 +40,7 @@
 });
 window.addEventListener('resize', function(event){
 //   changeGridLayout();
-  hideShowFilters();
+//   hideShowFilters();
   applyFilters();
 });
 
