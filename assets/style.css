@@ -4243,6 +4243,7 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
     height: 100%;
     object-fit: cover;
     width: 100%;
+  	background-color: var(--colorImageBg)
 }
 .collection-card-box:hover img {
    transform: scale(1.1);
