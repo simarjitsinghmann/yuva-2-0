@@ -972,7 +972,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
   }
   else{
     console.log('others')
-    slider.slick('unslick');
+    slider.slick('refresh');
   }
 });
 }());
