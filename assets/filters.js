@@ -40,7 +40,6 @@
 });
 window.addEventListener('resize', function(event){
 //   changeGridLayout();
-  sortBy();
   hideShowFilters();
   applyFilters();
 });
