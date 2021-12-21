@@ -483,7 +483,8 @@ $(document).ready(function(){
              html +=` <div class="product-productMetaInfo product-information__wrapper ">
                 <div class="caption-with-letter-spacing light">${product.title}</div>
                 <div class="product-price price__regular">
-                    <span class="price-item price-item--regular">`;
+                    <span class="price-item price-item--regular">
+				<span data-regular-price>${Shopify.formatMoney(product.price, moneyFormat)}</span>`;
           
           
         html +=`</div>
