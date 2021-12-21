@@ -44,7 +44,6 @@ window.addEventListener('resize', function(event){
   applyFilters();
   
   hideShowFilters()
-  sortBy()
 });
 
 function sortBy(){
