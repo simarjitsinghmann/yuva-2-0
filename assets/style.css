@@ -4558,10 +4558,12 @@ body #shopify-product-reviews {
 .similar_drawer_title{
    border-bottom: 1px solid #ececf0;
 }
-.side_drawer_title h5 {
+.side_drawer_title h5,
+.similar_drawer_title h5{
    text-transform: uppercase;
 }
-.side_drawer_title button {
+.side_drawer_title button,
+.similar_drawer_title button{
    background-color: transparent;
 }
 .side_drawer_close,
