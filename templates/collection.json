@@ -1,10 +1,27 @@
 {
   "sections": {
+    "16400961129ea6dae7": {
+      "type": "promotion-banner",
+      "settings": {
+        "full_width": false,
+        "heading": "Promotion",
+        "text": "Add the details of your promotion",
+        "link": "",
+        "label": "Shop now",
+        "bgcolor": "#000",
+        "bgcolor_opacity": 8,
+        "border_radius": 5,
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
     "main-collection": {
       "type": "main-collection",
       "settings": {
-        "collection_image": true,
-        "collection_description": true,
+        "collection_image": false,
+        "collection_description": false,
         "products_per_page": 25,
         "enable_filtering": true,
         "enable_sorting": true
@@ -60,6 +77,7 @@
     }
   },
   "order": [
+    "16400961129ea6dae7",
     "main-collection",
     "163774707816571c51",
     "1639998432e895e439"
