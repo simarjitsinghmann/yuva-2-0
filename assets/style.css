@@ -4675,11 +4675,18 @@ body #shopify-product-reviews {
    z-index: 9;
    top: 50%;
 }
-.quickview_product_slider .slick-arrow span{
-   width: 30px;
-   height: 30px;
-   background: #fff;
-   box-shadow: 1px 1px 3px #0000001a;
+.quickview_product_slider .slick-arrow span {
+    width: 27px;
+    height: 27px;
+    background: #fff;
+    box-shadow: 1px 1px 3px #0000001a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quickview_product_slider .slick-arrow span svg {
+	width:20px;
+  height:20px;
 }
 .quickview_product_slider .slick-prev.slick-arrow {
    left: 0;
