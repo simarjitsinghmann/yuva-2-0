@@ -511,7 +511,7 @@ div#countdown {
 .side-menu .inner-side ul li a {
    text-decoration: none;
    font-weight: var(--medium);
-   font-size: 24px;
+   font-size: 22px;
    line-height: 32px;
    display: block;
    position: relative;
@@ -676,13 +676,18 @@ body.nav-open {
    width: 15px;
    fill: currentColor;
 }
+
+.side-menu .nav-item.dropdown .inner.child li{
+  border-bottom: 1px solid #f3f1f1;
+}
+
 .side-menu .nav-item.dropdown .inner.child li a {
     font-size: 22px;
     line-height: 27px;
 }
 .side-menu .nav-item.dropdown .inner.grandchild li a {
-   font-size: 17px;
-   line-height: 22px;
+   font-size: 15px;
+   line-height: 30px;
 }
 .header_3 .nav__btn .menu_title {
     margin-left: 15px;
