@@ -8,7 +8,7 @@
         "text": "Add the details of your promotion",
         "link": "",
         "label": "Shop now",
-        "bgcolor": "#000",
+        "bgcolor": "#000000",
         "bgcolor_opacity": 8,
         "border_radius": 5,
         "top_space_desktop": 30,
@@ -67,8 +67,8 @@
         "62b81903-337b-415e-958a-8dbeff322a7d": {
           "type": "content",
           "settings": {
-            "width": "full",
-            "style": "accordion",
+            "width": "half",
+            "style": "tabs",
             "show_description": true,
             "content_heading": "Specification",
             "content": "<p>{{ product.metafields.my_fields.specifications | metafield_tag }}<\/p>",
