@@ -3,12 +3,38 @@
 {% assign desktopClass = 'slide-image-desktop' %}
 {% endif %}
 {% if block.settings.image != blank %}
-{% render 'lazy-image' image:block.settings.image,class:desktopClass %}
+<img
+     data-srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+             {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+             {%- if block.settings.image.width >= 533 -%}{{ block.settings.image | img_url: '533x' }} 533w,{%- endif -%}
+             {%- if block.settings.image.width >= 720 -%}{{ block.settings.image | img_url: '720x' }} 720w,{%- endif -%}
+             {%- if block.settings.image.width >= 940 -%}{{ block.settings.image | img_url: '940x' }} 940w,{%- endif -%}
+             {%- if block.settings.image.width >= 1066 -%}{{ block.settings.image | img_url: '1066x' }} 1066w,{%- endif -%}
+             {{ block.settings.image | img_url: 'master' }} {{ block.settings.image.width }}w"
+     src="{{ block.settings.image | img_url: '533x' }}"
+     data-sizes="auto"
+     alt="{{ block.settings.image.alt | escape }}"
+     class="blur-up lazyload {{class}}"
+     width="{{ block.settings.image.width }}"
+     >
 {%else%}
 <div class="{{desktopClass}}">{% render 'banner-placeholder'%}</div>
 {% endif %} 
 {% if block.settings.image_mob != blank %}
-{% render 'lazy-image' image:block.settings.image_mob,class:'slide-image-mobile' %}
+<img
+     data-srcset="{%- if block.settings.image_mob.width >= 165 -%}{{ block.settings.image_mob | img_url: '165x' }} 165w,{%- endif -%}
+             {%- if block.settings.image_mob.width >= 360 -%}{{ block.settings.image_mob | img_url: '360x' }} 360w,{%- endif -%}
+             {%- if block.settings.image_mob.width >= 533 -%}{{ block.settings.image_mob | img_url: '533x' }} 533w,{%- endif -%}
+             {%- if block.settings.image_mob.width >= 720 -%}{{ block.settings.image_mob | img_url: '720x' }} 720w,{%- endif -%}
+             {%- if block.settings.image_mob.width >= 940 -%}{{ block.settings.image_mob | img_url: '940x' }} 940w,{%- endif -%}
+             {%- if block.settings.image_mob.width >= 1066 -%}{{ block.settings.image_mob | img_url: '1066x' }} 1066w,{%- endif -%}
+             {{ block.settings.image_mob | img_url: 'master' }} {{ block.settings.image_mob.width }}w"
+     src="{{ block.settings.image_mob | img_url: '533x' }}"
+     data-sizes="auto"
+     alt="{{ block.settings.image.alt | escape }}"
+     class="blur-up lazyload slide-image-mobile"
+     width="{{ block.settings.image.width }}"
+     >
 {% endif %}
 <div class="carousel-caption">
   <div class="container">
