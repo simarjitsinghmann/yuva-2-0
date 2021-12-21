@@ -1723,12 +1723,12 @@
     width:100%;
     object-fit:cover;
   }
-    .single__product__right .pdp-wrapper {
+  .single__product__right .pdp-wrapper {
     max-width: 100%;
-}
+  }
   .single-detail-detail .left-product-images.has_slider .main-container {
     width: 100%;
-}
+  }
   .slider-main .image-popup-link {
     min-height: 550px;
     max-height: 550px;
@@ -1759,10 +1759,10 @@
   .left-product-images .slick-arrow.slick-next {
     right:10px;
   }
-    .product_content_section .slick-dots {
+  .product_content_section .slick-dots {
     position: absolute;
     bottom: 10px;
-}
+  }
   .fancybox__thumbs {
     display: none;
   }
@@ -1772,6 +1772,12 @@
   }
   .left-product-images.has_slider .ImageleftContainer .nav-container {
     display: none;
+  }
+  .single__product__right {
+    padding-top:20px;
+  }
+  .single__product__right.sidebar-fixed {
+    position: unset;
   }
   /*============= PDP css end ===============*/
   /*============= blog detail css start ==============*/
