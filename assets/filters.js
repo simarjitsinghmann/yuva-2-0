@@ -85,10 +85,11 @@ function sortBy(){
   }
 }
 function applyFilters(){ 
-  hideShowFilters();
-  sortBy();
   var section = document.getElementById('CollectionProductsContainer');
   if (section){
+    
+  hideShowFilters()
+  sortBy()
     var sectionId = section.dataset.id;
     const filterForm = document.getElementById('FiltersForm'); 
 
