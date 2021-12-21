@@ -1,6 +1,6 @@
 <div id="promo-banner-{{section.id}}" class="promo-grid__container {% unless section.settings.full_width %}container{% endunless %}">
-  <div class="type-banner__content text-center d-flex justify-content-center align-items-center text__center">
-    <div class="type-banner__text">
+  <div class="promo-banner__content text-center d-flex justify-content-center align-items-center text__center">
+    <div class="promo-banner__text">
       {% if section.settings.heading != blank %}
       <h3>{{ section.settings.heading }}</h3>
       {% endif %}
@@ -31,15 +31,15 @@
     }
   }
   
-  .type-banner__text {
+  .promo-banner__text {
     position: relative;
     flex: 0 1 auto;
     z-index: 3;
     padding: 10px 20px;
 }
-  .type-banner__text h3,
-  .type-banner__text p,
-  .type-banner__text a {
+  .promo-banner__text h3,
+  .promo-banner__text p,
+  .promo-banner__text a {
     margin: 5px 10px;
     display: inline-block;
     vertical-align: middle;
