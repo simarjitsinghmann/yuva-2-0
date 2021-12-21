@@ -469,7 +469,7 @@ $(document).ready(function(){
       html.innerHTML = text;
       const recommendations = html.querySelector('.similarItemContainer');
       if (recommendations && recommendations.innerHTML.trim().length) {
-        drawer.querySelector('[data-drawer-body]').innerHTML = recommendations.innerHTML;   
+        drawer.querySelector('[similar-drawer-body]').innerHTML = recommendations.innerHTML;   
         drawer.classList.remove('searching');
       }
     });},500)
