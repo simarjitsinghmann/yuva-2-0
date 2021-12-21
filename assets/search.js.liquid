@@ -172,7 +172,9 @@ $(document).ready(function(){
         });  
         $(document).ajaxStop(function(){
         recent_Html =  recent_Html.concat('</ul></div></div>'); 
+          if(showRecent){
         $('#recent_search_list').html(recent_Html);
+          }
         });
 
       }
