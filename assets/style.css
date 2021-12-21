@@ -4581,8 +4581,7 @@ body #shopify-product-reviews {
    height: calc(100vh - 55px);
    overflow-y: auto;
 }
-/* side drawer css end */
-
+/*============== side drawer css end =============*/
 .cart-item-container .product__price {
    font-size: var(--reg-text);
    font-weight: var(--medium);
@@ -4617,9 +4616,6 @@ body #shopify-product-reviews {
    object-fit: cover;
    margin: 0 auto;
 }
-/* .recent-search-inner {
-   padding-bottom: 25px;
-} */
 .recent-search-inner li a span {
    padding-top: 5px;
    display: block;
@@ -4640,21 +4636,10 @@ body #shopify-product-reviews {
 .recent-search-inner li:hover a {
    color: var(--theme-color);
 }
-.quickview-open:after,
-.minicart-open:after {
-   position: absolute;
-   content: "";
-   width: 100%;
-   height: 100%;
-   top: 0;
-   background-color: rgb(0 0 0 / 26%);
-   left: 0;
-   z-index: 9;
-}
 .emptySideCart h4{
   margin: 0 0 15px;
 }
-/* quick view drawer css start */
+/*=========== quick view drawer css start ============*/
 .side_drawer_wrapper.quickView_product {
    max-width: 564px;
 }
