@@ -2220,10 +2220,14 @@
     text-align: left;
   }
   .collection-card .collection-title {
+    font-size: 18px;
+    line-height: 24px;
     background-color: transparent;
     padding: 0;
     margin-bottom: 10px;
-}
+    color: var(--heading_color);
+      font-family: var(--heading-font-family);
+        }
   /*============= collection page css start ============*/
 }
 @media screen and (max-width: 480px) {
