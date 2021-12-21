@@ -972,8 +972,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     if(jQuery(event.target).find('#instafeed').length > 0 ){
     	instagramFeed();
     }
-    if(jQuery(event.target).find('.announcement-bar').length > 0 ){
-      announcementTimer();
+    if(jQuery(event.target).find('.announcement-bar').length > 0 ){s
       initAnnouncement();
     }
   }
