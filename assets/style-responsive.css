@@ -784,7 +784,7 @@
     max-width: 100%;
   }
   /*==================  product detail end  ===================*/
-  /*  collection start */
+  /*=============  collection css start ===========*/
   .card__warpper__detail.right__sided .collection-detail-right {
     padding: 10px 20px;
   }
@@ -803,12 +803,15 @@
     font-size: 13px;
     padding: 5px 15px;
   }
-  /*  collection end  */
-  /* testimonial start */
-.client-say-left {
+  .collection-detail-right h4 {
+    margin: 0 0 10px;
+}
+  /*=============  collection css end  ============*/
+  /*=========== testimonial css start ===========*/
+  .client-say-left {
     padding-bottom: 20px;
     align-items: center;
-}
+  }
   .client-say-left h2 {
     margin: 6px 0 12px;
   }
@@ -820,7 +823,7 @@
     letter-spacing: 0;
     font-size: 14px;
   }
-  /*  testimonial end  */
+  /*=============  testimonial css end  ===============*/
   /*==================  feature blog start  ====================*/
   .blog__post .item.grid__item{
     margin: 0 0 20px;
