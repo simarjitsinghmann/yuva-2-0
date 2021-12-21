@@ -315,7 +315,7 @@
   .header__icons svg {
     width: 16px;
   }
-  /*  side menu start  */
+  /*============= side menu start ==============*/
   .side-menu,
   .side-menu .inner-side .nav-item.dropdown .child,
   .side-menu .inner-side .nav-item.dropdown .grandchild {
@@ -340,8 +340,8 @@
   .header_3 #navbarCollapse {
     padding-top: 25px;
   }
-  /*  side menu end  */
-  /*  header end  */
+  /*=============  side menu end  ============*/
+  /*==============  header end ================*/
   /*==============  Whats more start  ==============*/
   .card-information .card-information-image {
     min-height: 230px;  
@@ -358,7 +358,7 @@
     font-size: 16px;
   }
   /*==============  Whats more end  ==============*/
-  /*  product listing home start  */
+  /*===============  product listing home start  =============*/
   .products-grid .column-5 .grid-item {
     flex: 0 0 25%;
     width: 25%;
@@ -380,8 +380,8 @@
     max-width: 75%;
     flex: 0 0 75%;
   }
-  /*  product listing home end  */
-  /*  collection css start  */
+  /*===========  product listing home end  ============*/
+  /*==================  collection css start  ===============*/
   .card__warpper__detail.right__sided .collection-detail-right {
     padding: 15px 20px;
   }
@@ -396,13 +396,13 @@
   .collection-detail h4 {
     padding: 0 0 5px;
   }
-  /*  collection css end  */
-  /*  featured-blog start  */
+  /*=============  collection css end  ================*/
+  /*==============  featured-blog start  ==============*/
   .post-information__wrapper {
     padding: 15px 15px 15px;
   }
-  /*  end  */
-  /* testimonial start  */
+  /*============  end  =============*/
+  /*============= testimonial start  =============*/
   .shopify-section.testimonial {
     padding: 45px 0 45px;
   }
@@ -425,13 +425,13 @@
   .testimonial-slider .owl-nav .owl-next {
     right: -20px;
   }
-  /* testimonial end  */
-  /*  instagram post start  */
+  /*============= testimonial end =============*/
+  /*===============  instagram post start  ==============*/
   .instagram-post {
     padding: 45px 0 45px;
   }
-  /*  instagram post end  */
-  /*  multicolumn css start  */
+  /*===================  instagram post end  ==============*/
+  /*============  multicolumn css start  ===========*/
   .service__column .col {
     padding: 10px 10px;
   }
@@ -445,8 +445,8 @@
   .service__column p {
     font-size: 12px;
   }
-  /*  multicolumn css end  */
-  /*  product detail css start  */
+  /*=================  multicolumn css end  ================*/
+  /*===============  product detail css start  ==============*/
   .feature-product .product-image-left {
     padding-right: 10px;
   }
@@ -474,7 +474,10 @@
     font-size: 17px;
     margin: 0 15px 0 15px;
   }
-  /*  product detail css end  */
+  body.header1.announcement_open .single__product__right.sidebar-fixed {
+    top: 120px;
+  }
+  /*=================  product detail css end  ================*/
   /*  footer start  */
   footer p,
   footer ul li a {
