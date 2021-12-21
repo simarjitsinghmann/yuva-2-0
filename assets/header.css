@@ -1945,12 +1945,14 @@ header {
 
 /* Scrollbar design css start */
 
-.side-menu .inner-side::-webkit-scrollbar {
+.side-menu .inner-side::-webkit-scrollbar, 
+.side-menu .nav-item.dropdown .inner::-webkit-scrollbar {
     width: 3px;
     background-color: #cccccc;
 }
 
-.side-menu .inner-side::-webkit-scrollbar-thumb {
+.side-menu .inner-side::-webkit-scrollbar-thumb, 
+.side-menu .nav-item.dropdown .inner::-webkit-scrollbar-thumb {
     background-color: #4a4a4a;
     border-radius: 5px;
 }
