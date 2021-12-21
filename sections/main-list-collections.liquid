@@ -24,7 +24,7 @@
 
   <ul class="collection-list grid grid--1-col grid--3-col-tablet" role="list">
     {% if section.settings.show_collections == 'all' %}
-    {% if collection.size > 0 %}
+    {% if collections.size > 0 %}
     {%- for collection in collections -%}
     {% include 'collection-grid' collection:collection %}
     {%- endfor -%}
@@ -65,7 +65,7 @@
       "type": "range",
       "id": "collections_per_page",
       "min": 3,
-      "max": 16,
+      "max": 15,
       "step": 1,
       "default": 9,
       "label": "t:sections.main-list-collections.settings.collections_per_page.label"
