@@ -4223,34 +4223,21 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
    margin-bottom: 14px;
   height:600px;
 }
-/* .collection-card-box:after {
-   position: absolute;
-   content: "";
-   left: 0;
-   top: 0;
-   width: 100%;
-   height: 100%;
-   background-color: #000;
-   opacity: 0;
-   z-index: -1;
-   transition: 1s ease all;
+.collection-featured-img {
+  height:100%;
+  background-color: var(--colorImageBg);
 }
-.collection-card-box:hover:after {
-   opacity: 0.15;
-} */
 .collection-card-box img {
     transition: 1s ease all;
     height: 100%;
     object-fit: cover;
     width: 100%;
-  	background-color: var(--colorImageBg)
+  	background-color: var(--colorImageBg);
 }
 .collection-card-box:hover img {
    transform: scale(1.1);
 }
-.collection-featured-img {
-height:100%;
-}
+
 .collection-card {
    position: absolute;
    bottom: 20px;
