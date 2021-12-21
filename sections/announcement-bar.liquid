@@ -128,18 +128,20 @@
     announcementTimer();
   }
   {% endif %}
-  var getnew_Pop = Cookies.get('announcement_closed');
-  if(getnew_Pop != "true"){
-    $('#announcement{{section.id}}').removeClass('hidden');
-      $('body').removeClass('announcement_open');
-  }
-  $('.announce_close').click(function(){
+  function initAnnouncement(){
+    var getnew_Pop = Cookies.get('announcement_closed');
+    if(getnew_Pop != "true"){
+      $('#announcement{{section.id}}').removeClass('hidden');
+        $('body').removeClass('announcement_open');
+    }
+    $('.announce_close').click(function(){
       $('.announcement-bar').slideToggle();
       var date = new Date();
       date.setTime(date.getTime() + (parseInt(24 * 60 * 60 * 1000)));
       Cookies.set('announcement_closed', 'true', { expires: date, path: '/' });
       $('body').removeClass('announcement_open');
-  });
+    });
+  }
   
 
 </script>
