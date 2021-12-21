@@ -5,16 +5,13 @@
     {%- for product in recommendations.products -%}
     {% assign current_variant = product.selected_or_first_available_variant %}
     <li class="product-base">
-      <a target="_blank" href="{{product.url}}">
+      <a href="{{product.url}}">
         <div class="product-imageSliderContainer">
           <picture class="img-responsive" style="width: 100%; height: 100%; display: block;">
             <img src="{{product.featured_image | img_url:'500x'}}" class="img-responsive" alt="{{product.title}}" title="{{product.title}}">
           </picture>
         </div>
         <div class="product-productMetaInfo product-information__wrapper ">
-          {% comment %}
-          <div class="product-brand normal-font">{{product.vendor}}</div>
-          {% endcomment %}
           <div class="caption-with-letter-spacing light">{{product.title}}</div>
           <div class="product-price price__regular">
               <span class="price-item price-item--regular">
