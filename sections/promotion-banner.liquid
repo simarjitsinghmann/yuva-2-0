@@ -1,4 +1,4 @@
-<div class="promo-grid__container {% unless section.settings.full_width %}container{% endunless %}">
+<div id="promo-banner-{{section.id}}" class="promo-grid__container {% unless section.settings.full_width %}container{% endunless %}">
   <div class="type-banner__content text-center">
     <div class="type-banner__text">
       {% if section.settings.heading != blank %}
@@ -15,8 +15,10 @@
   </div>
 </div>
 <style>
-    #shopify-section-{{section.id}}.shopify-section {
+  #promo-banner-{{section.id}}{
     background-color:{{section.settings.bgcolor}};
+  }
+    #shopify-section-{{section.id}}.shopify-section {
     padding-top:{{section.settings.top_space_desktop}}px;
     padding-bottom:{{section.settings.bottom_space_desktop}}px;
   }
