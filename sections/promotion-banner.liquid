@@ -1,15 +1,17 @@
 <div class="{% unless section.settings.full_width %}container{% endunless %}">
   <div  id="promo-banner-{{section.id}}" class="promo-banner-content text-center d-flex justify-content-center align-items-center text__center">
-    {% if section.settings.heading != blank %}
-    <h3>{{ section.settings.heading }}</h3>
-    {% endif %}
-    {% if section.settings.text != blank %}
-    <p>{{ section.settings.text }}</p>
-    {% endif %}
-    {% if section.settings.label != blank and section.settings.link != blank %}
-    <a href="{{ section.settings.link }}" class="type-banner__link">{{ section.settings.label }}
-    </a>
-    {% endif %}
+    <div class="promo-banner__text">
+      {% if section.settings.heading != blank %}
+      <h3>{{ section.settings.heading }}</h3>
+      {% endif %}
+      {% if section.settings.text != blank %}
+      <p>{{ section.settings.text }}</p>
+      {% endif %}
+      {% if section.settings.label != blank and section.settings.link != blank %}
+      <a href="{{ section.settings.link }}" class="type-banner__link">{{ section.settings.label }}
+      </a>
+      {% endif %}
+    </div>
   </div>
 </div>
 <style>
@@ -29,31 +31,35 @@
     }
   }
   
-  #promo-banner-{{section.id}}.promo-banner-content h3{
+  #promo-banner-{{section.id}} .promo-banner__text h3{
     color:{{section.settings.textcolor}}
   }
   
-  #promo-banner-{{section.id}}.promo-banner-content p{
+  #promo-banner-{{section.id}} .promo-banner__text p{
     color:{{section.settings.textcolor | color_modify: 'alpha', 0.70 }}
   }
   
-  #promo-banner-{{section.id}}.promo-banner-content a{
+  #promo-banner-{{section.id}} .promo-banner__text a{
     color:{{section.settings.btntextcolor }};
     border: 1px solid {{section.settings.btnborder }};
     background-color:{{section.settings.btnbgcolor }};
   }
-  .promo-banner-content {
+  .promo-banner__text {
+    position: relative;
+    flex: 0 1 auto;
     padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+  .promo-banner__text h3,
+  .promo-banner__text p,
+  .promo-banner__text a {
+    margin: 5px 10px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.2;
+}
+  .promo-banner__text a {
+    padding: 5px 10px;
   }
-  .promo-banner-content h3, .promo-banner-content p, .promo-banner-content a {
-    margin: 0 10px;
-  }
-  .promo-banner-content a {
-    padding: 2px 10px;
-    }
 </style>
 {% schema %}
 {
