@@ -8,7 +8,7 @@
       {%- if featuredImage != blank -%}
       {% render 'lazy-image' image: featuredImage %}
       {% else %}
-      {{ 'collection1.svg' | asset_url | img_tag }}
+      {{ 'placeholder.svg' | asset_url | img_tag }}
       {% endif %}
     </a>
     <div class="card__text card__text-spacing card__text-hover collection-card">
