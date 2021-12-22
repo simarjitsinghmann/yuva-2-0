@@ -3460,9 +3460,6 @@ button.Sd_addProduct:disabled {
    margin-bottom: 5px;
    font-weight: var(--medium);
 }
-.product-description.tab-content ul {
-   margin: 0 0 20px 15px;
-}
 .product-description.tab-content ul li::before {
    content: "";
    position: absolute;
@@ -3475,8 +3472,6 @@ button.Sd_addProduct:disabled {
 .product-description.tab-content ul li {
    position: relative;
    padding-left: 18px;
-   font-size: 15px;
-   color: #505050;
    letter-spacing: 0.5px;
 }
 .product-description.tab-content p {
