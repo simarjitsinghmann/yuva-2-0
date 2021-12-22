@@ -239,7 +239,7 @@ function ScrollExecute() {
       }
     })
     .done(function(data) {
-      moreButon.remove();
+//       moreButon.remove();
       $('[data-collection-products]').append($(data).find('[data-collection-products]').html());
 
       productVariants();
