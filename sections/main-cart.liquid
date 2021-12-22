@@ -29,12 +29,9 @@
                       <a href="{{item.url}}">{{item.product.title | truncatewords:5}}</a>
                       <div class="cart-item-product-details">
                         {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
-                        {% for option in item.options_with_values %}
-                        <span>{{option.name}}: {{option.value}}</span>
-                        {% endfor %}
+                        <p class="item-variant-title">{{item.variant.title}}</p>
                         {% endunless %}	
-                      <h6>{{item.selling_plan_allocation.selling_plan.name }}</h6>
-                                         
+                        <p class="item-variant-title">{{item.selling_plan_allocation.selling_plan.name }}</p>              
                          <div class="price item-price" data-item-price="{{forloop.index0}}">
                         {%- if item.original_price != item.final_price -%}
                         <s class="cart-item__old-price product-option">
