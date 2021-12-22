@@ -10,10 +10,10 @@
         "label": "Shop now",
         "bgcolor": "#000000",
         "bgcolor_opacity": 8,
-        "textcolor": "#000",
-        "btntextcolor": "#000",
-        "btnbgcolor": "transparent",
-        "btnborder": "#000",
+        "textcolor": "#000000",
+        "btntextcolor": "#000000",
+        "btnbgcolor": "rgba(0,0,0,0)",
+        "btnborder": "#000000",
         "border_radius": 0,
         "top_space_desktop": 30,
         "bottom_space_desktop": 0,
@@ -25,7 +25,7 @@
       "type": "main-collection",
       "settings": {
         "collection_image": false,
-        "collection_description": false,
+        "collection_description": true,
         "products_per_page": 15,
         "enable_filtering": true,
         "enable_sorting": true
