@@ -1302,26 +1302,22 @@ a.wishlist-view .fas {
    object-fit: cover;
    height: 100%;
 }
-.video-sec video {
-   object-fit: cover;
+.video-inner-box {
+    position: relative;
+  	height: 600px;
+  overflow:hidden
 }
-/* .flex-absolute {
+.video-sec video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.flex-absolute {
   position: absolute;
   z-index: 1;
-  max-width: 1000px;
   width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-.flex-absolute {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
 }
-
 .video-banner-section .home-video-sec {
    position: relative;
 }
