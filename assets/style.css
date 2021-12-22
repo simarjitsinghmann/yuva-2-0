@@ -3575,9 +3575,8 @@ button.Sd_addProduct:disabled {
     cursor: pointer;
     color: var(--dark-gray);
 }
-
 .resp-tab-item.active a {
-   color: #000;
+   color: var(--theme-color);
    position: relative;
 }
 .resp-tab-item.active a:before {
