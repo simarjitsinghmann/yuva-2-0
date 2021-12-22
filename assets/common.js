@@ -440,13 +440,13 @@ $(document).ready(function(){
 
   ///navigation-sidebar//
   $('body').on('click','.navbar-toggler',function(){
-    $('.navbar-collapse-sidebar').toggleClass('show');
-    $('body').toggleClass('nav-open');
+    $('.navbar-collapse-sidebar').addClass('show');
+    $('body').addClass('nav-open');
     // 	$('.wrapper-overlay').css({"display": "block"});
   });
 
   $('body').on('click','.close-btn',function(){
-    $('body').toggleClass('nav-open'), $('.navbar-collapse-sidebar').removeClass('show');
+    $('body').removeClass('nav-open'), $('.navbar-collapse-sidebar').removeClass('show');
   });
 
   ///minicart//
