@@ -6,7 +6,7 @@
   <div class="collection-card-box card animate-arrow{% if collection.featured_image != blank %} card--media{% else %}{% if section.settings.image_ratio != 'adapt' %} card--stretch{% endif %}{% endif %}{% unless section.settings.image_padding %} card--light-border{% endunless %}" >
     <a href="{{ collection.url }}" class="collection-featured-img">
       {%- if featuredImage != blank -%}
-      {% render 'lazy-image' image: collection.featured_image %}
+      {% render 'lazy-image' image: featuredImage %}
       {% else %}
       {{ 'collection1.svg' | asset_url | img_tag }}
       {% endif %}
