@@ -3562,20 +3562,20 @@ button.Sd_addProduct:disabled {
    align-items: center;
    display: flex;
 }
-.resp-tab-item a {
-   color: #757575;
-   font-size: 15px;
-   text-transform: uppercase;
-   line-height: 30px;
-   font-weight: 500;
-   padding: 15px 0;
-   display: inline-block;
-   margin-left: 0;
-   cursor: pointer;
-}
 .resp-tab-item {
    padding-right: 5%;
 }
+.resp-tab-item a {
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 15px 0;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--dark-gray);
+}
+
 .resp-tab-item.active a {
    color: #000;
    position: relative;
