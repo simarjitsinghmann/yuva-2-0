@@ -32,6 +32,7 @@
   --bold:700;
   --extrabold:900;
   --theme-color: {{ settings.color_base | default: '#000000' }};
+  --theme-light-color: {{ settings.color_base | default: '#000000'  | color_modify: 'alpha', 0.50 }};
   --cartDotColor: {{ settings.color_cart_dot | default: '#000000' }};
   --colorBtnPrimary: {{ settings.color_button | default: '#302d34' }};
   --colorBtnPrimaryText: {{ settings.color_button_text | default: '#fff' }};  
@@ -48,24 +49,6 @@
   --base_line_height: {{ settings.type_base_line_height | default: 1.4 }};
   --text_size: {{ settings.type_base_size | default: 14 }}px;
 }
-    
-/*     body.loading{
-      overflow: hidden;
-    }
-
-  body.loading:after {
-    content: "";
-    background-image: url(loader.svg);
-    position: fixed;
-    width: 100%;
-    background-repeat: no-repeat;
-    height: 100%;
-    z-index: 5;
-    top: 0;
-    overflow: hidden;
-    background-color: rgb(255 255 255 / 100%);
-    background-position: center;
-} */
 .blur-up {
 		-webkit-filter: blur(5px);
 		filter: blur(5px);
