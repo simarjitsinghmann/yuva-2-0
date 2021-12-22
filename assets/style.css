@@ -253,6 +253,11 @@ img {
    padding: 2px 10px;
   font-size:14px;
 }
+.flex-absolute {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
 .carousel-caption-title h1, 
 .flex-absolute h1{
    font-weight: var(--normal);
@@ -1313,11 +1318,7 @@ a.wishlist-view .fas {
   width: 100%;
   display: block;
 }
-.flex-absolute {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-}
+
 .video-banner-section .home-video-sec {
    position: relative;
 }
