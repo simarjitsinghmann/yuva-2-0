@@ -3393,7 +3393,7 @@ button.Sd_addProduct:disabled {
    align-content: center;
    height: 100%;
 }
-/**add-to-cart-end**/
+/*================ add-to-cart-end ==============*/
 
 /*================ Single banner css start ==============*/
 .single-banner-section.banner-section .item {
@@ -3544,6 +3544,9 @@ button.Sd_addProduct:disabled {
    fill: var(--theme-color);
 }
 /*============ pagination css end =============*/
+.single__product__right .Specification-tabs {
+    margin-top: 20px;
+}
 .Specification-tabs {
    text-align: center;
    border-top: 1px solid #eff0f3;
