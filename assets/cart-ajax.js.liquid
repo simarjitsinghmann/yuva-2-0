@@ -63,9 +63,11 @@ $('body').on('submit','[action="/cart/add"]',function(evt) {
 $(document).on('click', '.quantity-button', function(evt) {
   evt.preventDefault();
   var $el = $(this),
+      parent = $el.closest('.media-link'),
       line = $el.data('line'),
       $qtySelector = $el.closest('.quantity').find('.ajaxcart__qty-num');
   var qty = $qtySelector.val();
+  parent.addClass('disabled')
   if(qty){
     qty = parseInt(qty.replace(/\D/g, ''));
   }
@@ -89,9 +91,11 @@ $(document).on('click', '.quantity-button', function(evt) {
 $(document).on('change', '.ajaxcart__qty-num', function(evt) {
   evt.preventDefault();
   var $el = $(this),
+      parent = $el.closest('.media-link'),
       line = $el.data('line'),
       qty = parseInt($el.val().replace(/\D/g, ''));
 
+  parent.addClass('disabled')
   var qty = validateQty(qty);
 
   // If it has a data-line, update the cart
