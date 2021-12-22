@@ -1,6 +1,5 @@
 {% layout none %}
 {%- if cart.item_count > 0 -%}
-<div id="mini__cartForm">
   <div class="cart-item-container">
     {% assign shippingTarget = settings.shipping_rate | times:100%}
     {% if settings.enable_shipping and settings.shipping_rate != blank %}
@@ -71,7 +70,6 @@
       {% endfor %}	
     </div>
   </div>
-</div>
 
 <div class="bottom-cart-box">
   <div class="leave-order-note">
