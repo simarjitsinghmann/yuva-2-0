@@ -1,6 +1,6 @@
 
 {%- paginate blog.articles by 6 -%}
-<div class="top_page_title no-bg">
+<div  id="main-blog-{{section.id}}" class="top_page_title no-bg">
   <div class="container">
     <div class="contact-banner-text">
       <div class="banner_title">
@@ -72,7 +72,7 @@
 {%- endpaginate -%}
 {%- if section.settings.bgcolor != blank or section.settings.textcolor != blank  -%}
 <style>
-  #main-page-{{section.id}}{
+  #main-blog-{{section.id}}{
     {%- if section.settings.bgcolor != blank  -%}
     background-color:{{section.settings.bgcolor}};
     {%- endif -%}
@@ -117,6 +117,16 @@
       "id": "show_comment_count",
       "default": true,
       "label": "t:sections.main-blog.settings.show_comment_count.label"
+    },
+    {
+      "type": "color",
+      "id": "bgcolor",
+      "label": "Background Color"
+    },
+    {
+      "type": "color",
+      "id": "textcolor",
+      "label": "Text Color"
     }
   ]
 }
