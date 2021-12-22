@@ -60,7 +60,7 @@ table {
   width: 100%;
       border: 1px solid var(--gray);
 }
-tbody tr {
+tbody tr:not(.cart-products-table) {
 border-bottom: 1px solid var(--gray);
 }
 tr td {
