@@ -197,6 +197,9 @@
               {% for product in collection.products %}
               {% render 'product-grid',product: product %}
               {% endfor %}
+              {% if paginate.next %}
+              <div id="more"><p>&darr; <a href="{{ paginate.next.url }}">More</a></p></div>
+              {% endif %}
               {% else %}
               {% render 'not-found'  item:'Product'%}
               {% endif %}
