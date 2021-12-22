@@ -3671,10 +3671,11 @@ body.header2.announcement_open .single__product__right.sidebar-fixed {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     color: var(--black);
     font-size: 36px;
+    flex-wrap: wrap;
 }
 .product-add-to-cart-right .form-group {
    margin-bottom: 0;
