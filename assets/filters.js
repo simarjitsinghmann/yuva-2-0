@@ -270,6 +270,7 @@ function ScrollExecute() {
     })
     .done(function(data) {
       $('[data-collection-products]').append($(data).find('[data-collection-products]').html());
+	showMultipleOptions(); 
       triggered = false
     });
   }
