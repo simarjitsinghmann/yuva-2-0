@@ -3551,6 +3551,17 @@ button.Sd_addProduct:disabled {
    fill: var(--theme-color);
 }
 /*============ pagination css end =============*/
+.Specification-tabs {
+   text-align: center;
+   border-top: 1px solid #eff0f3;
+   border-bottom: 1px solid #eff0f3;
+   margin-top: 50px;
+}
+.resp-tabs-list.easy_tabs {
+   justify-content: flex-start;
+   align-items: center;
+   display: flex;
+}
 .resp-tab-item.easy_tabs a {
    color: #757575;
    font-size: 15px;
@@ -3568,22 +3579,11 @@ button.Sd_addProduct:disabled {
    text-align: left;
    padding-right: 5%;
 }
-.resp-tabs-list.easy_tabs {
-   justify-content: flex-start;
-   align-items: center;
-   display: flex;
-}
-.Specification-tabs {
-   text-align: center;
-   border-top: 1px solid #eff0f3;
-   border-bottom: 1px solid #eff0f3;
-   margin-top: 50px;
-}
-li.resp-tab-item.easy_tabs.active a {
+.resp-tab-item.easy_tabs.active a {
    color: #000;
    position: relative;
 }
-li.resp-tab-item.easy_tabs.active a:before {
+.resp-tab-item.easy_tabs.active a:before {
    position: absolute;
    bottom: 0;
    left: 0;
