@@ -162,6 +162,9 @@
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+.pop_cross {
+    display: inherit;
+}
 @media (max-width: 1024px) {
   .newsletter-popup .newsletter-popup-inner .popclose {
     line-height: 32px; 
