@@ -55,10 +55,14 @@
     width: 10px;
     height: 10px;
 }
+  .newsletter-popup .newsletter-popup-inner .popup-body .news-img {
+    height: 340px;
+    overflow: hidden;
+  }
 .newsletter-popup .newsletter-popup-inner .popup-body .news-img img {
     max-width: 100%;
     width: 100%;
-    height: 420px;
+  height:100%;
     object-fit: cover;
 }
 .newsletter-popup .newsletter-popup-inner .popup-body .nl-content {
