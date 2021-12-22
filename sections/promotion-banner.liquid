@@ -1,5 +1,5 @@
-<div class="promo-grid__container {% unless section.settings.full_width %}container{% endunless %}">
-  <div id="promo-banner-{{section.id}}" class="promo-banner__content text-center d-flex justify-content-center align-items-center text__center">
+<div id="promo-banner-{{section.id}}" class="promo-grid__container {% unless section.settings.full_width %}container{% endunless %}">
+  <div class="promo-banner__content text-center d-flex justify-content-center align-items-center text__center">
     <div class="promo-banner__text">
       {% if section.settings.heading != blank %}
       <h3>{{ section.settings.heading }}</h3>
