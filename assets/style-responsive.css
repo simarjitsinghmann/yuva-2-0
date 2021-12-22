@@ -1955,10 +1955,10 @@
 
 @media screen and (max-width: 575px) {
   /*=============  common  start  ===============*/
-  .shopify-section:not(.announcement-bar-section, .shopify-section-main-header, .shopify-section-slider, #shopify-section-footer, .password-section, .contact-page-section,
-  .shopify-blog-section, .shopify-article-section, .product-section, .banner-top-section){
-    padding: 20px 0;
-  }
+.shopify-section:not(.announcement-bar-section, .shopify-section-main-header, .shopify-section-slider, #shopify-section-footer, .password-section, .contact-page-section,
+.shopify-blog-section, .shopify-article-section, .product-section, .banner-top-section, .single-banner-section, .collection-grid-section, .video-banner-section) {
+	padding:20px 0;
+}
   .form-control {
     padding: 7px 15px;
     min-height: 42px;
