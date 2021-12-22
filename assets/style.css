@@ -3507,7 +3507,7 @@ button.Sd_addProduct:disabled {
    background-color: #fff;
    border-color: #d2cfd5;
 }
-/* pagination */
+/*============ pagination css start =============*/
 .list--inline.pagination {
    display: flex;
    justify-content: center;
@@ -3550,7 +3550,8 @@ button.Sd_addProduct:disabled {
 .list--inline.pagination button svg path {
    fill: var(--theme-color);
 }
-li.resp-tab-item.easy_tabs a {
+/*============ pagination css end =============*/
+.resp-tab-item.easy_tabs a {
    color: #757575;
    font-size: 15px;
    text-transform: uppercase;
@@ -3561,13 +3562,13 @@ li.resp-tab-item.easy_tabs a {
    margin-left: 0;
    cursor: pointer;
 }
-li.resp-tab-item.easy_tabs {
+.resp-tab-item.easy_tabs {
    list-style: none;
    width: auto;
    text-align: left;
    padding-right: 5%;
 }
-ul.resp-tabs-list.easy_tabs {
+.resp-tabs-list.easy_tabs {
    justify-content: flex-start;
    align-items: center;
    display: flex;
