@@ -4512,9 +4512,7 @@ body #shopify-product-reviews {
     top: 0;
   right: 0;
   max-width: 464px;
-  max-height: 100vh;
-  overflow-x:hidden;
-  overflow-y:auto;
+  height: 100vh;
   transform: translate(100%, 0);
   background: var(--white);
   transition: 0.7s ease;
