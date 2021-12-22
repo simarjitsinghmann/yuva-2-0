@@ -260,7 +260,7 @@ function ScrollExecute() {
   let moreButon = $('#more').last();
   let nextUrl = $(moreButon).find('a').attr("href");
   console.log(moreButon,moreButon.offset().top,$(window).scrollTop())
-  if ((($(moreButon).offset().top - $(window).scrollTop()) < 500) && (triggered == false)) {
+  if ((($(moreButon).offset().top - $(window).scrollTop()) < 800) && (triggered == false)) {
     triggered = true;
     $.ajax({
       url: nextUrl,
