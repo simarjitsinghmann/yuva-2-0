@@ -1350,6 +1350,12 @@
   .template_collection .sticky-header {
   	position:relative;
   }
+  #CollectionProductsContainer[data-view=grid-layout-5] .products-grid .product_columns .grid-item,
+  #CollectionProductsContainer[data-view=grid-layout-4] .products-grid .product_columns .grid-item,
+  #CollectionProductsContainer[data-view=grid-layout-3] .products-grid .product_columns .grid-item{
+    flex: 0 0 50%;
+    width: 50%;
+}
   .CollectionProductGrid {
     padding-top: 0;
   }
