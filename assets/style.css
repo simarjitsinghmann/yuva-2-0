@@ -3557,12 +3557,12 @@ button.Sd_addProduct:disabled {
    border-bottom: 1px solid #eff0f3;
    margin-top: 50px;
 }
-.resp-tabs-list.easy_tabs {
+.resp-tabs-list {
    justify-content: flex-start;
    align-items: center;
    display: flex;
 }
-.resp-tab-item.easy_tabs a {
+.resp-tab-item a {
    color: #757575;
    font-size: 15px;
    text-transform: uppercase;
@@ -3573,14 +3573,14 @@ button.Sd_addProduct:disabled {
    margin-left: 0;
    cursor: pointer;
 }
-.resp-tab-item.easy_tabs {
+.resp-tab-item {
    padding-right: 5%;
 }
-.resp-tab-item.easy_tabs.active a {
+.resp-tab-item.active a {
    color: #000;
    position: relative;
 }
-.resp-tab-item.easy_tabs.active a:before {
+.resp-tab-item.active a:before {
    position: absolute;
    bottom: 0;
    left: 0;
