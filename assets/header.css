@@ -1762,16 +1762,16 @@ div#mini__cartForm {
 }
 .cart-item-container {
     height: calc(100% - 235px);
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
     padding: 0 20px 0;
 }
 .cart-items-wrapper {
-   display: block;
-   width: 100%;
-   height: calc(100% - 350px);
-   overflow-y: auto;
-   padding-right: 20px;
+    display: block;
+    width: 100%;
+    height: calc(100% - 70px);
+    overflow-y: auto;
+    padding-right: 20px;
 }
 #mini__cart .emptySideCart h5 {
    margin-bottom: 15px;
