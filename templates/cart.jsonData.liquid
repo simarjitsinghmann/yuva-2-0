@@ -27,13 +27,11 @@
         <div class="media-link" data-line="{{forloop.index}}">
           <img src="{{item.image | img_url:'150x'}}" alt="{{name}}" width="65" height="73">
           <div class="media-body">
-            <h5 class="cart-item-link">
-              <a href="{{item.url}}">{{item.product.title | truncatewords:5}}</a>
-            </h5>
+              <a href="{{item.url}}" class="cart-item-link">{{item.product.title | truncatewords:5}}</a>
             {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
-            <span class="item-variant-title">{{item.variant.title}}</span>
+            <p class="item-variant-title">{{item.variant.title}}</p>
             {% endunless %}
-            <span class="item-variant-title">{{item.selling_plan_allocation.selling_plan.name }}</span>
+            <p class="item-variant-title">{{item.selling_plan_allocation.selling_plan.name }}</p>
             <h6 class="product__price">
               {%- if item.original_price != item.final_price -%}
               <small class="item__price-strikethrough"><s>{{item.original_price| money}}</s></small><span>{{item.final_price| money}}</span>
