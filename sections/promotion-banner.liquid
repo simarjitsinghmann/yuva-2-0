@@ -39,6 +39,11 @@
     color:{{section.settings.textcolor | color_lighten: 5}}
   }
   
+  #promo-banner-{{section.id}} .promo-banner__text a{
+    color:{{section.settings.btntextcolor }};
+    border: 1px solid {{section.settings.btnborder }};
+    background-color:{{section.settings.btnbgcolor }};
+  }
   .promo-banner__text {
     position: relative;
     flex: 0 1 auto;
