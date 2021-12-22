@@ -1,17 +1,15 @@
 <div class="Specification-tabs">           
-  <div class="container-product">
-    <ul class="resp-tabs-list easy_tabs">    
-      {% if block.settings.show_description %}
-      <li class="resp-tab-item resp-tab-itemProduct easy_tabs" content="tabContentDescription"><a>{{'products.product.description' | t}}</a></li> 
-      {% endif %}
-      {% if block.settings.content_heading != blank %}
-      <li class="resp-tab-item resp-tab-itemProduct easy_tabs" content="tabContentWrapper"><a>{{block.settings.content_heading}}</a></li> 
-      {% endif %}
-      {% if block.settings.show_reviews %}
-      <li class="resp-tab-item resp-tab-itemProduct easy_tabs" content="tabContentReviews"><a>{{'products.product.reviews' | t}}</a></li> 
-      {% endif %}
-    </ul>
-  </div>
+  <ul class="resp-tabs-list easy_tabs">    
+    {% if block.settings.show_description %}
+    <li class="resp-tab-item resp-tab-itemProduct easy_tabs" content="tabContentDescription"><a>{{'products.product.description' | t}}</a></li> 
+    {% endif %}
+    {% if block.settings.content_heading != blank %}
+    <li class="resp-tab-item resp-tab-itemProduct easy_tabs" content="tabContentWrapper"><a>{{block.settings.content_heading}}</a></li> 
+    {% endif %}
+    {% if block.settings.show_reviews %}
+    <li class="resp-tab-item resp-tab-itemProduct easy_tabs" content="tabContentReviews"><a>{{'products.product.reviews' | t}}</a></li> 
+    {% endif %}
+  </ul>
 </div>
 <div class="container ">        
   <div class="row">
