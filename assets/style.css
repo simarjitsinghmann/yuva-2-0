@@ -437,15 +437,6 @@ img {
 }
 /*============= Slider banner css end ===============*/
 /*==================== offer css start ================*/
-.offer-section  .slick-track {
-    margin: 0 auto;
-}
-.offer-section .slick-list{
-    margin: 0 -15px;
-}
-.offer-section .slick-slide {
-    padding: 0 15px;
-}
 .card-wrapper {
    display: -ms-flexbox;
    display: -webkit-box;
@@ -540,6 +531,10 @@ text-transform: capitalize;
     font-size: 22px;
       color: var(--white);
         text-transform:uppercase;
+}
+.row.style_variation_1,
+.row.style_variation_2{
+	justify-content:center;
 }
 /*==================== offer css end ================*/
 .collection-gutter .grid--2-col {
