@@ -35,25 +35,24 @@
 }
 .newsletter-popup .newsletter-popup-inner .popclose {
     position: absolute;
-    top: -14px;
-    right: -14px;
+    top: -15px;
+    right: -15px;
     opacity: 1;
-    background-color: var(--black);
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    line-height: 37px;
-    z-index: 1050;
+    background-color: var(--theme-color);
+    width: 30px;
+    height: 30px;
     border-radius: 0;
-    box-shadow: none;
-    display: inline-block;
-    text-shadow: none; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .newsletter-popup .newsletter-popup-inner .popclose:hover {
   	opacity: 1; 
 }
 .newsletter-popup .newsletter-popup-inner .popclose svg {
-  	fill: var(--white); 
+    fill: var(--white);
+    width: 10px;
+    height: 10px;
 }
 .newsletter-popup .newsletter-popup-inner .popup-body .news-img img {
     max-width: 100%;
