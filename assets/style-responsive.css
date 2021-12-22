@@ -1457,21 +1457,23 @@
     z-index: 9;
     left: 0;
     right: 0;
-    top: 100%;
+    top: 0;
     bottom: 0;
     padding: 0;
     height: 100vh;
     overflow-y: auto;
+    -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+            transform: translateY(100%);
     -webkit-transition: .5s ease all;
     -o-transition: .5s ease all;
     transition: .5s ease all;
     overflow: auto;
   }
   .shop-sidebar.active{
-/*     -webkit-transform: translateY(0);
+    -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
-            transform: translateY(0); */
-    top: 0;
+            transform: translateY(0);
   }
   .shop-sidebar-inside {
     border-right: 0;
