@@ -8,7 +8,7 @@
         <h1>{{collection.title}}</h1>
       </div>
       {% endif %}
-      {% if section.settings.collection_description  %}
+      {% if section.settings.collection_description and collection.description != blank %}
       <div class="container collection-description text__center">
       	{{collection.description}}
       </div>
