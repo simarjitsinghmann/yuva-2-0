@@ -29,15 +29,15 @@
     }
   }
   
-  #promo-banner-{{section.id}} .promo-banner__text h3{
+  #promo-banner-{{section.id}} .promo-banner-content h3{
     color:{{section.settings.textcolor}}
   }
   
-  #promo-banner-{{section.id}} .promo-banner__text p{
+  #promo-banner-{{section.id}} .promo-banner-content p{
     color:{{section.settings.textcolor | color_modify: 'alpha', 0.70 }}
   }
   
-  #promo-banner-{{section.id}} .promo-banner__text a{
+  #promo-banner-{{section.id}} .promo-banner-content a{
     color:{{section.settings.btntextcolor }};
     border: 1px solid {{section.settings.btnborder }};
     background-color:{{section.settings.btnbgcolor }};
@@ -53,8 +53,6 @@
   }
   .promo-banner-content a {
     padding: 5px 10px;
-    background-color: var(--theme-color);
-    color: var(--white);
     }
 </style>
 {% schema %}
