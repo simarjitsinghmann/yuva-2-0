@@ -880,12 +880,14 @@ text-transform: capitalize;
     opacity: 0;
     visibility: hidden;
   white-space:nowrap;
+  display:none;
 }
 .similar_options .vs-icon:hover .similar-text {
 	opacity:1;
   visibility:visible;
       font-size:11px;
   padding-left:5px;
+  display:inline;
 }
 .shop__options {
    position: absolute;
