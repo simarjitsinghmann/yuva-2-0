@@ -255,23 +255,12 @@ function getFilterData(filterForm,input,sectionId,remove){
 }());
 
 
-// Shortcircuit variable
 let triggered = false;
-
 function ScrollExecute() {
-  // Locate loadmore button
   let moreButon = $('#more').last();
-  
-  // Get URL from the loadmore button
   let nextUrl = $(moreButon).find('a').attr("href");
-  console.log(moreButon,nextUrl)
-  // Button position when AJAX call should be made one time
-  if (((moreButon.offset().top - jQuery(window).scrollTop()) < 800) && (triggered == false)) {
-  
-    // Trigger shortcircuit to ensure AJAX only fires once
+  if ((($(moreButon).offset().top - $(window).scrollTop()) < 800) && (triggered == false)) {
     triggered = true;
-
-    // Make ajax call to next page for load more data
     $.ajax({
       url: nextUrl,
       type: 'GET',
@@ -280,15 +269,11 @@ function ScrollExecute() {
       }
     })
     .done(function(data) {
-      // Append data
       $('.product').append($(data).find('.product').html());
-
-      // On success, reset shortcircuit
       triggered = false
     });
   }
 }
-
 $(document).ready(function () {
   $(window).scroll(function(){
     ScrollExecute();
