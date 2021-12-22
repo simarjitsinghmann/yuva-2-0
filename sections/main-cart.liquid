@@ -26,7 +26,7 @@
                     </td>
                     <td class="cart-prd-details">
                        
-                      <a href="{{item.url}}"><h5>{{item.product.title | truncatewords:5}}</h5></a>
+                      <a href="{{item.url}}">{{item.product.title | truncatewords:5}}</a>
                       <div class="cart-item-product-details">
                         {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
                         {% for option in item.options_with_values %}
