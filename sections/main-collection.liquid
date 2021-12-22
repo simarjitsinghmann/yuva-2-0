@@ -199,8 +199,8 @@
               {% endfor %}
               {%- if section.settings.pagination_type == 'infinite'-%}
               {% if paginate.next %}
-              <div id="more" class="hidden"><a href="{{ paginate.next.url }}"></a>
-                <div class="load">
+              <div id="more" class="hidden" style="width:100%"><a href="{{ paginate.next.url }}"></a>
+                <div class="load" >
                   <svg width="30" height="30"
                        style="shape-rendering: auto; animation-play-state: running; animation-delay: 0s; background: none;"
                        class="Search_loader lds-rolling" xmlns="http://www.w3.org/2000/svg"
