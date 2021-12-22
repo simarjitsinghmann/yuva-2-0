@@ -74,7 +74,6 @@
               </ul> 
             </div>
             {% endfor %}
-            {% endcomment %}
             {% assign preorder = false %}
             {% if settings.enable_preorder and current_variant.inventory_policy == 'continue' and current_variant.inventory_quantity <= 0  %}
             {% assign preorder = true %}
@@ -113,6 +112,8 @@
               {% endif %}
               {% endif %}
             </div>
+            {% endcomment %}
+            <a class="button black-btn small-btn" href="{{product.url | within:collection}}">View Product</a>
           </div>
             {% render 'product-variants' product:product %}
           {% endform %}
