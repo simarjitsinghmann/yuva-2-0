@@ -2542,6 +2542,12 @@
       border:0;
 }
 }
+@media (min-width: 576px){
+  .row.style_variation_1,
+.row.style_variation_2{
+	justify-content:center;
+}
+}
 @media (min-width: 768px){
   .mobile-sort-heading {
   	display:none;
