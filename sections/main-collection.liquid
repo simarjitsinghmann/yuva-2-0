@@ -192,7 +192,7 @@
         {% endif %}
         <div class="product-collection grid-view">
           <div class="products-grid" style="display:block">
-            <div class="row product_columns">
+            <div class="row product_columns" data-collection-products>
               {% if collection.products_count > 0 %}
               {% for product in collection.products %}
               {% render 'product-grid',product: product %}
