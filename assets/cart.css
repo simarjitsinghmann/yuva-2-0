@@ -183,11 +183,12 @@ input[type="number"] {
    width: 7px;
    height: 7px;
    border-right: 1px solid var(--dark-gray);
-   border-bottom: 1px solid ;
+   border-bottom: 1px solid var(--dark-gray);
 }
 .go-to-back a:hover,
 .go-to-back a:hover:before{
    color: var(--theme-color);
+     border-color: var(--theme-color);
 }
 .cstm-cart-sec .inner-box.price-details {
    padding: 38px 48px;
