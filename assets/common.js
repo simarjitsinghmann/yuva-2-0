@@ -1030,8 +1030,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     }
   }
   else{
-    console.log(slider)
-    if(slider){
+    if (!slider.hasClass('slick-initialized')) {{
       slider.slick('refresh');
     }
   }
