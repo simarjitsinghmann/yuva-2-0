@@ -515,8 +515,7 @@ $(document).ready(function(){
           <p>{{ 'general.no_similar_found' | t}}</p>
           </div>`;
       } 
-      console.log(html)
-      drawer.classList.remove('searching');
+        drawer.querySelector('[similar-drawer-body]').innerHTML = html;  
       }
     );
     fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
