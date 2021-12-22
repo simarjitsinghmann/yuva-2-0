@@ -169,7 +169,7 @@ input[type="number"] {
    display: inline-block;
    font-size: 13px;
    font-weight: 500;
-   color: #989898;
+   color: var(--dark-gray);
    padding-left: 15px;
    position: relative;
    letter-spacing: 0;
@@ -182,8 +182,8 @@ input[type="number"] {
    left: 0;
    width: 7px;
    height: 7px;
-   border-right: 1px solid #989898;
-   border-bottom: 1px solid #989898;
+   border-right: 1px solid var(--dark-gray);
+   border-bottom: 1px solid ;
 }
 .go-to-back a:hover,
 .go-to-back a:hover:before{
