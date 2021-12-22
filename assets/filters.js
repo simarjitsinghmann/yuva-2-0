@@ -258,7 +258,6 @@ function getFilterData(filterForm,input,sectionId,remove){
 let triggered = false;
 function ScrollExecute() {
   let moreButon = $('#more');
-  let nextUrl = $(moreButon).find('a').attr("href");
   console.log(moreButon,moreButon.offset().top,$(window).scrollTop())
   if ((($(moreButon).offset().top - $(window).scrollTop()) < 500) && (triggered == false)) {
     triggered = true;
@@ -270,6 +269,7 @@ function ScrollExecute() {
       }
     })
     .done(function(data) {
+      console.log(data)
       $('.product').append($(data).find('.product').html());
       triggered = false
     });
