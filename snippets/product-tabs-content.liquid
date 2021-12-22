@@ -11,8 +11,7 @@
     {% endif %}
   </ul>
 </div>
-<div class="container ">        
-  <div class="row">
+<div class="resp-tabs-content">        
     {% if block.settings.show_description %} 
     <div class="product-description tab-content resp-tab-content resp-tab-contentProduct easy_tabs" id="tabContentDescription" aria-labelledby="easy_tabs_tab_item-2" style="display: none;">
       {{product.description}}             
@@ -28,5 +27,4 @@
       <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>           
     </div>  
     {% endif %}
-  </div>
 </div>
