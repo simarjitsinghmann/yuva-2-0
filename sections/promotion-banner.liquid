@@ -1,17 +1,15 @@
 <div class="{% unless section.settings.full_width %}container{% endunless %}">
   <div  id="promo-banner-{{section.id}}" class="promo-banner__content text-center d-flex justify-content-center align-items-center text__center">
-    <div class="promo-banner__text">
-      {% if section.settings.heading != blank %}
-      <h3>{{ section.settings.heading }}</h3>
-      {% endif %}
-      {% if section.settings.text != blank %}
-      <p>{{ section.settings.text }}</p>
-      {% endif %}
-      {% if section.settings.label != blank and section.settings.link != blank %}
-      <a href="{{ section.settings.link }}" class="type-banner__link">{{ section.settings.label }}
-      </a>
-      {% endif %}
-    </div>
+    {% if section.settings.heading != blank %}
+    <h3>{{ section.settings.heading }}</h3>
+    {% endif %}
+    {% if section.settings.text != blank %}
+    <p>{{ section.settings.text }}</p>
+    {% endif %}
+    {% if section.settings.label != blank and section.settings.link != blank %}
+    <a href="{{ section.settings.link }}" class="type-banner__link">{{ section.settings.label }}
+    </a>
+    {% endif %}
   </div>
 </div>
 <style>
