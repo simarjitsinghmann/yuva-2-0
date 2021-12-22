@@ -1457,14 +1457,13 @@
     bottom: 0;
     padding: 0;
     height: 100%;
-    overflow-y: auto;
+    overflow: hidden;
     -webkit-transform: translateY(100%);
         -ms-transform: translateY(100%);
             transform: translateY(100%);
     -webkit-transition: .5s ease all;
     -o-transition: .5s ease all;
     transition: .5s ease all;
-    overflow: auto;
   }
   .shop-sidebar.active{
     -webkit-transform: translateY(0);
@@ -1478,7 +1477,7 @@
     max-width: 100%;
     position: relative;
     height: 100%;
-    overflow: scroll;
+    overflow: auto;
     padding: 25px 20px 100px;
     overflow-x: hidden;
   }
