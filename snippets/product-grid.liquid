@@ -111,7 +111,7 @@
               {% endif %}
             </div>
             {% endcomment %}
-            <a class="button black-btn small-btn" href="{{product.url | within:collection}}">View Product</a>
+            <a class="link" href="{{product.url | within:collection}}">View Product</a>
           </div>
             {% render 'product-variants' product:product %}
           {% endform %}
