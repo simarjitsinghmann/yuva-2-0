@@ -78,10 +78,8 @@ function sortBy(){
       e.preventDefault();
       var sortMenu = document.getElementById('sort__list');
       if(window.innerWidth < 768){
-        console.log(sortMenu)
         sortMenu.classList.remove('active');
         document.querySelector('body').classList.remove('open-filter-sort');
-        //         }
       }
     });
   }
