@@ -257,7 +257,7 @@ function getFilterData(filterForm,input,sectionId,remove){
 
 let triggered = false;
 function ScrollExecute() {
-  let moreButon = $('#more');
+  let moreButon = $('#more').last();
   console.log(moreButon,moreButon.offset().top,$(window).scrollTop())
   if ((($(moreButon).offset().top - $(window).scrollTop()) < 500) && (triggered == false)) {
     triggered = true;
