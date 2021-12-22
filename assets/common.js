@@ -480,7 +480,9 @@ $(document).ready(function(){
                   <img src="${prodImg}" class="img-responsive" alt="${product.title}" title="${product.title}">
                 </picture>
               </div>`;
-             html +=` <div class="product-productMetaInfo product-information__wrapper ">
+             html +=`<div class="similarItemContainer">
+                <ul class="results-base results-similarGrid">
+                <div class="product-productMetaInfo product-information__wrapper ">
                 <div class="caption-with-letter-spacing light">${product.title}</div>
                 <div class="product-price price__regular">
                     <span class="price-item price-item--regular">
@@ -501,7 +503,8 @@ $(document).ready(function(){
         html +=`</div>
         </div>
       </a>
-    </li>`;
+    </li></div>
+        </div>`;
         })
       }
       else{
