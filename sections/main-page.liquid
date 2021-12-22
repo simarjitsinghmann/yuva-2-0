@@ -1,4 +1,4 @@
-<div class="top_page_title no-bg">
+<div id="main-page-{{section.id}}" class="top_page_title no-bg">
   <div class="container">
     <div class="contact-banner-text">
       <div class="banner_title">
@@ -12,7 +12,18 @@
     {{page.content}}
   </div>
 </div>
-
+{%- if section.settings.bgcolor != blank or section.settings.textcolor != blank  -%}
+<style>
+  #main-page-{{section.id}}{
+    {%- if section.settings.bgcolor != blank  -%}
+    background-color:{{section.settings.bgcolor}};
+    {%- endif -%}
+    {%- if section.settings.textcolor != blank  -%}
+    color:{{section.settings.textcolor}};
+    {%- endif -%}
+  }
+</style>
+{%- endif -%}
 {% schema %}
 {
   "name": "t:sections.main-page.name",
