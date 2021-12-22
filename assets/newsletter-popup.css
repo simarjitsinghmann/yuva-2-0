@@ -210,6 +210,8 @@
 @media (max-width: 575px){
   .newsletter-popup .newsletter-popup-inner {
     max-width: 100%;
+    top: unset;
+    bottom: 0;
   }
   .newsletter-popup .newsletter-popup-inner {
     -webkit-transform: translate(-50%,100%);
