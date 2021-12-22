@@ -2408,6 +2408,11 @@
     font-family: var(--heading-font-family);
   }
   /*============= collection page css start ============*/
+/*========== newsletter popup css start ===========*/
+  .newsletter-popup .newsletter-popup-inner {
+    max-width: 100%;
+}
+/*========== newsletter popup css end ===========*/
 }
 @media screen and (max-width: 480px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
