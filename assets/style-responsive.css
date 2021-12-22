@@ -1834,7 +1834,7 @@
 @media screen and (max-width: 575px) {
   /*=============  common  start  ===============*/
   .shopify-section:not(.announcement-bar-section, .shopify-section-main-header, .shopify-section-slider, #shopify-section-footer, .password-section, .contact-page-section,
-.shopify-blog-section, .shopify-article-section, .product-section, .banner-top-section){
+  .shopify-blog-section, .shopify-article-section, .product-section, .banner-top-section){
     padding: 20px 0;
   }
   .form-control {
@@ -1859,14 +1859,14 @@
     font-size: 10px;
     padding: 2px 8px;
     background-color: var(--gray);
-    color: var(--black);
-    max-width: 68px;
-    border-radius: 30px;
-    font-weight: 600;
-  }
+      color: var(--black);
+        max-width: 68px;
+        border-radius: 30px;
+        font-weight: 600;
+        }
   .breadcrumb {
     display: none;
-}
+  }
   /*==============  common end  =============*/
   /*===============  announcment bar css start ============*/
   .announcement_icon {
