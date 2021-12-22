@@ -1,5 +1,5 @@
 {% layout none %}
-{% if cart.item_count > 0 %}
+{%- if cart.item_count > 0 -%}
 <div id="mini__cartForm">
   <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
     <div class="cart-item-container">
@@ -99,10 +99,10 @@
     </div>
   </form>
 </div>
-{% else %}
+{%- else -%}
 <div class="emptySideCart">
   <img class="emptyCartIcon" src="{{'cart.svg' | asset_url}}">
   <h4>{{'sections.cart.empty' | t}}</h4>
   <a class="button black-btn" href="/collections/all">{{'general.continue_shopping' | t}}</a>
 </div>
-{% endif %}
+{%- endif -%}
