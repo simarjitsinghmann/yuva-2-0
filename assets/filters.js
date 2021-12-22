@@ -259,6 +259,7 @@ let triggered = false;
 function ScrollExecute() {
   let moreButon = $('#more').last();
   let nextUrl = $(moreButon).find('a').attr("href");
+  console.log(isOnScreen($(moreButon))
   if (isOnScreen($(moreButon)) && (triggered == false)) {
     triggered = true;
     $.ajax({
