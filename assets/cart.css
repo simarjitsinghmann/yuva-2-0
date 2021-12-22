@@ -185,7 +185,8 @@ input[type="number"] {
    border-right: 1px solid #989898;
    border-bottom: 1px solid #989898;
 }
-.go-to-back a:hover {
+.go-to-back a:hover,
+.go-to-back a:hover:before{
    color: var(--theme-color);
 }
 .cstm-cart-sec .inner-box.price-details {
