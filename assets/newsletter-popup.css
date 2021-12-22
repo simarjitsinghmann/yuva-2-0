@@ -227,6 +227,18 @@
     display: none; 
   } 
 }
+/*========== newsletter popup css start ===========*/
+  .newsletter-popup .newsletter-popup-inner {
+    max-width: 100%;
+}
+  .newsletter-popup .newsletter-popup-inner {
+    -webkit-transform: translate(-50%,0%);
+    -moz-transform: translate(-50%,0%);
+    -ms-transform: translate(-50%,0%);
+    -o-transform: translate(-50%,0%);
+    transform: translate(-50%,0%);
+}
+/*========== newsletter popup css end ===========*/
 @media (max-width: 480px) {
   .newsletter-popup .newsletter-popup-inner {
     max-width: 90%; 
