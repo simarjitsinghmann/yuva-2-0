@@ -2690,10 +2690,10 @@ padding-top:40px;
       #333333 100%
    );
 }
-.dropdown.quality-select,
-.dropdown.productOptionSelect {
-   position: relative;
-  max-width:25%;
+.dropdown.productOptionSelect, .dropdown.quality-select {
+    position: relative;
+    display: inline-block;
+    min-width: 110px;
 }
 .product__view__option .svg-loader {
    width: 20px !important;
