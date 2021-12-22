@@ -112,36 +112,36 @@ function applyFilters(){
     });
   });  
 
- 	showMultipleOptions = function(){
-    var showOptions = document.getElementsByClassName('showOptions');
-    if(showOptions){		
-      Array.from(showOptions).forEach(function(option) {
-        option.addEventListener("click", ()=>{	
-                                hideOptions();
-        var product = option.getAttribute("data-product");
-        document.getElementById(product).style.display="block";
-      });
-    });
-  }
+//  	showMultipleOptions = function(){
+//     var showOptions = document.getElementsByClassName('showOptions');
+//     if(showOptions){		
+//       Array.from(showOptions).forEach(function(option) {
+//         option.addEventListener("click", ()=>{	
+//                                 hideOptions();
+//         var product = option.getAttribute("data-product");
+//         document.getElementById(product).style.display="block";
+//       });
+//     });
+//   }
 
-  var closeOptions = document.getElementsByClassName('close-product-wrap');
-  if(closeOptions){		
-    Array.from(closeOptions).forEach(function(option) {
-      option.addEventListener("click", ()=>{
-                              var product = option.getAttribute("data-product");
-      document.getElementById(product).style.display="none";
-    });
-  });
-}
+//   var closeOptions = document.getElementsByClassName('close-product-wrap');
+//   if(closeOptions){		
+//     Array.from(closeOptions).forEach(function(option) {
+//       option.addEventListener("click", ()=>{
+//                               var product = option.getAttribute("data-product");
+//       document.getElementById(product).style.display="none";
+//     });
+//   });
+// }
 
-function hideOptions(){
-  var options = document.getElementsByClassName('product-wrap');
-  Array.from(options).forEach(function(option) {
-    option.style.display="none";
-  });
-}
-}
-	showMultipleOptions(); 
+// function hideOptions(){
+//   var options = document.getElementsByClassName('product-wrap');
+//   Array.from(options).forEach(function(option) {
+//     option.style.display="none";
+//   });
+// }
+// }
+// 	showMultipleOptions(); 
 
     var layouts = section.querySelectorAll('a.btn-layout');
     Array.from(layouts).forEach(function(layout) {
