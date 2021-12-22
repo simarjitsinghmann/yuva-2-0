@@ -197,19 +197,23 @@
               {% for product in collection.products %}
               {% render 'product-grid',product: product %}
               {% endfor %}
+              {%- if section.settings.pagination_type == 'infinite'-%}
               {% if paginate.next %}
               <div id="more"><p>&darr; <a href="{{ paginate.next.url }}">More</a></p></div>
               {% endif %}
               <div id="product-list-foot"></div>
+              {%- endif -%}
               {% else %}
               {% render 'not-found'  item:'Product'%}
               {% endif %}
             </div>
           </div>
         </div>
+        {%- if section.settings.pagination_type == 'paged'-%}
         {% if paginate.pages > 1 %}
         {% include 'pagination' ,anchor: ''%}
         {% endif %}
+        {%- endif -%}
       </div>
     </div>
     {% else %}
