@@ -360,7 +360,7 @@ function hideallMenus(menus,current){
   });
 }
 
-function isOnScreen(elem) {
+function screenVisibility(elem) {
   // if the element doesn't exist, abort
   if( elem.length == 0 ) {
     return;
@@ -371,9 +371,6 @@ function isOnScreen(elem) {
   var viewport_bottom = viewport_top + viewport_height;
   var $elem = $(elem);
   var top = $elem.offset().top;
-  if($(window).width() > 767 ){
-    top = top + 400;
-  }
   var height = $elem.height();
   var bottom = top + height;
 
