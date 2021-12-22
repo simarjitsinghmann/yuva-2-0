@@ -235,10 +235,11 @@ function ScrollExecute() {
       url: nextUrl,
       type: 'GET',
       beforeSend: function() {
-        moreButon.remove();
+        moreButon.removeClass('hidden');
       }
     })
     .done(function(data) {
+      moreButon.remove();
       $('[data-collection-products]').append($(data).find('[data-collection-products]').html());
 
       productVariants();
