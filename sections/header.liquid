@@ -90,8 +90,8 @@
   }
   
 </style>
-{% if section.settings.enable_sticky_header %}
   <script>
+{% if section.settings.enable_sticky_header %}
       ///Sticky-header//
     $('body').addClass('{{section.settings.header_style}}')
     $(window).scroll(function () {
@@ -103,13 +103,13 @@
         $("header").removeClass("sticky-header");
       }
     });
+{% endif %}
     $(document).ready(function(){
       $('.menuLinks-wrapper').masonry({
         itemSelector: '.sub-menu-list'
       });
     })
   </script>
-{% endif %}
 
 <script type="application/ld+json">
   {
