@@ -19,7 +19,7 @@ changeItem = function(line, quantity, callback) {
 };
 
 // POST to cart/add.js returns the cart in JSON
-$('[action="/cart/add"]').on('submit', function(evt) {
+$('body').on('submit','[action="/cart/add"]' function(evt) {
   evt.preventDefault();
   $('body').find('.productErrors').hide().html('');
   var submit = $(this).find('[type="submit"]');
