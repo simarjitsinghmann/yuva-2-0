@@ -1,6 +1,6 @@
 {% unless collection.handle == 'all' %}
 {% if section.settings.collection_image or section.settings.collection_description %}
-<div class="top_page_title collection-banner {% if collection.featured_image == blank and section.settings.collection_image %}no-bg{% endif %}" {% if collection.featured_image != blank and section.settings.collection_image %}style="background:url({{collection.featured_image | img_url:'master'}}) no-repeat center/cover"{% endif %}>
+<div class="top_page_title collection-banner {% if collection.featured_image == blank and section.settings.collection_image %}no-bg{% endif %}{% if section.settings.collection_image == false and section.settings.collection_description %} no-bg{% endif %}" {% if collection.featured_image != blank and section.settings.collection_image %}style="background:url({{collection.featured_image | img_url:'master'}}) no-repeat center/cover"{% endif %}>
   <div class="container">
     <div class="contact-banner-text">
       {% if section.settings.collection_image or section.settings.collection_description %}
