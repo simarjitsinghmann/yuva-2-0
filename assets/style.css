@@ -1105,14 +1105,11 @@ a.wishlist-view .fas {
     line-height: 16px;
     position: absolute;
     z-index: 1;
-}
-.card.card--product .product__badge.product__on__sale {
-   background: var(--theme-color);
-   color: var(--white);
+    background: var(--theme-color);
+    color: var(--white);
 }
 .card.card--product .product__badge.product__on__soldOut {
-   background: #626262a8;
-   color: #ffffff;
+	opacity:0.5;
 }
 
 .card-wrapper .card.card--product .card-wrapper-img img.product-second-img {
