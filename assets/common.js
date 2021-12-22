@@ -468,7 +468,9 @@ $(document).ready(function(){
           
       if (products.length > 0) {    
         products.forEach(function(product){
-        	html +=`<li class="product-base">
+        	html +=`<div class="similarItemContainer">
+                <ul class="results-base results-similarGrid">
+                <li class="product-base">
             <a href="${product.url}">
               <div class="product-imageSliderContainer">`;
           if (product.featured_image  != null){
@@ -480,9 +482,7 @@ $(document).ready(function(){
                   <img src="${prodImg}" class="img-responsive" alt="${product.title}" title="${product.title}">
                 </picture>
               </div>`;
-             html +=`<div class="similarItemContainer">
-                <ul class="results-base results-similarGrid">
-                <div class="product-productMetaInfo product-information__wrapper ">
+             html +=`<div class="product-productMetaInfo product-information__wrapper ">
                 <div class="caption-with-letter-spacing light">${product.title}</div>
                 <div class="product-price price__regular">
                     <span class="price-item price-item--regular">
