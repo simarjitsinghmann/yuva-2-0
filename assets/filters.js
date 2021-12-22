@@ -257,7 +257,7 @@ function getFilterData(filterForm,input,sectionId,remove){
 
 let triggered = false;
 function ScrollExecute() {
-  let moreButon = $('#more').last();
+  let moreButon = $('#more');
   let nextUrl = $(moreButon).find('a').attr("href");
   console.log(moreButon,moreButon.offset().top)
   if ((($(moreButon).offset().top - $(window).scrollTop()) < 800) && (triggered == false)) {
