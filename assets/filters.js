@@ -271,7 +271,7 @@ function ScrollExecute() {
     })
     .done(function(data) {
       console.log(data)
-      $('.product').append($(data).find('.product').html());
+      $('[data-collection-products]').append($(data).find('[data-collection-products]').html());
       triggered = false
     });
   }
