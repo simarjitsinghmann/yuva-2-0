@@ -1738,6 +1738,10 @@ div#mini__cartForm {
     display: flex;
     flex-direction: column;
 }
+.mini_cart  .disabled.media-link {
+opacity: 0.5;
+pointer-events: none;
+}
 .cart-btn-container .button {
    margin-bottom: 10px;
 }
