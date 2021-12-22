@@ -472,7 +472,7 @@ $(document).ready(function(){
             <a href="${product.url}">
               <div class="product-imageSliderContainer">`;
           if (product.featured_image  != null){
-            var prodImg = cartItem.image.replace(/(\.[^.]*)$/, "_small$1").replace('http:', '');
+            var prodImg = product.featured_image.replace(/(\.[^.]*)$/, "_small$1").replace('http:', '');
           } else {
             var prodImg = "//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif";
           }
