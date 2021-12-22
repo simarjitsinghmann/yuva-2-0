@@ -40,9 +40,9 @@
   sortBy()
 });
 window.addEventListener('resize', function(event){
-//   changeGridLayout();
+  //   changeGridLayout();
   applyFilters();
-  
+
   hideShowFilters()
 });
 
@@ -89,7 +89,7 @@ function sortBy(){
 function applyFilters(){ 
   var section = document.getElementById('CollectionProductsContainer');
   if (section){
-    
+
     var sectionId = section.dataset.id;
     const filterForm = document.getElementById('FiltersForm'); 
 
@@ -112,107 +112,78 @@ function applyFilters(){
     });
   });  
 
-//  	showMultipleOptions = function(){
-//     var showOptions = document.getElementsByClassName('showOptions');
-//     if(showOptions){		
-//       Array.from(showOptions).forEach(function(option) {
-//         option.addEventListener("click", ()=>{	
-//                                 hideOptions();
-//         var product = option.getAttribute("data-product");
-//         document.getElementById(product).style.display="block";
-//       });
-//     });
-//   }
+  showMultipleOptions(); 
 
-//   var closeOptions = document.getElementsByClassName('close-product-wrap');
-//   if(closeOptions){		
-//     Array.from(closeOptions).forEach(function(option) {
-//       option.addEventListener("click", ()=>{
-//                               var product = option.getAttribute("data-product");
-//       document.getElementById(product).style.display="none";
-//     });
-//   });
-// }
+  var layouts = section.querySelectorAll('a.btn-layout');
+  Array.from(layouts).forEach(function(layout) {
+    layout.addEventListener("click", ()=>{	
+                            var _thisLayout = layout.dataset.value;
+                            section.setAttribute('data-view',_thisLayout)
+  });
+}); 
 
-// function hideOptions(){
-//   var options = document.getElementsByClassName('product-wrap');
-//   Array.from(options).forEach(function(option) {
-//     option.style.display="none";
-//   });
-// }
-// }
-	showMultipleOptions(); 
 
-    var layouts = section.querySelectorAll('a.btn-layout');
-    Array.from(layouts).forEach(function(layout) {
-      layout.addEventListener("click", ()=>{	
-                              var _thisLayout = layout.dataset.value;
-                              section.setAttribute('data-view',_thisLayout)
+var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
+Array.from(priceRangeBars).forEach(function(rangeBar) {
+  var el = rangeBar;
+  var sliderEventListener ='';
+  if(el.noUiSlider) {
+    sliderEventListener = el.noUiSlider;
+  }else{
+    sliderEventListener = noUiSlider.create(el, {
+      start: [el.dataset.start, el.dataset.end],
+      connect: true,
+      tooltips: false,
+      range: {
+        min: [parseInt(el.dataset.min)],
+        max: [parseInt(el.dataset.max)]
+      }
     });
-    }); 
-
- 
-    var priceRangeBars = filterForm.querySelectorAll('.mall-slider-handles');
-    Array.from(priceRangeBars).forEach(function(rangeBar) {
-      var el = rangeBar;
-      var sliderEventListener ='';
-      if(el.noUiSlider) {
-        sliderEventListener = el.noUiSlider;
-      }else{
-      sliderEventListener = noUiSlider.create(el, {
-        start: [el.dataset.start, el.dataset.end],
-        connect: true,
-        tooltips: false,
-        range: {
-          min: [parseInt(el.dataset.min)],
-          max: [parseInt(el.dataset.max)]
-        }
-      });
-      }
-      if(window.innerWidth > 767){
-        sliderEventListener.on('change',  function(values){
-          getFilterData(filterForm,rangeBar,sectionId);
-        })
-      }
-      sliderEventListener.on("update", function(values){
-        var minVal =  parseInt(values[0]);
-        var newformatMoney = moneyFormat;
-        section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = minVal;
-        section.querySelector('[data-min-value]').innerHTML =  Shopify.formatMoney(minVal*100,moneyFormat);
-        var maxVal =  parseInt(values[1]);
-        section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = maxVal;
-        section.querySelector('[data-max-value]').innerHTML = Shopify.formatMoney(maxVal*100,moneyFormat);
-      })
+  }
+  if(window.innerWidth > 767){
+    sliderEventListener.on('change',  function(values){
+      getFilterData(filterForm,rangeBar,sectionId);
     })
+  }
+  sliderEventListener.on("update", function(values){
+    var minVal =  parseInt(values[0]);
+    var newformatMoney = moneyFormat;
+    section.querySelectorAll('input[name="filter.v.price.gte"]')[0].value = minVal;
+    section.querySelector('[data-min-value]').innerHTML =  Shopify.formatMoney(minVal*100,moneyFormat);
+    var maxVal =  parseInt(values[1]);
+    section.querySelectorAll('input[name="filter.v.price.lte"]')[0].value = maxVal;
+    section.querySelector('[data-max-value]').innerHTML = Shopify.formatMoney(maxVal*100,moneyFormat);
+  })
+})
 
 
-    if(window.innerWidth > 767){
+if(window.innerWidth > 767){
 
-      var prices = filterForm.querySelectorAll('input[type=number]');
-      Array.from(prices).forEach(function(price) {
-        price.addEventListener("change", ()=>{	
-                               getFilterData(filterForm,price,sectionId)
-      });
-    });  
+  var prices = filterForm.querySelectorAll('input[type=number]');
+  Array.from(prices).forEach(function(price) {
+    price.addEventListener("change", ()=>{	
+                           getFilterData(filterForm,price,sectionId)
+  });
+});  
 
-    var inputs = filterForm.querySelectorAll('input[type=checkbox]');
-    Array.from(inputs).forEach(function(input) {
-      input.addEventListener("click", ()=>{	
-                             getFilterData(filterForm,input,sectionId)
-    });
-    });
+var inputs = filterForm.querySelectorAll('input[type=checkbox]');
+Array.from(inputs).forEach(function(input) {
+  input.addEventListener("click", ()=>{	
+                         getFilterData(filterForm,input,sectionId)
+});
+});
 }
-    else{
-      filterForm.addEventListener("submit", (e)=>{
-        e.preventDefault();
-        getFilterData(filterForm,filterForm,sectionId)
-      });
-    }
+else{
+  filterForm.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    getFilterData(filterForm,filterForm,sectionId)
+  });
+}
 
 var sortBy = section.querySelectorAll('[name="sort_by"]');
 Array.from(sortBy).forEach(function(sort) {
   sort.addEventListener("click", ()=>{	
-                        
+
                         document.querySelector('body').classList.remove('open-filter-sort');
   getFilterData(filterForm,sort,sectionId);
 });
