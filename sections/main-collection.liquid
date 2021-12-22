@@ -209,10 +209,8 @@
             </div>
           </div>
         </div>
-        {%- if section.settings.pagination_type == 'paged'-%}
-        {% if paginate.pages > 1 %}
+        {%- if section.settings.pagination_type == 'paged' and  paginate.pages > 1-%}
         {% include 'pagination' ,anchor: ''%}
-        {% endif %}
         {%- endif -%}
       </div>
     </div>
