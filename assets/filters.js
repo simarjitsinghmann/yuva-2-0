@@ -259,7 +259,7 @@ let triggered = false;
 function ScrollExecute() {
   let moreButon = $('#more').last();
   let nextUrl = $(moreButon).find('a').attr("href");
-  if ((($(moreButon).offset().top - $(window).scrollTop()) < 800) && (triggered == false)) {
+  if (isOnScreen($(moreButon)) && (triggered == false)) {
     triggered = true;
     $.ajax({
       url: nextUrl,
