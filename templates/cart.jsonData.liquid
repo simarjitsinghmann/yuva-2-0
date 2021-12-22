@@ -40,13 +40,13 @@
               {%- endif -%}
 
               {%- if item.unit_price_measurement -%}
-              <small class="unit-price">
+              <small class="unit-price">(
                 {{ item.variant.unit_price | money }}
                 /
                 {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
                 {{- item.variant.unit_price_measurement.reference_value -}}
                 {%- endif -%}
-                {{ item.variant.unit_price_measurement.reference_unit }}
+                {{ item.variant.unit_price_measurement.reference_unit }})
               </small>
               {%- endif -%}
             </h6>
