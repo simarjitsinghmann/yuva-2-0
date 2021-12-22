@@ -272,9 +272,13 @@ input[type="number"] {
    margin: 0 auto;
    letter-spacing: 0.5px;
 }
+.announcement_open .sticky_cartsidebar {
+   position: sticky;
+   top: 140px;
+}
 .sticky_cartsidebar {
    position: sticky;
-   top: 150px;
+   top: 140px;
 }
 /* responsive */
 @media screen and (max-width: 1440px) {
