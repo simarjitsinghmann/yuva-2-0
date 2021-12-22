@@ -466,11 +466,12 @@ $(document).ready(function(){
     .then(({ products }) => {
       var html = '';
           
-      if (products.length > 0) {    
+      if (products.length > 0) {   
+        html +=`<div class="similarItemContainer">
+                <ul class="results-base results-similarGrid">`;
+                 
         products.forEach(function(product){
-        	html +=`<div class="similarItemContainer">
-                <ul class="results-base results-similarGrid">
-                <li class="product-base">
+        	html +=`<li class="product-base">
             <a href="${product.url}">
               <div class="product-imageSliderContainer">`;
           if (product.featured_image  != null){
@@ -503,9 +504,10 @@ $(document).ready(function(){
         html +=`</div>
         </div>
       </a>
-    </li></div>
-        </div>`;
+    </li>`;
         })
+        html +=`</ul>
+        </div>`;
       }
       else{
         html = `<div class="SimilarNoResults" style="">
