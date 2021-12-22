@@ -259,7 +259,6 @@ let triggered = false;
 function ScrollExecute() {
   let moreButon = $('#more').last();
   let nextUrl = $(moreButon).find('a').attr("href");
-  console.log(moreButon,moreButon.offset().top,$(window).scrollTop())
   if ((($(moreButon).offset().top - $(window).scrollTop()) < 800) && (triggered == false)) {
     triggered = true;
     $.ajax({
@@ -270,7 +269,6 @@ function ScrollExecute() {
       }
     })
     .done(function(data) {
-      console.log(data)
       $('[data-collection-products]').append($(data).find('[data-collection-products]').html());
       triggered = false
     });
