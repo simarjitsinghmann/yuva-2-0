@@ -264,7 +264,7 @@ function ScrollExecute() {
   
   // Get URL from the loadmore button
   let nextUrl = $(moreButon).find('a').attr("href");
-  
+  console.log(moreButon,nextUrl)
   // Button position when AJAX call should be made one time
   if (((moreButon.offset().top - $(window).scrollTop()) < 800) && (triggered == false)) {
   
