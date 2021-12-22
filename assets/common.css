@@ -713,14 +713,14 @@ padding-right: 15px;
     height: 35px;
     border-radius: 0;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid var(--black);
     text-align: left;
     padding: 7px 15px;
 }
 .dropdown.productOptionSelect .caret, .quality-select .caret {
     display: block;
-    border-bottom: 1px solid #7b7b7b;
-    border-left: 1px solid #7b7b7b;
+    border-bottom: 1px solid var(--black);
+    border-left: 1px solid var(--black);
     width: 7px;
     height: 7px;
     -moz-transform: rotate(-45deg);
