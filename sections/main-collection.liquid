@@ -238,6 +238,22 @@
       "label": "Show Collection Description"
     },
     {
+      "type": "radio",
+      "id": "pagination_type",
+      "default": "paged",
+      "label": "Pagination Type",
+      "options":[
+			{
+              "value": "paged",
+              "label": "Paged Navigation"
+			},
+			{
+              "value": "infinite",
+              "label": "Infinite Scrolling"
+			}
+		]
+    },
+    {
       "type": "range",
       "id": "products_per_page",
       "min": 8,
