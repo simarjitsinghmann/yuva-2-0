@@ -164,11 +164,6 @@
 .pop_cross {
     display: inherit;
 }
-@media (max-width: 1024px) {
-  .newsletter-popup .newsletter-popup-inner .popclose {
-    line-height: 32px; 
-  }
-}
 @media (max-width: 991px) {
   .newsletter-popup .newsletter-popup-inner {
     max-width: 650px; 
@@ -183,13 +178,6 @@
     border-radius: 0;
     padding: 0; 
   }
-  .newsletter-popup .newsletter-popup-inner .popclose {
-    width: 30px;
-    height: 30px;
-    line-height: 29px;
-    top: -8px;
-    right: -8px; 
-  } 
   .newsletter-popup .newsletter-popup-inner .popup-body .news-img {
     max-height: 190px;
     overflow: hidden; 
