@@ -70,7 +70,18 @@
       {%- render 'pagination', paginate: paginate -%}
     {%- endif -%}
 {%- endpaginate -%}
-
+{%- if section.settings.bgcolor != blank or section.settings.textcolor != blank  -%}
+<style>
+  #main-page-{{section.id}}{
+    {%- if section.settings.bgcolor != blank  -%}
+    background-color:{{section.settings.bgcolor}};
+    {%- endif -%}
+    {%- if section.settings.textcolor != blank  -%}
+    color:{{section.settings.textcolor}};
+    {%- endif -%}
+  }
+</style>
+{%- endif -%}
 {% schema %}
 {
   "name": "t:sections.main-blog.name",
