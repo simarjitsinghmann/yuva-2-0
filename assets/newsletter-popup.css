@@ -213,6 +213,7 @@
     top: unset;
     bottom: 0;
   }
+  
   .newsletter-popup .newsletter-popup-inner {
     -webkit-transform: translate(-50%,100%);
     -moz-transform: translate(-50%,100%);
@@ -233,6 +234,10 @@
     height: 24px;
     top: 0;
     right: 0;
+  }
+    .newsletter-popup .newsletter-popup-inner .popup-body .news-img {
+    height: 240px;
+    overflow: hidden;
   }
 }
 

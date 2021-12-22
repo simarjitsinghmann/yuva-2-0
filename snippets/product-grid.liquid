@@ -32,6 +32,7 @@
           {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
           <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
           <div class="form-group">
+            {% comment %}
             {% assign hideATC = false %}
             {% for option in product.options_with_values %}
             {% assign downOption = option.name | downcase %}
@@ -73,7 +74,7 @@
               </ul> 
             </div>
             {% endfor %}
-
+            {% endcomment %}
             {% assign preorder = false %}
             {% if settings.enable_preorder and current_variant.inventory_policy == 'continue' and current_variant.inventory_quantity <= 0  %}
             {% assign preorder = true %}
