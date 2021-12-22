@@ -1599,9 +1599,12 @@ li.breadcrumb-item a {
    cursor: pointer;
    align-self: flex-start;
 }
+.announcement_open .sticky-sidebar-wrapper {
+   top: 100px;
+}
 .sticky-sidebar-wrapper {
    position: sticky;
-   top: 10px;
+   top: 80px;
 }
 .shop-sidebar-inside {
    height: 100%;
