@@ -266,7 +266,7 @@ function ScrollExecute() {
   let nextUrl = $(moreButon).find('a').attr("href");
   
   // Button position when AJAX call should be made one time
-  if ((($(moreButon).offset().top - $(window).scrollTop()) < 800) && (triggered == false)) {
+  if (((moreButon.offset().top - $(window).scrollTop()) < 800) && (triggered == false)) {
   
     // Trigger shortcircuit to ensure AJAX only fires once
     triggered = true;
