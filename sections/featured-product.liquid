@@ -10,7 +10,13 @@
         <div class="col-md-7">
           <div class="product-image-left">
             {% unless product == empty %}   
-            {% include 'lazy-image' image:product.featured_image.src %}  
+            {%- for images in product.images -%}
+            {%-if media.media_type == 'image'-%}
+            <div id="media-{{media.id}}"class="item" data-thumb="{{media | img_url:'master'}}" >
+              {% include 'lazy-image' image:media %}  
+            </div>
+            {%-endif-%}
+            {% endfor %}
             {%else%}
             {{ 'placeholder.svg' | asset_url | img_tag }}
             {%endunless%}
