@@ -982,6 +982,7 @@ slickSlider = function(selector,slideIndex){
         }
       }
       else{
+        console.log('selector',selector.hasClass('slick-initialized'))
         if (selector.hasClass('slick-initialized')) {
           selector.slick('unslick')
         }
