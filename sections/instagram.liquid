@@ -4,39 +4,57 @@
     <h2>{{section.settings.heading}}</h2>
     <p class="instagramUserName">{{section.settings.subheading}}</p>
   </div>
-  <div class="instagram-post-list">
-    <ul id="instafeed">
-      {% for i in (1..6) %}
-    <li>
-      <a>
-        <div class="instagram-post-detail">
-          <img src="{{ 'placeholder.svg' | asset_url }}" />
-          <div class="insta-icon">
-            <i class="fab fa-instagram"></i>
-          </div>
-        </div>
-      </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+  {% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
+  <div class="instagram-post-list"><ul id="instafeed"></ul></div>
+  {% endif %}
 </div>
 </div>
 {% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
+<script type="application/json" name="slider-json">    
+         {
+          "slidesToShow":6,
+          "slidesToScroll":3,
+          "infinite":true,
+          "draggable":false,
+         "dots":false,
+          "arrows":true,
+          "prevArrow":"<button type=\"button\" class=\"slick-prev\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M15.526 18.966L8.559 12l6.967-6.967\"></path></svg></span></button>",
+          "nextArrow":"<button type=\"button\" class=\"slick-next\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M8.474 18.966L15.44 12 8.474 5.033\"></path></svg></span></button>",
+          "responsive":[
+          	{
+            "breakpoint": 768,
+              "settings": {
+              	"slidesToShow": 3,
+                "slidesToScroll":2
+              }
+            },
+          	{
+            "breakpoint": 576,
+                "settings": {
+                    "slidesToShow": 2,
+                    "dots":true,
+                    "arrows":false,
+                    "slidesToScroll":1,
+                    "draggable":true
+                  }
+            }
+          ]
+        }
+</script>
 <script>
   function instagramFeed(){
     var userFeed = new Instafeed({
       get: 'user',
       userId: '{{ section.settings.insta_user_id}}',
       accessToken: '{{ section.settings.insta_access_Token}}',
-      limit: 6,
+      limit: {{section.settings.post_count}},
       resolution : 'standard_resolution',
       template:'<li><a href="{% raw %}{{link}}{% endraw %}"><div class="instagram-post-detail"><img src="{% raw %}{{image}}{% endraw %}" alt=""><div class="insta-icon"><i class="fab fa-instagram"></i></div></div></a></li>'
     });
     userFeed.run();
     setTimeout(function(){ 
-      $('#instafeed a').attr('target','_blank');    
-                         }, 2000);
+      $('#instafeed a').attr('target','_blank');                 
+                         }, 1000);
   }
   instagramFeed();
 </script>
@@ -87,8 +105,7 @@
       {
         "type": "textarea",
         "id": "subheading",
-        "label": "t:sections.instagram.settings.subheading.label",
-        "default": "@username"
+        "label": "t:sections.instagram.settings.subheading.label"
       },
        {
         "type": "text",
@@ -99,6 +116,15 @@
         "type": "text",
         "id": "insta_access_Token",
         "label": "t:sections.instagram.settings.insta_access_Token.label"
+      },
+      {
+        "type": "range",
+        "id": "post_count",
+        "label": "t:sections.instagram.settings.post_count.label",
+        "default":6,
+        "min":6,
+        "max":18,
+        "step":1
       },
       {
         "type": "color",
