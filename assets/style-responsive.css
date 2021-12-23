@@ -973,6 +973,12 @@
   .product-content {
     padding-top: 10px;
   }
+  .price-widget-mobile span {
+    font-size: 10px;
+  }
+  .price-widget-mobile span:not(:last-child) {
+    margin-right: 5px;
+  }
   .CollectionProductGrid .product-collection.grid-view {
     padding-top: 20px;
   }
