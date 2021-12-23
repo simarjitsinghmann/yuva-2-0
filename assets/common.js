@@ -1141,7 +1141,7 @@ $(document).ready(function()
     drawer.setAttribute('id','quickView_product');
     drawer.classList.add('quickView_product');
     drawer.querySelector('[data-drawer-body]').innerHTML = preLoadLoadGif;
-    drawer.querySelector('[data-drawer-title]').innerHTML ='Quick View';
+    drawer.querySelector('[data-drawer-title]').innerHTML =quickViewHeading;
     drawer.querySelector('[data-drawer-body]').classList.add('searching');
     document.querySelector('body').classList.add('side_Drawer_open'); 
     var _url = $(this).data('href');
