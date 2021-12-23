@@ -66,7 +66,7 @@
                 {% endfor %}
                 {%- if option.values.size > 7 -%}
             {% assign hideATC = true %}
-                <li class="{{downOption}}_option variant_option"><a href="{{product.url | within:collection}}">{{ 'products.product.more_options' | item: 7| t }}</a></li>
+                <li class="{{downOption}}_option variant_option"><a href="{{product.url | within:collection}}">{{ 'products.product.more_options' | t: item : 7 }}</a></li>
                 {%- endif -%}
               </ul> 
             </div>
@@ -110,7 +110,7 @@
               {% endif %}
             </div>
             {% endcomment %}
-            <a class="link" href="{{product.url | within:collection}}">{{ 'products.product.view_product' | t }} {{ 'products.product.more_options' | t: item : 7 }}</a>
+            <a class="link" href="{{product.url | within:collection}}">{{ 'products.product.view_product' | t }}</a>
           </div>
             {% render 'product-variants' product:product %}
           {% endform %}
