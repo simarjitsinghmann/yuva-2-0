@@ -15,8 +15,7 @@
               <a class="header__heading-link" href="{{ routes.root_url }}">
                 {%- if section.settings.logo != blank -%}
                 {%- assign image_size = section.settings.logo_width | append: 'px' -%}
-              {% render 'lazy-image' image:section.settings.logo,class:'Yuva-logo',max_width:image_size %}
-                
+              {% render 'lazy-image' image:section.settings.logo,class:'Yuva-logo',max_width:image_size %}                
                 {% else %}
                 <span class="h2">{{ shop.name }}</span>
                 {% endif %}
