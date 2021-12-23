@@ -127,9 +127,6 @@
   {% when 'button' %}
   <div class="product_button">
     {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-    {%- if template == 'product' -%}
-    {% include 'product-pickup-availability' %}
-    {%- endif -%}
     {% render 'product-variants' product:product %}
     {% assign preorder = false %}
     {% if settings.enable_preorder and current_variant.inventory_policy == 'continue' and current_variant.inventory_quantity <= 0  %}
@@ -181,6 +178,11 @@
       {% endif %}
     </div>
     
+    {%- endif -%}
+    
+    
+    {%- if template == 'product' -%}
+    {% include 'product-pickup-availability' %}
     {%- endif -%}
     <div class="productErrors error_message" style="display:none"></div>
     <div class="pdp-action-container {% unless current_variant.available %}disabled{% endunless %}" data-button-wrapper>
