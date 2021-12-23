@@ -110,7 +110,7 @@
               {% endif %}
             </div>
             {% endcomment %}
-            <a class="link" href="{{product.url | within:collection}}">{{ 'products.product.view_product' | t }} {{ 'products.product.more_options' | item : '7' | t }}</a>
+            <a class="link" href="{{product.url | within:collection}}">{{ 'products.product.view_product' | t }} {{ 'products.product.more_options' | t: item : 7 }}</a>
           </div>
             {% render 'product-variants' product:product %}
           {% endform %}
