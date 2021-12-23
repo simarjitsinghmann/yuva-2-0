@@ -982,7 +982,9 @@ slickSlider = function(selector,slideIndex){
         }
       }
       else{
-      	selector.slick('unslick')
+        if (selector.hasClass('slick-initialized')) {
+          selector.slick('unslick')
+        }
       }
     }
     else{
@@ -991,9 +993,7 @@ slickSlider = function(selector,slideIndex){
         selector.slick(options).slick('slickGoTo',slideIndex);
       }
       else{
-        if (selector.hasClass('slick-initialized')) {
           selector.slick(options);
-        }
       }
     }
     
