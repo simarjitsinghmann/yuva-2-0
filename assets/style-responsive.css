@@ -2221,11 +2221,13 @@
   }
   /*==================  blog css end  ============*/
   /*===============  single banner css start  =============*/
-  #banner-template--14895903604945__16345626467f5a91b7 .banner-caption-title span.tag-line {
-    display: none;
-  }
-  .single-banner-section.banner-section .item {
-    height: 380px;
+  .banner-caption-title {
+    position: absolute;
+    padding: 20px;
+    max-width: 360px;
+    height: 100%;
+    background-color: #fff;
+    left: 0;
   }
   .single-banner-section.banner-section h2 {
     font-size: 25px!important;
