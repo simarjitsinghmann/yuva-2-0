@@ -3,14 +3,14 @@
     "16400961129ea6dae7": {
       "type": "promotion-banner",
       "settings": {
-        "full_width": false,
+        "full_width": true,
         "heading": "Promotion",
         "text": "Add the details of your promotion",
         "link": "",
         "label": "Shop now",
         "bgcolor": "#000000",
-        "bgcolor_opacity": 8,
-        "textcolor": "#000000",
+        "bgcolor_opacity": 100,
+        "textcolor": "#a91d1d",
         "btntextcolor": "#000000",
         "btnbgcolor": "rgba(0,0,0,0)",
         "btnborder": "#000000",
@@ -31,60 +31,10 @@
         "enable_filtering": true,
         "enable_sorting": true
       }
-    },
-    "163774707816571c51": {
-      "type": "banner-section",
-      "disabled": true,
-      "settings": {
-        "tag_line": "Tag Line",
-        "heading": "Heading",
-        "subheading": "",
-        "content": "content",
-        "btn": "Explore Now",
-        "link": "",
-        "sh_bg": "#000000",
-        "sh_text": "#ffffff",
-        "h_text": "#f17e35",
-        "subh_text": "#ffffff",
-        "c_text": "#000000",
-        "btn_bg": "#f17e35",
-        "btn_text": "#ffffff",
-        "btn_h_bg": "#000000",
-        "btn_h_text": "#ffffff",
-        "info_position": "center-left",
-        "heading_font_size": 50,
-        "subheading_font_size": 100
-      }
-    },
-    "1639998432e895e439": {
-      "type": "rich-text",
-      "disabled": true,
-      "blocks": {
-        "16399984327850134c-0": {
-          "type": "richtext",
-          "settings": {
-            "heading": "Rich text",
-            "content": "<p>Use this section to welcome customers to your store, say a bit about your brand, or share news and seasonal promotions.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "16399984327850134c-0"
-      ],
-      "settings": {
-        "bgcolor": "#ffffff",
-        "content_alignment": "left",
-        "top_space_desktop": 30,
-        "bottom_space_desktop": 30,
-        "top_space_mobile": 30,
-        "bottom_space_mobile": 30
-      }
     }
   },
   "order": [
     "16400961129ea6dae7",
-    "main-collection",
-    "163774707816571c51",
-    "1639998432e895e439"
+    "main-collection"
   ]
 }
