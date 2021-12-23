@@ -4,9 +4,9 @@
     {% for block in section.blocks %}
     <div class="col" {{ block.shopify_attributes }}>
       {% if block.settings.image != blank %}
-      <img src="{{block.settings.image | img_url:'master'}}" alt="{{block.settings.heading}}">
+      {% include 'lazy-image' image:block.settings.image %}
       {% else %}
-      <img src="https://yova.shinedezign.pro/assets/images/delivery.png" alt="delivery">
+      <img src="{{'placeholder.svg' | asset_url}}" alt="{{shop.name}}" />
       {% endif %}
       <div class="service_title">
         <h6>{{block.settings.heading}}</h6>
