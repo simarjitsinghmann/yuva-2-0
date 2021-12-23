@@ -5539,7 +5539,8 @@ body #shopify-product-reviews {
    .testimonial-client-slide
    .slider-item
    .slider-box
-   p::-webkit-scrollbar-thumb:hover {
+   p::-webkit-scrollbar-thumb:hover,
+*::-webkit-scrollbar-thumb:hover{
    background: var(--gray);
 }
 /* scrollbar css end */
