@@ -2358,11 +2358,11 @@ padding-top:40px;
     background: #fff!important;
 }
 .left-product-images.multiple-images .gallery-item {
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-   -ms-flex-wrap: wrap;
-       flex-wrap: wrap;
+/*    display: -webkit-box;
+   display: -ms-flexbox; */
+   display: block;
+/*    -ms-flex-wrap: wrap;
+       flex-wrap: wrap; */
    margin: 0 -3px;
   width: 100%;
 }
