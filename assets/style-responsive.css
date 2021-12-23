@@ -892,12 +892,17 @@
   }
   /*==============  featured blog end  ====================*/
   /*============ banner css start =============*/
-  .banner.banner-section.item {
-    height: 450px;
+ /*===============  single banner css start  =============*/
+  .single-banner-section.banner-section .item {
+    height: 400px;
   }
-  .banner-section .item {
-    height: 300px;
+  .single-banner-section.banner-section h2 {
+    font-size: 27px!important;
   }
+  .banner-caption-title h3 {
+    font-size: 75px!important;
+  }
+  /*===============  single banner css end  =============*/
   .banner-section.item.slider-banner h1 {
     font-size: 30px!important;
   }
