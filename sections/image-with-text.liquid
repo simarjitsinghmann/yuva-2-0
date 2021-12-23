@@ -11,7 +11,6 @@
   </div>
   {%- endcapture -%}
   <div class="container">
-    <div class="inner-container">
       <div class="row align-items-center image-position-{{section.settings.image_alignment}}">
         {% if section.settings.image_alignment == 'left' %}
         {{- image_content -}}
@@ -27,7 +26,6 @@
         {{- image_content -}}
         {% endif %}
       </div>
-    </div>
   </div>
 </div>
 <style>
