@@ -1956,7 +1956,7 @@
     display: block;
     margin:0;
   }
-  .pdp-action-container {
+  .product_button .pdp-action-container {
     position: sticky;
     bottom: 0;
     background: #fff;
@@ -1966,8 +1966,8 @@
     justify-content: space-between;
     z-index: 1;
   }
-  .single__product__right .pdp-add-to-bag,
-  .single__product__right .shopify-payment-button {
+  .product_button .pdp-add-to-bag,
+  .product_button .shopify-payment-button {
     width: 100%;
     margin-bottom: 0;
     max-width: 48%;
