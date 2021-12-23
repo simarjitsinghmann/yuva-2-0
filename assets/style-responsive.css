@@ -2554,11 +2554,13 @@
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .banner-caption .center-left,
-  .carousel-caption .center-left {
+  .carousel-caption .center-left,
+  .flex-absolute.center-left {
     left: 40px;
   }
   .banner-caption .center-right,
-  .carousel-caption .center-right {
+  .carousel-caption .center-right,
+  .flex-absolute.center-right {
     right: 40px;
   }
   .banner-caption .top-right,
