@@ -2253,8 +2253,9 @@
     background: #fff;
     padding: 20px;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    z-index: 1;
   }
   .single__product__right .ask_about {
     margin-bottom: 10px;
