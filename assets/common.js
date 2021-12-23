@@ -992,13 +992,21 @@ sliders = function(){
   var sliders = jQuery('body').find('[data-slider]');
   if(sliders.length > 0){
     sliders.each(function(index) {
-      if (!jQuery(this).hasClass('slick-initialized')) {
-        slickSlider(jQuery(this));
-        
-        if(selector.is("[mobile-only]")){
-          if($(window).width() < 768 ){
+
+      if(selector.is("[mobile-only]")){
+        if($(window).width() < 768 ){
+
+          if (!jQuery(this).hasClass('slick-initialized')) {
+            slickSlider(jQuery(this));
           }
         }
+        else{
+
+        }
+      }else{
+      	 if (!jQuery(this).hasClass('slick-initialized')) {
+            slickSlider(jQuery(this));
+          }
       }
     });
   }
