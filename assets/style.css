@@ -5498,7 +5498,8 @@ body #shopify-product-reviews {
    .slider-box
    p::-webkit-scrollbar-track, 
 .side-menu .inner-side::-webkit-scrollbar-track, 
-.side-menu .nav-item.dropdown .inner::-webkit-scrollbar-track {
+.side-menu .nav-item.dropdown .inner::-webkit-scrollbar-track,
+*::-webkit-scrollbar-track{
    background: var(--gray);
 }
 
