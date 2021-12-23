@@ -2513,11 +2513,14 @@
     height: 43px;
 }
   /*===========  searchbar css start ==============*/
-/*============  single banner css start ============*/
+  /*============  single banner css start ============*/
   .single-banner-section.banner-section .item {
     height: 220px;
-}
-/*============  single banner css start ============*/
+  }
+  .single-banner-section.banner-section h2 {
+    line-height: 1.4;
+  }
+  /*============  single banner css start ============*/
 }
 @media screen and (max-width: 414px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
@@ -2563,9 +2566,6 @@
   .collection-list-view-wrapper.left-wrapper .collection-list-view-card, .collection-list-view-wrapper.right-wrapper .collection-list-view-card {
     height: 270px;
 }
-  .single-banner-section.banner-section h2 {
-    line-height: 1.4;
-  }
   .banner-caption-title h3 {
     font-size: 30px!important;
   }
