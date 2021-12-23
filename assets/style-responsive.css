@@ -2221,7 +2221,10 @@
   }
   /*==================  blog css end  ============*/
   /*===============  single banner css start  =============*/
-.banner-caption-title {
+  .single-banner-section.banner-section .item {
+    height: 300px;
+  }
+  .banner-caption-title {
     position: absolute;
     padding: 20px;
     max-width: 50%;
@@ -2232,7 +2235,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-}
+  }
   .single-banner-section.banner-section h2 {
     font-size: 25px!important;
     margin: 10px 0;
