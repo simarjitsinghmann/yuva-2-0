@@ -5230,6 +5230,7 @@ body #shopify-product-reviews {
   right: 0;
   max-width: 464px;
   height: 100%;
+      opacity:0;
   -webkit-transform: translate(100%, 0);
   -ms-transform: translate(100%, 0);
   transform: translate(100%, 0);
@@ -5244,6 +5245,7 @@ body #shopify-product-reviews {
    -webkit-transform: translate(0, 0);
        -ms-transform: translate(0, 0);
            transform: translate(0, 0);
+      opacity:1;
 }
 .side_Drawer_open,
 .similar_Drawer_open{
