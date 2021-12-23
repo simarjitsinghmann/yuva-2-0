@@ -1887,7 +1887,7 @@
     height: 550px;
     width:100%;
     -o-object-fit:cover;
-       object-fit:cover;
+    object-fit:cover;
   }
   .single__product__right .pdp-wrapper {
     max-width: 100%;
@@ -1915,11 +1915,11 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .left-product-images .slick-arrow svg{
     width: 15px;
@@ -1956,11 +1956,20 @@
     flex: 0 0 100%;
     width: 100%;
     padding:0;
-}
+  }
   .left-product-images.multiple-images .gallery-item {
-   display: block;
+    display: block;
     margin:0;
-}
+  }
+  .single__product__right .pdp-add-to-bag,
+  .single__product__right .shopify-payment-button {
+    width: 100%;
+    margin-bottom: 0;
+    max-width: 48%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 48%;
+    flex: 0 0 48%;
+  }
   /*============= PDP css end ===============*/
   /*============= blog detail css start ==============*/
   .blog-detail-outer .row,
