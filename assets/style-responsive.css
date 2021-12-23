@@ -2050,6 +2050,12 @@
   .shopify-section-slider .slick-dots li button {
     margin: 3px 3px;
   }
+  .banner-section .slide-image-desktop {
+    display:none;
+  }
+  .banner-section .slide-image-mobile {
+    display:block;
+  }
   /*================ banner slider css end ================*/
   /*=============  whats more css start  ===============*/
   .card-information__wrapper.content-border-true {
@@ -2199,12 +2205,6 @@
   }
   .banner-caption-title {
     padding: 20px;
-  }
-  .banner-section .slide-image-desktop {
-    display:none;
-  }
-  .banner-section .slide-image-mobile {
-    display:block;
   }
   /*===============  single banner css end  =============*/
   .instagram-post-list ul li {
