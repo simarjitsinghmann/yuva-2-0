@@ -510,8 +510,6 @@ img {
   border-radius: 0;
   background: transparent;
   height: 100%;
-  outline: 4px solid rgba(255, 255, 255, 0.5);
-  outline-offset: -13px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -522,6 +520,10 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+.style_variation_2 .card-information__wrapper.content-border-true {
+  outline: 4px solid rgba(255, 255, 255, 0.5);
+  outline-offset: -13px;
 }
 .style_variation_2 .card-information .card-information-image {
   border: 0;
