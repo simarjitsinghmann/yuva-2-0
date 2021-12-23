@@ -8,9 +8,9 @@
     <div class="feature-product product_content_section ">
       <div class="row">
         <div class="col-md-7">
-          <div class="product-image-left">
+          <div class="product-image-left" {% unless product == empty and product.images.size == 1%}data-slider{% endunless %}>
             {% unless product == empty %}   
-            {%- for images in product.images -%}
+            {%- for media in product.media -%}
             {%-if media.media_type == 'image'-%}
             <div id="media-{{media.id}}"class="item" data-thumb="{{media | img_url:'master'}}" >
               {% include 'lazy-image' image:media %}  
