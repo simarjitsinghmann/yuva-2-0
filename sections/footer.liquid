@@ -88,11 +88,8 @@
             {%- endif -%}
           </div>
           <button type="submit" class="button button--secondary newsletter-form__button" name="commit" id="Subscribe">
-            {% if block.settings.btn_text != blank %}
-            {{block.settings.btn_text}}
-            {% else%}
+  
             <img src="{{'arrow.svg' | asset_url}}"  alt="{{'newsletter.button_label' | t}}"/>
-            {% endif %}
           </button>
           {% endif %}
           {% endform %}
