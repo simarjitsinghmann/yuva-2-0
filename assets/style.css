@@ -2424,12 +2424,6 @@ img.responsive-image__image {
   -o-object-fit: cover;
   object-fit: cover;
 }
-/* .single__product__right p.single__product_sub_title {
-font-size: var(--font-size);
-line-height: 20px;
-color: var(--dark-gray);
-margin-bottom: 8px;
-} */
 .ratingbox .star-rating {
   text-align: left;
   margin-bottom: 10px;
@@ -3609,6 +3603,7 @@ body.header2.announcement_open .single__product__right.sidebar-fixed {
   height: 100%;
   max-height: 630px;
   overflow: hidden;
+  position:relative;
 }
 .feature-section .product-image-left img {
   width: 100%;
