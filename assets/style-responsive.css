@@ -970,6 +970,11 @@
   .toolbox-item.toolbox-layout .btn-layout.grid-layout-4 {
     display: none;
   }
+  .toolbox-item.toolbox-layout .btn-layout {
+    width: 15px;
+    margin: 0 2px;
+    height: 15px;
+  }
   .aside-title svg {
     margin-right: 7px;
   }
@@ -1452,6 +1457,9 @@
   /*===========  collection list css end  ==============*/
   .template_collection .sticky-header {
   	position:relative;
+  }
+  .toolbox-item.toolbox-layout .btn-layout {
+    display: none;
   }
   #CollectionProductsContainer[data-view=grid-layout-5] .products-grid .product_columns .grid-item,
   #CollectionProductsContainer[data-view=grid-layout-4] .products-grid .product_columns .grid-item,
