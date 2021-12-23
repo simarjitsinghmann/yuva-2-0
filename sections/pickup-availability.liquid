@@ -49,7 +49,7 @@
     <ul class="pickup-availability-list list-unstyled" role="list" data-store-availability-drawer-content>
       {%- for availability in pick_up_availabilities -%}
       <li class="pickup-availability-list__item">
-        <h3 class="h4">{{ availability.location.name | escape }}</h3>
+        <h6>{{ availability.location.name | escape }}</h6>
         <p class="pickup-availability-preview caption-large">
           {%- if availability.available -%}
           {{ 'products.product.pickup_availability.pick_up_available' | t }}, {{ availability.pick_up_time | downcase }}
