@@ -981,6 +981,9 @@ slickSlider = function(selector,slideIndex){
           selector.slick(options);
         }
       }
+      else{
+      	selector.slick('unslick')
+      }
     }
     else{
 
