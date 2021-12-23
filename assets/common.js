@@ -971,32 +971,11 @@ slickSlider = function(selector,slideIndex){
   if(optionContainer){
     var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
     var options = JSON.parse(html);
-    if(selector.is("[mobile-only]")){
-      console.log('here')
-      if($(window).width() < 768 ){
-
-        if(slideIndex){
-          selector.slick(options).slick('slickGoTo',slideIndex);
-        }
-        else{
-          selector.slick(options);
-        }
-      }
-      else{
-        console.log('selector',selector.hasClass('slick-initialized'))
-        if (selector.hasClass('slick-initialized')) {
-          selector.slick('unslick')
-        }
-      }
+    if(slideIndex){
+      selector.slick(options).slick('slickGoTo',slideIndex);
     }
     else{
-console.log('There')
-      if(slideIndex){
-        selector.slick(options).slick('slickGoTo',slideIndex);
-      }
-      else{
-          selector.slick(options);
-      }
+      selector.slick(options);
     }
     
     jQuery(window).trigger('resize');
@@ -1015,6 +994,11 @@ sliders = function(){
     sliders.each(function(index) {
       if (!jQuery(this).hasClass('slick-initialized')) {
         slickSlider(jQuery(this));
+        
+        if(selector.is("[mobile-only]")){
+          if($(window).width() < 768 ){
+          }
+        }
       }
     });
   }
