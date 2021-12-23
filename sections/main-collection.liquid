@@ -53,8 +53,9 @@
             <h6>{{collection.title}} - {{ collection.products_count}} {{ collection.products_count | pluralize: 'item', 'items' }}</h6>
           </div>
         </div>
-        {% if section.settings.enable_sorting %}
+        {% if section.settings.enable_sorting or section.settings.enable_display_options%}
         <div class="toolbox-right">
+        {% if section.settings.enable_display_options %}
           <div class="toolbox-item toolbox-layout">
             <a data-layout="" data-value="grid-layout-4" class="btn-layout grid-layout-4">
               <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 19 19" width="19" height="19">
@@ -123,6 +124,8 @@
               </svg>
             </a>
           </div>
+        {% endif %}
+        {% if section.settings.enable_sorting %}
           <div id="toolbox-sort" class="toolbox-item toolbox-sort select-box">
             <ul class="" id="sort__list">
               <li class="mobile-sort-heading"><h6>{{ 'sections.collection_template.sort_by_label' | t }}</h6>
@@ -142,6 +145,7 @@
             <label for="SortBy">{{sort_name}}</label>
             </div>
           </div>
+        {% endif %}
         </div>
         {% endif %}
       </nav>
