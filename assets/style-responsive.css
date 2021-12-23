@@ -2256,7 +2256,7 @@
   }
   .single__product__right .ask_about {
     margin-bottom: 10px;
-        padding: 0 20px;
+    padding: 0 20px;
   }
   .single__product__right .social-icons {
     padding:0 20px;
@@ -2276,24 +2276,24 @@
   .single__product__right .ratingbox{
     padding:0 20px;
   }
-.single__product__right .variant_title {
+  .single__product__right .variant_title {
     text-transform: capitalize;
     font-size: 15px;
-}
+  }
   .single__product__right .pdp-add-to-bag,
   .single__product__right .shopify-payment-button {
     width: 100%;
     margin-bottom: 0;
     max-width: 48%;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 48%;
-            flex: 0 0 48%;
+    -ms-flex: 0 0 48%;
+    flex: 0 0 48%;
   }
   .single__product__right .pdp-action-container.disabled .pdp-add-to-bag {
     max-width: 100%;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
   }
   .single__product__right .selling_group {
     padding: 12px 0;
@@ -2323,7 +2323,10 @@
   .product-add-to-cart-right .product-detail-title {
     font-size: 18px;
     line-height: 22px;
-}
+  }
+  .product-add-to-cart-right p.vendor_name {
+    margin: 0 0 3px;
+  }
   /*============= PDP page css end  ===============*/
   /* ============ recent product css start =============== */
   .recent-product-slide .item {
