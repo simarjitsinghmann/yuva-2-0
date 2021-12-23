@@ -1235,26 +1235,22 @@
     left: 0;
     top:50%;
     -webkit-transform: translate(50%, -50%);
-        -ms-transform: translate(50%, -50%);
-            transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
   }
-  .banner-section.item.slider-banner h1 {
-    margin: 10px 0;
-        line-height: 1.1;
-}
-  
+
   .banner-section.item.slider-banner h2 {
     font-size: 60px!important;
   }
   .carousel-caption .banner-slide p, .flex-absolute p {
     display: none;
-}
+  }
   .shopify-section-slider .slick-dots {
     position: absolute;
     bottom: 20px;
     -webkit-writing-mode: horizontal-tb;
-        -ms-writing-mode: lr-tb;
-            writing-mode: horizontal-tb;
+    -ms-writing-mode: lr-tb;
+    writing-mode: horizontal-tb;
     height: 10px;
     width: 100%;
     right: 0;
@@ -1266,16 +1262,16 @@
   }
   .split-slider:after {
     width: 100%;
-}
-.banner-left .carousel-caption-title {
+  }
+  .banner-left .carousel-caption-title {
     z-index: 99;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
+    -ms-flex-align: center;
+    align-items: center;
+  }
   /*================ banner slider css end ================*/
   /*==================  whats more css start  =================*/
   .card-information .card-information-image {
