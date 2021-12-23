@@ -1326,16 +1326,14 @@ a.wishlist-view .fas {
    -o-object-fit: cover;
       object-fit: cover;
 }
-.card-wrapper .card.card--product .card-wrapper-img a > img {
+.card-wrapper .card.card--product .card-wrapper-img img {
    -webkit-transition: 0.7s ease;
    -o-transition: 0.7s ease;
    transition: 0.7s ease;
 }
 .card-wrapper
    .card.card--product
-   .card-wrapper-img.has-multiimage:hover
-   a
-   > img {
+   .card-wrapper-img.has-multiimage:hover img {
    -webkit-opacity: 0;
    -moz-opacity: 0;
    -ms-opacity: 0;
