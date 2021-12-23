@@ -972,6 +972,7 @@ slickSlider = function(selector,slideIndex){
     var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
     var options = JSON.parse(html);
     if(selector.is("[mobile-only]")){
+      console.log('here')
       if($(window).width() < 768 ){
 
         if(slideIndex){
@@ -989,7 +990,7 @@ slickSlider = function(selector,slideIndex){
       }
     }
     else{
-
+console.log('There')
       if(slideIndex){
         selector.slick(options).slick('slickGoTo',slideIndex);
       }
