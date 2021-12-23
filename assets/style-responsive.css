@@ -1392,7 +1392,8 @@
     outline: 2px solid #fff;
     outline-offset: -10px;
   }
-  .list-view-content {
+  .list-view-content,
+  .collection-list-view-card.on-hover-content .list-view-content{
     height: auto;
     opacity: 1;
     -webkit-transform: scale(1);
