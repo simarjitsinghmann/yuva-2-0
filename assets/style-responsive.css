@@ -1326,7 +1326,6 @@
   .card__warpper__detail.right__sided .collection-image,
   .card__warpper__detail.left__sided .collection-image{
     width: 40%;
-    float: left;
     padding: 16px;
   }
   .card__warpper__detail.right__sided .collection-image img,
@@ -1371,7 +1370,7 @@
 
   }
   .card__warpper__detail.left__sided .collection-image {
-    max-height: 420px;
+    height: auto;
   }
   .card__warpper__detail .collection-image, .card-wrapper .collection-detail {
     background: #f9f5ef;
