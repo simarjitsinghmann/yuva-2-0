@@ -771,6 +771,8 @@ padding-right: 15px;
     border: 1px solid rgba(0,0,0,.15);
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
+      max-height: 250px;
+    overflow: auto;
 }
 .quality-select .dropdown-menu li, .dropdown.productOptionSelect .dropdown-menu li  {
    line-height: 1.5;
