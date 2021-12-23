@@ -5518,7 +5518,8 @@ body #shopify-product-reviews {
    .slider-box
    p::-webkit-scrollbar-thumb, 
 .side-menu .inner-side::-webkit-scrollbar-thumb, 
-.side-menu .nav-item.dropdown .inner::-webkit-scrollbar-thumb {
+.side-menu .nav-item.dropdown .inner::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-thumb{
    background: var(--dark-gray);
 }
 
