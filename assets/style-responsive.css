@@ -1229,14 +1229,13 @@
   .banner.banner-section.item {
     height: 600px;
   }
-  .carousel-caption-title{
-    text-align: center;
-    width: 50%;
-    left: 0;
-    top:50%;
-    -webkit-transform: translate(50%, -50%);
-    -ms-transform: translate(50%, -50%);
-    transform: translate(50%, -50%);
+  .carousel-caption-title {
+    top: unset;
+    -webkit-transform: translate(50%,-50%);
+    -ms-transform: translate(50%,-50%);
+    transform: translate(0%,0%);
+    bottom: 10%;
+    left: 5%;
   }
   .banner-section.item.slider-banner h1 {
     margin-bottom: 10px;
