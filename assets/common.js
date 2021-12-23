@@ -1001,7 +1001,9 @@ sliders = function(){
           }
         }
         else{
-
+          if (jQuery(this).hasClass('slick-initialized')) {
+            jQuery(this).slick('unslick');
+          }
         }
       }else{
       	 if (!jQuery(this).hasClass('slick-initialized')) {
