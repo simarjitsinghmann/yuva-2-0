@@ -305,10 +305,10 @@ img {
   max-width: 100%;
 }
 .carousel-caption-title h1, 
-.flex-absolute h1{
-  font-weight: var(--normal);
-    line-height: 1.01;
-    }
+.flex-absolute h1,
+.single-banner-section.banner-section h2{
+  line-height: 1.01;
+}
 .carousel-caption-title h2,
 .banner-section.item.slider-banner h2{
   text-transform: uppercase;
