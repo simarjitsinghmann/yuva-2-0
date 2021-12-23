@@ -5465,7 +5465,7 @@ body #shopify-product-reviews {
 #slider-round .noUi-handle:after {
    display: none;
 }
-/* scrollbar css start*/
+/*============ scrollbar css start ================*/
 /* width */
 .side_drawer_body::-webkit-scrollbar,
 #dropdown-customer::-webkit-scrollbar,
@@ -5478,7 +5478,8 @@ body #shopify-product-reviews {
    .slider-box
    p::-webkit-scrollbar, 
 .side-menu .inner-side::-webkit-scrollbar, 
-.side-menu .nav-item.dropdown .inner::-webkit-scrollbar{
+.side-menu .nav-item.dropdown .inner::-webkit-scrollbar,
+*::-webkit-scrollbar{
    width: 5px;
 }
 
