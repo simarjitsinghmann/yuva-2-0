@@ -993,7 +993,7 @@ sliders = function(){
   if(sliders.length > 0){
     sliders.each(function(index) {
 
-      if(selector.is("[mobile-only]")){
+      if(jQuery(this).is("[mobile-only]")){
         if($(window).width() < 768 ){
 
           if (!jQuery(this).hasClass('slick-initialized')) {
