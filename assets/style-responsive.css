@@ -1737,6 +1737,10 @@
   }
   .feature-product .product-image-left {
     padding-right: 0;
+    height: 500px;
+    display: flex;
+    overflow: auto;
+    flex-wrap: nowrap;
   }
   .product_button .pdp-action-container {
     width: 100%;
@@ -1748,14 +1752,14 @@
     font-size: 23px;
     line-height: 26px;
     font-weight: var(--bold);
-  }
+      }
   .similar_options svg {
     width: 17px;
-}
- .similar_options .vs-icon {
+  }
+  .similar_options .vs-icon {
     width: 30px;
     height: 30px;
-}
+  }
   /*============  feature Product css end ==============*/
   /*============  multi column css start  ==========*/
   .shopify-section-multicolumn-content .container,
