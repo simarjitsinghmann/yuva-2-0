@@ -1087,7 +1087,7 @@
       max-height: 230px;
   }
   /*  product listing page end  */
-  /*================= pdp page css start  ===============*/
+  /*  pdp page start  */
   .product-add-to-cart-right p.vendor_name {
     margin: 0 0 7px;
   }
@@ -1100,15 +1100,6 @@
   .product-page-recommendations .card-wrapper-img {
     min-height: 210px;
     max-height: 210px;
-  }
-  .single__product__right .pdp-add-to-bag,
-  .single__product__right .shopify-payment-button {
-    width: 100%;
-    margin-bottom: 0;
-    max-width: 48%;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 48%;
-    flex: 0 0 48%;
   }
   /*============   pdp page end =============*/
   /*=================  header css start  =============*/
@@ -2330,6 +2321,15 @@
   .single__product__right .variant_title {
     text-transform: capitalize;
     font-size: 15px;
+  }
+  .single__product__right .pdp-add-to-bag,
+  .single__product__right .shopify-payment-button {
+    width: 100%;
+    margin-bottom: 0;
+    max-width: 48%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 48%;
+    flex: 0 0 48%;
   }
   .single__product__right .pdp-action-container.disabled .pdp-add-to-bag {
     max-width: 100%;
