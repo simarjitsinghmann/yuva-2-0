@@ -405,9 +405,9 @@
     height: 266px;
   }
   .card__warpper__detail.left__sided .collection-image,
-    .collection__right__list {
+  .collection__right__list {
     height: 500px;
-}
+  }
   /*=============  collection list css end  ================*/
   /*==============  featured-blog css start  ==============*/
   .post-information__wrapper {
@@ -818,7 +818,7 @@
   .collection-detail-right h4 {
     font-size: 16px;
     line-height:21px;
-     margin: 0 0 10px;
+    margin: 0 0 10px;
   }
   .list-view-content {
     padding: 15px;
@@ -827,11 +827,15 @@
     font-size: 13px;
     padding: 5px 15px;
   }
-    .card__warpper__detail.right__sided .collection-image {
+  .card__warpper__detail.right__sided .collection-image {
     width: 40%;
   }
   .card__warpper__detail.right__sided .collection-detail-right {
     width: 60%;
+  }
+  .card__warpper__detail.left__sided .collection-image,
+  .collection__right__list {
+    height: 400px;
   }
   /*=============  collection css end  ============*/
   /*=========== testimonial css start ===========*/
@@ -1983,7 +1987,6 @@
     line-height: 1.2;
 }
 }
-
 @media screen and (max-width: 575px) {
   /*=============  common  start  ===============*/
   .shopify-section:not(.announcement-bar-section, .shopify-section-main-header, .shopify-section-slider, #shopify-section-footer, .password-section, .contact-page-section,
@@ -2576,7 +2579,6 @@
     right: 40px;
   }
 }
-
 @media (min-width: 768px) and (max-width: 991px) {
   .service__column {
     -ms-flex-wrap: wrap;
