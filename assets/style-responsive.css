@@ -1313,7 +1313,7 @@
     padding-right:0;
   }
   .card-wrapper.left-sided .card__warpper__detail.left__sided {
-    margin-bottom:12px;
+    margin-bottom:10px;
   }
   .collection__right__list {
     height: auto;
@@ -1333,6 +1333,10 @@
     border: 2px solid #FFF;
     border-radius:6px;
   }
+  .collection__right__list .grid__item__list {
+    padding: 0;
+    margin-bottom: 10px;
+}
   .card__warpper__detail.right__sided .collection-detail-right,
   .card-wrapper .collection-detail{
     width: 60%;
