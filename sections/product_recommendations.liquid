@@ -4,7 +4,7 @@
     {%- if recommendations.performed and recommendations.products_count > 0 -%}
     <div id="SimilarProductsMain" class="recent-product">
       <div class="recent-product-header shopify__top__section">
-        <h4>Recent Products</h4>
+        <h4>{{'products.product.similar_products' | t}}</h4>
       </div>
       <div class="recent-product-slide" data-slider>
         {%- for product in recommendations.products -%}
