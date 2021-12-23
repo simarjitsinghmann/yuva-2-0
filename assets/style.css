@@ -5479,7 +5479,7 @@ body #shopify-product-reviews {
    p::-webkit-scrollbar, 
 .side-menu .inner-side::-webkit-scrollbar, 
 .side-menu .nav-item.dropdown .inner::-webkit-scrollbar,
-*::-webkit-scrollbar{
+::-webkit-scrollbar{
    width: 5px;
 }
 
@@ -5499,7 +5499,7 @@ body #shopify-product-reviews {
    p::-webkit-scrollbar-track, 
 .side-menu .inner-side::-webkit-scrollbar-track, 
 .side-menu .nav-item.dropdown .inner::-webkit-scrollbar-track,
-*::-webkit-scrollbar-track{
+::-webkit-scrollbar-track{
    background: var(--gray);
 }
 
@@ -5519,7 +5519,7 @@ body #shopify-product-reviews {
    p::-webkit-scrollbar-thumb, 
 .side-menu .inner-side::-webkit-scrollbar-thumb, 
 .side-menu .nav-item.dropdown .inner::-webkit-scrollbar-thumb,
-*::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb{
    background: var(--dark-gray);
 }
 
@@ -5540,7 +5540,7 @@ body #shopify-product-reviews {
    .slider-item
    .slider-box
    p::-webkit-scrollbar-thumb:hover,
-*::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover{
    background: var(--gray);
 }
 /* scrollbar css end */
