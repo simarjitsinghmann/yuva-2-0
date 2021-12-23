@@ -1308,22 +1308,41 @@
     "promotion-banner": {
       "name": "Promotion Banner",
       "settings": {
+        "full_width": {
+          "label": "Full width"
+        },
+        "heading": {
+          "label": "Heading"
+        },
+        "text": {
+          "label": "Text"
+        },
+        "link": {
+          "label": "Button Link"
+        },
+        "label": {
+          "label": "Button Label"
+        },
         "bgcolor": {
           "label": "Background Color"
         },
-        "content_alignment": {
-          "options": {
-            "left": {
-              "label": "Left"
-            },
-            "center": {
-              "label": "Center"
-            },
-            "right": {
-              "label": "Right"
-            }
-          },
-          "label": "Style"
+        "bgcolor_opacity": {
+          "label": "Background Opacity"
+        },
+        "textcolor": {
+          "label": "Text Color"
+        },
+        "btntextcolor": {
+          "label": "Button Text Color"
+        },
+        "btnbgcolor": {
+          "label": "Button Background Color"
+        },
+        "btnborder": {
+          "label": "Button Border Color"
+        },
+        "border_radius": {
+          "label": "Border Radius"
         },
         "top_space_desktop": {
           "label": "Section Top Space Desktop"
