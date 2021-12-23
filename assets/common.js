@@ -991,7 +991,9 @@ slickSlider = function(selector,slideIndex){
         selector.slick(options).slick('slickGoTo',slideIndex);
       }
       else{
-        selector.slick(options);
+        if (selector.hasClass('slick-initialized')) {
+          selector.slick(options);
+        }
       }
     }
     
