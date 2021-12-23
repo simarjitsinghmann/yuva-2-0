@@ -1175,20 +1175,8 @@
   .announcement_open .sticky-sidebar-wrapper {
     top: unset;
   }
-  .side_drawer_body::-webkit-scrollbar,
-#dropdown-customer::-webkit-scrollbar,
-.side-menu::-webkit-scrollbar,
-.side-menu .inner-side .nav-item.dropdown ul.child::-webkit-scrollbar,
-.side-menu .inner-side .nav-item.dropdown ul.grandchild::-webkit-scrollbar,
-.testimonial-variation2
-   .testimonial-client-slide
-   .slider-item
-   .slider-box
-   p::-webkit-scrollbar, 
-.side-menu .inner-side::-webkit-scrollbar, 
-.side-menu .nav-item.dropdown .inner::-webkit-scrollbar,
-::-webkit-scrollbar{
-   opacity:0;
+::-webkit-scrollbar-track{
+   background: transparent;
 }
   /*  common end  */
   /*===========  searchbar css start ==============*/
