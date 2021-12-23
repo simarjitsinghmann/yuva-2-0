@@ -2550,10 +2550,25 @@
 }
 @media (min-width: 768px){
   .mobile-sort-heading {
-  	display:none;
+    display:none;
   }
-    .row.style_variation_1,
-.row.style_variation_2{
-	justify-content:center;
-}
+
+  .row.style_variation_1,
+  .row.style_variation_2{
+    justify-content:center;
+  }
+
+  .similar_options .vs-icon:hover {
+    width: 100px;
+    -webkit-box-pack:start;
+    -ms-flex-pack:start;
+    justify-content:flex-start;
+  }
+  .similar_options .vs-icon:hover .similar-text {
+    opacity:1;
+    visibility:visible;
+    font-size:11px;
+    padding-left:5px;
+    display:inline;
+  }
 }
