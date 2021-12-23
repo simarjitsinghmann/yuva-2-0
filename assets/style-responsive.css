@@ -1742,6 +1742,10 @@
     overflow: auto;
     flex-wrap: nowrap;
   }
+  .feature-product .product-image-left .item {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
   .product_button .pdp-action-container {
     width: 100%;
   }
