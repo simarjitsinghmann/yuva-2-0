@@ -8,7 +8,7 @@
         <div class="col-sm-12 col-md-3 col-lg-2">
           <div class="footer-logo">
             {% assign width = section.settings.image_width | append:'px' %}
-            <img src="{{section.settings.image | img_url:'master'}}" class="Yuva-logo" width="{{width}}">
+              {% render 'lazy-image' image:section.settings.image,class:'Yuva-logo',max_width:width %}
           </div>
         </div>
         {% endif %}
