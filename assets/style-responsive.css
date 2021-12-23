@@ -2175,15 +2175,18 @@
   /*==================  blog css end  ============*/
   /*===============  single banner css start  =============*/
   #banner-template--14895903604945__16345626467f5a91b7 .banner-caption-title span.tag-line {
-  	display: none;
+    display: none;
   }
   .single-banner-section.banner-section .item {
     height: 380px;
   }
-.single-banner-section.banner-section h2 {
+  .single-banner-section.banner-section h2 {
     font-size: 25px!important;
-  margin: 10px 0;
-}
+    margin: 10px 0;
+  }
+  .single-banner-section.banner-section p {
+    display: none;
+  }
   .banner-caption-title h3 {
     font-size: 36px!important;
     line-height: 32px;
@@ -2196,13 +2199,13 @@
   }
   .banner-caption-title {
     padding: 20px;
-}
-    .banner-section .slide-image-desktop {
-	display:none;
-}
-    .banner-section .slide-image-mobile {
-	display:block;
-}
+  }
+  .banner-section .slide-image-desktop {
+    display:none;
+  }
+  .banner-section .slide-image-mobile {
+    display:block;
+  }
   /*===============  single banner css end  =============*/
   .instagram-post-list ul li {
     -webkit-box-flex: 0;
