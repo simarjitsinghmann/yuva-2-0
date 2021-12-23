@@ -1175,7 +1175,9 @@
   .announcement_open .sticky-sidebar-wrapper {
     top: unset;
   }
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar-thumb:hover{
    background: transparent;
 }
   /*  common end  */
