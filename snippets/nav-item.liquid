@@ -1,4 +1,4 @@
-{%- for link in section.settings.menu.links -%}
+{%- for link in linklists[section.settings.menu].links -%}
 {% assign menuIndex = forloop.index %}
 {% assign menuDropdown = false %}
 {% for block in section.blocks %}
