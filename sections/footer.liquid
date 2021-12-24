@@ -115,6 +115,7 @@
         <p class="copyright-content">{{section.settings.copyright_content}}</p>
       </div>
       {%- endif -%}
+      {% include 'language' %}
       {%- if section.settings.payment_enable -%}
       <div class="footer-payment">
         <ul class="list list-payment" role="list">
