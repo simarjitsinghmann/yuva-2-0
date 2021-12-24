@@ -931,15 +931,6 @@ img {
 .product__view__option li button svg {
   margin-top: 6px;
 }
-/* .product-loop-variants .color_option input
-.product-loop-variants .denominations_option input {
-opacity: 0;
-position: absolute;
-cursor: pointer;
-z-index: 9;
-width: 100%;
-height: 100%;
-} */
 .product-add-to-cart-right p.vendor_name {
   margin: 0 0 10px;
   font-size: 12px;
@@ -961,7 +952,7 @@ height: 100%;
 .product__pickup-availabilities {
   margin-bottom: 25px;
   padding: 17px;
-  background-color: var(--colorImageBg);
+  background-color: var(--theme-light-color);
     }
 .product__pickup-availabilities  p:first-child {
   color: var(--theme-color);
