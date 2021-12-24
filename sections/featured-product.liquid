@@ -12,7 +12,7 @@
             {% unless product == empty %}   
             {%- for media in product.media -%}
             {%-if media.media_type == 'image'-%}
-            <div id="media-{{media.id}}"class="item" data-thumb="{{media | img_url:'master'}}" >
+            <div id="media-{{media.id}}"class="item" >
               {% include 'lazy-image' image:media %}  
             </div>
             {%-endif-%}
