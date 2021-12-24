@@ -505,7 +505,7 @@
 @media only screen and (max-width:767px){
   .customer.login, .customer.register {
     padding: 40px 0;
-    max-width: 80%;
+    max-width: 70%;
   }
   #registerForm, .forgetPassword__form, .login__form {
     padding: 0;
@@ -522,6 +522,9 @@
   }
 }
 @media only screen and (max-width:575px){
+  .customer.login, .customer.register {
+    max-width: 80%;
+}
   .customer.login .grid__item, .customer.register .grid__item {
     width: 100%;
     max-width: 100%;
