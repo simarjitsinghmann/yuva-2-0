@@ -6,7 +6,8 @@
 <div class="container slide_container">
   <div class="row">
     <div class="col-md-6 banner-left">
-      <div class="carousel-caption-title style_new">
+      <div class="carousel-caption-title style_new">        
+        <div data-aos="fade-up">
         {% if block.settings.banner_tag_line != blank %}
         <span class="tag-line">{{block.settings.banner_tag_line}}</span>
         {% endif %}
@@ -25,6 +26,7 @@
           <a href="{{block.settings.button_link}}" class="black-btn button" >{{block.settings.button_text}}</a>
         </div>
         {% endif %}
+        </div>
       </div>
     </div>
     <!--                 <div class="col-md-6 banner-right" >                 
