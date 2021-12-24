@@ -886,6 +886,16 @@
   .testimonials-variation-style2 .client-say-left h2 {
     padding-right: 0;
   }
+  .testimonial-slider .slick-arrow {
+    width: 30px;
+    height: 30px;
+  }
+  .testimonial-slider .slick-arrow.slick-next {
+    right: -13px;
+  }
+  .testimonial-slider .slick-arrow.slick-prev {
+    left: -13px;
+  }
   /*=============  testimonial css end  ===============*/
   /*==================  feature blog start  ====================*/
   .blog__post .item.grid__item{
