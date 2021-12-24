@@ -1,5 +1,5 @@
 <div class="currency-block">
-  <localization-form>
+  <currency-form>
     {% form 'localization' %}
     <div class="disclosure btn-group currency-dropdown">
       <label class="disclosure__button dropdown-toggle dropdown-label" aria-expanded="false" aria-controls="CountryList">
@@ -19,11 +19,11 @@
       <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
     </div>
     {% endform %}
-  </localization-form>
+  </currency-form>
 </div>
 
 <script>
-  class LocalizationForm extends HTMLElement {
+  class currencyForm extends HTMLElement {
     constructor() {
       super();
       this.elements = {
@@ -71,5 +71,5 @@
     }
   }
 
-  customElements.define('localization-form', LocalizationForm);
+  customElements.define('currency-form', currencyForm);
 </script>
