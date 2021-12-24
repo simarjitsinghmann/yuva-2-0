@@ -59,9 +59,9 @@
                   </h4>
                   <p>
                     {% if block.settings.custom == false %}
-                    {{collection.description | strip_html | truncatewords: 12, "" }}
+                    {{collection.description | strip_html | truncatewords: 12, ".." }}
                     {% elsif block.settings.custom and block.settings.desc != blank  %}
-                    {{block.settings.desc| strip_html | truncatewords: 12, "" }}
+                    {{block.settings.desc| strip_html | truncatewords: 12, ".." }}
                     {% endif %}
                   </p> 
                   {% if block.settings.btntext != blank %}
