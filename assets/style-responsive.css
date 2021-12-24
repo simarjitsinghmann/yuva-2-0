@@ -907,8 +907,8 @@
   }
   /*=============  testimonial css end  ===============*/
   /*==================  feature blog start  ====================*/
-  .blog__post .item.grid__item{
-    margin: 0 0 20px;
+  .blog__post .col-md-4:last-child {
+    display:none;
   }
   .post-wrapper {
     -webkit-box-shadow: none;
