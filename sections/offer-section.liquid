@@ -9,7 +9,10 @@
     <div class="offer-list">
       <div class="row {% if section.settings.style == 'style2' %}style_variation_2{%else%}style_variation_1{% endif %} row-items-{{section.blocks.size}}" role="list">
         {% for block in section.blocks%}
-        <div  class="{% if section.blocks.size == 1%}col-12{%else%}col-10{% endif %} col-sm-6 col-md-4">
+        {% if section.blocks.size == 2 %}
+        {% elsif section.blocks.size == 3 %}
+        {% endif %}
+        <div  class="{% if section.blocks.size == 1%}col-12{%else%}col-10{% endif %} col-sm-6 col-md-4" data-aos="zoom-in">
           <div class="card-wrapper">
             <div class="card-information">
                 <a href="{{block.settings.link}}" class="animate_hvrbr">
