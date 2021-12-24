@@ -19,9 +19,6 @@
             {% endfor %}
             {%else%}
             <div class="item" >
-            {{ 'product.svg' | asset_url | img_tag }}
-            </div>
-            <div class="item" >
             {{ 'product-1'| placeholder_svg_tag: 'placeholder-svg' }}
             </div>
             {%endunless%}
