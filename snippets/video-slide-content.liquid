@@ -23,7 +23,7 @@
       {% endif %}
 
       <div class="flex-absolute {{ block.settings.text_position }} ">
-        <div class="wrapper" data-aos="fade-up">
+        <div class="wrapper" data-aos="{{animation}}">
           {% if block.settings.title != blank %}
           <h1>{{ block.settings.title | escape }}</h1>
           {% endif %}
