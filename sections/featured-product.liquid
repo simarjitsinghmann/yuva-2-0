@@ -12,14 +12,16 @@
             {% unless product == empty %}   
             {%- for media in product.media -%}
             {%-if media.media_type == 'image'-%}
-            <div id="media-{{media.id}}"class="item" >
+            <div id="media-{{media.id}}" class="item" >
               {% include 'lazy-image' image:media %}  
             </div>
             {%-endif-%}
             {% endfor %}
             {%else%}
+            <div class="item" >
             {{ 'product.svg' | asset_url | img_tag }}
             {{ 'product-1'| placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
             {%endunless%}
           </div>
         </div>
