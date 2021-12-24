@@ -7,6 +7,18 @@
       min-height: 350px;
       max-height: 350px;
   }
+  .row.column-4.product_columns .card-wrapper-img{
+    min-height: 380px;
+    max-height: 380px;
+  }
+  .row.column-3.product_columns .card-wrapper-img{
+    min-height: 500px;
+    max-height: 500px;
+  }
+  .row.column-2.product_columns .card-wrapper-img{
+    min-height: 600px;
+    max-height: 600px;
+  }
 }
 @media screen and (max-width: 1440px) {
   /* common  */
