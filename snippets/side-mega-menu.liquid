@@ -35,7 +35,7 @@
                 <h2>{% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</h2>
             </div>
           	<ul>
-            {%- for childlink in mainMenu.links -%}
+            {%- for childlink in linklists[mainMenu].links -%}
             <li class="nav-item">
                 <a href="{{ childlink.url }}">{{ childlink.title | split:"{badge" | first | escape | captilize }}</a>
             </li>

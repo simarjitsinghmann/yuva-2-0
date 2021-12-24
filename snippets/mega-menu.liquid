@@ -14,9 +14,9 @@
                   <div class="menu-mb-title">
                     <span>{% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</span>
                   </div>
-                  {%- if mainMenu.links != blank -%}
+                  {%- if linklists[mainMenu].links != blank -%}
                   <ul class="site-nav-dropdown">
-                    {%- for childlink in mainMenu.links -%}
+                    {%- for childlink in linklists[mainMenu].links -%}
                     <li class="menu-lv-3">
                       <a href="{{ childlink.url }}"><span>{{ childlink.title | split:"{badge" | first | escape | captilize }}</span></a>
                     </li>
