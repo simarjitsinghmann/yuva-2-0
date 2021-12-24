@@ -162,8 +162,10 @@ Array.from(removeFilters).forEach(function(removeFilter) {
 function sortBy(){
   var sortMenu = document.getElementById('sort__list_label');
   if(sortMenu){
+    console.log(sortMenu)
     sortMenu.addEventListener("click", (e)=>{	
       e.preventDefault();
+    console.log('here',sortMenu)
       var sortMenu = document.getElementById('sort__list');
       if(sortMenu.classList.contains('active')){       
         sortMenu.classList.remove('active');
