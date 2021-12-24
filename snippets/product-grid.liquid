@@ -18,6 +18,7 @@
           {% render 'lazy-image' image: second_image ,class:'product-second-img' %}
           {% endunless %} 
         {% unless hide_options and settings.show_quick_view == false and settings.show_atc == false %}
+        {% comment %}
         {% unless has_only_default_variant or product.variants.size == 1 %}
         <div id="showProductWrap-{{product.id}}" class="product-wrap product_content_section">
 
@@ -116,6 +117,7 @@
           {% endform %}
         </div>     
         {% endunless %}
+        {% endcomment %}
         <div class="shop__options">
           <div class="product__view__option">
             <ul>
