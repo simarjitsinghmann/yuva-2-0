@@ -1501,10 +1501,6 @@
     -ms-flex-align: center;
     align-items: center;
 }
-  .collection-list-view-card h2, .collection-list-view-card h4 {
-    color: var(--white);
-      font-size:21px;
-      }
   .collection-list-view-card a.link {
     background-color: var(--white);
     color: var(--black);
@@ -1512,6 +1508,10 @@
   .collection-list-view-card h2 {
     font-size: 17px;
   }
+  .collection-list-view-card h2, .collection-list-view-card h4 {
+    color: var(--white);
+      font-size:21px;
+      }
   /*===========  collection list css end  ==============*/
   .template_collection .sticky-header {
   	position:relative;
