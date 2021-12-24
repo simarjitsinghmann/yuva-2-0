@@ -1323,24 +1323,15 @@ header {
    display: flex;
 }
 .search-bar-container .results-box .note {
-   clear: both;
-   color: #232222;
-   font-size: 14px;
-   font-weight: var(--semibold);
-   margin-top: 29px;
-   display: block;
-   width: 100%;
-   text-align: center;
-   background: transparent;
-   bottom: 0;
-   padding: 13px 0;
-   text-decoration: none;
-   width: 100%;
-   /* margin-left: 50%; */
-   -moz-transform: translateX(-50%);
-   /* -webkit-transform: translateX(-50%); */
-   /* transform: translateX(-50%); */
-   border-top: 1px solid #e7e7e7;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    background: 0 0;
+    bottom: 0;
+    padding: 13px 0;
+    width: 100%;
+    -moz-transform: translateX(-50%);
+    border-top: 1px solid #e7e7e7;
 }
 .search-bar-container .results-box .note:hover {
    color: var(--theme-color);

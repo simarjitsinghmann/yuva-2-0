@@ -19,7 +19,7 @@
             {% endfor %}
             {%else%}
             {{ 'product.svg' | asset_url | img_tag }}
-            {{ 'product-1.svg'|img_tag }}
+            {{ 'product-1'| placeholder_svg_tag: 'placeholder-svg' }}
             {%endunless%}
           </div>
         </div>
