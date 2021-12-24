@@ -10,7 +10,9 @@
       <div class="row {% if section.settings.style == 'style2' %}style_variation_2{%else%}style_variation_1{% endif %} row-items-{{section.blocks.size}}" role="list">
         {% for block in section.blocks%}
         {% if section.blocks.size == 2 %}
+    {% capture animation %}{% cycle 'fade-right','fade-left' %}{% endcapture %}
         {% elsif section.blocks.size == 3 %}
+    {% capture animation %}{% cycle 'fade-right','zoom-in-up','fade-left' %}{% endcapture %}
         {% endif %}
         <div  class="{% if section.blocks.size == 1%}col-12{%else%}col-10{% endif %} col-sm-6 col-md-4" data-aos="zoom-in">
           <div class="card-wrapper">
