@@ -4546,12 +4546,15 @@ path {
       }
 .relatedBlogPosts {
   background-color: var(--white);
-    padding: 20px;
-    position: sticky;
+  padding: 20px;
+  position: sticky;
+  top: 10px;
+  -webkit-box-shadow: 0px 2px 2px #ccc;
+  box-shadow: 0px 2px 2px #ccc;
+ }
+.sticky-header .relatedBlogPosts {
     top: 150px;
-    -webkit-box-shadow: 0px 2px 2px #ccc;
-    box-shadow: 0px 2px 2px #ccc;
-    }
+}
 .header2 .relatedBlogPosts {
   top: 220px;
 }
