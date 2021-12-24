@@ -35,7 +35,7 @@ $('[action="/cart/add"]').on('submit',function(evt) {
     success: function(line_item) {           
       $('body').removeClass('quickview-open'); 
 
-      $('[data-drawer-body]').html=preLoadLoadGif;
+  $('[data-drawer-body]').html(preLoadLoadGif);
       $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper')
       $('body').addClass('side_Drawer_open');
       jQuery.getJSON('/cart.js', function (cart, textStatus) {
@@ -116,8 +116,6 @@ updateQuantity = function(line, qty,callback) {
 }
 
 buildCart = function (cart,showCart) {
-  $('body').find('[data-drawer-title]').html('{{'sections.cart.title' | t}}');
-                                             $('body').find('[data-side-drawer]').attr('id','mini__cart').addClass('mini_cart');
   if (cart.item_count === 0) {
     $('[data-cart-count]').hide();
   }
@@ -136,7 +134,6 @@ buildCart = function (cart,showCart) {
 };
 $('body').on('click','.openCartDrawer',function(e){
   e.preventDefault();
-  console.log('here',preLoadLoadGif)
   $('[data-drawer-body]').html(preLoadLoadGif);
   $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper')
       $('body').addClass('side_Drawer_open');
