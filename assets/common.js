@@ -1057,6 +1057,8 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     if(jQuery(event.target).find('.announcement-bar').length > 0 ){
       initAnnouncement();
     }
+    
+    AOS.init();
   }
   else{
     if (slider.hasClass('slick-initialized')){
