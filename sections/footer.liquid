@@ -87,7 +87,7 @@
             <span class="newsletter-form__message form__message error_message" id="Newsletter-error--{{ section.id }}">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
             {%- endif -%}
           </div>
-          <button type="submit" class="button button--secondary newsletter-form__button" name="commit" id="Subscribe">
+          <button type="submit" class="button button--secondary newsletter-form__button" name="commit">
   
             <img src="{{'arrow.svg' | asset_url}}"  alt="{{'newsletter.button_label' | t}}"/>
           </button>
