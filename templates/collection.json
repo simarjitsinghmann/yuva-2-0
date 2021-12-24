@@ -6,15 +6,15 @@
         "full_width": true,
         "heading": "Promotion",
         "text": "Add the details of your promotion",
-        "link": "",
+        "link": "shopify:\/\/collections\/all",
         "label": "Shop now",
         "bgcolor": "#000000",
-        "bgcolor_opacity": 100,
-        "textcolor": "#a91d1d",
+        "bgcolor_opacity": 19,
+        "textcolor": "#6e4904",
         "btntextcolor": "#000000",
         "btnbgcolor": "rgba(0,0,0,0)",
         "btnborder": "#000000",
-        "border_radius": 0,
+        "border_radius": 21,
         "top_space_desktop": 30,
         "bottom_space_desktop": 0,
         "top_space_mobile": 30,
@@ -26,10 +26,11 @@
       "settings": {
         "collection_image": true,
         "collection_description": true,
-        "pagination_type": "infinite",
+        "pagination_type": "paged",
         "products_per_page": 15,
         "enable_filtering": true,
-        "enable_sorting": true
+        "enable_sorting": true,
+        "enable_display_options": true
       }
     }
   },
