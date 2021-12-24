@@ -54,7 +54,7 @@
   onItemClick(event) {
     event.preventDefault();
     const form = this.querySelector('form');
-    console.log(this.elements)
+    console.log(this.elements,form)
     this.elements.input.value = event.currentTarget.dataset.value;
     if (form) form.submit();
   }
