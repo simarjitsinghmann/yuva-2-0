@@ -1400,8 +1400,12 @@ a.wishlist-view .fas {
 .blog-multi-slide.mobile {
   display:none;
 }
-.blog__post .col-md-4 {
+.blog__post .col-md-6 {
   margin-bottom:20px;
+}
+
+.blog__post .col-lg-4:last-child {
+  display:none;
 }
 .post-wrapper {
   -webkit-box-shadow: 0 2px 3px rgb(0 0 0 / 10%);
