@@ -980,9 +980,9 @@ slickSlider = function(selector,slideIndex){
     
     jQuery(window).trigger('resize');
   }
-  $(selector)
+  jQuery(selector)
   .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-    console.log(nextSlide)
+    console.log(jQuery(this).find('[data-aos]'))
 //     $('.slider_title').removeClass("aos-animate");
     // AOS.refreshHard(); this didn't work
   })
