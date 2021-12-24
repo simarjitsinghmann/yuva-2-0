@@ -1659,12 +1659,6 @@ a.wishlist-view .fas {
   position: absolute;
   margin-left: -55px;
 }
-.client-say-left h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  padding-right: 70px;
-}
 .client-say-left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1692,6 +1686,15 @@ a.wishlist-view .fas {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+.client-say-left h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding-right: 70px;
+}
+.testimonials-variation-style1 .client-say-left h2 {
+	padding-right:0;
 }
 .testimonial-client-slide .slider-item .slider-box {
   padding: 30px 15px;
