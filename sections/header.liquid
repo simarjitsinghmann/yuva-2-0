@@ -81,7 +81,9 @@
     width: 100%;
     display: block;
   }
-
+ .site-nav-dropdown .inner.dropdown .sub-menu-list .site-nav-dropdown li a{
+    color:{{section.settings.sub_menu_color}} !important;
+  }
   .site-nav-dropdown .inner.dropdown .sub-menu-list .site-nav-dropdown li a:hover{
     color:{{section.settings.sub_hover_color}} !important;
   }
@@ -270,6 +272,12 @@
 "default": "#000000",
 "label": "t:sections.header.settings.menu_textcolor.label",
 "info": "t:sections.header.settings.menu_textcolor.info"
+},
+{
+"type": "color",
+"id": "sub_menu_color",
+"default": "#848484",
+"label": "t:sections.header.settings.sub_menu_color.label"
 },
 {
 "type": "color",
