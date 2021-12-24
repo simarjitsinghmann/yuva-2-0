@@ -507,7 +507,7 @@
     padding: 40px 0;
     max-width: 80%;
   }
-    #registerForm, .forgetPassword__form, .login__form {
+  #registerForm, .forgetPassword__form, .login__form {
     padding: 0;
     border: 0;
   }
@@ -517,9 +517,16 @@
     border-top: 1px solid #ececec;
   }
   .customer.login .grid__item, .customer.register .grid__item {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+@media only screen and (max-width:575px){
+  .customer.login .grid__item, .customer.register .grid__item {
     width: 100%;
     max-width: 100%;
   }
+
 }
 /*========== account page after login css start ============*/
 .shopify-section.customer.account {
