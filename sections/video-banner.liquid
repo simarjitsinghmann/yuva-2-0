@@ -42,24 +42,7 @@
     margin-top: 25px;
   }
 </style>
-<script>
-  var section = document.getElementById("shopify-section-{{section.id}}");
-  var button = section.querySelector("#playVideo");
-  var video = section.querySelector("#videoFile");
-  button.addEventListener("click", ()=>{	   
-                          if(button.classList.contains('play-video')){
-    console.log('test') 
-  video.play();
-    button.classList.remove('play-video');
-    button.classList.add('stop-video');
-  }
-  else{  	
-  video.pause();
-    button.classList.remove('stop-video');
-    button.classList.add('play-video');
-  }
-                           });
-</script>
+
     {% schema %}
     {
       "name": "t:sections.video-banner.name",
