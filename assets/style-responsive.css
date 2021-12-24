@@ -740,7 +740,7 @@
     height: 400px;
   }
   /*===========  banner css end  ============*/
-  /*==============  Whats more start  ==============*/
+  /*==============  Whats more css start  ==============*/
   .style_variation_1 .card-wrapper {
     padding-bottom: 35px;
 }
@@ -762,7 +762,7 @@
   .style_variation_2 .card-information__wrapper p {
     font-size: 16px;
   }
-  /*==============  Whats more end  ==============*/
+  /*==============  Whats more css end  ==============*/
   /*===========  product listing home start  =============*/
   .products-grid .column-5 .grid-item,
   .products-grid .column-4 .grid-item{
@@ -858,11 +858,14 @@
   }
   /*=============  collection list css end  ============*/
   /*=========== testimonial css start ===========*/
+  .testimonial-slider.testimonial-variation2 .slick-track {
+    margin: 0 auto;
+  }
   .client-say-left {
     padding-bottom: 20px;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .client-say-left h2 {
     margin: 6px 0 12px;
