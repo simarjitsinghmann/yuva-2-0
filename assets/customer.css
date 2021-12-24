@@ -490,16 +490,20 @@
 }
 @media only screen and (max-width:991px) {
   #registerForm, .forgetPassword__form, .login__form {
-      	padding: 30px 25px;
+    padding: 30px 25px;
   }
   .customer form {
-    	margin-top: 15px;
+    margin-top: 15px;
   }
   .new__customer__signup p {
-      line-height: 20px;
-      font-size: 13px;
-      letter-spacing: .2px;
-      margin: 1.2rem 0;
+    line-height: 20px;
+    font-size: 13px;
+    letter-spacing: .2px;
+    margin: 1.2rem 0;
+  }
+  .grid--2-col .grid__item {
+    width: 60%;
+    max-width: 60%;
   }
 }
 @media only screen and (max-width:767px){
