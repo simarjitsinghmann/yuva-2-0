@@ -7,7 +7,7 @@ changeCartItem = function(line, quantity) {
     data: 'quantity=' + quantity + '&line=' + line,
     dataType: 'json',
     success: function(cart) {
-      jQuery.getJSON('/cart.js', function (cart, textStatus) {
+      jQuery.getJSON(cartUrl, function (cart, textStatus) {
         if(quantity == 0 ){ 
           $('[name="item_quantity"][data-line="'+line+'"]').closest('tr').remove();
         }
