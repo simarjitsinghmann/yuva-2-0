@@ -7,7 +7,7 @@ changeItem = function(line, quantity, callback) {
         data: 'quantity=' + quantity + '&line=' + line,
         dataType: 'json',
         success: function(cart) {
-          jQuery.getJSON(cartUrl function (cart, textStatus) {
+          jQuery.getJSON(cartUrl,function (cart, textStatus) {
             callback(cart); 
           });
         },
