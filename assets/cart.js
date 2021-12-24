@@ -3,7 +3,7 @@
 changeCartItem = function(line, quantity) {    
   var  params = {
     type: 'POST',
-    url: '/cart/change.js',
+    url: cartChangeUrl,
     data: 'quantity=' + quantity + '&line=' + line,
     dataType: 'json',
     success: function(cart) {
@@ -125,7 +125,7 @@ cartPageUpdate = function(cart){
 $(document).on('change ', '[name=note]', function(evt) {
   var currentVal = $(this).val();
   $.ajax({
-    url: '/cart/update.js',
+    url: cartUpdateUrl,
     type: 'POST',
     data: {note: currentVal},
     dataType: 'json',
