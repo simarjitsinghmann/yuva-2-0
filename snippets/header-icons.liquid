@@ -48,7 +48,9 @@
   </div>
   {% if shop.customer_accounts_enabled %}                      
   <div class="customer-links">
-    <a class="acc-links text-hover acc-sign-in" id="customer_login_link" href="{%- if customer -%}{{-routes.account_url-}}{%-else-%}{{routes.account_login_url}}{%-endif-%}">
+    <a class="acc-links text-hover acc-sign-in" 
+       id="customer_login_link" href="{%- if customer -%}{{-routes.account_url-}}{%-else-%}{{routes.account_login_url}}{%-endif-%}"
+       aria-label="{%- if customer -%}{{'customer.account_fallback' | t}}{%-else-%}{{'customer.log_in' | t}}{%-endif-%}">
       <?xml version="1.0" encoding="utf-8"?>
       <!-- Generator: Adobe Illustrator 26.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
