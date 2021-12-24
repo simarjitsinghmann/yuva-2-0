@@ -3,7 +3,7 @@ changeItem = function(line, quantity, callback) {
   var $body = $(document.body),
       params = {
         type: 'POST',
-        url: '/cart/change.js',
+        url: cartChangeUrl,
         data: 'quantity=' + quantity + '&line=' + line,
         dataType: 'json',
         success: function(cart) {
@@ -26,7 +26,7 @@ $('[action="/cart/add"]').on('submit',function(evt) {
   submit.addClass('is-loading');
   params = {
     type: 'POST',
-    url: '/cart/add.js',
+    url: cartAddUrl,
     data: jQuery(this).serialize(),
     dataType: 'json',
     // beforeSend: function(jqxhr, settings) {
@@ -40,7 +40,7 @@ $('[action="/cart/add"]').on('submit',function(evt) {
       $('body').find('[data-drawer-title]').html('{{'sections.cart.title' | t}}');
       $('body').find('[data-side-drawer]').attr('id','mini__cart').addClass('mini_cart');
       $('body').addClass('side_Drawer_open');
-      jQuery.getJSON('/cart.js', function (cart, textStatus) {
+      jQuery.getJSON(cartUrl, function (cart, textStatus) {
         buildCart(cart,true);
         setTimeout(function(){
           submit.removeClass('is-loading');
@@ -141,7 +141,7 @@ $('body').on('click','.openCartDrawer',function(e){
   $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper')
   $('body').find('[data-side-drawer]').attr('id','mini__cart').addClass('mini_cart');
   $('body').addClass('side_Drawer_open');
-  jQuery.getJSON('/cart.js', function (cart, textStatus) {
+  jQuery.getJSON(cartUrl, function (cart, textStatus) {
     buildCart(cart,true);
   });
 });
@@ -172,7 +172,7 @@ $(document).on('change ', '[name=note]', function(evt) {
   var currentVal = $(this).val();
   console.log('test',currentVal)
   $.ajax({
-    url: '/cart/update.js',
+    url: cartUpdateUrl,
     type: 'POST',
     data: {note: currentVal},
     dataType: 'json',
