@@ -189,8 +189,10 @@ function sortBy(){
   }
   var closeSortMenu = document.querySelector('.close-mobile-sort');
   if(closeSortMenu){
+    console.log(closeSortMenu)
     closeSortMenu.addEventListener("click", (e)=>{	
       e.preventDefault();
+    console.log('here',closeSortMenu)
       var sortMenu = document.getElementById('sort__list');
       if(window.innerWidth < 768){
         sortMenu.classList.remove('active');
