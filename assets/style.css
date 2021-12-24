@@ -254,7 +254,8 @@ img {
 .products-grid
 .product_columns
 .grid-item
-.card-wrapper-img {
+.card-wrapper-img,
+.row.product_columns .card-wrapper-img{
   min-height: 380px;
   max-height: 380px;
 }
@@ -262,7 +263,8 @@ img {
 .products-grid
 .product_columns
 .grid-item
-.card-wrapper-img {
+.card-wrapper-img,
+.row.product_columns .card-wrapper-img{
   min-height: 500px;
   max-height: 500px;
 }
@@ -270,7 +272,8 @@ img {
 .products-grid
 .product_columns
 .grid-item
-.card-wrapper-img {
+.card-wrapper-img,
+.row.product_columns .card-wrapper-img{
   min-height: 650px;
   max-height: 650px;
 }
