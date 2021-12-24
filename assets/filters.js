@@ -37,7 +37,6 @@
   changeGridLayout();
   hideShowFilters();
   applyFilters();
-  sortBy()
 });
 window.addEventListener('resize', function(event){
   //   changeGridLayout();
@@ -112,6 +111,7 @@ function applyFilters(){
 
   showMultipleOptions(); 
 
+  sortBy()
   var layouts = section.querySelectorAll('a.btn-layout');
   Array.from(layouts).forEach(function(layout) {
     layout.addEventListener("click", ()=>{	
