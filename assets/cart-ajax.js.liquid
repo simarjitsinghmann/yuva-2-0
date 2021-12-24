@@ -141,7 +141,6 @@ $('body').on('click','.openCartDrawer',function(e){
   $('body').find('[data-side-drawer]').attr('id','mini__cart').addClass('mini_cart');
   $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper')
   $('body').addClass('side_Drawer_open');
-  return false;
   jQuery.getJSON('/cart.js', function (cart, textStatus) {
     buildCart(cart,true);
   });
