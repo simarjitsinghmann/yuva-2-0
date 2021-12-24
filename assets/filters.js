@@ -242,6 +242,8 @@ function ScrollExecute() {
       moreButon.remove();
       $('[data-collection-products]').append($(data).find('[data-collection-products]').html());
       productVariants();
+      
+      sortBy();
       showMultipleOptions();
       triggered = false
     });
