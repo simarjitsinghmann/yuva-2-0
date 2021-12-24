@@ -981,13 +981,13 @@ slickSlider = function(selector,slideIndex){
     jQuery(window).trigger('resize');
   }
   $(selector).on('afterChange', function(event, slick, currentSlide){
-    
+
     AOS.refresh();
-  var video = $(this).find('.slick-current video');
+    var video = $(this).find('.slick-current video');
     if(video.length > 0){
-    	video.trigger('play')
+      video.trigger('play')
     }
-});
+  });
 }
 
 sliders = function(){
