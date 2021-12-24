@@ -65,10 +65,10 @@
 {% unless block.settings[product] == blank  %}
 {% assign hasProduct = true %}
 {% assign count = count | plus:1 %}
-
+{% assign product = block.settings[product] %}
 <li>
   <div class="row">
-    {% include 'product-grid'  product:block.settings[product] ,hide_options:true,hideRelated:true,hideQuickView:true ,hideColors:true%}
+    {% include 'product-grid'  product:all_products[product] ,hide_options:true,hideRelated:true,hideQuickView:true ,hideColors:true%}
   </div>
 </li>
 {% endunless %}
