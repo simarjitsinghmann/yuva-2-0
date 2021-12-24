@@ -13,7 +13,7 @@
 <div class="carousel-caption">
   <div class="container">
       <div class="carousel-caption-title banner-slide {{block.settings.info_position}}">
-        <div data-aos="{{animation}}">
+        <div data-aos="{% if block.settings.info_position == 'center' %}fade-up{% else %}fade-{{block.settings.info_position | remove :'center-'}}{% endif %}">
         {% if block.settings.tag_line != blank %}
         <span class="tag-line">{{block.settings.tag_line}}</span>
         {% endif %}
