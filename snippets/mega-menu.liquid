@@ -75,8 +75,9 @@
 					{% assign hasProduct = true %}
                   {% assign count = count | plus:1 %}
 					{% assign pending = pending | minus: 1 %}
+					{% assign product = block.settings[product] %}
                   <div class="sub-menu-list row">
-                    {% include 'product-grid' product:block.settings[product] ,hide_options:true,hideRelated:true,hideQuickView:true %}
+                    {% include 'product-grid' product:all_products[product] ,hide_options:true,hideRelated:true,hideQuickView:true %}
                   </div>
                 {% endunless %}
 				{% endif %}
