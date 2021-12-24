@@ -25,9 +25,9 @@
       </h2>
       <p>
         {% if custom == false %}
-        {{collection.description | strip_html | truncatewords: 15, "" }}
+        {{collection.description | strip_html | truncatewords: 12, "" }}
         {% elsif custom and mc_desc != blank  %}
-        {{mc_desc}}
+        {{mc_desc| strip_html | truncatewords: 12, "" }}
         {% endif %}
       </p>
       {% if mc_btntext != blank %}
