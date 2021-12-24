@@ -983,12 +983,13 @@ slickSlider = function(selector,slideIndex){
   jQuery(selector)
   .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
     console.log(jQuery(this).find('[data-aos]'))
+    jQuery(this).find('[data-aos]').removeClass('aos-animate')
 //     $('.slider_title').removeClass("aos-animate");
     // AOS.refreshHard(); this didn't work
   })
   .on('afterChange', function(event, slick, currentSlide){
 
-    AOS.refresh();
+    jQuery(this).find('[data-aos]').addClass('aos-animate')
     var video = $(this).find('.slick-current video');
     if(video.length > 0){
       video.trigger('play')
