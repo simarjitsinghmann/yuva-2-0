@@ -33,7 +33,10 @@ $('[action="/cart/add"]').on('submit',function(evt) {
     //   $body.trigger('beforeAddItem.ajaxCart', form);
     // },
     success: function(line_item) {           
-      $('body').removeClass('quickview-open');            
+      $('body').removeClass('quickview-open'); 
+
+      $('[data-drawer-body]').html=preLoadLoadGif;
+      $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper')
       jQuery.getJSON('/cart.js', function (cart, textStatus) {
         buildCart(cart,true);
         setTimeout(function(){
