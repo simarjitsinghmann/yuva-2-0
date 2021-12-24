@@ -221,6 +221,7 @@ function getFilterData(filterForm,input,sectionId,remove){
     const resultData = new DOMParser().parseFromString(responseText, 'text/html');
     var itemResultCount = resultData.getElementsByClassName('filter-total-result');
     document.getElementById('CollectionProductsContainer').innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
+      sortBy();
     applyFilters();
     history.pushState({}, null, _updateUrl);
   });
@@ -246,8 +247,6 @@ function ScrollExecute() {
       moreButon.remove();
       $('[data-collection-products]').append($(data).find('[data-collection-products]').html());
       productVariants();
-      
-      sortBy();
       showMultipleOptions();
       triggered = false
     });
