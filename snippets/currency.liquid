@@ -53,7 +53,6 @@
     onItemClick(event) {
       event.preventDefault();
       const form = this.querySelector('form');
-      console.log(event,form)
       this.elements.input.value = event.currentTarget.dataset.value;
       if (form) form.submit();
     }
