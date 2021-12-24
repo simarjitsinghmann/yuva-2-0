@@ -28,8 +28,9 @@
           {% unless section.settings.product == blank %}
           {% include 'product-form' %}
             {%else%}
-          <div class="product-add-to-cart-right">
-          <h4>{{'products.product.onboarding_product_text' | t}}</h4>
+          <div class="product-add-to-cart-right placeholder-content">
+<!--           <h4>{{'products.product.onboarding_product_text' | t}}</h4> -->
+            {{'freatured-product-content.svg' | asset_url | img_tag}}
           </div>
           {% endunless %}
         </div>
