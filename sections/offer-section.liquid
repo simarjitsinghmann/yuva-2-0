@@ -23,13 +23,15 @@
               </div>
               {% unless block.settings.heading == blank and block.settings.subheading == blank %}
               <div class="card-information__wrapper {% if section.settings.style  == 'style2' %}text__{{section.settings.info_position}}{% else %}bottom-{{section.settings.info_position}}{% endif %} content-border-{{section.settings.show_border}}" >
+                <div data-aos="fade-up" data-aos-duration="1500">
                 {% if block.settings.heading != blank %}
-                <h5 data-aos="fade-up" data-aos-duration="1500">{{block.settings.heading}}</h5>
+                <h5>{{block.settings.heading}}</h5>
                 {% endif%}
                 {% if block.settings.subheading != blank %}
                 {{block.settings.subheading}}
                 {% endif%}
               </div>
+                  </div>
               {% endunless %}
               </a>
             </div>
