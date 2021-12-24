@@ -241,8 +241,6 @@ function ScrollExecute() {
     .done(function(data) {
       moreButon.remove();
       $('[data-collection-products]').append($(data).find('[data-collection-products]').html());
-
-      sortBy()
       productVariants();
       showMultipleOptions();
       triggered = false
