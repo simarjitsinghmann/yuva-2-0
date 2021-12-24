@@ -254,10 +254,13 @@ img {
 .products-grid
 .product_columns
 .grid-item
-.card-wrapper-img,
-.row.column-4.product_columns .card-wrapper-img{
+.card-wrapper-img{
   min-height: 380px;
   max-height: 380px;
+}
+.row.column-4.product_columns .card-wrapper-img{
+  min-height: 420px;
+  max-height: 420px;
 }
 #CollectionProductsContainer[data-view="grid-layout-3"]
 .products-grid
