@@ -126,7 +126,7 @@ buildCart = function (cart,showCart) {
   }
 
 
-  $('[data-drawer-body]').load(cart+'?view=jsonData', function() {
+  $('[data-drawer-body]').load(mainCartUrl+'?view=jsonData', function() {
     if(showCart){
       $('body').addClass('side_Drawer_open');
       $('.wrapper-overlay').css({"display": "block"});
