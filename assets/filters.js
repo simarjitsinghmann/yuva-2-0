@@ -73,7 +73,7 @@ function applyFilters(){
 
   showMultipleOptions(); 
 
-  sortBy()
+  sortBy();
   var layouts = section.querySelectorAll('a.btn-layout');
   Array.from(layouts).forEach(function(layout) {
     layout.addEventListener("click", ()=>{	
