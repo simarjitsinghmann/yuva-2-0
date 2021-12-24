@@ -110,9 +110,11 @@
     if($(window).scrollTop()>150){
       $(".top-header").addClass("sticky-header");
       $("header").addClass("sticky-header");
+      $("body").addClass("sticky-header");
     }else {
       $(".top-header").removeClass("sticky-header");
       $("header").removeClass("sticky-header");
+      $("body").removeClass("sticky-header");
     }
   });
   {% endif %}
