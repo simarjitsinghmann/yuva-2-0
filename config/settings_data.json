@@ -25,7 +25,7 @@
     "shipping_rate": "500",
     "shipping_text": "Spend ||amount|| more and get free shipping! ||amount||",
     "free_shipping_text": "You get free shipping! You get free shipping!",
-    "enable_preorder": false,
+    "enable_preorder": true,
     "option_style": "dropdown",
     "color_swatch_style": "square",
     "variant_image": true,
@@ -303,10 +303,11 @@
           "header_textcolor_hover": "#848484",
           "menu_bgcolor": "#000000",
           "menu_textcolor": "#ffffff",
+          "sub_menu_color": "#848484",
           "sub_hover_color": "#000000",
           "show_search": true,
           "show_currency": true,
-          "enable_sticky_header": false
+          "enable_sticky_header": true
         }
       },
       "footer": {
