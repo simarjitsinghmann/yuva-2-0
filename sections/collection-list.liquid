@@ -61,7 +61,7 @@
                     {% if block.settings.custom == false %}
                     {{collection.description | strip_html | truncatewords: 15, "" }}
                     {% elsif block.settings.custom and block.settings.desc != blank  %}
-                    {{block.settings.desc}}
+                    {{block.settings.desc| strip_html | truncatewords: 15, "" }}
                     {% endif %}
                   </p> 
                   {% if block.settings.btntext != blank %}
