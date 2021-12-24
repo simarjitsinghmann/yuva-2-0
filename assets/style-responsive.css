@@ -2549,7 +2549,9 @@
     .grid-item
     .card-wrapper-img,
   .card-wrapper-img,
-      .row.column-2.product_columns .card-wrapper-img {
+  .row.column-2.product_columns .card-wrapper-img,
+  .row.column-4.product_columns .card-wrapper-img,
+  .row.column-3.product_columns .card-wrapper-img{
     min-height: 260px;
     max-height: 260px;
   }
@@ -2606,7 +2608,9 @@
     .card-wrapper-img,
   .card-wrapper-img,
   .result_product .card-wrapper-img,
-      .row.column-2.product_columns .card-wrapper-img {
+      .row.column-2.product_columns .card-wrapper-img,
+  .row.column-3.product_columns .card-wrapper-img,
+  .row.column-4.product_columns .card-wrapper-img{
     min-height: 250px;
     max-height: 250px;
   }
