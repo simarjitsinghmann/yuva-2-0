@@ -980,7 +980,13 @@ slickSlider = function(selector,slideIndex){
     
     jQuery(window).trigger('resize');
   }
-  $(selector).on('afterChange', function(event, slick, currentSlide){
+  $(selector)
+  .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    console.log(nextSlide)
+//     $('.slider_title').removeClass("aos-animate");
+    // AOS.refreshHard(); this didn't work
+  })
+  .on('afterChange', function(event, slick, currentSlide){
 
     AOS.refresh();
     var video = $(this).find('.slick-current video');
