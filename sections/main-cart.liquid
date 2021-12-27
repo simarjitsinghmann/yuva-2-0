@@ -76,7 +76,7 @@
                     <td class="cart-qty">
                        <div class="qty">
                           <button class="minus line_item_change"  data-line="{{forloop.index}}">-</button>
-                          <input type="number" name="item_quantity" initial="{{item.quantity}}" data-line="{{forloop.index}}" value="{{item.quantity}}" data-line-quantity="{{forloop.index0}}">
+                          <input type="number" name="item_quantity" initial="{{item.quantity}}" data-line="{{forloop.index}}" value="{{item.quantity}}" data-line-quantity="{{forloop.index0}}" aria-label="{{'sections.cart.headings.quantity' | t}}">
                           <button class="plus line_item_change" data-line="{{forloop.index}}">+</button>
                        </div>
                     </td>
