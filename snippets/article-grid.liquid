@@ -5,8 +5,8 @@
     {% assign article_image = article.image | img_url:'master' %}
     {% endif %}
     <div class="post-information-image">
-      <a href="{{article.url}}" class="animate_hvrbr">
-        <img src="{{article_image}}" alt="">
+      <a href="{{article.url}}" class="animate_hvrbr" title="{{article.title}}">
+        <img src="{{article_image}}" alt="{{article.title}}">
       </a>
     </div>
     <div class="post-information__wrapper text__left">
