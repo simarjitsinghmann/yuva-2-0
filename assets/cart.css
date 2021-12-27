@@ -295,10 +295,12 @@ input[type="number"] {
   .item-variant-title {
     font-size: 11px;
   }
-  .cstm-cart-sec table tr td.cart-prd-details .cart-item-product-details,
-  .cstm-cart-sec table tr td.cart-prd-details p{
+  .cstm-cart-sec table tr td.cart-prd-details .cart-item-product-details{
     margin-top: 6px;
-}
+  }
+  .cstm-cart-sec table tr td.cart-prd-details p {
+    margin: 0 0 6px;
+  }
 }
 @media screen and (max-width: 1199px){
   .cstm-cart-sec .inner-box.price-details {
