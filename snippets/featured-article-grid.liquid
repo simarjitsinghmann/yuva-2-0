@@ -5,9 +5,12 @@
             {% assign article_image = article.image %}
             {% endif %}
             <div class="post-information-image">
-                <a href="{{article.url}}" class="animate_hvrbr">
-                    
+                <a href="{{article.url}}" class="animate_hvrbr">                    
+                  {% if article.image != blank %}
                   {% include 'lazy-image' image:article_image%}
+                  {% else %}
+                  {% render 'placeholder' %}
+                  {% endif %}
                 </a>
             </div>
             <div class="post-information__wrapper text__left">
