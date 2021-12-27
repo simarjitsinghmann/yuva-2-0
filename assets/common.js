@@ -1126,9 +1126,20 @@ $(document).ready(function()
 
   $("body").mouseup(function(){ 
     if(! mouse_is_inside) {
-      $('body').removeClass('similar_Drawer_open').removeClass('side_Drawer_open').removeClass('active_askme').removeClass('scrollHidden').removeClass('quickview-open').removeClass('nav-open').removeClass('addsearch').removeClass('small_search').removeClass('minicart-open').removeClass('customer-open').removeClass('NewsletterActive').removeClass('show__similar__products');
+      $('body').removeClass('similar_Drawer_open')
+      .removeClass('side_Drawer_open')
+      .removeClass('active_askme')
+      .removeClass('scrollHidden')
+      .removeClass('quickview-open')
+      .removeClass('nav-open')
+      .removeClass('addsearch')
+      .removeClass('small_search')
+      .removeClass('minicart-open')
+      .removeClass('customer-open')
+      .removeClass('NewsletterActive')
+      .removeClass('show__similar__products');
       $('.newsletter-popup,.wrapper-overlay,.askmeMain.slideAskme').hide();
-     
+     $('.side-menu').find('.inner').removeClass('show');
       if($(window).width() < 768){
         $('#sort__list').removeClass('active');
       }
