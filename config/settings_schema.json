@@ -305,6 +305,17 @@
     ]
   },
   {
+    "name": "t:settings_schema.breadcrumb.name",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_breadcrumb",
+        "default": true,
+        "label": "t:settings_schema.product-variants.enable_breadcrumb.label"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.product-variants.name",
     "settings": [
       {
