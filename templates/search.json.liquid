@@ -14,8 +14,12 @@ The final file name would be search.json.liquid
   <div class="card-wrapper">
     <div class="card card--text-only card--soft card--product text__left">
       <div class="card-wrapper-img">
-        <a href="{{product.url | within: collection}}">
-          <img src="{{product.featured_image | img_url:'large'}}" alt="{{product.title}}">        
+        <a href="{{product.url | within: collection}}"> 
+          {% if product.featured_image != blank %}
+          <img src="{{product.featured_image | img_url:'large'}}" alt="{{product.title}}">
+          {%else%}
+          {% render 'placeholder' %}
+          {% endif%}
         </a>
       </div>
       <div class="product-information">
