@@ -59,7 +59,6 @@
 .cstm-cart-sec table tr td.cart-qty .qty {
    max-width: 108px;
    width: 100%;
-   margin: 0 auto;
    position: relative;
    overflow: hidden;
    border-radius: 0;
@@ -116,9 +115,6 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
    -moz-appearance: textfield;
-}
-.cstm-cart-sec table tr td.cart-price {
-   text-align: center;
 }
 .cstm-cart-sec table tr td.cart-price .price {
    font-weight: bold;
