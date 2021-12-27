@@ -1993,19 +1993,20 @@
   .left-product-images .slick-arrow span {
     background: #fff;
     color: var(--theme-color);
-    border-radius: 100%;
-    width: 35px;
-    height: 35px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
+      border-radius: 100%;
+      width: 35px;
+      height: 35px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      box-shadow: 0 1px 1px 1px #0000000a;
+      }
   .left-product-images .slick-arrow svg{
     width: 20px;
     height: 20px;
