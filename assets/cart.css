@@ -284,11 +284,14 @@ input[type="number"] {
       max-width: 55px;
    }
    .cstm-cart-sec table tr td.cart-prd-details {
-      width: 160px;
+      width: 200px;
    }
    .cstm-cart-sec table tr td.cart-img {
       width: 80px;
    }
+  .cstm-cart-sec table tr td.cart-remove {
+    width: 60px;
+}
 }
 @media screen and (max-width: 1199px){
   .cstm-cart-sec .inner-box.price-details {
