@@ -3981,9 +3981,10 @@ button.shopify-payment-button__button {
 
 /*================ Single banner css start ==============*/
 .single-banner-section.banner-section .item {
-  position: relative;
-  height: 600px;
-  overflow: hidden;
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    background-color: var(--colorImageBg);
 }
 .single-banner-section.banner-section .item img {
   height: 100%;
