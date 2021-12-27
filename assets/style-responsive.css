@@ -2496,6 +2496,9 @@
   .similar_options{
   	display:none;
   }
+  .collection-product-grid .card-wrapper-img a, .recent-product-slide .card-wrapper-img a {
+    pointer-events: auto;
+  }
   /*============= PDP page css end  ===============*/
   /* ============ recent product css start =============== */
   .recent-product-slide .item {
