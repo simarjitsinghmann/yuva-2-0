@@ -2396,6 +2396,9 @@ input:checked
 .fancybox__toolbar {
     background: transparent!important;
 }
+.fancybox__thumb {
+    border-radius: 0!important;
+}
 .fancybox__thumbs .carousel__slide .fancybox__thumb::after {
     border-width: 2px!important;
     border-color: var(--theme-color)!important;
