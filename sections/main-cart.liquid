@@ -16,6 +16,15 @@
        </h3>
         <div class="inner-box">
            <table class="cart-products-table">
+             <thead>
+               <tr>
+                 <th scope="col">product_img</th>
+                 <th scope="col">product_detail</th>
+                 <th scope="col">quantity</th>
+                 <th scope="col">price</th>
+                 <th scope="col">action</th>
+               </tr>
+             </thead>
               <tbody data-cart-items>
                 {% for item in cart.items %}
                  <tr>
