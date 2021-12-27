@@ -294,12 +294,15 @@ input[type="number"] {
    }
 }
 @media screen and (max-width: 1199px){
-.cstm-cart-sec .inner-box.price-details ul li.total p {
-   font-size: 15px;
-}
+  .cstm-cart-sec .inner-box.price-details {
+    padding: 20px 15px;
+  }
+  .cstm-cart-sec .inner-box.price-details ul li.total p {
+    font-size: 15px;
+  }
   .cstm-cart-sec .inner-box.price-details ul li.total strong {
     font-size: 18px;
-}
+  }
 }
 @media screen and (max-width: 991px) {
    .cstm-cart-sec table tr td.cart-qty .qty input {
