@@ -15,12 +15,11 @@
                 <a href="{{block.settings.link}}" class="animate_hvrbr">
               <div class="card-information-image">
                   {% if block.settings.image != blank  %}
-                sss
                   {% assign feature_image = block.settings.image  %}
                   {%else%}
-                ddd
                   {% assign feature_image = 'featured_image.png' | asset_url %}
                   {% endif %}
+                {{feature_image}}
                   {% render 'lazy-image' image: feature_image%}
               </div>
               {% unless block.settings.heading == blank and block.settings.subheading == blank %}
