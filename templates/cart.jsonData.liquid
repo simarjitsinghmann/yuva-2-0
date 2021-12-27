@@ -56,7 +56,7 @@
           {%- endfor -%}
           <div class="right-media-cart">
             <div class="quantity">
-              <input type="number" class="ajaxcart__qty-num" name="updates[]" min="1" max="9" step="1" value="{{item.quantity}}" data-id="{{item.key}}" data-line="{{forloop.index}}">
+              <input type="number" class="ajaxcart__qty-num" name="updates[]" min="1" max="9" step="1" value="{{item.quantity}}" data-id="{{item.key}}" data-line="{{forloop.index}}" aria-label="{{'sections.cart.headings.quantity' | t}}">
               <div class="quantity-nav">
                 <div class="quantity-button quantity-up ajaxcart__qty--plus"  data-id="{{item.key}}" data-line="{{forloop.index}}" data-qty="{{item.quantity | plus: 1}}"><svg width="24px" height="24px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="plusIconTitle" stroke="#909097" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" color="#000000"> <title id="plusIconTitle">Plus</title> <path d="M20 12L4 12M12 4L12 20"/> </svg></div>
                 <div class="quantity-button quantity-down ajaxcart__qty--minus" data-id="{{item.key}}" data-line="{{forloop.index}}" data-qty="{{item.quantity | minus: 1}}"><svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#909097" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
