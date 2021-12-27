@@ -821,8 +821,9 @@ function sellingPlans(variant,form){
 jQuery(".productThumbImage").click(function(e) {
   e.preventDefault();
   var destination = jQuery(this).attr('href');
+  var top = jQuery('header').height() + 20;
   if(jQuery(destination).length > 0){
-  jQuery('html, body').animate({ scrollTop:(jQuery(destination).offset().top) - 150}, 500);
+  jQuery('html, body').animate({ scrollTop:(jQuery(destination).offset().top) - top}, 500);
   }
 });
 
