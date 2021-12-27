@@ -109,7 +109,7 @@
   {% endfor %}
   {% endunless %}
   {% when 'quantity' %}
-  <div class="select__quantity">
+  <div class="select__quantity"  {{ block.shopify_attributes }}>
     <span class="variant_title">{{ 'products.product.quantity.label' | t }}</span>                              
     <div class="quantity">
       <input type="number" name="quantity" min="1" max="50" step="1" value="1" form="{{product_form_id}}" aria-label="{{'products.product.quantity.label' | t}}">
@@ -121,11 +121,11 @@
 
   </div>
   {% when 'social-icons' %}
-  <div class="social-icons">
+  <div class="social-icons"  {{ block.shopify_attributes }}>
     {% include 'social-sharing' , share_title: product.title, share_permalink: product.url, share_image: product%}
   </div>
   {% when 'button' %}
-  <div class="product_button">
+  <div class="product_button"  {{ block.shopify_attributes }}>
     {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
     {% render 'product-variants' product:product %}
     {% assign preorder = false %}
