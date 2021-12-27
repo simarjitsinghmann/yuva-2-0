@@ -1038,9 +1038,10 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     var slider = jQuery('#shopify-section-'+sectionId).find('[data-slider]');
 
     slideIndex  = $('.slideshow__slide--' + event.detail.blockId + ':not(.slick-cloned)').data('slick-index');
-
-    slider.slick('slickGoTo',slideIndex);
-    slider.slick('slickPause')
+    if(slider.length > 0){
+      slider.slick('slickGoTo',slideIndex);
+      slider.slick('slickPause');
+    }
 
   }
   else if(event.type == "shopify:section:load"){
