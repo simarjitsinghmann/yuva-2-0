@@ -8,7 +8,7 @@
     <div class="feature-product product_content_section ">
       <div class="row">
         <div class="col-md-7">
-          <div class="product-image-left" {% unless product == empty and product.images.size == 1%}data-slider{% endunless %}>
+          <div class="product-image-left" {% unless product == empty or product.images.size == 1%}data-slider{% endunless %}>
             {% unless product == empty %}   
             {%- for media in product.media -%}
             {%-if media.media_type == 'image'-%}
