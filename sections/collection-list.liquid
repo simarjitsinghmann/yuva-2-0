@@ -10,7 +10,7 @@
     </div>
     <div class="collection-gutter">
       {% if section.settings.m_collection != blank or section.settings.m_collection != false %}
-      <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col" role="list">
+      <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col">
         {% include 'featured-collection-grid'
                       	m_collection:section.settings.m_collection,
         custom:section.settings.custom,
@@ -24,9 +24,9 @@
       </div>
       {% endif %}
       {% if section.blocks.size > 0 %}
-      <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col " role="list">
+      <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col ">
         {% if section.blocks.size > 1 %}
-        <ul class="collection__right__list block-count{{section.blocks.size}}" role="list">
+        <ul class="collection__right__list block-count{{section.blocks.size}}">
           {% for block in section.blocks %}
           {% assign collection = ''%}
           {% if block.settings.collection != blank %}
