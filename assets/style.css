@@ -3632,10 +3632,11 @@ body.header2.announcement_open .single__product__right.sidebar-fixed {
 
 /*============= Feature Product css start ==============*/
 .feature-product .product-image-left {
-  padding-right: 30px;
+  margin-right: 30px;
   height: 100%;
   max-height: 630px;
   overflow: hidden;
+  background-color: var(--colorImageBg);
   position:relative;
 }
 .feature-section .product-image-left img {
