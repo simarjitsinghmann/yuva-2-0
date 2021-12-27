@@ -823,7 +823,7 @@ jQuery(".productThumbImage").click(function(e) {
   var destination = jQuery(this).attr('href');
   var top = jQuery('header').height() + 20;
   if(jQuery(destination).length > 0){
-  jQuery('html, body').animate({ scrollTop:(jQuery(destination).offset().top) - top}, 500);
+  jQuery('html, body').animate({ scrollTop:(jQuery(destination).offset().top) - top});
   }
 });
 
