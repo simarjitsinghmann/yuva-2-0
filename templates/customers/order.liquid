@@ -40,13 +40,13 @@
                       >
                     <div class="line-item-details-wrapper">
                     {% if line_item.image != blank %}
-                    <a class="line-item-image" href="{{ line_item.product.url }}">
-                      <img src="{{line_item.image | img_url :'100x' }}">
+                    <a class="line-item-image" href="{{ line_item.product.url }}" aria-label="{{ line_item.title }}">
+                      <img src="{{line_item.image | img_url :'100x' }}" alt="{{ line_item.title }}">
                     </a>
                     {% endif %}
                     <div class="line-item-details">
                       {%- if line_item.product.url != blank -%}
-                      <a href="{{ line_item.product.url }}">{{ line_item.title }}</a>
+                      <a href="{{ line_item.product.url }}" aria-label="{{ line_item.title }}">{{ line_item.title }}</a>
                       {%- else -%}
                       <p>{{ line_item.title }}</p>
                       {%- endif -%}
@@ -82,7 +82,7 @@
                       {%- endunless -%}
 
                       {%- if line_item.line_level_discount_allocations != blank -%}
-                      <ul role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                      <ul aria-label="{{ 'customer.order.discount' | t }}">
                         {%- for discount_allocation in line_item.line_level_discount_allocations -%}
                         <li>
                           {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money -}})
