@@ -23,7 +23,7 @@
     <div class="cart-items-wrapper">
       {% for item in cart.items %}
       <div class="media-link" data-line="{{forloop.index}}">
-        <img src="{{item.image | img_url:'150x'}}" alt="{{name}}" width="65" height="73">
+        <img src="{{item.image | img_url:'150x'}}" alt="{{item.product.title}}" width="65" height="73">
         <div class="media-body">
           <a href="{{item.url}}" class="cart-item-link" aria-label="{{item.product.title}}">{{item.product.title | truncatewords:5}}</a>
           {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
