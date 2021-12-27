@@ -21,7 +21,7 @@
                 {% elsif collection.featured_image %}
                 {% include 'lazy-image' image:collection.featured_image %}
                 {% else %}
-                <img src="{{ 'placeholder.svg' | asset_url }}" alt="{{'onboarding.collection_title' | t}}"/>
+                {% render 'placeholder' %}
                 {% endif %}
                     {% if block.settings.collection != blank or block.settings.heading != blank %}
                 <div class="list-view-content text__{{block.settings.info_position}}">          
@@ -53,7 +53,7 @@
                     {% elsif collection.featured_image %}
                     {% include 'lazy-image' image:collection.featured_image %}
                     {% else %}
-                    <img src="{{ 'placeholder.svg' | asset_url }}" alt="{{'onboarding.collection_title' | t}}" />
+                    {% render 'placeholder' %}
                     {% endif %}
                     {% if block.settings.collection != blank or block.settings.heading != blank %}
                     <div class="list-view-content text__{{block.settings.info_position}}">          
