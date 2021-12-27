@@ -73,7 +73,7 @@ function applyFilters(){
     });
   });  
 
-  showMultipleOptions(); 
+//   showMultipleOptions(); 
   var layouts = section.querySelectorAll('a.btn-layout');
   Array.from(layouts).forEach(function(layout) {
     layout.addEventListener("click", ()=>{	
@@ -245,7 +245,7 @@ function ScrollExecute() {
       moreButon.remove();
       $('[data-collection-products]').append($(data).find('[data-collection-products]').html());
       productVariants();
-      showMultipleOptions();
+//       showMultipleOptions();
       triggered = false
     });
   }
