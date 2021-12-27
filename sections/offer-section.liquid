@@ -19,7 +19,6 @@
                   {%else%}
                   {% assign feature_image = 'featured_image.png' | asset_url %}
                   {% endif %}
-                {{feature_image}}
                   {% render 'lazy-image' image: feature_image%}
               </div>
               {% unless block.settings.heading == blank and block.settings.subheading == blank %}
