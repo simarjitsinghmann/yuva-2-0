@@ -357,6 +357,14 @@ input[type="number"] {
     margin-bottom: 20px;
     width:50%;
   }
+  .cstm-cart-sec table tr td.cart-remove .remove {
+    width: auto;
+    height: auto;
+    justify-content: flex-start;
+    border-radius: 0;
+    border: 0;
+    margin-left: auto;
+  }
 }
 @media screen and (max-width: 577px) {
   .cstm-cart-sec table tr{
