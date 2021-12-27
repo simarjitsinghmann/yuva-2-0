@@ -433,6 +433,10 @@
   }
   /*==============  Whats more end  ==============*/
   /*===============  product listing home start  =============*/
+  .products-grid .column-5 .grid-item .card-wrapper-img {
+    min-height: 240px;
+    max-height: 240px;
+}
   #CollectionProductsContainer[data-view="grid-layout-4"]
     .products-grid
     .product_columns
