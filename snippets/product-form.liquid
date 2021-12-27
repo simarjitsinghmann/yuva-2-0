@@ -5,21 +5,21 @@
   {% for block in section.blocks %}
   {% case block.type %}
   {% when 'title' %}
-  <a class="product-detail-title" href="{{product.url}}">{{product.title}}</a>
+  <a class="product-detail-title" href="{{product.url}}"   {{ block.shopify_attributes }}>{{product.title}}</a>
   {% when 'text' %}
-  <p class="vendor_name">{{block.settings.text}}</p>
+  <p class="vendor_name"  {{ block.shopify_attributes }}>{{block.settings.text}}</p>
   {% when 'inventory' %}            
   {% if current_variant.available %}
-  <span id="variant-inventory" class="product-instock product-stock">{{ 'products.product.in_stock' | t }}</span>
+  <span id="variant-inventory" class="product-instock product-stock" {{ block.shopify_attributes }}>{{ 'products.product.in_stock' | t }}</span>
   {% else %}
-  <span id="variant-inventory" class="product-outstock product-stock">{{ 'products.product.out_stock' | t }}</span>
+  <span id="variant-inventory" class="product-outstock product-stock" {{ block.shopify_attributes }}>{{ 'products.product.out_stock' | t }}</span>
   {% endif %}
   {% when 'review-star' %}
-  <div class="ratingbox">
+  <div class="ratingbox" {{ block.shopify_attributes }}>
     <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
   </div>
   {% when 'price' %}
-  <div class="prizebox" data-saved="{{settings.show_saved_amount}}"  data-saved-style="{{settings.saved_amount_style}}" data-price-wrapper="">
+  <div class="prizebox" data-saved="{{settings.show_saved_amount}}"  data-saved-style="{{settings.saved_amount_style}}" data-price-wrapper=""   {{ block.shopify_attributes }}>
     {% if current_variant.compare_at_price > current_variant.price %}
     <h3 id="get_price" class="price-list">
       <span class="get-price">{{current_variant.price | money}}</span>
@@ -51,7 +51,7 @@
   {% assign downOption = option.name | downcase %}
   {% assign optionIndex = forloop.index %}
   {% assign varOptionIndex = 'option'|append:forloop.index %}
-  <div class="select__{{downOption}} product-option-selector">
+  <div class="select__{{downOption}} product-option-selector"  {{ block.shopify_attributes }}>
     <span class="variant_title">{{ 'products.product.option' | t: title:option.name }}</span>
     {% if settings.option_style == 'swatch' %}
     <ul class="product-loop-variants {{downOption}} variants {{settings.color_swatch_style}} _small list-unstyled">                            
