@@ -1,7 +1,7 @@
 {% if block.settings.image_desktop != blank %}
 {% assign banner_image = block.settings.image_desktop | img_url: "master" %} 
 {% else %}
-{% assign banner_image = 'banner.svg' | asset_url  %} 
+{% assign banner_image = 'placeholder.svg' | asset_url  %} 
 {% endif %}   
 <div class="container slide_container">
   <div class="row">
