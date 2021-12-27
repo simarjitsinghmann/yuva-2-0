@@ -725,6 +725,9 @@ img {
   width: 50%;
   float: left;
   background-color: var(--colorImageBg);
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 .card__warpper__detail.right__sided .collection-detail-right {
   width: 50%;
