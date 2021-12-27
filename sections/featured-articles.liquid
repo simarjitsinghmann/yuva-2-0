@@ -18,10 +18,9 @@
             {% include 'featured-article-grid' %}
             {% else %}
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-              <div class="post-wrapper">
-                  {% assign article_image = 'placeholder.svg' | asset_url %}                
+              <div class="post-wrapper">               
                   <div class="post-information-image">
-                    <img src="{{article_image}}" alt="">
+                    {% render 'placeholder' %}
                   </div>
                   <div class="post-information__wrapper text__left">
                     <div class="post-date">
@@ -48,9 +47,9 @@
             {% else %}
             <div class="item col-sm-12">
               <div class="post-wrapper">
-                  {% assign article_image = 'placeholder.svg' | asset_url %}                
+                  
                   <div class="post-information-image">
-                    <img src="{{article_image}}" alt="">
+                    {% render 'placeholder' %}
                   </div>
                   <div class="post-information__wrapper text__left">
                     <div class="post-date">
