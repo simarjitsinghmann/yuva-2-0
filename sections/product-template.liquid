@@ -208,30 +208,30 @@
 <script>
   
   document.addEventListener("DOMContentLoaded shopify:section:load", function() {
-  var tabHead = document.getElementsByClassName('resp-tab-item');
-  if(tabHead.length > 0 ){
-    tabHead[0].classList.add('active');
-    var tabContent =  document.getElementsByClassName('resp-tab-content');
-    tabContent[0].style.display = 'block';
-    function clearActive(){
-      Array.from(tabHead).forEach(function(item) {
-        item.classList.remove('active');
+    var tabHead = document.getElementsByClassName('resp-tab-item');
+    if(tabHead.length > 0 ){
+      tabHead[0].classList.add('active');
+      var tabContent =  document.getElementsByClassName('resp-tab-content');
+      tabContent[0].style.display = 'block';
+      function clearActive(){
+        Array.from(tabHead).forEach(function(item) {
+          item.classList.remove('active');
+        });
+        Array.from(tabContent).forEach(function(item) {
+          item.style.display = 'none';
+        });
+      }
+      Array.from(tabHead).forEach(function(btn) {
+        btn.addEventListener("click", ()=>{ 
+                             clearActive();
+        btn.classList.add("active");
+        var _value = btn.getAttribute("content");
+        document.getElementById(_value).style.display = "block";
       });
-      Array.from(tabContent).forEach(function(item) {
-        item.style.display = 'none';
-      });
-    }
-    Array.from(tabHead).forEach(function(btn) {
-      btn.addEventListener("click", ()=>{ 
-                           clearActive();
-      btn.classList.add("active");
-      var _value = btn.getAttribute("content");
-      document.getElementById(_value).style.display = "block";
     });
-  });
   }
-  var accordionHead = document.getElementsByClassName('accordion-{{section.id}}');
-                                                      if(accordionHead.length > 0 ){
+                            var accordionHead = document.getElementsByClassName('accordion-{{section.id}}');
+                            if(accordionHead.length > 0 ){
     var accordionContent =  document.getElementsByClassName('productSection-content');
 
     Array.from(accordionHead).forEach(function(btn) {
@@ -243,7 +243,7 @@
       else{
         btn.classList.add("active");
         var _value = btn.getAttribute("content");
-        
+
         clearAccordion(btn, document.getElementById(_value));
         DOMAnimations.slideDown( document.getElementById(_value));
       }
@@ -251,13 +251,13 @@
   });
   function clearAccordion(currentHead,currentContent){
     var accordionHeads = document.getElementsByClassName('accordion-{{section.id}}');
-    var accordionContents =  document.getElementsByClassName('productSection-content');
+                                                         var accordionContents =  document.getElementsByClassName('productSection-content');
     Array.from(accordionHead).forEach(function(item) {
       if(item == currentHead){
         return;
       }
       else{
-      item.classList.remove('active');
+        item.classList.remove('active');
       }
     });
     Array.from(accordionContents).forEach(function(item) {
