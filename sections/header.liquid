@@ -167,414 +167,414 @@
 
 {% schema %}
 {
-"name": "t:sections.header.name",
-"class": "shopify-section-main-header",
-"max_blocks":25,
-"settings": [
-{
-"type": "select",
-"id": "header_style",
-"label": "t:sections.header.settings.header_style.label",
-"default": "header1",
-"options": [
-{
-"label": "t:sections.header.settings.header_style.header1.label",
-"value": "header1"
-},
-{
-"label": "t:sections.header.settings.header_style.header2.label",
-"value": "header2"
-},
-{
-"label": "t:sections.header.settings.header_style.header3.label",
-"value": "header3"
-}
-]
-},
-{
-"type": "image_picker",
-"id": "logo",
-"label": "t:sections.header.settings.logo.label"
-},
-{
-"type": "range",
-"id": "logo_width",
-"min": 50,
-"max": 250,
-"step": 10,
-"default": 100,
-"unit": "t:sections.header.settings.logo_width.unit",
-"label": "t:sections.header.settings.logo_width.label"
-},
-{
-"type": "select",
-"id": "logo_position",
-"label": "t:sections.header.settings.logo_position.label",
-"info": "t:sections.header.settings.logo_position.info",
-"default": "flex-start",
-"options": [
-{
-"label": "t:sections.header.settings.logo_position.left.label",
-"value": "flex-start"
-},
-{
-"label": "t:sections.header.settings.logo_position.center.label",
-"value": "center"
-}
-]    
-},
-{
-"type": "link_list",
-"id": "menu",
-"default": "main-menu",
-"label": "t:sections.header.settings.menu.label"
-},
-{
-"type": "select",
-"id": "menu_position",
-"label": "t:sections.header.settings.menu_position.label",
-"info": "t:sections.header.settings.menu_position.info",
-"default": "flex-start",
-"options": [
-{
-"label": "t:sections.header.settings.menu_position.left.label",
-"value": "flex-start"
-},
-{
-"label": "t:sections.header.settings.menu_position.center.label",
-"value": "center"
-}
-]    
-},
-{
-"type": "color",
-"id": "header_bgcolor",
-"label": "t:sections.header.settings.header_bgcolor.label"
-},
-{
-"type": "color",
-"id": "header_textcolor",
-"label": "t:sections.header.settings.header_textcolor.label"
-},
-{
-"type": "color",
-"id": "header_textcolor_hover",
-"label": "t:sections.header.settings.header_textcolor_hover.label"
-},
-{
-"type": "color",
-"id": "menu_bgcolor",
-"default": "#f7f7f7",
-"label": "t:sections.header.settings.menu_bgcolor.label",
-"info": "t:sections.header.settings.menu_bgcolor.info"
-},
-{
-"type": "color",
-"id": "menu_textcolor",
-"default": "#000000",
-"label": "t:sections.header.settings.menu_textcolor.label",
-"info": "t:sections.header.settings.menu_textcolor.info"
-},
-{
-"type": "color",
-"id": "sub_menu_color",
-"default": "#848484",
-"label": "t:sections.header.settings.sub_menu_color.label"
-},
-{
-"type": "color",
-"id": "sub_hover_color",
-"default": "#000000",
-"label": "t:sections.header.settings.sub_hover_color.label"
-},
-{
-"type": "checkbox",
-"id": "show_search",
-"default": true,
-"label": "t:sections.header.settings.show_search.label"
-},
-{
-"type": "checkbox",
-"id": "show_currency",
-"default": true,
-"label": "t:sections.header.settings.show_currency.label"
-},
-{
-"type": "checkbox",
-"id": "enable_sticky_header",
-"default": true,
-"label": "t:sections.header.settings.enable_sticky_header.label",
-"info": "t:sections.header.settings.enable_sticky_header.info"
-}
-],
-"blocks": [
-{
-"type":"image",
-"name":"Image",
-"settings": [
-{
-"type": "select",
-"id": "position",
-"label": "Link position in Main menu",
-"options":[
-{
-"value": "1",
-"label": "Menu Link 1"
-},
-{
-"value": "2",
-"label": "Menu Link 2"
-},	
-{
-"value": "3",
-"label": "Menu Link 3"
-},	
-{
-"value": "4",
-"label": "Menu Link 4"
-},	
-{
-"value": "5",
-"label": "Menu Link 5"
-},	
-{
-"value": "6",
-"label": "Menu Link 6"
-},	
-{
-"value": "7",
-"label": "Menu Link 7"
-},	
-{
-"value": "8",
-"label": "Menu Link 8"
-},	
-{
-"value": "9",
-"label": "Menu Link 9"
-},	
-{
-"value": "10",
-"label": "Menu Link 10"
-}				
-] 
-},
-{
-"type": "text",
-"id": "title",
-"label": "Assign Name(Optional)",
-"info": "We recommend adding this name as this helps in tracking your menus."
-},
-{
-"type": "image_picker",
-"id": "image1",
-"label": "Image 1"
-},
-{
-"type": "text",
-"id": "heading1",
-"label": "Heading "
-},
-{
-"type": "text",
-"id": "button1",
-"label": "Button"
-},
-{
-"type": "url",
-"id": "link1",
-"label": "Link"
-},
-{
-"type": "image_picker",
-"id": "image2",
-"label": "Image 2"
-},
-{
-"type": "text",
-"id": "heading2",
-"label": "Heading"
-},
-{
-"type": "text",
-"id": "button2",
-"label": "Button"
-},
-{
-"type": "url",
-"id": "link2",
-"label": "Link"
-}
-]
-},
-{
-"type":"menu",
-"name":"Menu",
-"settings": [
-{
-"type": "select",
-"id": "position",
-"label": "Link position in Main menu",
-"options":[
-{
-"value": "1",
-"label": "Menu Link 1"
-},
-{
-"value": "2",
-"label": "Menu Link 2"
-},	
-{
-"value": "3",
-"label": "Menu Link 3"
-},	
-{
-"value": "4",
-"label": "Menu Link 4"
-},	
-{
-"value": "5",
-"label": "Menu Link 5"
-},	
-{
-"value": "6",
-"label": "Menu Link 6"
-},	
-{
-"value": "7",
-"label": "Menu Link 7"
-},	
-{
-"value": "8",
-"label": "Menu Link 8"
-},	
-{
-"value": "9",
-"label": "Menu Link 9"
-},	
-{
-"value": "10",
-"label": "Menu Link 10"
-}				
-] 
-},
-{
-"type": "text",
-"id": "heading",
-"label": "Assign Name(Optional)",
-"info": "We recommend adding this name as this helps in tracking your menus."
-},
-{
-"type": "link_list",
-"id": "menu1",
-"label": "Menu 1"
-},
-{
-"type": "text",
-"id": "menu_heading1",
-"label": "Heading"
-},
-{
-"type": "link_list",
-"id": "menu2",
-"label": "Menu 2"
-},
-{
-"type": "text",
-"id": "menu_heading2",
-"label": "Heading"
-},
-{
-"type": "link_list",
-"id": "menu3",
-"label": "Menu 3"
-},
-{
-"type": "text",
-"id": "menu_heading3",
-"label": "Heading"
-},
-{
-"type": "link_list",
-"id": "menu4",
-"label": "Menu 4"
-},
-{
-"type": "text",
-"id": "menu_heading4",
-"label": "Heading"
-}
-]
-},
-{
-"type":"product",
-"name":"Product",
-"settings": [
-{
-"type": "select",
-"id": "position",
-"label": "Link position in Main menu",
-"options":[
-{
-"value": "1",
-"label": "Menu Link 1"
-},
-{
-"value": "2",
-"label": "Menu Link 2"
-},	
-{
-"value": "3",
-"label": "Menu Link 3"
-},	
-{
-"value": "4",
-"label": "Menu Link 4"
-},	
-{
-"value": "5",
-"label": "Menu Link 5"
-},	
-{
-"value": "6",
-"label": "Menu Link 6"
-},	
-{
-"value": "7",
-"label": "Menu Link 7"
-},	
-{
-"value": "8",
-"label": "Menu Link 8"
-},	
-{
-"value": "9",
-"label": "Menu Link 9"
-},	
-{
-"value": "10",
-"label": "Menu Link 10"
-}				
-] 
-},
-{
-"type": "text",
-"id": "title",
-"label": "Assign Name(Optional)",
-"info": "We recommend adding this name as this helps in tracking your menus."
-},
-{
-"type": "product",
-"id": "product1",
-"label": "Product 1"
-},
-{
-"type": "product",
-"id": "product2",
-"label": "Product 2"
-}
-]
-}
-]
+   "name":"t:sections.header.name",
+   "class":"shopify-section-main-header",
+   "max_blocks":25,
+   "settings":[
+      {
+         "type":"select",
+         "id":"header_style",
+         "label":"t:sections.header.settings.header_style.label",
+         "default":"header1",
+         "options":[
+            {
+               "label":"t:sections.header.settings.header_style.header1.label",
+               "value":"header1"
+            },
+            {
+               "label":"t:sections.header.settings.header_style.header2.label",
+               "value":"header2"
+            },
+            {
+               "label":"t:sections.header.settings.header_style.header3.label",
+               "value":"header3"
+            }
+         ]
+      },
+      {
+         "type":"image_picker",
+         "id":"logo",
+         "label":"t:sections.header.settings.logo.label"
+      },
+      {
+         "type":"range",
+         "id":"logo_width",
+         "min":50,
+         "max":250,
+         "step":10,
+         "default":100,
+         "unit":"t:sections.header.settings.logo_width.unit",
+         "label":"t:sections.header.settings.logo_width.label"
+      },
+      {
+         "type":"select",
+         "id":"logo_position",
+         "label":"t:sections.header.settings.logo_position.label",
+         "info":"t:sections.header.settings.logo_position.info",
+         "default":"flex-start",
+         "options":[
+            {
+               "label":"t:sections.header.settings.logo_position.left.label",
+               "value":"flex-start"
+            },
+            {
+               "label":"t:sections.header.settings.logo_position.center.label",
+               "value":"center"
+            }
+         ]
+      },
+      {
+         "type":"link_list",
+         "id":"menu",
+         "default":"main-menu",
+         "label":"t:sections.header.settings.menu.label"
+      },
+      {
+         "type":"select",
+         "id":"menu_position",
+         "label":"t:sections.header.settings.menu_position.label",
+         "info":"t:sections.header.settings.menu_position.info",
+         "default":"flex-start",
+         "options":[
+            {
+               "label":"t:sections.header.settings.menu_position.left.label",
+               "value":"flex-start"
+            },
+            {
+               "label":"t:sections.header.settings.menu_position.center.label",
+               "value":"center"
+            }
+         ]
+      },
+      {
+         "type":"color",
+         "id":"header_bgcolor",
+         "label":"t:sections.header.settings.header_bgcolor.label"
+      },
+      {
+         "type":"color",
+         "id":"header_textcolor",
+         "label":"t:sections.header.settings.header_textcolor.label"
+      },
+      {
+         "type":"color",
+         "id":"header_textcolor_hover",
+         "label":"t:sections.header.settings.header_textcolor_hover.label"
+      },
+      {
+         "type":"color",
+         "id":"menu_bgcolor",
+         "default":"#f7f7f7",
+         "label":"t:sections.header.settings.menu_bgcolor.label",
+         "info":"t:sections.header.settings.menu_bgcolor.info"
+      },
+      {
+         "type":"color",
+         "id":"menu_textcolor",
+         "default":"#000000",
+         "label":"t:sections.header.settings.menu_textcolor.label",
+         "info":"t:sections.header.settings.menu_textcolor.info"
+      },
+      {
+         "type":"color",
+         "id":"sub_menu_color",
+         "default":"#848484",
+         "label":"t:sections.header.settings.sub_menu_color.label"
+      },
+      {
+         "type":"color",
+         "id":"sub_hover_color",
+         "default":"#000000",
+         "label":"t:sections.header.settings.sub_hover_color.label"
+      },
+      {
+         "type":"checkbox",
+         "id":"show_search",
+         "default":true,
+         "label":"t:sections.header.settings.show_search.label"
+      },
+      {
+         "type":"checkbox",
+         "id":"show_currency",
+         "default":true,
+         "label":"t:sections.header.settings.show_currency.label"
+      },
+      {
+         "type":"checkbox",
+         "id":"enable_sticky_header",
+         "default":true,
+         "label":"t:sections.header.settings.enable_sticky_header.label",
+         "info":"t:sections.header.settings.enable_sticky_header.info"
+      }
+   ],
+   "blocks":[
+      {
+         "type":"image",
+         "name":"Image",
+         "settings":[
+            {
+               "type":"select",
+               "id":"position",
+               "label":"Link position in Main menu",
+               "options":[
+                  {
+                     "value":"1",
+                     "label":"Menu Link 1"
+                  },
+                  {
+                     "value":"2",
+                     "label":"Menu Link 2"
+                  },
+                  {
+                     "value":"3",
+                     "label":"Menu Link 3"
+                  },
+                  {
+                     "value":"4",
+                     "label":"Menu Link 4"
+                  },
+                  {
+                     "value":"5",
+                     "label":"Menu Link 5"
+                  },
+                  {
+                     "value":"6",
+                     "label":"Menu Link 6"
+                  },
+                  {
+                     "value":"7",
+                     "label":"Menu Link 7"
+                  },
+                  {
+                     "value":"8",
+                     "label":"Menu Link 8"
+                  },
+                  {
+                     "value":"9",
+                     "label":"Menu Link 9"
+                  },
+                  {
+                     "value":"10",
+                     "label":"Menu Link 10"
+                  }
+               ]
+            },
+            {
+               "type":"text",
+               "id":"title",
+               "label":"Assign Name(Optional)",
+               "info":"We recommend adding this name as this helps in tracking your menus."
+            },
+            {
+               "type":"image_picker",
+               "id":"image1",
+               "label":"Image 1"
+            },
+            {
+               "type":"text",
+               "id":"heading1",
+               "label":"Heading "
+            },
+            {
+               "type":"text",
+               "id":"button1",
+               "label":"Button"
+            },
+            {
+               "type":"url",
+               "id":"link1",
+               "label":"Link"
+            },
+            {
+               "type":"image_picker",
+               "id":"image2",
+               "label":"Image 2"
+            },
+            {
+               "type":"text",
+               "id":"heading2",
+               "label":"Heading"
+            },
+            {
+               "type":"text",
+               "id":"button2",
+               "label":"Button"
+            },
+            {
+               "type":"url",
+               "id":"link2",
+               "label":"Link"
+            }
+         ]
+      },
+      {
+         "type":"menu",
+         "name":"Menu",
+         "settings":[
+            {
+               "type":"select",
+               "id":"position",
+               "label":"Link position in Main menu",
+               "options":[
+                  {
+                     "value":"1",
+                     "label":"Menu Link 1"
+                  },
+                  {
+                     "value":"2",
+                     "label":"Menu Link 2"
+                  },
+                  {
+                     "value":"3",
+                     "label":"Menu Link 3"
+                  },
+                  {
+                     "value":"4",
+                     "label":"Menu Link 4"
+                  },
+                  {
+                     "value":"5",
+                     "label":"Menu Link 5"
+                  },
+                  {
+                     "value":"6",
+                     "label":"Menu Link 6"
+                  },
+                  {
+                     "value":"7",
+                     "label":"Menu Link 7"
+                  },
+                  {
+                     "value":"8",
+                     "label":"Menu Link 8"
+                  },
+                  {
+                     "value":"9",
+                     "label":"Menu Link 9"
+                  },
+                  {
+                     "value":"10",
+                     "label":"Menu Link 10"
+                  }
+               ]
+            },
+            {
+               "type":"text",
+               "id":"heading",
+               "label":"Assign Name(Optional)",
+               "info":"We recommend adding this name as this helps in tracking your menus."
+            },
+            {
+               "type":"link_list",
+               "id":"menu1",
+               "label":"Menu 1"
+            },
+            {
+               "type":"text",
+               "id":"menu_heading1",
+               "label":"Heading"
+            },
+            {
+               "type":"link_list",
+               "id":"menu2",
+               "label":"Menu 2"
+            },
+            {
+               "type":"text",
+               "id":"menu_heading2",
+               "label":"Heading"
+            },
+            {
+               "type":"link_list",
+               "id":"menu3",
+               "label":"Menu 3"
+            },
+            {
+               "type":"text",
+               "id":"menu_heading3",
+               "label":"Heading"
+            },
+            {
+               "type":"link_list",
+               "id":"menu4",
+               "label":"Menu 4"
+            },
+            {
+               "type":"text",
+               "id":"menu_heading4",
+               "label":"Heading"
+            }
+         ]
+      },
+      {
+         "type":"product",
+         "name":"Product",
+         "settings":[
+            {
+               "type":"select",
+               "id":"position",
+               "label":"Link position in Main menu",
+               "options":[
+                  {
+                     "value":"1",
+                     "label":"Menu Link 1"
+                  },
+                  {
+                     "value":"2",
+                     "label":"Menu Link 2"
+                  },
+                  {
+                     "value":"3",
+                     "label":"Menu Link 3"
+                  },
+                  {
+                     "value":"4",
+                     "label":"Menu Link 4"
+                  },
+                  {
+                     "value":"5",
+                     "label":"Menu Link 5"
+                  },
+                  {
+                     "value":"6",
+                     "label":"Menu Link 6"
+                  },
+                  {
+                     "value":"7",
+                     "label":"Menu Link 7"
+                  },
+                  {
+                     "value":"8",
+                     "label":"Menu Link 8"
+                  },
+                  {
+                     "value":"9",
+                     "label":"Menu Link 9"
+                  },
+                  {
+                     "value":"10",
+                     "label":"Menu Link 10"
+                  }
+               ]
+            },
+            {
+               "type":"text",
+               "id":"title",
+               "label":"Assign Name(Optional)",
+               "info":"We recommend adding this name as this helps in tracking your menus."
+            },
+            {
+               "type":"product",
+               "id":"product1",
+               "label":"Product 1"
+            },
+            {
+               "type":"product",
+               "id":"product2",
+               "label":"Product 2"
+            }
+         ]
+      }
+   ]
 }
 {% endschema %}
