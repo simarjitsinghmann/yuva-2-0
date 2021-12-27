@@ -216,10 +216,10 @@ function getFilterData(filterForm,input,sectionId,remove){
   then((responseText) => {
     const resultData = new DOMParser().parseFromString(responseText, 'text/html');
     var itemResultCount = resultData.getElementsByClassName('filter-total-result');
-    document.getElementById('CollectionProductsContainer').innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
+      var elmnt = document.getElementById('CollectionProductsContainer');
+    elmnt.innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
       sortBy();
     applyFilters();
-      var elmnt = document.getElementById('CollectionProductsContainer');
       elmnt.scrollIntoView();
     history.pushState({}, null, _updateUrl);
   });
