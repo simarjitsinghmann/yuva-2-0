@@ -1038,7 +1038,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     var slider = jQuery('#shopify-section-'+sectionId).find('[data-slider]');
 
     slideIndex  = $('.slideshow__slide--' + event.detail.blockId + ':not(.slick-cloned)').data('slick-index');
-    if(slider.length > 0){
+    if(slider.length > 0 && slider.hasClass('slick-initialized')){
       slider.slick('slickGoTo',slideIndex);
       slider.slick('slickPause');
     }
