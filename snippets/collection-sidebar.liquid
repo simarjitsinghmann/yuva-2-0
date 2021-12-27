@@ -65,7 +65,7 @@
             {%- for value in filter.values offset:5 -%}
             <li class=" {% if value.count == 0 and value.active == false %}disabled{% endif %}">
 
-              <input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" id="Filter-{{ filter.label | escape }}-{{ forloop.index }}"
+              <input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" id="Filter-{{ filter.label | escape }}-{{ forloop.index }}-1"
                      {% if value.active %}checked{% endif %}
                      {% if value.count == 0 and value.active == false %}disabled{% endif %}
                      >
