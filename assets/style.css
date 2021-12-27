@@ -5334,6 +5334,10 @@ body #shopify-product-reviews {
   height: 100%;
   background-color: var(--white);
     }
+.similar_drawer_body {
+  height: calc(100% - 55px);
+  overflow-y: auto;
+}
 /*============== side drawer css end =============*/
 .cart-item-container .product__price {
   font-size: var(--reg-text);
