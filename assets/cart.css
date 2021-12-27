@@ -346,36 +346,21 @@ input[type="number"] {
 }
 @media screen and (max-width: 767px) {
   .cstm-cart-sec table tr td {
+    display: block;
     width: 100%!important;
     text-align: left;
     padding: 10px 0!important;
     vertical-align: top!important;
   }
   .cstm-cart-sec table tr{
-    display: block;
+    display: inline-block;
     margin-bottom: 20px;
     width:50%;
-  }
-  table td {
-    border-bottom: 1px solid #ddd;
-    display: block;
   }
 }
 @media screen and (max-width: 577px) {
-  .cstm-cart-sec table tr td {
-    width: 100%!important;
-    text-align: left;
-    padding: 10px 0!important;
-    vertical-align: top!important;
-  }
   .cstm-cart-sec table tr{
-    display: block;
-    margin-bottom: 20px;
-    width:50%;
-  }
-  table td {
-    border-bottom: 1px solid #ddd;
-    display: block;
+    width:100%;
   }
 }
 
