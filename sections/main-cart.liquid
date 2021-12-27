@@ -20,8 +20,8 @@
                 {% for item in cart.items %}
                  <tr>
                     <td class="cart-img">
-                      <a href="{{item.url}}">
-                          <img src="{{item.image | img_url:'100x'}}" alt="">
+                      <a href="{{item.url}}" aria-label="{{item.product.title}}">
+                          <img src="{{item.image | img_url:'100x'}}" alt="{{item.product.title}}">
                       </a>
                     </td>
                     <td class="cart-prd-details">
