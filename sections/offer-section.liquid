@@ -15,15 +15,17 @@
                 <a href="{{block.settings.link}}" class="animate_hvrbr">
               <div class="card-information-image">
                   {% if block.settings.image != blank  %}
+                sss
                   {% assign feature_image = block.settings.image  %}
                   {%else%}
+                ddd
                   {% assign feature_image = 'featured_image.png' | asset_url %}
                   {% endif %}
                   {% render 'lazy-image' image: feature_image%}
               </div>
               {% unless block.settings.heading == blank and block.settings.subheading == blank %}
               <div class="card-information__wrapper {% if section.settings.style  == 'style2' %}text__{{section.settings.info_position}}{% else %}bottom-{{section.settings.info_position}}{% endif %} content-border-{{section.settings.show_border}}" >
-                <div data-aos="fade-up" data-aos-duration="1000">
+                <div data-aos="fade-up" data-aos-duration="1200">
                 {% if block.settings.heading != blank %}
                 <h5>{{block.settings.heading}}</h5>
                 {% endif%}
