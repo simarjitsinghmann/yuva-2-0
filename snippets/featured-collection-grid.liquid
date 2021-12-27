@@ -12,7 +12,7 @@
       {% elsif custom and mc_image != blank  %}
       {% include 'lazy-image' image:mc_image %}
       {%else%}
-      <img src="{{'placeholder.svg' | asset_url }}" >
+            {% render 'placeholder' %}
       {% endif %}
     </div>
     <div class="collection-detail">

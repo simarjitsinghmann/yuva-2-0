@@ -41,7 +41,7 @@
             {% elsif block.settings.image != blank  %}
             {% include 'lazy-image' image:block.settings.image %}
             {%else%}
-            <img src="{{'placeholder.svg' | asset_url }}" >
+            {% render 'placeholder' %}
             {% endif %}
           </div>
           {% endcapture %}
