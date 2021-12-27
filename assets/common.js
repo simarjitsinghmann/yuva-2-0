@@ -925,16 +925,16 @@ Array.from(planSelectors).forEach(function(plan) {
 //   });
 // }
 
-var closeOptions = document.getElementsByClassName('close-product-wrap');
-if(closeOptions){		
-  Array.from(closeOptions).forEach(function(option) {
-    option.addEventListener("click", ()=>{
-                            var product = option.getAttribute("data-product");
-      var wrapper =  option.closest('.card--product ');
-    wrapper.querySelector('#'+product).style.display="none";
-  });
-});
-}
+// var closeOptions = document.getElementsByClassName('close-product-wrap');
+// if(closeOptions){		
+//   Array.from(closeOptions).forEach(function(option) {
+//     option.addEventListener("click", ()=>{
+//                             var product = option.getAttribute("data-product");
+//       var wrapper =  option.closest('.card--product ');
+//     wrapper.querySelector('#'+product).style.display="none";
+//   });
+// });
+// }
 
 function hideOptions(){
   var options = document.getElementsByClassName('product-wrap');
