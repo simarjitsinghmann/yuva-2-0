@@ -17,7 +17,7 @@
                   {% if block.settings.image != blank  %}
                   {% render 'lazy-image' image: block.settings.image%}
                   {%else%}
-                  <img src="{{'featured_image.png' | asset_url }}" alt="{{shop.name}}">
+                  <img src="{{'placeholder.svg' | asset_url }}" alt="{{shop.name}}">
                   {% endif %}
               </div>
               {% unless block.settings.heading == blank and block.settings.subheading == blank %}
