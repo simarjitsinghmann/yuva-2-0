@@ -23,10 +23,7 @@
       {% endif %}
 
       <div class="flex-absolute {{ block.settings.text_position }} ">
-        <div class="wrapper" data-aos="{%- if block.settings.text_position == 'center-right' -%}fade-left
-                                       {%- elsif block.settings.text_position == 'center-left' -%}fade-right
-                                       {%- else -%}{{animation}}
-                                       {%- endif -%}">
+        <div class="wrapper">
           {% if block.settings.title != blank %}
           <h1>{{ block.settings.title | escape }}</h1>
           {% endif %}
