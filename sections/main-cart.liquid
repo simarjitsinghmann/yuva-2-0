@@ -26,7 +26,7 @@
                     </td>
                     <td class="cart-prd-details">
                        
-                      <a href="{{item.url}}">{{item.product.title | truncatewords:5}}</a>
+                      <a href="{{item.url}}" aria-label="{{item.product.title}}">{{item.product.title | truncatewords:5}}</a>
                       <div class="cart-item-product-details">
                         {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
                         <p class="item-variant-title">{{item.variant.title}}</p>
