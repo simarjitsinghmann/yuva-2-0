@@ -277,21 +277,24 @@ input[type="number"] {
 }
 /* responsive */
 @media screen and (max-width: 1440px) {
-   .cstm-cart-sec .inner-box.price-details {
-      padding: 25px 25px;
-   }
-   .cstm-cart-sec table tr td.cart-img img {
-      max-width: 55px;
-   }
-   .cstm-cart-sec table tr td.cart-prd-details {
-      width: 250px;
-   }
-   .cstm-cart-sec table tr td.cart-img {
-      width: 80px;
-   }
+  .cstm-cart-sec .inner-box.price-details {
+    padding: 25px 25px;
+  }
+  .cstm-cart-sec table tr td.cart-img img {
+    max-width: 55px;
+  }
+  .cstm-cart-sec table tr td.cart-prd-details {
+    width: 250px;
+  }
+  .cstm-cart-sec table tr td.cart-img {
+    width: 80px;
+  }
   .cstm-cart-sec table tr td.cart-remove {
     width: 60px;
-}
+  }
+  .item-variant-title {
+    font-size: 11px;
+  }
 }
 @media screen and (max-width: 1199px){
   .cstm-cart-sec .inner-box.price-details {
