@@ -31,23 +31,39 @@
           {% include 'product-form' %}
             {%else%}
           <div class="product-add-to-cart-right placeholder-content">
-<!--           <h4>{{'products.product.onboarding_product_text' | t}}</h4> -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412.44 380.09">
-              <defs>
-                <style>.cls-1{fill:#eddfd6;}</style></defs>
-              <g id="Layer_2" data-name="Layer 2">
-                <g id="Background_Complete" data-name="Background Complete">
-                  <rect class="cls-1" width="412.44" height="39.99"/>
-                  <rect class="cls-1" y="122.74" width="177.09" height="39.99"/>
-                  <rect class="cls-1" y="107.54" width="101.03" height="9.75"/>
-                  <rect class="cls-1" y="194.67" width="138.18" height="9.75"/>
-                  <rect class="cls-1" y="210.34" width="242.22" height="39.99"/>
-                  <rect class="cls-1" y="285.98" width="412.44" height="39.99"/>
-                  <rect class="cls-1" y="340.09" width="412.44" height="39.99"/>
-                  <rect class="cls-1" y="61.15" width="275.43" height="20"/>
-                </g>
-              </g>
-            </svg>
+            <div class="pdp-wrapper">
+              <a class="product-detail-title" href="/products/copy-of-basic-fur-hood-grey-jacket">{{'onboarding.product_title' | t}}</a>
+              <div class="prizebox" data-saved="true" data-saved-style="currency" data-price-wrapper="">
+                <h3 id="get_price" class="price-list">
+                <span class="get-price">{{8800| money}}</span>
+                <span class="main-price">{{9900| money}}</span>
+                  </h3>
+              </div>
+              <div class="select__quantity">
+                <span class="variant_title">{{ 'products.product.quantity.label' | t }}</span>
+                <div class="quantity">
+                  <input type="number" name="quantity" min="1" max="50" step="1" value="1" aria-label="{{ 'products.product.quantity.label' | t }}">
+                  <div class="quantity-nav">
+                    <div class="quantity-button quantity-up"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102 99" style="enable-background:new 0 0 102 99;" xml:space="preserve">
+                      <polygon points="100.1,37.2 63.5,37.2 63.5,0.5 39.1,0.5 39.1,37.2 2.4,37.2 2.4,61.6 39.1,61.6 39.1,98.3 63.5,98.3 63.5,61.6 100.1,61.6 "></polygon>
+                      </svg></div>
+                    <div class="quantity-button quantity-down"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102 99" style="enable-background:new 0 0 102 99;" xml:space="preserve">
+                      <polyline points="63.3,61.6 102,61.6 102,37.2 63.3,37.2 "></polyline>
+                      <polyline points="78.7,37.2 0.1,37.2 0.1,61.6 78.7,61.6 "></polyline>
+                      </svg></div>
+                  </div>
+                </div>
+              </div>
+              <div class="product_button">
+                  <div class="pdp-action-container " data-button-wrapper="">
+                    <div class="pdp-add-to-bag">
+                      <button class="Sd_addProduct add_to_cart black-btn button btn-block">
+                        <span> {{ 'products.product.add_to_cart' | t }} </span>
+                      </button>
+                    </div>
+                  </div>
+              </div>
+            </div>
           </div>
           {% endunless %}
         </div>
