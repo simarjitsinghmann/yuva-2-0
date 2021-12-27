@@ -244,6 +244,8 @@ function ScrollExecute() {
       $('[data-collection-products]').append($(data).find('[data-collection-products]').html());
       productVariants();
       showMultipleOptions();
+      var elmnt = document.getElementById("content");
+      elmnt.scrollIntoView();
       triggered = false
     });
   }
