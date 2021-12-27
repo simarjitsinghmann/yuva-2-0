@@ -41,7 +41,7 @@
                 <div class="slider-nav">
                   {%- for media in product.media -%}
                   <div>
-                    <a href="#media-{{media.id}}" id="#media-{{media.id}}" class="productThumbImage" data-id="media-{{media.id}}">
+                    <a href="#media-{{media.id}}" id="#media-{{media.id}}" class="productThumbImage" data-id="media-{{media.id}}" aria-label="{{media.alt | default:product.title}}">
                       <img class="product-single__thumbnail-image" src="{{media.preview_image | img_url: '150x'}}" alt="{{ media.preview_image.alt | escape }}">
                     </a>
                   </div>
@@ -54,7 +54,7 @@
                 {%-case media.media_type-%}
                   {%- when 'image' -%}
                   <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
-                    <a href="{{media | img_url: 'master'}}" class="image-popup-link" data-fancybox="gallery{{section.id}}">
+                    <a href="{{media | img_url: 'master'}}" class="image-popup-link" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                       <img class="responsive-image__image lazyload" src="{{media | img_url: 'master'}}" alt="{{ media.preview_image.alt | escape }}">
                     </a>
                     {% if forloop.last %}
@@ -63,7 +63,7 @@
                   </div>
                   {%- when 'external_video' -%}
                   <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
-                <a href="{{media | external_video_url}}" class="image-popup-link" data-fancybox="gallery{{section.id}}">
+                <a href="{{media | external_video_url}}" class="image-popup-link" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}" aria-label="{{media.alt | default:product.title}}">
                   {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
                   {% if forloop.last %}
                  {{productHighlights}}
@@ -72,7 +72,7 @@
                   </div>
                   {%- when 'video' -%}
                   <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
-                <a href="{{video_source.url}}" {{media | video_url | link}} class="image-popup-link" data-fancybox="gallery{{section.id}}">
+                <a href="{{video_source.url}}" {{media | video_url | link}} class="image-popup-link" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                   {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
                   {% if forloop.last %}
                  {{productHighlights}}
@@ -100,21 +100,21 @@
               <div class="gallery-item-product" id="media-{{media.id}}">
                 {%-case media.media_type-%}
                   {%- when 'image' -%}
-                <a href="{{media | img_url: 'master'}}" data-fancybox="gallery{{section.id}}">
+                <a href="{{media | img_url: 'master'}}" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                   <img class="responsive-image__image lazyload" src="{{media | img_url: 'master'}}" data-src="" data-sizes="auto" alt="{{ media.preview_image.alt | escape }}">
                   {% if forloop.last %}
                  {{productHighlights}}
                   {% endif%}
                 </a>
                   {%- when 'external_video' -%}
-                <a href="{{media | external_video_url}}" class="iframe-gallery-item"  data-fancybox="gallery{{section.id}}">
+                <a href="{{media | external_video_url}}" class="iframe-gallery-item"  data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                   {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
                   {% if forloop.last %}
                  {{productHighlights}}
                   {% endif%}
                 </a>
                   {%- when 'video' -%}
-                <a href="{{media.video_sources.url}}" data-fancybox="gallery{{section.id}}">
+                <a href="{{media.video_sources.url}}" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                   {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
                   {% if forloop.last %}
                  {{productHighlights}}
@@ -135,21 +135,21 @@
               <div  class="gallery-item-product" id="media-{{media.id}}">
                   {%-case media.media_type-%}
                   {%- when 'image' -%}
-                <a href="{{media | img_url: 'master'}}" class="iframe-gallery-item" data-fancybox="gallery{{section.id}}">
+                <a href="{{media | img_url: 'master'}}" class="iframe-gallery-item" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                   <img class="responsive-image__image lazyload" src="{{media | img_url: 'master'}}" data-src="" data-sizes="auto" alt="{{ media.preview_image.alt | escape }}">
                   {% if forloop.last %}
                  {{productHighlights}}
                   {% endif%}
                 </a>
                   {%- when 'external_video' -%}
-                <a href="{{media | external_video_url}}" class="iframe-gallery-item"  data-fancybox="gallery{{section.id}}">
+                <a href="{{media | external_video_url}}" class="iframe-gallery-item"  data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                   {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
                   {% if forloop.last %}
                  {{productHighlights}}
                   {% endif%}
                 </a>
                   {%- when 'video' -%}
-                <a href="{{media.sources[1].url}}" data-fancybox="gallery{{section.id}}">
+                <a href="{{media.sources[1].url}}" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                   {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
                   {% if forloop.last %}
                  {{productHighlights}}
