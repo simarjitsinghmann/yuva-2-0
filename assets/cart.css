@@ -121,7 +121,6 @@ input[type="number"] {
    color: var(--black);
 }
 .cstm-cart-sec table tr td.cart-remove {
-   text-align: right;
    width: 100px;
 }
 .cstm-cart-sec table tr td.cart-remove .remove {
@@ -321,18 +320,21 @@ input[type="number"] {
   .cstm-cart-sec table tr td.cart-prd-details {
     width: 200px;
   }
+  .cstm-cart-sec table tr td.cart-remove {
+    width: 50px;
+  }
   .cstm-cart-sec table tr td.cart-qty .qty input {
-      height: 30px;
-   }
-   .cstm-cart-sec .inner-box.price-details ul li.total {
-      margin-top: 20px;
-      padding-top: 20px;
-      margin-bottom: 20px;
-   }
-   .cstm-cart-sec .inner-box.price-details ul li.total p {
-      font-size: 16px;
-   }
-   .cstm-cart-sec .inner-box.price-details ul li.total strong {
-      font-size: 20px;
-   }
+    height: 30px;
+  }
+  .cstm-cart-sec .inner-box.price-details ul li.total {
+    margin-top: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+  .cstm-cart-sec .inner-box.price-details ul li.total p {
+    font-size: 16px;
+  }
+  .cstm-cart-sec .inner-box.price-details ul li.total strong {
+    font-size: 20px;
+  }
 }
