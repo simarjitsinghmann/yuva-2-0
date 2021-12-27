@@ -18,7 +18,7 @@ Usage:
   {% for part in paginate.parts %}
   {% if part.is_link %}
   <li>
-    <a href="{{ part.url }}{{ anchor }}" class="btn btn--tertiary btn--narrow">
+    <a href="{{ part.url }}{{ anchor }}" class="btn btn--tertiary btn--narrow" aria-label="{{'general.pagination.page' | t: number:part.title}}">
       <span class="icon__fallback-text">{{part.title}}</span>
     </a>
   </li>
