@@ -6,7 +6,7 @@
       {% if block.settings.image != blank %}
       {% include 'lazy-image' image:block.settings.image %}
       {% else %}
-      <img src="{{'placeholder.svg' | asset_url}}" alt="{{shop.name}}" />
+      {% render 'placeholder' %}
       {% endif %}
       <div class="service_title">
         <h6>{{block.settings.heading}}</h6>
