@@ -2607,10 +2607,10 @@
 }
 @media screen and (max-width: 480px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
-    .products-grid
-    .product_columns
-    .grid-item
-    .card-wrapper-img,
+  .products-grid
+  .product_columns
+  .grid-item
+  .card-wrapper-img,
   .card-wrapper-img,
   .row.column-2.product_columns .card-wrapper-img,
   .row.column-3.product_columns .card-wrapper-img,
@@ -2622,39 +2622,35 @@
   }
   .card__warpper__detail.left__sided .collection-image {
     max-height: 340px;
-}
-/*     .card-information .card-information-image {
-    min-height: 190px;
-    max-height: 190px;
-  } */
-    .results-similarGrid li.product-base {
+  }
+  .results-similarGrid li.product-base {
     width: 40%;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 40%;
-            flex: 0 0 40%;
-}
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+  }
   /*===========  searchbar css start ==============*/
   .results-box .result-list .searc-item-box {
     max-width: 30%;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 30%;
-            flex: 0 0 30%;
-}
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+  }
   .results-box .result-list .searc-item-box .card-wrapper-img {
     min-height: 130px;
     max-height: 130px;
-}
-    .recent-search-inner ul li {
+  }
+  .recent-search-inner ul li {
     max-width: 11%;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 11%;
-            flex: 0 0 11%;
-}
+    -ms-flex: 0 0 11%;
+    flex: 0 0 11%;
+  }
   .recent-search-inner li img {
     min-width: 43px;
     width: 43px;
     height: 43px;
-}
+  }
   /*===========  searchbar css start ==============*/
   /*============  single banner css start ============*/
   .single-banner-section.banner-section h2 {
@@ -2664,6 +2660,10 @@
     font-size: 16px!important;
   }
   /*============  single banner css start ============*/
+  .fancybox__toolbar {
+    padding:10px!important;
+    background: transparent!important;
+  }
 }
 @media screen and (max-width: 414px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
