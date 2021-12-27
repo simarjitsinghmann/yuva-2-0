@@ -15,11 +15,10 @@
                 <a href="{{block.settings.link}}" class="animate_hvrbr">
               <div class="card-information-image">
                   {% if block.settings.image != blank  %}
-                  {% assign feature_image = block.settings.image  %}
+                  {% render 'lazy-image' image: block.settings.image%}
                   {%else%}
-                  {% assign feature_image = 'featured_image.png' | asset_url %}
+                  <img src="{{'featured_image.png' | asset_url }}" alt="{{shop.name}}">
                   {% endif %}
-                  {% render 'lazy-image' image: feature_image%}
               </div>
               {% unless block.settings.heading == blank and block.settings.subheading == blank %}
               <div class="card-information__wrapper {% if section.settings.style  == 'style2' %}text__{{section.settings.info_position}}{% else %}bottom-{{section.settings.info_position}}{% endif %} content-border-{{section.settings.show_border}}" >
