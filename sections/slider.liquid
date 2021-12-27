@@ -2,7 +2,6 @@
   <div id="slider-{{section.id}}" class=" fade slider-item {% if section.blocks.size > 1 %}slideShow{% endif %}"  {% if section.blocks.size > 1 %}data-slider{% endif %}>
         
       {% for block in section.blocks %}
-    {% capture animation %}{% cycle 'zoom-in-up','zoom-in-down' %}{% endcapture %}
       {% case block.type %}
         {% when 'slide' %}
       <div id="banner-{{block.id}}" class="banner banner-section item slider-banner slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
