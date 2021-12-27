@@ -209,7 +209,7 @@
   
   document.addEventListener("DOMContentLoaded shopify:section:load", function() {
     var tabHead = document.getElementsByClassName('resp-tab-item');
-    console.log(tabHead)
+    console.log('tab',tabHead)
     if(tabHead.length > 0 ){
       tabHead[0].classList.add('active');
       var tabContent =  document.getElementsByClassName('resp-tab-content');
@@ -232,7 +232,7 @@
     });
   }
                             var accordionHead = document.getElementsByClassName('accordion-{{section.id}}');
-    console.log(accordionHead)
+    console.log('accordion',accordionHead)
                             if(accordionHead.length > 0 ){
     var accordionContent =  document.getElementsByClassName('productSection-content');
 
