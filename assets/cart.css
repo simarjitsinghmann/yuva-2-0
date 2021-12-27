@@ -227,8 +227,6 @@ input[type="number"] {
 }
 .cstm-cart-sec .inner-box.price-details ul li.total p {
    font-size: 20px;
-   color: #000;
-   margin: 0;
 }
 .cstm-cart-sec .inner-box.price-details ul li.total strong {
    font-size: 24px;
@@ -294,6 +292,11 @@ input[type="number"] {
    .cstm-cart-sec table tr td.cart-img {
       width: 80px;
    }
+}
+@media screen and (max-width: 1199px){
+.cstm-cart-sec .inner-box.price-details ul li.total p {
+   font-size: 16px;
+}
 }
 @media screen and (max-width: 991px) {
    .cstm-cart-sec table tr td.cart-qty .qty input {
