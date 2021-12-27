@@ -318,7 +318,10 @@ input[type="number"] {
   }
 }
 @media screen and (max-width: 991px) {
-   .cstm-cart-sec table tr td.cart-qty .qty input {
+  .cstm-cart-sec table tr td.cart-prd-details {
+    width: 200px;
+  }
+  .cstm-cart-sec table tr td.cart-qty .qty input {
       height: 30px;
    }
    .cstm-cart-sec .inner-box.price-details ul li.total {
