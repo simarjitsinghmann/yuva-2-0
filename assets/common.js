@@ -484,7 +484,6 @@ $(document).ready(function(){
     .then(response => response.json())
     .then(({ products }) => {
       var html = '';
-          
       if (products.length > 0) {   
         html +=`<div class="similarItemContainer">
                 <ul class="results-base results-similarGrid">`;
