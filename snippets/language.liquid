@@ -1,5 +1,4 @@
-<language-form>
-  {% form 'localization' %}
+{% form 'localization' %}
   <div class="disclosure btn-group dropup">
     <button type="button" class="disclosure__button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="LanguageList">
       {{ localization.language.endonym_name | capitalize }}
@@ -10,68 +9,15 @@
     </button>
 
     <div class="dropdown-menu">
-      <ul id="LanguageList" role="list" class="disclosure__list">
+      <select id="LanguageList" name="language_code" role="list" class="disclosure__list">
         {% for language in localization.available_languages %}
-        <li class="disclosure__item" tabindex="-1">
-          <a href="#"{% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %} hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}" data-value="{{ language.iso_code }}">
+        <option class="disclosure__item" {% if language.iso_code == localization.language.iso_code %}selected{% endif %}>
             {{ language.endonym_name | capitalize }}
-          </a>
-        </li>
+        </option>
         {% endfor %}
-      </ul>
+      </select>
     </div>
-    <input type="hidden" name="language_code" value="{{ localization.language.iso_code }}">
   </div>
   {% endform %}
-</language-form>
 <script>
-  class languageForm extends HTMLElement {
-  constructor() {
-    super();
-    this.elements = {
-      input: this.querySelector('input[name="locale_code"], input[name="language_code"]'),
-      button: this.querySelector('button'),
-      panel: this.querySelector('ul'),
-    };
-    this.elements.button.addEventListener('click', this.openSelector.bind(this));
-    this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
-    this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
-
-    this.querySelectorAll('a').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));
-  }
-
-  hidePanel() {
-//     this.elements.button.setAttribute('aria-expanded', 'false');
-//     this.elements.panel.setAttribute('hidden', true);
-  }
-
-  onContainerKeyUp(event) {
-    if (event.code.toUpperCase() !== 'ESCAPE') return;
-
-    this.hidePanel();
-    this.elements.button.focus();
-  }
-
-  onItemClick(event) {
-    event.preventDefault();
-    const form = this.querySelector('form');
-    console.log(this.elements,form)
-    this.elements.input.value = event.currentTarget.dataset.value;
-    if (form) form.submit();
-  }
-
-  openSelector() {
-    this.elements.button.focus();
-//     this.elements.panel.toggleAttribute('hidden');
-//     this.elements.button.setAttribute('aria-expanded', (this.elements.button.getAttribute('aria-expanded') === 'false').toString());
-  }
-
-  closeSelector(event) {
-    const shouldClose = event.relatedTarget && event.relatedTarget.nodeName === 'BUTTON';
-    if (event.relatedTarget === null || shouldClose) {
-      this.hidePanel();
-    }
-  }
-}
-customElements.define('language-form', languageForm);
 </script>
