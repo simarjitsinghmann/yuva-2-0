@@ -53,7 +53,9 @@ function applyFilters(){
 
     var sectionId = section.dataset.id;
     const filterForm = document.getElementById('FiltersForm'); 
-
+    if(!filterForm){
+    return false;
+    }
     var accordions = filterForm.querySelectorAll('.br_more_filter');
     if(accordions){
     Array.from(accordions).forEach(function(accordion) {
