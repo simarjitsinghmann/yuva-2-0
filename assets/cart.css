@@ -412,8 +412,11 @@ input[type="number"] {
   }
   .cstm-cart-sec table .cart-qty,
   .cstm-cart-sec table .cart-price{
-    width: 50%!important;
+    width: 40%!important;
     display: inline-block;
+  }
+  .cstm-cart-sec table .cart-price {
+  	width:60%!important;
   }
 }
 
