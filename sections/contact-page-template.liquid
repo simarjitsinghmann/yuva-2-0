@@ -88,7 +88,7 @@
             <div class="col-md-8 col-sm-12">
               {%- form 'contact', id: 'ContactForm' -%}
               {%- if form.posted_successfully? -%}
-              <span class="form-status form-status-list form__message success_message" tabindex="-1" autofocus>{{ 'templates.contact.form.post_success' | t }}</span>
+              <span class="form-status form-status-list form__message success-text" tabindex="-1" autofocus>{{ 'templates.contact.form.post_success' | t }}</span>
               {%- endif -%}
               <div class="row">
                 <div class="col-lg-12 col-md-12">
@@ -118,7 +118,7 @@
                            required
                            >
                     {% if form.errors contains 'email' %}
-                    <span class="error_message">
+                    <span class="error-text">
                       {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
                     </span>
                     {%- endif -%}
