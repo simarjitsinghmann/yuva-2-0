@@ -38,10 +38,10 @@
             </div>
           </div>
           {%- if form.errors -%}
-          <span class="newsletter-form__message form__message error_message" id="Newsletter-error--{{ section.id }}">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
+          <span class="newsletter-form__message form__message error-text" id="Newsletter-error--{{ section.id }}">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
           {%- endif -%}
           {%- if form.posted_successfully? -%}
-          <span class="newsletter-form__message newsletter-form__message--success form__message success_message" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>{{ 'newsletter.success' | t }}</span>
+          <span class="newsletter-form__message newsletter-form__message--success form__message success-text" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>{{ 'newsletter.success' | t }}</span>
           {%- endif -%}
           {% endform %}
         </div>
