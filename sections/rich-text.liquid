@@ -2,7 +2,7 @@
   <div class="container">
     {% for block in section.blocks %}
     <div class="text-content text__{{section.settings.content_alignment}}"  {{ block.shopify_attributes }}>
-      <h2>{{block.settings.heading}}</h2>
+      <h2 class="content-heading">{{block.settings.heading}}</h2>
       <div class="rich-text-description">
         {%-case block.type -%}
         {% when 'richtext' %}
