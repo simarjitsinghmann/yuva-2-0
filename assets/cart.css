@@ -363,9 +363,6 @@ input[type="number"] {
   }
 }
 @media screen and (max-width: 767px) {
-  .cstm-cart-sec .inner-box {
-    padding: 15px 15px 0 15px;
-}
   .cstm-cart-sec table tr td {
     display: block;
     width: 100%!important;
@@ -373,11 +370,11 @@ input[type="number"] {
     padding:  0 0 15px!important;
     vertical-align: top!important;
   }
-  .cstm-cart-sec table tr{
-    display: inline-block;
+.cstm-cart-sec table tr {
+    display: table;
     margin-bottom: 15px;
-    width:50%;
-  }
+    width: 100%;
+}
     .cstm-cart-sec table tr:last-child{
     margin-bottom: 0;
   }
