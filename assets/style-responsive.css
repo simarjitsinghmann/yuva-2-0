@@ -1483,7 +1483,8 @@
   .card__warpper__detail.left__sided .collection-image {
     height: auto;
   }
-  .card__warpper__detail .collection-image, .card-wrapper .collection-detail {
+  .card__warpper__detail .collection-image, .card-wrapper .collection-detail,
+  .card__warpper__detail.left__sided .collection-image{
     background: #f9f5ef;
   }
   .collection__right__list .grid__item__list:nth-child(1) .card__warpper__detail .collection-image, .collection__right__list .grid__item__list:nth-child(1) .card__warpper__detail.right__sided .collection-detail-right {
