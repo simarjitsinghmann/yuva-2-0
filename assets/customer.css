@@ -549,13 +549,13 @@
     border-bottom:2px solid transparent;
 }
 .account-header-tabs a:not(.button):hover{
-	border-color: var(--black);
-          color: var(--black);
+	border-color: var(--theme-color);
+          color: var(--theme-color);
 }
 .account-header-tabs a:not(.button).active {
    font-weight: var(--medium);
-     border-color: var(--black);
-           color: var(--black);
+     border-color: var(--theme-color);
+           color: var(--theme-color);
 }
 .account-header-tabs a:last-child {
     position: absolute;
