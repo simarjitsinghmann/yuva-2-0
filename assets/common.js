@@ -628,6 +628,9 @@ $('.toggle.list-menu__item,.toggle-level').click(function(){
           const fieldsets = Array.from(_productParent.querySelectorAll('.product-loop-variants'));
           
           if(variantStyle == 'dropdown'){
+            options=fieldsets.map((fieldset) => {
+              return Array.from(fieldset.querySelectorAll('change').value;
+            });
           }
           else{
             options=fieldsets.map((fieldset) => {
