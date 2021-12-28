@@ -235,7 +235,6 @@ let triggered = false;
 function ScrollExecute() {
   let moreButon = $('#more').last();
   let nextUrl = $(moreButon).find('a').attr("href");
-  console.log(screenVisibility(moreButon))
   if (screenVisibility($(moreButon)) && (triggered == false)) {
     triggered = true;
     $.ajax({
