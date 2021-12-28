@@ -367,9 +367,11 @@ input[type="number"] {
     padding: 20px;
   }
   .cstm-cart-sec table,
-  .cstm-cart-sec table td,
-  .cstm-cart-sec table .unit-price{
+  .cstm-cart-sec table td{
     font-size: 12px;
+  }
+    .cstm-cart-sec table .unit-price{
+    font-size: 10px;
   }
   .cstm-cart-sec table tr td, 
   .cstm-cart-sec table tr th {
@@ -440,8 +442,7 @@ input[type="number"] {
     margin-bottom: 15px;
   }
   .cstm-cart-sec table,
-  .cstm-cart-sec table td,
-  .cstm-cart-sec table .unit-price{
+  .cstm-cart-sec table td{
     font-size: 11px;
   }
   .cstm-cart-sec table .cart-qty,
@@ -456,7 +457,7 @@ input[type="number"] {
   }
   .cstm-cart-sec table tr td.cart-qty .qty button {
     width: 25px;
-        padding-bottom: 1px;
+        padding-bottom: 2px;
   }
   .cstm-cart-sec table tr td.cart-qty .qty input {
     height: 25px;
