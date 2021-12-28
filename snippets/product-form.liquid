@@ -91,6 +91,7 @@
     </ul> 
     {% elsif settings.option_style == 'dropdown' %}
     <div class="dropdown {{downOption}}-select productOptionSelect">
+      {% comment %}
       <button id="dLabel" class="dropdown-selected" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         {{option.selected_value}}
       </button>
@@ -103,6 +104,7 @@
         </li>
         {% endfor %}
       </ul>
+      {% endcomment %}
     </div>
     {% endif %}
   </div>
