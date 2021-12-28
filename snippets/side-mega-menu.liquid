@@ -16,13 +16,13 @@
     {%- if linklists[mainMenu].links != blank -%}
     <div class="inner grandchild">        
         <div class="inner-child-menu">
-          	<div>
+          	<ul>
             {%- for childlink in linklists[mainMenu].links -%}
-            <div class="nav-item">
+            <li class="nav-item">
                 <a href="{{ childlink.url }}">{{ childlink.title | split:"{badge" | first | escape | captilize }}</a>
-            </div>
+            </li>
             {%- endfor -%}
-          </div>
+          </ul>
         </div>
     </div>
     {% endif %}
@@ -48,7 +48,7 @@
 {% assign hasProduct = true %}
 {% assign count = count | plus:1 %}
 {% assign product = block.settings[product] %}
-<li class="nav-item">
+<li>
   <div class="row">
     {% include 'product-grid'  product:all_products[product] ,hide_options:true,hideRelated:true,hideQuickView:true ,hideColors:true%}
   </div>
