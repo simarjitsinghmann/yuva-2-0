@@ -808,12 +808,13 @@ p {
 img {
   background-color: var(--colorImageBg);
     }
-.nodatafound_wrapper,
-.template-404-wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin:0 auto;
+.nodatafound_wrapper, .template-404-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    min-height: 350px;
+    margin-bottom: 40px;
 }
 .nodatafound_box,
 .template-404{
