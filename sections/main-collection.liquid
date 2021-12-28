@@ -50,7 +50,7 @@
         <div class="toolbox-left">
           <div class="filter-total-result">
 
-            <h6>{{collection.title}} - {{ collection.products_count}} {{ collection.products_count | pluralize: 'item', 'items' }}</h6>
+            <p>{{collection.title}} - {{ collection.products_count}} {{ collection.products_count | pluralize: 'item', 'items' }}</p>
           </div>
         </div>
         {% if section.settings.enable_sorting or section.settings.enable_display_options%}
