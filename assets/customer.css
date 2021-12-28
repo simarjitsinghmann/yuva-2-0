@@ -749,7 +749,7 @@
     line-height: 21px;
 }
 }
-@media screen and (max-width:575px){
+@media screen and (max-width:767px){
   .customer td, .customer th {
     padding: 15px 15px;
     font-size: 11px;
@@ -757,6 +757,8 @@
   .customer td:nth-child(odd) {
     background-color: #f2f2f2;
   }
+}
+@media screen and (max-width:575px){
   .account-pages-header {
     margin-bottom: 30px;
   }
