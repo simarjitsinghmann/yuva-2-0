@@ -19,11 +19,11 @@
             <tbody data-cart-items>
               {% for item in cart.items %}
               <tr>
-                <td class="cart-img" data-label="product img">
-                  <a href="{{item.url}}" aria-label="{{item.product.title}}">
+                <th scope="row"  data-label="product img">
+                  <a class="cart-img" href="{{item.url}}" aria-label="{{item.product.title}}">
                     <img src="{{item.image | img_url:'100x'}}" alt="{{item.product.title}}">
                   </a>
-                </td>
+                </th>
                 <td class="cart-prd-details" data-label="product detail">
 
                   <a href="{{item.url}}" aria-label="{{item.product.title}}">{{item.product.title | truncatewords:5}}</a>
