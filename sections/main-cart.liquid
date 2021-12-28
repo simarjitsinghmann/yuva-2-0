@@ -1,146 +1,146 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
 <div class="container">  
-  
+
   <div class="continue-shopping"{% if cart.item_count > 0 %}style="display:none"{% endif %} cart-empty>
     <img class="emptyCartIcon" src="{{ 'cart.svg' | asset_url}}">
-     <h4>{{'sections.cart.empty' | t}}</h4>
-     <a href="{{routes.all_products_collection_url}}" class="button black-btn"  aria-label="{{'general.continue_shopping' | t}}">{{'general.continue_shopping' | t}}</a>
+    <h4>{{'sections.cart.empty' | t}}</h4>
+    <a href="{{routes.all_products_collection_url}}" class="button black-btn"  aria-label="{{'general.continue_shopping' | t}}">{{'general.continue_shopping' | t}}</a>
   </div>
-  
+
   {% if cart.item_count > 0 %}
   <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
-  <div class="row">    
-     <div class="col-sm-12 col-md-12 col-lg-8">
+    <div class="row">    
+      <div class="col-sm-12 col-md-12 col-lg-8">
         <h3>
           {{'sections.cart.heading_html' | t: itemCount :cart.item_count}}
-       </h3>
+        </h3>
         <div class="inner-box">
-           <table class="cart-products-table">
-             <thead>
-               <tr>
-                 <th scope="col">product img</th>
-                 <th scope="col">product detail</th>
-                 <th scope="col">quantity</th>
-                 <th scope="col">price</th>
-                 <th scope="col">action</th>
-               </tr>
-             </thead>
-              <tbody data-cart-items>
-                {% for item in cart.items %}
-                 <tr>
-                    <td class="cart-img" data-label="product img">
-                      <a href="{{item.url}}" aria-label="{{item.product.title}}">
-                          <img src="{{item.image | img_url:'100x'}}" alt="{{item.product.title}}">
+          <table class="cart-products-table">
+            <thead>
+              <tr>
+                <th scope="col">product img</th>
+                <th scope="col">product detail</th>
+                <th scope="col">quantity</th>
+                <th scope="col">price</th>
+                <th scope="col">action</th>
+              </tr>
+            </thead>
+            <tbody data-cart-items>
+              {% for item in cart.items %}
+              <tr>
+                <td class="cart-img" data-label="product img">
+                  <a href="{{item.url}}" aria-label="{{item.product.title}}">
+                    <img src="{{item.image | img_url:'100x'}}" alt="{{item.product.title}}">
+                  </a>
+                </td>
+                <td class="cart-prd-details" data-label="product detail">
+
+                  <a href="{{item.url}}" aria-label="{{item.product.title}}">{{item.product.title | truncatewords:5}}</a>
+                  <div class="cart-item-product-details">
+                    {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
+                    <p class="item-variant-title">{{item.variant.title}}</p>
+                    {% endunless %}	
+                    <p class="item-variant-title">{{item.selling_plan_allocation.selling_plan.name }}</p>              
+                    <div class="price item-price" data-item-price="{{forloop.index0}}">
+                      {%- if item.original_price != item.final_price -%}
+                      <strong class="cart-item__final-price product-option">
+                        {{ item.final_price | money }}
+                      </strong>
+                      <s class="cart-item__old-price product-option">
+                        {{- item.original_price | money -}}
+                      </s>
+                      {% else %}
+                      <strong class="cart-item__final-price product-option">
+                        {{ item.original_price | money }}
+                      </strong>
+                      {% endif %}
+                    </div>
+                    {% if item.discounts.size > 0 %}
+                    <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}" data-item-discount="{{forloop.index0}}">
+                      {%- for discount in item.discounts -%}
+                      <li class="discounts__discount coupanName">
+                        <i class="fas fa-tag"></i> 
+                        <small class="item__discount">{{ discount.title }}</small>
+                      </li>
+                      {%- endfor -%}
+                    </ul>
+                    {% endif %}
+                    {%- for property in item.properties -%}
+                    {%- assign property_first_char = property.first | slice: 0 -%}
+                    {%- if property.last != blank and property_first_char != '_' -%}
+                    <span><strong>{{ property.first }}</strong>: 
+                      {%- if property.last contains '/uploads/' -%}
+                      <a href="{{ property.last }}" target="_blank"  aria-label="{{ property.first }}">
+                        {{ property.last | split: '/' | last }}
                       </a>
-                    </td>
-                    <td class="cart-prd-details" data-label="product detail">
-                       
-                      <a href="{{item.url}}" aria-label="{{item.product.title}}">{{item.product.title | truncatewords:5}}</a>
-                      <div class="cart-item-product-details">
-                        {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
-                        <p class="item-variant-title">{{item.variant.title}}</p>
-                        {% endunless %}	
-                        <p class="item-variant-title">{{item.selling_plan_allocation.selling_plan.name }}</p>              
-                         <div class="price item-price" data-item-price="{{forloop.index0}}">
-                        {%- if item.original_price != item.final_price -%}
-                        <s class="cart-item__old-price product-option">
-                          {{- item.original_price | money -}}
-                        </s>
-                        <strong class="cart-item__final-price product-option">
-                          {{ item.final_price | money }}
-                        </strong>
-                        {% else %}
-                        <strong class="cart-item__final-price product-option">
-                          {{ item.original_price | money }}
-                        </strong>
-                        {% endif %}
-                      </div>
-                        {% if item.discounts.size > 0 %}
-                      <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}" data-item-discount="{{forloop.index0}}">
-                        {%- for discount in item.discounts -%}
-                        <li class="discounts__discount coupanName">
-                          <i class="fas fa-tag"></i> 
-                           <small class="item__discount">{{ discount.title }}</small>
-                        </li>
-                        {%- endfor -%}
-                      </ul>
-                        {% endif %}
-                        {%- for property in item.properties -%}
-                        {%- assign property_first_char = property.first | slice: 0 -%}
-                        {%- if property.last != blank and property_first_char != '_' -%}
-                        <span><strong>{{ property.first }}</strong>: 
-                          {%- if property.last contains '/uploads/' -%}
-                          <a href="{{ property.last }}" target="_blank"  aria-label="{{ property.first }}">
-                            {{ property.last | split: '/' | last }}
-                          </a>
-                          {%- else -%}
-                          {{ property.last }}
-                          {%- endif -%}
-                        </span>
-                        {%- endif -%}
-                        {%- endfor -%}
-                      </div>
-                       
-                    </td>
-                    <td class="cart-qty" data-label="quantity">
-                       <div class="qty">
-                          <button class="minus line_item_change"  data-line="{{forloop.index}}">-</button>
-                          <input type="number" name="item_quantity" initial="{{item.quantity}}" data-line="{{forloop.index}}" value="{{item.quantity}}" data-line-quantity="{{forloop.index0}}" aria-label="{{'sections.cart.headings.quantity' | t}}">
-                          <button class="plus line_item_change" data-line="{{forloop.index}}">+</button>
-                       </div>
-                    </td>
-                    <td class="cart-price" data-label="price">                 
-                      
-                      <div class="price item-line-price" data-line-price="{{forloop.index0}}">
-                        {%- if item.original_line_price != item.final_line_price -%}
-                        <s class="cart-item__old-price product-option">
-                          {{- item.original_line_price | money -}}
-                        </s>
-                        <strong class="cart-item__final-price product-option">
-                          {{ item.final_line_price | money }}
-                        </strong>
-                        {% else %}
-                        <strong class="cart-item__final-price product-option">
-                          {{ item.original_line_price | money }}
-                        </strong>
-                        {% endif %}
-                      </div>
-                        {%- if item.unit_price_measurement -%}
-                          <p class="unit-price">
-                          {{ item.variant.unit_price | money }}
-                          /
-                          {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
-                            {{- item.variant.unit_price_measurement.reference_value -}}
-                          {%- endif -%}
-                          {{ item.variant.unit_price_measurement.reference_unit }}
-                          </p>
+                      {%- else -%}
+                      {{ property.last }}
                       {%- endif -%}
-                    </td>
-                    <td class="cart-remove" data-label="action">
-                       <div class="remove line_item_remove" data-line="{{forloop.index}}">
-                        <svg line="1" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
-                          <path id="Forma_1" data-name="Forma 1" d="M1873.46,42.5l4.32-4.328a0.687,0.687,0,1,0-.97-0.973l-4.32,4.328-4.32-4.328a0.687,0.687,0,1,0-.97.973l4.32,4.328-4.32,4.329a0.688,0.688,0,0,0,.49,1.175,0.674,0.674,0,0,0,.48-0.2l4.32-4.329,4.32,4.329a0.7,0.7,0,0,0,.49.2,0.674,0.674,0,0,0,.48-0.2,0.686,0.686,0,0,0,0-.973Z" transform="translate(-1867 -37)"></path>
-                        </svg>
-                         <span class="cart-remove-text d-block d-sm-block d-md-none">Remove Product</span>
-                       </div>
-                    </td>
-                 </tr>
-                 {% endfor %}
-              </tbody>
-           </table>
+                    </span>
+                    {%- endif -%}
+                    {%- endfor -%}
+                  </div>
+
+                </td>
+                <td class="cart-qty" data-label="quantity">
+                  <div class="qty">
+                    <button class="minus line_item_change"  data-line="{{forloop.index}}">-</button>
+                    <input type="number" name="item_quantity" initial="{{item.quantity}}" data-line="{{forloop.index}}" value="{{item.quantity}}" data-line-quantity="{{forloop.index0}}" aria-label="{{'sections.cart.headings.quantity' | t}}">
+                    <button class="plus line_item_change" data-line="{{forloop.index}}">+</button>
+                  </div>
+                </td>
+                <td class="cart-price" data-label="price">                 
+
+                  <div class="price item-line-price" data-line-price="{{forloop.index0}}">
+                    {%- if item.original_line_price != item.final_line_price -%}
+                    <s class="cart-item__old-price product-option">
+                      {{- item.original_line_price | money -}}
+                    </s>
+                    <strong class="cart-item__final-price product-option">
+                      {{ item.final_line_price | money }}
+                    </strong>
+                    {% else %}
+                    <strong class="cart-item__final-price product-option">
+                      {{ item.original_line_price | money }}
+                    </strong>
+                    {% endif %}
+                  </div>
+                  {%- if item.unit_price_measurement -%}
+                  <p class="unit-price">
+                    {{ item.variant.unit_price | money }}
+                    /
+                    {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
+                    {{- item.variant.unit_price_measurement.reference_value -}}
+                    {%- endif -%}
+                    {{ item.variant.unit_price_measurement.reference_unit }}
+                  </p>
+                  {%- endif -%}
+                </td>
+                <td class="cart-remove" data-label="action">
+                  <div class="remove line_item_remove" data-line="{{forloop.index}}">
+                    <svg line="1" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
+                      <path id="Forma_1" data-name="Forma 1" d="M1873.46,42.5l4.32-4.328a0.687,0.687,0,1,0-.97-0.973l-4.32,4.328-4.32-4.328a0.687,0.687,0,1,0-.97.973l4.32,4.328-4.32,4.329a0.688,0.688,0,0,0,.49,1.175,0.674,0.674,0,0,0,.48-0.2l4.32-4.329,4.32,4.329a0.7,0.7,0,0,0,.49.2,0.674,0.674,0,0,0,.48-0.2,0.686,0.686,0,0,0,0-.973Z" transform="translate(-1867 -37)"></path>
+                    </svg>
+                    <span class="cart-remove-text d-block d-sm-block d-md-none">Remove Product</span>
+                  </div>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
         </div>
         <div class="go-to-back">
           <a href="{{routes.all_products_collection_url}}" aria-label="{{'general.go_to_products' | t}}">{{'general.go_to_products' | t}}</a>
         </div>
-     </div>
-     <div class="col-sm-12 col-md-12 col-lg-4">
-       <div class="sticky_cartsidebar">
-        <h3>{{'sections.cart.price_detail' | t}}</h3>
-        <div class="inner-box price-details">
-          {% if section.settings.show_cart_note %}
-           <textarea class="seller-box" name="note" id="Cart-note" placeholder="Special instructions for seller">{{ cart.note }}</textarea>
-          {% endif %}
-           <ul>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-4">
+        <div class="sticky_cartsidebar">
+          <h3>{{'sections.cart.price_detail' | t}}</h3>
+          <div class="inner-box price-details">
+            {% if section.settings.show_cart_note %}
+            <textarea class="seller-box" name="note" id="Cart-note" placeholder="Special instructions for seller">{{ cart.note }}</textarea>
+            {% endif %}
+            <ul>
               <li {% if cart.cart_level_discount_applications.size == 0 %}class="hidden"{% endif %} data-cart-original>{{'sections.cart.subtotal' | t}} <strong data-cart-original-price>{{cart.original_total_price | money}}</strong></li>
               {%- if cart.cart_level_discount_applications.size > 0 -%}
               {%- for discount in cart.cart_level_discount_applications -%}
@@ -148,59 +148,59 @@
               {%- endfor -%}
               {% endif %}
               <li class="total" data-cart-total>
-                 <p>{{'sections.cart.new_subtotal' | t}}</p>
-                 <strong data-cart-total-price>{{cart.total_price | money}}</strong>
+                <p>{{'sections.cart.new_subtotal' | t}}</p>
+                <strong data-cart-total-price>{{cart.total_price | money}}</strong>
               </li>
-           </ul>
-           <div class="cart-btn">
+            </ul>
+            <div class="cart-btn">
               <button type="submit" name="checkout" id="cartCheckout" form="cart" class="button black-btn btn-block">{{'sections.cart.checkout' | t}}</button>
               <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
                 {{ content_for_additional_checkout_buttons }}
               </div>
-           </div>
-           <p class="checkout-text">{{'sections.cart.taxes_and_shipping_at_checkout' | t}}</p>
-          {%- if section.settings.payment_enable -%}
-                <div class="footer__payment">
-                  <span class="visually-hidden">{{'sections.cart.payment' | t}}</span>
-                  <ul class="list list-payment justify-content-center" role="list">
-                    {%- for type in shop.enabled_payment_types -%}
-                    <li class="list-payment__item">
-                      {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                    </li>
-                    {%- endfor -%}
-                  </ul>
-                </div>
-                {%- endif -%}
+            </div>
+            <p class="checkout-text">{{'sections.cart.taxes_and_shipping_at_checkout' | t}}</p>
+            {%- if section.settings.payment_enable -%}
+            <div class="footer__payment">
+              <span class="visually-hidden">{{'sections.cart.payment' | t}}</span>
+              <ul class="list list-payment justify-content-center" role="list">
+                {%- for type in shop.enabled_payment_types -%}
+                <li class="list-payment__item">
+                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+            {%- endif -%}
+          </div>
         </div>
-     </div>
+      </div>
     </div>
-  </div>
-</form>
+  </form>
   {% endif %}
 </div>
 <script src="{{'cart.js' | asset_url}}" defer="defer"></script> 
 {% schema %}
 {
-  "name": "t:sections.main-cart.name",
-  "class": "cart__footer-wrapper cstm-cart-sec",
-  "settings": [
-    {
-      "type": "checkbox",
-      "id": "show_cart_note",
-      "default": true,
-      "label": "t:sections.main-cart.settings.show_cart_note.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "payment_enable",
-      "default": true,
-      "label": "t:sections.main-cart.settings.payment_enable.label"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "@app"
-    }
-  ]
+"name": "t:sections.main-cart.name",
+"class": "cart__footer-wrapper cstm-cart-sec",
+"settings": [
+{
+"type": "checkbox",
+"id": "show_cart_note",
+"default": true,
+"label": "t:sections.main-cart.settings.show_cart_note.label"
+},
+{
+"type": "checkbox",
+"id": "payment_enable",
+"default": true,
+"label": "t:sections.main-cart.settings.payment_enable.label"
+}
+],
+"blocks": [
+{
+"type": "@app"
+}
+]
 }
 {% endschema %}
