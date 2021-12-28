@@ -47,7 +47,7 @@ window.addEventListener('resize', function(event){
   
   var filters = document.getElementById('filterSideBar');
   if (filters){
-  	if(window.innerWidth < 768 && window.innerWidth > 760){
+  	if(window.innerWidth < 768){
       filters.style.display = 'none';
       setTimeout(function(){filters.style.display = '';},500)
     }
