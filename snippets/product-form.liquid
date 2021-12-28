@@ -106,7 +106,7 @@
       </ul>
       {% endcomment %}
       <div class="product-loop-variants">
-      <select class="productOption" name="option-{{optionIndex}}"> 
+      <select class="productOption dropdown-selected" name="option-{{optionIndex}}"> 
         {%- for value in option.values -%}
         <option value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
           {{value}}
