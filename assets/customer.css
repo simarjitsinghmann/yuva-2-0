@@ -541,18 +541,18 @@
 .account-header-tabs {
 	border-bottom: 1px solid var(--gray);
 }
-.account-header-tabs a {
+.account-header-tabs a:not(.button) {
     padding: 8px 30px;
     text-transform: capitalize;
     font-size: 14px;
     color: var(--dark-gray);
     border-bottom:2px solid transparent;
 }
-.account-header-tabs a:hover{
+.account-header-tabs a:not(.button):hover{
 	border-color: var(--black);
           color: var(--black);
 }
-.account-header-tabs a.active {
+.account-header-tabs a:not(.button).active {
    font-weight: var(--medium);
      border-color: var(--black);
            color: var(--black);
@@ -560,8 +560,6 @@
 .account-header-tabs a:last-child {
     position: absolute;
     right: 0;
-    background-color: var(--black);
-    color: var(--white);
 }
 .account-pages-content h4 {
 	margin-bottom:15px;
