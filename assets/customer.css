@@ -757,3 +757,9 @@
     line-height: 20px;
   }
 }
+@media screen and (max-width:480px){
+  .address-list li {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+}
