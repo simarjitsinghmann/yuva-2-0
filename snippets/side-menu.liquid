@@ -62,14 +62,8 @@
       </ul>
     </div>
     <div class="lower-nav">
-      <div class="social-links">
-        <ul>
-          <li class="fb"><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
-          <li class="twitter"><a href="javascript:void(0)"><i class="fab fa-twitter"></i></a></li>
-          <li class="linkedin"><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a></li>
-          <li class="insta"><a href="javascript:void(0)"><i class="fab fa-instagram"></i></a></li>
-        </ul>
-      </div>
+      
+      {% include 'social-media-icons' %}
       <div class="menu-login-btn">
         {%- if customer -%}
         <a class="button black-btn drawer-login-btn" href="{{ routes.account_logout_url }}">{{'customer.log_out' | t | capitalize }}</a>
