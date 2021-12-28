@@ -485,19 +485,13 @@ img {
     overflow-y: auto;
     }
 .side-menu .inner-side ul li a {
-  text-decoration: none;
-  font-weight: var(--medium);
     font-size: 22px;
     line-height: 32px;
     display: block;
     position: relative;
     padding: 10px 0;
     margin: 0;
-    border: 0;
     text-transform: capitalize;
-    }
-.side-menu .inner-side ul li:last-child {
-  border-bottom: 0;
 }
 .side-menu .inner-side ul li.dropdown .drop-dwn-open {
   padding: 20px 0 0;
