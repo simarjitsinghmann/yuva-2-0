@@ -73,7 +73,6 @@
                   </div>
 
                 </td>
-                
                 <td class="cart-qty" data-label="quantity">
                   <div class="qty">
                     <button class="minus line_item_change"  data-line="{{forloop.index}}">-</button>
@@ -128,11 +127,6 @@
       <div class="col-sm-12 col-md-12 col-lg-4">
         <div class="sticky_cartsidebar">
           <h3>{{'sections.cart.price_detail' | t}}</h3>
-          <div class="cart-promo">
-  <h2>ENTER A PROMO CODE</h2>
-  <input type="text" id="devPromo">
-  <a href="/checkout?discount=none" id="redemDevPromo">Apply Coupon</a>
-</div>
           <div class="inner-box price-details">
             {% if section.settings.show_cart_note %}
             <textarea class="seller-box" name="note" id="Cart-note" placeholder="Special instructions for seller">{{ cart.note }}</textarea>
@@ -201,21 +195,3 @@
 ]
 }
 {% endschema %}
-<script>
-  $(document).ready(function(){
-    //listen to the promo button click
-    $('#redemDevPromo').on('click', function(event){
-      //disable the button event
-      event.preventDefault();
-      //write the url format
-      var theUrl = '/checkout?discount=';
-      //grab the discount code from the input
-      var theDiscount = $('#devPromo').val();
-      //full url to redirect to checkout with promo code
-      var toRedirect = theUrl+theDiscount;
-      console.log(toRedirect);
-      //redirect
-      window.location.href = toRedirect;
-    });
-  });
-</script>
