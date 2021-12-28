@@ -16,13 +16,13 @@
     {%- if linklists[mainMenu].links != blank -%}
     <div class="inner grandchild">        
         <div class="inner-child-menu">
-          	<ul>
+          	<div>
             {%- for childlink in linklists[mainMenu].links -%}
-            <li class="nav-item">
+            <div class="nav-item">
                 <a href="{{ childlink.url }}">{{ childlink.title | split:"{badge" | first | escape | captilize }}</a>
-            </li>
+            </div>
             {%- endfor -%}
-          </ul>
+          </div>
         </div>
     </div>
     {% endif %}
