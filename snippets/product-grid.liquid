@@ -235,5 +235,11 @@
       </div>
     </div>
   </div>
+  
+  {% unless template contains 'collection'%}
+  {% unless hideRelated or settings.show_similar == false %}
+  {% include 'similar-product-grid' %}
+  {% endunless %}
+  {% endunless %}
 </div>
 
