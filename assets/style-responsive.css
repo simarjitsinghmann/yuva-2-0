@@ -1247,7 +1247,9 @@
     padding: 10px 0;
   }
   /*======== collection  css start  =========*/
-  .collection-list-view-wrapper.left-wrapper .collection-list-view-card {
+  .collection-list-view-wrapper.left-wrapper .collection-list-view-card,
+  .collection-count-2 .collection-list-view-wrapper.right-wrapper .collection-list-view-card, 
+  .collection-count-3 .collection-list-view-wrapper.right-wrapper .collection-list-view-card{
     height: 430px;
   }
   .collection-list-view-wrapper.right-wrapper .collection-list-view-card {
