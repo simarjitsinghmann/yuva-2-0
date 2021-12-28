@@ -17,7 +17,7 @@
           {% endcomment %}
           <div class="product-product small-size">{{product.title}}</div>
           <div class="product-price">
-            {% if product.compare_at_price < product.price %}
+            {% if product.compare_at_price > product.price %}
             <span class="small-size product-price-detail">
               <span class="product-discountedPrice">{{current_variant.price | money}}</span>
               <span class="product-strike"><del>{{current_variant.compare_at_price}}</del></span>
