@@ -1218,27 +1218,27 @@ a.wishlist-view .fas {
 }
 .card-wrapper .card.card--product .card-wrapper-img a img,
 .card-information .card-information-image a img {
-  -webkit-transition: .5s ease;
+/*   -webkit-transition: .5s ease;
   -o-transition: .5s ease;
-  transition: .5s ease;
+  transition: .5s ease; */
   width: 100%;
   display: block;
   height:100%;
 }
 .card-wrapper .card.card--product .card-wrapper-img:hover a  img,
 .card-information .card-information-image:hover a img {
-  -webkit-transition: .5s ease;
+/*   -webkit-transition: .5s ease;
   -o-transition: .5s ease;
-  transition: .5s ease;
+  transition: .5s ease; */
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 .card-wrapper .card.card--product .card-wrapper-img:hover::after,
 .card-information .card-information-image:hover::after {
-  -webkit-transition: .5s ease;
+/*   -webkit-transition: .5s ease;
   -o-transition: .5s ease;
-  transition: .5s ease;
+  transition: .5s ease; */
   visibility: visible;
   opacity: 1;
 }
