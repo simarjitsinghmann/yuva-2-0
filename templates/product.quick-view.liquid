@@ -112,6 +112,8 @@
             {% endfor %}
           </ul> 
           {% elsif settings.option_style == 'dropdown' %}
+          
+          {% comment %}
           <div class="dropdown {{downOption}}-select productOptionSelect">
             <button id="dLabel" class="dropdown-selected" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{option.selected_value}}
@@ -127,6 +129,7 @@
             </ul>
           </div>
           
+          {% endcomment %}
       <div class="product-loop-variants">
       <select class="productOption" name="option-{{optionIndex}}"> 
         {%- for value in option.values -%}
