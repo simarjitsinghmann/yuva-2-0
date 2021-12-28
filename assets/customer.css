@@ -683,6 +683,18 @@
     border-color: #ddd;
     padding: 8px 15px;
 }
+.address-side-drawer-body form, .address-side-drawer-body .address-form-body {
+    height: calc(100% - 65px);
+    overflow-y: auto;
+}
+.address-form-footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #fff;
+    padding: 20px;
+    left: 0;
+    width: 100%;
+}
 /* end */
 @media screen and (max-width:1199px){
   .account-pages-header {
