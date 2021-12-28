@@ -49,6 +49,7 @@
         <div id="EditAddress_{{ address.id }}" class="addressPopUp">
           <div class="address-side-drawer-body">
           {%- form 'customer_address', address -%}
+            <div class="address-form-body">
           <div class="form-group">
             <label for="AddressFirstName_{{ form.id }}">{{ 'customer.addresses.first_name' | t }}</label>
             <input type="text" class="form-control" id="AddressFirstName_{{ form.id }}" name="address[first_name]" value="{{ form.first_name }}" autocomplete="given-name" placeholder="{{ 'customer.addresses.first_name' | t }}">
@@ -120,7 +121,8 @@
             <span class="checkmark"></span>           
             {{ 'customer.addresses.set_default' | t }}</label>    
           </div>
-          <div>
+            </div>
+          <div class="address-form-footer">
             <button class="button black-btn btn-block">{{ 'customer.addresses.update' | t }}</button>
             <button class="button white-btn btn-block" type="reset">{{ 'customer.addresses.cancel' | t }}</button>
           </div>
