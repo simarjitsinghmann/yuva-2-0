@@ -498,9 +498,9 @@ $(document).ready(function(){
           } else {
             var prodImg = "//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif";
           }
-              html +=`  <picture class="img-responsive">
+              html +=`  <div class="img-responsive">
                   <img src="${prodImg}" class="img-responsive" alt="${product.title}" title="${product.title}">
-                </picture>
+                </div>
               </div>`;
              html +=`<div class="product-productMetaInfo product-information__wrapper ">
                 <div class="caption-with-letter-spacing light">${product.title}</div>
