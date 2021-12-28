@@ -22,6 +22,22 @@
           <a class="list-menu__item {% if link.links != blank  or menuDropdown %}toggle open-menu-drop{% endif %}" {% unless link.links != blank or menuDropdown  %}href="{{ link.url }}"{% endunless%}>{{link.title | split:"{badge" | first | escape | capitalize }}</a>
           {%- if link.links != blank or menuDropdown  -%}
           <div class="inner child">                  
+            <div class="inner-child-menu">
+              <div class="menu_back_btn">
+                <button class="back-btn">
+                  <svg height="17.031" viewbox="0 0 24 17.031" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <style>.cls-1 {fill-rule: evenodd;}</style>
+                    </defs>
+                    <path class="cls-1" d="M684,76.476H663.835l6.119-6.091-1.412-1.406-7.132,7.1h0L660,77.484l1.413,1.406,7.132,7.1,1.412-1.406-6.148-6.121H684V76.476Z" transform="translate(-660 -68.969)"></path>
+                  </svg>
+                  Back
+                </button>
+              </div>
+              <div class="category_title">
+                <h2>{{link.title | split:"{badge" | first | escape | capitalize }}</h2>
+              </div>
+            </div>
             <ul>
               {%- for childlink in link.links -%}
               <li class="nav-item {% if childlink.links != blank %}dropdown{% endif %}">
@@ -34,6 +50,27 @@
 
                 {%- if childlink.links != blank -%}
                 <div class="inner grandchild">
+
+                  <div class="inner-child-menu">
+                    <div class="menu_back_btn">
+                      <button class="back-btn">
+                        <svg height="17.031" viewbox="0 0 24 17.031" width="24" xmlns="http://www.w3.org/2000/svg">
+                          <defs>
+                            <style>
+                              .cls-1 {
+                                fill-rule: evenodd;
+                              }
+                            </style>
+                          </defs>
+                          <path class="cls-1" d="M684,76.476H663.835l6.119-6.091-1.412-1.406-7.132,7.1h0L660,77.484l1.413,1.406,7.132,7.1,1.412-1.406-6.148-6.121H684V76.476Z" transform="translate(-660 -68.969)"></path>
+                        </svg>
+                        Back
+                      </button>
+                    </div>
+                    <div class="category_title">
+                      <h2>{{ childlink.title | split:"{badge" | first | escape | captilize }}</h2>
+                    </div>
+                  </div>
                   <ul>
                     {%- for grandchildlink in childlink.links -%}
                     <li class="nav-item">

@@ -15,7 +15,33 @@
         
     {%- if linklists[mainMenu].links != blank -%}
     <div class="inner grandchild">        
-     
+        <div class="inner-child-menu">
+            <div class="menu_back_btn">
+                <button class="back-btn">
+                    <svg height="17.031" viewbox="0 0 24 17.031" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <style>
+                    .cls-1 {
+                        fill-rule: evenodd;
+                    }
+                    </style>
+                        </defs>
+                        <path class="cls-1" d="M684,76.476H663.835l6.119-6.091-1.412-1.406-7.132,7.1h0L660,77.484l1.413,1.406,7.132,7.1,1.412-1.406-6.148-6.121H684V76.476Z" transform="translate(-660 -68.969)"></path>
+                    </svg>
+                    Back
+                </button>
+            </div>
+            <div class="category_title">
+                <h2>{% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</h2>
+            </div>
+          	<ul>
+            {%- for childlink in linklists[mainMenu].links -%}
+            <li class="nav-item">
+                <a href="{{ childlink.url }}">{{ childlink.title | split:"{badge" | first | escape | captilize }}</a>
+            </li>
+            {%- endfor -%}
+          </ul>
+        </div>
     </div>
     {% endif %}
 </li>
