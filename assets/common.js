@@ -499,7 +499,7 @@ $(document).ready(function(){
             var prodImg = "//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif";
           }
               html +=`  <div class="img-responsive">
-                  <img src="${prodImg}" class="img-responsive" alt="${product.title}" title="${product.title}">
+                  <img src="${prodImg}" alt="${product.title}" title="${product.title}">
                 </div>
               </div>`;
              html +=`<div class="product-productMetaInfo product-information__wrapper ">
