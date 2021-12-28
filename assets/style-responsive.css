@@ -747,7 +747,7 @@
     .button .fa-arrow-right {
     margin-left: 12px;
   }
-  .button, .shopify-challenge__button,
+  .button:not(.small-btn), .shopify-challenge__button,
   .product_button .shopify-payment-button__button{
       padding: 6px 12px;
       min-height: 25px;
