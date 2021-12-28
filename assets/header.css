@@ -456,6 +456,48 @@ img {
 }
 /**nav-style3 End**/
 /*================= nav-humburger-menu ==============*/
+button.navbar-toggler {
+  background: transparent;
+  position: relative;
+  height: 22px;
+}
+button.navbar-toggler span.navbar-toggler-icon,
+button.navbar-toggler span.navbar-toggler-icon:before,
+button.navbar-toggler span.navbar-toggler-icon:after {
+  width: 27px;
+  height: 2px;
+  position: relative;
+}
+button.navbar-toggler span.navbar-toggler-icon {
+  position: relative;
+  background: #2f2f2f;
+  transition: all 0s 0.1s, width 150ms linear;
+  display: block;
+}
+button.navbar-toggler span.navbar-toggler-icon:before,
+button.navbar-toggler span.navbar-toggler-icon:after {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  background: #2f2f2f;
+  transition: bottom 0.3s 0.1s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), width 150ms linear,
+    background 150ms linear;
+}
+button.navbar-toggler span.navbar-toggler-icon:after {
+  top: 7px;
+  bottom: auto;
+}
+button.navbar-toggler:hover span.navbar-toggler-icon::before {
+  width: 17px;
+}
+button.navbar-toggler:hover span.navbar-toggler-icon::after {
+  width: 20px;
+}
+button.navbar-toggler:hover span.navbar-toggler-icon {
+  width: 31px;
+}
 .nav-open .navbar::after {
   position: absolute;
   content: "";
@@ -502,48 +544,6 @@ img {
     padding: 10px 0;
     margin: 0;
     text-transform: capitalize;
-}
-button.navbar-toggler {
-  background: transparent;
-  position: relative;
-  height: 22px;
-}
-button.navbar-toggler span.navbar-toggler-icon,
-button.navbar-toggler span.navbar-toggler-icon:before,
-button.navbar-toggler span.navbar-toggler-icon:after {
-  width: 27px;
-  height: 2px;
-  position: relative;
-}
-button.navbar-toggler span.navbar-toggler-icon {
-  position: relative;
-  background: #2f2f2f;
-  transition: all 0s 0.1s, width 150ms linear;
-  display: block;
-}
-button.navbar-toggler span.navbar-toggler-icon:before,
-button.navbar-toggler span.navbar-toggler-icon:after {
-  content: "";
-  position: absolute;
-  bottom: 7px;
-  left: 0;
-  background: #2f2f2f;
-  transition: bottom 0.3s 0.1s cubic-bezier(0.23, 1, 0.32, 1),
-    transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), width 150ms linear,
-    background 150ms linear;
-}
-button.navbar-toggler span.navbar-toggler-icon:after {
-  top: 7px;
-  bottom: auto;
-}
-button.navbar-toggler:hover span.navbar-toggler-icon::before {
-  width: 17px;
-}
-button.navbar-toggler:hover span.navbar-toggler-icon::after {
-  width: 20px;
-}
-button.navbar-toggler:hover span.navbar-toggler-icon {
-  width: 31px;
 }
 .nav-open .side-menu .inner-side {
   overflow-x: hidden;
