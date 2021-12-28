@@ -71,7 +71,33 @@
                     {%- endif -%}
                     {%- endfor -%}
                   </div>
-
+					<div class="mobile-price">
+                      
+                  <div class="price item-line-price" data-line-price="{{forloop.index0}}">
+                    {%- if item.original_line_price != item.final_line_price -%}
+                    <strong class="cart-item__final-price product-option">
+                      {{ item.final_line_price | money }}
+                    </strong>
+                    <s class="cart-item__old-price product-option">
+                      {{- item.original_line_price | money -}}
+                    </s>
+                    {% else %}
+                    <strong class="cart-item__final-price product-option">
+                      {{ item.original_line_price | money }}
+                    </strong>
+                    {% endif %}
+                  </div>
+                  {%- if item.unit_price_measurement -%}
+                  <p class="unit-price">
+                    {{ item.variant.unit_price | money }}
+                    /
+                    {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
+                    {{- item.variant.unit_price_measurement.reference_value -}}
+                    {%- endif -%}
+                    {{ item.variant.unit_price_measurement.reference_unit }}
+                  </p>
+                  {%- endif -%}
+                  </div>
                 </td>
                 <td class="cart-qty" data-label="quantity">
                   <div class="qty">
