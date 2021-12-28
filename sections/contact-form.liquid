@@ -39,7 +39,7 @@
                            required="required"
                            >
                     {% if form.errors contains 'email' %}
-                    <span class="error_message">
+                    <span class="error-text">
                       {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
                     </span>
                     {%- endif -%}
