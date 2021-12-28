@@ -629,7 +629,7 @@ $('.toggle.list-menu__item,.toggle-level').click(function(){
           console.log(fieldsets)
           if(variantStyle == 'dropdown'){
             options=fieldsets.map((fieldset) => {
-              return Array.from(fieldset.querySelector('select')).find((select) => select.checked).value;
+              return Array.from(fieldset.querySelector('select').value);
             });
           }
           else{
