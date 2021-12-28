@@ -7,9 +7,7 @@
         <div class="col-12 col-sm-6 col-md-4">
           <div class="about-feature-box">
             <div class="feature-icon">
-              {% if block.settings.icon != blank %}
-              {% render 'lazy-image' image:block.settings.icon %}
-              {% endif %}
+              {% render 'icons' icon:block.settings.icon%}
             </div>
             <h5>{{block.settings.heading}}</h5>
             <p>{{block.settings.content}}</p>
