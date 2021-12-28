@@ -543,7 +543,7 @@ $(document).ready(function(){
     .then((text) => {
       const html = document.createElement('div');
       html.innerHTML = text;
-      ?const recommendations = html.querySelector('.similarItemContainer');
+      const recommendations = html.querySelector('.similarItemContainer');
       if (recommendations && recommendations.innerHTML.trim().length) {
 //         drawer.querySelector('[similar-drawer-body]').innerHTML = recommendations.innerHTML;   
 //         drawer.classList.remove('searching');
