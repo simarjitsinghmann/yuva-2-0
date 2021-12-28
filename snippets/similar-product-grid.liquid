@@ -1,0 +1,46 @@
+<div class="similarItemContainer" style="display:none">
+  {%- if recommendations.performed -%}
+  {%- if recommendations.products_count > 0 -%}
+  <ul class="results-base results-similarGrid">
+    {%- for product in recommendations.products -%}
+    {% assign current_variant = product.selected_or_first_available_variant %}
+    <li class="product-base">
+      <a target="_blank" href="{{product.url}}">
+        <div class="product-imageSliderContainer">
+          <picture class="img-responsive" style="width: 100%; height: 100%; display: block;">
+            <img src="{{product.featured_image | img_url:'500x'}}" class="img-responsive" alt="{{product.title}}" title="{{product.title}}">
+          </picture>
+        </div>
+        <div class="product-productMetaInfo">
+          {% comment %}
+          <div class="product-brand normal-font">{{product.vendor}}</div>
+          {% endcomment %}
+          <div class="product-product small-size">{{product.title}}</div>
+          <div class="product-price">
+            {% if current_variant.compare_at_price < current_variant.price %}
+            <span class="small-size product-price-detail">
+              <span class="product-discountedPrice">{{current_variant.price | money}}</span>
+              <span class="product-strike"><del>{{current_variant.compare_at_price}}</del></span>
+            </span>
+            <span class="small-size product-discountPercentage">({{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}})</span>
+            {% else %}
+            <span class="small-size product-price-detail">
+              <span class="product-discountedPrice">{{current_variant.price | money}}</span>
+            </span>
+            {% endif %}
+          </div>
+        </div>
+      </a>
+    </li>
+    {%- endfor -%}
+  </ul>
+  {% else %}
+  <div class="SimilarNoResults" style="">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49px" height="50px">
+      <image x="0px" y="0px" width="49px" height="50px" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAyCAQAAABfAfs5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkARYRMQNLo02IAAADSUlEQVRYw7WXW0hUQRjHf7tbWmoXzZLSQLuTkRYZWg9qmWWXpaALPgUF0UNEPXSnt25ERVgE4UMUGFRvZQUVRJGFaKBRS5rZRYtwTVkr09I9vZzGOXvO2Z096jcv3+z8v+83c/abM3NchLN4FlFIDqkk4gJ+4+cVz6jiE0Ng2ZynGc2y/aCSTcQMJn0m1/lrk36g1VPqLL2Hw/yMmP5/u0NatAA31yxT9dNNj+XIG+aGT+ky9DK4yGrDL3W8wIePNrrxMJ7pZJFJPmMlTRu7uaG2gjTeG+b3iGLclsp0jhMwaHeqAEZTLYV8Z2sE/RzuGh5kcWTEJSmgjjlK6z4mxXxjSnhxsSSuZaLakwX2SnG3wgljeS2EzUxWBgCUS5CV9rJDkmx5VABIoFbEvmWUtSiOFiGqiBIAkEufiN9oLfEKQQ+zHSDgpshQaS24ovaHhbGlIkMXk8zDSTQJgdchwo1P5FhnHpxPuu77eeIQEeS28OebEZl4dL+OgEMEPBVeihmRKvwPjgHQgqZ7Y8yIOOH7B4EI0KN7I82IAesfBOIvfbqnhQ65CQo/TjWfhcXb7Wtw0yr8GYNApIkH1GVGNAl/rqit6C1beB1mhI9O3Z/GTMeIAuG1mAdH8FjszP0OAcl06hmC0nokOyAQPpuzOpLtEhkazEULkMEvIdnhAJDERxF/1E50WbpKZkSNGLh5dTDBTjSLXiErjxKwXjoxj4UTnpOE26MATJKOgi8khpOOk27h/cqQqbyUprY5kjyfP5L8pMLrpMDwcVCmMqcSuqWQRg6GWfhy7kmXAg2N02oL9xogGi2cISek0tPZLm1WuZ2yTuoK6S/jZkjhaTTyjlYCxJLCNOYRbzvFI5xQWckSqUYit178hv4etceVzAWbz5XQ9pxc8qR3g4bGFjUIZHOWaoK2yT9TQan+RiviqzTSRpEqBCCLfdynVczzDx3UUMZaw1cSZNIqQfqM9zGXAiiBZJLwoPGLdptLxAIeSmXSzQYeRLMWNcsTZ4aGRoC8oUdAkeGPb2fhcEBKDJAvZA0HZLGhujpYNRwQr6G4f1Ls/FpjZw34WSN6MXQNPQJq+M0K0asfDgRUEaRQ98tVtp4z20Y+Lp5y9R89MxMHU4TKlQAAAABJRU5ErkJggg=="></image>
+    </svg>
+    <p> Sorry, No results found! </p>
+  </div>
+  {%- endif -%}
+  {%- endif -%}
+</div>
