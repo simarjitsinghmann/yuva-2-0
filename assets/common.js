@@ -593,13 +593,15 @@ $(document).ready(function(){
 $('.back-btn').click(function(){
   $(this).closest('.inner').removeClass('show')
 })
-$('.toggle.list-menu__item ,.toggle-level').click(function(){
+$('.toggle.list-menu__item,.toggle-level').click(function(){
   var $this = $(this);
   if ($this.next().hasClass('show')) {
+    $(this).removeClass('open-menu-drop')
     $this.next().removeClass('show');
   } else {
     $this.closest('li').find('.inner').removeClass('show');
-    $this.next().toggleClass('show');
+    $(this).addClass('open-menu-drop')
+    $this.next().addClass('show');
   }
 
 });
