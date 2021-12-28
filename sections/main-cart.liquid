@@ -201,3 +201,21 @@
 ]
 }
 {% endschema %}
+
+  $(document).ready(function(){
+    //listen to the promo button click
+    $('#redemDevPromo').on('click', function(event){
+      //disable the button event
+      event.preventDefault();
+      //write the url format
+      var theUrl = '/checkout?discount=';
+      //grab the discount code from the input
+      var theDiscount = $('#devPromo').val();
+      //full url to redirect to checkout with promo code
+      var toRedirect = theUrl+theDiscount;
+      console.log(toRedirect);
+      //redirect
+      window.location.href = toRedirect;
+    });
+  });
+</script>
