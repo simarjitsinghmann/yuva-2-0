@@ -193,7 +193,7 @@
 <style>
   
       .quickview_product{
-    visibility: hidden;
+/*     visibility: hidden; */
 /*         display: flex; */
 }
 .quickview_product.slick-initialized {
@@ -203,7 +203,7 @@
 <script>
   $(document).ready(function(){
 
-    $('#feature__product-{{product.id}}').slick({
+    $('#feature__product-{{product.id}}s').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: true,
@@ -222,7 +222,7 @@
           }
         ]
       });
-    $('#feature__productThumbs-{{product.id}}').slick({
+    $('#feature__productThumbs-{{product.id}}s').slick({
       slidesToShow: 6,
       slidesToScroll: 1,
       asNavFor:'#feature__product-{{product.id}}',
