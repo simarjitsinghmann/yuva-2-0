@@ -484,14 +484,8 @@ img {
     overflow-x: hidden;
     overflow-y: auto;
     }
-.side-menu .inner-side ul li a {
-    font-size: 22px;
-    line-height: 32px;
-    display: block;
-    position: relative;
-    padding: 10px 0;
-    margin: 0;
-    text-transform: capitalize;
+.nav-open .side-menu {
+  left: 0;
 }
 .side-menu .inner-side ul {
   padding: 0;
@@ -500,8 +494,14 @@ img {
   flex-direction: column;
   width: 100%;
 }
-.nav-open .side-menu {
-  left: 0;
+.side-menu .inner-side ul li a {
+    font-size: 22px;
+    line-height: 32px;
+    display: block;
+    position: relative;
+    padding: 10px 0;
+    margin: 0;
+    text-transform: capitalize;
 }
 button.navbar-toggler {
   background: transparent;
