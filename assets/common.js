@@ -614,9 +614,14 @@ $('.toggle.list-menu__item,.toggle-level').click(function(){
   productVariants=function() {
     var productOptions = document.getElementsByClassName('productOption');
     if(productOptions){
-      var options=[];
+      var options=[];	
+      eventType = 'click';
+        if(variantStyle == 'dropdown'){
+        	eventType = 'change';
+        }
       Array.from(productOptions).forEach(function(productOption) {
-        productOption.addEventListener("click", ()=>{	
+        
+        productOption.addEventListener(eventType, ()=>{	
                                        var _productParent = productOption.closest('.product_content_section');
         setTimeout(function(){    
           const fieldsets = Array.from(_productParent.querySelectorAll('.product-loop-variants'));
