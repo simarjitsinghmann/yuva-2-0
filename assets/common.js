@@ -616,6 +616,7 @@ $('.toggle.list-menu__item,.toggle-level').click(function(){
     if(productOptions){
       var options=[];	
       eventType = 'click';
+      
         if(variantStyle == 'dropdown'){
         	eventType = 'change';
         }
@@ -625,9 +626,14 @@ $('.toggle.list-menu__item,.toggle-level').click(function(){
                                        var _productParent = productOption.closest('.product_content_section');
         setTimeout(function(){    
           const fieldsets = Array.from(_productParent.querySelectorAll('.product-loop-variants'));
-          options=fieldsets.map((fieldset) => {
-            return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
-          });
+          
+          if(variantStyle == 'dropdown'){
+          }
+          else{
+            options=fieldsets.map((fieldset) => {
+              return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
+            });
+          }
           var getVariant = variantChange(options,'options',_productParent);
           var buttonWrapper = _productParent.querySelector('[data-button-wrapper]');
           var paymentButtonWrapper = _productParent.querySelector('.Sd_addProduct');
