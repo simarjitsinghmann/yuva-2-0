@@ -55,6 +55,7 @@ function applyFilters(){
     const filterForm = document.getElementById('FiltersForm'); 
 
     var accordions = filterForm.querySelectorAll('.br_more_filter');
+    if(accordions){
     Array.from(accordions).forEach(function(accordion) {
       accordion.addEventListener("click", ()=>{
                                  var showMore = accordion.querySelector('.showMore');
@@ -72,6 +73,7 @@ function applyFilters(){
       }
     });
   });  
+  }
 
 //   showMultipleOptions(); 
   var layouts = section.querySelectorAll('a.btn-layout');
