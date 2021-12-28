@@ -370,9 +370,11 @@ input[type="number"] {
   .cstm-cart-sec table td{
     font-size: 12px;
   }
-    .cstm-cart-sec table .unit-price{
+.cstm-cart-sec table p.unit-price {
     font-size: 10px;
-  }
+    margin-top: 10px;
+    margin-bottom: 0;
+}
   .cstm-cart-sec table tr td, 
   .cstm-cart-sec table tr th {
     vertical-align: top;
