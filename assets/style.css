@@ -4971,11 +4971,13 @@ input[type="range"]:nth-child(1)::-webkit-slider-thumb {
   color: var(--heading_color);
     margin-bottom:10px;
     }
+.collection-banner.top_page_title .collection-description {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 .collection-banner.top_page_title:not(.no-bg) .collection-description {
   background-color: #fff;
   padding: 20px;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 /*================ collection page end ===============*/
 /*=============== search page css start ==============*/
