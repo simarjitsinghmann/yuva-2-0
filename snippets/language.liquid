@@ -3,7 +3,7 @@
     <div class="dropdown-menu">
       <select id="LanguageList" name="language_code" role="list" class="disclosure__list">
         {% for language in localization.available_languages %}
-        <option class="disclosure__item" {% if language.iso_code == localization.language.iso_code %}selected{% endif %}>
+        <option class="disclosure__item" value="{{ language.iso_code }}" {% if language.iso_code == localization.language.iso_code %}selected{% endif %}>
             {{ language.endonym_name | capitalize }}
         </option>
         {% endfor %}
@@ -14,9 +14,8 @@
 <script>
   var languageList =  document.getElementById('LanguageList');
   if(languageList){
-    
     languageList.addEventListener('change', ()=>{	
-  	var form = languageList.closest('form');
+                                  var form = languageList.closest('form');
     form.submit()
   })
   }
