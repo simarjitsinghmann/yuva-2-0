@@ -34,13 +34,13 @@
 
                 {%- if childlink.links != blank -%}
                 <div class="inner grandchild">
-                  <ul>
+                  <div>
                     {%- for grandchildlink in childlink.links -%}
-                    <li class="nav-item">
+                    <div class="nav-item">
                       <a href="{{ grandchildlink.url }}">{{ grandchildlink.title | split:"{badge" | first | escape | captilize }}</a>
-                    </li>
+                    </div>
                     {%- endfor -%}
-                  </ul>
+                  </div>
                 </div>
                 {% endif %}
               </li>
