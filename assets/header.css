@@ -1769,6 +1769,10 @@ div#mini__cartForm {
   margin: 0 auto;
   background-color: transparent;
 }
+  .nav_2 .navbar-expand-md .navbar-collapse,
+  .header_3 .navbar-collapse {
+    max-width: 100%;
+  }
 @media only screen and (min-width: 992px) {
   .navbar-expand-md .navbar-collapse {
     display: -ms-flexbox;
@@ -1783,10 +1787,6 @@ div#mini__cartForm {
   }
   .header_1 .nav-item {
     padding:15px 0;
-  }
-  .nav_2 .navbar-expand-md .navbar-collapse,
-  .header_3 .navbar-collapse {
-    max-width: 100%;
   }
   .navbar-expand-md .navbar-toggler {
     display: none;
