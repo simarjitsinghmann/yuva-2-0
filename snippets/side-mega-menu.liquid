@@ -14,14 +14,16 @@
         {% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</a>
         
     {%- if linklists[mainMenu].links != blank -%}
-    <div class="inner grandchild"> 
-          	<ul class="inner-child-menu">
+    <div class="inner grandchild">        
+        <div class="inner-child-menu">
+          	<ul>
             {%- for childlink in linklists[mainMenu].links -%}
             <li class="nav-item">
                 <a href="{{ childlink.url }}">{{ childlink.title | split:"{badge" | first | escape | captilize }}</a>
             </li>
             {%- endfor -%}
           </ul>
+        </div>
     </div>
     {% endif %}
 </li>
