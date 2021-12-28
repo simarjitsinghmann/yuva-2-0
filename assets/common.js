@@ -788,7 +788,7 @@ function sellingPlans(variant,form){
       var sellingPlanHtml =`<div class="selling_group active">
 <div class="sellingPlanHeading" for="oneTimePurchase">
 <input type="radio" id="oneTimePurchase" name="sellingPlanHeading" checked>
-<label for="oneTimePurchase">One Time Purchase</label>
+<label for="oneTimePurchase">${oneTimePurchaseText}</label>
 </div>
 </div>`;
       variantGroups.forEach(function(group,index){
