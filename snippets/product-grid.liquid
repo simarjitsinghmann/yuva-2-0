@@ -13,15 +13,15 @@
   <div class="card-wrapper">
     <div class="card card--text-only card--soft card--product text__left">
       <div class="card-wrapper-img {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{% endunless %} ">
-        	<a href="{{product.url | within : collection}}">
-              {% if product.featured_image != blank %}
-              {% render 'lazy-image' image: product.featured_image %}
-              {% unless settings.show_second_image == false or second_image == blank %}          
-              {% render 'lazy-image' image: second_image ,class:'product-second-img' %}
-              {% endunless %} 
-              {%else%}
-              {% render 'placeholder' %}
-              {% endif%}
+        <a href="{{product.url | within : collection}}">
+          {% if product.featured_image != blank %}
+          {% render 'lazy-image' image: product.featured_image %}
+          {% unless settings.show_second_image == false or second_image == blank %}          
+          {% render 'lazy-image' image: second_image ,class:'product-second-img' %}
+          {% endunless %} 
+          {%else%}
+          {% render 'placeholder' %}
+          {% endif%}
         </a>
         {% unless hide_options and settings.show_quick_view == false and settings.show_atc == false %}
         {% comment %}

@@ -766,6 +766,11 @@
     font-size: 11px;
     min-width: 100px;
   }
+  form button[type="submit"].is-loading svg.svg-loader {
+    display: block !important;
+    width: 25px;
+    height: 25px;
+  }
   .join-our-newsletter .newsletter-container #Subscribe {
     min-width: 100px;
   }
