@@ -73,7 +73,9 @@
         {% assign optionIndex = forloop.index %}
         {% assign varOptionIndex = 'option'|append:forloop.index %}
         <div class="select__{{downOption}} product-option-selector">
-          <p class="variant_title">{{ 'products.product.option' | t: title:option.name }}</p>{% if settings.option_style == 'swatch' %}
+          <p class="variant_title">{{ 'products.product.option' | t: title:option.name }}</p>
+          
+          {% if settings.option_style == 'swatch' %}
           <ul class="product-loop-variants {{downOption}} variants {{settings.color_swatch_style}} _small list-unstyled">                            
             {%- for value in option.values -%}  
             <li class="{{downOption}}_option variant_option">
@@ -110,6 +112,7 @@
             {% endfor %}
           </ul> 
           {% elsif settings.option_style == 'dropdown' %}
+          {% comment %}
           <div class="dropdown {{downOption}}-select productOptionSelect">
             <button id="dLabel" class="dropdown-selected" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{option.selected_value}}
@@ -124,6 +127,17 @@
               {% endfor %}
             </ul>
           </div>
+          
+      <div class="product-loop-variants">
+      <select class="productOption" name="option-{{optionIndex}}"> 
+        {%- for value in option.values -%}
+        <option value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
+          {{value}}
+        </option>
+        {% endfor %}
+      </select>
+      </div>
+          {% endcomment %}
           {% endif %}
         </div>
         {% endfor %}
