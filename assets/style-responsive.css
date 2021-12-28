@@ -294,11 +294,7 @@
   }
 }
 @media screen and (max-width: 1199px) {
-  /*  common start  */
-    h4 {
-    font-size: 18px;
-    line-height: 22px;
-  }
+  /*============  common end =============*/
   .slick-dots li button {
     margin: 0 3px;
   }
@@ -307,15 +303,15 @@
   }
   h1 {
     font-size: 40px;
-    line-height: 50px;
   }
   h2 {
     font-size: 21px;
-    line-height: 24px;
+  }
+  h4 {
+    font-size: 18px;
   }
   h5 {
     font-size: 15px;
-    line-height: 20px;
   }
   h6 {
     font-size: 15px;
@@ -332,7 +328,7 @@
     line-height: 25px;
     font-size: 12px;
   }
-    form button[type="submit"].is-loading svg.svg-loader {
+  form button[type="submit"].is-loading svg.svg-loader {
     width: 25px!important;
     height: 25px!important;
   }
