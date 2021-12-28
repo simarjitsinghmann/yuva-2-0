@@ -20,9 +20,8 @@
         {% endfor %}
         <li class="nav-item {% if link.links != blank or menuDropdown  %}dropdown{% endif %} {% if link.current %}active{% endif %}">
           <a class="list-menu__item {% if link.links != blank  or menuDropdown %}toggle {% endif %}" {% unless link.links != blank or menuDropdown  %}href="{{ link.url }}"{% endunless%}>{{link.title | split:"{badge" | first | escape | capitalize }}</a>
-          {%- if link.links != blank or menuDropdown  -%}
-          <div class="inner child">                  
-            <ul>
+          {%- if link.links != blank or menuDropdown  -%}               
+            <ul class="inner child">
               {%- for childlink in link.links -%}
               <li class="nav-item {% if childlink.links != blank %}dropdown{% endif %}">
                 {% assign childlink_url = childlink.url %}
@@ -33,15 +32,13 @@
                   {{ childlink.title | split:"{badge" | first | escape | captilize }}</a>
 
                 {%- if childlink.links != blank -%}
-                <div class="inner grandchild">
-                  <ul>
+                  <ul class="inner grandchild">
                     {%- for grandchildlink in childlink.links -%}
                     <li class="nav-item">
                       <a href="{{ grandchildlink.url }}">{{ grandchildlink.title | split:"{badge" | first | escape | captilize }}</a>
                     </li>
                     {%- endfor -%}
                   </ul>
-                </div>
                 {% endif %}
               </li>
               {%- endfor-%}	
@@ -50,7 +47,6 @@
               {% include 'side-mega-menu' %}
               {%- endif -%}
             </ul>
-          </div>
           {% endif %}
         </li>	
         {%- endfor-%}

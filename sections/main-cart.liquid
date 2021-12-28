@@ -93,12 +93,12 @@
 
                   <div class="price item-line-price" data-line-price="{{forloop.index0}}">
                     {%- if item.original_line_price != item.final_line_price -%}
-                    <s class="cart-item__old-price product-option">
-                      {{- item.original_line_price | money -}}
-                    </s>
                     <strong class="cart-item__final-price product-option">
                       {{ item.final_line_price | money }}
                     </strong>
+                    <s class="cart-item__old-price product-option">
+                      {{- item.original_line_price | money -}}
+                    </s>
                     {% else %}
                     <strong class="cart-item__final-price product-option">
                       {{ item.original_line_price | money }}
