@@ -727,6 +727,9 @@
 }
 /* end */
 @media screen and (max-width:1199px){
+  .shopify-section.customer.account {
+    padding: 40px 0!important;
+}
   .address-list li {
     max-width: 25%;
     flex: 0 0 25%;
@@ -734,6 +737,9 @@
   }
 }
 @media screen and (max-width:991px){
+  .shopify-section.customer.account {
+    padding: 30px 0!important;
+}
   .address-list li {
     max-width: 33.333333%;
     flex: 0 0 33.3333333%;
@@ -746,6 +752,9 @@
 }
 }
 @media screen and (max-width:575px){
+  .shopify-section.customer.account {
+    padding: 20px 0!important;
+}
   .address-list li {
     max-width: 50%;
     flex: 0 0 50%;
