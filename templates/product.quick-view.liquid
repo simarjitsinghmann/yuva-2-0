@@ -7,7 +7,7 @@
     <div id="feature__product-{{product.id}}" class="quickview_product">
       {%- for media in product.media -%}
       {%-if media.media_type == 'image'-%}
-      <div class="item slider-item" >
+      <div class="item" >
         <div class="quickview_product_img">
           <img src="{{media | img_url:'master'}}" alt="{{ media.preview_image.alt | escape }}">
         </div>
@@ -193,17 +193,18 @@
 <style>
   
       .quickview_product{
-/*     visibility: hidden; */
+    visibility: hidden;
 /*         display: flex; */
 }
 .quickview_product.slick-initialized {
     visibility: visible;
+  transition: visibility 1.5s ease;
 }
 </style>
 <script>
   $(document).ready(function(){
 
-    $('#feature__product-{{product.id}}s').slick({
+    $('#feature__product-{{product.id}}').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: true,
@@ -222,7 +223,7 @@
           }
         ]
       });
-    $('#feature__productThumbs-{{product.id}}s').slick({
+    $('#feature__productThumbs-{{product.id}}').slick({
       slidesToShow: 6,
       slidesToScroll: 1,
       asNavFor:'#feature__product-{{product.id}}',
