@@ -95,6 +95,30 @@
           "name":"Feature",
           "settings": [
               {
+                "type": "select",
+                "id": "icon",
+                "label": "t:sections.featured-content.blocks.featured-content.settings.icon.label",
+                "default": "shipping",
+                "options": [
+                  {
+                    "label": "t:sections.featured-content.blocks.featured-content.settings.icon.options.refund.label",
+                    "value": "refund"
+                  },
+                  {
+                    "label": "t:sections.featured-content.blocks.featured-content.settings.icon.options.secure.label",
+                    "value": "secure"
+                  },
+                  {
+                    "label": "t:sections.featured-content.blocks.featured-content.settings.icon.options.shipping.label",
+                    "value": "shipping"
+                  },
+                  {
+                    "label": "t:sections.featured-content.blocks.featured-content.settings.icon.options.support.label",
+                    "value": "support"
+                  }
+                ]
+              },
+              {
                   "type":"text",
                   "id":"heading",
                   "label":"t:sections.featured-content.blocks.featured-content.settings.heading.label",
@@ -104,11 +128,6 @@
                   "type":"textarea",
                   "id":"content",
                   "label":"t:sections.featured-content.blocks.featured-content.settings.content.label"
-              },
-              {
-                  "type":"image_picker",
-                  "id":"icon",
-                  "label":"t:sections.featured-content.blocks.featured-content.settings.icon.label"
               }
           ]
 		}
