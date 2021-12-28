@@ -392,14 +392,11 @@
     width: 18px;
   }
   /*============= side menu start ==============*/
-  .side-menu,
-  .side-menu .inner-side .nav-item.dropdown .child,
-  .side-menu .inner-side .nav-item.dropdown .grandchild {
+  .side-menu {
     max-width: 400px;
     left: -400px;
   }
-  .side-menu .inner-side,
-  .side-menu .nav-item.dropdown .inner {
+  .side-menu {
     padding: 40px 50px;
   }
   .side-menu .inner-side ul li a {
