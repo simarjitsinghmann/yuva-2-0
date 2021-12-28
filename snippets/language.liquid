@@ -20,4 +20,12 @@
   </div>
   {% endform %}
 <script>
+  var languageList =  document.getElementById('LanguageList');
+  if(languageList){
+    
+    languageList.addEventListener(eventType, ()=>{	
+  	var form = languageList.closest('form');
+    console.log(form)
+  })
+  }
 </script>
