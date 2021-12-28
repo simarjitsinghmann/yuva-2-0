@@ -13,7 +13,7 @@
   <div class="card-wrapper">
     <div class="card card--text-only card--soft card--product text__left">
       <div class="card-wrapper-img {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{% endunless %} ">
-        	<a href="{{product.url | within : collection}}">
+        	<a href="{{product.url | within : collection}}" data-instant>
               {% if product.featured_image != blank %}
               {% render 'lazy-image' image: product.featured_image %}
               {% unless settings.show_second_image == false or second_image == blank %}          
@@ -84,7 +84,7 @@
             {% endif %}
             <div class="btn-box product-featured-form-submit {% if section.settings.enable_payment_button %} product-form--payment-button{% endif %} {% unless current_variant.available %}disabled{% endunless %}" data-button-wrapper>
               {% if hideATC %}
-              <a class="button black-btn small-btn" href="{{product.url | within:collection}}">{{ 'products.product.view_product' | t }}</a>
+              <a class="button black-btn small-btn" href="{{product.url | within:collection}}" data-instant>{{ 'products.product.view_product' | t }}</a>
               {% else %}
               <button
                       type="submit"
@@ -120,7 +120,7 @@
               {% endif %}
             </div>
             {% endcomment %}
-            <a class="link" href="{{product.url | within:collection}}">{{ 'products.product.view_product' | t }}</a>
+            <a class="link" href="{{product.url | within:collection}}" data-instant>{{ 'products.product.view_product' | t }}</a>
           </div>
             {% render 'product-variants' product:product %}
           {% endform %}
