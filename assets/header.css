@@ -565,18 +565,6 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
   border-top: 1.5px solid;
   border-right: 1.5px solid;
 }
-.header_3 .list-menu--inline .nav-item:hover > .sub-menu {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  top: 100%;
-  position: static;
-}
-.header_3 .list-menu--inline .nav-item > .sub-menu {
-  position: static;
-  opacity: 1;
-  visibility: visible;
-}
 .toggle-level .caret::after {
   content: "";
   position: absolute;
@@ -651,6 +639,18 @@ body.nav-open {
 .side-menu .nav-item.dropdown .inner.grandchild li a {
   font-size: 14px;
   line-height: 30px;
+}
+.header_3 .list-menu--inline .nav-item:hover > .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  top: 100%;
+  position: static;
+}
+.header_3 .list-menu--inline .nav-item > .sub-menu {
+  position: static;
+  opacity: 1;
+  visibility: visible;
 }
 .header_3 .nav__btn .menu_title {
   margin-left: 15px;
