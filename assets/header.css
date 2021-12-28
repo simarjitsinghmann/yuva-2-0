@@ -791,18 +791,6 @@ body.nav-open {
   flex: 0 0 100%;
 }
 /* mega menu end */
-
-
-.side-menu,
-.side-menu .inner-side .nav-item.dropdown .inner {
-  right: auto;
-  left: -464px;
-}
-.nav-open .side-menu,
-.nav-open .side-menu .inner-side .nav-item.dropdown .child.show,
-.nav-open .side-menu .inner-side .nav-item.dropdown .grandchild.show {
-  left: 0;
-}
 .nav-open {
   position: relative;
 }
