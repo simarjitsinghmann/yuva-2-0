@@ -32,7 +32,7 @@
                     <p class="item-variant-title">{{item.variant.title}}</p>
                     {% endunless %}	
                     <p class="item-variant-title">{{item.selling_plan_allocation.selling_plan.name }}</p>              
-                    <div class="price item-price" data-item-price="{{forloop.index0}}">
+                    <div class="price item-price d-none d-sm-block" data-item-price="{{forloop.index0}}">
                       {%- if item.original_price != item.final_price -%}
                       <strong class="cart-item__final-price product-option">
                         {{ item.final_price | money }}
@@ -71,7 +71,7 @@
                     {%- endif -%}
                     {%- endfor -%}
                   </div>
-					<div class="mobile-price">
+					<div class="mobile-price d-block d-sm-none">
                       
                   <div class="price item-line-price" data-line-price="{{forloop.index0}}">
                     {%- if item.original_line_price != item.final_line_price -%}
