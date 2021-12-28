@@ -106,9 +106,9 @@
                     <button class="plus line_item_change" data-line="{{forloop.index}}">+</button>
                   </div>
                 </td>
-                <td class="cart-price" data-label="price">                 
+                <td class="cart-price " data-label="price">                 
 
-                  <div class="price item-line-price" data-line-price="{{forloop.index0}}">
+                  <div class="price item-line-price  d-none d-sm-block" data-line-price="{{forloop.index0}}">
                     {%- if item.original_line_price != item.final_line_price -%}
                     <strong class="cart-item__final-price product-option">
                       {{ item.final_line_price | money }}
@@ -123,7 +123,7 @@
                     {% endif %}
                   </div>
                   {%- if item.unit_price_measurement -%}
-                  <p class="unit-price">
+                  <p class="unit-price  d-none d-sm-block">
                     {{ item.variant.unit_price | money }}
                     /
                     {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
