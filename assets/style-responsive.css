@@ -320,7 +320,7 @@
     width: 15px;
     height: 15px;
   }
-  .button,
+  .button:not(.small-btn),
   .shopify-challenge__button,
   .product_button .shopify-payment-button__button{
     padding: 8px 20px;
