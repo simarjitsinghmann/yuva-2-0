@@ -8,7 +8,11 @@
         {% when 'richtext' %}
         {{block.settings.content}}
         {% when 'page' %}
+        {% if block.settings.page != blank %}
         {{block.settings.page.content}}
+        {% else %}
+        {{'onboarding.rich_text_page' | t}}
+        {% endif %}
         {%- endcase -%}
       </div>
     </div>
