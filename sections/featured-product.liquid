@@ -34,7 +34,7 @@
             <div class="pdp-wrapper">
               <a class="product-detail-title" href="/products/copy-of-basic-fur-hood-grey-jacket">{{'onboarding.product_title' | t}}</a>
               <div class="prizebox" data-saved="true" data-saved-style="currency" data-price-wrapper="">
-                <h3 id="get_price" class="price-list"><h3 id="get_price" class="price-list">
+                <h3 id="get_price" class="price-list">
                   <span class="get-price">{{8800 | money}}</span>
                   <span class="main-price"> {{9900 | money}}</span>
                   {% if settings.show_saved_amount %}
@@ -44,7 +44,6 @@
                   <span class="percent-off">{{ 9900| minus: 8800  | money | append: " OFF"}}</span>
                   {% endif %}
                   {% endif %}
-                  </h3>
                   </h3>
               </div>
               <div class="select__quantity">
