@@ -637,6 +637,7 @@ $('.toggle.list-menu__item,.toggle-level').click(function(){
               return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
             });
           }
+          console.log('options',options)
           var getVariant = variantChange(options,'options',_productParent);
           var buttonWrapper = _productParent.querySelector('[data-button-wrapper]');
           var paymentButtonWrapper = _productParent.querySelector('.Sd_addProduct');
