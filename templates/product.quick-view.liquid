@@ -190,6 +190,16 @@
             {% render 'product-variants' product:product %}
   </div>
 </div>
+<style>
+  
+      .quickview_product{
+    visibility: hidden;
+/*         display: flex; */
+}
+.quickview_product.slick-initialized {
+    visibility: visible;
+}
+</style>
 <script>
   $(document).ready(function(){
 
