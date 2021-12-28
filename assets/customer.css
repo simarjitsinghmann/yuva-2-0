@@ -652,18 +652,18 @@
     list-style: none;
 }
 .address-list li {
-    max-width: 20%;
-    flex: 0 0 20%;
-    background-color: var(--white);
+  max-width: 20%;
+  flex: 0 0 20%;
+  background-color: var(--white);
     border: 1px solid #eee;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-      position:relative;
-      	padding:30px;
-      border-right:0;
-      min-height:250px;
-}
+    position:relative;
+    padding:30px;
+    margin-left: -1px;
+    min-height:250px;
+    }
 .address-content {
   padding-bottom:20px;
 }
