@@ -538,17 +538,17 @@ $(document).ready(function(){
         drawer.querySelector('[similar-drawer-body]').innerHTML = html;  
       }
     );
-//     fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
-//     .then(response => response.text())
-//     .then((text) => {
-//       const html = document.createElement('div');
-//       html.innerHTML = text;
-//       const recommendations = html.querySelector('.similarItemContainer');
-//       if (recommendations && recommendations.innerHTML.trim().length) {
+    fetch("/recommendations/products?product_id="+getID+"&limit=10&section_id="+getSection)
+    .then(response => response.text())
+    .then((text) => {
+      const html = document.createElement('div');
+      html.innerHTML = text;
+      ?const recommendations = html.querySelector('.similarItemContainer');
+      if (recommendations && recommendations.innerHTML.trim().length) {
 //         drawer.querySelector('[similar-drawer-body]').innerHTML = recommendations.innerHTML;   
 //         drawer.classList.remove('searching');
-//       }
-//     });
+      }
+    });
   });
 
   ///search-top//
