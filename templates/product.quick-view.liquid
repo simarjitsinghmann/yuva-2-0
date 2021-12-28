@@ -4,7 +4,7 @@
 {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
 <div class="quickview_product_wrapper product_content_section">
   <div class="quickview_product_slider">   
-    <div id="feature__product-{{product.id}}" class="quickview_product" data-slider-id="1">
+    <div id="feature__product-{{product.id}}" class="quickview_product">
       {%- for media in product.media -%}
       {%-if media.media_type == 'image'-%}
       <div class="item" >
@@ -15,7 +15,7 @@
       {%-endif-%}
       {%-endfor-%}
     </div> 
-    <div id="feature__productThumbs-{{product.id}}" class="quickview_product thumb d-none d-md-block d-lg-block" data-slider-id="1">
+    <div id="feature__productThumbs-{{product.id}}" class="quickview_product thumb d-none d-md-block d-lg-block">
       {%- for media in product.media -%}
       {%-if media.media_type == 'image'-%}
       <div class="item" data-id="media-{{media.id}}">
