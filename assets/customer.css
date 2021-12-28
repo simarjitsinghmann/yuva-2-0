@@ -750,12 +750,19 @@
 }
 }
 @media screen and (max-width:575px){
+  .customer td, .customer th {
+    padding: 15px 15px;
+    font-size: 11px;
+  }
+  .customer td:nth-child(even) {
+    background-color: #f2f2f2;
+  }
   .account-pages-header {
     margin-bottom: 30px;
-}
+  }
   .shopify-section.customer.account {
     padding: 20px 0!important;
-}
+  }
   .address-list li {
     max-width: 50%;
     flex: 0 0 50%;
