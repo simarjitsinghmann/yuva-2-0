@@ -7,7 +7,7 @@
     <div id="feature__product-{{product.id}}" class="quickview_product">
       {%- for media in product.media -%}
       {%-if media.media_type == 'image'-%}
-      <div class="item" >
+      <div class="item slider-item" >
         <div class="quickview_product_img">
           <img src="{{media | img_url:'master'}}" alt="{{ media.preview_image.alt | escape }}">
         </div>
