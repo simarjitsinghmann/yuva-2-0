@@ -22,7 +22,14 @@
               <span class="product-discountedPrice">{{current_variant.price | money}}</span>
               <span class="product-strike"><del>{{current_variant.compare_at_price}}</del></span>
             </span>
-            <span class="small-size product-discountPercentage">({{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}})</span>
+            
+                {% if settings.show_saved_amount %}        
+                {% if settings.saved_amount_style == 'percentage' %}
+                <span class="percent-off">{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round: 2 | append: "% OFF"}}</span>
+                {% else %}
+                <span class="percent-off">{{ product.compare_at_price | minus: product.price | money | append: " OFF"}}</span>
+                {% endif %}
+                {% endif %}
             {% else %}
             <span class="small-size product-price-detail">
               <span class="product-discountedPrice">{{current_variant.price | money}}</span>
