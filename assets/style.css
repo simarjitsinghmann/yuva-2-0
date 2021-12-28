@@ -1291,21 +1291,6 @@ a.wishlist-view .fas {
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
 }
-.card-wrapper .card.card--product .card-wrapper-img::after, .card-information .card-information-image::after {
-    background: rgba(0, 0, 0,0.22);
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 100%;
-    bottom: 0;
-    content: "";
-    -moz-transition: 2.5s ease;
-    -webkit-transition: 2.5s ease;
-    transition: 2.5s ease;
-    opacity: 0;
-    visibility: hidden;
-}
 
 *, *::before, *::after {
     box-sizing: border-box;
