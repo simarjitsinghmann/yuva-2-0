@@ -3,11 +3,7 @@
   <div class="service__column">
     {% for block in section.blocks %}
     <div class="col" {{ block.shopify_attributes }}>
-      {% if block.settings.image != blank %}
-      {% include 'lazy-image' image:block.settings.image %}
-      {% else %}
-      {% render 'placeholder' %}
-      {% endif %}
+      {% render 'icons' icon:block.settings.icon%}
       <div class="service_title">
         <h6>{{block.settings.heading}}</h6>
         {{block.settings.subtext}}
