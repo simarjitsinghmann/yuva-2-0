@@ -28,7 +28,7 @@
   <div class="announcement-bar__message" >
     {% unless section.settings.icon == 'none' %}
     <span class="announcement_icon">
-      {% render 'icon-list' icon:section.settings.icon %}
+      {% render 'icons' icon:section.settings.icon %}
     </span>
     {%endunless%}
     {% if section.settings.first_text != blank %}
