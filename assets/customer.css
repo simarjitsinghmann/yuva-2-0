@@ -195,12 +195,6 @@
   margin-bottom: 7rem;
 }
 
-@media screen and (min-width: 992px) {
-  .customer .pagination {
-    margin-top: 7rem;
-    margin-bottom: 10rem;
-  }
-}
 .customer input:-webkit-autofill,
 .customer input:-webkit-autofill:hover, 
 .customer input:-webkit-autofill:focus, 
@@ -741,3 +735,11 @@
     padding: 8px 15px;
 }
 /* end */
+@media screen and (mas-width:991px){
+  .address-list li {
+    max-width: 25%;
+    flex: 0 0 25%;
+    padding: 20px;
+    min-height: 250px;
+  }
+}
