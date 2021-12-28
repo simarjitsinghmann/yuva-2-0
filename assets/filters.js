@@ -43,8 +43,16 @@
 window.addEventListener('resize', function(event){
   //   changeGridLayout();
   applyFilters();
-
-  hideShowFilters()
+  hideShowFilters();
+  
+  var filters = document.getElementById('filterSideBar');
+  if (filters){
+  	if(window.innerWidth < 768 && window.innerWidth > 760){
+      filters.style.display = 'none';
+      setTimeout(function(){filters.style.display = '';},500)
+    }
+  }
+  
 });
 
 function applyFilters(){ 
