@@ -629,7 +629,7 @@ $('.toggle.list-menu__item,.toggle-level').click(function(){
           
           if(variantStyle == 'dropdown'){
             options=fieldsets.map((fieldset) => {
-              return Array.from(fieldset.querySelectorAll('change').value;
+              return Array.from(fieldset.querySelectorAll('select')).value;
             });
           }
           else{
