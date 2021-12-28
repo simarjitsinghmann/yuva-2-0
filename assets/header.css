@@ -486,7 +486,7 @@ div#countdown {
    right: -464px;
    z-index: 99999;
    background: var(--white);
-   height: 100vh;
+   height: 100%;
    webkit-transition: all 0.7s ease;
    -moz-transition: all 0.7s ease;
    -ms-transition: all 0.7s ease;
@@ -495,11 +495,10 @@ div#countdown {
    overflow-x: hidden;
    overflow-y: auto;
 }
-/* .side-menu .inner-side,
-.side-menu .nav-item.dropdown .inner {
+.side-menu .inner-side,{
    height: 100%;
    padding: 40px 60px;
-} */
+}
 .side-menu .inner-side ul li {
    margin: 0;
    position: static;
