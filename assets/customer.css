@@ -726,6 +726,9 @@
 }
 /* end */
 @media screen and (max-width:1199px){
+  .account-pages-header {
+    margin-bottom: 30px;
+}
   .shopify-section.customer.account {
     padding: 40px 0!important;
 }
@@ -736,9 +739,6 @@
   }
 }
 @media screen and (max-width:991px){
-  .shopify-section.customer.account {
-    padding: 30px 0!important;
-}
   .address-list li {
     max-width: 33.333333%;
     flex: 0 0 33.3333333%;
@@ -751,6 +751,9 @@
 }
 }
 @media screen and (max-width:575px){
+  .account-pages-header {
+    margin-bottom: 30px;
+}
   .shopify-section.customer.account {
     padding: 20px 0!important;
 }
@@ -766,6 +769,9 @@
   }
 }
 @media screen and (max-width:480px){
+  .account-pages-header {
+    margin-bottom: 20px;
+}
   .address-list li {
     max-width: 100%;
     flex: 0 0 100%;
