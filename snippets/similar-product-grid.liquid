@@ -7,9 +7,9 @@
     <li class="product-base">
       <a target="_blank" href="{{product.url}}">
         <div class="product-imageSliderContainer">
-          <picture class="img-responsive">
-            <img src="{{product.featured_image | img_url:'500x'}}" class="img-responsive" alt="{{product.title}}" title="{{product.title}}">
-          </picture>
+          <div class="img-responsive">
+            <img src="{{product.featured_image | img_url:'500x'}}" alt="{{product.title}}" title="{{product.title}}">
+          </div>
         </div>
         <div class="product-productMetaInfo">
           {% comment %}
