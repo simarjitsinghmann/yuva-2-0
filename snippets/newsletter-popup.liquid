@@ -40,7 +40,7 @@
 
                                 <div class="input-news-letter">
                                     {% if form.posted_successfully? %}
-                                        <span class="success_message">{{ 'newsletter.success' | t }}</span>
+                                        <span class="success-text">{{ 'newsletter.success' | t }}</span>
                                     {% else %}
                                         <input name="contact[tags]" type="hidden" value="newsletter">
                                   		<div class="form-group">
@@ -50,7 +50,7 @@
                                   		</div>
                                   
                                   {%- if form.errors -%}
-                                  <span class="newsletter-form__message form__message error_message" id="Newsletter-error--{{ section.id }}">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
+                                  <span class="newsletter-form__message form__message error-text" id="Newsletter-error--{{ section.id }}">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
                                   {%- endif -%}
                                       <button class="button black-btn btn-block" id="SubscribeBtn" name="commit">
                                         <span>{{'newsletter.button_label' | t }}</span>
