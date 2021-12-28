@@ -626,10 +626,10 @@ $('.toggle.list-menu__item,.toggle-level').click(function(){
                                        var _productParent = productOption.closest('.product_content_section');
         setTimeout(function(){    
           const fieldsets = Array.from(_productParent.querySelectorAll('.product-loop-variants'));
-          
+          console.log(fieldsets)
           if(variantStyle == 'dropdown'){
             options=fieldsets.map((fieldset) => {
-              return Array.from(fieldset.querySelectorAll('select').value);
+              return Array.from(fieldset.querySelectorAll('select')).value;
             });
           }
           else{
