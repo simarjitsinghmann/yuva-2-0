@@ -403,15 +403,8 @@
     padding: 7px 0;
     font-size: 22px;
   }
-  .inner-child-menu .category_title {
-    padding-top: 20px;
-    margin-bottom: 20px;
-  }
   .side-menu .inner-side ul li .inner li .toggle-level {
     font-size: 18px;
-  }
-  .side-menu #navbarCollapse {
-    padding-top: 25px;
   }
   /*=============  side menu end  ============*/
   /*==============  header end ================*/
@@ -1222,14 +1215,11 @@
     padding: 3px 0;
     font-size: 18px;
 }
-  .side-menu,
-  .side-menu .inner-side .nav-item.dropdown .child,
-  .side-menu .inner-side .nav-item.dropdown .grandchild {
+  .side-menu {
     max-width: 340px;
     left: -340px;
   }
-  .side-menu .inner-side,
-  .side-menu .nav-item.dropdown .inner {
+  .side-menu .inner-side{
     padding: 30px 40px;
   }
   .side-menu .nav-item.dropdown .inner.grandchild li a {
