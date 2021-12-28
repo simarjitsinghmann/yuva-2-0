@@ -1333,9 +1333,9 @@ a.wishlist-view .fas {
   object-fit: cover;
 }
 .card-wrapper .card.card--product .card-wrapper-img img {
-  -webkit-transition: 0.7s ease;
-  -o-transition: 0.7s ease;
-  transition: 0.7s ease;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 .card-wrapper
 .card.card--product
@@ -1345,9 +1345,9 @@ a.wishlist-view .fas {
   -ms-opacity: 0;
   -o-opacity: 0;
   opacity: 0;
-  -webkit-transition: 0.7s ease;
-  -o-transition: 0.7s ease;
-  transition: 0.7s ease;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 .card-wrapper
 .card.card--product
@@ -1360,8 +1360,8 @@ a.wishlist-view .fas {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  transition: opacity 0.8s, transform 0.7s cubic-bezier(0, 0, 0.44, 1.18),
-    -webkit-transform 0.7s cubic-bezier(0, 0, 0.44, 1.18);
+  transition: opacity 0.5s, transform 0.5s cubic-bezier(0, 0, 0.44, 1.18),
+    -webkit-transform 0.5s cubic-bezier(0, 0, 0.44, 1.18);
 }
 
 /***sale-section END***/
