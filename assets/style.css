@@ -3473,7 +3473,7 @@ body.header2.announcement_open .single__product__right.sidebar-fixed {
   flex: 0 0 50%;
   padding: 0 10px 20px;
 }
-.results-similarGrid li.product-base picture {
+.results-similarGrid li.product-base .img-responsive {
   max-height: 230px;
   display: -webkit-box!important;
   display: -ms-flexbox!important;
@@ -3488,7 +3488,7 @@ body.header2.announcement_open .single__product__right.sidebar-fixed {
   min-height: 230px;
   background-color: var(--colorImageBg);
     }
-.results-similarGrid li.product-base picture.img-responsive img {
+.results-similarGrid li.product-base .img-responsive img {
   width: 100%;
 }
 .product-productMetaInfo .product-brand {
