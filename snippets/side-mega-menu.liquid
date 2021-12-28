@@ -103,7 +103,7 @@
 
       <div class="sub-menu-list">
         <div class="menu-image-content">
-          <img src="{{block.settings[image] | img_url:'master'}}" style="width:100%"  class="menu-image">
+          <img src="{{block.settings[image] | img_url:'master'}}" alt="{{block.settings[heading] | default:shop.name}}" style="width:100%"  class="menu-image">
           <div class="menu-content">
             <h4>{{block.settings[heading]}}</h4>
             {% if block.settings[newLink] != blank and block.settings[button] != blank %}
