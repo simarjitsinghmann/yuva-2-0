@@ -363,7 +363,8 @@ input[type="number"] {
   }
 }
 @media screen and (max-width: 767px) {
-  .cstm-cart-sec table{
+  .cstm-cart-sec table,
+  .cstm-cart-sec table td{
     font-size: 12px;
   }
   .cstm-cart-sec table tr td, 
@@ -423,7 +424,8 @@ input[type="number"] {
   }
 }
 @media screen and (max-width: 480px){
-  .cstm-cart-sec table{
+  .cstm-cart-sec table,
+  .cstm-cart-sec table td{
     font-size: 11px;
   }
 }
