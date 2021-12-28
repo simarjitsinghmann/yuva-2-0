@@ -50,6 +50,7 @@
           </h6>
           {%- for discount in item.discounts -%}
           <div class="text-right">
+            <i class="fas fa-tag"></i> 
             <small class="item__discount coupanName">{{ discount.title }}</small><br>
 
           </div>
@@ -84,7 +85,8 @@
 
     {%- if cart.cart_level_discount_applications.size > 0 -%}
     {%- for discount in cart.cart_level_discount_applications -%}
-    <li class="minicart__savings">{{'sections.cart.discount' | t}}<span class="coupanName">{{ discount.title }}</span> <strong>-{{discount.total_allocated_amount | money}}</strong></li>
+    <li class="minicart__savings">{{'sections.cart.discount' | t}}<span class="coupanName">
+                          <i class="fas fa-tag"></i> {{ discount.title }}</span> <strong>-{{discount.total_allocated_amount | money}}</strong></li>
 
     {% endfor %}	
     {% endif %}
