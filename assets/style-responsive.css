@@ -1514,7 +1514,7 @@
     outline: 2px solid #fff;
     outline-offset: -10px;
   }
-.collection-list-view-card.on-hover-content .list-view-content, .list-view-content {
+  .collection-list-view-card.on-hover-content .list-view-content, .list-view-content {
     height: 100%;
     opacity: 1;
     -webkit-transform: scale(1);
@@ -1527,7 +1527,9 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-}
+    justify-content: center;
+    text-align: center;
+  }
   .collection-list-view-card a.link {
     background-color: var(--white);
     color: var(--black);
