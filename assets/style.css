@@ -3428,14 +3428,18 @@ transition: 0.5s ease;
     position: sticky;
     top: 0;
   }
-  .sticky-header .single__product__right.sidebar-fixed {
+  .sticky-header .single__product__right.sidebar-fixed,
+  .sticky-header .single-detail-detail .ImageleftContainer .nav-container .slider-nav {
     top:90px;
   }
   .sticky-header.announcement_open .single__product__right.sidebar-fixed,
-  .sticky-header.header2 .single__product__right.sidebar-fixed{
+  .sticky-header.header2 .single__product__right.sidebar-fixed,
+  .sticky-header.announcement_open .single-detail-detail .ImageleftContainer .nav-container .slider-nav,
+  .sticky-header.header2 .single-detail-detail .ImageleftContainer .nav-container .slider-nav{
     top:130px;
   }
-  .sticky-header.announcement_open.header2 .single__product__right.sidebar-fixed {
+  .sticky-header.announcement_open.header2 .single__product__right.sidebar-fixed,
+  .sticky-header.announcement_open.header2 .single-detail-detail .ImageleftContainer .nav-container .slider-nav{
     top:170px;
   }
   /*=========== End recent product ================*/
