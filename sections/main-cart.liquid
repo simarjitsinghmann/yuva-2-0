@@ -192,7 +192,8 @@
       </div>
     </div>
   </form>
-  {% endif %}
+  
+  {% if shipping_estimate_enable %}
   <div id="shipping_estimations_template" class="shipping_estimations">
     <div class="form-group">
       <label for="shippingCountry">
@@ -242,6 +243,8 @@
       <button id="getShippingEstimates" class="button black-btn small-btn">Get Estimates</button>
     </div>
   </div>
+  {% endif %}
+  {% endif %}
 </div>
 <script src="{{'cart-ajax.js' | asset_url}}" defer="defer"></script> 
 {% schema %}
