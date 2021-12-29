@@ -958,7 +958,9 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     }
     slickSlider(jQuery(slider),slideIndex);
     
-    faqInit();
+    if(jQuery(event.target).find('.faqSection-header').length > 0 ){
+    	faqInit();
+    }
     
     if(jQuery(event.target).find('#instafeed').length > 0 ){
     	instagramFeed();
