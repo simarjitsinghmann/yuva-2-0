@@ -72,6 +72,7 @@
   /* NEWSLETTER POPUP STARTS */
   var getnew_Pop = Cookies.get('Newsletter_closed');
   if(getnew_Pop!="Newsletter_closed_val"){
+    console.log(window.location.pathname)
     $('.newsletter-popup').fadeIn('slow');  
     $('body').addClass('NewsletterActive').addClass('scrollHidden'); 
   }else{
