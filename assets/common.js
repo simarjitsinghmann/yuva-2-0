@@ -1161,7 +1161,7 @@ $(document).ready(function(){
 
 $('.toggle.list-menu__item,.toggle-level').click(function(){
   var $this = $(this);
-  if ($this.next().hasClass('show')) {
+  if ($this.hasClass('open-menu-drop')) {
     $(this).removeClass('open-menu-drop')
     $this.next().removeClass('show');
   } else {
