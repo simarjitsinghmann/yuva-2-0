@@ -541,12 +541,12 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
 .inner.grandchild{
     max-height: 0;
     overflow: hidden;
-    transition: 1s ease all;
+    transition: 0.3s ease all;
 }
 .inner.child.show,
 .inner.grandchild.show{
     max-height: 2000px;
-      transition: 1s ease all;
+      transition: 0.3s ease all;
 }
 .inner.child.show, .inner.grandchild.show {
     padding-left: 10px;
