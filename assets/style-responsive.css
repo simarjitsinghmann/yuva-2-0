@@ -2686,7 +2686,7 @@
   }
   .client-say-left {
     padding: 0 40px;
-}
+  }
   .client-say-left h2 {
     font-size: 22px;
     line-height: 26px;
@@ -2695,12 +2695,16 @@
   .product-page-recommendations .card-wrapper-img {
     min-height: 150px;
     max-height: 150px;
-}
+  }
   .collection-list-view-wrapper.left-wrapper .collection-list-view-card, .collection-list-view-wrapper.right-wrapper .collection-list-view-card {
     height: 270px;
-}
+  }
   .banner-caption-title h3 {
     font-size: 30px!important;
+  }
+  .results-similarGrid li.product-base .img-responsive {
+    max-height: 130px;
+    min-height: 130px;
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
