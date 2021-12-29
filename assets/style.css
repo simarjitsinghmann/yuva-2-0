@@ -10,7 +10,7 @@ img.lazyloaded {
 
 img.lazyload {
   opacity: 0;
-  transition: 0.5s ease;
+  transition: 1s cubic-bezier(.26,.54,.32,1) 0s forwards;
 }
 main#MainContent {
   min-height: 300px;
