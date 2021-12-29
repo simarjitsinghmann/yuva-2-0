@@ -138,7 +138,6 @@ $(document).ready(function(){
     setTimeout(function(){ 
       var recent_pro = localStorage.getItem("Recent_search");
       var recent_pro_val = JSON.parse(recent_pro);
-      console.log('recent',recent_pro_val)
       $('.recent-search-list').html(''); 
       if(recent_pro_val==null){  
         $('.recent-search-list').html('');
