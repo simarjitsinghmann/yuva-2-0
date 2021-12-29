@@ -175,14 +175,14 @@
           </div>
         </div>
         <div class="otherResultContainer">
-          <ul class="grid grid--5-col-desktop grid--3-col-tablet grid--2-col grid--one-third-max grid--quarter-max negative-margin product-grid result_product" role="list" 
+          <ul class="row result_product" role="list" 
               data-result="others"
               >
             {%- if otherResults -%}
             {%- for item in search.results limit:50 -%}
             {%- case item.object_type -%}
             {%- when 'article' -%}
-            <li class="grid__item search_result_items grid__item--small other_item">
+            <li class=" col-12 col-sm-6 col-md-4 search_result_items other_item">
               {% include 'article-grid' article:item %}
             </li>
             {%- when 'page' -%}
