@@ -11,7 +11,7 @@
               <a>
                 {{block.settings.heading }}
                 <span class="iconPlus">{% render 'icon-plus' %}</span>
-                <span class="iconMinus" style="display: none">{% render 'icon-minus' %}</span>
+                <span class="iconMinus">{% render 'icon-minus' %}</span>
               </a>
             </h6>
             <div class="content faqSection-content" id="faq-content-{{block.id}}" style="display:none;">
@@ -43,47 +43,6 @@
    
   document.addEventListener("DOMContentLoaded", faqInit,false);
   document.addEventListener("shopify:section:load", faqInit,false);
-   function faqInit(){
-     var tabHead = document.getElementsByClassName('faqSection-header');
-                                                   if(tabHead.length > 0 ){
-       var tabContent =  document.getElementsByClassName('faqSection-content');
-
-       Array.from(tabHead).forEach(function(btn) {
-         btn.addEventListener("click", ()=>{
-                              let icon = btn.querySelectorAll('.fa')[0];
-         if(btn.classList.contains('active')){
-           clearActive();
-         }
-         else{
-           btn.classList.add("active");
-           var _value = btn.getAttribute("content");
-           clearActive(btn, document.getElementById(_value));
-           DOMAnimations.slideDown(document.getElementById(_value));
-         }
-       });
-     });
-   }
-   }
-   function clearActive(currentHead,currentContent){
-     var tabs = document.getElementsByClassName('faqSection-header');
-                                                var tabsContent =  document.getElementsByClassName('faqSection-content');
-     Array.from(tabs).forEach(function(item) {
-       if(item == currentHead){
-         return;
-       }
-       else{
-         item.classList.remove('active');
-       }
-     });
-     Array.from(tabsContent).forEach(function(item) {
-       if(item == currentContent){
-         return;
-       }
-       else{
-         DOMAnimations.slideUp(item);
-       }
-     });
-   }
    </script>
 {% schema %}
   {
