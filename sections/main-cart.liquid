@@ -289,6 +289,7 @@
   var _CartShippingRates = function(shippingAddress) {
     console.log('asasd')
     var poller = function() {
+    console.log('123123')
       jQuery.ajax('/cart/async_shipping_rates', {
         dataType: 'json',
         success: function(response, textStatus, xhr) {
