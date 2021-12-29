@@ -2688,24 +2688,17 @@ transition: 0.5s ease;
   .product-highlights {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 280px;
     height: 100%;
     padding: 30px;
-    background: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,1)), color-stop(0%, rgba(69,69,69,1)), to(rgba(40,39,39,0)));
-    background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(69,69,69,1) 0%, rgba(40,39,39,0) 100%);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(69,69,69,1) 0%, rgba(40,39,39,0) 100%);
+    background: #fff;
     z-index: 2;
+    width: 220px;
+    background: #ffffffab;
+    box-shadow: 0px 0px 3px #00000038;
+    
   }
-  .product-highlights:after {
-    position: absolute;
-    content: "";
-    width: 120px;
-    height: 100%;
-    background-color: #00000054;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
+
   .highlights {
     display: -webkit-box;
     display: -ms-flexbox;
