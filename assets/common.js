@@ -895,8 +895,8 @@ function faqInit(){
 
     Array.from(tabHead).forEach(function(btn) {
       btn.addEventListener("click", ()=>{
-                           let iconPlus = btn.querySelector('iconPlus');
-                           let iconMinus = btn.querySelector('iconMinus');
+                           var iconPlus = btn.querySelector('iconPlus');
+                           var iconMinus = btn.querySelector('iconMinus');
       if(btn.classList.contains('active')){
         iconMinus.style.display = 'none';
         iconPlus.style.display = 'inline';
@@ -919,8 +919,8 @@ function clearActive(currentHead,currentContent){
   var tabs = document.getElementsByClassName('faqSection-header');
   var tabsContent =  document.getElementsByClassName('faqSection-content');
   Array.from(tabs).forEach(function(item) {
-                           let iconPlus = item.querySelector('iconPlus');
-                           let iconMinus = item.querySelector('iconMinus');
+                           var iconPlus = item.querySelector('iconPlus');
+                           var iconMinus = item.querySelector('iconMinus');
     if(item == currentHead){
       return;
     }
