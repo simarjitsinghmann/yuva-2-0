@@ -1166,17 +1166,17 @@ $('.toggle.list-menu__item,.toggle-level').click(function(){
     $this.next().toggleClass('show');
   if ($this.next().hasClass('show')) {
   } else {
-    if($(this).hasClass('toggle-level')){
-      $('.toggle-level').removeClass('open-menu-drop');
-      $('.toggle-level').next().removeClass('show');
-    }
-    else{
-      $('.toggle.list-menu__item').removeClass('open-menu-drop');
-      $('.toggle.list-menu__item').next().removeClass('show');
-    }
-    $this.closest('li').find('.inner').removeClass('show');
-    $(this).addClass('open-menu-drop')
-    $this.next().addClass('show');
+//     if($(this).hasClass('toggle-level')){
+//       $('.toggle-level').removeClass('open-menu-drop');
+//       $('.toggle-level').next().removeClass('show');
+//     }
+//     else{
+//       $('.toggle.list-menu__item').removeClass('open-menu-drop');
+//       $('.toggle.list-menu__item').next().removeClass('show');
+//     }
+//     $this.closest('li').find('.inner').removeClass('show');
+//     $(this).addClass('open-menu-drop')
+//     $this.next().addClass('show');
   }
 
 });
