@@ -42,7 +42,6 @@
             {% if form.posted_successfully? %}
             <span class="success-text">{{ 'newsletter.success' | t }}</span>
             {% else %}
-            <input name="contact[tags]" type="hidden" value="newsletter">
             <div class="form-group">
               <input class="form-control" type="email" name="contact[email]" id="EmailId" 
                      value="{% if customer.email != blank %}{{ customer.email }}{% else %}{{ form.email }}{% endif %}" 
