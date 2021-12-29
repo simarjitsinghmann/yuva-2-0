@@ -2525,6 +2525,11 @@
     width: 100%;
     bottom: 0;
   }
+  .askmeMain.slideAskme .askmecontainer {
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+  }
   /*============= PDP page css end  ===============*/
   /* ============ recent product css start =============== */
   .recent-product-slide .item {
