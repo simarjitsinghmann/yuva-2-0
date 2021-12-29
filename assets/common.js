@@ -1161,9 +1161,10 @@ $(document).ready(function(){
 
 $('.toggle.list-menu__item,.toggle-level').click(function(){
   var $this = $(this);
+  
+    $(this).toggleClass('open-menu-drop')
+    $this.next().toggleClass('show');
   if ($this.next().hasClass('show')) {
-    $(this).removeClass('open-menu-drop')
-    $this.next().removeClass('show');
   } else {
     if($(this).hasClass('toggle-level')){
       $('.toggle-level').removeClass('open-menu-drop');

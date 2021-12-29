@@ -2548,7 +2548,10 @@
   }
   .active_askme .askmeMain {
     height: 100%;
-}
+  }
+    .askmeMain .button{
+    width: 100%;
+  }
   body.template_product.active_askme:after {
     position: fixed;
     content: "";
