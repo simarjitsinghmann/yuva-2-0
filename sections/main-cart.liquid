@@ -317,7 +317,7 @@
       
       var html= '';
       response.forEach(function(shipping){
-        html += `<span class="success-text">${shipping=.name}:${Shopify.formatMoney((shipping.price*100),moneyFormat)}</span>`;
+        html += `<span class="success-text">${shipping.name}:${Shopify.formatMoney((shipping.price*100),moneyFormat)}</span>`;
       })
       $('#ShippingWrapperResponse').html(html);
     }
