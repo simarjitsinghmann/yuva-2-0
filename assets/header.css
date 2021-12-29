@@ -550,7 +550,9 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
 .inner.child.show, .inner.grandchild.show {
     padding-left: 10px;
 }
-
+.inner.grandchild.show {
+    padding: 0;
+}
 .side-menu .inner-side ul {
   padding: 0;
   margin: 0 0 20px 0;
