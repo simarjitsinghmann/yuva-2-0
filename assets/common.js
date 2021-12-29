@@ -1249,7 +1249,7 @@ $(document).ready(function()
       .removeClass('customer-open')
       .removeClass('NewsletterActive')
       .removeClass('show__similar__products');
-      $('.newsletter-popup,.wrapper-overlay,.askmeMain.slideAskme').hide();
+      $('.newsletter-popup,.wrapper-overlay,.askmeMain.slideAskme').hide().removeClass('slideAskme');
      $('.side-menu').find('.inner').removeClass('show');
       if($(window).width() < 768){
         $('#sort__list').removeClass('active');
