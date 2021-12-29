@@ -46,10 +46,10 @@
    function faqInit(){
      var tabHead = document.getElementsByClassName('faqSection-header');
                                                    if(tabHead.length > 0 ){
+       var tabContent =  document.getElementsByClassName('faqSection-content');
 
        Array.from(tabHead).forEach(function(btn) {
          btn.addEventListener("click", ()=>{
-       var tabContent =  btn.closest('.accordion-container').querySelectorAll('faqSection-content');
                               let icon = btn.querySelectorAll('.fa')[0];
          if(btn.classList.contains('active')){
            clearActive();
