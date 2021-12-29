@@ -232,6 +232,8 @@ function getFilterData(filterForm,input,sectionId,remove){
     elmnt.innerHTML = resultData.getElementById('CollectionProductsContainer').innerHTML;
       sortBy();
     applyFilters();
+    
+  hideShowFilters();
       elmnt.scrollIntoView();
     history.pushState({}, null, _updateUrl);
   });
