@@ -544,6 +544,7 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
   -webkit-transition: max-height 0.3s ease-in-out;
   -o-transition: max-height 0.3s ease-in-out;
   transition: max-height 0.3s ease-in-out;
+  transition: opacity 1s cubic-bezier(.25,.46,.45,.94),height .35s cubic-bezier(.25,.46,.45,.94);
 }
 .inner.child.show,
 .inner.grandchild.show{
@@ -552,6 +553,7 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
   -webkit-transition: max-height 0.3s ease-in-out;
   -o-transition: max-height 0.3s ease-in-out;
   transition: max-height 0.3s ease-in-out;
+  transition: opacity 1s cubic-bezier(.25,.46,.45,.94),height .35s cubic-bezier(.25,.46,.45,.94);
 }
 .inner.child.show, .inner.grandchild.show {
     padding-left: 10px;
