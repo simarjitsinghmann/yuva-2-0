@@ -3103,24 +3103,20 @@ transition: 0.5s ease;
     visibility: visible;
     opacity: 1;
   }
-
-  .askmeMain .askmecontainer a.ask_cross {
+.askmeMain .askmecontainer a.ask_cross {
     position: absolute;
     top: -14px;
     right: -14px;
     background-color: var(--theme-color);
-      color: #fff;
-      width: 37px;
-      height: 37px;
-      text-align: center;
-      z-index: 99;
-      border-radius: 0;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      display: flex;
-      justify-content:center;
-      align-items:center;
-      }
+    color: #fff;
+    width: 37px;
+    height: 37px;
+    z-index: 99;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   .askmeMain .askmecontainer a.ask_cross svg {
     fill: currentcolor;
     margin-top: 12px;
