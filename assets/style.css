@@ -4317,6 +4317,13 @@ transition: 0.5s ease;
   .toolbox-item.toolbox-layout .btn-layout svg path {
     fill: #ddd;
   }
+    [data-view="grid-layout-5"]
+  .toolbox-item.toolbox-layout
+  .btn-layout.grid-layout-5
+  svg
+  path {
+    fill: var(--black);
+      }
   [data-view="grid-layout-4"]
   .toolbox-item.toolbox-layout
   .btn-layout.grid-layout-4
