@@ -33,50 +33,50 @@
       </div>
       <div class="template-search__search">
         <form action="{{ routes.search_url }}" method="get" role="search" class="search">
-            <div class="form-group">
-              <div class="search-result-input">
-                <input
-                       class="search-input form-control"
-                       id="Search-In-Template"
-                       type="text"
-                       name="q"
-                       value="{{ search.terms | escape }}"
-                       placeholder="{{ 'general.search.search' | t }}"
-                       {%- if settings.predictive_search_enabled -%}
-                       role="combobox"
-                       aria-expanded="false"
-                       aria-owns="predictive-search-results-list"
-                       aria-controls="predictive-search-results-list"
-                       aria-haspopup="listbox"
-                       aria-autocomplete="list" 
-                       autocorrect="off"
-                       autocomplete="off"
-                       autocapitalize="off"
-                       spellcheck="false"
-                       {%- endif -%}
-                       >
-                <input name="options[prefix]" type="hidden" value="last">
-                {%- if settings.predictive_search_enabled -%}
-                <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
-                  <div class="predictive-search__loading-state">
-                    <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                      <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                    </svg>
-                  </div>
-                </div>
-                <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span> 
-                {%- endif -%}
-                <button type="submit" class="search__button" aria-label="{{ 'general.search.search' | t }}">
-                  <svg width="22" height="22" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve">
-                    <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
-                             s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
-                             c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17
-                             s-17-7.626-17-17S14.61,6,23.984,6z"></path>
+          <div class="form-group">
+            <div class="search-result-input">
+              <input
+                     class="search-input form-control"
+                     id="Search-In-Template"
+                     type="text"
+                     name="q"
+                     value="{{ search.terms | escape }}"
+                     placeholder="{{ 'general.search.search' | t }}"
+                     {%- if settings.predictive_search_enabled -%}
+                     role="combobox"
+                     aria-expanded="false"
+                     aria-owns="predictive-search-results-list"
+                     aria-controls="predictive-search-results-list"
+                     aria-haspopup="listbox"
+                     aria-autocomplete="list" 
+                     autocorrect="off"
+                     autocomplete="off"
+                     autocapitalize="off"
+                     spellcheck="false"
+                     {%- endif -%}
+                     >
+              <input name="options[prefix]" type="hidden" value="last">
+              {%- if settings.predictive_search_enabled -%}
+              <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
+                <div class="predictive-search__loading-state">
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
                   </svg>
-                </button>
+                </div>
               </div>
+              <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span> 
+              {%- endif -%}
+              <button type="submit" class="search__button" aria-label="{{ 'general.search.search' | t }}">
+                <svg width="22" height="22" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve">
+                  <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
+                           s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
+                           c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17
+                           s-17-7.626-17-17S14.61,6,23.984,6z"></path>
+                </svg>
+              </button>
             </div>
-          </form>
+          </div>
+        </form>
       </div>
       {%- if search.performed -%}
       <p class="status-text" role="status">
@@ -102,108 +102,108 @@
       </div>
       <div id="searchResultContainer" class="resultContainer" data-result="{% if productResults %}products{% elsif otherResults %}others{% endif %}">
         <div id="CollectionProductsContainer" data-id="{{section.id}}" class="productResultContainer">
-      <aside id="filterSideBar" class="sidebar sidebar-fixed shop-sidebar sticky-sidebar-wrapper">
-          {% include 'collection-sidebar' results:search %}
-            </aside>
-        <div class="searchProductcontainer filteredData">
-    {% paginate search.results by 25 %}
-			{%- capture activeFilters -%}
-          {%- for filter in search.filters -%}
-                {%- for value in filter.active_values -%}
-                <a class="select-item" href="{{ value.url_to_remove }}">
-                  {{ value.label | escape }}
-                  <span class="close">
-                    {%- render 'icon-cross' -%}
-                  </span>
-                </a>
-                {%- endfor -%}
+          <aside id="filterSideBar" class="sidebar sidebar-fixed shop-sidebar sticky-sidebar-wrapper">
+            {% include 'collection-sidebar' results:search %}
+          </aside>
+          <div class="searchProductcontainer filteredData">
+            {% paginate search.results by 25 %}
+            {%- capture activeFilters -%}
+            {%- for filter in search.filters -%}
+            {%- for value in filter.active_values -%}
+            <a class="select-item" href="{{ value.url_to_remove }}">
+              {{ value.label | escape }}
+              <span class="close">
+                {%- render 'icon-cross' -%}
+              </span>
+            </a>
+            {%- endfor -%}
 
-                {%- if filter.type == "price_range" -%}
-                {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}                             
-                {% assign active = active | plus:1 %}
-                <a class="select-item" href="{{ filter.url_to_remove }}">
-                  {%- if filter.min_value.value -%}{{ filter.min_value.value | money }}{%- else -%}{{ 0 | money }}{%- endif -%}-{%- if filter.max_value.value -%}{{ filter.max_value.value | money }}{%- else -%}{{ filter.range_max | money }}{%- endif -%}
-                  <span class="close">
-                    {% render 'icon-cross' %}
-                  </span>
-                </a>
-                {%- endif -%}
-                {%- endif -%}
-                {%- endfor -%}
-          {%- endcapture -%}
-              <div class="product-toolbar-box 	d-sm-block d-md-none">
-                <div id="filterHeading" class="aside-title">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M0,1H16V3H0ZM0,7H16V9H0Zm0,6H16v2H0ZM7,0H9V4H7Zm3,6h2v4H10ZM5,12H7v4H5Z"/></g></g></svg>
-                  <p>{{ 'sections.collection_template.filter_by_label' | t }}</p>
-                </div>
-              </div>
-          {%- if productResults -%}
-          <div class="search-product-list">
-                  <div class="toolbox-item toolbox-layout">
-          {%- if activeFilters != '' -%}
-            <div class="filter-actions">
-
-              <div class="select-items">
-                {{-activeFilters-}}
-                <a href="{{'?q=' | append: search.terms | escape | append: '&options%5Bprefix%5D=last'}}" class="select-item filter-clean text-primary">{{ 'sections.collection_template.clear_all' | t }}</a>
+            {%- if filter.type == "price_range" -%}
+            {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}                             
+            {% assign active = active | plus:1 %}
+            <a class="select-item" href="{{ filter.url_to_remove }}">
+              {%- if filter.min_value.value -%}{{ filter.min_value.value | money }}{%- else -%}{{ 0 | money }}{%- endif -%}-{%- if filter.max_value.value -%}{{ filter.max_value.value | money }}{%- else -%}{{ filter.range_max | money }}{%- endif -%}
+              <span class="close">
+                {% render 'icon-cross' %}
+              </span>
+            </a>
+            {%- endif -%}
+            {%- endif -%}
+            {%- endfor -%}
+            {%- endcapture -%}
+            <div class="product-toolbar-box 	d-sm-block d-md-none">
+              <div id="filterHeading" class="aside-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M0,1H16V3H0ZM0,7H16V9H0Zm0,6H16v2H0ZM7,0H9V4H7Zm3,6h2v4H10ZM5,12H7v4H5Z"/></g></g></svg>
+                <p>{{ 'sections.collection_template.filter_by_label' | t }}</p>
               </div>
             </div>
+            {%- if productResults -%}
+            <div class="search-product-list">
+              <div class="toolbox-item toolbox-layout">
+                {%- if activeFilters != '' -%}
+                <div class="filter-actions">
 
-          {%- endif -%}
-          </div>
-          <ul class="grid grid--5-col-desktop grid--3-col-tablet grid--2-col grid--one-third-max grid--quarter-max negative-margin product-grid result_product" 
-              role="list">
-            {%- for item in search.results  -%}
-            {%- case item.object_type -%}
-            {%- when 'product' -%}
-            <li class="grid__item search_result_items product_item">
-              {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
-              {% include 'product-grid',product: item,  hideRelated:true %}
-            </li>
-            {%- endcase -%}
-            {%- endfor -%}
-          </ul>
-          </div>
-          {%- if paginate.pages > 1 -%}
-          {% render 'pagination', paginate: paginate %}
-          {%- endif -%}
-          {%- else -%}
-          {% render 'not-found'%}
-          {%- endif -%}
+                  <div class="select-items">
+                    {{-activeFilters-}}
+                    <a href="{{'?q=' | append: search.terms | escape | append: '&options%5Bprefix%5D=last'}}" class="select-item filter-clean text-primary">{{ 'sections.collection_template.clear_all' | t }}</a>
+                  </div>
+                </div>
 
-          {% endpaginate %}
+                {%- endif -%}
+              </div>
+              <ul class="grid grid--5-col-desktop grid--3-col-tablet grid--2-col grid--one-third-max grid--quarter-max negative-margin product-grid result_product" 
+                  role="list">
+                {%- for item in search.results  -%}
+                {%- case item.object_type -%}
+                {%- when 'product' -%}
+                <li class="grid__item search_result_items product_item">
+                  {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
+                  {% include 'product-grid',product: item,  hideRelated:true %}
+                </li>
+                {%- endcase -%}
+                {%- endfor -%}
+              </ul>
+            </div>
+            {%- if paginate.pages > 1 -%}
+            {% render 'pagination', paginate: paginate %}
+            {%- endif -%}
+            {%- else -%}
+            {% render 'not-found'%}
+            {%- endif -%}
+
+            {% endpaginate %}
           </div>
         </div>
         <div class="otherResultContainer">
-      <ul class="grid grid--5-col-desktop grid--3-col-tablet grid--2-col grid--one-third-max grid--quarter-max negative-margin product-grid result_product" role="list" 
-          data-result="others"
-          >
-          {%- if otherResults -%}
-        {%- for item in search.results limit:50 -%}
-          {%- case item.object_type -%}
-          {%- when 'article' -%}
-        <li class="grid__item search_result_items grid__item--small other_item">
-          {% include 'article-grid' article:item %}
-        </li>
-          {%- when 'page' -%}
-        <li class="grid__item search_result_items grid__item--small other_item">
-          <a href="{{ item.url }}" class="card-wrapper">
-            <div class="card card--search card--soft card--text-only">
-              <div class="card__inner">
-                <div class="card__content"><h2 class="card__text h3">{{ item.title | truncate: 50 | escape }}</h2></div>
-                <div class="card__badge">
-                  <span class="badge color-background-1">{{ 'templates.search.page' | t }}</span>
+          <ul class="grid grid--5-col-desktop grid--3-col-tablet grid--2-col grid--one-third-max grid--quarter-max negative-margin product-grid result_product" role="list" 
+              data-result="others"
+              >
+            {%- if otherResults -%}
+            {%- for item in search.results limit:50 -%}
+            {%- case item.object_type -%}
+            {%- when 'article' -%}
+            <li class="grid__item search_result_items grid__item--small other_item">
+              {% include 'article-grid' article:item %}
+            </li>
+            {%- when 'page' -%}
+            <li class="grid__item search_result_items grid__item--small other_item">
+              <a href="{{ item.url }}" class="card-wrapper">
+                <div class="card card--search card--soft card--text-only">
+                  <div class="card__inner">
+                    <div class="card__content"><h2 class="card__text h3">{{ item.title | truncate: 50 | escape }}</h2></div>
+                    <div class="card__badge">
+                      <span class="badge color-background-1">{{ 'templates.search.page' | t }}</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </a>
-        </li>
-          {%- endcase -%}
-        {%- endfor -%}
-          {%- else -%}
-    {% render 'not-found'%}
-          {%- endif -%}
-      </ul>
+              </a>
+            </li>
+            {%- endcase -%}
+            {%- endfor -%}
+            {%- else -%}
+            {% render 'not-found'%}
+            {%- endif -%}
+          </ul>
         </div>
       </div>
     </div>
