@@ -194,6 +194,84 @@
   </form>
   {% endif %}
 </div>
+<script>
+  (function () {
+
+    function shippingEstimates() {
+
+      if (Shopify && Shopify.CountryProvinceSelector) {
+        var country = document.getElementById('shippingCountry');
+        //      country.querySelectorAll('option')[1].setAttribute('selected',true);
+        var shipping = new Shopify.CountryProvinceSelector('shippingCountry', 'shippingProvince', {
+          hideElement: 'shippingProvinceContainer'
+        });
+
+        setupEventListeners();
+      }
+    }
+    function setupEventListeners(){
+      var button = document.getElementById('getShippingEstimates');
+      if(button){
+        button.addEventListener("click", ()=>{	
+                                $('#ShippingWrapperResponse').html('');
+        var shippingAddress = {};
+        shippingAddress.zip = jQuery('#shippingZip').val() || '';
+        shippingAddress.country = jQuery('#shippingCountry').val() || '';
+        shippingAddress.province = jQuery('#shippingProvince').val() || '';
+        _getCartShippingRates(shippingAddress);
+
+      });
+    }
+  }
+
+   var _getCartShippingRates = function(shippingAddress) {
+    var params = {
+      type: 'POST',
+      url: '/cart/prepare_shipping_rates',
+      data: jQuery.param({'shipping_address': shippingAddress}),
+      success: _CartShippingRates(shippingAddress),
+      error: _onError
+    }
+    jQuery.ajax(params);
+  };
+  var _CartShippingRates = function(shippingAddress) {
+    var poller = function() {
+      jQuery.ajax('/cart/async_shipping_rates', {
+        dataType: 'json',
+        success: function(response, textStatus, xhr) {
+          console.log(response)
+          if (xhr.status === 200) {
+            _render(response.shipping_rates)
+          } 
+        },
+        error: _onError
+      })
+    }
+    }
+  var _fullMessagesFromErrors = function(errors) {
+    var fullMessages = [];
+    jQuery.each(errors, function(attribute, messages) {
+      jQuery.each(messages, function(index, message) {
+        fullMessages.push(attribute + ' ' + message);
+      });
+    });
+    return fullMessages;
+  };
+  var _onError = function(XMLHttpRequest, textStatus) {
+    var data = eval('(' + XMLHttpRequest.responseText + ')');
+    feedback = 'Error : ' + _fullMessagesFromErrors(data).join('; ') + '.';  
+    $('#ShippingWrapperResponse').html('<span class="error-text">'+feedback+'</span>');
+  }
+  var _render = function(response) {
+    if(response){
+      $('#ShippingWrapperResponse').html('<span class="success-text">'+response[0].name+':'+Shopify.formatMoney((response[0].price*100),moneyFormat)+'</span>');
+    }
+  };  
+  setTimeout(function(){
+    shippingEstimates() 
+  },500)
+  }());
+</script>
 <script src="{{'cart-ajax.js' | asset_url}}" defer="defer"></script> 
 {% schema %}
 {
