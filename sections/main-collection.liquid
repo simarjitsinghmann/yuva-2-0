@@ -10,13 +10,13 @@
       {% endif %}
       {% if section.settings.collection_description and collection.description != blank %}
       <div class="collection-description text__center">
-      	{{collection.description}}
+        {{collection.description}}
       </div>
       {% endif %}
     </div>
   </div>
 </div>
-      {% endif %}
+{% endif %}
 {% endunless %}
 {% paginate collection.products by section.settings.products_per_page %}
 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
@@ -25,7 +25,7 @@
   <div class="container">
     {% if collection.all_products_count > 0 %}
     <div class="product-toolbar-box">
-      
+
       {% if section.settings.enable_filtering %}
       <div id="filterHeading" class="aside-title">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M0,1H16V3H0ZM0,7H16V9H0Zm0,6H16v2H0ZM7,0H9V4H7Zm3,6h2v4H10ZM5,12H7v4H5Z"/></g></g></svg>
@@ -55,13 +55,43 @@
         </div>
         {% if section.settings.enable_sorting or section.settings.enable_display_options%}
         <div class="toolbox-right">
-        {% if section.settings.enable_display_options %}
+          {% if section.settings.enable_display_options %}
           <div class="toolbox-item toolbox-layout">
             <a data-layout="" data-value="grid-layout-5" class="btn-layout grid-layout-5">
-            <?xml version="1.0" encoding="utf-8"?>
-              <!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) -->
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19px" height="19px" viewBox="0 0 19 19" style="enable-background:new 0 0 19 19;" xml:space="preserve"><g><rect x="-52.7" y="-10.5" width="3.1" height="3.1"/><rect x="-48.7" y="-10.5" width="3.1" height="3.1"/><rect x="-44.7" y="-10.5" width="3.1" height="3.1"/><rect x="-52.7" y="-6.6" width="3.1" height="3.1"/><rect x="-48.7" y="-6.6" width="3.1" height="3.1"/><rect x="-44.7" y="-6.6" width="3.1" height="3.1"/><rect x="-52.7" y="-2.7" width="3.1" height="3.1"/><rect x="-48.7" y="-2.7" width="3.1" height="3.1"/><rect x="-44.7" y="-2.7" width="3.1" height="3.1"/><rect x="-40.8" y="-10.5" width="3.1" height="3.1"/><rect x="-40.8" y="-6.6" width="3.1" height="3.1"/><rect x="-40.8" y="-2.7" width="3.1" height="3.1"/><rect x="-52.7" y="1.3" width="3.1" height="3.1"/><rect x="-48.7" y="1.3" width="3.1" height="3.1"/><rect x="-44.7" y="1.3" width="3.1" height="3.1"/><rect x="-40.8" y="1.3" width="3.1" height="3.1"/><rect x="-36.8" y="-10.5" width="3.1" height="3.1"/><rect x="-36.8" y="-6.6" width="3.1" height="3.1"/><rect x="-36.8" y="-2.7" width="3.1" height="3.1"/><rect x="-36.8" y="1.3" width="3.1" height="3.1"/><rect x="-52.7" y="5.2" width="3.1" height="3.1"/><rect x="-48.7" y="5.2" width="3.1" height="3.1"/><rect x="-44.7" y="5.2" width="3.1" height="3.1"/><rect x="-40.8" y="5.2" width="3.1" height="3.1"/><rect x="-36.8" y="5.2" width="3.1" height="3.1"/></g><g><rect x="8" y="0.2" width="3.1" height="3.1"/><rect x="8" y="4.1" width="3.1" height="3.1"/><rect x="4" y="0.2" width="3.1" height="3.1"/><rect x="4" y="8" width="3.1" height="3.1"/><rect x="8" y="8" width="3.1" height="3.1"/><rect x="4" y="15.7" width="3.1" height="3.1"/><rect x="8" y="15.7" width="3.1" height="3.1"/><rect x="8" y="11.8" width="3.1" height="3.1"/><rect x="0.1" y="15.7" width="3.1" height="3.1"/><rect x="11.8" y="0.2" width="3.1" height="3.1"/><rect x="11.8" y="8" width="3.1" height="3.1"/><rect x="11.8" y="4.1" width="3.1" height="3.1"/><rect x="11.8" y="11.8" width="3.1" height="3.1"/><rect x="0.1" y="8" width="3.1" height="3.1"/><rect x="0.1" y="11.8" width="3.1" height="3.1"/><rect x="11.8" y="15.7" width="3.1" height="3.1"/><rect x="0.1" y="4.1" width="3.1" height="3.1"/><rect x="4" y="4.1" width="3.1" height="3.1"/><rect x="4" y="11.8" width="3.1" height="3.1"/><rect x="0.1" y="0.2" width="3.1" height="3.1"/><rect x="15.8" y="0.2" width="3.1" height="3.1"/><rect x="15.8" y="4.1" width="3.1" height="3.1"/><rect x="15.8" y="8" width="3.1" height="3.1"/><rect x="15.8" y="11.8" width="3.1" height="3.1"/><rect x="15.8" y="15.7" width="3.1" height="3.1"/></g></svg>
-
+              <svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" width="19" height="19">
+                <title>5-shape</title>
+                <style>
+                  tspan { white-space:pre }
+                  .s0 { fill: #000000 } 
+                </style>
+                <g id="5-shape">
+                  <path id="Shape 1" class="s0" d="m0 0h3v3h-3v-3z" />
+                  <path id="Shape 1 copy" class="s0" d="m4 0h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 2" class="s0" d="m8 0h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 3" class="s0" d="m12 0h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 4" class="s0" d="m16 0h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 5" class="s0" d="m0 4h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 6" class="s0" d="m4 4h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 7" class="s0" d="m8 4h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 8" class="s0" d="m12 4h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 9" class="s0" d="m16 4h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 10" class="s0" d="m0 8h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 11" class="s0" d="m4 8h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 12" class="s0" d="m8 8h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 13" class="s0" d="m12 8h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 14" class="s0" d="m16 8h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 15" class="s0" d="m0 12h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 16" class="s0" d="m4 12h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 17" class="s0" d="m8 12h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 18" class="s0" d="m12 12h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 19" class="s0" d="m16 12h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 20" class="s0" d="m0 16h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 21" class="s0" d="m4 16h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 22" class="s0" d="m8 16h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 23" class="s0" d="m12 16h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 24" class="s0" d="m16 16h3v3h-3v-3z" />
+                </g>
+              </svg>
             </a>
             <a data-layout="" data-value="grid-layout-4" class="btn-layout grid-layout-4">
               <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 19 19" width="19" height="19">
@@ -130,8 +160,8 @@
               </svg>
             </a>
           </div>
-        {% endif %}
-        {% if section.settings.enable_sorting %}
+          {% endif %}
+          {% if section.settings.enable_sorting %}
           <div id="toolbox-sort" class="toolbox-item toolbox-sort select-box">
             <ul class="" id="sort__list">
               <li class="mobile-sort-heading"><h6>{{ 'sections.collection_template.sort_by_label' | t }}</h6>
@@ -147,11 +177,11 @@
               {%- endfor -%}
             </ul>
             <div id="sort__list_label">
-            <span>{{ 'sections.collection_template.sort_by_label' | t }}</span>
-            <label for="SortBy">{{sort_name}}</label>
+              <span>{{ 'sections.collection_template.sort_by_label' | t }}</span>
+              <label for="SortBy">{{sort_name}}</label>
             </div>
           </div>
-        {% endif %}
+          {% endif %}
         </div>
         {% endif %}
       </nav>
@@ -254,69 +284,69 @@
 
 {% schema %}
 {
-  "name": "t:sections.main-collection.name",
-  "class": "collection-grid-section",
-  "settings": [
-    {
-      "type": "checkbox",
-      "id": "collection_image",
-      "default": true,
-      "label": "Show Collection Image"
-    },
-    {
-      "type": "checkbox",
-      "id": "collection_description",
-      "default": true,
-      "label": "Show Collection Description"
-    },
-    {
-      "type": "radio",
-      "id": "pagination_type",
-      "default": "paged",
-      "label": "Pagination Type",
-      "options":[
-			{
-              "value": "paged",
-              "label": "Paged Navigation"
-			},
-			{
-              "value": "infinite",
-              "label": "Infinite Scrolling"
-			}
-		]
-    },
-    {
-      "type": "range",
-      "id": "products_per_page",
-      "min": 8,
-      "max": 25,
-      "step": 1,
-      "default": 16,
-      "label": "t:sections.main-collection.settings.products_per_page.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.main-collection.settings.header__1.content"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_filtering",
-      "default": true,
-      "label": "t:sections.main-collection.settings.enable_filtering.label",
-      "info": "t:sections.main-collection.settings.enable_filtering.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_sorting",
-      "default": true,
-      "label": "t:sections.main-collection.settings.enable_sorting.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_display_options",
-      "default": true,
-      "label": "t:sections.main-collection.settings.enable_display_options.label"
-    }
-  ]
+"name": "t:sections.main-collection.name",
+"class": "collection-grid-section",
+"settings": [
+{
+"type": "checkbox",
+"id": "collection_image",
+"default": true,
+"label": "Show Collection Image"
+},
+{
+"type": "checkbox",
+"id": "collection_description",
+"default": true,
+"label": "Show Collection Description"
+},
+{
+"type": "radio",
+"id": "pagination_type",
+"default": "paged",
+"label": "Pagination Type",
+"options":[
+{
+"value": "paged",
+"label": "Paged Navigation"
+},
+{
+"value": "infinite",
+"label": "Infinite Scrolling"
+}
+]
+},
+{
+"type": "range",
+"id": "products_per_page",
+"min": 8,
+"max": 25,
+"step": 1,
+"default": 16,
+"label": "t:sections.main-collection.settings.products_per_page.label"
+},
+{
+"type": "header",
+"content": "t:sections.main-collection.settings.header__1.content"
+},
+{
+"type": "checkbox",
+"id": "enable_filtering",
+"default": true,
+"label": "t:sections.main-collection.settings.enable_filtering.label",
+"info": "t:sections.main-collection.settings.enable_filtering.info"
+},
+{
+"type": "checkbox",
+"id": "enable_sorting",
+"default": true,
+"label": "t:sections.main-collection.settings.enable_sorting.label"
+},
+{
+"type": "checkbox",
+"id": "enable_display_options",
+"default": true,
+"label": "t:sections.main-collection.settings.enable_display_options.label"
+}
+]
 }
 {% endschema %}
