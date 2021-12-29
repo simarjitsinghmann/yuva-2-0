@@ -5,7 +5,7 @@
     {%- for product in recommendations.products -%}
     {% assign current_variant = product.selected_or_first_available_variant %}
     <li class="product-base">
-      <a target="_blank" href="{{product.url}}">
+      <a href="{{product.url}}">
         <div class="product-imageSliderContainer">
           <div class="img-responsive">
             <img src="{{product.featured_image | img_url:'500x'}}" alt="{{product.title}}" title="{{product.title}}">
