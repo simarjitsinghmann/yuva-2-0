@@ -4,6 +4,14 @@ select {
   -webkit-appearance: none;
   background: #fff url(https://cdn.shopify.com/s/files/1/0597/9668/5009/files/select-arrow.png?v=1640701147) no-repeat 97% 50% /25px;
 }
+img.lazyloaded {
+  opacity: 1;
+}
+
+img.lazyload {
+  opacity: 0;
+  transition: 0.5s ease;
+}
 main#MainContent {
   min-height: 300px;
 }
