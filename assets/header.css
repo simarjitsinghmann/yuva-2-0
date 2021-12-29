@@ -539,20 +539,14 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
 }
 .inner.child,
 .inner.grandchild{
-  max-height: 0;
-  overflow: hidden;
-  -moz-transition: max-height 0.5s ease;
-  -webkit-transition: max-height 0.5s ease;
-  -o-transition: max-height 0.5s ease;
-  transition: max-height 0.5s ease;
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s ease all;
 }
 .inner.child.show,
 .inner.grandchild.show{
-  max-height: 2000px;
-  -moz-transition: max-height 0.5s ease;
-  -webkit-transition: max-height 0.5s ease;
-  -o-transition: max-height 0.5s ease;
-  transition: max-height 0.5s ease;
+    max-height: 2000px;
+      transition: 1s ease all;
 }
 .inner.child.show, .inner.grandchild.show {
     padding-left: 10px;
@@ -588,10 +582,6 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
   height: 8px;
   border-top: 1.5px solid;
   border-right: 1.5px solid;
-}
-.side-menu .inner-side ul li .inner li .toggle-level::after {
-    width: 6px;
-    height: 6px;
 }
 .toggle-level .caret::after {
   content: "";
@@ -662,7 +652,6 @@ body.nav-open {
 
 .side-menu .nav-item.dropdown .inner.child li a {
   font-size: 14px;
-  color: #000000;
 }
 .side-menu .nav-item.dropdown .inner.grandchild li a {
   font-size: 14px;
