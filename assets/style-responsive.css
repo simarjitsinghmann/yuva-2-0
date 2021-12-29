@@ -1248,7 +1248,9 @@
   body {
     font-size: 12px;
   }
-
+  h1 {
+    font-size: 30px;
+  }
   h5 {
     line-height: 16px;
   }
@@ -2102,6 +2104,9 @@
 }
 @media screen and (max-width: 575px) {
   /*=============  common  start  ===============*/
+  h1 {
+    font-size: 25px;
+  }
   .shopify-section:not(.announcement-bar-section, .shopify-section-main-header, .shopify-section-slider, #shopify-section-footer, .password-section, .contact-page-section,
   .shopify-blog-section, .shopify-article-section, .product-section, .banner-top-section, .single-banner-section, .collection-grid-section, .video-banner-section) {
     padding:20px 0;
