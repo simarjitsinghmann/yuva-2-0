@@ -575,9 +575,6 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
     margin: 0;
     text-transform: capitalize;
 }
-
-
-
 .side-menu .inner-side ul li.dropdown > a::after {
   content: "";
   position: absolute;
@@ -590,6 +587,10 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
   height: 8px;
   border-top: 1.5px solid;
   border-right: 1.5px solid;
+}
+.side-menu .inner-side ul li .inner li .toggle-level::after {
+    width: 6px;
+    height: 6px;
 }
 .toggle-level .caret::after {
   content: "";
