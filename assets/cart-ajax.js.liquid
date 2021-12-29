@@ -29,6 +29,9 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
 
       if (Shopify && Shopify.CountryProvinceSelector) {
         var country = document.getElementById('shippingCountry');
+        if(!country){
+        	return false;
+        }
         //      country.querySelectorAll('option')[1].setAttribute('selected',true);
         var shipping = new Shopify.CountryProvinceSelector('shippingCountry', 'shippingProvince', {
           hideElement: 'shippingProvinceContainer'
