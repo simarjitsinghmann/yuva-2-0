@@ -3443,7 +3443,8 @@ transition: 0.5s ease;
   .sticky-header .single__product__right.sidebar-fixed {
   	top:90px;
   }
-  .sticky-header.announcement_open .single__product__right.sidebar-fixed {
+  .sticky-header.announcement_open .single__product__right.sidebar-fixed,
+  .sticky-header.header2 .single__product__right.sidebar-fixed{
   	top:130px;
   }
   .sticky-header.announcement_open.header2 .single__product__right.sidebar-fixed {
