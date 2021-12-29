@@ -2430,8 +2430,9 @@ transition: 0.5s ease;
     box-shadow: 0 2px 2px #0000007a !important;
     color: var(--dark-gray)!important;
 }
-
-      }
+.carousel__button svg {
+    filter: var(--carousel-button-svg-filter, none);
+}
   .carousel__button svg {
     width: 14px!important;
     height: 14px!important;
