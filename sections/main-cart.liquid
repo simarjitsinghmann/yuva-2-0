@@ -262,7 +262,7 @@
       var button = document.getElementById('getShippingEstimates');
       if(button){
         button.addEventListener("click", ()=>{	
-                                $('#ShippingWrapperResponse').html('');
+                                $('#ShippingWrapperResponse').html('').attr('class','').hide();
         var shippingAddress = {};
         shippingAddress.zip = jQuery('#shippingZip').val() || '';
         shippingAddress.country = jQuery('#shippingCountry').val() || '';
@@ -310,7 +310,7 @@
   var _onError = function(XMLHttpRequest, textStatus) {
     var data = eval('(' + XMLHttpRequest.responseText + ')');
     feedback = 'Error : ' + _fullMessagesFromErrors(data).join('; ') + '.';  
-    $('#ShippingWrapperResponse').html('<span class="error-text">'+feedback+'</span>');
+    $('#ShippingWrapperResponse').html('<span class="error-text">'+feedback+'</span>').addClass('error').show();
   }
   var _render = function(response) {
     if(response){
@@ -319,7 +319,7 @@
       response.forEach(function(shipping){
         html += `<span class="success-text">${shipping.name}:${Shopify.formatMoney((shipping.price*100),moneyFormat)}</span>`;
       })
-      $('#ShippingWrapperResponse').html(html);
+      $('#ShippingWrapperResponse').html(html).addClass('success').show();
     }
   };  
   setTimeout(function(){
