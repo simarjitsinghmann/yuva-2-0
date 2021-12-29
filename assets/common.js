@@ -766,6 +766,7 @@ Array.from(planSelectors).forEach(function(plan) {
 });
 });
 }
+
 showMultipleOptions = function(){
   return false;
   var showOptions = document.getElementsByClassName('showOptions');
@@ -885,6 +886,50 @@ window.addEventListener('resize', function(event){
 
 var slideIndex = 0;
 var block = '';
+
+
+function faqInit(){
+  var tabHead = document.getElementsByClassName('faqSection-header');
+  if(tabHead.length > 0 ){
+    var tabContent =  document.getElementsByClassName('faqSection-content');
+
+    Array.from(tabHead).forEach(function(btn) {
+      btn.addEventListener("click", ()=>{
+                           let icon = btn.querySelectorAll('.fa')[0];
+      if(btn.classList.contains('active')){
+        clearActive();
+      }
+      else{
+        btn.classList.add("active");
+        var _value = btn.getAttribute("content");
+        clearActive(btn, document.getElementById(_value));
+        DOMAnimations.slideDown(document.getElementById(_value));
+      }
+    });
+  });
+}
+}
+
+function clearActive(currentHead,currentContent){
+  var tabs = document.getElementsByClassName('faqSection-header');
+  var tabsContent =  document.getElementsByClassName('faqSection-content');
+  Array.from(tabs).forEach(function(item) {
+    if(item == currentHead){
+      return;
+    }
+    else{
+      item.classList.remove('active');
+    }
+  });
+  Array.from(tabsContent).forEach(function(item) {
+    if(item == currentContent){
+      return;
+    }
+    else{
+      DOMAnimations.slideUp(item);
+    }
+  });
+}
 
 /** Shopify Design Mode Events **/
 jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:select shopify:block:deselect', function(event){
