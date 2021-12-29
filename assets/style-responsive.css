@@ -1732,6 +1732,8 @@
   .open-filter-sort {
     overflow: hidden;
     position: relative;
+    touch-action: none;
+    -ms-touch-action: none;
   }
   .open-filter-sort:after {
     position: absolute;
