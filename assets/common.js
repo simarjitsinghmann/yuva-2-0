@@ -919,6 +919,8 @@ function clearActive(currentHead,currentContent){
   var tabs = document.getElementsByClassName('faqSection-header');
   var tabsContent =  document.getElementsByClassName('faqSection-content');
   Array.from(tabs).forEach(function(item) {
+                           let iconPlus = btn.querySelector('iconPlus');
+                           let iconMinus = btn.querySelector('iconMinus');
     if(item == currentHead){
       return;
     }
