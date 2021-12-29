@@ -316,10 +316,10 @@
     if(response){
       
       var html= '';
-      response.forEach(function(index,shipping){
-      console.log(index,shipping)
+      response.forEach(function(shipping){
+      html += '<span class="success-text">'+shipping=.name+':'+Shopify.formatMoney((shipping.price*100),moneyFormat)+'</span>';
       })
-      $('#ShippingWrapperResponse').html('<span class="success-text">'+response[0].name+':'+Shopify.formatMoney((response[0].price*100),moneyFormat)+'</span>');
+      $('#ShippingWrapperResponse').html('<div class="success-text">'+html+'</div>');
     }
   };  
   setTimeout(function(){
