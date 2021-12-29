@@ -64,6 +64,7 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
         $qtySelector = $el.siblings('input[name="item_quantity"]'),
         qty = parseInt($qtySelector.val().replace(/\D/g, ''));
 
+    parent.addClass('disabled');
     var qty = validateQty(qty);
     // Add or subtract from the current quantity
     if ($el.hasClass('plus')) {
