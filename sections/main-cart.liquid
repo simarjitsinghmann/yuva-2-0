@@ -319,7 +319,7 @@
       response.forEach(function(shipping){
       html += '<span class="success-text">'+shipping=.name+':'+Shopify.formatMoney((shipping.price*100),moneyFormat)+'</span>';
       })
-      $('#ShippingWrapperResponse').html('<div class="success-text">'+html+'</div>');
+      $('#ShippingWrapperResponse').html(html);
     }
   };  
   setTimeout(function(){
