@@ -1254,11 +1254,12 @@ $(document).ready(function()
       .removeClass('NewsletterActive')
       .removeClass('show__similar__products');
       
+    $('.newsletter-popup,.wrapper-overlay').hide();
     if($(window).width() > 767){
-    $('.newsletter-popup,.wrapper-overlay,.askmeMain.slideAskme').hide().removeClass('slideAskme');
+    $('.askmeMain.slideAskme').hide().removeClass('slideAskme');
     }
     else{
-      $('.newsletter-popup,.wrapper-overlay,.askmeMain.slideAskme').slideDown('slow');
+      $('.askmeMain.slideAskme').slideDown('slow');
     }
       
      $('.side-menu').find('.inner').removeClass('show');
