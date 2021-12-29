@@ -253,7 +253,17 @@
     margin: 0 5px;
   }
 }
-@media screen and (max-width: 1368px) {
+@media screen and (max-width: 1368px) { 
+  .toolbox-item.toolbox-layout .btn-layout.grid-layout-5 {
+    display: none;
+  }
+    #CollectionProductsContainer[data-view=grid-layout-5] .products-grid .product_columns .grid-item,{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.3%;
+    flex: 0 0 33.333333%;
+    width: 33.333333%;
+    padding: 0 5px;
+  }
   #CollectionProductsContainer[data-view="grid-layout-4"]
   .products-grid
   .product_columns
