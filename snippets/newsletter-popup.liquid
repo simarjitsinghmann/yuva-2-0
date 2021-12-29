@@ -70,7 +70,7 @@
 <script>
   /* NEWSLETTER POPUP STARTS */
   var getnew_Pop = Cookies.get('Newsletter_closed');
-  if(getnew_Pop!="Newsletter_closed_val" && window.location.pathname.indexOf('/challenge') < 0){
+  if(getnew_Pop!="Newsletter_closed_val" && window.location.pathname.indexOf('/challenge') < 0 ){
     console.log(window.location.pathname)
     $('.newsletter-popup').fadeIn('slow');  
     $('body').addClass('NewsletterActive').addClass('scrollHidden'); 
