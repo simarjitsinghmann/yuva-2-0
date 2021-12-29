@@ -1253,7 +1253,14 @@ $(document).ready(function()
       .removeClass('customer-open')
       .removeClass('NewsletterActive')
       .removeClass('show__similar__products');
-      $('.newsletter-popup,.wrapper-overlay,.askmeMain.slideAskme').hide().removeClass('slideAskme');
+      
+    if($(window).width() > 767){
+    $('.newsletter-popup,.wrapper-overlay,.askmeMain.slideAskme').hide().removeClass('slideAskme');
+    }
+    else{
+      $('.newsletter-popup,.wrapper-overlay,.askmeMain.slideAskme').slideDown('slow');
+    }
+      
      $('.side-menu').find('.inner').removeClass('show');
       if($(window).width() < 768){
         $('#sort__list').removeClass('active');
