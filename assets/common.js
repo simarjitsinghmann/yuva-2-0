@@ -1259,7 +1259,7 @@ $(document).ready(function()
     $('.askmeMain.slideAskme').hide().removeClass('slideAskme');
     }
     else{
-      $('.askmeMain.slideAskme').slideDown('slow');
+      $('.askmeMain.slideAskme').slideDown('slow').removeClass('slideAskme');
     }
       
      $('.side-menu').find('.inner').removeClass('show');
