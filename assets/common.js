@@ -903,6 +903,7 @@ function faqInit(){
         clearActive();
       }
       else{
+        console.log(iconPlus,iconMinus)
         iconPlus.style.display = 'none';
         iconMinus.style.display = 'inline';
         btn.classList.add("active");
