@@ -25,16 +25,6 @@ updateQuantity = function(line, qty,callback) {
   }, 250);
 }
 
-validateQty = function (qty) {
-  if((parseFloat(qty) == parseInt(qty)) && !isNaN(qty)) {
-    // We have a valid number!
-  } else {
-    // Not a number. Default to 1.
-    qty = 1;
-  }
-  return qty;
-};
-
 buildCart = function (cart,showCart) {
   if (cart.item_count === 0) {
     $('[data-cart-count]').hide();
@@ -168,19 +158,6 @@ $(document).on('click', '.sd_mini_removeproduct', function(evt) {
   if (line) {
     updateQuantity(line, 0,buildCart);
   }
-})
-
-
-$(document).on('change ', '[name=note]', function(evt) {
-  var currentVal = $(this).val();
-  $.ajax({
-    url: cartUpdateUrl,
-    type: 'POST',
-    data: {note: currentVal},
-    dataType: 'json',
-    success: function(result) { 
-    }
-  });
 })
 
 
