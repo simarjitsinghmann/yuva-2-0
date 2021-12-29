@@ -2552,18 +2552,18 @@
     height: 100%;
 
 }
-body.template_product.active_askme:after {
-  position: absolute;
-  content: "";
-  background: #000000a6;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-  z-index: 4;
+  body.template_product.active_askme:after {
+    position: absolute;
+    content: "";
+    background: #000000a6;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
 
-}
-.askmeMain {
+  }
+  .askmeMain {
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
     transition: all .3s linear;
@@ -2577,19 +2577,7 @@ body.template_product.active_askme:after {
     z-index: 5;
     visibility: visible;
     opacity: 1;
-}
-
-body.template_product.active_askme:after {
-    position: absolute;
-    content: "";
-    background: #000000a6;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: unset;
-    bottom: 0;
-    z-index: 3;
-}
+  }
 
   /*============= PDP page css end  ===============*/
   /* ============ recent product css start =============== */
