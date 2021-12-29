@@ -1166,7 +1166,6 @@ $('.toggle.list-menu__item,.toggle-level').click(function(){
   } else {
     $this.closest('li').find('.inner').removeClass('show');
     $this.next().toggleClass('show');
-  }
 //     $(this).toggleClass('open-menu-drop')
 //     $this.next().toggleClass('show');
 //   if ($this.next().hasClass('show')) {
