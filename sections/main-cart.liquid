@@ -193,6 +193,55 @@
     </div>
   </form>
   {% endif %}
+  <div id="shipping_estimations_template" class="shipping_estimations">
+    <div class="form-group">
+      <label for="shippingCountry">
+        {{ 'customer.addresses.country' | t }}
+      </label>
+      <div class="select">
+        <select
+                id="shippingCountry"
+                name="shipping_address[country]"
+                data-address-country-select                      
+                data-default="{{ shop.address.country }}"
+                autocomplete="country"
+                class="form-control"
+                >
+          {{ country_option_tags  }}
+        </select>
+      </div>
+    </div>
+    <div id="shippingProvinceContainer"  class="field" style="display:none;">
+      <label for="shippingProvince">
+        {{ 'customer.addresses.province' | t }}
+      </label>
+      <div class="select"> 
+        <select
+                id="shippingProvince"
+                name="shipping_address[province]"
+                autocomplete="address-level1"
+                class="form-control"
+                >
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="shippingZip">
+        Zip
+      </label>
+      <div class="select">
+        <input type="text"
+               id="shippingZip"
+               name="shipping_address[zip]"
+               class="form-control"
+               />
+      </div>
+    </div>
+    <div id="ShippingWrapperResponse"></div>
+    <div class="form-group">
+      <button id="getShippingEstimates" class="button black-btn small-btn">Get Estimates</button>
+    </div>
+  </div>
 </div>
 <script>
   (function () {
