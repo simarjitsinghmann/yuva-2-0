@@ -1024,12 +1024,8 @@ $(document).ready(function(){
     $('body').addClass('scrollHidden');
     $('.askmeMain').toggleClass('slideAskme');
     $('.askmeMain').css({"display": "none"});
-    if($(window).width() > 767){
     $('.askmeMain.slideAskme').css({"display": "block"});
-    }
-    else{
-      $('.askmeMain.slideAskme').slideDown('slow');
-    }
+
   });
   $('.ask_cross').click(function(){
     $("body").removeClass('scrollHidden').removeClass("active_askme"),$(".askmeMain").removeClass("slideAskme"),$('.askmeMain').css({"display": "none"});
@@ -1253,15 +1249,7 @@ $(document).ready(function()
       .removeClass('customer-open')
       .removeClass('NewsletterActive')
       .removeClass('show__similar__products');
-      
-    $('.newsletter-popup,.wrapper-overlay').hide();
-    if($(window).width() > 767){
-    $('.askmeMain.slideAskme').hide().removeClass('slideAskme');
-    }
-    else{
-      $('.askmeMain.slideAskme').slideUp('slow').removeClass('slideAskme');
-    }
-      
+      $('.newsletter-popup,.wrapper-overlay,.askmeMain.slideAskme').hide().removeClass('slideAskme');
      $('.side-menu').find('.inner').removeClass('show');
       if($(window).width() < 768){
         $('#sort__list').removeClass('active');
