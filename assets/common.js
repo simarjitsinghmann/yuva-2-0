@@ -1262,6 +1262,9 @@ $(document).ready(function()
     }
     else{
       $('.askmeMain.slideAskme').removeClass('slideAskme');
+      setTimeout(function(){
+      $('.askmeMain.slideAskme').hide()
+      },400)
     }
       
      $('.side-menu').find('.inner').removeClass('show');
