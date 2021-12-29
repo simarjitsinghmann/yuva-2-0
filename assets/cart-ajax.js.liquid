@@ -60,6 +60,7 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
     evt.preventDefault();
     var $el = $(this),
         line = $el.data('line'),
+      parent = $el.closest('tr'),
         $qtySelector = $el.siblings('input[name="item_quantity"]'),
         qty = parseInt($qtySelector.val().replace(/\D/g, ''));
 
@@ -81,7 +82,9 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
     evt.preventDefault();
     var $el = $(this),
         line = $el.data('line'),
+      parent = $el.closest('tr'),
         qty = parseInt($el.val().replace(/\D/g, ''));
+    parent.addClass('disabled');
 
     var qty = validateQty(qty);
     // Add or subtract from the current quantity
@@ -94,9 +97,11 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
   $(document).on('click', '.line_item_remove', function(evt) {
     evt.preventDefault();
     var $el = $(this),
+      parent = $el.closest('tr'),
         line = $el.data('line');
     // If it has a data-line, update the cart
     if (line) {
+    parent.addClass('disabled');
       changeCartItem(line, 0);
     }
   })
