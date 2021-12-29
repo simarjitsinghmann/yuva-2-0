@@ -1028,7 +1028,7 @@ $(document).ready(function(){
     $('.askmeMain.slideAskme').css({"display": "block"});
     }
     else{
-      $('.askmeMain.slideAskme').slideUp('slow');
+      $('.askmeMain.slideAskme').slideDown('slow');
     }
   });
   $('.ask_cross').click(function(){
