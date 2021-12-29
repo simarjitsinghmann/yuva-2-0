@@ -1023,6 +1023,14 @@
   }
   /*============== multicolum css end  ==========*/
   /*===========  product listing  page start  ============*/
+  #CollectionProductsContainer[data-view=grid-layout-5] .products-grid .product_columns .grid-item,
+   #CollectionProductsContainer[data-view=grid-layout-4] .products-grid .product_columns .grid-item{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.3%;
+    flex: 0 0 33.333333%;
+    width: 33.333333%;
+    padding: 0 5px;
+  }
   .collection-grid-section .container {
   	padding:0 15px;
   }
