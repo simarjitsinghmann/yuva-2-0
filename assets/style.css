@@ -3116,8 +3116,9 @@ transition: 0.5s ease;
     border-radius: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
-    display: inline-block;
-    text-shadow: none;
+    display: flex;
+      justify-content:center;
+      align-items:center;
   }
   .askmeMain .askmecontainer a.ask_cross svg {
     fill: #ffffff;
