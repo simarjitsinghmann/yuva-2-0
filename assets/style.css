@@ -1943,16 +1943,20 @@ transition: 0.5s ease;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
+  .sticky-sidebar-wrapper {
+    position: sticky;
+    top: 0;
+  }
   .sticky-header .sticky-sidebar-wrapper {
     top: 80px;
   }
   .sticky-header.announcement_open .sticky-sidebar-wrapper {
     top: 120px;
   }
-  .sticky-sidebar-wrapper {
-    position: sticky;
-    top: 0;
+  .sticky-header.header2 .sticky-sidebar-wrapper {
+    top: 160px;
   }
+
   .shop-sidebar-inside {
     height: 100%;
     border-right: 1px solid var(--gray);
