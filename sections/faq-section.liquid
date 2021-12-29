@@ -7,7 +7,7 @@
           {% for block in section.blocks %}
           {% if block.settings.heading != blank or block.settings.answer != blank%}
           <div class="set">
-            <h6 class="panel-title faq-{{section.id}}" content="faq-content-{{block.id}}">
+            <h6 class="panel-title faq-{{section.id}} faq-item-header" content="faq-content-{{block.id}}">
               <a>
                 {{block.settings.heading }}
                 <span class="iconPlus">{% render 'icon-plus' %}</span>
