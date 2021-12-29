@@ -2515,6 +2515,16 @@
   #shopify-product-reviews .spr-icon, #shopify-product-reviews .spr-summary-caption {
     font-size: 10px;
   }
+  .askmeMain .askmecontainer {
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+    top: unset;
+    left: 0;
+    padding: 30px;
+    width: 100%;
+    bottom: 0;
+  }
   /*============= PDP page css end  ===============*/
   /* ============ recent product css start =============== */
   .recent-product-slide .item {
