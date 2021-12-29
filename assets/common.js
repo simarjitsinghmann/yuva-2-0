@@ -903,9 +903,9 @@ function faqInit(){
         clearActive();
       }
       else{
-        btn.classList.add("active");
         iconPlus.style.display = 'none';
         iconMinus.style.display = 'inline';
+        btn.classList.add("active");
         var _value = btn.getAttribute("content");
         clearActive(btn, document.getElementById(_value));
         DOMAnimations.slideDown(document.getElementById(_value));
