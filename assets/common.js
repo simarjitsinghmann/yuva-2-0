@@ -1159,7 +1159,7 @@ $('.toggle.list-menu__item,.toggle-level').click(function(){
     $(this).removeClass('open-menu-drop')
     $this.next().removeClass('show');
   } else {
-    if($(this).hasClass('.toggle-level')){
+    if($(this).hasClass('toggle-level')){
     $('.toggle-level').removeClass('open-menu-drop');
     $('.toggle-level').next().removeClass('show');
     }
