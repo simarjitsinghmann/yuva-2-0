@@ -284,9 +284,7 @@
     jQuery.ajax(params);
   };
   var _CartShippingRates = function(shippingAddress) {
-    console.log('asasd')
     var poller = function() {
-    console.log('123123')
       jQuery.ajax('/cart/async_shipping_rates', {
         dataType: 'json',
         success: function(response, textStatus, xhr) {
@@ -318,7 +316,7 @@
     if(response){
       
       var html= '';
-      response.each(function(index,shipping){
+      response.forEach(function(index,shipping){
       console.log(index,shipping)
       })
       $('#ShippingWrapperResponse').html('<span class="success-text">'+response[0].name+':'+Shopify.formatMoney((response[0].price*100),moneyFormat)+'</span>');
