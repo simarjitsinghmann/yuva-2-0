@@ -75,9 +75,8 @@ div#countdown {
 #shopify-section-header {
   z-index: 999;
 }
-.side-menu .inner-side .navbar-nav.mr-auto.list-menu {
-    border-top: 1px solid #e8e8e1;
-}
+
+
 .navbar {
   position: static;
   display: -ms-flexbox;
@@ -539,6 +538,10 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
   align-items: center;
   font-size: 16px;
   margin-bottom:30px;
+}
+.side-menu .inner-side .navbar-nav.mr-auto.list-menu {
+    border-top: 1px solid #e8e8e1;
+      padding-top: 20px;
 }
 .inner.child,
 .inner.grandchild{
