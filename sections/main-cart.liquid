@@ -31,7 +31,9 @@
                     {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
                     <p class="item-variant-title">{{item.variant.title}}</p>
                     {% endunless %}	
-                    <p class="item-variant-title">{{item.selling_plan_allocation.selling_plan.name }}</p>              
+                    {% if item.selling_plan_allocation %}
+                    <p class="item-variant-title">{{item.selling_plan_allocation.selling_plan.name }}</p>    
+                    {% endif %}
                     <div class="price item-price d-none d-sm-block" data-item-price="{{forloop.index0}}">
                       {%- if item.original_price != item.final_price -%}
                       <strong class="cart-item__final-price product-option">
