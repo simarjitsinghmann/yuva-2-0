@@ -3109,19 +3109,20 @@ transition: 0.5s ease;
     top: -14px;
     right: -14px;
     background-color: var(--theme-color);
-    width: 37px;
-    height: 37px;
-    text-align: center;
-    z-index: 99;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    display: flex;
+      color: #fff;
+      width: 37px;
+      height: 37px;
+      text-align: center;
+      z-index: 99;
+      border-radius: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      display: flex;
       justify-content:center;
       align-items:center;
-  }
+      }
   .askmeMain .askmecontainer a.ask_cross svg {
-    fill: #ffffff;
+    fill: currentcolor;
     margin-top: 12px;
   }
   .askmeMain .askmecontainer .productheading {
