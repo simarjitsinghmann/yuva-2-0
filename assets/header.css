@@ -588,6 +588,7 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
   height: 8px;
   border-top: 1.5px solid;
   border-right: 1.5px solid;
+  transition:.5s ease all
 }
 .toggle-level .caret::after {
   content: "";
@@ -603,9 +604,9 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
   border-right: 1.5px solid #000;
 }
 .side-menu .inner-side ul li.dropdown .open-menu-drop::after {
-  -moz-transform: translateY(-50%) rotate(-135deg);
-  -webkit-transform: translateY(-50%) rotate(-135deg);
-  transform: translateY(-50%) rotate(-135deg);
+  -moz-transform: translateY(-50%) rotate(-45deg);
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  transform: translateY(-50%) rotate(-45deg);
 }
 .navbar-expand-md .navbar-toggler {
   display: block;
