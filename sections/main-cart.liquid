@@ -243,113 +243,29 @@
     </div>
   </div>
 </div>
-<script>
-  (function () {
-
-    function shippingEstimates() {
-
-      if (Shopify && Shopify.CountryProvinceSelector) {
-        var country = document.getElementById('shippingCountry');
-        //      country.querySelectorAll('option')[1].setAttribute('selected',true);
-        var shipping = new Shopify.CountryProvinceSelector('shippingCountry', 'shippingProvince', {
-          hideElement: 'shippingProvinceContainer'
-        });
-
-        setupEventListeners();
-      }
-    }
-    function setupEventListeners(){
-      var button = document.getElementById('getShippingEstimates');
-      if(button){
-        button.addEventListener("click", ()=>{	
-                                $('#ShippingWrapperResponse').html('').attr('class','').hide();
-        var shippingAddress = {};
-        shippingAddress.zip = jQuery('#shippingZip').val() || '';
-        shippingAddress.country = jQuery('#shippingCountry').val() || '';
-        shippingAddress.province = jQuery('#shippingProvince').val() || '';
-        _getCartShippingRates(shippingAddress);
-
-      });
-    }
-  }
-
-   var _getCartShippingRates = function(shippingAddress) {
-    var params = {
-      type: 'POST',
-      url: '/cart/prepare_shipping_rates',
-      data: jQuery.param({'shipping_address': shippingAddress}),
-      success: _CartShippingRates(shippingAddress),
-      error: _onError
-    }
-    jQuery.ajax(params);
-  };
-  var _CartShippingRates = function(shippingAddress) {
-    var poller = function() {
-      jQuery.ajax('/cart/async_shipping_rates', {
-        dataType: 'json',
-        success: function(response, textStatus, xhr) {
-          console.log(response)
-          if (xhr.status === 200) {
-            _render(response.shipping_rates)
-          } 
-        },
-        error: _onError
-      })
-    }
-         return poller;
-    }
-  var _fullMessagesFromErrors = function(errors) {
-    var fullMessages = [];
-    jQuery.each(errors, function(attribute, messages) {
-      jQuery.each(messages, function(index, message) {
-        fullMessages.push(attribute + ' ' + message);
-      });
-    });
-    return fullMessages;
-  };
-  var _onError = function(XMLHttpRequest, textStatus) {
-    var data = eval('(' + XMLHttpRequest.responseText + ')');
-    feedback = 'Error : ' + _fullMessagesFromErrors(data).join('; ') + '.';  
-    $('#ShippingWrapperResponse').html('<span class="error-text">'+feedback+'</span>').addClass('error').show();
-  }
-  var _render = function(response) {
-    if(response){
-      
-      var html= '';
-      response.forEach(function(shipping){
-        html += `<span class="success-text">${shipping.name}:${Shopify.formatMoney((shipping.price*100),moneyFormat)}</span>`;
-      })
-      $('#ShippingWrapperResponse').html(html).addClass('success').show();
-    }
-  };  
-  setTimeout(function(){
-    shippingEstimates() 
-  },500)
-  }());
-</script>
 <script src="{{'cart-ajax.js' | asset_url}}" defer="defer"></script> 
 {% schema %}
 {
-"name": "t:sections.main-cart.name",
-"class": "cart__footer-wrapper cstm-cart-sec",
-"settings": [
-{
-"type": "checkbox",
-"id": "show_cart_note",
-"default": true,
-"label": "t:sections.main-cart.settings.show_cart_note.label"
-},
-{
-"type": "checkbox",
-"id": "payment_enable",
-"default": true,
-"label": "t:sections.main-cart.settings.payment_enable.label"
-}
-],
-"blocks": [
-{
-"type": "@app"
-}
-]
+  "name": "t:sections.main-cart.name",
+  "class": "cart__footer-wrapper cstm-cart-sec",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_cart_note",
+      "default": true,
+      "label": "t:sections.main-cart.settings.show_cart_note.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_enable",
+      "default": true,
+      "label": "t:sections.main-cart.settings.payment_enable.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ]
 }
 {% endschema %}
