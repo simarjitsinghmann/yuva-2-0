@@ -1021,9 +1021,9 @@ $(document).ready(function(){
   ///ask-about-product//
   $('body').on('click','.ask_this_product',function(){
     $('body').toggleClass('active_askme');
+    $('.askmeMain').css({"display": "none"});
     $('body').addClass('scrollHidden');
     $('.askmeMain').toggleClass('slideAskme');
-    $('.askmeMain').css({"display": "none"});
     if($(window).width() > 767){
     $('.askmeMain.slideAskme').css({"display": "block"});
     }
@@ -1261,7 +1261,7 @@ $(document).ready(function()
     $('.askmeMain.slideAskme').hide().removeClass('slideAskme');
     }
     else{
-      $('.askmeMain.slideAskme').slideUp('slow').removeClass('slideAskme');
+      $('.askmeMain.slideAskme').removeClass('slideAskme');
     }
       
      $('.side-menu').find('.inner').removeClass('show');
