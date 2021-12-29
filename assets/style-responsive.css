@@ -2098,6 +2098,9 @@
     margin-bottom: 0px;
   }
   /*============ quick view css end =============*/
+  .shop__options{
+    display:none;
+  }
 }
 @media screen and (max-width: 575px) {
   /*=============  common  start  ===============*/
@@ -2474,9 +2477,6 @@
     position: sticky;
     bottom: 0;
     background: #fff;
-  }
-  .shop__options{
-  	display:none;
   }
   .collection-product-grid .card-wrapper-img a, .recent-product-slide .card-wrapper-img a {
     pointer-events: auto;
