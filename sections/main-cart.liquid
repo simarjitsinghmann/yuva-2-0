@@ -148,51 +148,6 @@
         <div class="go-to-back">
           <a href="{{routes.all_products_collection_url}}" aria-label="{{'general.go_to_products' | t}}">{{'general.go_to_products' | t}}</a>
         </div>
-      </div>
-      <div class="col-sm-12 col-md-12 col-lg-4">
-        <div class="sticky_cartsidebar">
-          <h3>{{'sections.cart.price_detail' | t}}</h3>
-          <div class="inner-box price-details">
-            {% if section.settings.show_cart_note %}
-            <textarea class="seller-box" name="note" id="Cart-note" placeholder="Special instructions for seller">{{ cart.note }}</textarea>
-            {% endif %}
-            <ul>
-              <li {% if cart.cart_level_discount_applications.size == 0 %}class="hidden"{% endif %} data-cart-original>{{'sections.cart.subtotal' | t}} <strong data-cart-original-price>{{cart.original_total_price | money}}</strong></li>
-              {%- if cart.cart_level_discount_applications.size > 0 -%}
-              {%- for discount in cart.cart_level_discount_applications -%}
-              <li data-cart-discount>{{'sections.cart.discount' | t}}['{{ discount.title }}'] <strong>-{{discount.total_allocated_amount | money}}</strong></li>
-              {%- endfor -%}
-              {% endif %}
-              <li class="total" data-cart-total>
-                <p>{{'sections.cart.new_subtotal' | t}}</p>
-                <strong data-cart-total-price>{{cart.total_price | money}}</strong>
-              </li>
-            </ul>
-            <div class="cart-btn">
-              <button type="submit" name="checkout" id="cartCheckout" form="cart" class="button black-btn btn-block">{{'sections.cart.checkout' | t}}</button>
-              <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
-                {{ content_for_additional_checkout_buttons }}
-              </div>
-            </div>
-            <p class="checkout-text">{{'sections.cart.taxes_and_shipping_at_checkout' | t}}</p>
-            {%- if section.settings.payment_enable -%}
-            <div class="footer__payment">
-              <span class="visually-hidden">{{'sections.cart.payment' | t}}</span>
-              <ul class="list list-payment justify-content-center" role="list">
-                {%- for type in shop.enabled_payment_types -%}
-                <li class="list-payment__item">
-                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                </li>
-                {%- endfor -%}
-              </ul>
-            </div>
-            {%- endif -%}
-          </div>
-        </div>
-      </div>
-    </div>
-  </form>
-  
   {% if section.settings.shipping_estimate_enable %}
   <div id="shipping_estimations_template" class="shipping_estimations">
     <div class="form-group">
@@ -244,6 +199,51 @@
     </div>
   </div>
   {% endif %}
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-4">
+        <div class="sticky_cartsidebar">
+          <h3>{{'sections.cart.price_detail' | t}}</h3>
+          <div class="inner-box price-details">
+            {% if section.settings.show_cart_note %}
+            <textarea class="seller-box" name="note" id="Cart-note" placeholder="Special instructions for seller">{{ cart.note }}</textarea>
+            {% endif %}
+            <ul>
+              <li {% if cart.cart_level_discount_applications.size == 0 %}class="hidden"{% endif %} data-cart-original>{{'sections.cart.subtotal' | t}} <strong data-cart-original-price>{{cart.original_total_price | money}}</strong></li>
+              {%- if cart.cart_level_discount_applications.size > 0 -%}
+              {%- for discount in cart.cart_level_discount_applications -%}
+              <li data-cart-discount>{{'sections.cart.discount' | t}}['{{ discount.title }}'] <strong>-{{discount.total_allocated_amount | money}}</strong></li>
+              {%- endfor -%}
+              {% endif %}
+              <li class="total" data-cart-total>
+                <p>{{'sections.cart.new_subtotal' | t}}</p>
+                <strong data-cart-total-price>{{cart.total_price | money}}</strong>
+              </li>
+            </ul>
+            <div class="cart-btn">
+              <button type="submit" name="checkout" id="cartCheckout" form="cart" class="button black-btn btn-block">{{'sections.cart.checkout' | t}}</button>
+              <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
+                {{ content_for_additional_checkout_buttons }}
+              </div>
+            </div>
+            <p class="checkout-text">{{'sections.cart.taxes_and_shipping_at_checkout' | t}}</p>
+            {%- if section.settings.payment_enable -%}
+            <div class="footer__payment">
+              <span class="visually-hidden">{{'sections.cart.payment' | t}}</span>
+              <ul class="list list-payment justify-content-center" role="list">
+                {%- for type in shop.enabled_payment_types -%}
+                <li class="list-payment__item">
+                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  
   {% endif %}
 </div>
 <script src="{{'cart-ajax.js' | asset_url}}" defer="defer"></script> 
