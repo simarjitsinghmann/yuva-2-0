@@ -1155,6 +1155,7 @@ $(document).ready(function(){
 
 $('.toggle.list-menu__item,.toggle-level').click(function(){
   var $this = $(this);
+  console.log($(this),$('.toggle-level'))
   if ($this.next().hasClass('show')) {
     $(this).removeClass('open-menu-drop')
     $this.next().removeClass('show');
