@@ -316,6 +316,11 @@
   }
   var _render = function(response) {
     if(response){
+      
+      var html= '';
+      response.each(function(index,shipping){
+      console.log(index,shipping)
+      })
       $('#ShippingWrapperResponse').html('<span class="success-text">'+response[0].name+':'+Shopify.formatMoney((response[0].price*100),moneyFormat)+'</span>');
     }
   };  
