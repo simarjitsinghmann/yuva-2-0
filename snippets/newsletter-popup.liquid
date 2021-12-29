@@ -20,13 +20,13 @@
     </div>
     <div class="popup-body row align-items-center">
       {% if settings.newsletter_left_image != blank %}
-      <div class="col-md-6 popup_left_ares">
+      <div class="col-md-12 popup_left_ares">
         <div class="news-img">
           {% render 'lazy-image' image:settings.newsletter_left_image %}
         </div>
       </div>
       {% endif %}
-      <div class="{% if settings.newsletter_left_image != blank %}col-md-6{% else %}col-md-12{% endif %}">
+      <div class="{% if settings.newsletter_left_image != blank %}col-md-12{% else %}col-md-12{% endif %}">
         <div class="nl-content text-center">
           <div class="discount">
             <h2 style="color:{{settings.newsletter_heading_color}}">{{settings.newsletter_heading}}</h2>
