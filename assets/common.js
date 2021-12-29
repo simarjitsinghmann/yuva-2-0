@@ -1024,8 +1024,12 @@ $(document).ready(function(){
     $('body').addClass('scrollHidden');
     $('.askmeMain').toggleClass('slideAskme');
     $('.askmeMain').css({"display": "none"});
+    if($(window).width() > 767){
     $('.askmeMain.slideAskme').css({"display": "block"});
-
+    }
+    else{
+      $('.askmeMain.slideAskme').slideUp('slow');
+    }
   });
   $('.ask_cross').click(function(){
     $("body").removeClass('scrollHidden').removeClass("active_askme"),$(".askmeMain").removeClass("slideAskme"),$('.askmeMain').css({"display": "none"});
