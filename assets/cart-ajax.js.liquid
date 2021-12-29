@@ -18,6 +18,42 @@ changeItem = function(line, quantity, callback) {
   jQuery.ajax(params);
 };
 
+updateQuantity = function(line, qty,callback) {
+  isUpdating = true;
+  setTimeout(function() {
+    changeItem(line, qty,callback);
+  }, 250);
+}
+
+validateQty = function (qty) {
+  if((parseFloat(qty) == parseInt(qty)) && !isNaN(qty)) {
+    // We have a valid number!
+  } else {
+    // Not a number. Default to 1.
+    qty = 1;
+  }
+  return qty;
+};
+
+buildCart = function (cart,showCart) {
+  if (cart.item_count === 0) {
+    $('[data-cart-count]').hide();
+  }
+  else{
+    $('[data-cart-count]').show();
+  }
+
+
+  $('[data-drawer-body]').load(mainCartUrl+'?view=jsonData', function() {
+    if(showCart){
+      $('body').addClass('side_Drawer_open');
+      $('.wrapper-overlay').css({"display": "block"});
+    }
+  });
+
+};
+
+
 // POST to cart/add.js returns the cart in JSON
 $('[action="'+cartAdd+'"]').on('submit',function(evt) {
   evt.preventDefault();
@@ -110,30 +146,6 @@ $(document).on('change', '.ajaxcart__qty-num', function(evt) {
   }
 });
 
-updateQuantity = function(line, qty,callback) {
-  isUpdating = true;
-  setTimeout(function() {
-    changeItem(line, qty,callback);
-  }, 250);
-}
-
-buildCart = function (cart,showCart) {
-  if (cart.item_count === 0) {
-    $('[data-cart-count]').hide();
-  }
-  else{
-    $('[data-cart-count]').show();
-  }
-
-
-  $('[data-drawer-body]').load(mainCartUrl+'?view=jsonData', function() {
-    if(showCart){
-      $('body').addClass('side_Drawer_open');
-      $('.wrapper-overlay').css({"display": "block"});
-    }
-  });
-
-};
 $('body').on('click','.openCartDrawer',function(e){
   e.preventDefault();
   $('[data-drawer-body]').html(preLoadLoadGif);
@@ -158,15 +170,6 @@ $(document).on('click', '.sd_mini_removeproduct', function(evt) {
   }
 })
 
-validateQty = function (qty) {
-  if((parseFloat(qty) == parseInt(qty)) && !isNaN(qty)) {
-    // We have a valid number!
-  } else {
-    // Not a number. Default to 1.
-    qty = 1;
-  }
-  return qty;
-};
 
 $(document).on('change ', '[name=note]', function(evt) {
   var currentVal = $(this).val();
