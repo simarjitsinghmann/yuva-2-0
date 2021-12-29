@@ -215,7 +215,6 @@
     top: unset;
     bottom: 0;
   }
-  
   .newsletter-popup .newsletter-popup-inner {
     -webkit-transform: translate(-50%,100%);
     -moz-transform: translate(-50%,100%);
@@ -241,6 +240,10 @@
     height: 240px;
     overflow: hidden;
   }
+  .newsletter-popup .newsletter-popup-inner .popup-body .nl-content {
+    padding: 25px 35px 35px;
+    position: relative;
+}
 }
 
 @media (max-width: 480px) {
