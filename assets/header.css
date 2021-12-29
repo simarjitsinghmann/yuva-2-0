@@ -602,6 +602,11 @@ button.navbar-toggler:hover span.navbar-toggler-icon {
   border-top: 1.5px solid #000;
   border-right: 1.5px solid #000;
 }
+.open-menu-drop a::after {
+  -moz-transform: translateY(-50%) rotate(-135deg);
+  -webkit-transform: translateY(-50%) rotate(-135deg);
+  transform: translateY(-50%) rotate(-135deg);
+}
 .navbar-expand-md .navbar-toggler {
   display: block;
   position: relative;
