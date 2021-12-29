@@ -2597,6 +2597,12 @@
     font-family: var(--heading-font-family);
   }
   /*============= collection page css start ============*/
+  /*======= mini cart css start ========*/
+  .cart-item-container .media-link img {
+    width: 65px;
+    margin: 0 16px 0 0;
+  }
+  /*======= mini cart css start ========*/ 
 }
 @media screen and (max-width: 480px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
