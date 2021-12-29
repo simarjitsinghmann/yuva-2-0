@@ -895,12 +895,17 @@ function faqInit(){
 
     Array.from(tabHead).forEach(function(btn) {
       btn.addEventListener("click", ()=>{
-                           let icon = btn.querySelectorAll('.fa')[0];
+                           let iconPlus = btn.querySelector('iconPlus');
+                           let iconMinus = btn.querySelector('iconMinus');
       if(btn.classList.contains('active')){
+        iconMinus.style.display = 'none';
+        iconPlus.style.display = 'inline';
         clearActive();
       }
       else{
         btn.classList.add("active");
+        iconPlus.style.display = 'none';
+        iconMinus.style.display = 'inline';
         var _value = btn.getAttribute("content");
         clearActive(btn, document.getElementById(_value));
         DOMAnimations.slideDown(document.getElementById(_value));
@@ -918,6 +923,8 @@ function clearActive(currentHead,currentContent){
       return;
     }
     else{
+        iconMinus.style.display = 'none';
+        iconPlus.style.display = 'inline';
       item.classList.remove('active');
     }
   });
