@@ -2431,11 +2431,11 @@ transition: 0.5s ease;
     color: var(--dark-gray)!important;
 }
 .carousel__button svg {
-    filter: var(--carousel-button-svg-filter, none);
+    filter: none!important;
 }
   .carousel__button svg {
-    width: 14px!important;
-    height: 14px!important;
+    width: 16px!important;
+    height: 16px!important;
   }
   .left-product-images.multiple-images .gallery-item {
     display: -webkit-box;
