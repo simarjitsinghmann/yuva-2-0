@@ -278,10 +278,7 @@
       type: 'POST',
       url: '/cart/prepare_shipping_rates',
       data: jQuery.param({'shipping_address': shippingAddress}),
-      success:function(response, textStatus, xhr) {
-        console.log(response)
-        _CartShippingRates(shippingAddress)
-      },
+      success: _CartShippingRates(shippingAddress),
       error: _onError
     }
     jQuery.ajax(params);
