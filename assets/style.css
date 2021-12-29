@@ -2697,10 +2697,6 @@ transition: 0.5s ease;
     background: #ffffffab;
     box-shadow: 0px 0px 3px #00000038;
   }
-    .product-highlights h2 {
-	color: var(--black);
-  }
-
   .highlights {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2715,13 +2711,15 @@ transition: 0.5s ease;
   }
   .hightlight-point {
     display: inline-block;
-    border-bottom: 1px solid #adadad;
     color: #fff;
-    margin-bottom: 15px;
-  }
+    margin-bottom: 12px;
+    background: #ffffff;
+    padding: 6px 12px;
+    border: 1px dashed #00000061;
+}
   .product-highlights h2{
-    color: var(--white);
-      font-size: 40px;
+    color: var(--black);
+      font-size: 20px;
       line-height: 1.5;
       margin-bottom: 10px;
       }
