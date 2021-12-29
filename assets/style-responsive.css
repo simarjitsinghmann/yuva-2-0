@@ -2381,7 +2381,7 @@
   }
   .prizebox #get_price {
     font-size: 20px;
-}
+  }
   .single-detail-detail .row {
     margin:0;
   }
@@ -2461,10 +2461,10 @@
     line-height: 22px;
     margin-bottom:0;
   }
- .product-add-to-cart-right p.vendor_name {
+  .product-add-to-cart-right p.vendor_name {
     margin: 3px 0 2px;
     line-height: 10px;
-}
+  }
   .ratingbox .spr-badge {
     margin-bottom: 4px;
   }
@@ -2482,13 +2482,13 @@
   .recent-product-slide .item {
     max-width: 40%;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 40%;
-            flex: 0 0 40%;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
   }
-.quickview_product_detail .link{
+  .quickview_product_detail .link{
     display: block;
     text-align: center;
-}
+  }
   /* ============ recent product css end =============== */
   /*============= similar product drawer css start ===========*/
   .similar_drawer_wrapper {
@@ -2512,7 +2512,7 @@
   }
   .results-similarGrid {
     -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
     overflow: auto;
   }
   .results-similarGrid li.product-base {
@@ -2521,12 +2521,16 @@
   .results-similarGrid li.product-base {
     width: 30%;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 30%;
-            flex: 0 0 30%;
-}
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+  }
   .side_Drawer_open:after, .similar_Drawer_open:after {
     background-color: rgb(0 0 0 / 70%);
-}
+  }
+  .results-similarGrid li.product-base .img-responsive {
+    max-height: 180px;
+    min-height: 180px;
+  }
   /*============= similar product drawer css end ===========*/
   #myBtn {
     bottom: 10px;
