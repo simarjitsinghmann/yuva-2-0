@@ -967,7 +967,10 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
       slideIndex = undefined;
     }
     slickSlider(jQuery(slider),slideIndex);
+    console.log('000',jQuery(event.target))
     if(jQuery(event.target).find('[data-slider]').length > 0){
+      
+      console.log('111',jQuery(event.target))
     setTimeout(function(){
       jQuery('html, body').animate({ scrollTo:(jQuery(event.target).offset().top) - top});
     },300)
