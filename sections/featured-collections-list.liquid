@@ -10,7 +10,7 @@
       </div>
       <div class="colllection-list-view collection-count-{{section.blocks.size}}">
         <div class="row">
-          <div class="col-sm-12 col-md-6">
+          <div class="col-sm-12 {% if section.blocks.size > 1 %}col-md-6{% else %}col-md-12{% endif %}">
           {% for block in section.blocks %}
           {% if forloop.first %}
           {% assign collection = block.settings.collection %}
@@ -40,6 +40,7 @@
           {% endif %}
           {% endfor%}
           </div>
+          {% if section.blocks.size > 1 %}
           <div class="col-sm-12 col-md-6">
             <div class="small-collection-list">
               {% for block in section.blocks %}
@@ -74,6 +75,7 @@
               {% endfor%}
             </div>
           </div>
+          {% endif%}
         </div>
       </div>
     </div>
