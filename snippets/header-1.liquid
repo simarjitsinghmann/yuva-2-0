@@ -1,4 +1,4 @@
-<div id="header" class="top-header header_1">
+<div id="header" class="top-header header_1 {% unless section.settings.menu != blank %}header-menu-false{% else %}header-menu-true{%- endunless-%}">
     <div class="container">
             <div class="navbar navbar-expand-md header__inline-menu" role="navigation">
                 {%- if section.settings.menu != blank  -%}
