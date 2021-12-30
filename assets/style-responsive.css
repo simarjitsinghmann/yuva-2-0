@@ -2171,6 +2171,12 @@ font-size: 12px;
     margin-bottom: 20px;
   }
   /*============ rich text css end =============*/
+  /*============ policies page css start ===========*/
+  .shopify-policy__container {
+    max-width: 85%;
+    padding: 20px 20px;
+  }
+/*============ policies page css end ===========*/
 }
 @media screen and (max-width: 575px) {
   /*=============  common  start  ===============*/
@@ -2742,6 +2748,12 @@ font-size: 12px;
     min-height: 180px;
   }
   /*============  insta feed css end  ==========*/
+    /*============ policies page css start ===========*/
+  .shopify-policy__container {
+    max-width: 95%;
+    padding: 20px 20px;
+  }
+/*============ policies page css end ===========*/
 }
 @media screen and (max-width: 480px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
