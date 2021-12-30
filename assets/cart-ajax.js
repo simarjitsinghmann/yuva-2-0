@@ -93,14 +93,14 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
   var _onError = function(XMLHttpRequest, textStatus) {
     var data = eval('(' + XMLHttpRequest.responseText + ')');
     feedback = 'Error : ' + _fullMessagesFromErrors(data).join('; ') + '.';  
-    $('#ShippingWrapperResponse').html('<span class="error-text">'+feedback+'</span>').addClass('error').show();
+    $('#ShippingWrapperResponse').html('<p class="error-text">'+feedback+'</p>').addClass('error').show();
   }
   var _render = function(response) {
     if(response){
 
       var html= '';
       response.forEach(function(shipping){
-        html += `<span class="success-text">${shipping.name}:${Shopify.formatMoney((shipping.price*100),moneyFormat)}</span>`;
+        html += `<p class="delievery-text success-text">${shipping.name}:${Shopify.formatMoney((shipping.price*100),moneyFormat)}</p>`;
       })
       $('#ShippingWrapperResponse').html(html).addClass('success').show();
     }
