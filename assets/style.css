@@ -5758,9 +5758,13 @@ a.wishlist-view .fas {
   .img-content {
       background-color: var(--colorImageBg);
       height: 100%;
+        width:100%;
       display: flex;
       align-items: center;
   }
-  .img-content-placeholder{
-        min-height: 600px;
-  }
+.img-content-placeholder {
+    min-height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
