@@ -5,7 +5,7 @@
 {% if block.settings.image != blank %}
 {% render 'lazy-image' image:block.settings.image,class:desktopClass %}
 {%else%}
-<div class="{{desktopClass}}">{% render 'banner-placeholder'%}</div>
+<div class="{{desktopClass}} banner-placeholder">{% render 'banner-placeholder'%}</div>
 {% endif %} 
 {% if block.settings.image_mob != blank %}
 {% render 'lazy-image' image:block.settings.image_mob,class:'slide-image-mobile' %}
