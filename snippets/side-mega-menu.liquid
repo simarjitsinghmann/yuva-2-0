@@ -35,6 +35,12 @@
 
 
 {% assign count = 0 %}
+{% assign productMenu = ''%}
+{% assign imageMenu = ''%}
+{% assign pending = 2 %}
+
+{% assign hasProduct = false %}
+{% assign hasImage = false %}
 
 {% for block in section.blocks %}
 {% assign blockPosition = block.settings.position | plus:0 %}
