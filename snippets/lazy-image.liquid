@@ -6,7 +6,8 @@
              {{ image | img_url: '720x' }} 720w,
              {{ image | img_url: '940x' }} 940w,
              {{ image | img_url: '1066x' }} 1066w,
-             {{ image | img_url: 'master' }} {{ image.width }}w"
+             {{ image | img_url: '1440x' }} 1440w,
+             {{ image | img_url: '1920x' }} 1920w"
      src="{{ image | img_url: 'small' }}"
      data-sizes="auto"
      alt="{{ image.alt |default: shop.name | escape }}"
