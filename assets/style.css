@@ -2825,32 +2825,33 @@ a.wishlist-view .fas {
     appearance: none;
     margin: 0;
   }
-  .quantity-button {
+.quantity-button {
     cursor: pointer;
-    text-align: center;
     color: var(--black);
-      font-size: 24px;
-      line-height: 1;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      -o-user-select: none;
-      user-select: none;
-      padding: 2px 7px;
-      top: 19px;
-      position: absolute;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      }
+    line-height: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    padding: 2px 7px;
+    top: 0;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    width: 40px;
+    justify-content: center;
+}
   .quantity-button.quantity-up {
-    right: 14px;
+    right: 0;
   }
   .quantity-button.quantity-down {
-    left: 14px;
+    left: 0;
   }
   .quantity svg {
     fill: black;
