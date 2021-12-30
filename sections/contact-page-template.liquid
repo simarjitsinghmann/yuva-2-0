@@ -135,11 +135,14 @@
               </div>
               {% endform %}
             </div>
+            
+                {% if section.settings.form_info != blank %}
             <div class="col-md-4 col-sm-12">
               <div class="contact-details">
                 {{section.settings.form_info}}
               </div>
             </div>
+            {% endif %}
           </div>
         </div>
       </div>
