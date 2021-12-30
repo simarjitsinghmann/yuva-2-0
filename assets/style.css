@@ -224,7 +224,7 @@ img {
   justify-content: center;
   width: 100%;
 }
-.slick-dots li button {
+.slick-dots li {
   position: relative;
   width: 8px;
   height: 8px;
@@ -233,7 +233,7 @@ img {
   font-family: var(--font-family);
     font-size: 0;
     }
-.slick-dots li button:after {
+.slick-dots li:after {
   position: absolute;
   content: "";
   width: 100%;
@@ -244,7 +244,7 @@ img {
     left: 0;
     border-radius:100%;
     }
-.slick-dots li.slick-active button:after {
+.slick-dots li.slick-active:after {
   opacity:1;
 }
 /*=============== slick slider dots css end =============*/
