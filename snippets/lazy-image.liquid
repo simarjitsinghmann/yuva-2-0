@@ -5,10 +5,9 @@
      data-src="{{ img_url }}"
      data-aspectratio="{{ image.aspect_ratio }}"
      data-sizes="auto"
-     data-parent-fit="cover"
      alt="{{ image.alt | escape }}">
 <noscript>
   <img class="image-fit hero__image hero__image--{{ block.id }}"
-       src="{{image| img_url: 'original' }}"
+       src="{{image| img_url: 'medium' }}"
        alt="{{ image.alt | escape }}">
 </noscript>
