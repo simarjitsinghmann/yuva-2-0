@@ -4876,8 +4876,10 @@ transition: 0.5s ease;
     position: relative;
     height: 100%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
     background-color: var(--colorImageBg);
-      }
+  }
   .collection-list-view-card:after {
     position: absolute;
     content: "";
