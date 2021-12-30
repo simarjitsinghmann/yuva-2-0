@@ -30,173 +30,28 @@
         "subheading_font_size": 100
       }
     },
-    "16408579965ae0a9ea": {
-      "type": "offer-section",
-      "blocks": {
-        "1640857996c1ebe3de-0": {
-          "type": "offer",
-          "settings": {
-            "heading": "Sales",
-            "subheading": "<p>Add Offer here<\/p>",
-            "image": "shopify:\/\/shop_images\/mobile_banner2_78e95c0e-d69b-4322-a74b-d1398706894f.jpg",
-            "link": ""
-          }
-        },
-        "1640857996c1ebe3de-1": {
-          "type": "offer",
-          "settings": {
-            "heading": "Sales",
-            "subheading": "<p>Add Offer here<\/p>",
-            "link": ""
-          }
-        },
-        "1640857996c1ebe3de-2": {
-          "type": "offer",
-          "settings": {
-            "heading": "Sales",
-            "subheading": "<p>Add Offer here<\/p>",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "1640857996c1ebe3de-0",
-        "1640857996c1ebe3de-1",
-        "1640857996c1ebe3de-2"
-      ],
+    "16408589934c213246": {
+      "type": "image-with-text",
       "settings": {
-        "subheading": "Offers",
-        "heading": "Announce your Offers here",
-        "color": "#f3f0eb",
-        "style": "style1",
-        "info_position": "left",
-        "show_border": false,
-        "top_space_desktop": 30,
-        "bottom_space_desktop": 30,
-        "top_space_mobile": 35,
-        "bottom_space_mobile": 35
-      }
-    },
-    "164085800065711b51": {
-      "type": "collection-list",
-      "blocks": {
-        "16408580009afb230f-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "btntext": "Explore",
-            "custom": true,
-            "heading": "Collection name here",
-            "desc": "Add description here.",
-            "btnlink": ""
-          }
-        },
-        "16408580009afb230f-1": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "collection": "",
-            "btntext": "Explore",
-            "custom": true,
-            "heading": "Collection name here",
-            "desc": "Add description here.",
-            "btnlink": ""
-          }
-        },
-        "16408580009afb230f-2": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "collection": "",
-            "btntext": "Explore",
-            "custom": true,
-            "heading": "Collection name here",
-            "desc": "Add description here.",
-            "btnlink": ""
-          }
-        }
-      },
-      "block_order": [
-        "16408580009afb230f-0",
-        "16408580009afb230f-1",
-        "16408580009afb230f-2"
-      ],
-      "settings": {
-        "heading": "Collection List",
-        "btntext": "View All",
-        "btnlink": "",
-        "m_collection": "",
-        "mc_btntext": "Explore",
-        "custom": true,
-        "mc_heading": "Collection name here",
-        "mc_desc": "Add description here.",
-        "mc_btnlink": "",
-        "button_icon": true,
-        "btn_text": "#746850",
+        "image_alignment": "left",
+        "heading": "Image with Text",
+        "content": "<p>To provide clients insight into your brand, pair words with any image. Here you can tell a narrative, explain a product feature, or introduce a new campaign.<\/p>",
         "top_space_desktop": 30,
         "bottom_space_desktop": 30,
         "top_space_mobile": 30,
-        "bottom_space_mobile": 0
+        "bottom_space_mobile": 30
       }
     },
-    "1640858247e12802c7": {
-      "type": "featured-collections-list",
-      "blocks": {
-        "1640858247ad300bb9-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "heading": "",
-            "btntext": "Shop Now"
-          }
-        },
-        "1640858247ad300bb9-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "heading": "",
-            "btntext": "Shop Now"
-          }
-        },
-        "58eacb62-7565-4031-831c-a54585b5af16": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "heading": "",
-            "btntext": "Shop Now"
-          }
-        },
-        "e5e531fa-d539-4450-aec7-87d88fc7c314": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "heading": "",
-            "btntext": "Shop Now"
-          }
-        },
-        "b56c8f4c-ab2d-4654-ae1a-1ba4104c8cb4": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "heading": "",
-            "btntext": "Shop Now"
-          }
-        }
-      },
-      "block_order": [
-        "1640858247ad300bb9-0",
-        "1640858247ad300bb9-1",
-        "58eacb62-7565-4031-831c-a54585b5af16",
-        "e5e531fa-d539-4450-aec7-87d88fc7c314",
-        "b56c8f4c-ab2d-4654-ae1a-1ba4104c8cb4"
-      ],
+    "16408590108ce2d657": {
+      "type": "instagram",
       "settings": {
-        "heading": "Collection list",
-        "btntext": "View All",
-        "btnlink": "",
-        "show_hover_content": true,
-        "top_space_desktop": 30,
-        "bottom_space_desktop": 30,
+        "heading": "@instafeed",
+        "subheading": "Use this section to show Instagram posts related to your brand.",
+        "insta_user_id": "",
+        "insta_access_Token": "",
+        "bgcolor": "#ffffff",
+        "top_space_desktop": 45,
+        "bottom_space_desktop": 60,
         "top_space_mobile": 30,
         "bottom_space_mobile": 30
       }
@@ -205,8 +60,7 @@
   "order": [
     "main",
     "1640843787ac720f32",
-    "16408579965ae0a9ea",
-    "164085800065711b51",
-    "1640858247e12802c7"
+    "16408589934c213246",
+    "16408590108ce2d657"
   ]
 }
