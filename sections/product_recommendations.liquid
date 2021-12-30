@@ -75,6 +75,9 @@
           console.error(e);
         });
     $(document).ready(function(){
+      
+      })
+    function recommendedProductsSlider(){
       var recomend = setInterval(function(){
         if($('.recent-product-slide').length > 0 ){ 
           slickSlider($('.recent-product-slide'))
@@ -82,7 +85,7 @@
           clearInterval(recomend);
         }
       },100)
-      })
+    }
     </script>
   {% schema %}
     {
