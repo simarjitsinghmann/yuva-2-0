@@ -1793,12 +1793,15 @@ a.wishlist-view .fas {
     max-width: 16.66%;
     margin-bottom:10px;
   }
-  .instagram-post-detail {
+.instagram-post-detail {
     position: relative;
     overflow: hidden;
     background-color: var(--colorImageBg);
-      height: 100%;
-      }
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
   .instagram-post-detail img {
     width: 100%;
     -webkit-transition: 1s;
@@ -1829,16 +1832,13 @@ a.wishlist-view .fas {
       font-size: 30px;
       opacity: 0;
       visibility: hidden;
-      -webkit-transition: 2s;
-      -o-transition: 2s;
-      transition: 2s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
       }
   .instagram-post-detail:hover .insta-icon {
     opacity: 1;
     visibility: visible;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
   }
   .instagram-post-detail:hover img {
     -webkit-transform: scale(1.05);
