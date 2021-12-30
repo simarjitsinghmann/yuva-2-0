@@ -1915,12 +1915,17 @@ font-size: 12px;
   }
 
   /*============  multi column css end  ==========*/
+    /*============  insta feed css start  ==========*/
   .instagram-post-list ul li {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 33.3%;
     flex: 0 0 33.3%;
     max-width: 33.3%;
   }
+  .instagram-post-list ul li {
+    min-height: 200px;
+  }
+    /*============  insta feed css end  ==========*/
   .card__warpper__detail.right__sided .collection-detail-right h5 {
     font-family: var(--heading-font-family);
       }
