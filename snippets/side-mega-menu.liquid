@@ -71,6 +71,7 @@
 {% when 'product' %}
 {% for i in (1..2) %}
 {% assign product = 'product'|append:i %}
+{% if pending > 0 and pending < 3 %}
 {% unless block.settings[product] == blank  %}
 {% assign hasProduct = true %}
 {% assign count = count | plus:1 %}
@@ -81,6 +82,7 @@
   </div>
 </li>
 {% endunless %}
+{% endif %}
 {% endfor %}
 
 
