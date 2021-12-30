@@ -32,7 +32,7 @@
           {% if item.selling_plan_allocation %}
           <p class="item-variant-title">{{item.selling_plan_allocation.selling_plan.name }}</p>
           {% endif %}
-          <h6 class="product__price">
+          <p class="product__price">
             {%- if item.original_price != item.final_price -%}
             <span>{{item.final_price| money}}</span>
             <small class="item__price-strikethrough"><s>{{item.original_price| money}}</s></small>
@@ -50,7 +50,7 @@
               {{ item.variant.unit_price_measurement.reference_unit }})
             </small>
             {%- endif -%}
-          </h6>
+          </p>
           {%- for discount in item.discounts -%}
           <div class="text-right">
             <i class="fas fa-tag"></i> 
