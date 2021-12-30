@@ -1836,17 +1836,14 @@ a.wishlist-view .fas {
   .instagram-post-detail:hover .insta-icon {
     opacity: 1;
     visibility: visible;
-    -webkit-transition: 2s;
-    -o-transition: 2s;
-    transition: 2s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
   }
   .instagram-post-detail:hover img {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-    -webkit-transition: 2s;
-    -o-transition: 2s;
-    transition: 2s;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
   }
   .instagramUserName {
     padding: 0 30px;
