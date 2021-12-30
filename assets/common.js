@@ -969,7 +969,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     slickSlider(jQuery(slider),slideIndex);
     if(jQuery(event.target).find('[data-slider]').length > 0){
     setTimeout(function(){
-      jQuery('html, body').animate({ scrollTop:(jQuery(event.target).offset().top) - top});
+      jQuery('html, body').animate({ scrollTo:(jQuery(event.target).offset().top) - top});
     },300)
     }
     if(jQuery(event.target).find('.faqSection-header').length > 0 ){
