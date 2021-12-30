@@ -92,7 +92,7 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
   };
   var _onError = function(XMLHttpRequest, textStatus) {
     var data = eval('(' + XMLHttpRequest.responseText + ')');
-    feedback = 'Error : ' + _fullMessagesFromErrors(data).join('; ') + '.';  
+    feedback = errorLabel +' : ' + _fullMessagesFromErrors(data).join('; ') + '.';  
     $('#ShippingWrapperResponse').html('<p class="error-text">'+feedback+'</p>').addClass('error').show();
   }
   var _render = function(response) {
