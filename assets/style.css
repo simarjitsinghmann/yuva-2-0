@@ -231,19 +231,23 @@ img {
   margin: 0 5px;
   background-color: transparent;
   font-family: var(--font-family);
-    font-size: 0;
-    }
+  font-size: 0;
+}
+.slick-dots li button {
+  font-size: 0;
+  background: transparent;
+}
 .slick-dots li:after {
   position: absolute;
   content: "";
   width: 100%;
   background-color: var(--theme-color);
-    opacity: .4;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border-radius:100%;
-    }
+  opacity: .4;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius:100%;
+}
 .slick-dots li.slick-active:after {
   opacity:1;
 }
