@@ -2612,7 +2612,10 @@ font-size: 12px;
     visibility: visible;
     opacity: 1;
   }
-
+  .feature-product .product-image-left {
+    max-height: 400px;
+    min-height: 350px;
+  }
   /*============= PDP page css end  ===============*/
   /* ============ recent product css start =============== */
   .recent-product-slide .item {
