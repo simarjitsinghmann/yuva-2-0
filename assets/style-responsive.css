@@ -2839,7 +2839,10 @@ font-size: 12px;
     min-height: 150px;
     max-height: 150px;
   }
-  .collection-list-view-wrapper.left-wrapper .collection-list-view-card, .collection-list-view-wrapper.right-wrapper .collection-list-view-card {
+  .collection-list-view-wrapper.left-wrapper .collection-list-view-card, 
+  .collection-list-view-wrapper.right-wrapper .collection-list-view-card,  
+  .collection-count-2 .collection-list-view-wrapper.right-wrapper .collection-list-view-card, 
+  .collection-count-3 .collection-list-view-wrapper.right-wrapper .collection-list-view-card {
     height: 270px;
   }
   .banner-caption-title h3 {
