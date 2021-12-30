@@ -29,7 +29,9 @@
           {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
           <p class="item-variant-title">{{item.variant.title}}</p>
           {% endunless %}
+          {% if item.selling_plan_allocation %}
           <p class="item-variant-title">{{item.selling_plan_allocation.selling_plan.name }}</p>
+          {% endif %}
           <h6 class="product__price">
             {%- if item.original_price != item.final_price -%}
             <span>{{item.final_price| money}}</span>
