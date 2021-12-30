@@ -972,7 +972,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
       
       console.log('111',jQuery(event.target).offset().top)
     setTimeout(function(){
-      jQuery('html, body').animate({ scrollTop:(jQuery(event.target).offset().top) - top});
+      jQuery('html, body').animate({ scrollTop:(jQuery(event.target).offset().top)});
     },300)
     }
     if(jQuery(event.target).find('.faqSection-header').length > 0 ){
