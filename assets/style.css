@@ -14,6 +14,9 @@ select {
   -webkit-appearance: none;
   background: #fff url(https://cdn.shopify.com/s/files/1/0597/9668/5009/files/select-arrow.png?v=1640701147) no-repeat 97% 50% /25px;
 }
+select.form-control {
+    padding-right: 30px;
+}
 img.lazyloaded {
   opacity: 1;
   transition: opacity .4s ease;
