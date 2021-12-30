@@ -84,8 +84,8 @@
                       {%- if line_item.line_level_discount_allocations != blank -%}
                       <ul role="list" aria-label="{{ 'customer.order.discount' | t }}">
                         {%- for discount_allocation in line_item.line_level_discount_allocations -%}
-                        <li>
-                          {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money -}})
+                        <li>                          
+                        <i class="fas fa-tag"></i> {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money -}})
                         </li>
                         {%- endfor -%}
                       </ul>
