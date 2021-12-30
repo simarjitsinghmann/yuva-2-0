@@ -75,6 +75,7 @@
 {% unless block.settings[product] == blank  %}
 {% assign hasProduct = true %}
 {% assign count = count | plus:1 %}
+{% assign pending = pending | minus: 1 %}
 {% assign product = block.settings[product] %}
 <li>
   <div class="row">
