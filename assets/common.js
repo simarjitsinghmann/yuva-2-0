@@ -980,7 +980,9 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     if(jQuery(event.target).find('.announcement-bar').length > 0 ){
       initAnnouncement();
     }
+    if(window.location.pathname.indexof('/products') > -1){
     recommendedProductsSlider();
+    }
 //     AOS.init();
   }
   else{
