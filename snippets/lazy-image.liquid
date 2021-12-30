@@ -1,8 +1,19 @@
-{% assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
-<img class="lazyload fade-in {{class}}"
- src="{{ image | img_url: '300x' }}"
- data-src="{{ img_url }}"
- data-widths="[540, 720, 900, 1080, 1296, 1512, 1728, 1944, 2048]"
- data-aspectratio="{{ image.aspect_ratio }}"
- data-sizes="auto"
- data-parent-fit="contain" alt="{{ image.alt | default: shop.name | escape }}">
+<img
+     data-srcset="{{ image | img_url: '165x' }} 165w,
+             {{ image | img_url: '360x' }} 360w,
+             {{ image | img_url: '450x' }} 450w,
+             {{ image | img_url: '533x' }} 533w,
+             {{ image | img_url: '720x' }} 720w,
+             {{ image | img_url: '940x' }} 940w,
+             {{ image | img_url: '1066x' }} 1066w,
+             {{ image | img_url: 'master' }} {{ image.width }}w"
+     src="{{ image | img_url: 'small' }}"
+     data-sizes="auto"
+     alt="{{ image.alt |default: shop.name | escape }}"
+     class="lazyload {{class}}"
+     {%- if max_width != blank -%}
+     width="{{ max_width }}"
+     {% else %}
+     width="{{ image.width }}"
+     {% endif %}
+     />
