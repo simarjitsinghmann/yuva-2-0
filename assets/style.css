@@ -3723,6 +3723,10 @@ a.wishlist-view .fas {
       width:100%;
       color: var(--colorBtnSecondaryText);
         }
+.feature-product .product-image-left .slick-list, 
+.feature-product .product-image-left.slick-track{
+	height:100%;
+}
   .product-add-to-cart-right .product-detail-title {
     display:block;
     color:var(--product_title_color);
