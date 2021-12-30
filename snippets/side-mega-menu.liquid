@@ -111,8 +111,11 @@
       {% assign heading = 'heading'|append:i %}
       {% assign button = 'button'|append:i %}
       {% assign newlink = 'link'|append:i %}
+				{% if pending > 0 and pending < 3 %}
       {% unless block.settings[image] == blank and block.settings[heading] == blank %}
-
+				{% assign hasImage = true %}
+				{% assign count = count | plus:1 %}
+					{% assign pending = pending | minus: 1 %}
       <div class="sub-menu-list">
         <div class="menu-image-content">
           <img src="{{block.settings[image] | img_url:'master'}}" alt="{{block.settings[heading] | default:shop.name}}" style="width:100%"  class="menu-image">
@@ -125,6 +128,7 @@
         </div>
       </div>
       {% endunless %}
+      {% endif %}
       {% endfor %}
 
       {% endcase %}
