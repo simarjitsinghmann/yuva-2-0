@@ -8,9 +8,10 @@
   </div>
 
   {% if cart.item_count > 0 %}
-  <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
+  
     <div class="row">    
       <div class="col-sm-12 col-md-12 col-lg-8">
+        <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
         <h3>
           {{'sections.cart.heading_html' | t: itemCount :cart.item_count}}
         </h3>
@@ -148,9 +149,12 @@
             </tbody>
           </table>
         </div>
+      
         <div class="go-to-back">
           <a href="{{routes.all_products_collection_url}}" aria-label="{{'general.go_to_products' | t}}">{{'general.go_to_products' | t}}</a>
         </div>
+        
+        </form>
         {% if section.settings.shipping_estimate_enable %}
         <div id="shipping_estimations_template" class="shipping_estimations">
           <h3>Get Estimate shipping for Your Order</h3>
@@ -249,7 +253,6 @@
         </div>
       </div>
     </div>
-  </form>
 
   {% endif %}
 </div>
