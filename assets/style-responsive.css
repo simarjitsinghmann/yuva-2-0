@@ -2160,6 +2160,9 @@ font-size: 12px;
   .shop__options{
     display:none;
   }
+  .img-content-placeholder {
+    min-height: 450px;
+  }
 }
 @media screen and (max-width: 575px) {
   /*=============  common  start  ===============*/
@@ -2793,10 +2796,7 @@ font-size: 12px;
   }
   .img-content-placeholder {
     min-height: 350px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
+  }
 }
 @media screen and (max-width: 414px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
