@@ -32,7 +32,8 @@
           <p class="item-variant-title">{{item.selling_plan_allocation.selling_plan.name }}</p>
           <h6 class="product__price">
             {%- if item.original_price != item.final_price -%}
-            <small class="item__price-strikethrough"><s>{{item.original_price| money}}</s></small><span>{{item.final_price| money}}</span>
+            <span>{{item.final_price| money}}</span>
+            <small class="item__price-strikethrough"><s>{{item.original_price| money}}</s></small>
             {%else%}
             <span>{{item.final_price | money}}</span>
             {%- endif -%}
