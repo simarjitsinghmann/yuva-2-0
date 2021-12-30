@@ -80,8 +80,10 @@
     function recommendedProductsSlider(){
       var recomend = setInterval(function(){
         if($('.recent-product-slide').length > 0 ){ 
-          slickSlider($('.recent-product-slide'))
-          showMultipleOptions(); 
+          if(!($('.recent-product-slide'))){
+            slickSlider($('.recent-product-slide'))
+            showMultipleOptions(); 
+          }
           clearInterval(recomend);
         }
       },100)
