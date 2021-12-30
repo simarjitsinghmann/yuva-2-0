@@ -1923,7 +1923,7 @@ font-size: 12px;
     max-width: 33.3%;
   }
   .instagram-post-list ul li {
-    min-height: 180px;
+    min-height: 200px;
   }
     /*============  insta feed css end  ==========*/
   .card__warpper__detail.right__sided .collection-detail-right h5 {
@@ -2726,6 +2726,11 @@ font-size: 12px;
     min-height: 70px;
   }
   /*=========== banner css start =============*/  
+  /*============  insta feed css start  ==========*/
+  .instagram-post-list ul li {
+    min-height: 180px;
+  }
+  /*============  insta feed css end  ==========*/
 }
 @media screen and (max-width: 480px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
