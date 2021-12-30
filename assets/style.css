@@ -2380,11 +2380,12 @@ transition: 0.5s ease;
       min-height: 28px;
       position: relative;
       }
-  .filter-actions .select-items .select-item span.close {
+.filter-actions .select-items .select-item span.close {
     position: absolute;
     right: 10px;
-    top: -4px;
-  }
+    top: 50%;
+    transform: translate(0, -50%);
+}
   .filter-actions .select-items .select-item span.close #iconCross {
     width: 7px;
   }
