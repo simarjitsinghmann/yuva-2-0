@@ -13,10 +13,4 @@
      data-sizes="auto"
      alt="{{ image.alt |default: shop.name | escape }}"
      class="lazyload {{class}}"
-     {%- if max_width != blank -%}
-     width="{{ max_width }}"
-     {% else %}
-     width="{{ image.width }}"
-     {% endif %}
-     height="auto"
      />
