@@ -34,11 +34,34 @@
 {% endfor %}
 
 
-{% assign count = 0 %}
-
 {% assign productMenu = ''%}
 {% assign imageMenu = ''%}
 {% assign pending = 2 %}
+
+{% assign hasProduct = false %}
+{% assign hasImage = false %}
+
+{% if link.links != blank  %}
+{% assign menuLinkLists = true %}
+{% endif %}
+  {% for block in section.blocks %}
+    {% assign blockPosition = block.settings.position | plus:0 %}
+    {% if blockPosition == menuIndex %}
+
+      {% case block.type %}
+        {% when 'menu' %}
+          {% for i in (1..4) %}
+            {% assign menu = 'menu'|append:i %}
+              {% if block.settings[menu] != blank %}
+				{% assign menuLinkLists = true %}
+              {% endif %}
+          {% endfor %}
+      {% endcase %}
+    {% endif %}
+  {% endfor %}
+
+
+{% assign count = 0 %}
 
 {% for block in section.blocks %}
 {% assign blockPosition = block.settings.position | plus:0 %}
