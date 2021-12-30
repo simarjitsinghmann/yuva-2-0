@@ -3,10 +3,52 @@
     "main": {
       "type": "main-page",
       "settings": {
+        "bgcolor": "",
+        "textcolor": ""
+      }
+    },
+    "1640843107b5aaf39b": {
+      "type": "featured-articles",
+      "blocks": {
+        "1640843107f74b3a09-0": {
+          "type": "article",
+          "settings": {
+            "article": ""
+          }
+        },
+        "1640843107f74b3a09-1": {
+          "type": "article",
+          "settings": {
+            "article": ""
+          }
+        },
+        "1640843107f74b3a09-2": {
+          "type": "article",
+          "settings": {
+            "article": ""
+          }
+        }
+      },
+      "block_order": [
+        "1640843107f74b3a09-0",
+        "1640843107f74b3a09-1",
+        "1640843107f74b3a09-2"
+      ],
+      "settings": {
+        "heading": "Posts",
+        "subheading": "Add Blog posts here",
+        "button": "View all",
+        "link": "",
+        "color": "#ffffff",
+        "top_space_desktop": 40,
+        "bottom_space_desktop": 0,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1640843107b5aaf39b"
   ]
 }
