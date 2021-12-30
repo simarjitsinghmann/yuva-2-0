@@ -48,31 +48,7 @@
                       </strong>
                       {% endif %}
                     </div>
-                    {% if item.discounts.size > 0 %}
-                    <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}" data-item-discount="{{forloop.index0}}">
-                      {%- for discount in item.discounts -%}
-                      <li class="discounts__discount coupanName">
-                        <i class="fas fa-tag"></i> 
-                        <small class="item__discount">{{ discount.title }}</small>
-                      </li>
-                      {%- endfor -%}
-                    </ul>
-                    {% endif %}
-                    {%- for property in item.properties -%}
-                    {%- assign property_first_char = property.first | slice: 0 -%}
-                    {%- if property.last != blank and property_first_char != '_' -%}
-                    <span><strong>{{ property.first }}</strong>: 
-                      {%- if property.last contains '/uploads/' -%}
-                      <a href="{{ property.last }}" target="_blank"  aria-label="{{ property.first }}">
-                        {{ property.last | split: '/' | last }}
-                      </a>
-                      {%- else -%}
-                      {{ property.last }}
-                      {%- endif -%}
-                    </span>
-                    {%- endif -%}
-                    {%- endfor -%}
-                  </div>
+                    
 					<div class="mobile-price d-block d-sm-none">
                       
                   <div class="price item-line-price" data-line-price="{{forloop.index0}}">
@@ -99,6 +75,31 @@
                     {{ item.variant.unit_price_measurement.reference_unit }}
                   </p>
                   {%- endif -%}
+                  </div>
+                    {% if item.discounts.size > 0 %}
+                    <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}" data-item-discount="{{forloop.index0}}">
+                      {%- for discount in item.discounts -%}
+                      <li class="discounts__discount coupanName">
+                        <i class="fas fa-tag"></i> 
+                        <small class="item__discount">{{ discount.title }}</small>
+                      </li>
+                      {%- endfor -%}
+                    </ul>
+                    {% endif %}
+                    {%- for property in item.properties -%}
+                    {%- assign property_first_char = property.first | slice: 0 -%}
+                    {%- if property.last != blank and property_first_char != '_' -%}
+                    <span><strong>{{ property.first }}</strong>: 
+                      {%- if property.last contains '/uploads/' -%}
+                      <a href="{{ property.last }}" target="_blank"  aria-label="{{ property.first }}">
+                        {{ property.last | split: '/' | last }}
+                      </a>
+                      {%- else -%}
+                      {{ property.last }}
+                      {%- endif -%}
+                    </span>
+                    {%- endif -%}
+                    {%- endfor -%}
                   </div>
                 </td>
                 <td class="cart-qty" data-label="quantity">
