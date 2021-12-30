@@ -452,9 +452,10 @@ div#countdown {
 img {
   width: 100%;
 }
-.sub-menu .card-wrapper-img {
-  min-height: 200px;
-  max-height: 200px;
+.sub-menu .card-wrapper-img,
+.template_collection  .sub-menu .card-wrapper-img{
+  min-height: 230px;
+  max-height: 230px;
 }
 /**nav-style3 End**/
 /*================= nav-humburger-menu ==============*/
