@@ -294,7 +294,7 @@ else{
 
         $('[data-drawer-body]').html(preLoadLoadGif);
         $('body').find('[data-side-drawer]').attr('class','side_drawer_wrapper')
-        $('body').find('[data-drawer-title]').html('{{'sections.cart.title' | t}}');
+        $('body').find('[data-drawer-title]').html(cartTitleLabel);
         $('body').find('[data-side-drawer]').attr('id','mini__cart').addClass('mini_cart');
         $('body').addClass('side_Drawer_open');
         jQuery.getJSON(cartUrl, function (cart, textStatus) {
