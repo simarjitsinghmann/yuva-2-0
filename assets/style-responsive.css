@@ -2160,9 +2160,15 @@ font-size: 12px;
   .shop__options{
     display:none;
   }
+   /*============ rich text css start =============*/
+  .img-content {
+    height: auto;
+    margin-bottom: 20px;
+  }
   .img-content-placeholder {
     min-height: 450px;
   }
+  /*============ rich text css end =============*/
 }
 @media screen and (max-width: 575px) {
   /*=============  common  start  ===============*/
