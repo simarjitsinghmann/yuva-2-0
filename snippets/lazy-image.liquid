@@ -1,13 +1,12 @@
 
-
 {% assign image_box_ratio = image.height | append: ".0" | times: 1 | divided_by: image.width | times: 100 | append: "%" %}
     {% assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
 
-<img id="{{ image.id }}" class="product__image lazyload"
+<img id="{{ image.id }}" class="product__image lazyload {{class}}"
             src="{{ image | img_url: '300x' }}"
             data-src="{{ img_url }}"
             data-sizes="auto"
-            data-zoom-src="{{ image | img_url: '2400x' }}"
+     aspectratio="{{image.aspect_ratio}}"
             alt="{{ image.alt | escape }}">
         <noscript>
             <img id="{{ product.id }}" class="lazyload" src="{{ image | img_url: '800x' }}" alt='{{ image.alt | escape }}'/>
