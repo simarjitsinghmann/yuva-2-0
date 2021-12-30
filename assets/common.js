@@ -968,7 +968,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     }
     slickSlider(jQuery(slider),slideIndex);
     setTimeout(function(){
-    $(parent).focus();
+      jQuery('html, body').animate({ scrollTop:($(parent).offset().top) - top});
     },300)
     if(jQuery(event.target).find('.faqSection-header').length > 0 ){
     	faqInit();
