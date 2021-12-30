@@ -43,7 +43,8 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
     function setupEventListeners(){
       var button = document.getElementById('getShippingEstimates');
       if(button){
-        button.addEventListener("click", ()=>{	
+        button.addEventListener("click", (e)=>{
+          e.preventDefault();
                                 $('#ShippingWrapperResponse').html('').attr('class','').hide();
         var shippingAddress = {};
         shippingAddress.zip = jQuery('#shippingZip').val() || '';
