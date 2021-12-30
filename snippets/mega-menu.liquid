@@ -116,7 +116,7 @@
               <div class="sub-menu-list {{pending}} mega-images row">
                 <div class="grid-item col">
                 <div class="menu-image-content">
-                  <img src="{{block.settings[image] | img_url:'master'}}" alt="{{block.settings[heading] | default:shop.name}}" class="menu-image">
+                  {% render 'lazy-image' image:block.settings[image],class:'menu-image'%}
                   <div class="menu-content">
                     <h6>{{block.settings[heading]}}</h6>
                     {% if block.settings[newLink] != blank and block.settings[button] != blank %}
