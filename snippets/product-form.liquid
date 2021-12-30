@@ -4,6 +4,8 @@
   {%- assign product_form_id = 'product-form-' | append: section.id -%}
   {% for block in section.blocks %}
   {% case block.type %}
+  {% when '@app' %}
+    {% render block %}
   {% when 'title' %}
   <a class="product-detail-title" href="{{product.url}}"   {{ block.shopify_attributes }}>{{product.title}}</a>
   {% when 'text' %}
