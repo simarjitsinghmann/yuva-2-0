@@ -5354,6 +5354,8 @@ transition: 0.5s ease;
   .similar_Drawer_open{
     position: relative;
     overflow:hidden;
+    touch-action: none;
+-ms-touch-action: none;
   }
   .side_Drawer_open:after,
   .similar_Drawer_open:after{
