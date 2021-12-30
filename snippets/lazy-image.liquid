@@ -11,6 +11,7 @@
              {{ image | img_url: 'master' }} {{ image.width }}w"
      src="{{ image | img_url: 'small' }}"
      data-sizes="auto"
+     aspectratio="{{image.aspectratio}}"
      alt="{{ image.alt |default: shop.name | escape }}"
      class="lazyload {{class}}"
      />
