@@ -967,7 +967,9 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
       slideIndex = undefined;
     }
     slickSlider(jQuery(slider),slideIndex);
-    
+    setTimeout(function(){
+    parent.focus();
+    },300)
     if(jQuery(event.target).find('.faqSection-header').length > 0 ){
     	faqInit();
     }
