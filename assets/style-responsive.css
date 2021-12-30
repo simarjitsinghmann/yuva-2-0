@@ -1321,10 +1321,9 @@ font-size: 12px;
   ::-webkit-scrollbar{
     display: none;
   }
-
   * {
     -ms-overflow-style: none;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
   }
   #playVideo svg {
     width: 70px;
