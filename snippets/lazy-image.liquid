@@ -5,6 +5,9 @@
      data-src="{{ img_url }}"
      data-aspectratio="{{ image.aspect_ratio }}"
      data-sizes="auto"
+     {%- if max_width != blank -%}
+     width="{{ max_width }}"
+     {% endif %}
      alt="{{ image.alt | escape }}">
 <noscript>
   <img class="image-fit hero__image hero__image--{{ block.id }}"
