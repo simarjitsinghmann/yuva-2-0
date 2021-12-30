@@ -65,19 +65,19 @@
                   <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
                 <a href="{{media | external_video_url}}" class="image-popup-link" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}" aria-label="{{media.alt | default:product.title}}">
                   {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
-                  {% if forloop.last %}
+                  
+                </a>{% if forloop.last %}
                  {{productHighlights}}
                   {% endif%}
-                </a>
                   </div>
                   {%- when 'video' -%}
                   <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
                 <a href="{{video_source.url}}" {{media | video_url | link}} class="image-popup-link" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
-                  {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
+                 
+                </a> {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
                   {% if forloop.last %}
                  {{productHighlights}}
                   {% endif%}
-                </a>
                   </div>
                   {%- when 'model' -%}
                   <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
