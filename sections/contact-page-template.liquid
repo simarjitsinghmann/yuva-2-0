@@ -85,7 +85,7 @@
           <h2>{{section.settings.form_heading}}</h2>
 
           <div class="row">
-            <div class="col-md-8 col-sm-12">
+            <div class="col-md-8 col-sm-12 mx-auto">
               {%- form 'contact', id: 'ContactForm' -%}
               {%- if form.posted_successfully? -%}
               <span class="form-status form-status-list form__message success-text" tabindex="-1" autofocus>{{ 'templates.contact.form.post_success' | t }}</span>
