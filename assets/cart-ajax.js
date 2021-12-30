@@ -93,6 +93,11 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
   var _onError = function(XMLHttpRequest, textStatus) {
     var data = eval('(' + XMLHttpRequest.responseText + ')');
     console.log(_fullMessagesFromErrors(data))
+//     var html= '';
+    
+//       _fullMessagesFromErrors(data).forEach(function(error){
+//         html += `<p class="delievery-text success-text">${shipping.name}:${Shopify.formatMoney((shipping.price*100),moneyFormat)}</p>`;
+//       });
     feedback = errorLabel +' : ' + _fullMessagesFromErrors(data).join(', ') + '.';  
     $('#ShippingWrapperResponse').html('<p class="error-text">'+feedback+'</p>').addClass('error').show();
   }
