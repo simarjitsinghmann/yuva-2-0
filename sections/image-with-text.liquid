@@ -4,8 +4,8 @@
     <div class="img-content">
   {%- if section.settings.image != blank -%}
       {% include 'lazy-image' image:section.settings.image %}
-  {%- else -%}
-      <img src="{{'placeholder.svg' | asset_url}}" alt="{{shop.name}}" />
+  {%- else -%}                  
+      {% render 'placeholder' %}
   {%- endif -%}
     </div>
   </div>
