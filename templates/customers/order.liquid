@@ -82,7 +82,7 @@
                       {%- endunless -%}
 
                       {%- if line_item.line_level_discount_allocations != blank -%}
-                      <ul role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                      <ul role="list" aria-label="{{ 'customer.order.discount' | t }}" style="margin-top:10px">
                         {%- for discount_allocation in line_item.line_level_discount_allocations -%}
                         <li>                          
                         <i class="fas fa-tag"></i> {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money -}})
@@ -119,24 +119,24 @@
                     <dl>
                       {%- if line_item.original_price != line_item.final_price -%}
                       <dt>
-                        <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
                       </dt>
                       <dd class="regular-price">
+                        <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
                         <s>{{ line_item.original_price | money }}</s>
-                      </dd>
-                      <dt>
                         <span class="visually-hidden">{{ 'products.product.price.sale_price' | t }}</span>
-                      </dt>
-                      <dd>
                         <span>{{ line_item.final_price | money }}</span>
+                      </dd>
+<!--                       <dt>
+                      </dt> -->
+                      <dd>
                       </dd>
                       {%- else -%}
                       <dt>
                         <span class="visually-hidden">{{ 'products.product.price.regular_price' | t }}</span>
-                      </dt>
-                      <dd>
                         {{ line_item.original_price | money }}
-                      </dd>
+                      </dt>
+<!--                       <dd>
+                      </dd> -->
                       {%- endif -%}
                       {%- if line_item.unit_price_measurement -%}
                       <dt>
