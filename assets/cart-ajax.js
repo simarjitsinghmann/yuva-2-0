@@ -45,7 +45,7 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
       if(button){
         button.addEventListener("click", (e)=>{
           e.preventDefault();
-                                $('#ShippingWrapperResponse').html('').attr('class','').hide();
+                                $('#ShippingWrapperResponse').html('').removeClass('success').removeClass('error').hide();
         var shippingAddress = {};
         shippingAddress.zip = jQuery('#shippingZip').val() || '';
         shippingAddress.country = jQuery('#shippingCountry').val() || '';
