@@ -3667,14 +3667,15 @@ a.wishlist-view .fas {
   /*============== Join Our Newsletter End ============*/
 
   /*============= Feature Product css start ==============*/
-  .feature-product .product-image-left {
+.feature-product .product-image-left {
     margin-right: 30px;
     height: 100%;
-    height: 630px;
+    max-height: 630px;
     overflow: hidden;
     background-color: var(--colorImageBg);
-      position:relative;
-      }
+    position: relative;
+    min-height: 500px;
+}
   .feature-section .product-image-left img {
     width: 100%;
     height: 100%;
