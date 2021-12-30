@@ -1723,14 +1723,15 @@ a.wishlist-view .fas {
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  .testimonials-variation-style1 .client-say-left  {
-    -webkit-box-pack: center;
+  .testimonials-variation-style1 .client-say-left {
+    -webkit-box-pack: start;
     -ms-flex-pack: center;
-    justify-content: center;
+    justify-content: flex-start;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     padding-right: 0;
+    margin-bottom: 30px;
   }
   .client-say-left h2 {
     font-size: 32px;
