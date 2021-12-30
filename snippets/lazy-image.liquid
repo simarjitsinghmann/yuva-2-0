@@ -1,20 +1,3 @@
-<img
-     data-srcset="{{ image | img_url: '165x' }} 165w,
-             {{ image | img_url: '380x' }} 380w,
-             {{ image | img_url: '450x' }} 450w,
-             {{ image | img_url: '533x' }} 533w,
-             {{ image | img_url: '720x' }} 720w,
-             {{ image | img_url: '940x' }} 940w,
-             {{ image | img_url: '1066x' }} 1066w,
-             {{ image | img_url: '1440x' }} 1440w,
-             {{ image | img_url: '1920x' }} 1920w,
-             {{ image | img_url: 'master' }} {{ image.width }}w"
-     src="{{ image | img_url: 'small' }}"
-     data-sizes="auto"
-     aspectratio="{{image.aspect_ratio}}"
-     alt="{{ image.alt |default: shop.name | escape }}"
-     class="lazyload {{class}}"
-     />
 
 
                     {%- assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
