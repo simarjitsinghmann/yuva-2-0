@@ -5409,15 +5409,9 @@ transition: 0.5s ease;
   .cart-item-container .product__price {
     color: var(black);
   }
-/*   .close {
-    float: right;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1;
-    color: var(--black);
-      text-shadow: 0 1px 0 var(--white);
-        opacity: 1 !important;
-        } */
+    .cart-item-container .product__price span{
+    font-weight:bold;
+  }
   #recent_search_list h5,
   .results-box h5 {
     font-weight: var(--semibold);
