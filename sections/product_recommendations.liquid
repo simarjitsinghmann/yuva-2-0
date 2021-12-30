@@ -80,7 +80,7 @@
     function recommendedProductsSlider(){
       var recomend = setInterval(function(){
         if($('.recent-product-slide').length > 0 ){ 
-          if(!($('.recent-product-slide'))){
+          if(!($('.recent-product-slide').hasClass('slick-initialized'))){
             slickSlider($('.recent-product-slide'))
             showMultipleOptions(); 
           }
