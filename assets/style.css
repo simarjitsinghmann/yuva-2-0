@@ -5407,12 +5407,8 @@ transition: 0.5s ease;
   }
   /*============== side drawer css end =============*/
   .cart-item-container .product__price {
-    font-size: var(--reg-text);
-      font-weight: var(--medium);
-        line-height: 24px;
-        letter-spacing: 0.6px;
-        }
-  .close {
+  }
+/*   .close {
     float: right;
     font-size: 1.5rem;
     font-weight: 700;
@@ -5420,7 +5416,7 @@ transition: 0.5s ease;
     color: var(--black);
       text-shadow: 0 1px 0 var(--white);
         opacity: 1 !important;
-        }
+        } */
   #recent_search_list h5,
   .results-box h5 {
     font-weight: var(--semibold);
