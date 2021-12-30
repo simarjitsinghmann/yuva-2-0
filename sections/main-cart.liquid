@@ -48,34 +48,34 @@
                       </strong>
                       {% endif %}
                     </div>
-                    
-					<div class="mobile-price d-block d-sm-none">
-                      
-                  <div class="price item-line-price" data-line-price="{{forloop.index0}}">
-                    {%- if item.original_line_price != item.final_line_price -%}
-                    <strong class="cart-item__final-price product-option">
-                      {{ item.final_line_price | money }}
-                    </strong>
-                    <s class="cart-item__old-price product-option">
-                      {{- item.original_line_price | money -}}
-                    </s>
-                    {% else %}
-                    <strong class="cart-item__final-price product-option">
-                      {{ item.original_line_price | money }}
-                    </strong>
-                    {% endif %}
-                  </div>
-                  {%- if item.unit_price_measurement -%}
-                  <p class="unit-price">
-                    {{ item.variant.unit_price | money }}
-                    /
-                    {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
-                    {{- item.variant.unit_price_measurement.reference_value -}}
-                    {%- endif -%}
-                    {{ item.variant.unit_price_measurement.reference_unit }}
-                  </p>
-                  {%- endif -%}
-                  </div>
+
+                    <div class="mobile-price d-block d-sm-none">
+
+                      <div class="price item-line-price" data-line-price="{{forloop.index0}}">
+                        {%- if item.original_line_price != item.final_line_price -%}
+                        <strong class="cart-item__final-price product-option">
+                          {{ item.final_line_price | money }}
+                        </strong>
+                        <s class="cart-item__old-price product-option">
+                          {{- item.original_line_price | money -}}
+                        </s>
+                        {% else %}
+                        <strong class="cart-item__final-price product-option">
+                          {{ item.original_line_price | money }}
+                        </strong>
+                        {% endif %}
+                      </div>
+                      {%- if item.unit_price_measurement -%}
+                      <p class="unit-price">
+                        {{ item.variant.unit_price | money }}
+                        /
+                        {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
+                        {{- item.variant.unit_price_measurement.reference_value -}}
+                        {%- endif -%}
+                        {{ item.variant.unit_price_measurement.reference_unit }}
+                      </p>
+                      {%- endif -%}
+                    </div>
                     {% if item.discounts.size > 0 %}
                     <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}" data-item-discount="{{forloop.index0}}">
                       {%- for discount in item.discounts -%}
@@ -151,59 +151,58 @@
         <div class="go-to-back">
           <a href="{{routes.all_products_collection_url}}" aria-label="{{'general.go_to_products' | t}}">{{'general.go_to_products' | t}}</a>
         </div>
-  {% if section.settings.shipping_estimate_enable %}
-  <div id="shipping_estimations_template" class="shipping_estimations">
-    <h3>Get Estimate shipping for Your Order</h3>
-    <div class="row">
-    
-    </div>
-    <div class="col-12 col-sm-4 form-group">
-      <label for="shippingCountry">
-        {{ 'customer.addresses.country' | t }}
-      </label>
-      <div class="select">
-        <select
-                id="shippingCountry"
-                name="shipping_address[country]"
-                data-address-country-select                      
-                data-default="{{ shop.address.country }}"
-                autocomplete="country"
-                class="form-control"
-                >
-          {{ country_option_tags  }}
-        </select>
-      </div>
-    </div>
-    <div id="shippingProvinceContainer" class="col-12 col-sm-4 form-group" style="display:none;">
-      <label for="shippingProvince">
-        {{ 'customer.addresses.province' | t }}
-      </label>
-      <div class="select"> 
-        <select
-                id="shippingProvince"
-                name="shipping_address[province]"
-                autocomplete="address-level1"
-                class="form-control"
-                >
-        </select>
-      </div>
-    </div>
-    <div class="col-12 col-sm-4 form-group">
-      <label for="shippingZip">
-        Zip
-      </label>
-      <div class="select">
-        <input type="text"
-               id="shippingZip"
-               name="shipping_address[zip]"
-               class="form-control"
-               />
-      </div>
-    </div>
-    <div id="ShippingWrapperResponse"></div>
-    <button id="getShippingEstimates" class="button black-btn small-btn">Get Estimates</button>
-  </div>
-  {% endif %}
+        {% if section.settings.shipping_estimate_enable %}
+        <div id="shipping_estimations_template" class="shipping_estimations">
+          <h3>Get Estimate shipping for Your Order</h3>
+          <div class="row">
+            <div class="col-12 col-sm-4 form-group">
+              <label for="shippingCountry">
+                {{ 'customer.addresses.country' | t }}
+              </label>
+              <div class="select">
+                <select
+                        id="shippingCountry"
+                        name="shipping_address[country]"
+                        data-address-country-select                      
+                        data-default="{{ shop.address.country }}"
+                        autocomplete="country"
+                        class="form-control"
+                        >
+                  {{ country_option_tags  }}
+                </select>
+              </div>
+            </div>
+            <div id="shippingProvinceContainer" class="col-12 col-sm-4 form-group" style="display:none;">
+              <label for="shippingProvince">
+                {{ 'customer.addresses.province' | t }}
+              </label>
+              <div class="select"> 
+                <select
+                        id="shippingProvince"
+                        name="shipping_address[province]"
+                        autocomplete="address-level1"
+                        class="form-control"
+                        >
+                </select>
+              </div>
+            </div>
+            <div class="col-12 col-sm-4 form-group">
+              <label for="shippingZip">
+                Zip
+              </label>
+              <div class="select">
+                <input type="text"
+                       id="shippingZip"
+                       name="shipping_address[zip]"
+                       class="form-control"
+                       />
+              </div>
+            </div>
+            <div id="ShippingWrapperResponse"></div>
+            <button id="getShippingEstimates" class="button black-btn small-btn">Get Estimates</button>
+          </div>
+        </div>
+        {% endif %}
       </div>
       <div class="col-sm-12 col-md-12 col-lg-4">
         <div class="sticky_cartsidebar">
@@ -248,38 +247,38 @@
       </div>
     </div>
   </form>
-  
+
   {% endif %}
 </div>
 <script src="{{'cart-ajax.js' | asset_url}}" defer="defer"></script> 
 {% schema %}
 {
-  "name": "t:sections.main-cart.name",
-  "class": "cart__footer-wrapper cstm-cart-sec",
-  "settings": [
-    {
-      "type": "checkbox",
-      "id": "show_cart_note",
-      "default": true,
-      "label": "t:sections.main-cart.settings.show_cart_note.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "payment_enable",
-      "default": true,
-      "label": "t:sections.main-cart.settings.payment_enable.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "shipping_estimate_enable",
-      "default": true,
-      "label": "t:sections.main-cart.settings.shipping_estimate_enable.label"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "@app"
-    }
-  ]
+"name": "t:sections.main-cart.name",
+"class": "cart__footer-wrapper cstm-cart-sec",
+"settings": [
+{
+"type": "checkbox",
+"id": "show_cart_note",
+"default": true,
+"label": "t:sections.main-cart.settings.show_cart_note.label"
+},
+{
+"type": "checkbox",
+"id": "payment_enable",
+"default": true,
+"label": "t:sections.main-cart.settings.payment_enable.label"
+},
+{
+"type": "checkbox",
+"id": "shipping_estimate_enable",
+"default": true,
+"label": "t:sections.main-cart.settings.shipping_estimate_enable.label"
+}
+],
+"blocks": [
+{
+"type": "@app"
+}
+]
 }
 {% endschema %}
