@@ -157,11 +157,11 @@
         </form>
         {% if section.settings.shipping_estimate_enable %}
         <div id="shipping_estimations_template" class="shipping_estimations">
-          <h3>Get Estimate shipping for Your Order</h3>
+          <h3>{{'sections.cart.shipping_estimates.heading' | t}}</h3>
           <div class="row">
             <div class="col-12 col-sm-4 form-group">
               <label for="shippingCountry">
-                {{ 'customer.addresses.country' | t }}
+                {{ 'sections.cart.shipping_estimates.country' | t }}
               </label>
               <div class="select">
                 <select
@@ -178,7 +178,7 @@
             </div>
             <div id="shippingProvinceContainer" class="col-12 col-sm-4 form-group" style="display:none;">
               <label for="shippingProvince">
-                {{ 'customer.addresses.province' | t }}
+                {{ 'sections.cart.shipping_estimates.province' | t }}
               </label>
               <div class="select"> 
                 <select
@@ -192,7 +192,7 @@
             </div>
             <div class="col-12 col-sm-4 form-group">
               <label for="shippingZip">
-                Pin Code
+               {{ 'sections.cart.shipping_estimates.zip' | t }}
               </label>
               <div class="select">
                 <input type="text"
@@ -204,7 +204,7 @@
               </div>
             </div>
             <div class="col-12 form-group" id="ShippingWrapperResponse" style="display:none;"></div>
-            <div class="col-12 col-sm-12"><div id="getShippingEstimates" class="button black-btn small-btn">Get Estimates</div></div>
+            <div class="col-12 col-sm-12"><div id="getShippingEstimates" class="button black-btn small-btn">{{ 'sections.cart.shipping_estimates.button' | t }}</div></div>
           </div>
         </div>
         {% endif %}
