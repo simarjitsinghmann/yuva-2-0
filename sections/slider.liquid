@@ -4,7 +4,7 @@
       {% for block in section.blocks %}
       {% case block.type %}
         {% when 'slide' %}
-      <div id="banner-{{block.id}}" class="banner banner-section item slider-banner slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
+      <div id="banner-{{block.id}}" class="banner-{{block.id}} banner banner-section item slider-banner slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
       {% render 'banner-slide-content' block:block,animation:animation%}	
       </div>
       {% when 'split' %}
@@ -13,7 +13,7 @@
       </div>
       {% when 'video' %}
       {% if block.settings.videofile != blank or block.settings.poster != blank %}
-      <div id="banner-{{block.id}}" class="banner banner-section item slider-banner slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>	
+      <div id="banner-{{block.id}}" class="banner-{{block.id}} banner banner-section item slider-banner slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>	
         {% render 'video-slide-content' block:block,animation:animation%}	
       </div>
       {% endif %}						
