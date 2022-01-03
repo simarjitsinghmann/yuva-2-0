@@ -48,7 +48,7 @@
   </div>
   <style>
     {% if block.settings.overlay %}
-    #banner-{{block.id}} .home-video-sec .videoOverlay {
+    .banner-{{block.id}} .home-video-sec .videoOverlay {
       position: absolute;
       top: 0; 
       left: 0;
@@ -59,21 +59,21 @@
       opacity:{{block.settings.opacity}}%;
     }
     {% endif %}
-    #banner-{{block.id}} h1{
+    .banner-{{block.id}} h1{
       color:{{block.settings.title_color}};
     }
-    #banner-{{block.id}} h2{
+    .banner-{{block.id}} h2{
       color:{{block.settings.subtitle_color}};    }
     
     
-    #banner-{{block.id}} p{
+    .banner-{{block.id}} p{
       color:{{block.settings.desc_color}};
     }
-     #banner-{{block.id}} .button {
+     .banner-{{block.id}} .button {
     background-color:{{ block.settings.button_text_bk }};
     color: {{ block.settings.button_text_color }};
   }
-  #banner-{{block.id}} .button:hover{
+  .banner-{{block.id}} .button:hover{
     color:  {{ block.settings.hvr_button_text_color }};
     background-color:{{ block.settings.hvr_button_text_bk }}
   }
