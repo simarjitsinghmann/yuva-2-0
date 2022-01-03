@@ -691,6 +691,7 @@
         },
         "column1": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "icon": "refund",
             "heading": "30 Days Money Back",
@@ -699,6 +700,7 @@
         },
         "column2": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "icon": "support",
             "heading": "Support 24\/7",
@@ -707,6 +709,7 @@
         },
         "column3": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "icon": "secure",
             "heading": "100% Secure Checkout",
@@ -756,8 +759,8 @@
         "content_alignment": "left",
         "top_space_desktop": 30,
         "bottom_space_desktop": 30,
-        "top_space_mobile": 0,
-        "bottom_space_mobile": 0
+        "top_space_mobile": 10,
+        "bottom_space_mobile": 10
       }
     }
   },
