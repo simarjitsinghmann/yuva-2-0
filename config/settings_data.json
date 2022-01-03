@@ -6,7 +6,7 @@
     "color_cart_dot": "#b39964",
     "heading_color": "#605745",
     "product_title_color": "#605745",
-    "color_image_bg": "#f9f4e9",
+    "color_image_bg": "#ec6f6f",
     "color_savings_text": "#cc3d3d",
     "color_button": "#b39964",
     "color_button_text": "#ffffff",
@@ -25,13 +25,13 @@
     "shipping_rate": "500",
     "shipping_text": "Spend ||amount|| more and get free shipping!",
     "free_shipping_text": "You get free shipping!",
-    "enable_breadcrumb": false,
+    "enable_breadcrumb": true,
     "enable_preorder": true,
     "option_style": "swatch",
     "color_swatch_style": "square",
     "variant_image": true,
     "show_saved_amount": true,
-    "saved_amount_style": "percentage",
+    "saved_amount_style": "currency",
     "show_quick_view": true,
     "show_similar_text": true,
     "newsletter_pop_enable": true,
@@ -257,7 +257,7 @@
           "8dcf6176-b8ed-4a73-b037-a383f842f7b9"
         ],
         "settings": {
-          "header_style": "header2",
+          "header_style": "header1",
           "logo": "shopify:\/\/shop_images\/New_new-logo_76f96197-35e0-4cbe-b2f0-8f2580d90e2e.png",
           "logo_width": 110,
           "logo_position": "flex-start",
@@ -270,9 +270,9 @@
           "menu_textcolor": "#ffffff",
           "sub_menu_color": "#848484",
           "sub_hover_color": "#000000",
-          "show_search": false,
-          "show_currency": false,
-          "enable_sticky_header": false
+          "show_search": true,
+          "show_currency": true,
+          "enable_sticky_header": true
         }
       },
       "footer": {
@@ -343,7 +343,7 @@
           "show_close": false,
           "icon": "gifts",
           "first_text": "Sale Start",
-          "date": "05\/01\/2022",
+          "date": "25\/12\/2021",
           "last_text": "Hurry Up!",
           "btn": "Shop Now",
           "link": "shopify:\/\/collections",
