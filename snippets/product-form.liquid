@@ -163,8 +163,8 @@
     {% assign currentVariantSellingPlans = currentVariantSellingPlans | append: selling_plan_allocation.selling_plan.id %}
     {% endunless %}
     {% endfor %}
-    <div class="selling_plan_wrapper" data-selling-plan-container>
       {% if current_variant.selling_plan_allocations.size > 0 %}
+    <div class="selling_plan_wrapper" data-selling-plan-container>
       <div class="selling_group active">
         <div class="sellingPlanHeading" for="oneTimePurchase">
           <input type="radio" id="oneTimePurchase" name="sellingPlanHeading" checked>
@@ -188,8 +188,8 @@
       </div>
       {% endif %}
       {% endfor %}
-      {% endif %}
     </div>
+      {% endif %}
     
     {%- endif -%}
     
