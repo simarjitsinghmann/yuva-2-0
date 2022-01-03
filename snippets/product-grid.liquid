@@ -144,7 +144,7 @@
               <li>
                 {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
                 <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
-                <button type="submit" {% unless product.available %} disabled="disabled"{% endunless %}>
+                <button type="submit" class="Sd_addProduct" {% unless product.available %} disabled="disabled"{% endunless %}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
                   <path class="cls-1" d="M811.524,2918.03a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,811.524,2918.03Zm6.579,0a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,818.1,2918.03Zm7.781-9.41a1.222,1.222,0,0,0-1.01-.59H810.352l-0.688-4.02h-4.638a0.99,0.99,0,1,0,0,1.98h2.941l0.636,3.83,0.89,6.06a1.212,1.212,0,0,0,1.2.99h10.329a1.228,1.228,0,0,0,1.01-.6l3.81-6.52A1.19,1.19,0,0,0,825.884,2908.62Zm-5.336,6.33h-9.155l-0.718-4.95h12.764Z" transform="translate(-804 -2904)"></path>
                   </svg>
