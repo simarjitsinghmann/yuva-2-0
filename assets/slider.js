@@ -16,7 +16,9 @@ function findVisibleItems(){
         thumb.classList.remove('active');
       });
       const relatedThumb = document.querySelectorAll('[href="#'+item.id+'"]')[0];
-      relatedThumb.classList.add('active');
+      if(relatedThumb){
+        relatedThumb.classList.add('active');
+      }
     }
   });
 }
