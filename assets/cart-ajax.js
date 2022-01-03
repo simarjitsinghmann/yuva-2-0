@@ -283,7 +283,7 @@ else{
 
 
   // POST to cart/add.js returns the cart in JSON
-  $(document).on('submit','[action="'+cartAdd+'"]',function(evt) {
+  $('body').on('submit','[action="'+cartAdd+'"]',function(evt) {
     evt.preventDefault();
     $('body').find('.productErrors').hide().html('');
     var submit = $(this).find('[type="submit"]');
