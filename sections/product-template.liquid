@@ -53,8 +53,8 @@
                   {%- for media in product.media -%}
                 {%-case media.media_type-%}
                   {%- when 'image' -%}
-                  <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
-                    <a href="{{media | img_url: 'master'}}" class="image-popup-link" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
+                  <div class="responsive-image__wrapper productImageSlideItem">
+                    <a id="media-{{media.id}}" href="{{media | img_url: 'master'}}" class="image-popup-link" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                       <img class="responsive-image__image lazyload" src="{{media | img_url: 'master'}}" alt="{{ media.preview_image.alt | escape }}">
                     </a>
                     {% if forloop.last %}
@@ -62,8 +62,8 @@
                     {% endif%}
                   </div>
                   {%- when 'external_video' -%}
-                  <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
-                <a href="{{media | external_video_url}}" class="image-popup-link" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}" aria-label="{{media.alt | default:product.title}}">
+                  <div class="responsive-image__wrapper productImageSlideItem">
+                <a id="media-{{media.id}}" href="{{media | external_video_url}}" class="image-popup-link" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}" aria-label="{{media.alt | default:product.title}}">
                   {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
                   
                 </a>{% if forloop.last %}
@@ -71,8 +71,8 @@
                   {% endif%}
                   </div>
                   {%- when 'video' -%}
-                  <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
-                <a href="{{video_source.url}}" {{media | video_url | link}} class="image-popup-link" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
+                  <div class="responsive-image__wrapper productImageSlideItem">
+                <a id="media-{{media.id}}" href="{{video_source.url}}" {{media | video_url | link}} class="image-popup-link" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                  {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
                 </a> 
                   {% if forloop.last %}
