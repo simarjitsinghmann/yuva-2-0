@@ -24,7 +24,7 @@
             {% if collection.products_count == 0 %}no-results{% endif %}" id="CollectionProductsContainer" data-id="{{section.id}}" data-view="grid-layout-5">
   <div class="container">
     {% if collection.all_products_count > 0 %}
-    <div class="product-toolbar-box">
+    <div class="product-toolbar-box filters-{{section.settings.enable_filtering}}">
 
       {% if section.settings.enable_filtering %}
       <div id="filterHeading" class="aside-title">
