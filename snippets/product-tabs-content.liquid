@@ -1,3 +1,4 @@
+{% if block.settings.show_description or block.settings.content_heading != blank or block.settings.show_reviews%}
 <div class="Specification-tabs"  {{ block.shopify_attributes }}>           
   <ul class="resp-tabs-list easy_tabs">    
     {% if block.settings.show_description %}
@@ -12,19 +13,20 @@
   </ul>
 </div>
 <div class="resp-tabs-content">        
-    {% if block.settings.show_description %} 
-    <div class="product-description tab-content resp-tab-content resp-tab-contentProduct easy_tabs" id="tabContentDescription" aria-labelledby="easy_tabs_tab_item-1" style="display: none;">
-      {{product.description}}             
-    </div>     
-    {% endif %}
-    {% if block.settings.content_heading != blank %}
-    <div class="product-description tab-content resp-tab-content resp-tab-contentProduct easy_tabs" id="tabContentWrapper" aria-labelledby="easy_tabs_tab_item-2" style="display: none;">
-      {{block.settings.content}}            
-    </div> 
-    {% endif %}
-    {% if block.settings.show_reviews %}
-    <div class="product-description tab-content resp-tab-content resp-tab-contentProduct easy_tabs" id="tabContentReviews" aria-labelledby="easy_tabs_tab_item-3" style="display: none;">
-      <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>           
-    </div>  
-    {% endif %}
+  {% if block.settings.show_description %} 
+  <div class="product-description tab-content resp-tab-content resp-tab-contentProduct easy_tabs" id="tabContentDescription" aria-labelledby="easy_tabs_tab_item-1" style="display: none;">
+    {{product.description}}             
+  </div>     
+  {% endif %}
+  {% if block.settings.content_heading != blank %}
+  <div class="product-description tab-content resp-tab-content resp-tab-contentProduct easy_tabs" id="tabContentWrapper" aria-labelledby="easy_tabs_tab_item-2" style="display: none;">
+    {{block.settings.content}}            
+  </div> 
+  {% endif %}
+  {% if block.settings.show_reviews %}
+  <div class="product-description tab-content resp-tab-content resp-tab-contentProduct easy_tabs" id="tabContentReviews" aria-labelledby="easy_tabs_tab_item-3" style="display: none;">
+    <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>           
+  </div>  
+  {% endif %}
 </div>
+{% endif %}
