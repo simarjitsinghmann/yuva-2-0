@@ -1692,8 +1692,11 @@ a.wishlist-view .fas {
   }
   .testimonial .testimonial-slider .slick-arrow:hover {
     background: var(--theme-color) !important;
-      color: var(--white);
-        }
+    color: var(--white);
+  }
+  .testimonial-slider .slick-dots {
+    margin-top: 20px;
+  }
   .testimonial-client-slide .slider-item {
     text-align: center;
   }
