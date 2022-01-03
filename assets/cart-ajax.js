@@ -286,12 +286,13 @@ else{
   $('body').on('click','.Sd_addProduct',function(evt) {
     evt.preventDefault();
     $('body').find('.productErrors').hide().html('');
-    var submit = $(this).find('[type="submit"]');
+    var form = $(this).closest('form')
+    var submit = $(this);
     submit.addClass('is-loading');
     params = {
       type: 'POST',
       url: cartAddUrl,
-      data: jQuery(this).serialize(),
+      data: form.serialize(),
       dataType: 'json',
       // beforeSend: function(jqxhr, settings) {
       //   $body.trigger('beforeAddItem.ajaxCart', form);
