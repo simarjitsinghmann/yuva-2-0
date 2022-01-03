@@ -4708,9 +4708,12 @@ a.wishlist-view .fas {
       padding: 40px;
       }
   .about-feature-box .feature-icon {
+    margin: 0 auto 25px;
+  }
+  .about-feature-box .feature-icon svg,
+.about-feature-box .feature-icon img{
     font-size: 24px;
     max-width: 30px;
-    margin: 0 auto 25px;
   }
   .about-feature-box h5 {
     /* text-transform: uppercase; */
