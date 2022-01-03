@@ -263,7 +263,7 @@ font-size: 12px;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
-    width: 25%;
+    max-width: 25%;
     padding: 0 5px;
   }
   #CollectionProductsContainer[data-view="grid-layout-4"]
@@ -643,7 +643,7 @@ font-size: 12px;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 33.3%;
     flex: 0 0 33.333333%;
-    width: 33.333333%;
+    max-width: 33.333333%;
     padding: 0 5px;
   }
   .shop-sidebar,
@@ -1559,7 +1559,7 @@ font-size: 12px;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
-    width: 50%;
+    max-width: 50%;
   }
   .CollectionProductGrid {
     padding-top: 0;
@@ -2754,7 +2754,7 @@ font-size: 12px;
     max-height: 340px;
   }
   .results-similarGrid li.product-base {
-    width: 40%;
+    max-width: 40%;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 40%;
     flex: 0 0 40%;
