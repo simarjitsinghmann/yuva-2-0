@@ -106,7 +106,6 @@
             {% include 'collection-sidebar' results:search %}
           </aside>
           <div class="searchProductcontainer filteredData">
-            {% paginate search.results by 25 %}
             {%- capture activeFilters -%}
             {%- for filter in search.filters -%}
             {%- for value in filter.active_values -%}
@@ -137,6 +136,8 @@
                 <p>{{ 'sections.collection_template.filter_by_label' | t }}</p>
               </div>
             </div>
+            
+            {% paginate search.results by 25 %}
             {%- if productResults -%}
             <div class="search-product-list">
               <div class="toolbox-item toolbox-layout">
