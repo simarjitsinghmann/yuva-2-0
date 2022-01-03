@@ -1,64 +1,60 @@
-<div class="section-spacer">
-  <div class="contact__us__section">
-    <div class="custom-container">
-          <h2 class="text__center">{{section.settings.form_heading}}</h2>
 
-          <div class="row">
-            <div class="col-md-8 col-sm-8 mx-auto">
-              {%- form 'contact', id: 'ContactForm' -%}
-              {%- if form.posted_successfully? -%}
-              <span class="form-status form-status-list form__message success-text" tabindex="-1" autofocus>{{ 'templates.contact.form.post_success' | t }}</span>
-              {%- endif -%}
-              <div class="row">
-                <div class="col-lg-12 col-md-12">
-                  <div class="form-group">
-                    <label for="ContactForm-username">{{'sections.contact.name' | t}}</label>
-                    <input type="text" class="form-control" id="ContactForm-username" name="contact[Name]" placeholder="{{'sections.contact.name' | t}}" required>
-                  </div>
-                </div>
-                <div class="col-lg-12 col-md-12">
-                  <label class="field__label" for="ContactForm-email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label>
-                  <div class="form-group">
-                    <input
-                           autocomplete="email"
-                           type="email"
-                           id="ContactForm-email"
-                           class="form-control"
-                           name="contact[email]"
-                           spellcheck="false"
-                           autocapitalize="off"
-                           value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
-                           aria-required="true"
-                           {% if form.errors contains 'email' %}
-                           aria-invalid="true"
-                           aria-describedby="ContactForm-email-error"
-                           {% endif %}
-                           placeholder="{{'sections.contact.email' | t}}"
-                           required="required"
-                           >
-                    {% if form.errors contains 'email' %}
-                    <span class="error-text">
-                      {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
-                    </span>
-                    {%- endif -%}
-                  </div>
-                </div>
-                <div class="col-lg-12 col-md-12">
-                  <label for="ContactForm-body">{{'sections.contact.message' | t}}</label>
-                  <div class="form-group">
-                    <textarea id="ContactForm-body" class="form-control" name="contact[Comment]"  placeholder="{{'sections.contact.message' | t}}" rows="3" required="required">{{form.body}}</textarea>
-                  </div>
-                  <button type="submit" class="button black-btn">{{section.settings.form_button}}</button>
-                </div>
+<div class="custom-container">
+  <h2 class="text__center">{{section.settings.form_heading}}</h2>
 
-              </div>
-              {% endform %}
-            </div>
+  <div class="row">
+    <div class="col-md-8 col-sm-8 mx-auto">
+      {%- form 'contact', id: 'ContactForm' -%}
+      {%- if form.posted_successfully? -%}
+      <span class="form-status form-status-list form__message success-text" tabindex="-1" autofocus>{{ 'templates.contact.form.post_success' | t }}</span>
+      {%- endif -%}
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="form-group">
+            <label for="ContactForm-username">{{'sections.contact.name' | t}}</label>
+            <input type="text" class="form-control" id="ContactForm-username" name="contact[Name]" placeholder="{{'sections.contact.name' | t}}" required>
           </div>
         </div>
+        <div class="col-lg-12 col-md-12">
+          <label class="field__label" for="ContactForm-email">{{ 'templates.contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+          <div class="form-group">
+            <input
+                   autocomplete="email"
+                   type="email"
+                   id="ContactForm-email"
+                   class="form-control"
+                   name="contact[email]"
+                   spellcheck="false"
+                   autocapitalize="off"
+                   value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                   aria-required="true"
+                   {% if form.errors contains 'email' %}
+                   aria-invalid="true"
+                   aria-describedby="ContactForm-email-error"
+                   {% endif %}
+                   placeholder="{{'sections.contact.email' | t}}"
+                   required="required"
+                   >
+            {% if form.errors contains 'email' %}
+            <span class="error-text">
+              {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
+            </span>
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12">
+          <label for="ContactForm-body">{{'sections.contact.message' | t}}</label>
+          <div class="form-group">
+            <textarea id="ContactForm-body" class="form-control" name="contact[Comment]"  placeholder="{{'sections.contact.message' | t}}" rows="3" required="required">{{form.body}}</textarea>
+          </div>
+          <button type="submit" class="button black-btn">{{section.settings.form_button}}</button>
+        </div>
+
+      </div>
+      {% endform %}
+    </div>
   </div>
 </div>
-
 <style>
   #shopify-section-{{section.id}}.shopify-section {
     padding-top:{{section.settings.top_space_desktop}}px;
