@@ -1,3 +1,4 @@
+{% if block.settings.show_description or block.settings.content_heading != blank or block.settings.show_reviews%}
 <div class="product-content-tabs {{position}}"  {{ block.shopify_attributes }}>
   {% if block.settings.show_description %}
   <div class="product-detail">
@@ -54,3 +55,4 @@
   </div>
   {% endif %}
 </div>
+{% endif %}
