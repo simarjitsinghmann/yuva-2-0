@@ -725,6 +725,10 @@ font-size: 12px;
     min-height: 380px;
     max-height: 380px;
   }
+    .banner-caption-title,
+  .carousel-caption-title{
+    max-width: 400px;
+  }
 }
 @media screen and (max-width: 991px) {
   /*==========  common csss start  ==========*/
@@ -832,10 +836,6 @@ font-size: 12px;
   }
   .video-inner-box {
     height: 400px;
-  }
-  .banner-caption-title,
-  .carousel-caption-title{
-    max-width: 450px;
   }
   /*===========  banner css end  ============*/
   /*==============  Whats more css start  ==============*/
