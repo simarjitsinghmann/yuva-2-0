@@ -35,7 +35,7 @@
 </div>
 <style>              
              
-  #banner-{{block.id}} .carousel-caption-title .tag-line { 
+  .banner-{{block.id}} .carousel-caption-title .tag-line { 
     {% if block.settings.sh_bg != blank %}
     background: {{ block.settings.sh_bg }};
     {% endif %}
@@ -44,29 +44,29 @@
     {% endif %}
   }  
                 
-  #banner-{{block.id}} .carousel-caption-title h2 { 
+  .banner-{{block.id}} .carousel-caption-title h2 { 
     {% if block.settings.subh_text != blank %}
     color: {{ block.settings.subh_text }};
     {% endif %}
   }  
-  #banner-{{block.id}} .carousel-caption-title h1 { 
+  .banner-{{block.id}} .carousel-caption-title h1 { 
     {% if block.settings.h_text != blank %}
     color: {{ block.settings.h_text }};
     {% endif %}
   }          
-  #banner-{{block.id}} .carousel-caption-title p { 
+  .banner-{{block.id}} .carousel-caption-title p { 
     {% if block.settings.c_text != blank %}
     color: {{ block.settings.c_text }};
     {% endif %}
   }        
-  #banner-{{block.id}} .carousel-caption-title .button { 
+  .banner-{{block.id}} .carousel-caption-title .button { 
     {% if block.settings.btn_text != blank %}
     color: {{ block.settings.btn_text }};
     {% endif %}
     background-color:{{ block.settings.btn_bg }} ;
   }
 
-  #banner-{{block.id}} .carousel-caption-title .button:hover { 
+  .banner-{{block.id}} .carousel-caption-title .button:hover { 
     {% if block.settings.btn_h_text != blank %}
     color: {{ block.settings.btn_h_text }};
     {% endif %}
