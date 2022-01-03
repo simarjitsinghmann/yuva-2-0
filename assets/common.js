@@ -476,7 +476,7 @@ productVariants=function() {
                                        var _productParent = productOption.closest('.product_content_section');
         setTimeout(function(){    
           const fieldsets = Array.from(_productParent.querySelectorAll('.product-loop-variants'));
-          console.log(fieldsets)
+//           console.log(fieldsets)
           if(variantStyle == 'dropdown'){
             options=fieldsets.map((fieldset) => {
               return Array.from(fieldset.querySelectorAll('select')).find((select) => select).value;
@@ -487,7 +487,7 @@ productVariants=function() {
               return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
             });
           }
-          console.log('options',options)
+//           console.log('options',options)
           var getVariant = variantChange(options,'options',_productParent);
           var buttonWrapper = _productParent.querySelector('[data-button-wrapper]');
           var paymentButtonWrapper = _productParent.querySelector('.Sd_addProduct');
@@ -923,7 +923,7 @@ function faqInit(){
         clearActive();
       }
       else{
-        console.log(iconPlus,iconMinus)
+//         console.log(iconPlus,iconMinus)
         iconPlus.style.display = 'none';
         iconMinus.style.display = 'inline';
         btn.classList.add("active");
@@ -1002,7 +1002,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
       initAnnouncement();
     }
     var pathName = window.location.pathname;
-    console.log(pathName)
+//     console.log(pathName)
     if(pathName.indexOf('/products') > -1){
     recommendedProductsSlider();
     }
