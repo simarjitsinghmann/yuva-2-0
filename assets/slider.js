@@ -22,7 +22,7 @@ function findVisibleItems(){
       thumb.classList.remove('active');
     });
     console.log(size)
-    const relatedThumb = document.querySelectorAll('[href="#'+item.id+'"]')[size];
+    const relatedThumb = document.querySelectorAll('.productThumbImage[href="#'+item.id+'"]')[size];
     if(relatedThumb){
       relatedThumb.classList.add('active');
     }
