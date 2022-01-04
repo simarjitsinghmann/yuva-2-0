@@ -12,6 +12,7 @@ function findVisibleItems(){
   var visibleThumbs=[];
   Array.from(elements).forEach(function(item) {
     if (isOnScreen(item)) {
+      console.log(item.id,'item.id')
       visibleThumbs.push(item.id)
       thumbs = document.getElementsByClassName('productThumbImage');
       Array.from(thumbs).forEach(function(thumb) {
