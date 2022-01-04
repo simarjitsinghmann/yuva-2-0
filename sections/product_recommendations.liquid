@@ -89,10 +89,12 @@
       {% unless product.handle == current_product.handle %}
          {% unless same_vendor and current_product.vendor != product.vendor %}
            {% unless same_type and current_product.type != product.type %}
-    
+    <div class="item">
+          <div class="slider-content">
    
                     {% include 'product-grid' hideRelated:true,hideQuickView:true ,show_second_image : true %}
-  
+      </div>
+  </div>
            {% endunless %}
         {% endunless %}
       {% endunless %}
