@@ -1,133 +1,30 @@
-{% assign current_variant = product.selected_or_first_available_variant %}
-{% assign images = product.media | where: "media_type", "image" %}
-{% assign second_image = '' %}
-{% if images.size > 1 %}
-{% for image in images %}
-{% unless image.src == product.featured_image.src %}
-{% assign second_image = image.src %}
-{% break %}
-{% endunless %}
-{% endfor %}
-{% endif %}
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign images = product.media | where: "media_type", "image" -%}
+{%- assign second_image = '' -%}
+{%- if images.size > 1 -%}
+{%- for image in images -%}
+{%- unless image.src == product.featured_image.src -%}
+{%- assign second_image = image.src -%}
+{%- break -%}
+{%- endunless -%}
+{%- endfor -%}
+{%- endif -%}
 <div class="grid-item col collection-product-grid">
   <div class="card-wrapper">
     <div class="card card--text-only card--soft card--product text__left">
       <div class="card-wrapper-img {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{% endunless %} ">
         <a href="{{product.url | within : collection}}">
-          {% if product.featured_image != blank %}
-          {% render 'lazy-image' image: product.featured_image %}
-          {% unless settings.show_second_image == false or second_image == blank %}          
-          {% render 'lazy-image' image: second_image ,class:'product-second-img' %}
-          {% endunless %} 
-          {%else%}
-          {% render 'placeholder' %}
-          {% endif%}
+          {%- if product.featured_image != blank -%}
+          {%- render 'lazy-image' image: product.featured_image -%}
+          {%- unless settings.show_second_image == false or second_image == blank -%}          
+          {%- render 'lazy-image' image: second_image ,class:'product-second-img' -%}
+          {%- endunless -%} 
+          {%- else -%}
+          {%- render 'placeholder' -%}
+          {%- endif -%}
         </a>
-        {% unless hide_options and settings.show_quick_view == false and settings.show_atc == false %}
-        {% comment %}
-        {% unless has_only_default_variant or product.variants.size == 1 %}
-        <div id="showProductWrap-{{product.id}}" class="product-wrap product_content_section">
-
-          <button class="close-product-wrap" data-product="showProductWrap-{{product.id}}">
-            <svg aria-hidden="true" class="icon icon-close" focusable="false" role="presentation" viewbox="0 0 40 40">
-              <path class="layer" d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z"></path>
-            </svg>
-          </button>
-          {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
-          <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
-          <div class="form-group">
-            {% comment %}
-            {% assign hideATC = false %}
-            {% for option in product.options_with_values %}
-            {% assign downOption = option.name | downcase %}
-            {% assign optionIndex = forloop.index %}
-            {% assign varOptionIndex = 'option'|append:forloop.index %}
-            <div class="select__{{downOption}} product-option-selector">
-              <p class="variant_title">{{ 'products.product.option' | t: title:option.name }}</p>
-              <ul class="product-loop-variants {{downOption}} variants {{ settings.color_swatch_style}} _small list-unstyled">
-                
-                {%- for value in option.values limit:7 -%}  
-                <li class="{{downOption}}_option variant_option">
-                  <input class="productOption" type="radio" name="option-{{optionIndex}}" value="{{value}}" title="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
-
-                  {% assign variantImage = '' %}
-                  {% if settings.variant_image %}                                                                                  
-                  {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
-                  {% for variant in variantsList %}
-                  {% if variant.featured_image != blank %}
-                  {% assign variantImage = variant.featured_image %}
-                  {% break %}
-                  {% endif %}
-                  {% endfor %}
-                  {% endif %}
-                  <span class="option {% if option.selected_value == value %}selected{% endif %}" {% if downOption == 'color' or  downOption == 'colour'%}{% unless settings.variant_image and variantImage != blank %} style="background-color:{{value}};"{% endunless %}{% endif %}>
-                    {% if downOption == 'color' or  downOption == 'colour'%}    
-                    {% if settings.variant_image and variantImage != blank %}    
-                    <img src="{{variantImage| img_url:"100x"}}">
-                    {% endif%}
-                    {% else %}
-                    {{value}}
-                    {% endif%}
-                  </span>
-                </li>
-                {% endfor %}
-                {%- if option.values.size > 7 -%}
-            {% assign hideATC = true %}
-                <li class="{{downOption}}_option variant_option"><a href="{{product.url | within:collection}}">{{ 'products.product.more_options' | t: item : 7 }}</a></li>
-                {%- endif -%}
-              </ul> 
-            </div>
-            {% endfor %}
-            {% assign preorder = false %}
-            {% if settings.enable_preorder and current_variant.inventory_policy == 'continue' and current_variant.inventory_quantity <= 0  %}
-            {% assign preorder = true %}
-            {% endif %}
-            <div class="btn-box product-featured-form-submit {% if section.settings.enable_payment_button %} product-form--payment-button{% endif %} {% unless current_variant.available %}disabled{% endunless %}" data-button-wrapper>
-              {% if hideATC %}
-              <a class="button black-btn small-btn" href="{{product.url | within:collection}}">{{ 'products.product.view_product' | t }}</a>
-              {% else %}
-              <button
-                      type="submit"
-                      name="add"
-                      data-add-to-cart id="Sd_addProduct"
-                      {% unless current_variant.available %}disabled="disabled"{% endunless %}
-                      {% if section_onboarding %}disabled="disabled"{% endif %} class="black-btn button small-btn Sd_addProduct">
-                <span>
-                  {% if product.available %}
-                      {% if preorder %}
-                      {{ 'products.product.preorder' | t }}
-                      {% else %}
-                      {{ 'products.product.add_to_cart' | t }}
-                      {% endif %}
-                  {% else %}
-                  {{ 'products.product.sold_out' | t }}
-                  {% endif %}
-                </span>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                     style="margin: auto; display: none; shape-rendering: auto;" 
-                     width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="svg-loader" >
-                  <circle cx="50" cy="50" fill="none" stroke="#ffffff" stroke-width="6" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
-                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"/>
-                  </circle>
-                </svg>
-              </button>
-
-              {% if product.available %}
-              {% endif %}
-              {% if section.settings.enable_payment_button %}
-              {{ form | payment_button }}
-              {% endif %}
-              {% endif %}
-            </div>
-            {% endcomment %}
-            <a class="link" href="{{product.url | within:collection}}">{{ 'products.product.view_product' | t }}</a>
-          </div>
-            {% render 'product-variants' product:product %}
-          {% endform %}
-        </div>     
-        {% endunless %}
-        {% endcomment %}
-        <div class="shop__options">
+        {%- unless hide_options and settings.show_quick_view == false and settings.show_atc == false -%}
+       <div class="shop__options">
           <div class="product__view__option">
             <ul>
               {%- if settings.show_quick_view -%}
@@ -138,11 +35,11 @@
 				{%- endif -%}
               
               {%- if settings.show_atc -%}
-              {% if has_only_default_variant or product.variants.size == 1 %}
-              {% if product.available %}
+              {%- if has_only_default_variant or product.variants.size == 1 -%}
+              {%- if product.available -%}
 
               <li>
-                {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
+                {%- form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' -%} 
                 <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
                 <button type="submit" class="Sd_addProduct" {% unless product.available %} disabled="disabled"{% endunless %}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
@@ -156,42 +53,42 @@
                     </circle>
                   </svg>
                 </button>
-                {% endform %}
+                {%- endform -%}
               </li>
-              {% endif %}
-              {% else %}
+              {%- endif -%}
+              {%- else -%}
               <li>
                 <a href="{{product.url | within:collection}}" class="showOptions" data-product="showProductWrap-{{product.id}}"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
                   <path class="cls-1" d="M811.524,2918.03a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,811.524,2918.03Zm6.579,0a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,818.1,2918.03Zm7.781-9.41a1.222,1.222,0,0,0-1.01-.59H810.352l-0.688-4.02h-4.638a0.99,0.99,0,1,0,0,1.98h2.941l0.636,3.83,0.89,6.06a1.212,1.212,0,0,0,1.2.99h10.329a1.228,1.228,0,0,0,1.01-.6l3.81-6.52A1.19,1.19,0,0,0,825.884,2908.62Zm-5.336,6.33h-9.155l-0.718-4.95h12.764Z" transform="translate(-804 -2904)"></path>
                   </svg>
                 </a>
               </li>
-              {% endif %}
+              {%- endif -%}
               {%- endif -%}
             </ul>
           </div>
 
         </div>  
-        {% unless hideRelated or settings.show_similar == false %}      
-        <div class="similar_options" data-section="{{section.id}}" data-id="{{product.id}}">
+        {%- unless hideRelated or settings.show_similar == false -%}      
+        <div class="similar_options" data-url="{{product.url}}">
           <span class="vs-icon text-{{settings.show_similar_text}}">
-            {% render 'similar-product-icon' %}
-            {% unless settings.show_similar_text == false %} 
+            {%- render 'similar-product-icon' -%}
+            {%- unless settings.show_similar_text == false -%} 
             <span class="similar-text">{{'products.product.similar_products' | t}}</span>
-            {% endunless %}
+            {%- endunless -%}
           </span>
         </div>
-        {% endunless %}
-        {% endunless %}
-        {% if product.available == false %}
+        {%- endunless -%}
+        {%- endunless -%}
+        {%- if product.available == false -%}
         <div class="product__badge product__on__soldOut">
           {{'products.product.sold_out' | t}}
         </div> 
-        {% elsif product.compare_at_price > product.price%}
+        {%- elsif product.compare_at_price > product.price -%}
         <div class="product__badge product__on__sale">
           {{'products.product.on_sale' | t}}
         </div>
-        {% endif %}
+        {%- endif -%}
       </div>
       <div class="product-information">
         <div class="product-information__wrapper">
@@ -201,28 +98,28 @@
             <div class="price__regular">
               <span class="price-item price-item--regular">
                 <span data-regular-price>{{product.price | money}}</span>
-                {% if product.compare_at_price > product.price %}
+                {%- if product.compare_at_price > product.price -%}
                 <span data-compare-price>
                   {{ product.compare_at_price | money }}
                 </span>
-                {% if settings.show_saved_amount %}        
-                {% if settings.saved_amount_style == 'percentage' %}
+                {%- if settings.show_saved_amount -%}        
+                {%- if settings.saved_amount_style == 'percentage' -%}
                 <span class="percent-off">{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round: 2 | append: "% OFF"}}</span>
-                {% else %}
+                {%- else %}
                 <span class="percent-off">{{ product.compare_at_price | minus: product.price | money | append: " OFF"}}</span>
-                {% endif %}
-                {% endif %}
-                {% endif %}
+                {%- endif -%}
+                {%- endif -%}
+                {%- endif -%}
               </span>
-              {% if product.unit_price_measurement %}
+              {%- if product.unit_price_measurement -%}
             <small class="unit-price">
               {{ product.unit_price | money }} /
-              {% if product.unit_price_measurement.reference_value != 1 %}
+              {%- if product.unit_price_measurement.reference_value != 1 %}
               {{ product.unit_price_measurement.reference_value }}
-              {% endif %}
+              {%- endif -%}
               {{ product.unit_price_measurement.reference_unit }}
             </small>
-            {% endif %}
+            {%- endif -%}
             </div>
             
           </div>
