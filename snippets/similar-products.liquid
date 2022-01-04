@@ -1,4 +1,4 @@
-<div class="similarItemContainer" style="display:none">
+
  {% comment %}
   Number of related items per row,
   and number of rows.
@@ -112,9 +112,8 @@
   {% assign related_items = related_items | trim %} 
   {% endif %}
 
-</div>
 
-<div id="SimilarProductsMain" style="display:none">
+<div id="similarItemContainer" style="display:none">
   {% if related_items.size > 20 %}
   <ul class="results-base results-similarGrid">
     {{ related_items }}
