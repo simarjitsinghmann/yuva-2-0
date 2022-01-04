@@ -51,6 +51,5 @@ function isOnScreen(elem) {
   var bottom = top + height;
 
   return (top >= viewport_top && top < viewport_bottom) ||
-    (bottom > viewport_top && bottom <= viewport_bottom) ||
-    (height > viewport_height && top <= viewport_top && bottom >= viewport_bottom)
+    (bottom > viewport_top && bottom <= viewport_bottom))
 }
