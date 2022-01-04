@@ -15,7 +15,6 @@ function findVisibleItems(){
       visibleThumbs.push(item.id)
       
     }
-  console.log(visibleThumbs,'visibleThumbs')
   var size = 0;
     if(visibleThumbs.length > 2){
       size = Math.floor(visibleThumbs.length / 2)
@@ -26,7 +25,6 @@ function findVisibleItems(){
     });
     const relatedThumb = document.querySelector('.productThumbImage[href="#'+visibleThumbs[size]+'"]');
     
-    console.log(size,relatedThumb)
     if(relatedThumb){
       relatedThumb.classList.add('active');
     }
