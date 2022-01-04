@@ -1080,8 +1080,7 @@ $(document).ready(function(){
     document.querySelector('body').classList.add('similar_Drawer_open');     
     drawer.querySelector('[similar-drawer-body]').innerHTML =preLoadLoadGif;
 	
-    $('[data-drawer-body]').load(getUrl, function() {
-      $(window).trigger('resize');
+    $('.similar_drawer_body[data-drawer-body]').load(getUrl, function() {
       drawer.querySelector('[data-drawer-body]').classList.remove('searching');
       //         showMultipleOptions(); 
     });
