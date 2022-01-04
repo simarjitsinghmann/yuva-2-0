@@ -1079,7 +1079,7 @@ $(document).ready(function(){
     drawer.classList.add('searching');
     document.querySelector('body').classList.add('similar_Drawer_open');     
     drawer.querySelector('[similar-drawer-body]').innerHTML =preLoadLoadGif;
-	
+	console.log(getUrl)
     $('.similar_drawer_body[data-drawer-body]').load(getUrl, function() {
       drawer.querySelector('[data-drawer-body]').classList.remove('searching');
       //         showMultipleOptions(); 
