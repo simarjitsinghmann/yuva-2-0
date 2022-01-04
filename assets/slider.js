@@ -47,9 +47,6 @@ function isOnScreen(elem) {
   if($(window).width() > 768 ){
     top = top + 400;
   }
-  else{
-  top = top - 100;
-  }
   var height = $elem.height();
   var bottom = top + height;
 
