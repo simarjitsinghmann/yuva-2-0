@@ -44,9 +44,12 @@ function isOnScreen(elem) {
   var viewport_bottom = viewport_top + viewport_height;
   var $elem = $(elem);
   var top = $elem.offset().top;
-//   if($(window).width() > 767 ){
-//     top = top + 400;
-//   }
+  if($(window).width() > 768 ){
+    top = top + 400;
+  }
+  else{
+  top = top - 100;
+  }
   var height = $elem.height();
   var bottom = top + height;
 
