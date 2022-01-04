@@ -23,7 +23,7 @@ function findVisibleItems(){
       }
     }
   });
-  console.log(visibleThumbs)
+  console.log(visibleThumbs,'visibleThumbs')
 }
 findVisibleItems()
 function isOnScreen(elem) {
