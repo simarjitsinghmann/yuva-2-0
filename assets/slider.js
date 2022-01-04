@@ -21,7 +21,7 @@ function findVisibleItems(){
     Array.from(thumbs).forEach(function(thumb) {
       thumb.classList.remove('active');
     });
-    const relatedThumb = document.querySelectorAll('.productThumbImage[href="#'+item.id+'"]')[size];
+    const relatedThumb = document.querySelector('.productThumbImage[href="#'+visibleThumbs[size]+'"]');
     
     console.log(size,relatedThumb)
     if(relatedThumb){
