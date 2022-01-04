@@ -22,8 +22,8 @@ function findVisibleItems(){
         relatedThumb.classList.add('active');
       }
     }
-  });
   console.log(visibleThumbs,'visibleThumbs')
+  });
 }
 findVisibleItems()
 function isOnScreen(elem) {
