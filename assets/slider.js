@@ -16,11 +16,12 @@ function findVisibleItems(){
       
     }
   console.log(visibleThumbs,'visibleThumbs')
+  var size = (visibleThumbs.length / 2)
   thumbs = document.getElementsByClassName('productThumbImage');
     Array.from(thumbs).forEach(function(thumb) {
       thumb.classList.remove('active');
     });
-    const relatedThumb = document.querySelectorAll('[href="#'+item.id+'"]')[0];
+    const relatedThumb = document.querySelectorAll('[href="#'+item.id+'"]')[size];
     if(relatedThumb){
       relatedThumb.classList.add('active');
     }
