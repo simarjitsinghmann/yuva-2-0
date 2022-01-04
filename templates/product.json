@@ -30,14 +30,6 @@
           "settings": {
           }
         },
-        "6a876cb6-91ee-4ffe-a4b1-f8b7c7e8c9cd": {
-          "type": "button",
-          "settings": {
-            "dynamic_checkout_btn": true,
-            "show_contact": true,
-            "form_text": "Ask about this product"
-          }
-        },
         "439cfe74-8b0b-4876-ba96-394486c1fdb7": {
           "type": "review-star",
           "settings": {
@@ -71,8 +63,17 @@
         },
         "1fd84199-98b7-4ff9-8610-6ada9ce20f0e": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ product.vendor }}"
+          }
+        },
+        "6a876cb6-91ee-4ffe-a4b1-f8b7c7e8c9cd": {
+          "type": "button",
+          "settings": {
+            "dynamic_checkout_btn": true,
+            "show_contact": true,
+            "form_text": "Ask about this product"
           }
         },
         "338f39d7-4ad9-438f-9dc8-e99fae01f87b": {
@@ -98,13 +99,13 @@
       },
       "block_order": [
         "ed5aa936-0a62-4a16-aa49-2b56113ffdfe",
-        "6a876cb6-91ee-4ffe-a4b1-f8b7c7e8c9cd",
         "439cfe74-8b0b-4876-ba96-394486c1fdb7",
         "abfd10b4-fa40-4666-a606-62c0b5cdf066",
         "c17b7cf0-f3c0-43b5-bcf4-1a9c1ab391c1",
         "62b81903-337b-415e-958a-8dbeff322a7d",
         "de11d30b-4897-43b8-8071-a7d2ce00690f",
         "1fd84199-98b7-4ff9-8610-6ada9ce20f0e",
+        "6a876cb6-91ee-4ffe-a4b1-f8b7c7e8c9cd",
         "338f39d7-4ad9-438f-9dc8-e99fae01f87b",
         "fd19a320-8d78-4d93-a856-8ce38cca056e"
       ],
