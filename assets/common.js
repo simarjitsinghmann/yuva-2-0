@@ -1072,7 +1072,7 @@ $(document).ready(function(){
   $('body').on('click','.similar_options',function(){
     $('.wrapper-overlay').css({"display": "block"});
 
-    var getUrl = $(this).attr('data-url')+'/#similarItemContainer'; 
+    var getUrl = $(this).attr('data-url'); 
 //     var getSection = $(this).attr('data-section'); 
     const drawer = document.querySelector('[data-similar-product-drawer]');
     
@@ -1084,7 +1084,7 @@ $(document).ready(function(){
       drawer.querySelector('[data-drawer-body]').classList.remove('searching');
       //         showMultipleOptions(); 
     });
-    fetch(productRecommendationUrl+"?product_id="+getID+"&limit=10&section_id="+getSection)
+    fetch(getUrl)
     .then(response => response.text())
     .then((text) => {
       const html = document.createElement('div');
