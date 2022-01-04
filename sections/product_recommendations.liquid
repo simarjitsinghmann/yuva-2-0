@@ -132,7 +132,8 @@
 <div class="section-spacer">
 <div class="container">
   <div class="product-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=10">
-    {%- if recommendations.performed and recommendations.products_count > 0 -%}
+  {% assign related_items = related_items | trim %}
+  {% unless related_items == blank %}
     <div id="SimilarProductsMain" class="recent-product">
       <div class="recent-product-header shopify__top__section">
         <h4>{{'products.product.similar_products' | t}}</h4>
@@ -143,7 +144,7 @@
       {%- endfor -%}
       </div>
     </div>
-  {%- endif -%}
+  {%- endunless -%}
   </div>
 
 </div>
