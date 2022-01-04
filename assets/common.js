@@ -1072,8 +1072,8 @@ $(document).ready(function(){
   $('body').on('click','.similar_options',function(){
     $('.wrapper-overlay').css({"display": "block"});
 
-    var getID = $(this).attr('data-id'); 
-    var getSection = $(this).attr('data-section'); 
+    var getUrl = $(this).attr('data-url'); 
+//     var getSection = $(this).attr('data-section'); 
     const drawer = document.querySelector('[data-similar-product-drawer]');
     
     drawer.classList.add('searching');
