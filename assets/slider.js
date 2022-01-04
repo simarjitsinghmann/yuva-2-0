@@ -16,7 +16,7 @@ function findVisibleItems(){
       
     }
   console.log(visibleThumbs,'visibleThumbs')
-  var size = Math.floor(visibleThumbs.length / 2)
+  var size = Math.round(visibleThumbs.length / 2)
   thumbs = document.getElementsByClassName('productThumbImage');
     Array.from(thumbs).forEach(function(thumb) {
       thumb.classList.remove('active');
