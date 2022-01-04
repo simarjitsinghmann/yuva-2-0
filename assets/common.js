@@ -1079,64 +1079,7 @@ $(document).ready(function(){
     drawer.classList.add('searching');
     document.querySelector('body').classList.add('similar_Drawer_open');     
     drawer.querySelector('[similar-drawer-body]').innerHTML =preLoadLoadGif;
-//     fetch(productRecommendationUrl+".json?product_id="+getID+"&limit=6")
-//     .then(response => response.json())
-//     .then(({ products }) => {
-//       var html = '';
-//       if (products.length > 0) {   
-//         html +=`<div class="similarItemContainer">
-//                 <ul class="results-base results-similarGrid">`;
-                 
-//         products.forEach(function(product){
-//         	html +=`<li class="product-base">
-//             <a href="${product.url}">
-//               <div class="product-imageSliderContainer">`;
-//           if (product.featured_image  != null){
-//             var prodImg = product.featured_image.replace(/(\.[^.]*)$/, "_500x$1").replace('http:', '');
-//           } else {
-//             var prodImg = "//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif";
-//           }
-//               html +=`  <div class="img-responsive">
-//                   <img src="${prodImg}" alt="${product.title}" title="${product.title}">
-//                 </div>
-//               </div>`;
-//              html +=`<div class="product-productMetaInfo product-information__wrapper ">
-//                 <div class="caption-with-letter-spacing light">${product.title}</div>
-//                 <div class="product-price price__regular">
-//                     <span class="price-item price-item--regular">
-// 				<span data-regular-price>${Shopify.formatMoney(product.price, moneyFormat)}</span>`;
-//           if(product.compare_at_price > product.price){
-//             html +=`<span data-compare-price>${Shopify.formatMoney(product.compare_at_price, moneyFormat)}</span>`;
-//             if(showSavedAmount){
-//               if(savedAmountStyle == 'percentage'){
-//                 var saved = roundToTwo(((product.compare_at_price - product.price)/product.compare_at_price)*100)+'% OFF';
-//               }
-//               else
-//               {              	
-//                 var saved = Shopify.formatMoney((product.compare_at_price - product.price),moneyFormat) + ' OFF';
-//               }
-//               html +=`<span class="percent-off">${saved}</span>`;
-//             }
-//           }
-//         html +=`</div>
-//         </div>
-//       </a>
-//     </li>`;
-//         })
-//         html +=`</ul>
-//         </div>`;
-//       }
-//       else{
-//         html = `<div class="SimilarNoResults" style="">
-//           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49px" height="50px">
-//           <image x="0px" y="0px" width="49px" height="50px" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAyCAQAAABfAfs5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkARYRMQNLo02IAAADSUlEQVRYw7WXW0hUQRjHf7tbWmoXzZLSQLuTkRYZWg9qmWWXpaALPgUF0UNEPXSnt25ERVgE4UMUGFRvZQUVRJGFaKBRS5rZRYtwTVkr09I9vZzGOXvO2Z096jcv3+z8v+83c/abM3NchLN4FlFIDqkk4gJ+4+cVz6jiE0Ng2ZynGc2y/aCSTcQMJn0m1/lrk36g1VPqLL2Hw/yMmP5/u0NatAA31yxT9dNNj+XIG+aGT+ky9DK4yGrDL3W8wIePNrrxMJ7pZJFJPmMlTRu7uaG2gjTeG+b3iGLclsp0jhMwaHeqAEZTLYV8Z2sE/RzuGh5kcWTEJSmgjjlK6z4mxXxjSnhxsSSuZaLakwX2SnG3wgljeS2EzUxWBgCUS5CV9rJDkmx5VABIoFbEvmWUtSiOFiGqiBIAkEufiN9oLfEKQQ+zHSDgpshQaS24ovaHhbGlIkMXk8zDSTQJgdchwo1P5FhnHpxPuu77eeIQEeS28OebEZl4dL+OgEMEPBVeihmRKvwPjgHQgqZ7Y8yIOOH7B4EI0KN7I82IAesfBOIvfbqnhQ65CQo/TjWfhcXb7Wtw0yr8GYNApIkH1GVGNAl/rqit6C1beB1mhI9O3Z/GTMeIAuG1mAdH8FjszP0OAcl06hmC0nokOyAQPpuzOpLtEhkazEULkMEvIdnhAJDERxF/1E50WbpKZkSNGLh5dTDBTjSLXiErjxKwXjoxj4UTnpOE26MATJKOgi8khpOOk27h/cqQqbyUprY5kjyfP5L8pMLrpMDwcVCmMqcSuqWQRg6GWfhy7kmXAg2N02oL9xogGi2cISek0tPZLm1WuZ2yTuoK6S/jZkjhaTTyjlYCxJLCNOYRbzvFI5xQWckSqUYit178hv4etceVzAWbz5XQ9pxc8qR3g4bGFjUIZHOWaoK2yT9TQan+RiviqzTSRpEqBCCLfdynVczzDx3UUMZaw1cSZNIqQfqM9zGXAiiBZJLwoPGLdptLxAIeSmXSzQYeRLMWNcsTZ4aGRoC8oUdAkeGPb2fhcEBKDJAvZA0HZLGhujpYNRwQr6G4f1Ls/FpjZw34WSN6MXQNPQJq+M0K0asfDgRUEaRQ98tVtp4z20Y+Lp5y9R89MxMHU4TKlQAAAABJRU5ErkJggg=="></image>
-//           </svg>
-//           <p>{{ 'general.no_similar_found' | t}}</p>
-//           </div>`;
-//       } 
-//         drawer.querySelector('[similar-drawer-body]').innerHTML = html;  
-//       }
-//     );
+
     fetch(productRecommendationUrl+"?product_id="+getID+"&limit=10&section_id="+getSection)
     .then(response => response.text())
     .then((text) => {
