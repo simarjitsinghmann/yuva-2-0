@@ -1080,10 +1080,10 @@ $(document).ready(function(){
     document.querySelector('body').classList.add('similar_Drawer_open');     
     drawer.querySelector('[similar-drawer-body]').innerHTML =preLoadLoadGif;
 	console.log(getUrl)
-    $('.similar_drawer_body').load(getUrl, function() {
-      drawer.querySelector('[data-drawer-body]').classList.remove('searching');
-      //         showMultipleOptions(); 
-    });
+//     $('.similar_drawer_body').load(getUrl, function() {
+//       drawer.querySelector('[data-drawer-body]').classList.remove('searching');
+//       //         showMultipleOptions(); 
+//     });
     fetch(getUrl)
     .then(response => response.text())
     .then((text) => {
