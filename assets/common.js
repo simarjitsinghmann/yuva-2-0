@@ -1090,7 +1090,7 @@ $(document).ready(function(){
       const html = document.createElement('div');
       html.innerHTML = text;
       const recommendations = html.querySelector('.similarItemContainer');
-      console.log(recommendations,recommendations.innerHTML.trim().length)
+      console.log(recommendations)
       if (recommendations && recommendations.innerHTML.trim().length) {
         drawer.querySelector('[similar-drawer-body]').innerHTML = recommendations.innerHTML;   
         drawer.classList.remove('searching');
