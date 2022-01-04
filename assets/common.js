@@ -1073,17 +1073,12 @@ $(document).ready(function(){
     $('.wrapper-overlay').css({"display": "block"});
 
     var getUrl = $(this).attr('data-url'); 
-//     var getSection = $(this).attr('data-section'); 
     const drawer = document.querySelector('[data-similar-product-drawer]');
     
     drawer.classList.add('searching');
     document.querySelector('body').classList.add('similar_Drawer_open');     
     drawer.querySelector('[similar-drawer-body]').innerHTML =preLoadLoadGif;
-	console.log(getUrl)
-//     $('.similar_drawer_body').load(getUrl, function() {
-//       drawer.querySelector('[data-drawer-body]').classList.remove('searching');
-//       //         showMultipleOptions(); 
-//     });
+
     fetch(getUrl)
     .then(response => response.text())
     .then((text) => {
