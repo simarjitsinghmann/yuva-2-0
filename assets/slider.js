@@ -22,9 +22,6 @@ function findVisibleItems(){
         relatedThumb.classList.add('active');
       }
     }
-    else{
-    visibleThumbs.remove(item.id)
-    }
   console.log(visibleThumbs,'visibleThumbs')
   });
 }
