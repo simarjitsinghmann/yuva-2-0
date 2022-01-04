@@ -9,8 +9,10 @@ window.addEventListener('scroll', function(event){
 });
 
 function findVisibleItems(){
+  var visibleThumbs={};
   Array.from(elements).forEach(function(item) {
     if (isOnScreen(item)) {
+      visibleThumbs.push(item.id)
       thumbs = document.getElementsByClassName('productThumbImage');
       Array.from(thumbs).forEach(function(thumb) {
         thumb.classList.remove('active');
@@ -21,6 +23,7 @@ function findVisibleItems(){
       }
     }
   });
+  console.log(visibleThumbs)
 }
 findVisibleItems()
 function isOnScreen(elem) {
