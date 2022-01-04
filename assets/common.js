@@ -1072,7 +1072,7 @@ $(document).ready(function(){
   $('body').on('click','.similar_options',function(){
     $('.wrapper-overlay').css({"display": "block"});
 
-    var getUrl = $(this).attr('data-url')+'#similarItemContainer'; 
+    var getUrl = $(this).attr('data-url')+'/#similarItemContainer'; 
 //     var getSection = $(this).attr('data-section'); 
     const drawer = document.querySelector('[data-similar-product-drawer]');
     
