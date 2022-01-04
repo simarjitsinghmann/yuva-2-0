@@ -9,7 +9,7 @@ window.addEventListener('scroll', function(event){
 });
 
 function findVisibleItems(){
-  var visibleThumbs={};
+  var visibleThumbs=[];
   Array.from(elements).forEach(function(item) {
     if (isOnScreen(item)) {
       visibleThumbs.push(item.id)
