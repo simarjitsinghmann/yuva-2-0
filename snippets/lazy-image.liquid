@@ -15,9 +15,10 @@
     class="image__img lazyload {{ image_class }}"
     src="{{ image | img_url: '300x300' }}"
     data-src="{{ img_url }}"
-    data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
-    data-aspectratio="{{ image.aspect_ratio }}"
-    data-sizes="auto"
+     data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048, 2450, 2700, 3000, 3350, 3750, 4100]"
+      data-aspectratio="{{ image.aspect_ratio }}"
+       data-parent-fit="cover"
+       data-sizes="auto"
     alt="{{ image.alt | escape }}"
   >
 </div>
