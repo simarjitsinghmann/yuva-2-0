@@ -10,7 +10,6 @@
   endif
 -%}
 
-<div class="image js-enabled {% unless disable_style %}image--{{ id }} {% endunless %}{{ wrapper_class }}">
   <img
     class="lazyload {{ image_class }}"
     src="{{ image | img_url: '300x300' }}"
@@ -20,7 +19,6 @@
        data-sizes="auto"
     alt="{{ image.alt | escape }}"
   >
-</div>
 
 <noscript>
   <div class="image image--{{ id }} {{ wrapper_class }}">
