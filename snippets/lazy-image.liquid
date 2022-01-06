@@ -23,12 +23,6 @@
   >
 </div>
 
-  <style>
-    .image--{{ id }} {
-      padding-top: {{ padding_top }};
-    }
-  </style>
-
 <noscript>
   <div class="image image--{{ id }} {{ wrapper_class }}">
     <img class="image__img" src="{{ image | img_url: '2048x2048' }}" alt="{{ image.alt | escape }}">
