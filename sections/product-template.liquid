@@ -1,7 +1,7 @@
 {% form 'contact', class: 'product-query__form contact__form' %}
 {%- assign success_msg = 'contact.form.post_success' | t -%}
 {% render 'form-status', form: form, form_id: 'product-query', success_message: success_msg %}
-<input type="text" name="contact[Subject]" value="Product Query" readonly class="hidden no-js"/>
+<input type="text" name="contact[Topic]" value="Product Query" readonly class="hidden no-js"/>
 <h2 class="ff-heading">More information about this artwork?</h2>
 <br/>
 <label for="contact-ContactFormName" class="visually-hidden">{{ 'contact.form.name' | t }}</label>
