@@ -259,7 +259,9 @@ else{
               callback(cart); 
           },
           error: function(XMLHttpRequest, textStatus) {
-            console.log(XMLHttpRequest, textStatus);
+            jQuery.getJSON(cartUrl, function (cart, textStatus) {
+              callback(cart); 
+            });
           }
         };
     jQuery.ajax(params);
