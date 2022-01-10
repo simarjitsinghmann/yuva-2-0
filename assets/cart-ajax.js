@@ -96,13 +96,15 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
     $('#ShippingWrapperResponse').html('<p class="error-text">'+feedback+'</p>').addClass('error').show();
   }
   var _render = function(response) {
-    if(response){
-
+ if(response && response.length > 0){
       var html= '';
       response.forEach(function(shipping){
         html += `<p class="delievery-text success-text">${shipping.name}:${Shopify.formatMoney((shipping.price*100),moneyFormat)}</p>`;
       })
       $('#ShippingWrapperResponse').html(html).addClass('success').show();
+    }
+    else{      
+      $('#ShippingWrapperResponse').html('<p class="error-text">Shipping not available for this location</p>').addClass('error').show();
     }
   };  
   setTimeout(function(){
