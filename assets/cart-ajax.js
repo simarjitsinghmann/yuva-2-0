@@ -139,7 +139,23 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
       },
       error: function(XMLHttpRequest, textStatus) {
         jQuery.getJSON(cartUrl, function (cart, textStatus) {
+          if(quantity == 0 ){ 
+            $('[name="item_quantity"][data-line="'+line+'"]').closest('tr').remove();
+          }
+          if(cart.item_count == 0 ){
+            $('[cart-form]').hide();
+            $('[cart-empty]').show();                    
+            $('[data-cart-count]').hide();
+          }
+          else{ 
+            $('[data-cart-count]').show();
+
+            var item = cart.items[line-1];
+            if(item){
+              $('[name="item_quantity"][data-line="'+line+'"]').val(item.quantity);
+            }
             cartPageUpdate(cart);
+          }
         });
       }
     };
