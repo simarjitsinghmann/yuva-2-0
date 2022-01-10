@@ -92,7 +92,6 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
   };
   var _onError = function(XMLHttpRequest, textStatus) {
     var data = eval('(' + XMLHttpRequest.responseText + ')');
-  
     feedback = errorLabel +' : ' + _fullMessagesFromErrors(data).join(', ') + '.';  
     $('#ShippingWrapperResponse').html('<p class="error-text">'+feedback+'</p>').addClass('error').show();
   }
@@ -111,6 +110,8 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
   },500)
 }());
   
+  // Update quantity based on input on change
+
   changeCartItem = function(line, quantity) {    
     var  params = {
       type: 'POST',
@@ -118,12 +119,11 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
       data: 'quantity=' + quantity + '&line=' + line,
       dataType: 'json',
       success: function(cart) {
-        jQuery.getJSON(cartUrl, function (cart, textStatus) {
           if(quantity == 0 ){ 
             $('[name="item_quantity"][data-line="'+line+'"]').closest('tr').remove();
           }
           if(cart.item_count == 0 ){
-            $('#cart[cart-form]').hide();
+            $('[cart-form]').hide();
             $('[cart-empty]').show();                    
             $('[data-cart-count]').hide();
           }
@@ -136,7 +136,6 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
             }
             cartPageUpdate(cart);
           }
-        });
       },
       error: function(XMLHttpRequest, textStatus) {
       }
@@ -238,9 +237,7 @@ else{
           data: 'quantity=' + quantity + '&line=' + line,
           dataType: 'json',
           success: function(cart) {
-            jQuery.getJSON(cartUrl,function (cart, textStatus) {
               callback(cart); 
-            });
           },
           error: function(XMLHttpRequest, textStatus) {
             console.log(XMLHttpRequest, textStatus);
