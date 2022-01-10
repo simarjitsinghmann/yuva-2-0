@@ -138,6 +138,9 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
           }
       },
       error: function(XMLHttpRequest, textStatus) {
+        jQuery.getJSON(cartUrl, function (cart, textStatus) {
+            cartPageUpdate(cart);
+        });
       }
     };
     jQuery.ajax(params);
