@@ -350,24 +350,24 @@
         load: (fancybox, slide) => {
          	var fancyBoxContainer = $('body').find('.fancybox__container');
           if (slide.type === "image") {
-          if(fancyBoxContainer.find('.fancybox__bg_container').length == 0 ){
-          	fancyBoxContainer.append(`<div class="fancybox__bg_container"><img class="fancybox__bg_container_image" src="${fancybox.getSlide().src}"/></div>`);
+//           if(fancyBoxContainer.find('.fancybox__bg_container').length == 0 ){
+//           	fancyBoxContainer.append(`<div class="fancybox__bg_container"><img class="fancybox__bg_container_image" src="${fancybox.getSlide().src}"/></div>`);
             
-          }
-            else{
-            	fancyBoxContainer.find('.fancybox__bg_container_image').attr('src',fancybox.getSlide().src);
-            }
+//           }
+//             else{
+//             	fancyBoxContainer.find('.fancybox__bg_container_image').attr('src',fancybox.getSlide().src);
+//             }
             console.log('<a target="_blank" href="' +fancybox.getSlide().src +'">Download image</a>');
           }
         },
         done: (fancybox, slide) => {
           var fancyBoxContainer = $('body').find('.fancybox__container');
-          if(fancyBoxContainer.find('.fancybox__bg_container').length == 0 ){
+//           if(fancyBoxContainer.find('.fancybox__bg_container').length == 0 ){
           	
-          }
-          if (slide.type === "image") {
-            console.log('<a target="_blank" href="' +fancybox.getSlide().src +'">Download image</a>');
-          }
+//           }
+//           if (slide.type === "image") {
+//             console.log('<a target="_blank" href="' +fancybox.getSlide().src +'">Download image</a>');
+//           }
           console.log(fancybox+'#'+slide.index+'slide is loaded!  '+fancybox.getSlide().index);
         }
       },
