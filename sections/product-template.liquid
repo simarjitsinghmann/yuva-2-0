@@ -348,7 +348,7 @@
     Fancybox.bind(fancySelector, {
       on: {
         done: (fancybox, slide) => {
-          console.log('#'+slide.index+'slide is loaded!  '+fancybox.getSlide().index);
+          console.log(fancybox+'#'+slide.index+'slide is loaded!  '+fancybox.getSlide().index);
           console.log('This slide is selected: '+fancybox.getSlide().index === slide.index);
         }
       },
