@@ -344,20 +344,19 @@
 </style>
 <script>
   $(document).ready(function(){
-    Fancybox.bind('[data-fancybox="gallery{{section.id}}"]', {
-                  Toolbar: {
-                  display: [
-                  "close",
-                  ],
-                  },
-                  on: {
-                  load: (fancybox, slide) => {
-      console.log(`#${slide.index} slide is loaded!`);
-      console.log(
-        `This slide is selected: ${fancybox.getSlide().index === slide.index}`
-      );
-  }
-  });
+    var fancySelector= '[data-fancybox="gallery{{section.id}}"]';
+    Fancybox.bind(fancySelector, {
+      Toolbar: {
+        display: [
+          "close",
+        ],
+      },
+      on: {
+        load: (fancybox, slide) => {
+          console.log('#'+slide.index+'slide is loaded!`);
+                      console.log('This slide is selected: '+fancybox.getSlide().index === slide.index);
+        }
+      });
   })
 </script>
 {{'slider.js' | asset_url | script_tag}}
