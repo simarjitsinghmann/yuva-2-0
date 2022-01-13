@@ -347,6 +347,11 @@
     var fancySelector= '[data-fancybox="gallery{{section.id}}"]';
     Fancybox.bind(fancySelector, {
       on: {
+        load: (fancybox, slide) => {
+          if (slide.type === "image") {
+            console.log('<a target="_blank" href="' +slide.src +'">Download image</a>');
+          }
+        },
         done: (fancybox, slide) => {
           console.log(fancybox+'#'+slide.index+'slide is loaded!  '+fancybox.getSlide().index);
         }
