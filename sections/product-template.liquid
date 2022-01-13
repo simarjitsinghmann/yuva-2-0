@@ -348,6 +348,7 @@
     Fancybox.bind(fancySelector, {
       on: {
         load: (fancybox, slide) => {
+         	var fancyBoxContainer = $('body').find('.fancybox__container');
           if (slide.type === "image") {
             console.log('<a target="_blank" href="' +fancybox.getSlide().src +'">Download image</a>');
           }
