@@ -353,10 +353,11 @@
       },
       on: {
         load: (fancybox, slide) => {
-          console.log('#'+slide.index+'slide is loaded!`);
-                      console.log('This slide is selected: '+fancybox.getSlide().index === slide.index);
+          console.log('#'+slide.index+'slide is loaded!');
+          console.log('This slide is selected: '+fancybox.getSlide().index === slide.index);
         }
-      });
+      }
+    });
   })
 </script>
 {{'slider.js' | asset_url | script_tag}}
