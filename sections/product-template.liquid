@@ -352,7 +352,7 @@
         ],
       },
       on: {
-        load: (fancybox, slide) => {
+        done: (fancybox, slide) => {
           console.log('#'+slide.index+'slide is loaded!');
           console.log('This slide is selected: '+fancybox.getSlide().index === slide.index);
         }
