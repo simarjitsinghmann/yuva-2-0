@@ -346,16 +346,16 @@
   $(document).ready(function(){
     var fancySelector= '[data-fancybox="gallery{{section.id}}"]';
     Fancybox.bind(fancySelector, {
-      Toolbar: {
-        display: [
-          "close",
-        ],
-      },
       on: {
         done: (fancybox, slide) => {
           console.log('#'+slide.index+'slide is loaded!  '+fancybox.getSlide().index);
           console.log('This slide is selected: '+fancybox.getSlide().index === slide.index);
         }
+      },
+      Toolbar: {
+        display: [
+          "close",
+        ],
       }
     });
   })
