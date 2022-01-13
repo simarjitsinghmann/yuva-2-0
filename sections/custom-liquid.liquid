@@ -1,0 +1,99 @@
+<div class="section-spacer">
+  <div class="container">
+    <div class="rich-text-description text__{{section.settings.content_alignment}}">
+      {{ section.settings.custom_liquid }}
+    </div>
+  </div>
+</div>
+
+<style>
+  #shopify-section-{{section.id}}.shopify-section {
+    padding-top:{{section.settings.top_space_desktop}}px;
+    padding-bottom:{{section.settings.bottom_space_desktop}}px;
+  }
+  @media only screen and (max-width:575px) {
+    #shopify-section-{{section.id}}.shopify-section{
+      padding-top:{{section.settings.top_space_mobile}}px;
+      padding-bottom:{{section.settings.bottom_space_mobile}}px;
+    }
+  }
+</style>
+{% schema %}
+{
+  "name": "t:sections.custom-liquid.name",
+  "tag": "section",
+  "class": "custom-liquid-section",
+  "settings": [
+    {
+      "type": "liquid",
+      "id": "custom_liquid",
+      "label": "t:sections.custom-liquid.settings.custom_liquid.label",
+      "info": "t:sections.custom-liquid.settings.custom_liquid.info"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "t:sections.custom-liquid.settings.content_alignment.label",
+      "default": "center",
+      "options": [
+        {
+          "label": "t:sections.custom-liquid.settings.content_alignment.options.left.label",
+          "value": "left"
+        },
+        {
+          "label": "t:sections.custom-liquid.settings.content_alignment.options.center.label",
+          "value": "center"
+        },
+        {
+          "label": "t:sections.custom-liquid.settings.content_alignment.options.right.label",
+          "value": "right"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "top_space_desktop",
+      "label": "t:sections.custom-liquid.settings.top_space_desktop.label",
+      "default":30,
+      "min":0,
+      "max":60,
+      "step":5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_desktop",
+      "label": "t:sections.custom-liquid.settings.bottom_space_desktop.label",
+      "default":30,
+      "min":0,
+      "max":60,
+      "step":5
+    },
+    {
+      "type": "range",
+      "id": "top_space_mobile",
+      "label": "t:sections.custom-liquid.settings.top_space_mobile.label",
+      "default":30,
+      "min":0,
+      "max":60,
+      "step":5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_mobile",
+      "label": "t:sections.custom-liquid.settings.bottom_space_mobile.label",
+      "default":30,
+      "min":0,
+      "max":60,
+      "step":5
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings":{
+			"custom_liquid":"<p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.<\/p><p>I’m a great place for you to tell a story and let your users know a little more about you.<\/p><p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.<\/p><p>I’m a great place for you to tell a story and let your users know a little more about you.<\/p>"
+		}
+    }
+  ]
+}
+{% endschema %}

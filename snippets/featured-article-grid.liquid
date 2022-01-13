@@ -1,46 +1,62 @@
-{% unless section.settings.style == 'style2' %}
-<div class="item grid__item style1">
+<div class="item col-12 col-sm-12 col-md-6 col-lg-4">
     <div class="post-wrapper">
-        <div class="post-information">
             {% assign article_image = 'featured_image.png' | asset_url %}
             {% if article.image %}
-            {% assign article_image = article.image | img_url:'master' %}
+            {% assign article_image = article.image %}
             {% endif %}
             <div class="post-information-image">
-                <a href="{{article.url}}" class="animate_hvrbr">
-                    <img src="{{article_image}}" alt="">
+                <a href="{{article.url}}" class="animate_hvrbr">                    
+                  {% if article.image != blank %}
+                  {% include 'lazy-image' image:article_image%}
+                  {% else %}
+                  {% render 'placeholder' %}
+                  {% endif %}
                 </a>
             </div>
             <div class="post-information__wrapper text__left">
                 <div class="post-date">
-                    <h4 class="custom-title">{{article.published_at | date: "%d" }}<span>{{article.published_at | date: " %b %Y" }}</span></h4>
+                    <span class="custom-title">{{article.published_at | date: "%d" }} {{article.published_at | date: " %b %Y" }} </span>
                 </div>
-                <div class="post-name"><p><a href="{{article.url}}">{{article.title}}</a></p></div>
+                <div class="post-name">
+                  <h6><a href="{{article.url}}">{{article.title| truncatewords: 6}}</a></h6>
+                  {% assign word_limit = 6 %}
+                  {% if desc_limit %}{% assign word_limit = desc_limit %}{% endif %}
+                  <p>{{article.excerpt_or_content | strip_html | truncatewords: word_limit}}</p>
+              </div>
             </div>
-        </div>
     </div>
 </div>
 
-{% else %}
 
-<div class="item grid__item style2">
-    <div class="post-wrapper">
-      <div class="post-information">          
-        {% assign article_image = 'featured_image.png' | asset_url %}
-        {% if article.image %}
-        {% assign article_image = article.image | img_url:'master' %}
-        {% endif %}
-        <div class="post-information-image">
-          <a href="{{article.url}}" class="animate_hvrbr"><img src="{{article_image}}"" alt=""></a>
-        </div>
-        <div class="post-information__wrapper text__left">
-          <div class="post-date">
-            <p>{{article.published_at | date: "%d %b %Y" }}</p>
-          </div>
-          <h5>{{article.title | truncatewords: 6}}</h5>
-          <div class="post-name"><p><a href="javascript:void(0)">{{article.excerpt_or_content | truncatewords: 6}}</a></p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  {% endunless %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

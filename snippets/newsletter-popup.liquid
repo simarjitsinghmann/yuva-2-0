@@ -1,91 +1,101 @@
 {% if settings.newsletter_pop_enable %}
 {{ 'newsletter-popup.css' | asset_url | stylesheet_tag }}
-    <div class="newsletter-popup" style="display:none">
-        <div class="newsletter-popup-inner" style="background:{{settings.newsletter_bk}}">
-            <div class="popclose">
-                <a class="pop_cross" href="javascript:;">
-                    <svg height="13" viewbox="0 0 13 13" width="13" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <style>
-                .close {
-                  fill: #323030;
-                  fill-rule: evenodd;
-                  opacity: 0.6;
-                }
-              </style>
-                        </defs>
-                        <path d="M1235.63,300.5l5.11-5.115a0.813,0.813,0,0,0-1.15-1.15l-5.11,5.115-5.12-5.115a0.813,0.813,0,1,0-1.15,1.15l5.12,5.115-5.12,5.116a0.809,0.809,0,0,0,0,1.15,0.82,0.82,0,0,0,.58.238,0.8,0.8,0,0,0,.57-0.238l5.12-5.115,5.11,5.115a0.814,0.814,0,0,0,1.15,0,0.809,0.809,0,0,0,0-1.15Z" transform="translate(-1228 -294)"/>
-                    </svg>
-                </a>
-            </div>
-            <div class="popup-body row align-items-center">
-                {% if settings.newsletter_left_image != blank %}
-                <div class="col-md-5">
-                    <div class="news-img">
-                        <img src="{{ settings.newsletter_left_image | img_url: 'master' }}"/>
-                    </div>
-                </div>
-                {% endif %}
-                <div class="{% if settings.newsletter_left_image != blank %}col-md-7{% else %}col-md-12{% endif %}">
-                    <div class="news-content">
-                        <div class="nl-content text-center">
-                            <div class="discount">
-                                <h2 style="color:{{settings.newsletter_heading_color}}">{{settings.newsletter_heading}}</h2>
-                                <div class="newsDescription">
-                                    {{settings.newsletter_description}}
-                                </div>
-                            </div>
-                            <form accept-charset="UTF-8" action="/contact#contact_form" class="contact-form" id="contact-form-popup" method="post">
-                                <input name="form_type" type="hidden" value="customer">
-                                <input name="utf8" type="hidden" value="✓">
-
-                                <div class="input-news-letter">
-                                    {{ form.errors | default_errors }}
-                                    {% if form.posted_successfully? %}
-                                        <p>{{ 'general.newsletter_form.confirmation' | t }}</p>
-                                    {% else %}
-                                        <input name="contact[tags]" type="hidden" value="newsletter">
-                                        <input type="email" name="contact[email]" id="EmailId" value="{% if customer.email != blank %}{{ customer.email }}{% endif %}" placeholder="{{ 'newsletter.email_placeholder' | t }}" autocapitalize="off" class="form-control enter-email" required>
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" id="SubscribeBtn" name="commit" type="submit">
-                                                <span>{{'newsletter.button_label' | t }}</span>
-                                            </button>
-                                        </div>
-                                    {% endif %}
-                                </div>
-                                <div class="close_dialog">
-                                <input type="checkbox" id="close-dialog" name="close-dialog">
-                                <label for="dialog-close">Do not show this dialog again</label>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
-        </div>
+<div class="newsletter-popup" style="display:none">
+  <div class="newsletter-popup-inner" style="background:{{settings.newsletter_bk}}">
+    <div class="popclose">
+      <a class="pop_cross" href="javascript:;">
+        <svg height="13" viewbox="0 0 13 13" width="13" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <style>
+              .close {
+                fill: #323030;
+                fill-rule: evenodd;
+                opacity: 0.6;
+              }
+            </style>
+          </defs>
+          <path d="M1235.63,300.5l5.11-5.115a0.813,0.813,0,0,0-1.15-1.15l-5.11,5.115-5.12-5.115a0.813,0.813,0,1,0-1.15,1.15l5.12,5.115-5.12,5.116a0.809,0.809,0,0,0,0,1.15,0.82,0.82,0,0,0,.58.238,0.8,0.8,0,0,0,.57-0.238l5.12-5.115,5.11,5.115a0.814,0.814,0,0,0,1.15,0,0.809,0.809,0,0,0,0-1.15Z" transform="translate(-1228 -294)"/>
+        </svg>
+      </a>
     </div>
-    <style>
-    .newsletter-popup .newsletter-popup-inner .popup-body .nl-content .newsDescription h6, .newsletter-popup .newsletter-popup-inner .popup-body .nl-content .newsDescription p{
-     color:{{settings.newsletter_description_color}}
-    }
-  </style>
-    <script>
-      /* NEWSLETTER POPUP STARTS */
-        var getnew_Pop = Cookies.get('Newsletter_closed');
-        if(getnew_Pop!="Newsletter_closed_val"){
-            $('.newsletter-popup').fadeIn('slow');  
-            $('body').addClass('NewsletterActive'); 
-        }else{
-        }
-        $("body").on('click', '.newsletter-popup .pop_cross,.newsletter-popup .popclose', function (e) {
-            e.preventDefault();
-            Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: {{settings.popup_cookie}}, path: '/' });
-            $('.newsletter-popup').fadeOut('slow');
-            $('body').removeClass('NewsletterActive');         
-        });
-/* NEWSLETTER POPUP ENDS */
-  </script>
+    <div class="popup-body row align-items-center">
+      {% if settings.newsletter_left_image != blank %}
+      <div class="col-md-12 popup_left_ares">
+        <div class="news-img">
+          {% render 'lazy-image' image:settings.newsletter_left_image %}
+        </div>
+      </div>
+      {% endif %}
+      <div class="{% if settings.newsletter_left_image != blank %}col-md-12{% else %}col-md-12{% endif %}">
+        <div class="nl-content text__center">
+          <div class="discount">
+            <h2 style="color:{{settings.newsletter_heading_color}}">{{settings.newsletter_heading}}</h2>
+            <div class="newsDescription">
+              {{settings.newsletter_description}}
+            </div>
+          </div>
+          {%- form 'customer', id: 'contact-form-popup',class:'contact-form' -%}
+
+          <input type="hidden" name="contact[tags]" value="newsletter">
+
+          <div class="input-news-letter">
+            {% if form.posted_successfully? %}
+            <span class="success-text">{{ 'newsletter.success' | t }}</span>
+            {% else %}
+            <div class="form-group">
+              <input class="form-control" type="email" name="contact[email]" id="EmailId" 
+                     value="{% if customer.email != blank %}{{ customer.email }}{% else %}{{ form.email }}{% endif %}" 
+                     placeholder="{{ 'newsletter.email_placeholder' | t }}" autocapitalize="off" class="form-control enter-email" required>
+            </div>
+
+            {%- if form.errors -%}
+            <span class="newsletter-form__message form__message error-text" id="Newsletter-error--{{ section.id }}">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
+            {%- endif -%}
+            <button class="button black-btn btn-block" id="SubscribeBtn" name="commit">
+              <span>{{'newsletter.button_label' | t }}</span>
+            </button>
+            {% endif %}
+          </div>
+          {% endform %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .newsletter-popup .newsletter-popup-inner .popup-body .nl-content .newsDescription h6, .newsletter-popup .newsletter-popup-inner .popup-body .nl-content .newsDescription p{
+    color:{{settings.newsletter_description_color}}
+  }
+</style>
+<script>
+  /* NEWSLETTER POPUP STARTS */
+  var getnew_Pop = Cookies.get('Newsletter_closed');
+  if(getnew_Pop!="Newsletter_closed_val" && window.location.pathname.indexOf('/challenge') < 0 ){
+    console.log(window.location.pathname)
+    $('.newsletter-popup').fadeIn('slow');  
+    $('body').addClass('NewsletterActive').addClass('scrollHidden'); 
+  }else{
+  }
+  $("body").on('click', '.newsletter-popup .pop_cross,.newsletter-popup .popclose', function (e) {
+    e.preventDefault();
+    var form = $(this).parent().find('form');
+
+    var date = new Date();
+    date.setTime(date.getTime() + (parseInt('{{settings.popup_cookie}}') * 24 * 60 * 60 * 1000));
+                                            Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: date, path: '/' });
+                                   $('.newsletter-popup').fadeOut('slow');
+                 $('body').removeClass('NewsletterActive').removeClass('scrollHidden');         
+  });
+  $('button[name="commit"]').click(function(e){
+    e.preventDefault();
+    var form = $(this).closest('form');
+
+//     var date = new Date();
+//     date.setDate(date.getTime() + parseInt('{{settings.popup_cookie}}') * 24 * 60 * 60 * 1000);
+
+//                                            Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: date, path: '/' });
+                 form.submit();
+  })
+  /* NEWSLETTER POPUP ENDS */
+</script>
 {% endif %}

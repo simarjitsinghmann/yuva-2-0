@@ -1,79 +1,101 @@
+<div class="section-spacer">
 <div class="container">
-    <div class="row">
-        <div class="shopify__top__section text__center">
-            <h4>{{section.settings.title}}</h4>
-            <h6><span>{{section.settings.handle}}</span></h6>
-        </div>
-        {% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
-          <div class="instagram-post-list" id="instafeed"></div>
-        {% else %}
-        <div class="instagram-post-list">
-            <ul>
-                <li>
-                    <div class="instagram-post-detail">
-                        <img src="https://yova.shinedezign.pro/assets/images/insta-post1.jpg" alt="">
-                        <div class="insta-icon"><i class="fab fa-instagram"></i></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="instagram-post-detail">
-                        <img src="https://yova.shinedezign.pro/assets/images/insta-post2.jpg" alt="">
-                        <div class="insta-icon"><i class="fab fa-instagram"></i></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="instagram-post-detail">
-                        <img src="https://yova.shinedezign.pro/assets/images/insta-post3.jpg" alt="">
-                        <div class="insta-icon"><i class="fab fa-instagram"></i></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="instagram-post-detail">
-                        <img src="https://yova.shinedezign.pro/assets/images/insta-post4.jpg" alt="">
-                        <div class="insta-icon"><i class="fab fa-instagram"></i></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="instagram-post-detail">
-                        <img src="https://yova.shinedezign.pro/assets/images/insta-post1.jpg" alt="">
-                        <div class="insta-icon"><i class="fab fa-instagram"></i></div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-      {% endif %}
-    </div>
+  <div class="shopify__top__section section-heading-box text__center">
+    <h2>{{section.settings.heading}}</h2>
+    <p class="instagramUserName">{{section.settings.subheading}}</p>
+  </div>
+  <div class="instagram-post-list">
+{% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
+    <ul id="instafeed"></ul>
+    {% else %}
+    <ul>
+      {% for i in (1..6) %}
+      <li>
+        <a>
+          <div class="instagram-post-detail">
+            <div class="insta-placeholder">
+            {% render 'placeholder' %}
+            </div>
+            <div class="insta-icon">
+              <i class="fab fa-instagram"></i>
+            </div>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+{% endif %}
+  </div>
+</div>
 </div>
 {% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
+<script src="{{'instafeed.min.js' | asset_url}}"></script> 
 <script>
-  var userFeed = new Instafeed({
-    get: 'user',
-    userId: '{{ section.settings.insta_user_id}}',
-    accessToken: '{{ section.settings.insta_access_Token}}',
-    limit: 6,
-    resolution : 'standard_resolution'
-  });
-  userFeed.run();
-  setTimeout(function(){ $('#instafeed a').attr('target','_blank'); }, 1000);
+  function instagramFeed(){
+    var userFeed = new Instafeed({
+      get: 'user',
+      userId: '{{ section.settings.insta_user_id}}',
+      accessToken: '{{ section.settings.insta_access_Token}}',
+      limit: 6,
+      resolution : 'standard_resolution',
+      template:'<li><a href="{% raw %}{{link}}{% endraw %}" aria-label="Instagram Post"><div class="instagram-post-detail"><img src="{% raw %}{{image}}{% endraw %}" alt="{{caption}}"><div class="insta-icon"><i class="fab fa-instagram"></i></div></div></a></li>'
+    });
+    userFeed.run();
+    setTimeout(function(){ 
+      $('#instafeed a').attr('target','_blank');    
+                         }, 2000);
+  }
+  instagramFeed();
 </script>
 {% endif %}
+<style>
+  #shopify-section-{{section.id}}.shopify-section{
+    background-color:{{section.settings.bgcolor}};
+    padding-top:{{section.settings.top_space_desktop}}px;
+    padding-bottom:{{section.settings.bottom_space_desktop}}px;
+  }
+  .instagram-post-list {
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .instagram-post-list > a {
+    flex: 0 0 20%;
+  }
+  .instagram-post-list > a:not(:last-child) {
+    margin-right: 10px;
+  }
+  .instagram-post-list > a > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media only screen and (max-width:575px) {
+    #shopify-section-{{section.id}}.shopify-section{
+      padding-top:{{section.settings.top_space_mobile}}px;
+      padding-bottom:{{section.settings.bottom_space_mobile}}px;
+    }
+  }
+</style>
 {% schema %} 
   {
     "name": "t:sections.instagram.name",
     "tag": "section",
-    "class":"instagram-post",
+    "class":"instagram-post instagram-section",
     "settings": [
       {
         "type": "text",
-        "id": "title",
-        "label": "t:sections.instagram.settings.title.label",
-        "default": "Follow Us On Instagram"
+        "id": "heading",
+        "label": "t:sections.instagram.settings.heading.label",
+        "default": "@instafeed"
       },
       {
-        "type": "text",
-        "id": "handle",
-        "label": "t:sections.instagram.settings.handle.label",
-		    "default": "@themewexample"
+        "type": "textarea",
+        "id": "subheading",
+        "label": "t:sections.instagram.settings.subheading.label",
+        "default": "Use this section to show Instagram posts related to your brand."
       },
        {
         "type": "text",
@@ -84,6 +106,48 @@
         "type": "text",
         "id": "insta_access_Token",
         "label": "t:sections.instagram.settings.insta_access_Token.label"
+      },
+      {
+        "type": "color",
+        "id": "bgcolor",
+        "label": "t:sections.instagram.settings.bgcolor.label",
+        "default":"#ffffff"
+      },
+      {
+        "type": "range",
+        "id": "top_space_desktop",
+        "label": "t:sections.instagram.settings.top_space_desktop.label",
+        "default":45,
+        "min":0,
+        "max":60,
+        "step":5
+      },
+      {
+        "type": "range",
+        "id": "bottom_space_desktop",
+        "label": "t:sections.instagram.settings.bottom_space_desktop.label",
+        "default":60,
+        "min":0,
+        "max":60,
+        "step":5
+      },
+      {
+        "type": "range",
+        "id": "top_space_mobile",
+        "label": "t:sections.instagram.settings.top_space_mobile.label",
+        "default":30,
+        "min":0,
+        "max":60,
+        "step":5
+      },
+      {
+        "type": "range",
+        "id": "bottom_space_mobile",
+        "label": "t:sections.instagram.settings.bottom_space_mobile.label",
+        "default":30,
+        "min":0,
+        "max":60,
+        "step":5
       }
     
     ],

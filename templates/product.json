@@ -1,17 +1,33 @@
 {
   "sections": {
+    "1640095094e3d7c888": {
+      "type": "promotion-banner",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "heading": "Promotion",
+        "text": "Add the details of your promotion",
+        "link": "shopify:\/\/collections\/all",
+        "label": "Shop now",
+        "bgcolor": "#746850",
+        "bgcolor_opacity": 26,
+        "textcolor": "#746850",
+        "btntextcolor": "#fafafa",
+        "btnbgcolor": "rgba(0,0,0,0)",
+        "btnborder": "#ffffff",
+        "border_radius": 0,
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 0,
+        "bottom_space_mobile": 0
+      }
+    },
     "product-template": {
       "type": "product-template",
       "blocks": {
         "ed5aa936-0a62-4a16-aa49-2b56113ffdfe": {
           "type": "title",
           "settings": {
-          }
-        },
-        "1fd84199-98b7-4ff9-8610-6ada9ce20f0e": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}"
           }
         },
         "439cfe74-8b0b-4876-ba96-394486c1fdb7": {
@@ -27,9 +43,6 @@
         "c17b7cf0-f3c0-43b5-bcf4-1a9c1ab391c1": {
           "type": "variant",
           "settings": {
-            "option_style": "swatch",
-            "color_swatch_style": "circle",
-            "variant_image": true
           }
         },
         "de11d30b-4897-43b8-8071-a7d2ce00690f": {
@@ -37,44 +50,65 @@
           "settings": {
           }
         },
+        "1fd84199-98b7-4ff9-8610-6ada9ce20f0e": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}"
+          }
+        },
         "6a876cb6-91ee-4ffe-a4b1-f8b7c7e8c9cd": {
           "type": "button",
           "settings": {
-            "dynamic_checkout_btn": true
+            "dynamic_checkout_btn": true,
+            "show_contact": true,
+            "form_text": "Ask about this product"
           }
         },
-        "9c14b6d3-3d19-4794-aca1-94bf4a214594": {
-          "type": "description_tab",
+        "338f39d7-4ad9-438f-9dc8-e99fae01f87b": {
+          "type": "social-icons",
           "settings": {
-            "width": "full"
           }
         },
-        "790ec41d-8bd8-443f-ac42-1d66a534e1f9": {
-          "type": "reviews_tab",
+        "62b81903-337b-415e-958a-8dbeff322a7d": {
+          "type": "content",
+          "disabled": true,
           "settings": {
-            "width": "full"
+            "width": "half",
+            "style": "accordion",
+            "show_description": false,
+            "content_heading": "Heading",
+            "content": "<p>Content<\/p>",
+            "show_reviews": true
           }
         },
-        "81d04aa1-a5e3-44a2-9d3f-472be7c70831": {
-          "type": "accordion",
+        "fd19a320-8d78-4d93-a856-8ce38cca056e": {
+          "type": "highlights",
+          "disabled": true,
           "settings": {
-            "heading": "Specification",
-            "content": "<p><strong>What is Lorem Ipsum?<\/strong><\/p><p><strong>Lorem Ipsum<\/strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<\/p>",
-            "width": "full"
+            "highlight_heading": "Key Highlights",
+            "hp_name_1": "Fabric",
+            "hp_value_1": "Cotton Stuff",
+            "hp_name_2": "Shape",
+            "hp_value_2": "A-Line same",
+            "hp_name_3": "Print or Pattern Type",
+            "hp_value_3": "Solid Pro",
+            "hp_name_4": "Occasion",
+            "hp_value_4": "Casual Design"
           }
         }
       },
       "block_order": [
         "ed5aa936-0a62-4a16-aa49-2b56113ffdfe",
-        "1fd84199-98b7-4ff9-8610-6ada9ce20f0e",
         "439cfe74-8b0b-4876-ba96-394486c1fdb7",
         "abfd10b4-fa40-4666-a606-62c0b5cdf066",
         "c17b7cf0-f3c0-43b5-bcf4-1a9c1ab391c1",
         "de11d30b-4897-43b8-8071-a7d2ce00690f",
+        "1fd84199-98b7-4ff9-8610-6ada9ce20f0e",
         "6a876cb6-91ee-4ffe-a4b1-f8b7c7e8c9cd",
-        "9c14b6d3-3d19-4794-aca1-94bf4a214594",
-        "790ec41d-8bd8-443f-ac42-1d66a534e1f9",
-        "81d04aa1-a5e3-44a2-9d3f-472be7c70831"
+        "338f39d7-4ad9-438f-9dc8-e99fae01f87b",
+        "62b81903-337b-415e-958a-8dbeff322a7d",
+        "fd19a320-8d78-4d93-a856-8ce38cca056e"
       ],
       "settings": {
         "gallery_style": "stacked"
@@ -84,10 +118,24 @@
       "type": "product_recommendations",
       "settings": {
       }
+    },
+    "16406001779a25869a": {
+      "type": "video-banner",
+      "disabled": true,
+      "settings": {
+        "videofile": "https:\/\/cdn.shopify.com\/s\/files\/1\/0597\/9668\/5009\/files\/placeholder-video.mp4?v=1640600092",
+        "title": "Video with text overlay",
+        "full_width": true,
+        "overlay": true,
+        "bgcolor": "#707070",
+        "opacity": 40
+      }
     }
   },
   "order": [
+    "1640095094e3d7c888",
     "product-template",
-    "product_recommendations"
+    "product_recommendations",
+    "16406001779a25869a"
   ]
 }

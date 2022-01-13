@@ -1,92 +1,75 @@
-<div class="slide-menu-outer"></div>
 <div class="side-menu">
-   <div class="inner-side">
-      <button class="close-btn">
-          <svg aria-hidden="true" class="icon icon-close" focusable="false" role="presentation" viewbox="0 0 40 40">
-              <path class="layer" d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z"></path>
-          </svg>
-          Close
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-         <ul class="navbar-nav mr-auto list-menu list-menu--inline">
-            {% unless section.blocks.size > 0 and section.settings.megamenu %}	
-            {%- for link in section.settings.menu.links -%}
-            <li class="nav-item {% if link.links != blank %}dropdown{% endif %} {% if link.current %}active{% endif %}">
-               <a class="list-menu__item {% if link.links != blank %}toggle open-menu-drop{% endif %}" href="{% if link.links != blank %}javascript:void(0){%else%}{{ link.url }}{% endif %}">{{link.title | split:"{badge" | first | escape | capitalize }}</a>
-               {%- if link.links != blank -%}
-               <ul class="inner child">                  
-                  <div class="inner-child-menu">
-                     <div class="menu_back_btn">
-                           <button class="back-btn">
-                              <svg height="17.031" viewbox="0 0 24 17.031" width="24" xmlns="http://www.w3.org/2000/svg">
-                                 <defs>
-                                       <style>.cls-1 {fill-rule: evenodd;}</style>
-                                 </defs>
-                                 <path class="cls-1" d="M684,76.476H663.835l6.119-6.091-1.412-1.406-7.132,7.1h0L660,77.484l1.413,1.406,7.132,7.1,1.412-1.406-6.148-6.121H684V76.476Z" transform="translate(-660 -68.969)"></path>
-                              </svg>
-                              Back
-                           </button>
-                     </div>
-                     <div class="category_title">
-                           <h4>{{link.title | split:"{badge" | first | escape | capitalize }}</h4>
-                     </div>
-                  </div>
-                  {%- for childlink in link.links -%}
-                        <li>
-                           {% assign childlink_url = childlink.url %}
-                           {% if childlink.links != blank %}
-                              {% assign childlink_url = 'javascript:void(0)'%}
-                           {% endif%}
-                           <a class="toggle-level" href="{%- if childlink.links != blank -%}javascript:void(0){% else %}{{ childlink_url }}{% endif %}">
-                              {{ childlink.title | split:"{badge" | first | escape | captilize }} <span class="caret"></span></a>
-                             
-                           {%- if childlink.links != blank -%}
-                           <ul class="inner grandchild">
-                              
-                           <div class="inner-child-menu">
-                              <div class="menu_back_btn">
-                                    <button class="back-btn">
-                                       <svg height="17.031" viewbox="0 0 24 17.031" width="24" xmlns="http://www.w3.org/2000/svg">
-                                          <defs>
-                                                <style>
-                                       .cls-1 {
-                                          fill-rule: evenodd;
-                                       }
-                                       </style>
-                                          </defs>
-                                          <path class="cls-1" d="M684,76.476H663.835l6.119-6.091-1.412-1.406-7.132,7.1h0L660,77.484l1.413,1.406,7.132,7.1,1.412-1.406-6.148-6.121H684V76.476Z" transform="translate(-660 -68.969)"></path>
-                                       </svg>
-                                       Back
-                                    </button>
-                              </div>
-                              <div class="category_title">
-                                    <h4>{{ childlink.title | split:"{badge" | first | escape | captilize }}</h4>
-                              </div>
-                           </div>
-                              {%- for grandchildlink in childlink.links -%}
-                              <li>
-                                    <a href="{{ grandchildlink.url }}"><span>{{ grandchildlink.title | split:"{badge" | first | escape | captilize }}</span></a>
-                              </li>
-                              {%- endfor -%}
-                           </ul>
-                        {% endif %}
-                        </li>
-                  {%- endfor-%}	
-               </ul>
-               {% endif %}
-            </li>	
-            {%- endfor-%}
-            {% else %}                        
-            {% render 'mega-menu' sectin:section %}
-      {% endunless %}
-         </ul>
-         <div class="navigation-close-mob" style="display:none;">
-            <a href="javascript:void(0)" title="close_navigation" class="close-btn">
-               <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 40 40">
-                  <path d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z" class="layer"></path>
-               </svg>
-            </a>
-         </div>
+  <div class="inner-side">
+    <button class="close-btn">
+      <svg aria-hidden="true" class="icon icon-close" focusable="false" role="presentation" viewbox="0 0 40 40">
+        <path class="layer" d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z"></path>
+      </svg>
+      Close
+    </button>
+    <div class="collapse navbar-collapse navbar-collapse-sidebar">
+      <ul class="navbar-nav mr-auto list-menu list-menu--inline">
+        {%- for link in linklists[section.settings.menu].links -%}
+        {% assign menuIndex = forloop.index %}
+        {% assign menuDropdown = false %}
+        {% for block in section.blocks %}
+        {% assign blockPosition = block.settings.position | plus:0 %}
+        {% if blockPosition == menuIndex %}
+        {% assign menuDropdown = true %}
+        {% break %}
+        {% endif %}
+        {% endfor %}
+        <li class="nav-item {% if link.links != blank or menuDropdown  %}dropdown{% endif %} {% if link.current %}active{% endif %}">
+          <a class="list-menu__item {% if link.links != blank  or menuDropdown %}toggle {% endif %}" {% unless link.links != blank or menuDropdown  %}href="{{ link.url }}"{% endunless%}>{{link.title | split:"{badge" | first | escape | capitalize }}</a>
+          {%- if link.links != blank or menuDropdown  -%}
+          <div class="inner child">                  
+            <ul>
+              {%- for childlink in link.links -%}
+              <li class="nav-item {% if childlink.links != blank %}dropdown{% endif %}">
+                {% assign childlink_url = childlink.url %}
+                {% if childlink.links != blank %}
+                {% assign childlink_url = 'javascript:void(0)'%}
+                {% endif%}
+                <a class="toggle-level" {%- unless childlink.links != blank -%}href="{{ childlink_url }}"{% endunless %}>
+                  {{ childlink.title | split:"{badge" | first | escape | captilize }}</a>
+
+                {%- if childlink.links != blank -%}
+                <div class="inner grandchild">
+                  <ul>
+                    {%- for grandchildlink in childlink.links -%}
+                    <li class="nav-item">
+                      <a href="{{ grandchildlink.url }}">{{ grandchildlink.title | split:"{badge" | first | escape | captilize }}</a>
+                    </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+                {% endif %}
+              </li>
+              {%- endfor-%}	
+
+              {%- if menuDropdown -%}
+              {% include 'side-mega-menu' %}
+              {%- endif -%}
+            </ul>
+          </div>
+          {% endif %}
+        </li>	
+        {%- endfor-%}
+        {%- if customer -%}
+        <li class="nav-item {% if link.current %}active{% endif %}">
+          <a class="list-menu__item" href="{{-routes.account_url-}}">{{'customer.account.title' | t | capitalize }}</a>
+        </li>
+        {%- endif -%}
+      </ul>
+    </div>
+    <div class="lower-nav">
+      {% include 'social-media-icons' %}
+      <div class="menu-login-btn">
+        {%- if customer -%}
+        <a class="button black-btn drawer-login-btn" href="{{ routes.account_logout_url }}">{{'customer.log_out' | t | capitalize }}</a>
+        {%- else -%}
+        <a class="button black-btn drawer-login-btn" href="{{routes.account_login_url}}">{{'customer.log_in' | t | capitalize }}</a>
+        {%- endif -%}
       </div>
-   </div>
+    </div>
+  </div>
 </div>

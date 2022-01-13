@@ -1,0 +1,56 @@
+{% assign collection = ''%}
+{% if m_collection != blank %}
+{% assign collection = m_collection %}
+{% endif %}
+<div class="card-wrapper left-sided">
+  <div class="card__warpper__detail left__sided">
+    <div class="collection-image">
+      {% if custom == false and collection.featured_image != blank %} 
+      {% include 'lazy-image' image:collection.featured_image %}
+      {% elsif custom == true and mc_image == blank and collection.featured_image != blank %}
+      {% include 'lazy-image' image:collection.featured_image %}
+      {% elsif custom and mc_image != blank  %}
+      {% include 'lazy-image' image:mc_image %}
+      {%else%}
+            {% render 'placeholder' %}
+      {% endif %}
+    </div>
+    <div class="collection-detail">
+      <h2>
+        {% if custom == false %}
+        {{collection.title}}
+        {% elsif custom and mc_heading != blank  %}
+        {{mc_heading}}
+        {% endif %}
+      </h2>
+      <p>
+        {% if custom == false %}
+        {{collection.description | strip_html | truncatewords: 12, ".." }}
+        {% elsif custom and mc_desc != blank  %}
+        {{mc_desc| strip_html | truncatewords: 12, ".." }}
+        {% endif %}
+      </p>
+      {% if mc_btntext != blank %}
+
+      {% if custom and mc_btnlink != blank  %}
+      {% assign btnlink = mc_btnlink %}
+      {% else %}
+      {% assign btnlink = collection.url %}
+      {% endif%}               
+
+      {% if btnlink != blank %}
+      <a href="{{btnlink}}" class="mainColbutton-{{section.id}} collection-list-btn">                       
+        <span>
+
+          {% if section.settings.button_icon %}
+          <svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> 
+          {% endif %}
+          {{mc_btntext}}
+        </span>
+      </a>
+      {% endif %}
+      {% endif %}
+    </div>
+  </div>
+
+</div>

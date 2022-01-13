@@ -1,47 +1,30 @@
-{% if section.settings.height != 'use_image' %}
-  <style>
-    @media only screen and (max-width: 480px){
-      [data-section-id="{{ section.id }}"] video{
-        width: auto !important;
-        height: 100% !important;
-      }
-    }
-  </style>
-  {% endif %}
-  
-  <div class="section--image fade-in-child preventOverflow home-video-sec {{ section.settings.height }} {{ section.settings.color }}" data-section-id="{{ section.id }}" data-section-type="hero" data-overlay-header>
-  
-    <video autoplay loop muted playsinline width="100%" height="750px" poster="{{section.settings.poster | img_url:'master'}}">
+<div class="section--image fade-in-child {% unless section.settings.full_width %}container{% endunless %} preventOverflow video-sec {{ section.settings.height }} {{ section.settings.color }}" data-section-id="{{ section.id }}" data-section-type="hero" data-overlay-header>
+  <div class="video-inner-box">
+    <video id="videoFile" autoplay muted loop playsinline width="100%" {% if section.settings.poster !=blank %}poster="{{section.settings.poster | img_url:'master'}}"{% endif %}>
       <source src="{{ section.settings.videofile }}" type="video/mp4" id="{{ section.id }}">
     </video> 
     <div class="videoOverlay"></div>
-    {% unless section.settings.link_text == blank and section.settings.title == blank and section.settings.description == blank %}
-    {% if section.settings.link_text == '' and section.settings.link  %}
-      <a href="{{ section.settings.link }}">
-    {% endif %}
-  
-    <div class="flex-absolute {{ section.settings.text_position }} {{ section.settings.text_align }}">
-      <div class="wrapper preventOverflowContent">
-        {% unless section.settings.title == '' %}
-          <h1 class="title--overlay h2">{{ section.settings.title | escape }}</h1>
-        {% endunless %}
-        {% unless section.settings.description == '' %}
-          <p class="content--overlay h5--body">{{ section.settings.description }}</p>
-        {% endunless %}
-        {% unless section.settings.link_text == '' %}
-          <a class="{{ section.settings.button_style }} cta--overlay btn--large uppercase black-btn button" href="{{ section.settings.link }}">{{ section.settings.link_text | escape }}</a>
-        {% endunless %}
-      </div>
+    <div class="container">
+      {% unless section.settings.title == blank and section.settings.description == blank %}
+     
+
+        <div class="flex-absolute center text__center">
+          <div class="wrapper preventOverflowContent">
+            {% unless section.settings.title == '' %}
+            <h2 class="title--overlay h2">{{ section.settings.title | escape }}</h2>
+            {% endunless %}
+            {% unless section.settings.description == '' %}
+            <p class="content--overlay h5--body">{{ section.settings.description }}</p>
+            {% endunless %}
+          </div>
+        </div>
+      {% endunless %}
     </div>
-        
-    {% if section.settings.link_text == '' and section.settings.link %}
-      </a>
-    {% endif %}
-    {% endunless %}
   </div>
+</div>
 <style>
   {% if section.settings.overlay %}
-  .home-video-sec .videoOverlay {
+  .video-sec .videoOverlay {
     position: absolute;
     top: 0; 
     left: 0;
@@ -59,15 +42,17 @@
     margin-top: 25px;
   }
 </style>
+
     {% schema %}
     {
       "name": "t:sections.video-banner.name",
+      "class": "video-banner-section",
       "settings": [
         {
           "type": "text",
           "id": "videofile",
           "label": "t:sections.video-banner.settings.videofile.label",
-          "default": "https://cdn.shopify.com/s/files/1/2018/8867/files/ice.mp4"
+          "default": "https://cdn.shopify.com/s/files/1/0597/9668/5009/files/placeholder-video.mp4?v=1640600092"
         },
         {
           "type": "image_picker",
@@ -75,20 +60,16 @@
           "label": "t:sections.video-banner.settings.poster.label"
         },
         {
-          "type": "header",
-          "content": "t:sections.video-banner.settings.header.content"
-        },
-        {
           "type": "text",
           "id": "title",
           "label": "t:sections.video-banner.settings.title.label",
-          "default": "Video with text overlay"
+          "default": "Talk about your brand here"
         },
         {
-          "type": "textarea",
-          "id": "description",
-          "label": "t:sections.video-banner.settings.description.label",
-          "default": "This area is used to describe your store."
+          "type": "checkbox",
+          "id": "full_width",
+          "label": "t:sections.video-banner.settings.full_width.label",
+          "default": true   
         },
         {
           "type": "checkbox",
@@ -100,101 +81,22 @@
           "type": "color",
           "id": "bgcolor",
           "label": "t:sections.video-banner.settings.bgcolor.label",
-          "default": "#707070" 
+          "default": "#EADEC4" 
         },
         {
           "type": "range",
           "id": "opacity",
           "label": "t:sections.video-banner.settings.opacity.label",
-          "default": 40,
+          "default": 25,
           "min":0,
           "max":100,
           "step":1,
           "unit":"%"          
-        },
-        {
-          "type": "select",
-          "id": "text_position",
-          "label": "t:sections.video-banner.settings.text_position.label",
-          "default": "center",
-          "options": [
-            {
-              "label": "t:sections.video-banner.settings.text_position.top-left.label",
-              "value": "top-left"
-            },
-            {
-              "label": "t:sections.video-banner.settings.text_position.top-center.label",
-              "value": "top-center"
-            },
-            {
-              "label": "t:sections.video-banner.settings.text_position.top-right.label",
-              "value": "top-right"
-            },
-            {
-              "label": "t:sections.video-banner.settings.text_position.center-left.label",
-              "value": "center-left"
-            },
-            {
-              "label": "t:sections.video-banner.settings.text_position.center.label",
-              "value": "center"
-            },
-            {
-              "label": "t:sections.video-banner.settings.text_position.center-right.label",
-              "value": "center-right"
-            },
-            {
-              "label": "t:sections.video-banner.settings.text_position.bottom-left.label",
-              "value": "bottom-left"
-            },
-            {
-              "label": "t:sections.video-banner.settings.text_position.bottom-center.label",
-              "value": "bottom-center"
-            },
-            {
-              "label": "t:sections.video-banner.settings.text_position.bottom-right.label",
-              "value": "bottom-right"
-            }
-          ]
-        },
-        {
-          "type": "select",
-          "id": "text_align",
-          "label": "t:sections.video-banner.settings.text_align.label",
-          "default": "text__center",
-          "options": [
-            {
-              "label": "t:sections.video-banner.settings.text_align.left.label",
-              "value": "text__left"
-            },
-            {
-              "label": "t:sections.video-banner.settings.text_align.center.label",
-              "value": "text__center"
-            },
-            {
-              "label": "t:sections.video-banner.settings.text_align.right.label",
-              "value": "text__right"
-            }
-          ]
-        },
-        {
-          "type": "header",
-          "content": "t:sections.video-banner.settings.header2.content"
-        },
-        {
-          "type": "text",
-          "id": "link_text",
-          "label": "t:sections.video-banner.settings.link_text.label",
-          "default": "View products"
-        },
-        {
-          "type": "url",
-          "id": "link",
-          "label": "t:sections.video-banner.settings.link.label"
         }
       ],
       "presets": [
         {
-          "name": "Video with text overlay"
+          "name": "t:sections.video-banner.presets.name"
     }
       ]
     }

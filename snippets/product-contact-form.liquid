@@ -1,0 +1,48 @@
+{%- if template == 'product' -%}
+<div class="askmeMain" style="display: none;">
+  <div class="askmecontainer">   
+    <a class="ask_cross">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+        <defs>
+          <style>
+            .close {
+              fill: #323030;
+              fill-rule: evenodd;
+              opacity: 0.6;
+            }
+          </style>
+        </defs>
+        <path d="M1235.63,300.5l5.11-5.115a0.813,0.813,0,0,0-1.15-1.15l-5.11,5.115-5.12-5.115a0.813,0.813,0,1,0-1.15,1.15l5.12,5.115-5.12,5.116a0.809,0.809,0,0,0,0,1.15,0.82,0.82,0,0,0,.58.238,0.8,0.8,0,0,0,.57-0.238l5.12-5.115,5.11,5.115a0.814,0.814,0,0,0,1.15,0,0.809,0.809,0,0,0,0-1.15Z" transform="translate(-1228 -294)"></path>
+      </svg>    
+    </a>
+    <h3 class="productheading">{{product.title}}</h3>    
+
+
+    {%- form 'contact', id: 'ContactForm' -%}
+
+
+    <input type="hidden" name="contact[product]" id="ContactFormProduct" placeholder="Product:" value="{{product.title}}">
+    <div class="form-group">
+      <label for="ContactFormName">{{'sections.contact.name' | t}}</label>
+      <input class="form-control" type="text" name="contact[name]" id="ContactFormName" placeholder="{{'sections.contact.name' | t}}" value="" required="">
+    </div>    
+      <div class="row">
+        <div class="col-md-6 form-group">
+          <label for="ContactFormEmail">{{'sections.contact.email' | t}}</label>
+          <input class="form-control" type="email" name="contact[email]" id="ContactFormEmail" placeholder="{{'sections.contact.email' | t}}" value="" spellcheck="false" autocomplete="off" autocapitalize="off" required="">
+
+        </div>
+        <div class="col-md-6 form-group">
+          <label for="ContactFormPhone">{{'sections.contact.number' | t}}</label>
+          <input class="form-control" type="tel" name="contact[phone]" id="ContactFormPhone" placeholder="{{'sections.contact.number' | t}}" value="" pattern="[0-9\-]*">
+        </div>
+      </div>
+    <div class="form-group">
+      <label for="ContactFormMessage">{{'sections.contact.message' | t}}</label>
+      <textarea class="form-control" rows="5" name="contact[body]" id="ContactFormMessage" placeholder="{{'sections.contact.message' | t}}" required=""></textarea>
+    </div>
+    <button type="submit" class="button black-btn submit-button">Send</button>
+    {% endform %}
+  </div>
+</div>
+{%- endif -%}

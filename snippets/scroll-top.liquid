@@ -1,0 +1,37 @@
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 326 326" width="326" height="326">
+	<title>up1-svg</title>
+	<style>
+		tspan { white-space:pre }
+		.s0 { fill: #ffffff } 
+	</style>
+	<g id="Folder 1">
+		<path id="Shape 1" class="s0" d="m74 41h164v235h-164v-235z" />
+		<path id="Layer" fill-rule="evenodd" class="s1" d="m325.91 163c0 89.79-73.12 162.91-162.91 162.91c-89.79 0-162.91-73.12-162.91-162.91c0-89.79 73.12-162.91 162.91-162.91c89.79 0 162.91 73.12 162.91 162.91zm-92.06-10.98c4.17-4.55 4.17-11.75-0.38-15.91l-62.51-62.51c-2.27-2.27-4.93-3.41-7.96-3.41c-2.65 0-5.68 1.14-7.96 3.41l-62.51 62.51c-4.55 4.17-4.55 11.37 0 15.91c2.27 2.27 5.3 3.41 7.96 3.41c2.65 0 5.68-1.14 7.96-3.41l43.19-43.57v136.39c0 6.44 4.93 11.37 11.37 11.37c6.44 0 11.37-4.93 11.37-11.37v-136.01l43.57 43.19c2.27 2.27 5.3 3.41 7.96 3.41c2.65 0 5.68-1.14 7.96-3.41l0 0z" />
+	</g>
+</svg>
+</button>
+<style>
+
+
+</style>
+<script>
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      mybutton.style.display = "flex";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+   jQuery('html, body').animate({ scrollTop:0},'slow');
+  }
+</script>

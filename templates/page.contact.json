@@ -1,17 +1,32 @@
 {
   "sections": {
     "main": {
-      "type": "main-page"
-    },
-    "form": {
-      "type": "contact-form",
+      "type": "contact-page-template",
       "settings": {
-        "heading": ""
+        "banner": "shopify:\/\/shop_images\/nature-mountains-flower-landscape-adventure.jpg",
+        "contact_heading": "Customer Service",
+        "phone_heading": "PHONE US",
+        "phone_number": "+1234567890",
+        "email_heading": "EMAIL",
+        "email": "info@yuva.com",
+        "address_heading": "ADDRESS",
+        "address": "#123 abc main city",
+        "form_heading": "Get In Touch",
+        "form_button": "SEND MESSAGE",
+        "form_info": "<p><strong>Our Stores<\/strong><\/p><p>00 Terry Francois Street<\/p><p>San Francisco, CA 94158<\/p><p>info@mysite.com<\/p><p>Tel: 123-456-7890<\/p><p><\/p><p><strong>Opening Hours<\/strong><\/p><p>Monday - Friday: 11.00 - 18.30<\/p><p>Saturday: 11.00 - 17.00<\/p><p>Sunday: 12.30 - 16.30<br\/><br\/><\/p>"
+      }
+    },
+    "163835510349b82019": {
+      "type": "contact-form",
+      "disabled": true,
+      "settings": {
+        "form_heading": "Get In Touch",
+        "form_button": "SEND MESSAGE"
       }
     }
   },
   "order": [
     "main",
-    "form"
+    "163835510349b82019"
   ]
 }

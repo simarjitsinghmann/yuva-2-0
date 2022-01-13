@@ -1,0 +1,110 @@
+{% layout none %}
+{%- if cart.item_count > 0 -%}
+  <div class="cart-item-container">
+    {% assign shippingTarget = settings.shipping_rate | times:100%}
+    {% if settings.enable_shipping and settings.shipping_rate != blank %}
+    {% assign shippingPending = shippingTarget | minus: cart.total_price | money %}
+    {% assign shippingPercentage = cart.total_price | times:100 | divided_by:shippingTarget %}
+    {% if shippingPercentage > 10 and shippingPercentage < 100 %}
+    {% assign shippingPercentage = shippingPercentage | minus:5 %}
+    {% endif %}
+    {% if cart.total_price < shippingTarget %}
+    <p>{{settings.shipping_text | replace : '||amount||',shippingPending}}</p>
+    {% else %}
+    <p>{{settings.free_shipping_text}}</p>
+    {% endif %}
+    <div class="progress">
+      <div class="progress-bar" role="progressbar"
+           aria-valuemin="0" aria-valuemax="100" style="width:{{shippingPercentage}}%">
+        <span class="sr-only">{{shippingPercentage}}% Complete</span>
+      </div>
+    </div>
+    {% endif %}
+    <div class="cart-items-wrapper">
+      {% for item in cart.items %}
+      <div class="media-link" data-line="{{forloop.index}}">
+        <img src="{{item.image | img_url:'150x'}}" alt="{{item.product.title}}" width="65" height="73">
+        <div class="media-body">
+          <a href="{{item.url}}" class="cart-item-link" aria-label="{{item.product.title}}">{{item.product.title | truncatewords:5}}</a>
+          {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
+          <p class="item-variant-title">{{item.variant.title}}</p>
+          {% endunless %}
+          {% if item.selling_plan_allocation %}
+          <p class="item-variant-title">{{item.selling_plan_allocation.selling_plan.name }}</p>
+          {% endif %}
+          <p class="product__price">
+            {%- if item.original_price != item.final_price -%}
+            <span>{{item.final_price| money}}</span>
+            <s class="item__price-strikethrough">{{item.original_price| money}}</s>
+            {%else%}
+            <span>{{item.final_price | money}}</span>
+            {%- endif -%}
+
+            {%- if item.unit_price_measurement -%}
+            <small class="unit-price">(
+              {{ item.variant.unit_price | money }}
+              /
+              {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
+              {{- item.variant.unit_price_measurement.reference_value -}}
+              {%- endif -%}
+              {{ item.variant.unit_price_measurement.reference_unit }})
+            </small>
+            {%- endif -%}
+          </p>
+          {%- for discount in item.discounts -%}
+          <div class="text-right">
+            <i class="fas fa-tag"></i> 
+            <small class="item__discount coupanName">{{ discount.title }}</small><br>
+
+          </div>
+          {%- endfor -%}
+          <div class="right-media-cart">
+            <div class="quantity">
+              <input type="number" class="ajaxcart__qty-num" name="updates[]" min="1" max="9" step="1" value="{{item.quantity}}" data-id="{{item.key}}" data-line="{{forloop.index}}" aria-label="{{'sections.cart.headings.quantity' | t}}">
+              <div class="quantity-nav">
+                <div class="quantity-button quantity-up ajaxcart__qty--plus"  data-id="{{item.key}}" data-line="{{forloop.index}}" data-qty="{{item.quantity | plus: 1}}"><svg width="24px" height="24px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="plusIconTitle" stroke="#909097" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" color="#000000"> <title id="plusIconTitle">Plus</title> <path d="M20 12L4 12M12 4L12 20"/> </svg></div>
+                <div class="quantity-button quantity-down ajaxcart__qty--minus" data-id="{{item.key}}" data-line="{{forloop.index}}" data-qty="{{item.quantity | minus: 1}}"><svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#909097" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+              </div>
+            </div>
+            <div class="sd_mini_removeproduct" line="{{forloop.index}}" >{{'sections.cart.remove' | t}}</div>
+          </div>
+        </div>
+
+      </div>
+      {% endfor %}	
+    </div>
+  </div>
+
+<div class="bottom-cart-box">
+  <div class="leave-order-note">
+    <span class="cartDrawerNote">{{'sections.cart.note_heading' | t}}
+
+    </span>
+    <div class="cartNoteContainer" style="display:none">
+      <textarea class="form-control" rows = "3" name="note">{{cart.note}}</textarea>
+    </div>
+  </div>
+  <ul>
+
+    {%- if cart.cart_level_discount_applications.size > 0 -%}
+    {%- for discount in cart.cart_level_discount_applications -%}
+    <li class="minicart__savings">{{'sections.cart.discount' | t}}<span class="coupanName">
+                          <i class="fas fa-tag"></i> {{ discount.title }}</span> <strong>-{{discount.total_allocated_amount | money}}</strong></li>
+
+    {% endfor %}	
+    {% endif %}
+    <li class="totle-price">{{'sections.cart.subtotal' | t}}<strong>{{cart.total_price | money}}</strong></li>
+  </ul>
+  <small class="bottom-p">{{'sections.cart.taxes_and_shipping_at_checkout' | t}}</small>
+  <div class="cart-btn-container">
+    <a href="/checkout" class="checkout-btn button black-btn">{{'sections.cart.checkout' | t}}</a>
+  </div>
+  <a class="shopping_cont" href="{{routes.cart_url}}">{{'sections.cart.view_cart' | t}}</a>
+</div>
+{%- else -%}
+<div class="emptySideCart">
+  <img class="emptyCartIcon" src="{{'cart.svg' | asset_url}}">
+  <h4>{{'sections.cart.empty' | t}}</h4>
+  <a class="button black-btn" href="{{routes.all_products_collection_url}}" aria-label="{{'general.continue_shopping' | t}}">{{'general.continue_shopping' | t}}</a>
+</div>
+{%- endif -%}

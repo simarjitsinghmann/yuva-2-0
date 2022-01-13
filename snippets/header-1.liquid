@@ -1,73 +1,30 @@
-<div id="header" class="top-header">
+<div id="header" class="top-header header_1 {% unless section.settings.menu != blank %}header-menu-false{% else %}header-menu-true{%- endunless-%}">
     <div class="container">
-        <div class="row">
             <div class="navbar navbar-expand-md header__inline-menu" role="navigation">
-                <a class="header__heading-link" href="{{ routes.root_url }}">
-                    {%- if section.settings.logo != blank -%}
-                    {%- assign image_size = section.settings.logo_width | append: 'x' -%}
-                    <img src="{{ section.settings.logo | img_url: image_size }}" class="Yuva-logo" width="{{ section.settings.logo.width }}" height="{{ section.settings.logo.height }}" alt="{{ section.settings.logo.alt | default: shop.name | escape }}">
-                    {% else %}
-                    <span class="h2">{{ shop.name }}</span>
-                    {% endif %}
-                </a>
-                {%- if section.settings.menu != blank or section.blocks.size > 0 -%}
+                {%- if section.settings.menu != blank  -%}
+                <div id="nav_style_4" class="nav-menu-btn">
                 <div class="nav__btn">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
+              
+                {% include 'side-menu' mobileMenu:true %}
+                </div>
+              {%- endif -%}
+              <a class="header__heading-link" href="{{ routes.root_url }}">
+                {%- if section.settings.logo != blank -%}
+                {%- assign image_size = section.settings.logo_width -%}
+              {% render 'lazy-image' image:section.settings.logo,class:'Yuva-logo',max_width:image_size %}                
+                {% else %}
+                <span class="h2">{{ shop.name }}</span>
+                {% endif %}
+              </a>
+                {%- if section.settings.menu != blank-%}
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     
-                    <ul class="navbar-nav mr-auto list-menu list-menu--inline">	
-                        {% unless section.blocks.size > 0 and section.settings.megamenu %}						
-                        {%- for link in section.settings.menu.links -%}
-                        <li class="nav-item {% if link.current %}active{% endif %}">
-                            <a class="list-menu__item" href="{{ link.url }}">{{link.title | split:"{badge" | first | escape | capitalize }}
-                          {%- if link.links != blank -%}
-                                <span class="ml-2 sf-menu__arrow">
-                                  <svg class="w-2 h-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" class=""></path>
-                                  </svg>
-                                </span>
-                                {% endif %}
-                          	</a>                                
-                            {%- if link.links != blank -%}
-                            <div class="sub-menu">
-                                <div class="site-nav-dropdown">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="menu-lv-2 col-12 col5 inner dropdown">
-                                                {%- for childlink in link.links -%}
-                                                <div class="sub-menu-list">
-                                                    <div class="menu-mb-title">
-                                                        <span>{%- unless childlink.links != blank -%}<a href="{{ childlink.url }}">{% endunless %}{{ childlink.title | split:"{badge" | first | escape | captilize }}{%- unless childlink.links != blank -%}</a>{% endunless %}</span>
-                                                    </div>
-                                                    {%- if childlink.links != blank -%}
-                                                    <ul class="site-nav-dropdown">
-                                                        <li class="menu-lv-3 hide_pc">
-                                                            <a href="{{ childlink.url }}"><span>{{ childlink.title | split:"{badge" | first | escape | captilize }}</span></a>
-                                                        </li>
-                                                        {%- for grandchildlink in childlink.links -%}
-                                                        <li class="menu-lv-3">
-                                                            <a href="{{ grandchildlink.url }}"><span>{{ grandchildlink.title | split:"{badge" | first | escape | captilize }}</span></a>
-                                                        </li>
-                                                        {%- endfor -%}
-                                                    </ul>
-                                                    {% endif %}
-                                                </div>
-                                                {% endfor %}
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            {%- endif -%}
-                        </li>
-                        {%- endfor-%}
-                        {% else %}                        
-                        {% render 'mega-menu' sectin:section %}
-                    {% endunless %}
+                    <ul class="navbar-nav list-menu list-menu--inline">					
+                        {% include 'nav-item' %}
                     </ul>
                     <div class="navigation-close-mob" style="display:none;">
                         <a href="javascript:void(0)" title="close_navigation" class="close-btn">
@@ -78,17 +35,10 @@
                     </div>
                 </div>
                 {%- endif -%}
-                <form class="form-inline mt-2 mt-md-0">
+                <div class="form-inline mt-2 mt-md-0">
                     {% include 'header-icons' %}
-                </form>
-                
-                {% if section.settings.show_search %}
-                {% if settings.search_style == 'auto' %}
-                {% include 'search-drawer' %}
-                {% endif %}
-                {% endif %}
+                </div>
 
             </div>
-        </div>
     </div>
 </div>

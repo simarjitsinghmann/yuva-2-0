@@ -1,66 +1,95 @@
-<section id="product-slider">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="slider-list" >
-				<div class="d-flex">
-					{% if section.blocks.size > 1 %}
-				  	<div id="slider-{{section.id}}" class="loop owl-carousel owl-theme">
-					{% else %}
-					<div class="slider-item">
-					{% endif %}
-						{% for block in section.blocks %}
-							{% case block.type %}
-								{% when 'slide' %}
-								{% render 'banner-slide-content' block:block%}	
-								{% when 'split' %}
-									{% render 'split-slide-content' block:block%}							
-							{% endcase %}
-						{% endfor %}
-				  	</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<style>
+<div id="product-slider" class="banner-product-slider">
+  <div id="slider-{{section.id}}" class=" fade slider-item {% if section.blocks.size > 1 %}slideShow{% endif %}"  {% if section.blocks.size > 1 %}data-slider{% endif %}>
+        
+      {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'slide' %}
+      <div id="banner-{{block.id}}" class="banner-{{block.id}} banner banner-section item slider-banner slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
+      {% render 'banner-slide-content' block:block,animation:animation%}	
+      </div>
+      {% when 'split' %}
+      <div id="banner-{{block.id}}" class="banner-{{block.id}} banner banner-section item split-slider slider-banner slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>	
+        {% render 'split-slide-content' block:block,animation:animation%}	
+      </div>
+      {% when 'video' %}
+      {% if block.settings.videofile != blank or block.settings.poster != blank %}
+      <div id="banner-{{block.id}}" class="banner-{{block.id}} banner banner-section item slider-banner slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>	
+        {% render 'video-slide-content' block:block,animation:animation%}	
+      </div>
+      {% endif %}						
+      {% endcase %}
+      {% endfor %}
+    </div>
+  <script type="application/json" name="slider-json">
+         {
+          "slidesToShow":1,
+          "slidesToScroll":1,
+          "infinite":true,
+          "margin":0,
+            "speed": 1000,
+            "fade": true,
+            "cssEase": "linear",
+         "dots":{{-section.settings.dots-}},
+          "autoplay":{{-section.settings.rotate-}},
+          "arrows":{{-section.settings.arrows-}},
+          "autoplaySpeed":{{-section.settings.rotate_speed | times:1000-}},
+          "prevArrow":"<button type=\"button\" class=\"slick-prev\" aria-label=\"Prev\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M15.526 18.966L8.559 12l6.967-6.967\"></path></svg></span></button>",
+          "nextArrow":"<button type=\"button\" class=\"slick-next\" aria-label=\"Next\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M8.474 18.966L15.44 12 8.474 5.033\"></path></svg></span></button>",
+          "responsive":[
+          	{
+            "breakpoint": 768,
+                "settings": {
+                    "dots":true,
+                    "arrows":false,
+                    "draggable":true
+                  }
+            }
+          ]
+        }
+      </script>
+  </div>
+  <style>
 	.slider-item{
 		position:relative;
 		overflow:hidden;
 	}
+      #slider-{{section.id}} .slideShow[data-slider] {
+    visibility: hidden;
+        display: flex;
+}
+#slider-{{section.id}} .slideShow[data-slider].slick-initialized {
+    visibility: visible;
+}
+    #slider-{{section.id}} .slider-banner h1{
+    font-size:{{section.settings.heading_font_size}}px;
+    }
+    #slider-{{section.id}} .slider-banner h2{
+    font-size:{{section.settings.subheading_font_size}}px;
+    }
 </style>
-<script>
-jQuery(document).ready(function($) {
-	$('#slider-{{section.id}}').owlCarousel({
-	 center: false,
-	 items: 1,
-	 loop: false,
-	 margin: 0,
-	 dots:false,
-	 autoplay:{{section.settings.rotate}},
-	 nav:{{section.settings.arrows}},
-	 slideSpeed: 500,
-	 autoHeight: false,
-	 autoHeightClass: 'owl-height',
-	 autoPlaySpeed: {{section.settings.rotate_speed | times:1000}},
-	 navText : ["<span><img src='{{'carousel-left-arrow.svg' | asset_url}}' alt='left-arrow'></span>","<span><img src='{{'carousel-right-arrow.svg' | asset_url}} alt='right-arrow'></i></span>"]
-  });
-});
-</script>
+
 {% schema %}
 {
   "name": "t:sections.main-slider.name",
   "tag": "section",
+  "class":"shopify-section-slider",
   "settings":[
 	  {
 		  "type":"checkbox",
 		  "id":"rotate",
 		  "label":"t:sections.main-slider.settings.rotate.label",
-		  "default":true
+		  "default":false
 	  },
 	  {
 		  "type":"checkbox",
 		  "id":"arrows",
 		  "label":"t:sections.main-slider.settings.arrows.label",
+		  "default":true
+	  },
+	  {
+		  "type":"checkbox",
+		  "id":"dots",
+		  "label":"t:sections.main-slider.settings.dots.label",
 		  "default":true
 	  },
 	  {
@@ -71,8 +100,28 @@ jQuery(document).ready(function($) {
 		  "step": 1,
 		  "unit":"s",
 		  "label": "t:sections.main-slider.settings.rotate_speed.label",
-		  "default": 2
-	  }
+		  "default": 1
+	  },
+      {
+          "type": "range",
+          "id": "heading_font_size",
+          "label": "t:sections.main-slider.settings.heading_font_size.label",
+          "default": 50,
+          "min":0,
+          "max":100,
+          "step":1,
+          "unit":"px"          
+      },
+      {
+          "type": "range",
+          "id": "subheading_font_size",
+          "label": "t:sections.main-slider.settings.subheading_font_size.label",
+          "default": 130,
+          "min":50,
+          "max":150,
+          "step":1,
+          "unit":"px"          
+      }
   ],
   "blocks": [
 	{
@@ -80,98 +129,43 @@ jQuery(document).ready(function($) {
 		"name":"t:sections.main-slider.blocks.slide.name",
 		"settings": [
 			{
-				"type": "header",
-				"content": "t:sections.main-slider.blocks.slide.settings.header1.content"
+				"type": "image_picker",
+				"id": "image",
+				"label": "t:sections.main-slider.blocks.slide.settings.image.label"
+			},
+			{
+				"type": "image_picker",
+				"id": "image_mob",
+				"label": "t:sections.main-slider.blocks.slide.settings.image_mob.label"
+			},
+			{
+				"type": "text",
+				"id": "tag_line",
+				"default": "Add Tagline here",
+				"label": "t:sections.main-slider.blocks.slide.settings.tag_line.label"
 			},
 			{
 				"type": "text",
 				"id": "heading",
-				"default": "Heading",
+				"default": "Talk about your brand here",
 				"label": "t:sections.main-slider.blocks.slide.settings.heading.label"
-			},
-			{
-				"type": "color",
-				"id": "h_bg",
-				"label": "t:sections.main-slider.blocks.slide.settings.h_bg.label"
-			},
-			{
-				"type": "color",
-				"id": "h_text",
-				"default":"#000000",
-				"label": "t:sections.main-slider.blocks.slide.settings.h_text.label"
-			},
-			{
-				"type": "header",
-				"content": "t:sections.main-slider.blocks.slide.settings.header2.content"
 			},
 			{
 				"type": "text",
 				"id": "subheading",
-				"default": "Sub Heading",
+				"default":"Image",
 				"label": "t:sections.main-slider.blocks.slide.settings.subheading.label"
 			},
 			{
-				"type": "color",
-				"id": "sh_bg",
-				"default":"#000000",
-				"label": "t:sections.main-slider.blocks.slide.settings.sh_bg.label"
-			},
-			{
-				"type": "color",
-				"id": "sh_text",
-				"default":"#ffffff",
-				"label": "t:sections.main-slider.blocks.slide.settings.sh_text.label"
-			},
-			{
-				"type": "header",
-				"content": "t:sections.main-slider.blocks.slide.settings.header3.content"
-			},
-			{
-				"type": "text",
-				"id": "sale",
-				"default": "Sale 40%",
-				"label": "t:sections.main-slider.blocks.slide.settings.sale.label"
-			},
-			{
-				"type": "color",
-				"id": "sale_bg",
-				"label": "t:sections.main-slider.blocks.slide.settings.sale_bg.label"
-			},
-			{
-				"type": "color",
-				"id": "sale_text",
-				"default":"#f17e35",
-				"label": "t:sections.main-slider.blocks.slide.settings.sale_text.label"
-			},
-			{
-				"type": "header",
-				"content": "t:sections.main-slider.blocks.slide.settings.header4.content"
-			},
-			{
-				"type": "text",
+				"type": "textarea",
 				"id": "content",
-				"default": "content",
+				"default": "Description here",
 				"label": "t:sections.main-slider.blocks.slide.settings.content.label"
-			},
-			{
-				"type": "color",
-				"id": "c_bg",
-				"label": "t:sections.main-slider.blocks.slide.settings.c_bg.label"
-			},
-			{
-				"type": "color",
-				"id": "c_text",
-				"default":"#000000",
-				"label": "t:sections.main-slider.blocks.slide.settings.c_text.label"
-			},
-			{
-				"type": "header",
-				"content": "t:sections.main-slider.blocks.slide.settings.header5.content"
 			},
 			{
 				"type": "text",
 				"id": "btn",
-				"default": "Explore Now",
+				"default": "Explore",
 				"label": "t:sections.main-slider.blocks.slide.settings.btn.label"
 			},
 			{
@@ -181,8 +175,38 @@ jQuery(document).ready(function($) {
 			},
 			{
 				"type": "color",
+				"id": "sh_bg",
+				"default":"#746850",
+				"label": "t:sections.main-slider.blocks.slide.settings.sh_bg.label"
+			},
+			{
+				"type": "color",
+				"id": "sh_text",
+				"default":"#ffffff",
+				"label": "t:sections.main-slider.blocks.slide.settings.sh_text.label"
+			},
+			{
+				"type": "color",
+				"id": "h_text",
+				"default":"#746850",
+				"label": "t:sections.main-slider.blocks.slide.settings.h_text.label"
+			},
+			{
+				"type": "color",
+				"id": "subh_text",
+				"default":"#746850",
+				"label": "t:sections.main-slider.blocks.slide.settings.subh_text.label"
+			},
+			{
+				"type": "color",
+				"id": "c_text",
+				"default":"#746850",
+				"label": "t:sections.main-slider.blocks.slide.settings.c_text.label"
+			},
+			{
+				"type": "color",
 				"id": "btn_bg",
-				"default":"#f17e35",
+				"default":"#746850",
 				"label": "t:sections.main-slider.blocks.slide.settings.btn_bg.label"
 			},
 			{
@@ -194,7 +218,7 @@ jQuery(document).ready(function($) {
 			{
 				"type": "color",
 				"id": "btn_h_bg",
-				"default":"#000000",
+				"default":"#645C4D",
 				"label": "t:sections.main-slider.blocks.slide.settings.btn_h_bg.label"
 			},
 			{
@@ -204,37 +228,11 @@ jQuery(document).ready(function($) {
 				"label": "t:sections.main-slider.blocks.slide.settings.btn_h_text.label"
 			},
 			{
-				"type": "header",
-				"content": "t:sections.main-slider.blocks.slide.settings.header6.content"
-			},
-			{
-				"type": "image_picker",
-				"id": "image",
-				"label": "t:sections.main-slider.blocks.slide.settings.image.label"
-			},
-			{
-			  "type": "color",
-			  "id": "bgcolor",
-			  "label": "t:sections.main-slider.blocks.slide.settings.bgcolor.label"
-			},
-			{
 			  "type": "select",
 			  "id": "info_position",
 			  "label": "t:sections.main-slider.blocks.slide.settings.info_position.label",
 			  "default": "center-left",
 			  "options": [
-				{
-				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.top-left.label",
-				  "value": "top-left"
-				},
-				{
-				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.top-center.label",
-				  "value": "top-center"
-				},
-				{
-				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.top-right.label",
-				  "value": "top-right"
-				},
 				{
 				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.center-left.label",
 				  "value": "center-left"
@@ -246,38 +244,6 @@ jQuery(document).ready(function($) {
 				{
 				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.center-right.label",
 				  "value": "center-right"
-				},
-				{
-				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.bottom-left.label",
-				  "value": "bottom-left"
-				},
-				{
-				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.bottom-center.label",
-				  "value": "bottom-center"
-				},
-				{
-				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.bottom-right.label",
-				  "value": "bottom-right"
-				}
-			  ]
-			},
-			{
-			  "type": "select",
-			  "id": "info_alignment",
-			  "label": "t:sections.main-slider.blocks.slide.settings.info_alignment.label",
-			  "default": "left",
-			  "options": [
-				{
-				  "label": "t:sections.main-slider.blocks.slide.settings.info_alignment.left.label",
-				  "value": "left"
-				},
-				{
-				  "label": "t:sections.main-slider.blocks.slide.settings.info_alignment.center.label",
-				  "value": "center"
-				},
-				{
-				  "label": "t:sections.main-slider.blocks.slide.settings.info_alignment.right.label",
-				  "value": "right"
 				}
 			  ]
 			}
@@ -288,29 +254,50 @@ jQuery(document).ready(function($) {
 		"name": "t:sections.main-slider.blocks.split.name",
 		"settings":[
 			{
-			   "type":"header",
-			   "content":"t:sections.main-slider.blocks.split.settings.header1.content"
-			},
-			{
 			   "type":"image_picker",
 			   "id":"image_desktop",
 			   "label":"t:sections.main-slider.blocks.split.settings.image_desktop.label",
 			   "info":"t:sections.main-slider.blocks.split.settings.image_desktop.info"
 			},
 			{
-			   "type":"header",
-			   "content":"t:sections.main-slider.blocks.split.settings.header2.content"
+			   "type":"text",
+			   "id":"banner_tag_line",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_tag_line.label",
+			   "default":"Tagline"
+			},
+			{
+			   "type":"text",
+			   "id":"banner_title",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_title.label",
+			   "default":"Talk about your brand here"
+			},
+			{
+			   "type":"text",
+			   "id":"banner_subtitle",
+			   "default":"Split Slide",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_subtitle.label"
+			},
+			{
+			   "type":"textarea",
+			   "id":"banner_desc",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_desc.label",
+			   "default":"Description"
+			},
+			{
+			   "type":"text",
+			   "id":"button_text",
+			   "label":"t:sections.main-slider.blocks.split.settings.button_text.label",
+			   "default":"Explore"
+			},
+			{
+			   "type":"url",
+			   "id":"button_link",
+			   "label":"t:sections.main-slider.blocks.split.settings.button_link.label"
 			},
 			{
 			   "type":"color",
 			   "id":"banner_left_bk",
 			   "label":"t:sections.main-slider.blocks.split.settings.banner_left_bk.label"
-			},
-			{
-			   "type":"text",
-			   "id":"banner_tag_line",
-			   "label":"t:sections.main-slider.blocks.split.settings.banner_tag_line.label",
-			   "default":"Shop the latest collection"
 			},
 			{
 			   "type":"color",
@@ -322,52 +309,25 @@ jQuery(document).ready(function($) {
 			   "type":"color",
 			   "id":"tag_line_bk",
 			   "label":"t:sections.main-slider.blocks.split.settings.tag_line_bk.label",
-			   "default":"#47c1bf"
-			},
-			{
-			   "type":"text",
-			   "id":"banner_title",
-			   "label":"t:sections.main-slider.blocks.split.settings.banner_title.label",
-			   "default":"Summer Collection"
+			   "default":"#746850"
 			},
 			{
 			   "type":"color",
 			   "id":"banner_title_color",
 			   "label":"t:sections.main-slider.blocks.split.settings.banner_title_color.label",
-			   "default":"#003135"
+			   "default":"#746850"
 			},
 			{
-			   "type":"text",
-			   "id":"banner_desc",
-			   "label":"t:sections.main-slider.blocks.split.settings.banner_desc.label",
-			   "default":"Add Some Description Here"
+			   "type":"color",
+			   "id":"banner_subtitle_color",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_subtitle_color.label",
+			   "default":"#746850"
 			},
 			{
 			   "type":"color",
 			   "id":"banner_desc_color",
 			   "label":"t:sections.main-slider.blocks.split.settings.banner_desc_color.label",
-			   "default":"#405352"
-			},
-			{
-			   "type":"header",
-			   "content":"t:sections.main-slider.blocks.split.settings.header3.content"
-			},
-			{
-			   "type":"text",
-			   "id":"button_text",
-			   "label":"t:sections.main-slider.blocks.split.settings.button_text.label",
-			   "default":"SHOP NOW"
-			},
-			{
-			   "type":"url",
-			   "id":"button_link",
-			   "label":"t:sections.main-slider.blocks.split.settings.button_link.label"
-			},
-			{
-			   "type":"color",
-			   "id":"button_border_color",
-			   "label":"t:sections.main-slider.blocks.split.settings.button_border_color.label",
-			   "default":"#47C1BF"
+			   "default":"#746850"
 			},
 			{
 			   "type":"color",
@@ -379,7 +339,7 @@ jQuery(document).ready(function($) {
 			   "type":"color",
 			   "id":"button_text_bk",
 			   "label":"t:sections.main-slider.blocks.split.settings.button_text_bk.label",
-			   "default":"#47c1bf"
+			   "default":"#746850"
 			},
 			{
 			   "type":"color",
@@ -391,20 +351,140 @@ jQuery(document).ready(function($) {
 			   "type":"color",
 			   "id":"hvr_button_text_bk",
 			   "label":"t:sections.main-slider.blocks.split.settings.hvr_button_text_bk.label",
-			   "default":"#003135"
-			},
-			{
-			   "type":"range",
-			   "id":"banner_button_radius",
-			   "min":0,
-			   "max":50,
-			   "step":1,
-			   "unit":"px",
-			   "label":"t:sections.main-slider.blocks.split.settings.banner_button_radius.label",
-			   "default":0
+			   "default":"#615A4C"
 			}
 		]
-	}	  
+	},
+  	{
+    	"type": "video",
+          "name": "t:sections.main-slider.blocks.video-slide.name",
+          "settings": [
+            {
+              "type": "text",
+              "id": "videofile",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.videofile.label",
+              "default": "https://cdn.shopify.com/s/files/1/0597/9668/5009/files/placeholder-video.mp4?v=1640600092"
+            },
+            {
+              "type": "image_picker",
+              "id": "poster",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.poster.label"
+            },
+            {
+              "type": "text",
+              "id": "title",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.title.label",
+              "default": "Talk about your brand here"
+            },
+            {
+              "type": "text",
+              "id": "subtitle",
+			  "default":"Video",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.subtitle.label"
+            },
+            {
+              "type": "textarea",
+              "id": "description",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.description.label",
+              "default": "Description"
+            },
+            {
+              "type": "text",
+              "id": "link_text",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.link_text.label",
+              "default": "Explore"
+            },
+            {
+              "type": "url",
+              "id": "link",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.link.label"
+            },
+            {
+              "type": "checkbox",
+              "id": "overlay",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.overlay.label",
+              "default": true   
+            },
+            {
+              "type": "range",
+              "id": "opacity",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.opacity.label",
+              "default": 40,
+              "min":0,
+              "max":100,
+              "step":1,
+              "unit":"%"          
+            },
+            {
+              "type": "select",
+              "id": "text_position",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.text_position.label",
+              "default": "center",
+              "options": [
+                {
+                  "label": "t:sections.main-slider.blocks.video-slide.settings.text_position.center-left.label",
+                  "value": "center-left"
+                },
+                {
+                  "label": "t:sections.main-slider.blocks.video-slide.settings.text_position.center.label",
+                  "value": "center"
+                },
+                {
+                  "label": "t:sections.main-slider.blocks.video-slide.settings.text_position.center-right.label",
+                  "value": "center-right"
+                }
+              ]
+            },
+            {
+              "type": "color",
+              "id": "title_color",
+              "default":"#746850",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.title_color.label"
+            },
+            {
+              "type": "color",
+              "id": "subtitle_color",
+              "default":"#746850",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.subtitle_color.label"
+            },
+            {
+              "type": "color",
+              "id": "desc_color",
+              "default":"#746850",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.desc_color.label"
+            },
+            {
+              "type": "color",
+              "id": "bgcolor",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.bgcolor.label",
+              "default": "#EADEC4" 
+            },
+			{
+			   "type":"color",
+			   "id":"button_text_color",
+			   "label":"t:sections.main-slider.blocks.video-slide.settings.button_text_color.label",
+			   "default":"#ffffff"
+			},
+			{
+			   "type":"color",
+			   "id":"button_text_bk",
+			   "label":"t:sections.main-slider.blocks.video-slide.settings.button_text_bk.label",
+			   "default":"#746850"
+			},
+			{
+			   "type":"color",
+			   "id":"hvr_button_text_color",
+			   "label":"t:sections.main-slider.blocks.video-slide.settings.hvr_button_text_color.label",
+			   "default":"#ffffff"
+			},
+			{
+			   "type":"color",
+			   "id":"hvr_button_text_bk",
+			   "label":"t:sections.main-slider.blocks.video-slide.settings.hvr_button_text_bk.label",
+			   "default":"#5E594F"
+			}
+      ]
+    }
   ],
   "presets": [
     {
@@ -415,6 +495,9 @@ jQuery(document).ready(function($) {
         },
         {
           "type": "split"
+        },
+        {
+          "type": "video"
         }
       ]
     }

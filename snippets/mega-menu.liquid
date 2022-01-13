@@ -1,165 +1,170 @@
-{% if limit %}
-{% assign custom_limit = limit %}
-{% else %}
-{% assign custom_limit = 20 %}
-{% endif %}
-{% if offset %}
-{% assign custom_offset = offset %}
-{% else %}
-{% assign custom_offset = 0 %}
-{% endif %}
-{% if section.settings.header_style != 'header4' %}
-{% for block in section.blocks limit:custom_limit  offset:custom_offset%}
-    {% if block.settings.heading != blank %}
-        
-        {% assign dropMenuCount = 0 %}
-        {% for i in (1..6) %}
-            {% assign dropMenu = 'c_link' | append:i %}
-            {% if block.settings[dropMenu] != blank %}
-                {% assign dropDown = true%}
-                {% assign dropMenuCount = dropMenuCount | plus: 1 %}
-            {% endif %}
-        {% endfor %}
-        <li class="nav-item {% if block.type != 'no-dropdown' and dropDown %}dropdown{% endif %} {% if block.settings.width == 'auto' %}menu-item--no-mega{% endif %}">
-            <a class="list-menu__item" href="{{ block.settings.link }}">
-                {{block.settings.heading | escape | capitalize }}
-                {% if block.type != 'no-dropdown' %}
-                    <span class="ml-2 sf-menu__arrow">
-                        <svg class="w-2 h-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" class=""></path>
-                        </svg>
-                    </span>
-                {% endif %}
-            </a>       
-            {% if block.type != 'no-dropdown' and dropDown %}
-                    <div class="sub-menu">
-                        <div class="site-nav-dropdown">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="menu-lv-2 inner dropdown">                                            
-                                    {% for i in (1..6) %}
-                                        {% assign dropdownTitle = 'c_heading' | append:i %}
-                                        {% assign headColor = 'c_heading_color' | append:i %}
-                                        {% assign dropdownMenu = 'c_link' | append:i %}
-                                        
-                                        {% if block.settings[dropdownMenu] != blank %}
-                                        <div class="sub-menu-list">
-                                            <div class="menu-mb-title">
-                                                <span style="color:{{block.settings[headColor]}} !important">{{block.settings[dropdownTitle]}}</span>
-                                            </div>
-                                            <ul class="site-nav-dropdown">
-                                                {% for clink in block.settings[dropdownMenu].links %}
-                                                <li class="menu-lv-3">
-                                                    <a href="{{clink.url}}">{{clink.title | split:"{badge" | first | escape | captilize }}
-                                                    {% if clink.title contains '{badge:sale}' %}
-                                                        <span class="sale_on">Sale</span>
-                                                        {% elsif clink.title contains '{badge:new}' %}
-                                                        <span class="new_arrival">New</span>
-                                                    {% endif %}
-                                                    </a>
-                                                </li>
-                                                {% endfor %}
-                                            </ul>
-                                        </div>
-                                    {% endif %}
-                                    {% endfor %}
-                                    {% if block.settings.image != blank %}
-                                        <div class="sub-menu-list {% if block.settings.img_style %}spacing_around_image{% else %}no_space_around_image{% endif %}">
-                                            <a href="{{block.settings.image_link}}">
-                                            <img src="{{block.settings.image | img_url:'500x'}}" alt="">
-                                            </a>
-                                        </div>
-                                    {% endif %}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            {% endif %}
-        </li>
-    {% endif %}
-{% endfor %}
-{% else %}
+{% if content == 'menu' %}
+  {% for block in section.blocks %}
+    {% assign blockPosition = block.settings.position | plus:0 %}
+    {% if blockPosition == menuIndex %}
 
-{% for block in section.blocks%}
-    {% if block.settings.heading != blank %}        
-        {% assign dropMenuCount = 0 %}
-        {% for i in (1..6) %}
-            {% assign dropMenu = 'c_link' | append:i %}
-            {% if block.settings[dropMenu] != blank %}
-                {% assign dropDown = true%}
-                {% assign dropMenuCount = dropMenuCount | plus: 1 %}
-            {% endif %}
-        {% endfor %}
-        <li class="nav-item {% if block.type != 'no-dropdown' and dropDown %}dropdown{% endif %}">
-            <a class="list-menu__item {% if block.type != 'no-dropdown' and dropDown %}toggle open-menu-drop{% endif %}" href="{% if block.settings.link != blank %}javascript:void(0){%else%}{{ block.settings.link }}{% endif %}">
-                {{block.settings.heading | escape | capitalize }}
-            </a>       
-            {% if block.type != 'no-dropdown' and dropDown %}
-            <ul class="inner child">
-                <div class="inner-child-menu">
-                    <div class="menu_back_btn">
-                          <button class="back-btn">
-                             <svg height="17.031" viewbox="0 0 24 17.031" width="24" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                      <style>
-                             .cls-1 {
-                                fill-rule: evenodd;
-                             }
-                             </style>
-                                </defs>
-                                <path class="cls-1" d="M684,76.476H663.835l6.119-6.091-1.412-1.406-7.132,7.1h0L660,77.484l1.413,1.406,7.132,7.1,1.412-1.406-6.148-6.121H684V76.476Z" transform="translate(-660 -68.969)"></path>
-                             </svg>
-                             Back
-                          </button>
-                    </div>
-                    <div class="category_title">
-                          <h4>{{block.settings.heading | escape | capitalize }}</h4>
-                    </div>
-                 </div>
-                {% for i in (1..6) %}
-                    {% assign dropdownTitle = 'c_heading' | append:i %}
-                    {% assign dropdownMenu = 'c_link' | append:i %}
-                    
-                    {% if block.settings[dropdownMenu] != blank %}
-                    <li>
-                        <a class="toggle-level" href="javascript:void(0)">
-                            {{block.settings[dropdownTitle]}} <span class="caret"></span>
-                        </a>
-                        <ul class="inner grandchild">                              
-                            <div class="inner-child-menu">
-                               <div class="menu_back_btn">
-                                     <button class="back-btn">
-                                        <svg height="17.031" viewbox="0 0 24 17.031" width="24" xmlns="http://www.w3.org/2000/svg">
-                                           <defs>
-                                                 <style>
-                                        .cls-1 {
-                                           fill-rule: evenodd;
-                                        }
-                                        </style>
-                                           </defs>
-                                           <path class="cls-1" d="M684,76.476H663.835l6.119-6.091-1.412-1.406-7.132,7.1h0L660,77.484l1.413,1.406,7.132,7.1,1.412-1.406-6.148-6.121H684V76.476Z" transform="translate(-660 -68.969)"></path>
-                                        </svg>
-                                        Back
-                                     </button>
-                               </div>
-                               <div class="category_title">
-                                     <h4>{{block.settings[dropdownTitle]}}</h4>
-                               </div>
-                            </div>
-                               {%- for grandchildlink in block.settings[dropdownMenu].links -%}
-                               <li>
-                                     <a href="{{ grandchildlink.url }}"><span>{{ grandchildlink.title | split:"{badge" | first | escape | captilize }}</span></a>
-                               </li>
-                               {%- endfor -%}
-                            </ul>
+      {% case block.type %}
+        {% when 'menu' %}
+          {% for i in (1..4) %}
+            {% assign menu = 'menu'|append:i %}
+            {% assign heading = 'menu_heading'|append:i %}
+              {% if block.settings[menu] != blank %}
+                {% assign mainMenu = block.settings[menu] %}
+                <div class="sub-menu-list {{test}}">
+                  <div class="menu-mb-title">
+                    <span>{% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</span>
+                  </div>
+                  {%- if linklists[mainMenu].links != blank -%}
+                  <ul class="site-nav-dropdown">
+                    {%- for childlink in linklists[mainMenu].links -%}
+                    <li class="menu-lv-3">
+                      <a href="{{ childlink.url }}"><span>{{ childlink.title | split:"{badge" | first | escape | captilize }}</span></a>
                     </li>
-                    {% endif %}
-                {% endfor %}
-            </ul>                
-            {% endif %}
-        </li>
+                    {%- endfor -%}
+                  </ul>
+                  {% endif %}
+                </div>
+              {% endif %}
+          {% endfor %}
+      {% endcase %}
     {% endif %}
-{% endfor %}
+  {% endfor %}
 
+
+
+{% else %}
+{% assign productMenu = ''%}
+{% assign imageMenu = ''%}
+{% assign pending = 2 %}
+
+{% assign hasProduct = false %}
+{% assign hasImage = false %}
+
+{% if link.links != blank  %}
+{% assign menuLinkLists = true %}
 {% endif %}
+  {% for block in section.blocks %}
+    {% assign blockPosition = block.settings.position | plus:0 %}
+    {% if blockPosition == menuIndex %}
+
+      {% case block.type %}
+        {% when 'menu' %}
+          {% for i in (1..4) %}
+            {% assign menu = 'menu'|append:i %}
+              {% if block.settings[menu] != blank %}
+				{% assign menuLinkLists = true %}
+              {% endif %}
+          {% endfor %}
+      {% endcase %}
+    {% endif %}
+  {% endfor %}
+
+	{% assign count = 0 %}
+
+    {% for block in section.blocks %}
+      {% assign blockPosition = block.settings.position | plus:0 %}
+      {% if blockPosition == menuIndex %}
+
+        {% case block.type %}
+          {% when 'product' %}
+            {%- capture productData -%}
+              {% for i in (1..2) %}
+                {% assign product = 'product'|append:i %}
+				{% if pending > 0 and pending < 3 %}
+                {% unless block.settings[product] == blank  %}
+					{% assign hasProduct = true %}
+                  {% assign count = count | plus:1 %}
+					{% assign pending = pending | minus: 1 %}
+					{% assign product = block.settings[product] %}
+                  <div class="sub-menu-list row">
+                    {% include 'product-grid' product:all_products[product] ,hide_options:true,hideRelated:true,hideQuickView:true %}
+                  </div>
+                {% endunless %}
+				{% endif %}
+              {% endfor %}
+            {%- endcapture -%}
+			{% assign productMenu = productMenu | append: productData%}
+           
+
+        {% endcase %}  
+      {% endif %}
+    {% endfor %}
+
+    {% if count < 2 %}  
+      {% if count == 0 %}
+      {% assign limit = 2 %}
+      {% elsif count == 1 %}
+      {% assign limit = 2 %}
+      {% endif %}
+      {% for block in section.blocks %}
+      	{% assign blockPosition = block.settings.position | plus:0 %}
+          {% if blockPosition == menuIndex %}
+
+            {% case block.type %}
+            {% when 'image' %}
+              {%- capture imageData -%}
+              {% for i in (1..limit) %}
+              {% assign image = 'image'|append:i %}
+              {% assign heading = 'heading'|append:i %}
+              {% assign button = 'button'|append:i %}
+              {% assign newLink = 'link'|append:i %}
+				{% if pending > 0 and pending < 3 %}
+              {% unless block.settings[image] == blank and block.settings[heading] == blank %}
+				{% assign hasImage = true %}
+				{% assign count = count | plus:1 %}
+					{% assign pending = pending | minus: 1 %}
+              <div class="sub-menu-list {{pending}} mega-images row">
+                <div class="grid-item col">
+                <div class="menu-image-content">
+                  {% render 'lazy-image' image:block.settings[image],class:'menu-image'%}
+                  <div class="menu-content">
+                    <h6>{{block.settings[heading]}}</h6>
+                    {% if block.settings[newLink] != blank and block.settings[button] != blank %}
+                    <a href="{{block.settings[newLink]}}" class="button black-button small-btn">{{block.settings[button]}}</a>
+                    {% endif %}
+                  </div>
+                </div>
+                </div>
+              </div>
+              {% endunless %}
+				{% endif %}
+              {% endfor %}
+              {%- endcapture -%}
+			{% assign imageMenu = imageMenu | append: imageData%}
+            {% endcase %}  
+          {% endif %}
+      {% endfor %}
+    {% endif %}
+
+
+{% if count == 0 %}
+{% assign menuWidth = 'col-md-12' %}
+{% elsif count == 1 %}
+{% assign colWidth = 'col-md-3' %}
+{% assign menuWidth = 'col-md-9' %}
+{% else %}
+{% assign colWidth = 'col-md-4' %}
+{% assign menuWidth = 'col-md-8' %}
+{% endif %}
+{% unless productMenu == blank and imageMenu == blank %}
+<div class="col-12 {{colWidth}} box-items">        
+  
+  <div class="megaMenuContentWrapper">
+    <div class="row">
+       {% if productMenu != blank %}
+              <div class="megaMenuProduct-wrapper col-12  items-{{count}} {% if hasProduct and hasImage %}col-md-6 nocategory{% else %}col-md-12 samecategory{% endif %}">
+                {{productMenu}}
+              </div>
+            {% endif %}
+       {% if imageMenu != blank %}
+              <div class="megaMenuProduct-wrapper col-12 items-{{count}} {% if hasProduct and hasImage %}col-md-6 nocategory{% else %}col-md-12 samecategory{% endif %}">
+                {{imageMenu}}
+              </div>
+            {% endif %}
+    </div>
+  </div>
+</div>
+{% endunless %}
+{% endif %}
+
+

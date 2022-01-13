@@ -7,24 +7,27 @@
     <meta charset="utf-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-
     <meta name="theme-color" content="">
-
+    
+    {% render 'meta-tags' %}
+    <link rel="dns-prefetch" href="https://cdn.shopify.com">
+    
     <link rel="canonical" href="{{ canonical_url }}">
 
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
     {%- if settings.favicon != blank -%}
 
-      <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: '32x32' }}">
+    <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: '32x32' }}">
 
     {%- endif -%}
 
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
 
-      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
 
     {%- endunless -%}
 
@@ -32,85 +35,50 @@
 
     {% if page_description %}
 
-      <meta name="description" content="{{ page_description | escape }}">
+    <meta name="description" content="{{ page_description | escape }}">
 
     {% endif %}
-
-    {% render 'meta-tags' %}
-    <script>
-      var moneyFormat = '{{shop.money_format}}';
-    </script>
-    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
-
-    {{ 'base.css' | asset_url | stylesheet_tag }}
-
-    {{ 'common.css' | asset_url | stylesheet_tag }}
-
-    {{ 'header.css' | asset_url | stylesheet_tag }}
-
-    {{ 'style.css' | asset_url | stylesheet_tag }}
-
-    {{ 'responsive.css' | asset_url | stylesheet_tag }}
-
-    {{ 'variable.css' | asset_url | stylesheet_tag }}
-
-    {{ 'element.css' | asset_url | stylesheet_tag }}
-
-    {{ 'owl.carousel.min.css' | asset_url | stylesheet_tag }}
-
-    {{ 'owl.theme.default.min.css' | asset_url | stylesheet_tag }}
-
-    {{ 'fonts.css' | asset_url | stylesheet_tag }}
-
+    
     {{ content_for_header }}
 
-    {%- liquid
-      assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-      assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-      assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-    %}
+    {% include 'theme-style' %}
+    
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
-
-    <script src="{{'vendor.js' | asset_url}}" ></script> 
-
-    <script src="{{'owl.carousel.js' | asset_url}}" defer="defer"></script> 
-
-    <script src="https://cdn.jsdelivr.net/npm/owl.carousel2.thumbs@0.1.8/dist/owl.carousel2.thumbs.min.js" defer="defer"></script>
-    <script src="{{'common.js' | asset_url}}" defer="defer"></script> 
+	{% include 'theme-scripts' %}
     
   </head>
 
-  <body>
-    <div class="wrapper">   
+  <body class="template_{{ template |handle }} loading breadcrumb-{{settings.enable_breadcrumb}}">
+    <div class="wrapper"> 
+      <noscript>
+        <div style="width:100%; border:1px solid #333; padding:10px; background:#ccc;">
+        	Javascript is disabled, please enable Javascript for better results.
+        </div>
+      </noscript>
 
       <header id="headerSection">
 
-          {% section 'announcement-bar' %}
-          {% section 'header' %}      
+        {% section 'announcement-bar' %}
+        {% section 'header' %}      
 
       </header>
-
+      {%- if settings.enable_breadcrumb -%}
       {% include 'breadcrumb' %}      
+      {%- endif -%}
 
       <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
 
         {{ content_for_layout }}
 
       </main>
-
+      
       {% section 'footer' %}
 
-      {% if settings.search_style == 'full' %}
       {% include 'search-drawer' %}
-      {% endif %}
-      {% render 'similar-products'%}
+      
+      {% render 'side-drawer'%}
 
-      {% if shop.customer_accounts_enabled %} 
-
-        {% include 'account-drawer' %}
-
-      {% endif %}
 
       <ul hidden>
 
@@ -118,13 +86,59 @@
 
       </ul>
 
-      <div class="wrapper-overlay" style="display: none;"></div>
-
     </div>
+    
     {% render 'newsletter-popup'%}
-  
-  {% include 'product-quick-view' %}
-  {% include 'mini-cart' %}
-  </body>
+    
+    {% if settings.enable_cart_drawer and template != 'cart'%}
+    
+    {% include 'mini-cart' %}
+    
+    {% endif %}
+    {% include 'product-contact-form' %}
+    {% render 'scroll-top' %}
+    {% render 'similar-product-drawer' %}
+    <style>
+      form button[type="submit"]:not([name="checkout"]) {
+        position: relative;
+      }
+      form button[type="submit"].is-loading svg, form button[type="submit"].is-loading span {
+        display: none;
+      }
+      form button[type="submit"].is-loading svg.svg-loader {
+        display: block !important;
+        width:30px;
+        height:30px;
+      }
+
+      .br_more_filter.hide .showLess {
+        display: none;
+      }
+      .br_more_filter.show .showMore {
+        display: none;
+      }
+      .accordion-container .set .panel-title.active .iconPlus,
+      .accordion-container .set .panel-title .iconMinus{
+        display: none;
+      }
+      .accordion-container .set .panel-title .iconPlus,
+      .accordion-container .set .panel-title.active .iconMinus{
+        display: inline;
+      }
+      
+      /*** Selling Plan **/
+      
+      .selling_group .selling_plan{
+      	display:none;
+      }
+      .selling_group.active .selling_plan{
+      	display:block;
+      }
+      
+    </style>
+<!--     <script>
+      AOS.init();
+    </script> -->
+  {% render 'th-subscription-scripts' %} </body>
 
 </html>

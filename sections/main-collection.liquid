@@ -1,0 +1,350 @@
+{% unless collection.handle == 'all' %}
+{% if section.settings.collection_image or section.settings.collection_description %}
+<div class="top_page_title collection-banner {% if collection.featured_image == blank and section.settings.collection_image %}no-bg{% endif %}{% if section.settings.collection_image == false and section.settings.collection_description %} no-bg{% endif %}" {% if collection.featured_image != blank and section.settings.collection_image %}style="background:url({{collection.featured_image | img_url:'master'}}) no-repeat center/cover"{% endif %}>
+  <div class="container">
+    <div class="contact-banner-text">
+      {% if section.settings.collection_image or section.settings.collection_description %}
+      <div class="banner_title">
+        <h1>{{collection.title}}</h1>
+      </div>
+      {% endif %}
+      {% if section.settings.collection_description and collection.description != blank %}
+      <div class="collection-description text__center">
+        {{collection.description}}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endunless %}
+{% paginate collection.products by section.settings.products_per_page %}
+{%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+<div class="CollectionProductGrid {{sort_by}} {{collection.default_sort_by}} 
+            {% if collection.products_count == 0 %}no-results{% endif %}" id="CollectionProductsContainer" data-id="{{section.id}}" data-view="grid-layout-5">
+  <div class="container">
+    {% if collection.all_products_count > 0 %}
+    <div class="product-toolbar-box {% if section.settings.enable_filtering == false and section.settings.enable_sorting == false%}filters-false{%endif%}">
+
+      {% if section.settings.enable_filtering %}
+      <div id="filterHeading" class="aside-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M0,1H16V3H0ZM0,7H16V9H0Zm0,6H16v2H0ZM7,0H9V4H7Zm3,6h2v4H10ZM5,12H7v4H5Z"/></g></g></svg>
+        <p>{{ 'sections.collection_template.filter_by_label' | t }}</p>
+        {% assign active = false %}
+        {%- for filter in collection.filters -%}
+        {% if filter.active_values.size > 0 %}
+        {% assign active = true  %}
+        {% endif %}
+        {% if filter.type == "price_range" %}
+        {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
+        {% assign active = true  %}
+        {%- endif -%}
+        {% endif %}
+        {% endfor %}
+        {% if active %}
+        <a href="{{ collection.url }}?sort_by={{ sort_by }}" class="select-item filter-clean  d-none d-md-block d-lg-block text-primary">{{ 'sections.collection_template.clear_all' | t }}</a>
+        {% endif %}
+      </div>
+      {% endif %}
+      <nav class="toolbox">
+        <div class="toolbox-left">
+          <div class="filter-total-result">
+
+            <p>{{collection.title}} - {{ collection.products_count}} {{ collection.products_count | pluralize: 'item', 'items' }}</p>
+          </div>
+        </div>
+        {% if section.settings.enable_sorting or section.settings.enable_display_options%}
+        <div class="toolbox-right">
+          {% if section.settings.enable_display_options %}
+          <div class="toolbox-item toolbox-layout">
+            <a data-layout="" data-value="grid-layout-5" class="btn-layout grid-layout-5">
+              <svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" width="19" height="19">
+                <title>5-shape</title>
+                <style>
+                  tspan { white-space:pre }
+                  .s0 { fill: #000000 } 
+                </style>
+                <g id="5-shape">
+                  <path id="Shape 1" class="s0" d="m0 0h3v3h-3v-3z" />
+                  <path id="Shape 1 copy" class="s0" d="m4 0h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 2" class="s0" d="m8 0h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 3" class="s0" d="m12 0h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 4" class="s0" d="m16 0h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 5" class="s0" d="m0 4h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 6" class="s0" d="m4 4h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 7" class="s0" d="m8 4h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 8" class="s0" d="m12 4h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 9" class="s0" d="m16 4h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 10" class="s0" d="m0 8h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 11" class="s0" d="m4 8h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 12" class="s0" d="m8 8h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 13" class="s0" d="m12 8h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 14" class="s0" d="m16 8h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 15" class="s0" d="m0 12h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 16" class="s0" d="m4 12h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 17" class="s0" d="m8 12h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 18" class="s0" d="m12 12h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 19" class="s0" d="m16 12h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 20" class="s0" d="m0 16h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 21" class="s0" d="m4 16h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 22" class="s0" d="m8 16h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 23" class="s0" d="m12 16h3v3h-3v-3z" />
+                  <path id="Shape 1 copy 24" class="s0" d="m16 16h3v3h-3v-3z" />
+                </g>
+              </svg>
+            </a>
+            <a data-layout="" data-value="grid-layout-4" class="btn-layout grid-layout-4">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 19 19" width="19" height="19">
+                <title>Layer_1-2</title>
+                <style>
+                  .grid-layout-4 tspan { white-space:pre }
+                  .grid-layout-4 .shp0 { fill: #000000 } 
+                </style>
+                <g id="Layer_1-2">
+                  <path id="Shape 1" class="shp0" d="M0 0L4 0L4 4L0 4L0 0Z"/>
+                  <path id="Shape 1 copy" class="shp0" d="M5 0L9 0L9 4L5 4L5 0Z"/>
+                  <path id="Shape 1 copy 2" class="shp0" d="M10 0L14 0L14 4L10 4L10 0Z"/>
+                  <path id="Shape 1 copy 3" class="shp0" d="M15 0L19 0L19 4L15 4L15 0Z"/>
+                  <path id="Shape 1 copy 4" class="shp0" d="M0 5L4 5L4 9L0 9L0 5Z"/>
+                  <path id="Shape 1 copy 5" class="shp0" d="M5 5L9 5L9 9L5 9L5 5Z"/>
+                  <path id="Shape 1 copy 6" class="shp0" d="M10 5L14 5L14 9L10 9L10 5Z"/>
+                  <path id="Shape 1 copy 7" class="shp0" d="M15 5L19 5L19 9L15 9L15 5Z"/>
+                  <path id="Shape 1 copy 8" class="shp0" d="M0 10L4 10L4 14L0 14L0 10Z"/>
+                  <path id="Shape 1 copy 9" class="shp0" d="M5 10L9 10L9 14L5 14L5 10Z"/>
+                  <path id="Shape 1 copy 10" class="shp0" d="M10 10L14 10L14 14L10 14L10 10Z"/>
+                  <path id="Shape 1 copy 11" class="shp0" d="M15 10L19 10L19 14L15 14L15 10Z"/>
+                  <path id="Shape 1 copy 12" class="shp0" d="M0 15L4 15L4 19L0 19L0 15Z"/>
+                  <path id="Shape 1 copy 13" class="shp0" d="M5 15L9 15L9 19L5 19L5 15Z"/>
+                  <path id="Shape 1 copy 14" class="shp0" d="M10 15L14 15L14 19L10 19L10 15Z"/>
+                  <path id="Shape 1 copy 15" class="shp0" d="M15 15L19 15L19 19L15 19L15 15Z"/>
+                </g>
+              </svg>
+            </a>
+            <a data-layout="" data-value="grid-layout-3" class="btn-layout grid-layout-3">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 19 19" width="19" height="19">
+                <title>Layer_2</title>
+                <style>
+                  .grid-layout-3 tspan { white-space:pre }
+                  .grid-layout-3 .shp0 { fill: #000000 } 
+                </style>
+                <g id="Layer_2">
+                  <g id="Layer_1-2">
+                    <path id="Layer" class="shp0" d="M0 0L4.99 0L4.99 4.99L0 4.99L0 0Z"/>
+                    <path id="Layer" class="shp0" d="M7 0L11.99 0L11.99 4.99L7 4.99L7 0Z"/>
+                    <path id="Layer" class="shp0" d="M0 7L4.99 7L4.99 11.99L0 11.99L0 7Z"/>
+                    <path id="Layer" class="shp0" d="M7 7L11.99 7L11.99 11.99L7 11.99L7 7Z"/>
+                    <path id="Layer" class="shp0" d="M0 14L4.99 14L4.99 18.99L0 18.99L0 14Z"/>
+                    <path id="Layer" class="shp0" d="M7 14L11.99 14L11.99 18.99L7 18.99L7 14Z"/>
+                    <path id="Layer copy" class="shp0" d="M14 0L18.99 0L18.99 4.99L14 4.99L14 0Z"/>
+                    <path id="Layer copy 2" class="shp0" d="M14 7L18.99 7L18.99 11.99L14 11.99L14 7Z"/>
+                    <path id="Layer copy 3" class="shp0" d="M14 14L18.99 14L18.99 18.99L14 18.99L14 14Z"/>
+                  </g>
+                </g>
+              </svg>
+            </a>
+            <a data-layout="" data-value="grid-layout-2" class="btn-layout grid-layout-2">
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 19 19" width="19" height="19">
+                <title>Layer_2</title>
+                <style>
+                  .grid-layout-2 tspan { white-space:pre }
+                  .grid-layout-2 .shp0 { fill: #000000 } 
+                </style>
+                <g id="Layer_2">
+                  <g id="Layer_1-2">
+                    <path id="Shape 1" class="shp0" d="M0 0L9 0L9 9L0 9L0 0Z"/>
+                    <path id="Shape 1 copy" class="shp0" d="M10 0L19 0L19 9L10 9L10 0Z"/>
+                    <path id="Shape 1 copy 2" class="shp0" d="M0 10L9 10L9 19L0 19L0 10Z"/>
+                    <path id="Shape 1 copy 3" class="shp0" d="M10 10L19 10L19 19L10 19L10 10Z"/>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+          {% endif %}
+          {% if section.settings.enable_sorting %}
+          <div id="toolbox-sort" class="toolbox-item toolbox-sort select-box">
+            <ul class="" id="sort__list">
+              <li class="mobile-sort-heading"><h6>{{ 'sections.collection_template.sort_by_label' | t }}</h6>
+                <button class="close-mobile-sort">
+                  <svg class="MobileCrossSvg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50" style=" fill:#000000;"><g><path style=" " d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z "></path></g></svg>
+                </button>
+              </li>
+              {%- for option in collection.sort_options -%}
+              <li class="{% if option.value == sort_by %}selected{%- assign sort_name = option.name | escape  -%}{% endif %}" value="{{ option.name | escape }}">
+                <input type="radio" name="sort_by" value="{{ option.value | escape }}" data-name="{{ option.name | escape }}" form="FiltersForm"{% if option.value == sort_by %}checked{% endif %}/>
+                {{ option.name | escape }}
+              </li>
+              {%- endfor -%}
+            </ul>
+            <div id="sort__list_label">
+              <span>{{ 'sections.collection_template.sort_by_label' | t }}</span>
+              <label for="SortBy">{{sort_name}}</label>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+      </nav>
+    </div>
+    <div class="product-listing-box filters-{{section.settings.enable_filtering}}">
+      {% if section.settings.enable_filtering and collection.filters.size > 0 %}
+      <aside id="filterSideBar" class="sidebar sidebar-fixed shop-sidebar sticky-sidebar-wrapper">
+        {% include 'collection-sidebar' results:collection %}
+      </aside>
+      {% else %}
+      <form id="FiltersForm" class="collectionFilters__form" >
+      </form>
+      {% endif %}
+      <div class="product-content main-content filteredData">
+
+        {% if active %}
+        <div class="toolbox-item toolbox-layout">
+          <div class="filter-actions">
+            <div class="select-items">
+              {% assign active = 0 %}
+              {%- for filter in collection.filters -%}
+              {%- for value in filter.active_values -%}
+              {% assign active = active | plus:1 %}
+              <a class="select-item" href="{{ value.url_to_remove }}">
+                {{ value.label | escape }}
+                <span class="close">
+                  {% render 'icon-cross' %}
+                </span>
+              </a>
+              {%- endfor -%}
+
+              {% if filter.type == "price_range" %}
+              {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}                             
+              {% assign active = active | plus:1 %}
+              <a class="select-item" href="{{ filter.url_to_remove }}">
+                {%- if filter.min_value.value -%}{{ filter.min_value.value | money }}{%- else -%}{{ 0 | money }}{%- endif -%}-{%- if filter.max_value.value -%}{{ filter.max_value.value | money }}{%- else -%}{{ filter.range_max | money }}{%- endif -%}
+                <span class="close">
+                  {% render 'icon-cross' %}
+                </span>
+              </a>
+              {%- endif -%}
+              {% endif %}
+              {%- endfor -%} 
+              <a href="{{ collection.url }}?sort_by={{ sort_by }}" class="select-item filter-clean d-md-none text-primary">{{ 'sections.collection_template.clear_all' | t }}</a>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        <div class="product-collection grid-view">
+          <div class="products-grid" style="display:block">
+            <div class="row product_columns" data-collection-products>
+              {% if collection.products_count > 0 %}
+              {% for product in collection.products %}
+              {% render 'product-grid',product: product %}
+              {% endfor %}
+              {%- if section.settings.pagination_type == 'infinite'-%}
+              {% if paginate.next %}
+              <div id="more" class="hidden" style="width:100%"><a href="{{ paginate.next.url }}"></a>
+                <div class="load" >
+                  <svg width="30" height="30"
+                       style="shape-rendering: auto; animation-play-state: running; animation-delay: 0s; background: none;"
+                       class="Search_loader lds-rolling" xmlns="http://www.w3.org/2000/svg"
+                       viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+
+                    <circle cx="50" cy="50" fill="none" stroke="#d9e2ed" stroke-width="10" r="35"
+                            stroke-dasharray="164.93361431346415 56.97787143782138"
+                            style="animation-play-state: running; animation-delay: 0s;"
+                            transform="rotate(115.597 50 50)">
+                      <animateTransform attributeName="transform" type="rotate" calcMode="linear"
+                                        values="0 50 50;360 50 50" keyTimes="0;1" dur="1s" begin="0s"
+                                        repeatCount="indefinite">
+                      </animateTransform>
+                    </circle>
+                  </svg>
+                </div>
+              </div>
+              {% endif %}
+              <div id="product-list-foot"></div>
+              {%- endif -%}
+              {% else %}
+              {% render 'not-found'  item:'Product'%}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {%- if section.settings.pagination_type == 'paged' and  paginate.pages > 1-%}
+        {% include 'pagination' ,anchor: ''%}
+        {%- endif -%}
+      </div>
+    </div>
+    {% else %}
+    {% render 'not-found'  item:'Product'%}
+    {% endif %}
+  </div>
+</div>
+
+{% endpaginate %}
+
+{% schema %}
+{
+"name": "t:sections.main-collection.name",
+"class": "collection-grid-section",
+"settings": [
+{
+"type": "checkbox",
+"id": "collection_image",
+"default": true,
+"label": "Show Collection Image"
+},
+{
+"type": "checkbox",
+"id": "collection_description",
+"default": true,
+"label": "Show Collection Description"
+},
+{
+"type": "radio",
+"id": "pagination_type",
+"default": "paged",
+"label": "Pagination Type",
+"options":[
+{
+"value": "paged",
+"label": "Paged Navigation"
+},
+{
+"value": "infinite",
+"label": "Infinite Scrolling"
+}
+]
+},
+{
+"type": "range",
+"id": "products_per_page",
+"min": 8,
+"max": 25,
+"step": 1,
+"default": 16,
+"label": "t:sections.main-collection.settings.products_per_page.label"
+},
+{
+"type": "header",
+"content": "t:sections.main-collection.settings.header__1.content"
+},
+{
+"type": "checkbox",
+"id": "enable_filtering",
+"default": true,
+"label": "t:sections.main-collection.settings.enable_filtering.label",
+"info": "t:sections.main-collection.settings.enable_filtering.info"
+},
+{
+"type": "checkbox",
+"id": "enable_sorting",
+"default": true,
+"label": "t:sections.main-collection.settings.enable_sorting.label"
+},
+{
+"type": "checkbox",
+"id": "enable_display_options",
+"default": true,
+"label": "t:sections.main-collection.settings.enable_display_options.label"
+}
+]
+}
+{% endschema %}

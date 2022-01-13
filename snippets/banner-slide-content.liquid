@@ -1,77 +1,75 @@
-<div id="banner-{{block.id}}" class="item" {{ block.shopify_attributes }}>
-    {% if block.settings.image != blank %}
-    <img src="{{block.settings.image | img_url:'master'}}" alt="">
-    {%else%}
-    {% include 'banner-placeholder'%}
-    {% endif %} 
-    <div class="carousel-caption">
-        <div class="container">
-            <div class="row">
-                <div class="carousel-caption-title style2 {{block.settings.info_position}} text__{{block.settings.info_alignment}}">
-                    {% if block.settings.heading != blank %}
-                    <h2 class="top-title">{{block.settings.heading}}</h2>
-                    {% endif %}
-                    {% if block.settings.subheading != blank %}
-                    <h1 class="smaller-heading">{{block.settings.subheading}}</h1>
-                    {% endif %}
-                    {% if block.settings.sale != blank %}
-                    <h1 class="bigger-heading">{{block.settings.sale}}</h1>
-                    {% endif %}
-                    {% if block.settings.content != blank %}
-                    <h5 class="bottom-title">{{block.settings.content}}</h5>
-                    {% endif %}
-                    {% if block.settings.btn != blank %}
-                    <a href="{{block.settings.link}}" class="black-btn button">{{block.settings.btn}}<i class="fas fa-arrow-right"></i></a>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-    </div>
-    <style>              
-        #banner-{{block.id}} .carousel-caption-title .top-title { 
-            {% if block.settings.h_bg != blank %}
-                background: {{ block.settings.h_bg }};
-            {% endif %}
-            {% if block.settings.h_text != blank %}
-                color: {{ block.settings.h_text }};
-            {% endif %}
-        }             
-        #banner-{{block.id}} .carousel-caption-title .smaller-heading { 
-            {% if block.settings.sh_bg != blank %}
-                background: {{ block.settings.sh_bg }};
-            {% endif %}
-            {% if block.settings.sh_text != blank %}
-                color: {{ block.settings.sh_text }};
-            {% endif %}
-        }               
-        #banner-{{block.id}} .carousel-caption-title .bigger-heading { 
-            {% if block.settings.sale_bg != blank %}
-                background: {{ block.settings.sale_bg }};
-            {% endif %}
-            {% if block.settings.sale_text != blank %}
-                color: {{ block.settings.sale_text }};
-            {% endif %}
-        }          
-        #banner-{{block.id}} .carousel-caption-title .bottom-title { 
-            {% if block.settings.c_bg != blank %}
-                background: {{ block.settings.c_bg }};
-            {% endif %}
-            {% if block.settings.c_text != blank %}
-                color: {{ block.settings.c_text }};
-            {% endif %}
-        }        
-        #banner-{{block.id}} .carousel-caption-title a.button { 
-            {% if block.settings.btn_text != blank %}
-                color: {{ block.settings.btn_text }};
-            {% endif %}
-            background-image: linear-gradient(
-                90deg,{{ block.settings.btn_h_bg }} 0,{{ block.settings.btn_h_bg }} 50%,{{ block.settings.btn_bg }} 50%,{{ block.settings.btn_bg }} 100%);
-        }
-               
-        #banner-{{block.id}} .carousel-caption-title a.button:hover { 
-            {% if block.settings.btn_h_text != blank %}
-                color: {{ block.settings.btn_h_text }};
-            {% endif %}
-        }
-    </style>
+{% assign desktopClass = '' %}
+{% if block.settings.image_mob != blank %}
+{% assign desktopClass = 'slide-image-desktop' %}
+{% endif %}
+{% if block.settings.image != blank %}
+{% render 'lazy-image' image:block.settings.image,class:desktopClass %}
+{%else%}
+<div class="{{desktopClass}} banner-placeholder">{% render 'banner-placeholder'%}</div>
+{% endif %} 
+{% if block.settings.image_mob != blank %}
+{% render 'lazy-image' image:block.settings.image_mob,class:'slide-image-mobile' %}
+{% endif %}
+<div class="carousel-caption">
+  <div class="container">
+      <div class="carousel-caption-title banner-slide {{block.settings.info_position}}">
+        {% if block.settings.tag_line != blank %}
+        <span class="tag-line">{{block.settings.tag_line}}</span>
+        {% endif %}
+        {% if block.settings.heading != blank %}
+        <h1 >{{block.settings.heading}}</h1>
+        {% endif %}
+        
+        {% if block.settings.subheading != blank %}
+         <h2>{{block.settings.subheading}}</h2>
+        {% endif %}
+        
+        {% if block.settings.content != blank %}        
+        <p>{{block.settings.content}}</p>
+        {% endif %}
+        {% if block.settings.btn != blank and block.settings.link != blank %}
+        <a href="{{block.settings.link}}" class="black-btn button">{{block.settings.btn}}<i class="fas fa-arrow-right"></i></a>
+        {% endif %}
+      </div>
+  </div>
 </div>
+<style>              
+             
+  .banner-{{block.id}} .carousel-caption-title .tag-line { 
+    {% if block.settings.sh_bg != blank %}
+    background: {{ block.settings.sh_bg }};
+    {% endif %}
+    {% if block.settings.sh_text != blank %}
+    color: {{ block.settings.sh_text }};
+    {% endif %}
+  }  
+                
+  .banner-{{block.id}} .carousel-caption-title h2 { 
+    {% if block.settings.subh_text != blank %}
+    color: {{ block.settings.subh_text }};
+    {% endif %}
+  }  
+  .banner-{{block.id}} .carousel-caption-title h1 { 
+    {% if block.settings.h_text != blank %}
+    color: {{ block.settings.h_text }};
+    {% endif %}
+  }          
+  .banner-{{block.id}} .carousel-caption-title p { 
+    {% if block.settings.c_text != blank %}
+    color: {{ block.settings.c_text }};
+    {% endif %}
+  }        
+  .banner-{{block.id}} .carousel-caption-title .button { 
+    {% if block.settings.btn_text != blank %}
+    color: {{ block.settings.btn_text }};
+    {% endif %}
+    background-color:{{ block.settings.btn_bg }} ;
+  }
+
+  .banner-{{block.id}} .carousel-caption-title .button:hover { 
+    {% if block.settings.btn_h_text != blank %}
+    color: {{ block.settings.btn_h_text }};
+    {% endif %}
+     background-color:{{ block.settings.btn_h_bg }}
+  }
+</style>

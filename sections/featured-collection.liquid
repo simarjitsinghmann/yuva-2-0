@@ -1,44 +1,68 @@
-<div class="container">
-    <div class="row">
-        <div class="best__for__you shopify__top__section text__center">
-            <small>All Products</small>
-            <h4>See the latest!</h4>
+<div class="section-spacer">
+  <div class="container">
+    <div class="best__for__you">
+      <div class="section-heading-box shopify__top__section text__center">
+        <small>{{section.settings.heading}}</small>
+        <h2>{{section.settings.subheading}} 
+          {% if section.settings.view_all_btn and section.settings.collection != blank and section.settings.view_all_btn_text != blank %}
+          <a class="view-all corner-view" href="{{section.settings.collection.url}}">{{section.settings.view_all_btn_text}}</a>    
+          {% endif %}
+        </h2>
+      </div>
+        <div class="products-grid ">
+          <div class="row column-{{section.settings.col_size}} product_columns">
+            {% assign limit = section.settings.col_size | times : section.settings.row_size%}
             {% if section.settings.collection != blank %}
             {% assign collection = section.settings.collection %}
-            <div class="grid grid--4-col-desktop grid--3-col-tablet">
-                <div class="grid__item full__item products-grid ">
-                    <div class="row column-{{section.settings.col_size}} d-flex justify-content-center">
-                        {% assign limit = section.settings.col_size | times : section.settings.row_size%}
-                        {% for product in collection.products limit:limit%}
-                        {% include 'product-grid'%}
-                        {% endfor %}
+            {% for product in collection.products limit:limit%}
+            {% include 'product-grid' %}
+            {% endfor %}
+            {% else %}
+
+            {% for i in (1..limit) %}
+            <div class="grid-item col collection-product-grid">
+              <div class="card-wrapper">
+                <div class="card card--text-only card--soft card--product text__left">
+                  <div class="card-wrapper-img ">
+                    {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                    {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                  </div>
+                  <div class="product-information">
+                    <div class="product-information__wrapper">
+                      <div class="caption-with-letter-spacing light">{{ 'onboarding.product_title' | t | capitalize }}</div>
+                      <div class="price__regular">
+                        <span data-regular-price>{{ 1999 | money}}</span>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+            {% endfor %}
             {% endif%}
+          </div>
         </div>
+      
     </div>
+  </div>
 </div>
 <style>
- .product__on__sale {
-    background: url(//cdn.shopify.com/s/files/1/0597/9668/5009/t/7/assets/badge-bg.svg?v=10910737147684277171);
-    width: 55px;
-    height: 20px;
-    background-size: 55px;
-    background-repeat: no-repeat;
-    padding-left: 9px;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 12px;
-    padding-top: 2px;
-    font-weight: var(--medium);
-}
+  #shopify-section-{{section.id}}.shopify-section {
+    padding-top:{{section.settings.top_space_desktop}}px;
+    padding-bottom:{{section.settings.bottom_space_desktop}}px;
+  }
+  @media only screen and (max-width:575px) {
+    #shopify-section-{{section.id}}.shopify-section{
+      padding-top:{{section.settings.top_space_mobile}}px;
+      padding-bottom:{{section.settings.bottom_space_mobile}}px;
+    }
+  }
 </style>
 {% schema %}
 {
   "name": "t:sections.featured-collection.name",
   "tag": "section",
-  "class":"latest__sale",
+  "class":"latest__sale featured-collection-section",
   "settings": [
     {
       "type": "text",
@@ -49,7 +73,7 @@
     {
       "type": "textarea",
       "id": "subheading",
-      "default": "See the latest!",
+      "default": "Add Featured Collection here",
       "label": "t:sections.featured-collection.settings.subheading.label"
     },
     {
@@ -64,7 +88,7 @@
         "max": 5,
         "step": 1,
         "label": "t:sections.featured-collection.settings.col_size.label",
-        "default": 4
+        "default": 5
     },
     {
         "type": "range",
@@ -73,13 +97,55 @@
         "max": 5,
         "step": 1,
         "label": "t:sections.featured-collection.settings.row_size.label",
-        "default": 2
+        "default": 1
     },
     {
       "type": "checkbox",
-      "id": "show_second_image",
+      "id": "view_all_btn",
       "default": false,
-      "label": "t:sections.featured-collection.settings.show_second_image.label"
+      "label": "t:sections.featured-collection.settings.view_all_btn.label"
+    },
+    {
+      "type": "text",
+      "id": "view_all_btn_text",
+      "default": "View all",
+      "label": "t:sections.featured-collection.settings.view_all_btn_text.label"
+    },
+    {
+      "type": "range",
+      "id": "top_space_desktop",
+      "label": "t:sections.featured-collection.settings.top_space_desktop.label",
+      "default":30,
+      "min":0,
+      "max":60,
+      "step":5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_desktop",
+      "label": "t:sections.featured-collection.settings.bottom_space_desktop.label",
+      "default":30,
+      "min":0,
+      "max":60,
+      "step":5
+    },
+    {
+      "type": "range",
+      "id": "top_space_mobile",
+      "label": "t:sections.featured-collection.settings.top_space_mobile.label",
+      "default":20,
+      "min":0,
+      "max":60,
+      "step":5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_mobile",
+      "label": "t:sections.featured-collection.settings.bottom_space_mobile.label",
+      "default":0,
+      "min":0,
+      "max":60,
+      "step":5
     }
   ],
   "presets": [

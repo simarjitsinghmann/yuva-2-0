@@ -1,13 +1,30 @@
 :root {
-	--bg-primary:#000000;
-	--bg-white:#ffffff;
-	--bg-gray:#efedeb;
-	--bg-footer:#0f151c;
-	--body-bg:#ffffff;
+    --black: #000000;
+    --white:#ffffff;
+    --gray: #ececec;
+    --dark-gray: #7b7b7b;
+    --theme-color: #c58b2f;
+    --green:#6cad61;
+    --red:#ec7c7c;
+    --font-family:'Jost', sans-serif;
+    --extra-small:12px;
+    --small-text: 13px;
+    --reg-text: 14px;
+    --med-text: 16px;
+    --large-text: 18px;
+    --thin:100;
+	--light:300;
+	--normal:400;
+	--medium:500;
+	--semibold:600;
+  	--bold:700;
+  	--extrabold:900;    
+/*   
+  
 	--bg-breadcrumb:#f7f8fa;
 	--bg-top-header:#f17e35;
 	--bg-theme:#f17e35;
-	--img-bg:#f6f6f6;
+	--img-bg:#ececec;
 	--color-primary:#000000;
 	--color-secondary:#ffffff;
 	--color-gray:#555555;
@@ -24,18 +41,11 @@
 	--small-font:13px;
     --font-normal:14px;
 	--extra-small:12px;
-	/* --font-family:'Whitney'; */
-	 /* --font-family:'Spartan', sans-serif; */
-	 --font-family:'Jost', sans-serif;;
-	--font-family2:'Oleo Script';
+
 	--font-style: normal;
-	--thin:100;
-	--light:300;
-	--normal:400;
-	--medium:500;
-	--semibold:600;
+	
 	--bold:bold;
-	--black:900;
+
 	--border-white: #ffffff;
 	--border-light-theme:#f5a47b;
 	--search-background:#f6f4f2;
@@ -46,7 +56,6 @@
 	--color-light-blue:#cfcdfc;
 	--color-light-marrown:#d76655;
 	--color-dark-sky:#5f83b4;
-	/* --color-gray:#595959; */
 	--color-yellow:#ffff00;
 	--color-black:#000000;
 	--border-color-white:#ffffff;
@@ -59,11 +68,11 @@
 	--insta-bg:#ca3174; 
 	--copyright-size:12px;
 	--star-checked:#f28b49;
-	--product-heading:#282c3f;
+	--product-heading:#000;
 	--sf-slide-trans-dur: 0.3s;
     --sf-slide-from-val: -65px;
     --sf-slide-to-val: 65px;
 	--submenu-label: #f24747;
-	--sale-badges:#6cad61;
-	--new-arrival-badges:#ec7c7c;
+	
+	--new-arrival-badges:#ec7c7c; */
 }

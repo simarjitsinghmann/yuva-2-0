@@ -1,189 +1,208 @@
-<div class="container">
-    <div class="row">
-        <div class="category-list shopify__top__section text__center">
-            <small>{{section.settings.subheading}}</small>
-            <h3>{{section.settings.heading}}</h3>
-            <ul class="grid grid--3-col-tablet grid--3-col-desktop d-flex justify-content-center {% if section.settings.style == 'style2' %}style_variation_2{% endif %}" role="list">
-                {% for block in section.blocks%}
-                  {%- if block.settings.bgcolor != blank -%}
-                  <style>
-                    #offer-block-{{block.id}} .card-information__wrapper{
-                      background-color:{{block.settings.bgcolor}};
-                    }
-                  </style>
-                {% endif %}
-                <li id="offer-block-{{block.id}}"  class="grid__item">
-                    <div class="card-wrapper">
-                        <div class="card-information">
-                        <div class="card-information-image">
-                            <a href="{{block.settings.link}}" class="animate_hvrbr">
-                              {% if block.settings.image != blank %}
-                              <img src="{{block.settings.image | img_url:'master'}}" alt="">
-                            {% else %}
-                              <img src="{{ 'featured_image.png' | asset_url}}" alt="">
-                              
-                              {% endif %}
-                            </a>
-                        </div>
-                            <div class="card-information__wrapper {{block.settings.info_position}}">
-                              {% if block.settings.heading != blank %}
-                                <h5>{{block.settings.heading}}</h5>
-                                {% endif%}
-                                {% if block.settings.subheading != blank %}
-                                {{block.settings.subheading}}
-                                {% endif%}
-                            </div>
-                        </div>
-                    </div>
-                </li>
-              {% endfor%}
-            </ul>
-
-        </div>
+<div class="section-spacer">
+  <div class="container">
+    <div class="shopify__top__section text__center">
+      <div class="section-heading-box">
+        <small>{{section.settings.subheading}}</small>
+        <h2>{{section.settings.heading}}</h2>
+      </div>
     </div>
+    <div class="offer-list">
+      <div class="row {% if section.settings.style == 'style2' %}style_variation_2{%else%}style_variation_1{% endif %} row-items-{{section.blocks.size}}">
+        {% for block in section.blocks%}
+        <div  class="{% if section.blocks.size == 1%}col-12{%else%}col-10{% endif %} col-sm-6 col-md-4">
+          <div class="card-wrapper">
+            <div class="card-information">
+                <a href="{{block.settings.link}}" class="animate_hvrbr">
+              <div class="card-information-image">
+                  {% if block.settings.image != blank  %}
+                  {% render 'lazy-image' image: block.settings.image%}
+                  {%else%}
+                {% render 'placeholder' %}
+                  {% endif %}
+              </div>
+              {% unless block.settings.heading == blank and block.settings.subheading == blank %}
+              <div class="card-information__wrapper {% if section.settings.style  == 'style2' %}text__{{section.settings.info_position}}{% else %}bottom-{{section.settings.info_position}}{% endif %} content-border-{{section.settings.show_border}}" >
+                <div data-aos="fade-up" data-aos-duration="1200">
+                {% if block.settings.heading != blank %}
+                <h5>{{block.settings.heading}}</h5>
+                {% endif%}
+                {% if block.settings.subheading != blank %}
+                {{block.settings.subheading}}
+                {% endif%}
+              </div>
+                  </div>
+              {% endunless %}
+              </a>
+            </div>
+          </div>
+        </div>
+        {% endfor%}
+      </div>
+    </div>
+  </div>
 </div>
 <style>
-  #shopify-section-{{section.id}}{
+  #shopify-section-{{section.id}}.shopify-section{
     background-color:{{section.settings.color}};
+    padding-top:{{section.settings.top_space_desktop}}px;
+    padding-bottom:{{section.settings.bottom_space_desktop}}px;
+  }
+  @media only screen and (max-width:575px) {
+    #shopify-section-{{section.id}}.shopify-section{
+      padding-top:{{section.settings.top_space_mobile}}px;
+      padding-bottom:{{section.settings.bottom_space_mobile}}px;
+    }
   }
 </style>
 {% schema %}
 {
-  "name": "t:sections.offer-section.name",
-  "tag": "section",
-  "class":"category-section",
-  "max_blocks":3,
-  "settings": [
-    {
-      "type": "text",
-      "id": "subheading",
-      "default": "BEST FOR YOU",
-      "label": "t:sections.offer-section.settings.subheading.label"
-    },
-    {
-      "type": "text",
-      "id": "heading",
-      "default": "What's More",
-      "label": "t:sections.offer-section.settings.heading.label"
-    },
-    {
-      "type": "color",
-      "id": "color",
-      "default": "#efedeb",
-      "label": "t:sections.offer-section.settings.color.label"
-    },
-    {
-      "type": "select",
-      "id": "style",
-      "label": "t:sections.offer-section.settings.style.label",
-      "default": "style1",
-      "options": [
-        {
-          "label": "t:sections.offer-section.settings.style.style1.label",
-          "value": "style1"
-        },
-        {
-          "label": "t:sections.offer-section.settings.style.style2.label",
-          "value": "style2"
-        }
-      ]
-    }
-  ],
-  "blocks": [
-	  {
-      "type":"offer",
-      "name":"t:sections.offer-section.blocks.offer.name",
-      "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "default": "Heading",
-          "label": "t:sections.offer-section.blocks.offer.settings.heading.label"
-        },
-        {
-          "type": "richtext",
-          "id": "subheading",
-          "default": "<p>Flat Up To</p>",
-          "label": "t:sections.offer-section.blocks.offer.settings.subheading.label"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "t:sections.offer-section.blocks.offer.settings.image.label"
-        },
-        {
-          "type": "url",
-          "id": "link",
-          "label": "t:sections.offer-section.blocks.offer.settings.link.label"
-        },
-        {
-          "type": "color",
-          "id": "bgcolor",
-          "default": "#ffffff",
-          "label": "t:sections.offer-section.blocks.offer.settings.bgcolor.label"
-        },
-        {
-          "type": "select",
-          "id": "info_position",
-          "label": "t:sections.offer-section.blocks.offer.settings.info_position.label",
-          "default": "bottom-left",
-          "options": [
+   "name":"t:sections.offer-section.name",
+   "tag":"section",
+   "class":"offer-section",
+   "max_blocks":3,
+   "settings":[
+      {
+         "type":"text",
+         "id":"subheading",
+         "default":"Offers",
+         "label":"t:sections.offer-section.settings.subheading.label"
+      },
+      {
+         "type":"text",
+         "id":"heading",
+         "default":"Announce your Offers here",
+         "label":"t:sections.offer-section.settings.heading.label"
+      },
+      {
+         "type":"color",
+         "id":"color",
+         "default":"#F3F0EB",
+         "label":"t:sections.offer-section.settings.color.label"
+      },
+      {
+         "type":"select",
+         "id":"style",
+         "label":"t:sections.offer-section.settings.style.label",
+         "default":"style1",
+         "options":[
             {
-              "label": "t:sections.offer-section.blocks.offer.settings.info_position.top-left.label",
-              "value": "top-left"
+               "label":"t:sections.offer-section.settings.style.style1.label",
+               "value":"style1"
             },
             {
-              "label": "t:sections.offer-section.blocks.offer.settings.info_position.top-center.label",
-              "value": "top-center"
-            },
-            {
-              "label": "t:sections.offer-section.blocks.offer.settings.info_position.top-right.label",
-              "value": "top-right"
-            },
-            {
-              "label": "t:sections.offer-section.blocks.offer.settings.info_position.center-left.label",
-              "value": "center-left"
-            },
-            {
-              "label": "t:sections.offer-section.blocks.offer.settings.info_position.center.label",
-              "value": "center"
-            },
-            {
-              "label": "t:sections.offer-section.blocks.offer.settings.info_position.center-right.label",
-              "value": "center-right"
-            },
-            {
-              "label": "t:sections.offer-section.blocks.offer.settings.info_position.bottom-left.label",
-              "value": "bottom-left"
-            },
-            {
-              "label": "t:sections.offer-section.blocks.offer.settings.info_position.bottom-center.label",
-              "value": "bottom-center"
-            },
-            {
-              "label": "t:sections.offer-section.blocks.offer.settings.info_position.bottom-right.label",
-              "value": "bottom-right"
+               "label":"t:sections.offer-section.settings.style.style2.label",
+               "value":"style2"
             }
-          ]
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "t:sections.offer-section.presets.name",
-      "blocks": [
-        {
-          "type": "offer"
-        },
-        {
-          "type": "offer"
-        },
-        {
-          "type": "offer"
-        }
-      ]
-    }
-  ]
+         ]
+      },
+      {
+        "type":"select",
+        "id":"info_position",
+        "label":"t:sections.offer-section.settings.info_position.label",
+        "default":"left",
+        "options":[
+          {
+            "label":"t:sections.offer-section.settings.info_position.bottom-left.label",
+            "value":"left"
+          },
+          {
+            "label":"t:sections.offer-section.settings.info_position.center.label",
+            "value":"center"
+          },
+          {
+            "label":"t:sections.offer-section.settings.info_position.bottom-right.label",
+            "value":"right"
+          }
+        ]
+      },
+      {
+         "type":"checkbox",
+         "id":"show_border",
+         "default":false,
+         "label":"t:sections.offer-section.settings.show_border.label"
+      },
+      {
+         "type":"range",
+         "id":"top_space_desktop",
+         "label":"t:sections.offer-section.settings.top_space_desktop.label",
+         "default":30,
+         "min":0,
+         "max":60,
+         "step":5
+      },
+      {
+         "type":"range",
+         "id":"bottom_space_desktop",
+         "label":"t:sections.offer-section.settings.bottom_space_desktop.label",
+         "default":30,
+         "min":0,
+         "max":60,
+         "step":5
+      },
+      {
+         "type":"range",
+         "id":"top_space_mobile",
+         "label":"t:sections.offer-section.settings.top_space_mobile.label",
+         "default":35,
+         "min":0,
+         "max":60,
+         "step":5
+      },
+      {
+         "type":"range",
+         "id":"bottom_space_mobile",
+         "label":"t:sections.offer-section.settings.bottom_space_mobile.label",
+         "default":35,
+         "min":0,
+         "max":60,
+         "step":5
+      }
+   ],
+   "blocks":[
+      {
+         "type":"offer",
+         "name":"t:sections.offer-section.blocks.offer.name",
+         "settings":[
+            {
+               "type":"text",
+               "id":"heading",
+               "default":"Sales",
+               "label":"t:sections.offer-section.blocks.offer.settings.heading.label"
+            },
+            {
+               "type":"richtext",
+               "id":"subheading",
+               "default":"<p>Add Offer here</p>",
+               "label":"t:sections.offer-section.blocks.offer.settings.subheading.label"
+            },
+            {
+               "type":"image_picker",
+               "id":"image",
+               "label":"t:sections.offer-section.blocks.offer.settings.image.label"
+            },
+            {
+               "type":"url",
+               "id":"link",
+               "label":"t:sections.offer-section.blocks.offer.settings.link.label"
+            }
+         ]
+      }
+   ],
+   "presets":[
+      {
+         "name":"t:sections.offer-section.presets.name",
+         "blocks":[
+            {
+               "type":"offer"
+            },
+            {
+               "type":"offer"
+            },
+            {
+               "type":"offer"
+            }
+         ]
+      }
+   ]
 }
 {% endschema %}

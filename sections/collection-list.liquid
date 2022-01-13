@@ -1,216 +1,144 @@
-<div class="container section-{{section.id}}">
-        <div class="row">
-            <div class="collection page-width">
-                <div class="collection-section-header">
-                  {% if section.settings.heading != blank %}
-                  <h4 class="title">{{section.settings.heading}}</h4>
-                  {% endif %}
-                  {% if section.settings.btntext != blank %}
-                  <a class="view-all" href="{{section.settings.btnlink}}">{{section.settings.btntext}}</a>
-                  {% endif %}
-                </div>
-                <div class="collection-gutter {% if section.settings.style == 'style2' %}layout2{% endif %}">
-                  {% if section.settings.m_collection != blank or section.settings.m_collection != false %}
-                    <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col" role="list">
-                      {% assign collection = ''%}
-                      {% if section.settings.m_collection != blank %}
-                      {% assign collection = section.settings.m_collection %}
-                      {% endif %}
-                        <div class="card-wrapper left-sided">
-                            <div class="card__warpper__detail left__sided">
-                                <div class="collection-image">
-                                  {% if section.settings.custom == false and collection.featured_image != blank %} 
-                                  {% assign feature_image = collection.featured_image | img_url:'master' %}
-                                  {% elsif section.settings.custom == true and section.settings.mc_image == blank and collection.featured_image != blank %}
-                                  {% assign feature_image = collection.featured_image | img_url:'master' %}
-                                    {% elsif section.settings.custom and section.settings.mc_image != blank  %}
-                                    {% assign feature_image = section.settings.mc_image | img_url:'master' %}
-                                    {%else%}
-                                    {% assign feature_image = 'collection1.svg' | asset_url %}
-                                  {% endif %}
-                                  <img src="{{feature_image}}" alt="">
-                                </div>
-                                <div class="collection-detail {{section.settings.info_position}} text__{{section.settings.info_alignment}}">
-                                  
-                                        {% if section.settings.style == 'style2' %}
-                                         <small class="style2">
-                                      {% if section.settings.custom == false %}
-                                        {{collection.description | strip_html | truncatewords: 15, "" }}
-                                        {% elsif section.settings.custom and section.settings.mc_desc != blank  %}
-                                        {{section.settings.mc_desc}}
-                                      {% endif %}
-                                    </small>
-                                        {% endif %}
-                                  {% if section.settings.style == 'style1' %}
-                                    <h4>
-                                      {% else %}
-                                      <h3>
-                                        {% endif %}
-                                      {% if section.settings.custom == false %}
-                                        {{collection.title}}
-                                        {% elsif section.settings.custom and section.settings.mc_heading != blank  %}
-                                        {{section.settings.mc_heading}}
-                                      {% endif %}
-                                      {% if section.settings.style == 'style1' %}
-                                      </h4>
-                                        {% else %}
-                                    </h3>
-                                          {% endif %}
-                                        {% if section.settings.style == 'style1' %}
-                                         <small>
-                                      {% if section.settings.custom == false %}
-                                        {{collection.description | strip_html | truncatewords: 15, "" }}
-                                        {% elsif section.settings.custom and section.settings.mc_desc != blank  %}
-                                        {{section.settings.mc_desc}}
-                                      {% endif %}
-                                    </small>
-                                        {% endif %}
-                                      {% if section.settings.mc_btntext != blank %}
-                                        
-                                        {% if section.settings.custom and section.settings.mc_btnlink != blank  %}
-                                          {% assign btnlink = section.settings.mc_btnlink %}
-                                    {% else %}
-                                    {% assign btnlink = collection.url %}
-                                      {% endif%}               
-                                      
-                                    <a href="{{btnlink}}" class="button mainColbutton-{{section.id}}">                       
-                                      <span>
-                                      {% if section.settings.button_icon %}
-                                    <svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> 
-                                    {% endif %}
-                                      {{section.settings.mc_btntext}}
-                                    </span>
-                                    </a>
-                                  {% endif %}
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                  {% endif %}
-                  {% if section.blocks.size > 0 %}
-                    <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col" role="list">
-                        <ul class="collection__right__list" role="list">
-                          {% for block in section.blocks %}
-                          {% if section.settings.style == 'style2' %}
-                          <style>
-                            .section-{{section.id}} .block-{{forloop.index}}.right__sided .collection-detail h4,
-                            .section-{{section.id}} .block-{{forloop.index}}.right__sided .collection-detail small{
-                              color:{{block.settings.text_color}} !important;
-                            }
-                          </style>
-                          {% endif %}
-                            {% assign collection = ''%}
-                            {% if block.settings.collection != blank %}
-                            {% assign collection = block.settings.collection %}
-                            {% endif %}
-                            {% capture image_content %}
-                            <div class="collection-image ">
-                              {% if block.settings.custom == false and collection.featured_image != blank %} 
-                              {% assign feature_image = collection.featured_image | img_url:'master' %}
-                              {% elsif block.settings.custom == true and block.settings.image == blank and collection.featured_image != blank %}
-                              {% assign feature_image = collection.featured_image | img_url:'master' %}
-                                {% elsif block.settings.image != blank  %}
-                                {% assign feature_image = block.settings.image | img_url:'master' %}
-                                {%else%}
-                                {% assign feature_image = 'collection2.svg' | asset_url %}
-                              {% endif %}
-                              <img src="{{feature_image}}" alt="">
-                            </div>
-                            {% endcapture %}
-                            <li class="grid__item__list">
-                                <div class="card-wrapper">
-                                    <div class="card__warpper__detail right__sided block-{{forloop.index}}">
-                                      {% if block.settings.info_position == 'right'%}
-                                        {{image_content}}
-                                      {% endif %}
-                                    <div class="{% if section.settings.style == 'style1' %}collection-detail-right{% else %}collection-detail {{ block.settings.text_position }} {% endif %}">
-                                           {% if section.settings.style == 'style1' %}
-                                      <h5>
-                                        {% else %}
-                                    <h4>
-                                          {% endif %}
-                                          {% if block.settings.custom == false %}
-                                            {{collection.title}}
-                                            {% elsif block.settings.custom and block.settings.heading != blank  %}
-                                            {{block.settings.heading}}
-                                          {% endif %}
-                                           {% if section.settings.style == 'style1' %}
-                                      </h5>
-                                        {% else %}
-                                    </h4>
-                                          {% endif %}
-                                        <small>
-                                          {% if block.settings.custom == false %}
-                                            {{collection.description | strip_html | truncatewords: 15, "" }}
-                                            {% elsif block.settings.custom and block.settings.desc != blank  %}
-                                            {{block.settings.desc}}
-                                          {% endif %}
-                                        </small> 
-                                        {% if block.settings.btntext != blank %}
-                                        
-                                          {% if block.settings.custom and block.settings.btnlink != blank  %}
-                                            {% assign btnlink = block.settings.btnlink %}
-                                      {% else %}
-                                      {% assign btnlink = collection.url %}
-                                        {% endif%}               
-                                        
-                                      <a href="{{btnlink}}" class="button mainColbutton-{{section.id}}">    
-                                          <span>
-                                            {% if section.settings.button_icon %}
-                                            <svg height="14px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> 
-                                            {% endif %}
-                                            {{block.settings.btntext }}
-                                          </span>
-                                        </a>
-                                      {% endif %}
-                                    </div>
-                                    {% if block.settings.info_position == 'left'%}
-                                      {{image_content}}
-                                    {% endif %}
-                                    </div>
-                                </div>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                  {% endif %}
-                </div>
-            </div>
-        </div>
+<div class="section-spacer">
+  <div class="container">
+    <div class="collection-section-header section-heading-box">                  
+      {% if section.settings.heading != blank %}
+      <h2 class="title">{{section.settings.heading}}</h2>
+      {% endif %}
+      {% if section.settings.btntext != blank and section.settings.btnlink != blank %}
+      <a class="view-all" href="{{section.settings.btnlink}}">{{section.settings.btntext}}</a>
+      {% endif %}
     </div>
-  <style>
-.mainColbutton-{{section.id}} {
-  background:{{section.settings.btn_bg}} !important ;
-  color:{{section.settings.btn_text}} !important ;
-}
-.mainColbutton-{{section.id}} svg {
-  fill:{{section.settings.btn_text}} !important ;
-}
-.mainColbutton-{{section.id}}:hover {
-  background:{{section.settings.hvr_btn_bg}} !important ;
-  color:{{section.settings.hvr_btn_text}} !important ;
-}
-.mainColbutton-{{section.id}}:hover svg {
-  fill:{{section.settings.hvr_btn_text}} !important ;
-}
-    {% if section.settings.style == 'style2' %}
-    .section-{{section.id}} .left__sided .collection-detail h3,
-    .section-{{section.id}} .left__sided .collection-detail small{
-      color:{{section.settings.text_color}} !important;
+    <div class="collection-gutter">
+      {% if section.settings.m_collection != blank or section.settings.m_collection != false %}
+      <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col">
+        {% include 'featured-collection-grid'
+                      	m_collection:section.settings.m_collection,
+        custom:section.settings.custom,
+        mc_image:section.settings.mc_image,
+        mc_heading:section.settings.mc_heading,
+        mc_desc:section.settings.mc_desc,
+        mc_btntext:section.settings.mc_btntext,
+        mc_btnlink:section.settings.mc_btnlink,
+        button_icon:section.settings.button_icon
+        %}
+      </div>
+      {% endif %}
+      {% if section.blocks.size > 0 %}
+      <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col ">
+        {% if section.blocks.size > 1 %}
+        <ul class="collection__right__list block-count{{section.blocks.size}}">
+          {% for block in section.blocks %}
+          {% assign collection = ''%}
+          {% if block.settings.collection != blank %}
+          {% assign collection = block.settings.collection %}
+          {% endif %}
+          {% capture image_content %}
+          <div class="collection-image ">
+            {% if block.settings.custom == false and collection.featured_image != blank %}
+            {% include 'lazy-image' image:collection.featured_image %} 
+            {% elsif block.settings.custom == true and block.settings.image == blank and collection.featured_image != blank %}
+            {% include 'lazy-image' image:collection.featured_image %}
+            {% elsif block.settings.image != blank  %}
+            {% include 'lazy-image' image:block.settings.image %}
+            {%else%}
+            {% render 'placeholder' %}
+            {% endif %}
+          </div>
+          {% endcapture %}
+          <li class="grid__item__list">
+            <div class="card-wrapper">
+              <div class="card__warpper__detail right__sided block-{{forloop.index}}">                                        
+                {{image_content}}
+                <div class="collection-detail-right">
+                  <h4>
+                    {% if block.settings.custom == false %}
+                    {{collection.title}}
+                    {% elsif block.settings.custom and block.settings.heading != blank  %}
+                    {{block.settings.heading}}
+                    {% endif %}
+                  </h4>
+                  <p>
+                    {% if block.settings.custom == false %}
+                    {{collection.description | strip_html | truncatewords: 12, ".." }}
+                    {% elsif block.settings.custom and block.settings.desc != blank  %}
+                    {{block.settings.desc| strip_html | truncatewords: 12, ".." }}
+                    {% endif %}
+                  </p> 
+                  {% if block.settings.btntext != blank %}
+
+                  {% if block.settings.custom and block.settings.btnlink != blank  %}
+                  {% assign btnlink = block.settings.btnlink %}
+                  {% else %}
+                  {% assign btnlink = collection.url %}
+                  {% endif%}               
+
+                  {% if btnlink != blank %}
+                  <a href="{{btnlink}}" class="mainColbutton-{{section.id}} collection-list-btn link">    
+                    <span>
+                      {% if section.settings.button_icon %}
+                      <svg height="14px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> 
+                      {% endif %}
+                      {{block.settings.btntext }}
+                    </span>
+
+                  </a>
+                  {% endif %}
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        {% for block in section.blocks %}
+        {% include 'featured-collection-grid'
+                      	m_collection:block.settings.collection,
+        custom:block.settings.custom,
+        mc_image:block.settings.image,
+        mc_heading:block.settings.heading,
+        mc_desc:block.settings.desc,
+        mc_btntext:block.settings.btntext,
+        mc_btnlink:block.settings.btnlink,
+        button_icon:section.settings.button_icon
+        %}
+        {% endfor %}
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<style>
+  .mainColbutton-{{section.id}} {
+    background:{{section.settings.btn_bg}} ;
+    color:{{section.settings.btn_text}}  ;
+  }
+  .mainColbutton-{{section.id}} svg {
+    fill:{{section.settings.btn_text}} ;
+  }
+  #shopify-section-{{section.id}}.shopify-section {
+    padding-top:{{section.settings.top_space_desktop}}px;
+    padding-bottom:{{section.settings.bottom_space_desktop}}px;
+  }
+  @media only screen and (max-width:575px) {
+    #shopify-section-{{section.id}}.shopify-section{
+      padding-top:{{section.settings.top_space_mobile}}px;
+      padding-bottom:{{section.settings.bottom_space_mobile}}px;
     }
-    {% endif %}
-  </style>
+  }
+</style>
 {% schema %}
 {
   "name": "t:sections.collection-list.name",
   "tag": "section",
-  "class":"spaced-section",
+  "class":"collection-list-section",
+  "max_blocks":3,
   "settings": [
     {
       "type": "text",
       "id": "heading",
-      "default": "Collection list",
+      "default": "Collection List",
       "label": "t:sections.collection-list.settings.heading.label"
     },
     {
@@ -225,22 +153,6 @@
       "label": "t:sections.collection-list.settings.btnlink.label"
     },
     {
-      "type": "select",
-      "id": "style",
-      "default": "style1",
-      "label": "t:sections.collection-list.settings.style.label",
-      "options":[
-        {
-            "value":"style1",
-            "label":"t:sections.collection-list.settings.style.style1.label"
-        },
-        {
-          "value":"style2",
-          "label":"t:sections.collection-list.settings.style.style2.label"
-        }
-      ]
-    },
-    {
       "type": "header",
       "content": "t:sections.collection-list.settings.main_collection_1.content"
     },
@@ -248,70 +160,6 @@
       "type": "collection",
       "id": "m_collection",
       "label": "t:sections.collection-list.settings.m_collection.label"
-    },
-    {
-      "type": "select",
-      "id": "info_position",
-      "label": "t:sections.collection-list.settings.info_position.label",
-      "default": "top-center",
-      "options": [
-        {
-          "label": "t:sections.collection-list.settings.info_position.top-left.label",
-          "value": "top-left"
-        },
-        {
-          "label": "t:sections.collection-list.settings.info_position.top-center.label",
-          "value": "top-center"
-        },
-        {
-          "label": "t:sections.collection-list.settings.info_position.top-right.label",
-          "value": "top-right"
-        },
-        {
-          "label": "t:sections.collection-list.settings.info_position.center-left.label",
-          "value": "center-left"
-        },
-        {
-          "label": "t:sections.collection-list.settings.info_position.center.label",
-          "value": "center"
-        },
-        {
-          "label": "t:sections.collection-list.settings.info_position.center-right.label",
-          "value": "center-right"
-        },
-        {
-          "label": "t:sections.collection-list.settings.info_position.bottom-left.label",
-          "value": "bottom-left"
-        },
-        {
-          "label": "t:sections.collection-list.settings.info_position.bottom-center.label",
-          "value": "bottom-center"
-        },
-        {
-          "label": "t:sections.collection-list.settings.info_position.bottom-right.label",
-          "value": "bottom-right"
-        }
-      ]
-    },
-    {
-      "type": "select",
-      "id": "info_alignment",
-      "label": "t:sections.collection-list.settings.info_alignment.label",
-      "default": "center",
-      "options": [
-      {
-        "label": "t:sections.collection-list.settings.info_alignment.left.label",
-        "value": "left"
-      },
-      {
-        "label": "t:sections.collection-list.settings.info_alignment.center.label",
-        "value": "center"
-      },
-      {
-        "label": "t:sections.collection-list.settings.info_alignment.right.label",
-        "value": "right"
-      }
-      ]
     },
     {
       "type": "text",
@@ -328,13 +176,13 @@
     {
       "type": "text",
       "id": "mc_heading",
-      "default":"Main Collection",
+      "default":"Collection name here",
       "label": "t:sections.collection-list.settings.mc_heading.label"
     },
     {
       "type": "textarea",
       "id": "mc_desc",
-      "default":"Contrary to popular belief, Lorem Ipsum is not simply random.",
+      "default":"Add description here.",
       "label": "t:sections.collection-list.settings.mc_desc.label"
     },
     {
@@ -348,12 +196,6 @@
       "label": "t:sections.collection-list.settings.mc_image.label"
     },
     {
-      "type": "color",
-      "id": "text_color",
-      "label": "t:sections.collection-list.settings.text_color.label",
-      "default":"#000000"
-    },
-    {
       "type": "checkbox",
       "id": "button_icon",
       "label": "t:sections.collection-list.settings.button_icon.label",
@@ -361,26 +203,45 @@
     },
     {
       "type": "color",
-      "id": "btn_bg",
-      "label": "t:sections.collection-list.settings.btn_bg.label"
-    },
-    {
-      "type": "color",
       "id": "btn_text",
       "label": "t:sections.collection-list.settings.btn_text.label",
-      "default":"#000000"
+      "default":"#746850"
     },
     {
-      "type": "color",
-      "id": "hvr_btn_bg",
-      "label": "t:sections.collection-list.settings.hvr_btn_bg.label",
-      "default":"#000000"
+      "type": "range",
+      "id": "top_space_desktop",
+      "label": "t:sections.collection-list.settings.top_space_desktop.label",
+      "default":30,
+      "min":0,
+      "max":60,
+      "step":5
     },
     {
-      "type": "color",
-      "id": "hvr_btn_text",
-      "label": "t:sections.collection-list.settings.hvr_btn_text.label",
-      "default":"#ffffff"
+      "type": "range",
+      "id": "bottom_space_desktop",
+      "label": "t:sections.collection-list.settings.bottom_space_desktop.label",
+      "default":30,
+      "min":0,
+      "max":60,
+      "step":5
+    },
+    {
+      "type": "range",
+      "id": "top_space_mobile",
+      "label": "t:sections.collection-list.settings.top_space_mobile.label",
+      "default":30,
+      "min":0,
+      "max":60,
+      "step":5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_mobile",
+      "label": "t:sections.collection-list.settings.bottom_space_mobile.label",
+      "default":0,
+      "min":0,
+      "max":60,
+      "step":5
     }
   ],
   "blocks": [
@@ -398,68 +259,7 @@
           "id": "btntext",
           "default": "Explore",
           "label": "t:sections.collection-list.blocks.collection.settings.btntext.label"
-        },
-        {
-          "type": "select",
-          "id": "info_position",
-          "label": "t:sections.collection-list.blocks.collection.settings.info_position.label",
-          "default": "right",
-          "options": [
-            {
-              "label": "t:sections.collection-list.blocks.collection.settings.info_position.left.label",
-              "value": "left"
-            },
-            {
-              "label": "t:sections.collection-list.blocks.collection.settings.info_position.right.label",
-              "value": "right"
-            }
-          ]
-        },
-        {
-          "type": "select",
-          "id": "text_position",
-          "label": "t:sections.collection-list.blocks.collection.settings.text_position.label",
-          "default": "top-center",
-          "info": "t:sections.collection-list.blocks.collection.settings.text_position.label",
-          "options": [
-            {
-              "label": "t:sections.collection-list.blocks.collection.settings.text_position.top-left.label",
-              "value": "top-left"
-            },
-            {
-              "label": "t:sections.collection-list.blocks.collection.settings.text_position.top-center.label",
-              "value": "top-center"
-            },
-            {
-              "label": "t:sections.collection-list.blocks.collection.settings.text_position.top-right.label",
-              "value": "top-right"
-            },
-            {
-              "label": "t:sections.collection-list.blocks.collection.settings.text_position.center-left.label",
-              "value": "center-left"
-            },
-            {
-              "label": "t:sections.collection-list.blocks.collection.settings.text_position.center.label",
-              "value": "center"
-            },
-            {
-              "label": "t:sections.collection-list.blocks.collection.settings.text_position.center-right.label",
-              "value": "center-right"
-            },
-            {
-              "label": "t:sections.collection-list.blocks.collection.settings.text_position.bottom-left.label",
-              "value": "bottom-left"
-            },
-            {
-              "label": "t:sections.collection-list.blocks.collection.settings.text_position.bottom-center.label",
-              "value": "bottom-center"
-            },
-            {
-              "label": "t:sections.collection-list.blocks.collection.settings.text_position.bottom-right.label",
-              "value": "bottom-right"
-            }
-          ]
-        },     
+        },    
         {
           "type": "checkbox",
           "id": "custom",
@@ -469,13 +269,13 @@
         {
           "type": "text",
           "id": "heading",
-          "default":"Collection",
+          "default":"Collection name here",
           "label": "t:sections.collection-list.blocks.collection.settings.heading.label"
         },
         {
           "type": "textarea",
           "id": "desc",
-          "default":"Contrary to popular belief, Lorem Ipsum is not simply random.",
+          "default":"Add description here.",
           "label": "t:sections.collection-list.blocks.collection.settings.desc.label"
         },
         {
@@ -487,12 +287,6 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.collection-list.blocks.collection.settings.image.label"
-        },
-        {
-          "type": "color",
-          "id": "text_color",
-          "label": "t:sections.collection-list.blocks.collection.settings.text_color.label",
-          "default":"#000000"
         }
       ]
     }

@@ -1,0 +1,51 @@
+<script>
+  var moneyFormat = '{{shop.money_format}}';
+  var moneyFormatWithoutCurrency = '{{shop.money_format | remove:cart.currency.symbol | replace:'amount_with_comma_separator','amount'}}';
+  var addToCartText = '{{ 'products.product.add_to_cart' | t }}';  
+  var preorderText = '{{ 'products.product.preorder' | t }}';   
+  var preorderStatus = {{settings.enable_preorder}};                 
+  var soldOutText = '{{ 'products.product.sold_out' | t }}';          
+  var cartTitleLabel = '{{'sections.cart.title' | t}}';           
+  var errorLabel = '{{'sections.cart.shipping_estimates.error' | t}}';      
+  var variantStyle = '{{ settings.option_style }}';                
+  var unavailableText = '{{ 'products.product.unavailable' | t }}';       
+  var oneTimePurchaseText = '{{'products.product.one_time_purchase' | t}}';    
+  var showSavedAmount = {{ settings.show_saved_amount }};                 
+  var savedAmountStyle = '{{ settings.saved_amount_style }}';                
+  var quickViewHeading = '{{ 'general.quick_view_heading' | t }}'; 
+  var cartUrl = '{{routes.cart_url}}.js';  
+  var mainCartUrl = '{{routes.cart_url}}'; 
+  var cartAdd = '{{routes.cart_add_url}}';  
+  var cartAddUrl = '{{routes.cart_add_url}}.js';  
+  var cartUpdateUrl = '{{routes.cart_update_url}}.js'; 
+  var cartChangeUrl = '{{routes.cart_change_url}}.js'; 
+  var cartClearUrl = '{{routes.cart_clear_url}}.js'; 
+  var productRecommendationUrl = '{{routes.product_recommendations_url }}'; 
+  var preLoadLoadGif = `<div class="load">     
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+               style="margin: auto; display: block; shape-rendering: auto;" 
+               width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="svg-loader" >
+            <circle cx="50" cy="50" fill="none" stroke="#dddddd" stroke-width="6" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
+              <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"/>
+            </circle>
+          </svg>
+    </div>`;
+</script>
+<script src="{{'jquery.min.js' | asset_url}}"></script> 
+<script src="{{'cookies.min.js' | asset_url}}"></script> 
+<script src="{{'masnory.min.js' | asset_url}}" defer="defer"></script> 
+
+<script src="{{'slick.min.js' | asset_url}}"></script> 
+<script src="{{'common.js' | asset_url}}" defer="defer"></script> 
+<script src="{{ 'lazysizes.min.js' | asset_url }}" async=""></script>
+{% if template == 'product' %}
+<script src="{{'fancybox.min.js' | asset_url}}"></script> 
+{% endif %}
+{% if template == 'collection' or template == 'search' %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.1.0/nouislider.min.css" />
+<script src="{{'filters.js' | asset_url}}" defer="defer" ></script> 
+{% endif %}
+<!-- 
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->

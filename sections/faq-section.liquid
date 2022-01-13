@@ -1,0 +1,134 @@
+{% if section.blocks.size > 0 %}
+<div class="section-spacer">
+  <div class="container">
+      <div class="faq-detail">
+        <h3>{{section.settings.heading}}</h3>
+        <div class="accordion-container">
+          {% for block in section.blocks %}
+          {% if block.settings.heading != blank or block.settings.answer != blank%}
+          <div class="set">
+            <h6 class="panel-title faq-{{section.id}} faqSection-header" content="faq-content-{{block.id}}">
+              <a>
+                {{block.settings.heading }}
+                <span class="iconPlus">{% render 'icon-plus' %}</span>
+                <span class="iconMinus" style="display:none">{% render 'icon-minus' %}</span>
+              </a>
+            </h6>
+            <div class="content faqSection-content" id="faq-content-{{block.id}}" style="display:none;">
+              <div class="panel-body">
+                {{block.settings.answer}}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+  </div> 
+</div>
+{% endif %}
+<style>
+  #shopify-section-{{section.id}}.shopify-section {
+    padding-top:{{section.settings.top_space_desktop}}px;
+    padding-bottom:{{section.settings.bottom_space_desktop}}px;
+  }
+  @media only screen and (max-width:575px) {
+    #shopify-section-{{section.id}}.shopify-section{
+      padding-top:{{section.settings.top_space_mobile}}px;
+      padding-bottom:{{section.settings.bottom_space_mobile}}px;
+    }
+  }
+</style>
+{% schema %}
+  {
+    "name": "t:sections.faq-section.name",
+	"tag":"section",
+	"class":"faq faq-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "default": "FAQs",
+        "label": "t:sections.faq-section.settings.heading.label"
+      },
+      {
+        "type": "range",
+        "id": "top_space_desktop",
+        "label": "t:sections.offer-section.settings.top_space_desktop.label",
+        "default":30,
+        "min":0,
+        "max":60,
+        "step":5
+      },
+      {
+        "type": "range",
+        "id": "bottom_space_desktop",
+        "label": "t:sections.offer-section.settings.bottom_space_desktop.label",
+        "default":30,
+        "min":0,
+        "max":60,
+        "step":5
+      },
+      {
+        "type": "range",
+        "id": "top_space_mobile",
+        "label": "t:sections.offer-section.settings.top_space_mobile.label",
+        "default":30,
+        "min":0,
+        "max":60,
+        "step":5
+      },
+      {
+        "type": "range",
+        "id": "bottom_space_mobile",
+        "label": "t:sections.offer-section.settings.bottom_space_mobile.label",
+        "default":30,
+        "min":0,
+        "max":60,
+        "step":5
+      }
+    ],
+	"blocks":[
+		{
+          "type": "faq",
+          "name": "t:sections.faq-section.blocks.faq.name",
+			"settings":[
+				{
+					"type":"text",
+					"id":"heading",
+					"default":"Frequently asked question",
+          			"label": "t:sections.faq-section.blocks.faq.settings.heading.label"
+				},
+				{
+					"type":"richtext",
+					"id":"answer",
+					"default":"<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+          			"label": "t:sections.faq-section.blocks.faq.settings.answer.label"
+				}
+			]
+		}
+	],
+	"presets":[
+		{
+			"name":"t:sections.faq-section.presets.name",
+            "blocks": [
+              {
+                "type": "faq"
+              },
+              {
+                "type": "faq"
+              },
+              {
+                "type": "faq"
+              }
+            ]
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

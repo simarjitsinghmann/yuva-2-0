@@ -4,9 +4,6 @@
 		#nav_style_5 .navbar-nav .nav-item {
 			padding: 0 10px;
 		}
-		.collection__right__list .card__warpper__detail {
-			min-height: 220px;
-		}
 		.testimonial-slide .owl-nav .owl-prev {
 			left: -70px;
 		}
@@ -147,7 +144,7 @@
 	width: 100%;
 }
       .site-nav-dropdown .inner.dropdown .sub-menu-list .site-nav-dropdown li a {
-	font-size: var(--small-font);
+	font-size: var(--small-text);
 }
       #nav_style_2.navbar-expand-md .navbar-collapse, .top-header .navbar#nav_style_2 form {
 	max-width: calc(50% - 120px);
@@ -182,11 +179,10 @@
 	padding-right: 5px;
 }
 .testimonial-client-slide .slider-item .slider-box p {
-	font-size: var(--small-font);
+	font-size: var(--small-text);
 	line-height: 18px;
 }
 .button {
-	padding: 14px 12px 10px;
 	min-width: 160px;
 }
 .client-say-left p {
@@ -199,12 +195,27 @@
 	padding-left: 12px;
 	padding-right: 12px;
 }
+      .accordion-container .panel-title a {
+	line-height: 30px;
+}
 
 	}
 	@media only screen and (max-width:1400px){
       .navbar-expand-md .nav-item .list-menu__item {
 	padding-bottom: 20px;
 	padding-top: 21px;
+}
+      .single__product__right h4 {
+	font-size: 22px;
+}
+      .ratingbox .star-rating {
+	margin-bottom: 10px;
+}
+      .prizebox {
+	margin-bottom: 10px;
+}
+      .select__color, .select__size {
+	margin-bottom: 20px;
 }
 .product-information__wrapper .caption-with-letter-spacing {
 	font-size: var(--font-normal);
@@ -219,9 +230,7 @@
 .collection-detail-right h5 {
 	font-size: 17px;
 }
-.collection__right__list .card__warpper__detail {
-	min-height: 160px;
-}
+
 .grid__item .card-information__wrapper p strong {
 	font-size: 19px;
 }
@@ -327,7 +336,7 @@
 		height: 25px;
 	}
 	.site-nav-dropdown .inner.dropdown .sub-menu-list .site-nav-dropdown li a {
-		font-size: var(--small-font);
+		font-size: var(--small-text);
 		letter-spacing: -0.2px;
 	}
 	}
@@ -374,7 +383,7 @@
 		margin: 0 0 4px;
 	}
 	.shopify__top__section .blog-variation2 .post-name p {
-		font-size: var(--small-font);
+		font-size: var(--small-text);
 	}
 	.collection-detail-right h5 {
 		font-size: var(--font-size);
@@ -401,8 +410,9 @@
 	.sidebar-widget-product {
 			-webkit-box-flex: 0;
 		-ms-flex: 0 0 228px;
-		flex: 0 0 228px;
-		max-width: 228px;
+		flex: 0 0 268px;
+          max-width: 268px;
+    	padding-right: 40px;
 	}
 	}
 	@media only screen and (min-width:1200px) and (max-width:1500px){
@@ -605,7 +615,7 @@
 	}
 	.products-list .product__detail p {
 		line-height: 1.2;
-		font-size: var(--small-font);
+		font-size: var(--small-text);
 	}
 	.products-list .card.card--product .card-wrapper-img {
 		margin-right: 15px;
@@ -866,7 +876,7 @@
 		margin: 0 -10px;
 	}
 	.post-information__wrapper .post-name p a {
-		font-size: var(--small-font);
+		font-size: var(--small-text);
 		line-height: 18px;
 	}
 	.post-information__wrapper .post-name p{
@@ -877,7 +887,7 @@
 	}
 	.testimonial-slide .owl-item .slider-caption p {
 		line-height: 19px;
-		font-size: var(--small-font);
+		font-size: var(--small-text);
 	}
 	.post-information__wrapper .post-date {
 		margin-right: 8px;
@@ -910,7 +920,7 @@
 	}
 	.card-information__wrapper p.category-name {
 		line-height: 1;
-		font-size: var(--small-font);
+		font-size: var(--small-text);
 	}
 	.card-information__wrapper {
 		width: 130px;

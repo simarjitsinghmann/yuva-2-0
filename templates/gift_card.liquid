@@ -27,39 +27,8 @@
 
     {{ content_for_header }}
 
-    {%- liquid
-      assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-      assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-      assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-    %}
 
-    {% style %}
-      {{ settings.type_body_font | font_face: font_display: 'swap' }}
-      {{ body_font_bold | font_face: font_display: 'swap' }}
-      {{ body_font_italic | font_face: font_display: 'swap' }}
-      {{ body_font_bold_italic | font_face: font_display: 'swap' }}
-      {{ settings.type_header_font | font_face: font_display: 'swap' }}
-
-      :root {
-        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
-        --font-body-style: {{ settings.type_body_font.style }};
-        --font-body-weight: {{ settings.type_body_font.weight }};
-
-        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
-        --font-heading-style: {{ settings.type_header_font.style }};
-        --font-heading-weight: {{ settings.type_header_font.weight }};
-
-        --color-base-text: {{ settings.colors_text.red }}, {{ settings.colors_text.green }}, {{ settings.colors_text.blue }};
-        --color-base-background-1: {{ settings.colors_background_1.red }}, {{ settings.colors_background_1.green }}, {{ settings.colors_background_1.blue }};
-        --color-base-background-2: {{ settings.colors_background_2.red }}, {{ settings.colors_background_2.green }}, {{ settings.colors_background_2.blue }};
-        --color-base-solid-button-labels: {{ settings.colors_solid_button_labels.red }}, {{ settings.colors_solid_button_labels.green }}, {{ settings.colors_solid_button_labels.blue }};
-        --color-base-outline-button-labels: {{ settings.colors_outline_button_labels.red }}, {{ settings.colors_outline_button_labels.green }}, {{ settings.colors_outline_button_labels.blue }};
-        --color-base-accent-1: {{ settings.colors_accent_1.red }}, {{ settings.colors_accent_1.green }}, {{ settings.colors_accent_1.blue }};
-        --color-base-accent-2: {{ settings.colors_accent_2.red }}, {{ settings.colors_accent_2.green }}, {{ settings.colors_accent_2.blue }};
-
-        --page-width: {{ settings.page_width | divided_by: 10 }}rem;
-      }
-    {% endstyle %}
+{{ 'variable.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -67,11 +36,57 @@
     {%- unless settings.type_header_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
-
-    {{ 'template-giftcard.css' | asset_url | stylesheet_tag }}
+<style>
+  /*=========== gift card page css start ================*/
+.gift-card-page {
+	background: #ededed;
+}
+.gift-card-outer {
+	background: #fff;
+    width: 630px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0px 0px 10px #00000014;
+}
+.gift-card__heading {
+    font-family: sans-serif;
+    margin-bottom: 11px;
+}
+.gift-card__price {
+    color: #cf6161;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 800;
+    padding: 0 0!important;
+    margin: 0px 0 20px;
+}
+.gift-card__qr-code {
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 auto;
+    display: inline-block;
+}
+.gift-card__number {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.gift-card__copy-link,.button {
+    background-color: #fdfdfd;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-left: -5px;
+}
+  .gift-card__copy-code {
+    margin-bottom: 20px;
+}
+/*=========== gift card page css start ================*/
+    </style>
   </head>
 
-  <body>
+  <body class="gift-card-page">
+    <div class="gift-card-outer">
     <header class="gift-card__title">
       <span class="h2">{{ shop.name }}</span>
       <h1 class="gift-card__heading">{{ 'gift_cards.issued.subtext' | t }}</h1>
@@ -104,18 +119,19 @@
       </div>
       <div class="gift-card__qr-code" data-identifier="{{ gift_card.qr_identifier }}"></div>
       <div class="gift-card__information">
-        <input
+        
+        <div class="gift-card__copy-code">
+          <input
           type="text"
           class="gift-card__number"
           value="{{ gift_card.code | format_code }}"
           aria-label="{{ 'gift_cards.issued.gift_card_code' | t }}"
           readonly
         >
-        <div class="gift-card__copy-code">
           <button class="link gift-card__copy-link">{{ 'gift_cards.issued.copy_code' | t }}</button>
           <span class="gift-card__copy-success form__message" role="status"></span>
           <template>
-            {%- render 'icon-success' -%}{{ 'gift_cards.issued.copy_code_success' | t }}
+            {{ 'gift_cards.issued.copy_code_success' | t }}
           </template>
         </div>
         {%- if gift_card.pass_url -%}
@@ -124,15 +140,15 @@
           </a>
         {%- endif -%}
         <div class="gift-card__buttons no-print">
-          <a
+          <p><a
             href="{{ shop.url }}"
-            class="button"
+            class=""
             target="_blank"
             rel="noopener"
             aria-describedby="a11y-new-window-message"
           >
             {{ 'gift_cards.issued.shop_link' | t }}
-          </a>
+            </a></p>
           <button
             class="button button--secondary"
             onclick="window.print();"
@@ -145,6 +161,7 @@
 
     <div hidden>
       <span id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</span>
+    </div>
     </div>
   </body>
 </html>

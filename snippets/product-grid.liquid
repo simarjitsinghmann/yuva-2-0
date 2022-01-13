@@ -1,247 +1,133 @@
-{% assign current_variant = product.selected_or_first_available_variant %}
-{% assign images = product.media | where: "media_type", "image" %}
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign images = product.media | where: "media_type", "image" -%}
+{%- assign second_image = '' -%}
+{%- if images.size > 1 -%}
+{%- for image in images -%}
+{%- unless image.src == product.featured_image.src -%}
+{%- assign second_image = image.src -%}
+{%- break -%}
+{%- endunless -%}
+{%- endfor -%}
+{%- endif -%}
+<div class="grid-item col collection-product-grid">
+  <div class="card-wrapper">
+    <div class="card card--text-only card--soft card--product text__left">
+      <div class="card-wrapper-img {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{% endunless %} ">
+        <a href="{{product.url | within : collection}}">
+          {%- if product.featured_image != blank -%}
+          {%- render 'lazy-image' image: product.featured_image -%}
+          {%- unless settings.show_second_image == false or second_image == blank -%}          
+          {%- render 'lazy-image' image: second_image ,class:'product-second-img' -%}
+          {%- endunless -%} 
+          {%- else -%}
+          {%- render 'placeholder' -%}
+          {%- endif -%}
+        </a>
+        {%- unless hide_options and settings.show_quick_view == false and settings.show_atc == false -%}
+       <div class="shop__options">
+          <div class="product__view__option">
+            <ul>
+              {%- if settings.show_quick_view -%}
+              <li class="quickView" data-href="{{product.url}}"><a><svg xmlns="http://www.w3.org/2000/svg" width="19" height="12.32" viewBox="0 0 21.312 12.32">
+                <path class="cls-1" d="M700.034,2910.26h-0.042a3.653,3.653,0,0,0-2.506,1.06,3.047,3.047,0,0,0-.943,2.22,3.391,3.391,0,0,0,3.524,3.14h0.117a3.384,3.384,0,0,0,3.449-3.23A3.427,3.427,0,0,0,700.034,2910.26Zm-1.52,4.43a1.713,1.713,0,0,1-.518-1.25,1.942,1.942,0,0,1,2.021-1.79h0.042a1.939,1.939,0,0,1,1.979,1.82,1.961,1.961,0,0,1-2.021,1.83h0A2.145,2.145,0,0,1,698.514,2914.69Zm11.951-1.68h0c-0.192-.23-4.719-5.66-10.481-5.66-5.6,0-9.989,5.05-10.482,5.66a0.79,0.79,0,0,0,0,.98c0.484,0.57,4.844,5.66,10.482,5.66s10.022-5.06,10.481-5.66A0.794,0.794,0,0,0,710.465,2913.01Zm-1.862.49c-1.153,1.22-4.644,4.52-8.619,4.52s-7.467-3.33-8.62-4.55c1.153-1.21,4.644-4.5,8.62-4.5s7.466,3.29,8.619,4.5v0.03Z" transform="translate(-689.344 -2907.34)"></path>
+                </svg></a>
+              </li>
+				{%- endif -%}
+              
+              {%- if settings.show_atc -%}
+              {%- if has_only_default_variant or product.variants.size == 1 -%}
+              {%- if product.available -%}
 
-{% if images.size > 1 %}
-    {% for image in images %}
-        {% unless image.src == product.featured_image.src %}
-            {% assign second_image = image.src | img_url:'master' %}
-            {% break %}
-        {% endunless %}
-    {% endfor %}
-{% else %}
-    {% assign second_image = product.featured_image | img_url:'master' %}
-{% endif %}
-<div class="grid-item col">
-    <div class="card-wrapper">
-        <div class="card card--text-only card--soft card--product text__left">
-        <div class="card-wrapper-img {% if section.settings.show_second_image %}has-multiimage{% endif %}">
-            <img src="{{product.featured_image | img_url:'master'}}" alt="">
-            {% if section.settings.show_second_image %}
-                <img class="product-second-img" src="{{second_image}}" alt="">
-            {% endif %} 
-          
-          {% unless has_only_default_variant or product.variants.size == 1 %}
-          <div id="showProductWrap-{{product.id}}" class="product-wrap product_content_section">
-            
-            <button class="close-product-wrap" data-product="showProductWrap-{{product.id}}">
-              <svg aria-hidden="true" class="icon icon-close" focusable="false" role="presentation" viewbox="0 0 40 40">
-                <path class="layer" d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z"></path>
-              </svg>
-              Close
-            </button>
-            {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
-            <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
-            <div class="form-group">
-              {% for option in product.options_with_values %}
-              {% assign downOption = option.name | downcase %}
-              {% assign optionIndex = forloop.index %}
-              {% assign varOptionIndex = 'option'|append:forloop.index %}
-              <div class="select__{{downOption}}">
-                <p class="small-size size_title">SELECT {{option.name}}</p>
-                <ul class="product-loop-variants {{downOption}} variants circle _small list-unstyled">                            
-                  {%- for value in option.values -%}  
-                  <li class="{{downOption}}_option">
-                    <input class="productOption" type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
-                    <span class="option {% if option.selected_value == value %}selected{% endif %}" {% if downOption == 'color' or  downOption == 'colour'%}{% unless block.settings.variant_image %} style="background-color:{{value}};"{% endunless %}{% endif %}>
-                      {% if downOption == 'color' or  downOption == 'colour'%}    
-                      {% if block.settings.variant_image %}                                                                                  
-                      {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
-                      {% for variant in variantsList %}
-                      {% if variant.featured_image != blank %}
-                      <img src="{{variant.featured_image | img_url:"100x"}}">
-                      {% break %}
-                      {% endif %}
-                      {% endfor %}
-                      {% endif %}
-                      {% else %}
-                      {{value}}
-                      {% endif%}
-                    </span>
-                  </li>
-                  {% endfor %}
-                </ul> 
-              </div>
-              {% endfor %}
-
-              <div class="btn-box product-featured-form-submit {% if section.settings.enable_payment_button %} product-form--payment-button{% endif %}">
-                <button
-                        type="submit"
-                        name="add"
-                        data-add-to-cart id="Sd_addProduct"
-                        {% unless product.available %}disabled="disabled"{% endunless %}
-                        {% if section_onboarding %}disabled="disabled"{% endif %} class="black-btn button Sd_addProduct">
-                  {% if product.available %}
-                  {{ 'products.product.add_to_cart' | t }}
-                  {% else %}
-                  {{ 'products.product.sold_out' | t }}
-                  {% endif %}
+              <li>
+                {%- form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' -%} 
+                <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
+                <button type="submit" class="Sd_addProduct" {% unless product.available %} disabled="disabled"{% endunless %}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
+                  <path class="cls-1" d="M811.524,2918.03a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,811.524,2918.03Zm6.579,0a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,818.1,2918.03Zm7.781-9.41a1.222,1.222,0,0,0-1.01-.59H810.352l-0.688-4.02h-4.638a0.99,0.99,0,1,0,0,1.98h2.941l0.636,3.83,0.89,6.06a1.212,1.212,0,0,0,1.2.99h10.329a1.228,1.228,0,0,0,1.01-.6l3.81-6.52A1.19,1.19,0,0,0,825.884,2908.62Zm-5.336,6.33h-9.155l-0.718-4.95h12.764Z" transform="translate(-804 -2904)"></path>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                       style="margin: auto; display: none; shape-rendering: auto;" 
+                       width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="svg-loader" >
+                    <circle cx="50" cy="50" fill="none" stroke="#ffffff" stroke-width="6" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
+                      <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"/>
+                    </circle>
+                  </svg>
                 </button>
-
-                {% if product.available %}
-                {% endif %}
-                {% if section.settings.enable_payment_button %}
-                {{ form | payment_button }}
-                {% endif %}
-              </div>
-            </div>
-            <script type="application/json" name="variant-json">
-          {{ product.variants | json }}
-            </script>
-            {% endform %}
+                {%- endform -%}
+              </li>
+              {%- endif -%}
+              {%- else -%}
+              <li>
+                <a href="{{product.url | within:collection}}" class="showOptions" data-product="showProductWrap-{{product.id}}"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
+                  <path class="cls-1" d="M811.524,2918.03a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,811.524,2918.03Zm6.579,0a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,818.1,2918.03Zm7.781-9.41a1.222,1.222,0,0,0-1.01-.59H810.352l-0.688-4.02h-4.638a0.99,0.99,0,1,0,0,1.98h2.941l0.636,3.83,0.89,6.06a1.212,1.212,0,0,0,1.2.99h10.329a1.228,1.228,0,0,0,1.01-.6l3.81-6.52A1.19,1.19,0,0,0,825.884,2908.62Zm-5.336,6.33h-9.155l-0.718-4.95h12.764Z" transform="translate(-804 -2904)"></path>
+                  </svg>
+                </a>
+              </li>
+              {%- endif -%}
+              {%- endif -%}
+            </ul>
           </div>
-          {% endunless %}
-            <div class="shop__options">
-                    <div class="product__view__option">
-                        <ul>
-                            <li class="quickView" data-href="{{product.url}}"><a href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg" width="21.312" height="12.32" viewBox="0 0 21.312 12.32">
-                                    <path class="cls-1" d="M700.034,2910.26h-0.042a3.653,3.653,0,0,0-2.506,1.06,3.047,3.047,0,0,0-.943,2.22,3.391,3.391,0,0,0,3.524,3.14h0.117a3.384,3.384,0,0,0,3.449-3.23A3.427,3.427,0,0,0,700.034,2910.26Zm-1.52,4.43a1.713,1.713,0,0,1-.518-1.25,1.942,1.942,0,0,1,2.021-1.79h0.042a1.939,1.939,0,0,1,1.979,1.82,1.961,1.961,0,0,1-2.021,1.83h0A2.145,2.145,0,0,1,698.514,2914.69Zm11.951-1.68h0c-0.192-.23-4.719-5.66-10.481-5.66-5.6,0-9.989,5.05-10.482,5.66a0.79,0.79,0,0,0,0,.98c0.484,0.57,4.844,5.66,10.482,5.66s10.022-5.06,10.481-5.66A0.794,0.794,0,0,0,710.465,2913.01Zm-1.862.49c-1.153,1.22-4.644,4.52-8.619,4.52s-7.467-3.33-8.62-4.55c1.153-1.21,4.644-4.5,8.62-4.5s7.466,3.29,8.619,4.5v0.03Z" transform="translate(-689.344 -2907.34)"></path>
-                                </svg></a>
-                            </li>
-                            <li>
-                              
-         				 {% if has_only_default_variant or product.variants.size == 1 %}
-                              {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %} 
-                              <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
-                              <button type="submit" {% unless product.available %} disabled="disabled"{% endunless %}><svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
-                                    <path class="cls-1" d="M811.524,2918.03a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,811.524,2918.03Zm6.579,0a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,818.1,2918.03Zm7.781-9.41a1.222,1.222,0,0,0-1.01-.59H810.352l-0.688-4.02h-4.638a0.99,0.99,0,1,0,0,1.98h2.941l0.636,3.83,0.89,6.06a1.212,1.212,0,0,0,1.2.99h10.329a1.228,1.228,0,0,0,1.01-.6l3.81-6.52A1.19,1.19,0,0,0,825.884,2908.62Zm-5.336,6.33h-9.155l-0.718-4.95h12.764Z" transform="translate(-804 -2904)"></path>
-                                </svg>
-                              </button>
-                              {% endform %}
-                              {% else %}
-                               <button class="showOptions" data-product="showProductWrap-{{product.id}}"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
-                                    <path class="cls-1" d="M811.524,2918.03a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,811.524,2918.03Zm6.579,0a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,818.1,2918.03Zm7.781-9.41a1.222,1.222,0,0,0-1.01-.59H810.352l-0.688-4.02h-4.638a0.99,0.99,0,1,0,0,1.98h2.941l0.636,3.83,0.89,6.06a1.212,1.212,0,0,0,1.2.99h10.329a1.228,1.228,0,0,0,1.01-.6l3.81-6.52A1.19,1.19,0,0,0,825.884,2908.62Zm-5.336,6.33h-9.155l-0.718-4.95h12.764Z" transform="translate(-804 -2904)"></path>
-                                </svg>
-                              </button>
-                              {% endif %}
-                                </li>
-                        </ul>
-                    </div>
-                    <!-- <div class="add-to-cart">
-                        <form>
-                            <button>Add to cart</button>
-                        </form>
-                    </div> -->
-                
-            </div>  
-            {% unless hideRelated %}      
-            <div class="similar_options" data-section="{{section.id}}" data-id="{{product.id}}">
-                <span class="vs-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.36 33"><defs></defs><g>
-                    <g>
-                    <path class="cls-1" d="M31.68,0h-16a3,3,0,0,0-3,3V30a3,3,0,0,0,3,3h16a3,3,0,0,0,3-3V3A3,3,0,0,0,31.68,0Zm1,30a1,1,0,0,1-1,1h-16a1,1,0,0,1-1-1V3a1,1,0,0,1,1-1h16a1,1,0,0,1,1,1Z"></path><path class="cls-1" d="M9,29.64A1,1,0,0,1,7.77,29L2,9.61a.92.92,0,0,1,.71-1.12l7.44-1.83V4.77l-8,2A2.73,2.73,0,0,0,.1,10.09L5.84,29.48A3,3,0,0,0,9.52,31.4l.66-.16V29.35Z"></path><path class="cls-1" d="M38.36,29.64A1,1,0,0,0,39.59,29L45.32,9.61a.91.91,0,0,0-.7-1.12L37.18,6.66V4.77l8,2a2.73,2.73,0,0,1,2.11,3.36L41.52,29.48a3,3,0,0,1-3.68,1.92l-.66-.16V29.35Z"></path></g></g></svg>
-                </span>
-                <span class="text-nowrap similar">View Similar</span>
-            </div>
-            {% endunless %}
-            {% if current_variant.compare_at_price > current_variant.price%}
-                <div class="product__on__sale">
-                    Sale
-                    {% comment %}
-                    <svg xmlns="http://www.w3.org/2000/svg" width="76" height="28" viewBox="0 0 76 28" style="fill:#f17e35;">
-                        <defs>
-                        <style>
-                            .cls-2 {opacity: 0.5;}
-                            .cls-3 {
-                            font-size: 14px;
-                            fill: #fff;
-                            text-anchor: middle;
-                            font-family: 'celias';
-                            font-weight: 500;
-                            text-transform: uppercase;
-                            }
-                        </style>
-                        </defs>
-                        <path id="Shape_1_copy_4" data-name="Shape 1 copy 4" class="cls-1" d="M0,0H60.412l7.866,14L60.412,28H0V0Z"></path>
-                        <path id="Shape_2_copy_5" data-name="Shape 2 copy 5" class="cls-2" d="M76.145,0L60.412,28V0H76.145Z"></path>
-                        <path id="Shape_2_copy_5-2" data-name="Shape 2 copy 5" class="cls-2" d="M76.145,28L60.412,0V28H76.145Z"></path>
-                        <text id="Sale" class="cls-3" x="31.345" y="18.874"><tspan x="31.345">Sale</tspan></text>
-                    </svg>
-                {% endcomment %}
-                </div>
-            {% endif %}
+
+        </div>  
+        {%- unless hideRelated or settings.show_similar == false -%}      
+        <div class="similar_options" data-url="{{product.url}}">
+          <span class="vs-icon text-{{settings.show_similar_text}}">
+            {%- render 'similar-product-icon' -%}
+            {%- unless settings.show_similar_text == false -%} 
+            <span class="similar-text">{{'products.product.similar_products' | t}}</span>
+            {%- endunless -%}
+          </span>
         </div>
-        <div class="product-information">
-            <div class="product-information__wrapper">
-                <a href="{{product.url}}"><div class="caption-with-letter-spacing light">{{product.title}}</div></a>
-                <div class="price">
-                    <div class="price__regular">
-                        <span class="price-item price-item--regular">
-                            {{current_variant.price | money}}
-                        </span>
-                    </div>
-                </div>
-              {% unless has_only_default_variant or product.variants.size == 1 %}
-                {% for option in product.options_with_values%}
-                {% assign opName = option.name | downcase %}
-                {% assign opIndex = forloop.index%}
-                {% if opName == 'color' or opName == 'colour'%}
-                    <div class="product-variants-wrapper">
-                    <div class="prd-variants">
-                        <div class="prd--option1">
-                            <ul class="product-loop-variants variants circle _small list-unstyled">
-                                {% for value in option.values%}
-                                <li class="color_option">
-                                    <input type="radio" name="option-{{opIndex}}" value="{{value}}">
-                                    <span class="option" style="background-color:{{value}};">{{value}}</span>
-                                </li>
-                            {% endfor %}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-            {% endfor %}
-              {% endunless %}
+        {%- endunless -%}
+        {%- endunless -%}
+        {%- if product.available == false -%}
+        <div class="product__badge product__on__soldOut">
+          {{'products.product.sold_out' | t}}
+        </div> 
+        {%- elsif product.compare_at_price > product.price -%}
+        <div class="product__badge product__on__sale">
+          {{'products.product.on_sale' | t}}
+        </div>
+        {%- endif -%}
+      </div>
+      <div class="product-information">
+        <div class="product-information__wrapper">
+          <a href="{{product.url | within: collection}}" class="caption-with-letter-spacing light" title="{{product.title}}">{{product.title}}</a>
+          {%- if settings.show_price -%}
+          <div class="price">
+            <div class="price__regular">
+              <span class="price-item price-item--regular">
+                <span data-regular-price>{{product.price | money}}</span>
+                {%- if product.compare_at_price > product.price -%}
+                <span data-compare-price>
+                  {{ product.compare_at_price | money }}
+                </span>
+                {%- if settings.show_saved_amount -%}        
+                {%- if settings.saved_amount_style == 'percentage' -%}
+                <span class="percent-off">{{ product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round: 2 | append: "% OFF"}}</span>
+                {%- else %}
+                <span class="percent-off">{{ product.compare_at_price | minus: product.price | money | append: " OFF"}}</span>
+                {%- endif -%}
+                {%- endif -%}
+                {%- endif -%}
+              </span>
+              {%- if product.unit_price_measurement -%}
+            <small class="unit-price">
+              {{ product.unit_price | money }} /
+              {%- if product.unit_price_measurement.reference_value != 1 %}
+              {{ product.unit_price_measurement.reference_value }}
+              {%- endif -%}
+              {{ product.unit_price_measurement.reference_unit }}
+            </small>
+            {%- endif -%}
             </div>
             
+          </div>
+          {%- endif -%}
         </div>
-        </div>
-    </div>
-    {% unless hideRelated %}
-    <div class="similarItemContainer" style="display:none">
-        {%- if recommendations.performed -%}
-            {%- if recommendations.products_count > 0 -%}
-                <ul class="results-base results-similarGrid">
-                    {%- for product in recommendations.products -%}
-                        {% assign current_variant = product.selected_or_first_available_variant %}
-                    <li class="product-base">
-                        <a target="_blank" href="{{product.url}}">
-                            <div class="product-imageSliderContainer">
-                                <picture class="img-responsive" style="width: 100%; height: 100%; display: block;">
-                                    <img src="{{product.featured_image | img_url:'500x'}}" class="img-responsive" alt="{{product.title}}" title="{{product.title}}">
-                                </picture>
-                            </div>
-                            <div class="product-productMetaInfo">
-                                <div class="product-brand normal-font">{{product.vendor}}</div>
-                                <div class="product-product small-size">{{product.title}}</div>
-                                <div class="product-price">
-                                    {% if current_variant.compare_at_price < current_variant.price %}
-                                    <span class="small-size product-price-detail">
-                                        <span class="product-discountedPrice">{{current_variant.price | money}}</span>
-                                        <span class="product-strike"><del>{{current_variant.compare_at_price}}</del></span>
-                                    </span>
-                                    <span class="small-size product-discountPercentage">(({{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | append: "% OFF"}}))</span>
-                                    {% else %}
-                                    <span class="small-size product-price-detail">
-                                        <span class="product-discountedPrice">{{current_variant.price | money}}</span>
-                                    </span>
-                                    {% endif %}
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    {%- endfor -%}
-                </ul>
-            {% else %}
-                <div class="SimilarNoResults" style="">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49px" height="50px">
-                    <image x="0px" y="0px" width="49px" height="50px" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAyCAQAAABfAfs5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkARYRMQNLo02IAAADSUlEQVRYw7WXW0hUQRjHf7tbWmoXzZLSQLuTkRYZWg9qmWWXpaALPgUF0UNEPXSnt25ERVgE4UMUGFRvZQUVRJGFaKBRS5rZRYtwTVkr09I9vZzGOXvO2Z096jcv3+z8v+83c/abM3NchLN4FlFIDqkk4gJ+4+cVz6jiE0Ng2ZynGc2y/aCSTcQMJn0m1/lrk36g1VPqLL2Hw/yMmP5/u0NatAA31yxT9dNNj+XIG+aGT+ky9DK4yGrDL3W8wIePNrrxMJ7pZJFJPmMlTRu7uaG2gjTeG+b3iGLclsp0jhMwaHeqAEZTLYV8Z2sE/RzuGh5kcWTEJSmgjjlK6z4mxXxjSnhxsSSuZaLakwX2SnG3wgljeS2EzUxWBgCUS5CV9rJDkmx5VABIoFbEvmWUtSiOFiGqiBIAkEufiN9oLfEKQQ+zHSDgpshQaS24ovaHhbGlIkMXk8zDSTQJgdchwo1P5FhnHpxPuu77eeIQEeS28OebEZl4dL+OgEMEPBVeihmRKvwPjgHQgqZ7Y8yIOOH7B4EI0KN7I82IAesfBOIvfbqnhQ65CQo/TjWfhcXb7Wtw0yr8GYNApIkH1GVGNAl/rqit6C1beB1mhI9O3Z/GTMeIAuG1mAdH8FjszP0OAcl06hmC0nokOyAQPpuzOpLtEhkazEULkMEvIdnhAJDERxF/1E50WbpKZkSNGLh5dTDBTjSLXiErjxKwXjoxj4UTnpOE26MATJKOgi8khpOOk27h/cqQqbyUprY5kjyfP5L8pMLrpMDwcVCmMqcSuqWQRg6GWfhy7kmXAg2N02oL9xogGi2cISek0tPZLm1WuZ2yTuoK6S/jZkjhaTTyjlYCxJLCNOYRbzvFI5xQWckSqUYit178hv4etceVzAWbz5XQ9pxc8qR3g4bGFjUIZHOWaoK2yT9TQan+RiviqzTSRpEqBCCLfdynVczzDx3UUMZaw1cSZNIqQfqM9zGXAiiBZJLwoPGLdptLxAIeSmXSzQYeRLMWNcsTZ4aGRoC8oUdAkeGPb2fhcEBKDJAvZA0HZLGhujpYNRwQr6G4f1Ls/FpjZw34WSN6MXQNPQJq+M0K0asfDgRUEaRQ98tVtp4z20Y+Lp5y9R89MxMHU4TKlQAAAABJRU5ErkJggg=="></image>
-                    </svg>
-
-                    <p> Sorry, No results found! </p>
-                </div>
-            {%- endif -%}
-        {%- endif -%}
+      </div>
     </div>
-    {% endunless %}
+  </div>  
 </div>
+

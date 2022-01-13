@@ -1,220 +1,281 @@
-
-<div class="container">
-    <div class="row">
+<div class="section-spacer">
+  <div class="container ">
+    <div class="testimonials-variation-{{section.settings.style}}">
       {% if section.settings.style == 'style1' %}
-          <div class="shopify__top__section text__center">
-              <small>{{section.settings.subheading}}</small>
-              <h4>{{section.settings.heading}}</h4>  
-              {% if section.settings.description %}
-              <p>{{section.settings.description}}</p>
-              {% endif %}
-              {% comment %}
-              {% if section.settings.show_stars %}   
-              <div class="star-rating">
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-              </div>
-              {% endif %} 
-            {% endcomment %}
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="client-say-left">       
+            <small>{{section.settings.subheading}}</small>
+            <h2>{{section.settings.heading}}</h2>  
+            {% if section.settings.description %}
+            <p>{{section.settings.description}}</p>
+            {% endif %}
           </div>
-          {% if section.blocks.size > 0 %}
-            <div class="testimonial-slider ">
-                <div id="testimonials-{{section.id}}" class="testimonial-slide owl-carousel owl-theme" data-dots="false" data-nav="true">
-                    {% for block in section.blocks %}
-                    <div class="item">
-                        <div class="slider-content">
-                          {% if block.settings.image != blank %}
-                              {% assign image_url = block.settings.image | img_url:'master' %}
-                              {% else %}
-                              {% assign image_url = "https://yova.shinedezign.pro/assets/images/client-image.png" %}
-                              {% endif %}
-
-                            <img src="{{image_url}}" loading="lazy" alt="{{section.settings.author}}">
-                            <div class="slider-caption">
-                                <p class="testimonial-title">{{block.settings.message}}</p>
-                                <h5 class="author">{{block.settings.author}}</h5>
-                                <span>{{block.settings.from}}</span>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-          {% endif %}
-          {% elsif section.settings.style == 'style2' %}
-            <div class="col-md-3">
-              <div class="client-say-left">       
-                <small>{{section.settings.subheading}}</small>
-                <h4>{{section.settings.heading}}</h4>  
-                {% if section.settings.description %}
-                <p>{{section.settings.description}}</p>
-                {% endif %}
-              </div>
-            </div>
-          
-          {% if section.blocks.size > 0 %}
-            <div class="col-md-9">
-                <div class="client-slider">
-                  <div class="testimonial-slider testimonial-variation2">
-                      <div id="testimonials-{{section.id}}" class="testimonial-client-slide owl-carousel owl-theme" data-dots="true" data-nav="false">
-                        {% for block in section.blocks %}
-                        <div class="item">
-                            <div class="slider-item">
-                              <div class="slider-box">
-                                {% if block.settings.image != blank %}
-                                {% assign image_url = block.settings.image | img_url:'master' %}
-                                {% else %}
-                                {% assign image_url = "https://yova.shinedezign.pro/assets/images/client-image.png" %}
-                                {% endif %}
-                                  <div class="client-image">            
-                                    <img src="{{image_url}}" loading="lazy" alt="{{section.settings.author}}">                  
-                                  </div>
-                                  <h5 class="author">{{block.settings.author}}</h5>
-                                  <h6>{{block.settings.from}}</h6>
-                                  <p class="testimonial-title">{{block.settings.message}}</p>
-                              </div>
-                            </div>
-                        </div>
-                        {% endfor %}
+        </div>
+        {% if section.blocks.size > 0 %}
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="client-slider">
+            <div class="testimonial-slider testimonial-variation1">
+              <div id="testimonials-{{section.id}}" class="testimonial-client-slide" data-slider>
+                {% for block in section.blocks %}
+                <div class="item slick-slide slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
+                  <div class="slider-item">
+                    <div class="slider-box">
+                      <div class="client-image">   
+                      {% if block.settings.image != blank %}    
+                        {% render 'lazy-image' image:block.settings.image %}
+                      {% else %}
+                      {{ 'user-icon.svg' | asset_url | img_tag }}
+                      {% endif %}                    
                       </div>
+                      <h5 class="author">{{block.settings.author}}</h5>
+                      <p class="testimonial-title">{{block.settings.message}}</p>
+                    </div>
                   </div>
                 </div>
+                {% endfor %}
+              </div>
+
             </div>
-          {% endif %}
-    {% endif %} 
+          </div>
+        </div>
+        {% endif %}
+      </div>
+      {% elsif section.settings.style == 'style2' %}
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-3">
+          <div class="client-say-left">       
+            <small>{{section.settings.subheading}}</small>
+            <h2>{{section.settings.heading}}</h2>  
+            {% if section.settings.description %}
+            <p>{{section.settings.description}}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% if section.blocks.size > 0 %}
+        <div class="col-sm-12 col-md-12 col-lg-9">
+          <div class="client-slider">
+            <div class="testimonial-slider testimonial-variation2">
+              <div id="testimonials-{{section.id}}" class="testimonial-client-slide" data-slider>
+                {% for block in section.blocks %}
+                <div class="item slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
+                  <div class="slider-item">
+                    <div class="slider-box">
+                      <div class="client-image">   
+                      {% if block.settings.image != blank %}         
+                        {% render 'lazy-image' image:block.settings.image %}
+                      {% else %}
+                      {{ 'user-icon.svg' | asset_url | img_tag }}
+                      {% endif %}                    
+                      </div>
+                      <h5 class="author">{{block.settings.author}}</h5>
+                      <p class="testimonial-title">{{block.settings.message}}</p>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+      {% endif %} 
     </div>
+    <script type="application/json" name="slider-json">    
+         {
+          "slidesToShow":3,
+          "slidesToScroll":3,
+          "infinite":true,
+          "draggable":false,
+          "cssEase": "linear",
+         "dots":{{section.settings.dots}},
+          "autoplay":{{section.settings.rotate}},
+          "arrows":{{section.settings.arrows}},
+          "prevArrow":"<button type=\"button\" class=\"slick-prev\" aria-label=\"Prev\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M15.526 18.966L8.559 12l6.967-6.967\"></path></svg></span></button>",
+          "nextArrow":"<button type=\"button\" class=\"slick-next\" aria-label=\"Next\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M8.474 18.966L15.44 12 8.474 5.033\"></path></svg></span></button>",
+          "responsive":[
+          	{
+            "breakpoint": 768,
+              "settings": {
+              	"slidesToShow": 2,
+                "slidesToScroll":2
+              }
+            },
+          	{
+            "breakpoint": 576,
+                "settings": {
+                    "slidesToShow": 1,
+                    "dots":true,
+                    "arrows":false,
+                    "slidesToScroll":1,
+                    "draggable":true
+                  }
+            }
+          ]
+        }
+    </script>
+  </div>
 </div>
 <style>
-    #shopify-section-{{section.id}}{
-      background-color:{{section.settings.bgcolor}};
+  #shopify-section-{{section.id}}.shopify-section{
+    background-color:{{section.settings.bgcolor}};
+    padding-top:{{section.settings.top_space_desktop}}px;
+    padding-bottom:{{section.settings.bottom_space_desktop}}px;
+  }
+  @media only screen and (max-width:575px) {
+    #shopify-section-{{section.id}}.shopify-section{
+      padding-top:{{section.settings.top_space_mobile}}px;
+      padding-bottom:{{section.settings.bottom_space_mobile}}px;
     }
-  </style>
-  <script>
-    jQuery(document).ready(function($) {
-        $('#testimonials-{{section.id}}').owlCarousel({
-            center: false,
-            items: 3,
-            loop: true,
-            margin: 30,
-            dots:$('#testimonials-{{section.id}}').data('dots'),
-            slideSpeed: 1200,
-            paginationSpeed: 500,
-            responsiveClass:true,
-            nav:$('#testimonials-{{section.id}}').data('nav'),
-            navText: ["<img src='{{'carousel-left-arrow.svg' | asset_url}}'>","<img src='{{'carousel-right-arrow.svg' | asset_url}}'>"],
-            responsive: {
-                740: {
-                    items: 1
-                },
-                768: {
-                    items: 2
-                },
-                1200: {
-                    items: 3
-                }
-            }
-        });
-    });
-  </script> 
+  }
+</style>
+
 {% schema %}
 {
-  "name": "t:sections.testimonials.name",
-  "tag": "section",
-  "class":"testimonial",
-  "settings": [
-    {
-      "type": "select",
-      "id": "style",
-      "default": "style1",
-      "label": "t:sections.testimonials.settings.style.label",
-      "options":[
-        {
-          "value":"style1",
-          "label":"t:sections.testimonials.settings.style.style1.label"
-        },
-        {
-          "value":"style2",
-          "label":"t:sections.testimonials.settings.style.style2.label"
-        }
-      ]
-    },
-    {
-      "type": "text",
-      "id": "subheading",
-      "default": "HAPPY CLIENT’S",
-      "label": "t:sections.testimonials.settings.subheading.label"
-    },
-    {
-      "type": "text",
-      "id": "heading",
-      "default": "What Our Customers Say",
-      "label": "t:sections.testimonials.settings.heading.label"
-    },
-    {
-      "type": "textarea",
-      "id": "description",
-      "default": "What Our Customers Say",
-      "label": "t:sections.testimonials.settings.description.label"
-    },
-    {
-      "type": "color",
-      "id": "bgcolor",
-      "default": "#f6f4f2",
-      "label": "t:sections.testimonials.settings.bgcolor.label"
-    }
-  ],
-  "blocks": [
-	  {
-      "type":"quote",
-      "name":"t:sections.testimonials.blocks.quote.name",
-      "settings": [        
-        {
-          "type": "textarea",
-          "id": "message",
-          "default": "We were dolor sit amet, consectetur theme adipiscing elit, sed do eiusmod tempor and incididunt ut labore.",
-          "label": "t:sections.testimonials.blocks.quote.settings.message.label"
-        },
-        {
-          "type": "text",
-          "id": "author",
-          "default": "Anderson smith",
-          "label": "t:sections.testimonials.blocks.quote.settings.author.label"
-        },
-        {
-          "type": "text",
-          "id": "from",
-          "default":"Shopify",
-          "label": "t:sections.testimonials.blocks.quote.settings.from.label"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "t:sections.testimonials.blocks.quote.settings.image.label"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "t:sections.testimonials.presets.name",
-      "blocks": [
-        {
-          "type": "quote"
-        },
-        {
-          "type": "quote"
-        },
-        {
-          "type": "quote"
-        },
-        {
-          "type": "quote"
-        }
-      ]
-    }
-  ]
+   "name":"t:sections.testimonials.name",
+   "tag":"section",
+   "class":"testimonial testimonial-section",
+   "settings":[
+      {
+         "type":"select",
+         "id":"style",
+         "default":"style1",
+         "label":"t:sections.testimonials.settings.style.label",
+         "options":[
+            {
+               "value":"style1",
+               "label":"t:sections.testimonials.settings.style.style1.label"
+            },
+            {
+               "value":"style2",
+               "label":"t:sections.testimonials.settings.style.style2.label"
+            }
+         ]
+      },
+      {
+         "type":"text",
+         "id":"subheading",
+         "default":"HAPPY CLIENT’S",
+         "label":"t:sections.testimonials.settings.subheading.label"
+      },
+      {
+         "type":"text",
+         "id":"heading",
+         "default":"Add Testimonials here",
+         "label":"t:sections.testimonials.settings.heading.label"
+      },
+      {
+         "type":"textarea",
+         "id":"description",
+         "default":"Add Description here",
+         "label":"t:sections.testimonials.settings.description.label"
+      },
+      {
+         "type":"color",
+         "id":"bgcolor",
+         "default":"#F3F0EB",
+         "label":"t:sections.testimonials.settings.bgcolor.label"
+      },
+      {
+         "type":"checkbox",
+         "id":"rotate",
+         "label":"t:sections.testimonials.settings.rotate.label",
+         "default":false
+      },
+      {
+         "type":"checkbox",
+         "id":"arrows",
+         "label":"t:sections.testimonials.settings.arrows.label",
+         "default":true
+      },
+      {
+         "type":"checkbox",
+         "id":"dots",
+         "label":"t:sections.testimonials.settings.dots.label",
+         "default":false
+      },
+      {
+         "type":"range",
+         "id":"top_space_desktop",
+         "label":"t:sections.testimonials.settings.top_space_desktop.label",
+         "default":30,
+         "min":0,
+         "max":60,
+         "step":5
+      },
+      {
+         "type":"range",
+         "id":"bottom_space_desktop",
+         "label":"t:sections.testimonials.settings.bottom_space_desktop.label",
+         "default":30,
+         "min":0,
+         "max":60,
+         "step":5
+      },
+      {
+         "type":"range",
+         "id":"top_space_mobile",
+         "label":"t:sections.testimonials.settings.top_space_mobile.label",
+         "default":30,
+         "min":0,
+         "max":60,
+         "step":5
+      },
+      {
+         "type":"range",
+         "id":"bottom_space_mobile",
+         "label":"t:sections.testimonials.settings.bottom_space_mobile.label",
+         "default":30,
+         "min":0,
+         "max":60,
+         "step":5
+      }
+   ],
+   "blocks":[
+      {
+         "type":"quote",
+         "name":"t:sections.testimonials.blocks.quote.name",
+         "settings":[
+            {
+               "type":"textarea",
+               "id":"message",
+               "default":"Add client reviews & testimonials to showcase your store’s happy clients.",
+               "label":"t:sections.testimonials.blocks.quote.settings.message.label"
+            },
+            {
+               "type":"text",
+               "id":"author",
+               "default":"Author name here",
+               "label":"t:sections.testimonials.blocks.quote.settings.author.label"
+            },
+            {
+               "type":"image_picker",
+               "id":"image",
+               "label":"t:sections.testimonials.blocks.quote.settings.image.label"
+            }
+         ]
+      }
+   ],
+   "presets":[
+      {
+         "name":"t:sections.testimonials.presets.name",
+         "blocks":[
+            {
+               "type":"quote"
+            },
+            {
+               "type":"quote"
+            },
+            {
+               "type":"quote"
+            },
+            {
+               "type":"quote"
+            }
+         ]
+      }
+   ]
 }
 {% endschema %}

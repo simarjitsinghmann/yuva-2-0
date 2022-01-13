@@ -1,0 +1,68 @@
+{% if settings.custom_font_family == 'default' %}
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+{% else %}
+{{ settings.type_base_font_family | font_face : font_display: 'swap'  }}
+{{ settings.type_heading_font_family | font_face : font_display: 'swap'  }}
+{%endif%}
+
+:root {
+  --black: #000000;
+  --white:#ffffff;
+  --gray: #ececec;
+  --dark-gray: #7b7b7b;
+  --green:#6cad61;
+  --red:#ec7c7c;
+    {% if settings.custom_font_family == 'default' %}
+    --heading-font-family:'Jost', sans-serif;
+    --font-family:'Jost', sans-serif;
+    {% else %}
+  --heading-font-family:{{ settings.type_heading_font_family.family }},{{ settings.type_heading_font_family.fallback_families }};
+  --font-family:{{ settings.type_base_font_family.family }},{{ settings.type_base_font_family.fallback_families }};
+    {% endif %}
+/*     --heading-font-weight:{{ settings.type_heading_font_family.weight }}; */
+/*     --base-font-weight:{{ settings.type_base_font_family.weight }}; */
+  --extra-small:12px;
+  --small-text: 13px;
+  --reg-text: 14px;
+  --med-text: 16px;
+  --large-text: 18px;
+  --thin:100;
+  --light:300;
+  --normal:400;
+  --medium:500;
+  --semibold:600;
+  --bold:700;
+  --extrabold:900;
+  --theme-color: {{ settings.color_base | default: '#000000' }};
+  --theme-light-color: {{ settings.color_base | default: '#000000'  | color_modify: 'alpha', 0.05 }};
+  --cartDotColor: {{ settings.color_cart_dot | default: '#000000' }};
+  --colorBtnPrimary: {{ settings.color_button | default: '#302d34' }};
+  --colorBtnPrimaryText: {{ settings.color_button_text | default: '#fff' }};  
+  --colorBtnSecondary: {{ settings.color_button_text | default: '#fff' }};
+  --colorBtnSecondaryText:{{ settings.color_button | default: '#302d34' }};  
+  --colorBody: {{ settings.color_body_bg | default: '#fff' }};
+  --colorTextBody: {{ settings.color_body_text | default: '#000' }};
+  --colorImageBg: {{ settings.color_image_bg | default: '#ececec' }};
+  --colorTextSavings: {{ settings.color_savings_text | default: '#1c1d1d' }};
+  --heading_color: {{ settings.heading_color | default: '#000000' }};
+  --product_title_color: {{ settings.product_title_color | default: '#000000' }};
+  --heading_spacing: {{ settings.type_header_spacing | default: "0" | divided_by: 1000.00 }}em;
+  --base_spacing: {{ settings.type_base_spacing | default: "50" | divided_by: 1000.00 }}em;
+  --base_line_height: {{ settings.type_base_line_height | default: 1.4 }};
+  --text_size: {{ settings.type_base_size | default: 14 }}px;
+}
+.blur-up {
+		-webkit-filter: blur(2px);
+		filter: blur(2px);
+		transition: filter 400ms, -webkit-filter 400ms;
+	}
+
+	.blur-up.lazyloaded {
+		-webkit-filter: blur(0);
+		filter: blur(0);
+	}
+  
+/*   body.template_collection.loading .filteredData {
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+} */

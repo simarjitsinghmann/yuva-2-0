@@ -1,92 +1,52 @@
-<div id="header" class="top-header">
+<div  id="header" class="top-header sticky-header header_2 {% unless section.settings.menu != blank %}header-menu-false{% else %}header-menu-true{%- endunless-%}">
+  <div id="nav_style_3" class="nav-top-header">
     <div class="container">
-        <div class="row">
-            <div class="navbar navbar-expand-md header__inline-menu" role="navigation" id="nav_style_2">
-                {%- if section.settings.menu != blank -%}
-                <div class="nav__btn">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mr-auto list-menu list-menu--inline">	
-                        {% unless section.blocks.size > 0 and section.settings.megamenu %}								
-                        {%- for link in section.settings.menu.links -%}
-                        <li class="nav-item {% if link.current %}active{% endif %}">
-                            <a class="list-menu__item" href="{{ link.url }}">{{link.title | split:"{badge" | first | escape | capitalize }}
-                          	{%- if link.links != blank -%}
-                                <span class="ml-2 sf-menu__arrow">
-                                  <svg class="w-2 h-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" class=""></path>
-                                  </svg>
-                                </span>
-                                {% endif %}
-                          	</a>                                
-                            {%- if link.links != blank -%}
-                            <div class="sub-menu">
-                                <div class="site-nav-dropdown">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="menu-lv-2 col-12 col5 inner dropdown">
-                                                {%- for childlink in link.links -%}
-                                                <div class="sub-menu-list">
-                                                    <div class="menu-mb-title">
-                                                        <span>{%- unless childlink.links != blank -%}<a href="{{ childlink.url }}">{% endunless %}{{ childlink.title | split:"{badge" | first | escape | captilize }}{%- unless childlink.links != blank -%}</a>{% endunless %}</span>
-                                                    </div>
-                                                    {%- if childlink.links != blank -%}
-                                                    <ul class="site-nav-dropdown">
-                                                        <li class="menu-lv-3 hide_pc">
-                                                            <a href="{{ childlink.url }}"><span>{{ childlink.title | split:"{badge" | first | escape | captilize }}</span></a>
-                                                        </li>
-                                                        {%- for grandchildlink in childlink.links -%}
-                                                        <li class="menu-lv-3">
-                                                            <a href="{{ grandchildlink.url }}"><span>{{ grandchildlink.title | split:"{badge" | first | escape | captilize }}</span></a>
-                                                        </li>
-                                                        {%- endfor -%}
-                                                    </ul>
-                                                    {% endif %}
-                                                </div>
-                                                {% endfor %}
-                                            </div>
-                                        </div>
+      <div class="navigation__header">
+        {%- if section.settings.menu != blank -%}
+        <div id="nav_style_4"  class="nav-menu-btn {{mobileMenu}}">
+          <div class="nav__btn">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
 
-                                    </div>
-                                </div>
-                            </div>
-                            {%- endif -%}
-                        </li>
-                        {%- endfor-%}
-                        {% else %}                        
-                        {% render 'mega-menu' sectin:section %}
-                    {% endunless %}
-                    </ul>
-                    <div class="navigation-close-mob" style="display:none;">
-                        <a href="javascript:void(0)" title="close_navigation" class="close-btn">
-                            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 40 40">
-                                <path d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z" class="layer"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                {%- endif -%}
-                <a class="header__heading-link" href="{{ routes.root_url }}">
-                    {%- if section.settings.logo != blank -%}
-                    {%- assign image_size = section.settings.logo_width | append: 'x' -%}
-                    <img src="{{ section.settings.logo | img_url: image_size }}" class="Yuva-logo" width="{{ section.settings.logo.width }}" height="{{ section.settings.logo.height }}" alt="{{ section.settings.logo.alt | default: shop.name | escape }}">
-                    {% else %}
-                    <span class="h2">{{ shop.name }}</span>
-                    {% endif %}
-                </a>
-                <form class="form-inline mt-2 mt-md-0">
-                    {% include 'header-icons' %}
-                </form>
-                {% if section.settings.show_search %}
-                {% if settings.search_style == 'auto' %}
-                {% include 'search-drawer' %}
-                {% endif %}
-                {% endif %}
-
-            </div>
+          {% include 'side-menu' mobileMenu:true %}
         </div>
+        {%- endif -%}
+        <a class="header__heading-link" href="{{ routes.root_url }}">
+          {%- if section.settings.logo != blank -%}
+                {%- assign image_size = section.settings.logo_width -%}
+              {% render 'lazy-image' image:section.settings.logo,class:'Yuva-logo',max_width:image_size %}  
+          {% else %}
+          <span class="h2">{{ shop.name }}</span>
+          {% endif %}
+        </a>
+        <div class="form-inline mt-2 mt-md-0 header-right">
+          {% include 'header-icons' %}
+        </div>
+      </div>
     </div>
+  </div>
+
+  {%- if section.settings.menu != blank -%}
+
+  <div class="nav__header nav_2">
+    <div class="container">
+      <div class="navbar navbar-expand-md header__inline-menu">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto list-menu list-menu--inline">								
+            {% include 'nav-item' %}
+          </ul>
+          <div class="navigation-close-mob" style="display:none;">
+            <a href="javascript:void(0)" title="close_navigation" class="close-btn">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 40 40">
+                <path d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z" class="layer"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%- endif -%}
 </div>

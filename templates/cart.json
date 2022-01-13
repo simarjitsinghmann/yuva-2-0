@@ -3,19 +3,13 @@
     "main-cart": {
       "type": "main-cart",
       "settings": {
-      }
-    },
-    "featured-products": {
-      "type": "featured-collection",
-      "settings": {
-        "collection": "all",
-        "col_size": 5,
-        "row_size": 1
+        "show_cart_note": true,
+        "payment_enable": true,
+        "shipping_estimate_enable": true
       }
     }
   },
   "order": [
-    "main-cart",
-    "featured-products"
+    "main-cart"
   ]
 }

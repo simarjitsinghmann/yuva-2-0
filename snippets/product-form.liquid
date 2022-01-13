@@ -1,0 +1,255 @@
+
+<div class="product-add-to-cart-right">
+  <div class="pdp-wrapper">
+  {%- assign product_form_id = 'product-form-' | append: section.id -%}
+  {% for block in section.blocks %}
+  {% case block.type %}
+  {% when '@app' %}
+    {% render block %}
+  {% when 'title' %}
+  <a class="product-detail-title" href="{{product.url}}"   {{ block.shopify_attributes }}>{{product.title}}</a>
+  {% when 'text' %}
+  <p class="vendor_name"  {{ block.shopify_attributes }}>{{block.settings.text}}</p>
+  {% when 'inventory' %}            
+  {% if current_variant.available %}
+  <span id="variant-inventory" class="product-instock product-stock" {{ block.shopify_attributes }}>{{ 'products.product.in_stock' | t }}</span>
+  {% else %}
+  <span id="variant-inventory" class="product-outstock product-stock" {{ block.shopify_attributes }}>{{ 'products.product.out_stock' | t }}</span>
+  {% endif %}
+  {% when 'review-star' %}
+  <div class="ratingbox" {{ block.shopify_attributes }}>
+    <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+  </div>
+  {% when 'price' %}
+  <div class="prizebox" data-saved="{{settings.show_saved_amount}}"  data-saved-style="{{settings.saved_amount_style}}" data-price-wrapper=""   {{ block.shopify_attributes }}>
+    {% if current_variant.compare_at_price > current_variant.price %}
+    <h3 id="get_price" class="price-list">
+      <span class="get-price">{{current_variant.price | money}}</span>
+      <span class="main-price"> {{current_variant.compare_at_price | money}}</span>
+      {% if settings.show_saved_amount %}
+      {% if settings.saved_amount_style == 'percentage' %}
+      <span class="percent-off">{{ current_variant.compare_at_price | minus: current_variant.price | times: 100.0 | divided_by: current_variant.compare_at_price| round:2 | append: "% OFF"}}</span>
+      {% else %}
+      <span class="percent-off">{{ current_variant.compare_at_price | minus: current_variant.price | money | append: " OFF"}}</span>
+      {% endif %}
+      {% endif %}
+    </h3>
+    {% else %}
+    <h3 id="get_price" class="price-list">{{current_variant.price | money}}</h3>
+    {% endif %}
+    {% if current_variant.unit_price_measurement %}
+    <p class="unit-price">
+      {{ current_variant.unit_price | money }} /
+      {% if current_variant.unit_price_measurement.reference_value != 1 %}
+      {{ current_variant.unit_price_measurement.reference_value }}
+      {% endif %}
+      {{ current_variant.unit_price_measurement.reference_unit }}
+    </p>
+    {% endif %}
+  </div>
+  {% when 'variant' %}
+  {% unless product.has_only_default_variant %}
+  {%- for option in product.options_with_values -%}
+  {% assign downOption = option.name | downcase %}
+  {% assign optionIndex = forloop.index %}
+  {% assign varOptionIndex = 'option'|append:forloop.index %}
+  <div class="select__{{downOption}} product-option-selector"  {{ block.shopify_attributes }}>
+    <span class="variant_title">{{ 'products.product.option' | t: title:option.name }}</span>
+    {% if settings.option_style == 'swatch' %}
+    <ul class="product-loop-variants {{downOption}} variants {{settings.color_swatch_style}} _small list-unstyled">                            
+      {%- for value in option.values -%}  
+      <li class="{{downOption}}_option  variant_option">
+        <input class="productOption" type="radio" name="option-{{optionIndex}}" value="{{value}}" title="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
+        {% assign variantImage = '' %}
+        {% if settings.variant_image %}                                                                                  
+        {% assign variantsList = product.variants | where: varOptionIndex, value %}                                             
+        {% for variant in variantsList %}
+        {% if variant.featured_image != blank %}
+        {% assign variantImage = variant.featured_image %}
+        {% break %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+
+        {% if downOption == 'color' or  downOption == 'colour'%}    
+        <span 
+              class="option {% if option.selected_value == value %}selected{% endif %} {% unless settings.variant_image %}variantColorOption{% else %}variantImageOption{% endunless %}" 
+              {% if downOption == 'color' or  downOption == 'colour'%}{% unless settings.variant_image and variantImage != blank %} 
+              style="background-color:{{value}};"{% endunless %}{% endif %}
+              >
+          {% if settings.variant_image %}    
+          {% if variantImage != blank %}
+          <img src="{{variantImage | img_url:"100x"}}">
+          {% endif %}
+          {% endif %}
+        </span>
+        {% else %}
+        <span class="option {% if option.selected_value == value %}selected{% endif %}" >
+          {{value}}
+        </span>
+        {% endif%}
+      </li>
+      {% endfor %}
+    </ul> 
+    {% elsif settings.option_style == 'dropdown' %}
+    <div class="dropdown {{downOption}}-select productOptionSelect">
+      {% comment %}
+      <button id="dLabel" class="dropdown-selected" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{option.selected_value}}
+      </button>
+      <span class="caret"></span>
+      <ul class="product-loop-variants dropdown-menu {{downOption}}-menu productOptionSelectList" aria-labelledby="dLabel" style="display: none;">
+        {%- for value in option.values -%}
+        <li class="productOption">
+          <input type="radio" name="option-{{optionIndex}}" value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
+          {{value}}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endcomment %}
+      <div class="product-loop-variants">
+      <select class="productOption dropdown-selected" name="option-{{optionIndex}}"> 
+        {%- for value in option.values -%}
+        <option value="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
+          {{value}}
+        </option>
+        {% endfor %}
+      </select>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+  {% endunless %}
+  {% when 'quantity' %}
+  <div class="select__quantity"  {{ block.shopify_attributes }}>
+    <span class="variant_title">{{ 'products.product.quantity.label' | t }}</span>                              
+    <div class="quantity">
+      <input type="number" name="quantity" min="1" max="50" step="1" value="1" form="{{product_form_id}}" aria-label="{{'products.product.quantity.label' | t}}">
+      <div class="quantity-nav">
+        <div class="quantity-button quantity-up"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102 99" style="enable-background:new 0 0 102 99;" xml:space="preserve"><polygon points="100.1,37.2 63.5,37.2 63.5,0.5 39.1,0.5 39.1,37.2 2.4,37.2 2.4,61.6 39.1,61.6 39.1,98.3 63.5,98.3 63.5,61.6 100.1,61.6 "></polygon></svg></div>
+        <div class="quantity-button quantity-down"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102 99" style="enable-background:new 0 0 102 99;" xml:space="preserve"><polyline points="63.3,61.6 102,61.6 102,37.2 63.3,37.2 "></polyline><polyline points="78.7,37.2 0.1,37.2 0.1,61.6 78.7,61.6 "></polyline></svg></div>
+      </div>
+    </div>
+
+  </div>
+  {% when 'social-icons' %}
+  <div class="social-icons"  {{ block.shopify_attributes }}>
+    {% include 'social-sharing' , share_title: product.title, share_permalink: product.url, share_image: product%}
+  </div>
+  {% when 'button' %}
+  <div class="product_button"  {{ block.shopify_attributes }}>
+    {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+    {% render 'product-variants' product:product %}
+    {% assign preorder = false %}
+    {% if settings.enable_preorder and current_variant.inventory_policy == 'continue' and current_variant.inventory_quantity <= 0  %}
+    {% assign preorder = true %}
+    {% endif %}
+
+
+    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+   	{%- if template == 'product' -%}
+    <input type="hidden" name="selling_plan" value="">
+    
+    {% assign currentVariantSellingGroups = ""  %}
+    {% assign currentVariantSellingPlans = ""  %}
+
+    {%- for selling_plan_allocation in current_variant.selling_plan_allocations -%}
+    {% unless currentVariantSellingGroups contains selling_plan_allocation.selling_plan_group_id %}
+    {% assign currentVariantSellingGroups = currentVariantSellingGroups | append: selling_plan_allocation.selling_plan_group_id %}
+    {% endunless %}
+    {% unless currentVariantSellingPlans contains selling_plan_allocation.selling_plan.id %}
+
+    {% assign currentVariantSellingPlans = currentVariantSellingPlans | append: selling_plan_allocation.selling_plan.id %}
+    {% endunless %}
+    {% endfor %}
+      {% if current_variant.selling_plan_allocations.size > 0 %}
+    <div class="selling_plan_wrapper" data-selling-plan-container>
+      <div class="selling_group active">
+        <div class="sellingPlanHeading" for="oneTimePurchase">
+          <input type="radio" id="oneTimePurchase" name="sellingPlanHeading" checked>
+          <label for="oneTimePurchase">{{'products.product.one_time_purchase' | t}}</label>
+        </div>
+      </div>
+      {% for selling_plan_group  in product.selling_plan_groups %}
+      {% if currentVariantSellingGroups contains selling_plan_group.id %}
+      <div class="selling_group">
+        <div class="sellingPlanHeading" for="sellingGroup{{forloop.index}}">
+          <input type="radio" id="sellingGroup{{forloop.index}}" name="sellingPlanHeading" value="">
+          <label for="sellingGroup{{forloop.index}}">{{selling_plan_group.name}}</label>
+        </div>
+        <div class="selling_plan" data-val>
+          <select class="selling_plan_attribute">
+            {% for selling_plan in selling_plan_group.selling_plans %}
+            <option value="{{selling_plan.id}}" {% if forloop.first %}selected{% endif %}>{{selling_plan.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+      {% endif %}
+    
+    {%- endif -%}
+    
+    
+    {%- if template == 'product' -%}
+    {% include 'product-pickup-availability' %}
+    {%- endif -%}
+    <div class="productErrors error_message" style="display:none"></div>
+    <div class="pdp-action-container {% unless current_variant.available %}disabled{% endunless %}" data-button-wrapper>
+      <div class="pdp-add-to-bag">
+        <button type="submit" class="Sd_addProduct add_to_cart black-btn button btn-block"{% unless current_variant.available %}disabled{% endunless %}>
+          <span>
+            {% unless current_variant.available %}                      
+            {{ 'products.product.sold_out' | t }}
+            {% else %}
+            {% if preorder %}
+            {{ 'products.product.preorder' | t }}
+            {% else %}
+            {{ 'products.product.add_to_cart' | t }}
+            {% endif %}
+            {% endunless %}</span>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+               style="margin: auto; display: none; shape-rendering: auto;" 
+               width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="svg-loader" >
+            <circle cx="50" cy="50" fill="none" stroke="#ffffff" stroke-width="6" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
+              <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"/>
+            </circle>
+          </svg>
+        </button>
+      </div>
+      {% if block.settings.dynamic_checkout_btn %}
+      {{ form | payment_button }}
+      {% endif %}
+    </div>
+    {% endform %}
+    {% if block.settings.show_view_detail %}
+    <a href="{{product.url}}" class="link text__right">{{'general.view_detail' | t}}</a>
+    {% endif %}
+    {% if block.settings.show_contact and block.settings.form_text != blank %}
+    <div class="product-contact-form">
+      <div class="ask_about"> 
+        <a class="ask_this_product" data-name="{{product.title}}"> 
+          <i class="far fa-envelope"></i> {{block.settings.form_text}}</a>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  {% endcase %}
+  {% endfor %}
+</div>
+   {% for block in section.blocks %}
+  {% case block.type %}
+  {% when 'content' %}
+  {% if block.settings.width == 'half' %}
+  {% if block.settings.style == "accordion" %}
+  {% include 'product-accordion-content' position:"sidebar-content" %}
+  {% else %}
+  {% include 'product-tabs-content' %}
+  {% endif %}
+  {% endif %}
+  {% endcase %}
+  {% endfor %}
+</div>

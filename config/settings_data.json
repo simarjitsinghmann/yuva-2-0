@@ -1,102 +1,281 @@
 {
   "current": {
-    "colors_solid_button_labels": "#FFFFFF",
-    "colors_accent_1": "#121212",
-    "colors_accent_2": "#334FB4",
-    "colors_text": "#121212",
-    "colors_outline_button_labels": "#121212",
-    "colors_background_1": "#FFFFFF",
-    "colors_background_2": "#F3F3F3",
+    "color_base": "#b39964",
+    "color_body_bg": "#ffffff",
+    "color_body_text": "#605745",
+    "color_cart_dot": "#b39964",
+    "heading_color": "#605745",
+    "product_title_color": "#605745",
+    "color_image_bg": "#f9f4e9",
+    "color_savings_text": "#cc3d3d",
+    "color_button": "#b39964",
+    "color_button_text": "#ffffff",
+    "custom_font_family": "shopify",
+    "type_heading_font_family": "assistant_n6",
+    "type_base_font_family": "rubik_n4",
+    "type_base_spacing": "25",
+    "type_base_size": 13,
+    "type_base_line_height": 1.6,
+    "social_facebook_link": "https:\/\/www.facebook.com\/Theme-Page-110208328181604",
+    "social_twitter_link": "https:\/\/www.facebook.com\/Theme-Page-110208328181604",
+    "social_linkedin_link": "https:\/\/www.facebook.com\/Theme-Page-110208328181604",
+    "social_instagram_link": "https:\/\/www.facebook.com\/Theme-Page-110208328181604",
+    "enable_cart_drawer": true,
+    "enable_shipping": true,
+    "shipping_rate": "500",
+    "shipping_text": "Spend ||amount|| more and get free shipping!",
+    "free_shipping_text": "You get free shipping!",
+    "enable_breadcrumb": false,
+    "enable_preorder": true,
+    "option_style": "swatch",
+    "color_swatch_style": "square",
+    "variant_image": true,
+    "show_saved_amount": true,
+    "saved_amount_style": "percentage",
+    "show_quick_view": true,
+    "show_similar_text": true,
+    "newsletter_pop_enable": true,
+    "newsletter_left_image": "shopify:\/\/shop_images\/col_2_7a8e8cf0-3d90-4307-95f1-e8f3e5fecd31.jpg",
+    "newsletter_heading": "Join our Newsletter and get 20% Discount",
+    "newsletter_description": "<p>Don’t Miss Out Stay In The Know About The Latest Arrivals.<\/p>",
+    "newsletter_heading_color": "#000000",
+    "newsletter_description_color": "#555555",
+    "popup_cookie": 5,
+    "favicon": "shopify:\/\/shop_images\/y-favicon.png",
+    "checkout_header_image": "shopify:\/\/shop_images\/man-in-french-cuff-fashion.jpg",
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo_032e56bf-c2b9-4c42-b524-5ade22f86736.png",
+    "checkout_logo_position": "right",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "shopify:\/\/shop_images\/mobile_banner1_89530162-6013-4851-8038-313300203c57.jpg",
+    "checkout_body_background_color": "#eacaca",
+    "checkout_sidebar_background_image": "shopify:\/\/shop_images\/offer_banner.jpg",
+    "checkout_sidebar_background_color": "#605745",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "Roboto",
+    "checkout_button_color": "#e22120",
+    "color_theme": "#ff0000",
     "type_header_font": "assistant_n4",
     "type_body_font": "assistant_n4",
+    "search_style": "full",
     "sections": {
       "header": {
         "type": "header",
         "blocks": {
-          "771dd9da-66b7-418e-b03f-e6b60fddac64": {
-            "type": "no-dropdown",
+          "636bfd54-71b1-4446-849e-32c4e8c7e44e": {
+            "type": "menu",
             "settings": {
-              "heading": "Home",
-              "link": "#"
+              "position": "1",
+              "heading": "Menu 1",
+              "menu1": "new-menu",
+              "menu_heading1": "Flower Design 1",
+              "menu2": "new-menu",
+              "menu_heading2": "Main menu 1",
+              "menu3": "new-menu",
+              "menu_heading3": "Men Fashion 1",
+              "menu4": "new-menu",
+              "menu_heading4": "New Menu 1"
             }
           },
-          "70c81fce-aafb-4138-afe5-8087e299280e": {
-            "type": "no-dropdown",
+          "3f1eb99d-230d-4ec5-aa0a-9a8b4261e71f": {
+            "type": "menu",
             "settings": {
-              "heading": "About Us",
-              "link": "#"
+              "position": "2",
+              "heading": "Menu 2",
+              "menu1": "new-menu",
+              "menu_heading1": "Women Fashion 2",
+              "menu2": "new-menu",
+              "menu_heading2": "Winter Collection 2",
+              "menu3": "new-menu",
+              "menu_heading3": "Quick Shop 2",
+              "menu4": "new-menu",
+              "menu_heading4": "New Menu 2"
             }
           },
-          "e502872b-9399-46cf-998d-ea6deaa8ee24": {
-            "type": "mutli-column",
+          "5953e34f-da03-4751-bc60-bf0a4dc86818": {
+            "type": "menu",
             "settings": {
-              "heading": "Catalogs",
-              "link": "#",
-              "c_heading1": "Men Fashion",
-              "c_heading_color1": "#121212",
-              "c_link1": "men-fashion",
-              "c_heading2": "Women Fashion",
-              "c_heading_color2": "#121212",
-              "c_link2": "women-fashion",
-              "c_heading3": "Kids Fashion",
-              "c_heading_color3": "#121212",
-              "c_link3": "kids-fashion",
-              "c_heading4": "Flower Design",
-              "c_heading_color4": "#121212",
-              "c_link4": "flower-design",
-              "c_heading5": "Men Fashion",
-              "c_heading_color5": "#121212",
-              "c_link5": "men-fashion",
-              "c_heading6": "Women Fashion",
-              "c_heading_color6": "#121212",
-              "c_link6": "women-fashion"
+              "position": "3",
+              "heading": "Menu 3",
+              "menu1": "new-menu",
+              "menu_heading1": "Flower Design 3",
+              "menu2": "new-menu",
+              "menu_heading2": "Main menu 3",
+              "menu3": "new-menu",
+              "menu_heading3": "Men Fashion 3",
+              "menu4": "new-menu",
+              "menu_heading4": "New Menu 3"
             }
           },
-          "cdc40a84-f4da-4ada-ba48-d04f636177ef": {
-            "type": "mc-image",
+          "d315d00c-510d-4396-af15-133fe9cd599f": {
+            "type": "menu",
             "settings": {
-              "heading": "Blogs",
-              "link": "#",
-              "c_heading1": "Men Fashion",
-              "c_heading_color1": "#121212",
-              "c_link1": "men-fashion",
-              "c_heading2": "Women Fashion",
-              "c_heading_color2": "#121212",
-              "c_link2": "",
-              "c_heading3": "Kids Fashion",
-              "c_heading_color3": "#121212",
-              "c_link3": "kids-fashion",
-              "c_heading4": "Flower Design",
-              "c_heading_color4": "#121212",
-              "c_link4": "flower-design",
-              "image": "shopify:\/\/shop_images\/category2.jpg",
-              "image_link": "",
-              "img_style": false
+              "position": "3",
+              "heading": "Menu 4",
+              "menu1": "new-menu",
+              "menu_heading1": "Winter Collection 4",
+              "menu2": "new-menu",
+              "menu_heading2": "New Menu 4",
+              "menu3": "new-menu",
+              "menu_heading3": "Quick Shop 4",
+              "menu4": "new-menu",
+              "menu_heading4": "Men Fashion 4"
             }
           },
-          "19dce112-343a-4468-9f22-b35e4ad21850": {
-            "type": "no-dropdown",
+          "3211bf9c-f97a-4582-af05-c9c919730051": {
+            "type": "image",
             "settings": {
-              "heading": "Contact",
-              "link": "#"
+              "position": "1",
+              "title": "Image 1",
+              "heading1": "",
+              "button1": "",
+              "link1": "shopify:\/\/collections\/all",
+              "image2": "shopify:\/\/shop_images\/mobile_banner2_f7bff2d9-224c-4fa3-a23a-2f644fb51ef1.jpg",
+              "heading2": "",
+              "button2": "",
+              "link2": "shopify:\/\/collections"
+            }
+          },
+          "332ea816-0b30-4e7b-83cc-8512d816161d": {
+            "type": "image",
+            "settings": {
+              "position": "2",
+              "title": "Image 2",
+              "image1": "shopify:\/\/shop_images\/mobile_banner1_380db5b8-5574-497e-82c4-4e8f798336b5.jpg",
+              "heading1": "Image 2->1",
+              "button1": "Sale 2-1",
+              "link1": "shopify:\/\/pages\/about-us",
+              "image2": "shopify:\/\/shop_images\/mobile_banner4.jpg",
+              "heading2": "Image 2->2",
+              "button2": "Sale 2->2",
+              "link2": "shopify:\/\/blogs\/news"
+            }
+          },
+          "3cde5a6f-fa84-47fb-a857-d01c22b2effa": {
+            "type": "product",
+            "settings": {
+              "position": "1",
+              "title": "Products",
+              "product1": "bomber-jacket",
+              "product2": ""
+            }
+          },
+          "13ba89c5-c40d-428e-b2c2-b23dafdf33ea": {
+            "type": "product",
+            "settings": {
+              "position": "3",
+              "title": "Products for About",
+              "product1": "brown-belted-long-t-shirt",
+              "product2": "classic-watch"
+            }
+          },
+          "df220000-2f6d-442f-968d-62c731c9291f": {
+            "type": "image",
+            "settings": {
+              "position": "4",
+              "title": "",
+              "heading1": "",
+              "button1": "",
+              "link1": "",
+              "image2": "shopify:\/\/shop_images\/mobile_banner2_f7bff2d9-224c-4fa3-a23a-2f644fb51ef1.jpg",
+              "heading2": "Heading",
+              "button2": "fgdfgfdgdf",
+              "link2": "shopify:\/\/collections\/all"
+            }
+          },
+          "acea3489-4e34-470d-a603-3a742cdcc1ae": {
+            "type": "product",
+            "settings": {
+              "position": "5",
+              "title": "",
+              "product1": "full-sleeve-solid-men-sweatshirt",
+              "product2": ""
+            }
+          },
+          "42cade39-cba3-466a-ae03-cd7f536af1c9": {
+            "type": "menu",
+            "settings": {
+              "position": "6",
+              "heading": "",
+              "menu1": "main-menu",
+              "menu_heading1": "",
+              "menu2": "new-menu",
+              "menu_heading2": "",
+              "menu3": "new-menu",
+              "menu_heading3": "",
+              "menu4": "new-menu",
+              "menu_heading4": ""
+            }
+          },
+          "bdab9e4c-d4a2-42a0-a54e-c6be4f4b69e0": {
+            "type": "image",
+            "settings": {
+              "position": "6",
+              "title": "",
+              "image1": "shopify:\/\/shop_images\/coll.jpg",
+              "heading1": "",
+              "button1": "",
+              "link1": "",
+              "image2": "shopify:\/\/shop_images\/collection_1.jpg",
+              "heading2": "",
+              "button2": "",
+              "link2": ""
+            }
+          },
+          "19d0dba1-23f3-4522-955d-68212c435e1c": {
+            "type": "menu",
+            "settings": {
+              "position": "7",
+              "heading": "",
+              "menu1": "new-menu",
+              "menu_heading1": "",
+              "menu2": "new-menu",
+              "menu_heading2": "",
+              "menu3": "",
+              "menu_heading3": "",
+              "menu4": "",
+              "menu_heading4": ""
+            }
+          },
+          "8dcf6176-b8ed-4a73-b037-a383f842f7b9": {
+            "type": "product",
+            "settings": {
+              "position": "7",
+              "title": "",
+              "product1": "full-sleeve-solid-men-sweatshirt",
+              "product2": "women-green-shoulder-bag-extra-spacious"
             }
           }
         },
         "block_order": [
-          "771dd9da-66b7-418e-b03f-e6b60fddac64",
-          "70c81fce-aafb-4138-afe5-8087e299280e",
-          "e502872b-9399-46cf-998d-ea6deaa8ee24",
-          "cdc40a84-f4da-4ada-ba48-d04f636177ef",
-          "19dce112-343a-4468-9f22-b35e4ad21850"
+          "636bfd54-71b1-4446-849e-32c4e8c7e44e",
+          "3f1eb99d-230d-4ec5-aa0a-9a8b4261e71f",
+          "5953e34f-da03-4751-bc60-bf0a4dc86818",
+          "d315d00c-510d-4396-af15-133fe9cd599f",
+          "3211bf9c-f97a-4582-af05-c9c919730051",
+          "332ea816-0b30-4e7b-83cc-8512d816161d",
+          "3cde5a6f-fa84-47fb-a857-d01c22b2effa",
+          "13ba89c5-c40d-428e-b2c2-b23dafdf33ea",
+          "df220000-2f6d-442f-968d-62c731c9291f",
+          "acea3489-4e34-470d-a603-3a742cdcc1ae",
+          "42cade39-cba3-466a-ae03-cd7f536af1c9",
+          "bdab9e4c-d4a2-42a0-a54e-c6be4f4b69e0",
+          "19d0dba1-23f3-4522-955d-68212c435e1c",
+          "8dcf6176-b8ed-4a73-b037-a383f842f7b9"
         ],
         "settings": {
           "header_style": "header1",
-          "logo": "shopify:\/\/shop_images\/logo.png",
-          "logo_width": 250,
+          "logo": "shopify:\/\/shop_images\/New_new-logo_76f96197-35e0-4cbe-b2f0-8f2580d90e2e.png",
+          "logo_width": 110,
+          "logo_position": "flex-start",
           "menu": "main-menu",
-          "megamenu": true,
-          "menu2": "main-menu",
-          "top_message": "Welcome to Our Shopping Website",
+          "menu_position": "left",
+          "header_bgcolor": "#ffffff",
+          "header_textcolor": "#000000",
+          "header_textcolor_hover": "#000000",
+          "menu_bgcolor": "#000000",
+          "menu_textcolor": "#ffffff",
+          "sub_menu_color": "#848484",
+          "sub_hover_color": "#000000",
           "show_search": true,
           "show_currency": true,
           "enable_sticky_header": true
@@ -105,133 +284,99 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "7a2f3cca-3b7f-4781-9c9f-18b7bea2290a": {
-            "type": "image",
-            "settings": {
-              "heading": "",
-              "image": "shopify:\/\/shop_images\/footer-logo_9f7855fd-d851-40b5-9767-e250971e3590.png",
-              "image_width": 200,
-              "subtext": "<p>For dietary content, fashion insider and the best offers. For dietary content, fashion insider.<\/p><p>For dietary content, fashion insider and the best offers. For dietary content, fashion insider and the best offers.<br\/><br\/><\/p>"
-            }
-          },
-          "ff4862a6-d894-4776-ac14-624cf050f527": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Kids Section",
-              "menu": "kids-fashion"
-            }
-          },
           "d6eab6c4-60ce-4c0c-9d92-888c3d84949a": {
             "type": "link_list",
             "settings": {
               "heading": "Quick links",
-              "menu": "main-menu"
+              "menu": "kids-fashion"
             }
           },
-          "a742e200-d70f-4d4f-8751-396a45166768": {
+          "19282a37-7015-44c7-8590-c5f261813adf": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Men Fashion",
+              "menu": "new-menu"
+            }
+          },
+          "2108beea-1b63-4dba-8935-3ad5f3ced921": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "women-fashion"
+            }
+          },
+          "4f1ed2ed-2190-48cc-818e-69e99a7a4068": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
+          },
+          "c6b64e00-1766-4e87-a627-5e15baa21a95": {
             "type": "newsletter",
             "settings": {
+              "show_newsletter": true,
               "heading": "Newsletter",
               "subtext": "<p>Receive our weekly newsletter.<\/p><p>For dietary content, fashion insider and the best offers.<\/p>",
               "placeholder": "Email address",
-              "btn_text": "Join",
-              "show_social": true
+              "show_social": false
             }
           }
         },
         "block_order": [
-          "7a2f3cca-3b7f-4781-9c9f-18b7bea2290a",
-          "ff4862a6-d894-4776-ac14-624cf050f527",
           "d6eab6c4-60ce-4c0c-9d92-888c3d84949a",
-          "a742e200-d70f-4d4f-8751-396a45166768"
+          "19282a37-7015-44c7-8590-c5f261813adf",
+          "2108beea-1b63-4dba-8935-3ad5f3ced921",
+          "4f1ed2ed-2190-48cc-818e-69e99a7a4068",
+          "c6b64e00-1766-4e87-a627-5e15baa21a95"
         ],
         "settings": {
+          "image": "shopify:\/\/shop_images\/Asset_4.png",
+          "image_width": 150,
+          "subtext": "<p><strong>Lorem Ipsum <\/strong>is simply dummy text of the printing an typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.<\/p>",
           "enable_language_selector": true,
-          "payment_enable": true
+          "payment_enable": true,
+          "copyright_content": "© 2021. All Rights Reserved",
+          "footer_bg": "#1f1a12",
+          "footer_text": "#868476",
+          "footer_text_hover": "#b9b9b9"
         }
       },
       "announcement-bar": {
         "type": "announcement-bar",
-        "blocks": {
-          "f8a1a66c-2658-4513-99c5-4b8065a4f338": {
-            "type": "timer",
-            "settings": {
-              "icon": "gift",
-              "first_text": "Sale Starts in",
-              "date": "15\/12\/2021",
-              "last_text": "Get Ready",
-              "btn": "Explore Now",
-              "link": "#",
-              "bg_style": "gradient",
-              "bgcolor": "#fd5392",
-              "bgcolor2": "#f17d35",
-              "fontcolor": "#ffffff",
-              "btn_bgcolor": "#0b0807",
-              "btn_fontcolor": "#ffffff",
-              "bborder_color": ""
-            }
-          }
-        },
-        "block_order": [
-          "f8a1a66c-2658-4513-99c5-4b8065a4f338"
-        ],
         "settings": {
           "show_bar": true,
-          "auto_rotate": false,
-          "show_close": true
+          "show_close": false,
+          "icon": "gifts",
+          "first_text": "Sale Start",
+          "date": "05\/01\/2022",
+          "last_text": "Hurry Up!",
+          "btn": "Shop Now",
+          "link": "shopify:\/\/collections",
+          "bg_style": "gradient",
+          "bgcolor": "#000000",
+          "bgcolor2": "#000000",
+          "fontcolor": "#e6e6e6",
+          "btn_bgcolor": "#ffffff",
+          "btn_fontcolor": "#000000",
+          "bborder_color": "#0d0a0a"
+        }
+      },
+      "password-section": {
+        "type": "password-section",
+        "settings": {
+          "logo_pw": "shopify:\/\/shop_images\/New_new-logo.png",
+          "password-bk": "shopify:\/\/shop_images\/fall-neutral-colors-in-retail-display.jpg",
+          "logo_max_width": 160,
+          "heading": "Opening soon",
+          "show_newsletter": true,
+          "newsletter_title": "Find out when we open",
+          "show_social_share": true
         }
       }
     },
     "content_for_index": [
 
     ]
-  },
-  "presets": {
-    "Default": {
-      "colors_solid_button_labels": "#FFFFFF",
-      "colors_accent_1": "#121212",
-      "colors_accent_2": "#334FB4",
-      "colors_text": "#121212",
-      "colors_outline_button_labels": "#121212",
-      "colors_background_1": "#FFFFFF",
-      "colors_background_2": "#F3F3F3",
-      "type_header_font": "assistant_n4",
-      "type_body_font": "assistant_n4"
-    },
-    "Craft": {
-      "colors_solid_button_labels": "#EFECEC",
-      "colors_accent_1": "#2A332F",
-      "colors_accent_2": "#476154",
-      "colors_text": "#1C1A1A",
-      "colors_outline_button_labels": "#7B8382",
-      "colors_background_1": "#EFECEC",
-      "colors_background_2": "#C1BCAE",
-      "type_header_font": "americana_n4",
-      "type_body_font": "quattrocento_sans_n4",
-      "sections": {
-        "footer": {
-          "type": "footer",
-          "blocks": {
-            "menu": {
-              "type": "link_list",
-              "settings": {
-              }
-            },
-            "text": {
-              "type": "text",
-              "settings": {
-              }
-            }
-          },
-          "block_order": [
-            "menu",
-            "text"
-          ],
-          "settings": {
-            "color_scheme": "accent-1"
-          }
-        }
-      }
-    }
   }
 }

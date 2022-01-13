@@ -1,0 +1,231 @@
+<div class="mobile-filter-heading">
+  <h6>{{ 'sections.collection_template.filter_by_label' | t }}</h6>
+  <button class="close-mobile-filter" id="cancelFilters">
+    <svg class="MobileCrossSvg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50" style=" fill:#000000;"><g><path style=" " d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z "></path></g></svg>
+  </button>
+</div>
+{% liquid
+                  assign currencies_using_comma = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND' | split: ','
+                  assign uses_comma = false
+                  if currencies_using_comma contains cart.currency.iso_code
+                    assign uses_comma = true
+                  endif
+                %}
+<div class="shop-sidebar-inside">
+  <div class="filter-text-search">
+    <h5>{{ 'sections.collection_template.filter_by_label' | t }}</h5>
+  </div>
+  <form id="FiltersForm" class="collectionFilters__form" >
+
+    {%- if results.terms -%}
+    <input type="hidden" name="q" value="{{ results.terms | escape }}">
+    <input name="options[prefix]" type="hidden" value="last">
+         <input type="hidden" name="type" value="product">
+    {%- endif -%}
+    {%- for filter in results.filters -%}
+
+    {% case filter.type %}
+
+    {% when 'list' %}
+
+    <div class="widget sidebar-widget-product">
+
+      <div class="widget-title">
+
+        <h6 class="sidebar-title">
+          {{ filter.label | escape }} 
+        </h6>
+
+        <div class="widget-content">
+
+          <ul class="list-tags">
+
+            {%- for value in filter.values limit:5 -%}
+            <li class=" {% if value.count == 0 and value.active == false %}disabled{% endif %}">
+
+              <input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" id="Filter-{{ filter.label | escape }}-{{ forloop.index }}"
+                     {% if value.active %}checked{% endif %}
+                     {% if value.count == 0 and value.active == false %}disabled{% endif %}
+                     >
+
+              <span class="checkmark"></span>
+
+              <label for="Filter-{{ filter.label | escape }}-{{ forloop.index }}">
+
+                {{ value.label | escape }} ({{ value.count }})
+
+              </label>
+
+            </li>
+            {% endfor %}
+
+          </ul>
+
+
+          {%- if filter.values.size > 5 -%}
+          <ul class="list-tags more-options" style="display:none">
+
+            {%- for value in filter.values offset:5 -%}
+            <li class=" {% if value.count == 0 and value.active == false %}disabled{% endif %}">
+
+              <input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" id="Filter-{{ filter.label | escape }}-{{ forloop.index }}-1"
+                     {% if value.active %}checked{% endif %}
+                     {% if value.count == 0 and value.active == false %}disabled{% endif %}
+                     >
+
+              <span class="checkmark"></span>
+
+              <label for="Filter-{{ filter.label | escape }}-{{ forloop.index }}">
+
+                {{ value.label | escape }} ({{ value.count }})
+
+              </label>
+
+            </li>
+            {% endfor %}
+
+          </ul>
+          <div class="br_more_filter">
+
+            <div class="showMore">{% render 'icon-plus' %} {{'sections.collection_template.filter_show_more' | t}}</div>
+
+            <div class="showLess" style="display:none">{% render 'icon-minus' %} {{'sections.collection_template.filter_show_less' | t}}</div>
+
+          </div>
+
+          {%-endif-%}
+
+        </div>
+
+      </div>
+
+    </div>
+
+    {% when 'price_range' %}
+
+    <div class="widget sidebar-widget-product">
+      {%- if uses_comma -%}
+      {% assign max_value = filter.range_max |money_without_currency  | replace:'.','' | replace:',','.' | floor%} 
+
+      {% assign min_value = filter.range_min |money_without_currency | replace:'.','' | replace:',','.' | floor %}
+      {%- else -%}
+      {% assign max_value = filter.range_max |money_without_currency %} 
+
+      {% assign min_value = filter.range_min |money_without_currency %}
+
+      {%- endif -%}
+
+
+      {% assign max_value_formatted = filter.range_max |money %}       
+
+      {% assign min_value_formatted = filter.range_max |money %}
+
+      {%- if filter.max_value.value -%} 
+      {% assign max_value = filter.max_value.value |money_without_currency  %} 
+
+      {% assign max_value_formatted = filter.max_value.value |money %}       
+
+      {%- endif -%}
+
+      {%- if filter.min_value.value -%}
+      {% assign min_value = filter.min_value.value |money_without_currency %}
+
+      {% assign min_value_formatted = filter.min_value.value |money %}
+
+      {%- endif -%}
+
+      <div class="widget-title">
+
+        <h6 class="sidebar-title">
+
+          <span>{{ filter.label | escape }}</span>
+
+        </h6>
+
+        {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
+
+        <p class="price-widget-mobile">
+          <span data-min-value>{{ min_value_formatted }}</span>
+
+          <span class="pipe" style="">-</span>
+          <span data-max-value>{{ max_value_formatted }}</span></p>
+
+        <div class="mall-slider-handles" id="slider-round"             
+             {%- if uses_comma -%}
+             data-start="{{min_value | replace:'.','' | replace:',','.' | floor}}" 
+             data-end="{{max_value| replace:'.','' | replace:',','.' | floor}}" 
+             data-min="{{ filter.range_min | money_without_currency | replace:'.','' | replace:',','.' | floor}}" 
+             data-max="{{filter.range_max |money_without_currency | replace:'.','' | replace:',','.'  | floor}}" 
+             {%- else -%}
+             data-start="{{min_value | replace:',','' | floor}}" 
+             data-end="{{max_value| replace:',','' | floor}}" 
+             data-min="{{ filter.range_min | money_without_currency | replace: ',', '' | floor}}" 
+             data-max="{{filter.range_max |money_without_currency | replace:',','' | floor}}"
+             {%- endif -%}
+             data-target="price" 
+             ></div>
+
+        <div class="widget-content">  
+
+          <div class="widget__price">
+
+            <div class="field">
+
+              <input class="field__input"
+                     name="{{ filter.min_value.param_name }}"
+                     id="Filter-{{ filter.label | escape }}-GTE"
+                     {%- if filter.min_value.value -%}
+                     {%- if uses_comma_decimals -%}value="{{ filter.min_value.value | money_without_currency | replace: ',', '.'  | floor}}"{%- else -%}value="{{ filter.min_value.value | money_without_currency | replace: ',', ''| floor }}"{% endif %}
+                     {%- endif -%}
+                     type="number"
+                     placeholder="0"
+                     min="0"
+                     {%- if uses_comma_decimals -%}max="{{ filter.range_max | money_without_currency  | replace: ',', '.' | floor}}"{%- else -%}max="{{ filter.range_max | money_without_currency | replace: ',', '' | floor}}"{% endif %}
+                     >
+
+            </div>
+
+            <div class="fieldCenter text__center price-spacer"></div>
+
+            <div class="field">
+
+              <input class="field__input"
+                     name="{{ filter.max_value.param_name }}"
+                     id="Filter-{{ filter.label | escape }}-LTE"
+                     {%- if filter.max_value.value -%}{%- if uses_comma_decimals -%}value="{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' | floor }}"{%- else -%}value="{{ filter.max_value.value | money_without_currency | replace: ',', '' | floor }}"{% endif %}
+                     {%- endif -%}
+                     type="number"
+                     min="0"
+                     {%- if uses_comma_decimals -%}
+                     placeholder="{{ filter.range_max | money_without_currency | replace: ',', '.'  | floor}}"
+                     max="{{ filter.range_max | money_without_currency | replace: ',', '.' | floor}}"
+                     {%- else -%}
+                     placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' | floor}}"
+                     max="{{ filter.range_max | money_without_currency | replace: ',', '' |floor }}"
+                     {% endif %}
+                     >
+
+            </div>
+
+          </div>
+
+          <span class="widget__selected">{{ "sections.collection_template.max_price" | t: price: max_price_amount }}</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    {% endcase %}
+
+    {% endfor %}
+
+    <div class="mobile-filter-apply">
+      <button type="submit" class=" button black-btn small-btn btn-block">{{ 'sections.collection_template.filter_button' | t }}</button>
+      <a href="{{ collection.url }}?sort_by={{ sort_by }}" class="button white-btn small-btn btn-block">{{ 'sections.collection_template.clear_all' | t }}</a>
+    </div>
+
+  </form>
+
+</div>

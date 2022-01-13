@@ -1,13 +1,165 @@
 {
   "sections": {
+    "1640363663aafb2a2c": {
+      "type": "promotion-banner",
+      "settings": {
+        "full_width": true,
+        "heading": "Promotion",
+        "text": "Add the details of your promotion",
+        "link": "shopify:\/\/collections\/tops-jeans",
+        "label": "Shop now",
+        "bgcolor": "#866f42",
+        "bgcolor_opacity": 42,
+        "textcolor": "#000",
+        "btntextcolor": "#000",
+        "btnbgcolor": "transparent",
+        "btnborder": "#000",
+        "border_radius": 0,
+        "top_space_desktop": 0,
+        "bottom_space_desktop": 10,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
+    },
     "main": {
       "type": "main-list-collections",
+      "blocks": {
+        "8b4878d2-a451-4e50-9def-c1235217e3d7": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "autumn-collection"
+          }
+        },
+        "20268de2-6f1d-4d89-853f-1b61fd261e6b": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "collection-1",
+            "image": "shopify:\/\/shop_images\/studded-flats.jpg"
+          }
+        },
+        "b6653f18-70b3-42a0-91a2-a5b4f41459ac": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "women-collections",
+            "image": "shopify:\/\/shop_images\/man-in-french-cuff-fashion.jpg"
+          }
+        },
+        "45ba3a0e-5038-4b78-b9f1-76c91709b171": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "womens",
+            "image": "shopify:\/\/shop_images\/nature-mountains-flower-landscape-adventure.jpg"
+          }
+        },
+        "d2c3d107-5f44-4325-9d93-5c049a671de9": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "spring-collection",
+            "image": "shopify:\/\/shop_images\/holding-coffee-in-bed.jpg"
+          }
+        },
+        "91a1a0d6-4251-467c-8932-0d8532ac1e8c": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "summer-collection-1"
+          }
+        },
+        "8abc2995-47d8-465c-aa03-b6ccab71e18a": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "winter-collections"
+          }
+        },
+        "e5859128-f6dd-4c9c-947a-9ade316744c8": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "womens-handbag"
+          }
+        },
+        "44b301b8-87ff-490f-bc35-c83df7a7e0b9": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "autumn-collection"
+          }
+        },
+        "f10b5397-783a-4fef-bed6-be1042196fb2": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "collection-1",
+            "image": "shopify:\/\/shop_images\/shutterstock_1695648523.jpg"
+          }
+        },
+        "f8b40520-1f10-4246-b8de-4b7365d770d4": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "collection-2"
+          }
+        },
+        "3255985d-a3f5-4a12-8bcf-0b22b96f1552": {
+          "type": "collection",
+          "settings": {
+            "collection": "collection-3"
+          }
+        },
+        "78285bc1-4b7f-4ae7-9282-23a3740ae4db": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "tops-jeans"
+          }
+        },
+        "362273b2-ff4e-432b-8cb2-cc7f8c3904d5": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "autumn-collection"
+          }
+        },
+        "f0ef2dd2-062f-4865-bcf0-a79ad223c582": {
+          "type": "collection",
+          "settings": {
+            "collection": "mens-winter-wear"
+          }
+        }
+      },
+      "block_order": [
+        "8b4878d2-a451-4e50-9def-c1235217e3d7",
+        "20268de2-6f1d-4d89-853f-1b61fd261e6b",
+        "b6653f18-70b3-42a0-91a2-a5b4f41459ac",
+        "45ba3a0e-5038-4b78-b9f1-76c91709b171",
+        "d2c3d107-5f44-4325-9d93-5c049a671de9",
+        "91a1a0d6-4251-467c-8932-0d8532ac1e8c",
+        "8abc2995-47d8-465c-aa03-b6ccab71e18a",
+        "e5859128-f6dd-4c9c-947a-9ade316744c8",
+        "44b301b8-87ff-490f-bc35-c83df7a7e0b9",
+        "f10b5397-783a-4fef-bed6-be1042196fb2",
+        "f8b40520-1f10-4246-b8de-4b7365d770d4",
+        "3255985d-a3f5-4a12-8bcf-0b22b96f1552",
+        "78285bc1-4b7f-4ae7-9282-23a3740ae4db",
+        "362273b2-ff4e-432b-8cb2-cc7f8c3904d5",
+        "f0ef2dd2-062f-4865-bcf0-a79ad223c582"
+      ],
       "settings": {
-        "image_ratio": "square"
+        "title": "Collections",
+        "collections_per_page": 18,
+        "show_collections": "all",
+        "sort": "date_reversed"
       }
     }
   },
   "order": [
+    "1640363663aafb2a2c",
     "main"
   ]
 }

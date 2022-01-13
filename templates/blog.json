@@ -1,10 +1,67 @@
 {
   "sections": {
     "main": {
-      "type": "main-blog"
+      "type": "main-blog",
+      "settings": {
+        "show_date": true,
+        "show_author": true,
+        "show_tags": true,
+        "show_excerpt": true,
+        "show_comment_count": true
+      }
+    },
+    "1640175976ca42b3d8": {
+      "type": "offer-section",
+      "blocks": {
+        "16401759761529bbc1-0": {
+          "type": "offer",
+          "settings": {
+            "heading": "Heading",
+            "subheading": "<p>Flat Up To<\/p>",
+            "image": "shopify:\/\/shop_images\/malvestida-magazine-u79wy47kvVs-unsplash.jpg",
+            "link": ""
+          }
+        },
+        "16401759761529bbc1-1": {
+          "type": "offer",
+          "settings": {
+            "heading": "Heading",
+            "subheading": "<p>Flat Up To<\/p>",
+            "image": "shopify:\/\/shop_images\/s-o-c-i-a-l-c-u-t-7QjF0V8NOms-unsplash.jpg",
+            "link": ""
+          }
+        },
+        "16401759761529bbc1-2": {
+          "type": "offer",
+          "settings": {
+            "heading": "Heading",
+            "subheading": "<p>Flat Up To<\/p>",
+            "image": "shopify:\/\/shop_images\/minimalist-retail-clothing-display.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16401759761529bbc1-0",
+        "16401759761529bbc1-1",
+        "16401759761529bbc1-2"
+      ],
+      "settings": {
+        "subheading": "BEST FOR YOU",
+        "heading": "What's More",
+        "color": "#efedeb",
+        "style": "style1",
+        "info_position": "left",
+        "show_border": true,
+        "top_space_desktop": 45,
+        "bottom_space_desktop": 45,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1640175976ca42b3d8"
   ]
 }

@@ -1,119 +1,182 @@
 {% if section.blocks.size > 0 %}
 <div class="container">
-    <div class="row">
-        <div class="service__content page-width">
-            <div class="service__column footer__column--info d-flex justify-content-between">
-                {% for block in section.blocks %}
-                <div class="col text__{{block.settings.alignment}}">
-                    {% if block.settings.image != blank %}
-                    <img src="{{block.settings.image | img_url:'master'}}" alt="{{block.settings.heading}}">
-                    {% else %}
-                    <img src="https://yova.shinedezign.pro/assets/images/delivery.png" alt="delivery">
-                    {% endif %}
-                    <div class="service_title">
-                    <h6>{{block.settings.heading}}</h6>
-                    {{block.settings.subtext}}
-                    </div>
-                </div>            
-                {% endfor %}
-            </div>
-        </div>
-    </div>
+  <div class="service__column">
+    {% for block in section.blocks %}
+    <div class="col" {{ block.shopify_attributes }}>
+      {% render 'icons' icon:block.settings.icon%}
+      <div class="service_title">
+        <h6>{{block.settings.heading}}</h6>
+        {{block.settings.subtext}}
+      </div>
+    </div>            
+    {% endfor %}
+  </div>
 </div>
 {% endif %}
 <style>
-    #shopify-section-{{section.id}}{
-      padding: {{section.settings.padding}}px 0;
-      background-color:{{section.settings.bgcolor}};
-      {%- if section.settings.show_divider -%}
-      border-bottom: 1px solid {{section.settings.textcolor | color_lighten: 80}};
-      {%- endif -%}
+  #shopify-section-{{section.id}}.shopify-section{
+    background-color:{{section.settings.bgcolor}};
+    padding-top:{{section.settings.top_space_desktop}}px;
+    padding-bottom:{{section.settings.bottom_space_desktop}}px;
+  }
+  #shopify-section-{{section.id}} .service__column .col h6{
+    color:{{section.settings.textcolor}};
+  }
+
+  #shopify-section-{{section.id}} .service__column .col{
+    border-color:{{section.settings.textcolor | color_lighten: 80}};
+  }
+  @media only screen and (max-width:575px) {
+    #shopify-section-{{section.id}}.shopify-section{
+      padding-top:{{section.settings.top_space_mobile}}px;
+      padding-bottom:{{section.settings.bottom_space_mobile}}px;
     }
-    #shopify-section-{{section.id}} .service__column .col h6,
-    #shopify-section-{{section.id}} .service__column .col p{
-      color:{{section.settings.textcolor}};
-    }
-    
-    #shopify-section-{{section.id}} .service__column .col{
-      border-color:{{section.settings.textcolor | color_lighten: 80}};
-    }
-  </style>
+  }
+</style>
 {% schema %}
 {
   "name": "t:sections.multicolumn.name",
   "tag": "section",
+  "class": "shopify-section-multicolumn-content",
   "max_blocks":4,
   "settings": [
     {
       "type": "color",
       "id": "bgcolor",
-      "default": "#efedeb",
+      "default": "#EDE8E2",
       "label": "t:sections.multicolumn.settings.bgcolor.label"
     },
     {
       "type": "color",
       "id": "textcolor",
-      "default": "#000000",
+      "default": "#746850",
       "label": "t:sections.multicolumn.settings.textcolor.label"
     },
     {
-      "type": "checkbox",
-      "id": "show_divider",
-      "default": true,
-      "label": "t:sections.multicolumn.settings.show_divider.label"
+      "type": "range",
+      "id": "top_space_desktop",
+      "label": "t:sections.multicolumn.settings.top_space_desktop.label",
+      "default":10,
+      "min":0,
+      "max":60,
+      "step":5
     },
     {
       "type": "range",
-      "id": "padding",
-      "default": 100,
+      "id": "bottom_space_desktop",
+      "label": "t:sections.multicolumn.settings.bottom_space_desktop.label",
+      "default":10,
       "min":0,
-      "max":150,
-      "step":5,
-      "unit":"px",
-      "label": "t:sections.multicolumn.settings.padding.label"
+      "max":60,
+      "step":5
+    },
+    {
+      "type": "range",
+      "id": "top_space_mobile",
+      "label": "t:sections.multicolumn.settings.top_space_mobile.label",
+      "default":30,
+      "min":0,
+      "max":60,
+      "step":5
+    },
+    {
+      "type": "range",
+      "id": "bottom_space_mobile",
+      "label": "t:sections.multicolumn.settings.bottom_space_mobile.label",
+      "default":30,
+      "min":0,
+      "max":60,
+      "step":5
     }
   ],
   "blocks": [
 	  {
       "type":"column",
       "name":"t:sections.multicolumn.blocks.column.name",
-      "settings": [        
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "t:sections.multicolumn.blocks.column.settings.icon.label",
+          "default": "shipping",
+          "options": [
+           {
+                "label": "t:sections.multicolumn.blocks.column.settings.icon.options.chat.label",
+                "value": "chat"
+              },
+              {
+                "label": "t:sections.multicolumn.blocks.column.settings.icon.options.eye.label",
+                "value": "eye"
+              },
+              {
+                "label": "t:sections.multicolumn.blocks.column.settings.icon.options.file.label",
+                "value": "file"
+              },
+              {
+                "label": "t:sections.multicolumn.blocks.column.settings.icon.options.gift.label",
+                "value": "gift"
+              },
+              {
+                "label": "t:sections.multicolumn.blocks.column.settings.icon.options.global.label",
+                "value": "global"
+              },
+              {
+                "label": "t:sections.multicolumn.blocks.column.settings.icon.options.heart.label",
+                "value": "heart"
+              },
+              {
+                "label": "t:sections.multicolumn.blocks.column.settings.icon.options.phone.label",
+                "value": "phone"
+              },
+              {
+                "label": "t:sections.multicolumn.blocks.column.settings.icon.options.refund.label",
+                "value": "refund"
+              },
+              {
+                "label": "t:sections.multicolumn.blocks.column.settings.icon.options.search.label",
+                "value": "search"
+              },
+              {
+                "label": "t:sections.multicolumn.blocks.column.settings.icon.options.secure.label",
+                "value": "secure"
+              },
+              {
+                "label": "t:sections.multicolumn.blocks.column.settings.icon.options.shipping.label",
+                "value": "shipping"
+              },
+              {
+                "label": "t:sections.multicolumn.blocks.column.settings.icon.options.smile.label",
+                "value": "smile"
+              },
+              {
+                "label": "t:sections.multicolumn.blocks.column.settings.icon.options.support.label",
+                "value": "support"
+              },
+              {
+                "label": "t:sections.multicolumn.blocks.column.settings.icon.options.tag.label",
+                "value": "tag"
+              },
+              {
+                "label": "t:sections.multicolumn.blocks.column.settings.icon.options.thumb.label",
+                "value": "thumb"
+              },
+              {
+                "label": "t:sections.multicolumn.blocks.column.settings.icon.options.user.label",
+                "value": "user"
+              }
+          ]
+        },   
         {
           "type": "text",
           "id": "heading",
-          "default": "FREE SHIPPING WORLD WIDE",
+          "default": "Add Heading here",
           "label": "t:sections.multicolumn.blocks.column.settings.heading.label"
         },
         {
           "type": "richtext",
           "id": "subtext",
-          "default": "<p>100% Original guarantee</p><p>for all products at yuva.com</p>",
+          "default": "<p>Add Optional subtext here</p>",
           "label": "t:sections.multicolumn.blocks.column.settings.subtext.label"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "t:sections.multicolumn.blocks.column.settings.image.label"
-        },
-        {
-          "type": "select",
-          "id": "alignment",
-          "label": "t:sections.multicolumn.blocks.column.settings.alignment.label",
-          "default": "left",
-          "options": [
-            {
-              "label": "t:sections.multicolumn.blocks.column.settings.alignment.left.label",
-              "value": "left"
-            },
-            {
-              "label": "t:sections.multicolumn.blocks.column.settings.alignment.center.label",
-              "value": "center"
-            },
-            {
-              "label": "t:sections.multicolumn.blocks.column.settings.alignment.right.label",
-              "value": "right"
-            }
-          ]
         }
       ]
     }

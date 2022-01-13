@@ -1,15 +1,16 @@
-<div class="container product-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=1">
-  <div class="row">
+<div class="section-spacer">
+<div class="container">
+  <div class="product-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=10">
     {%- if recommendations.performed and recommendations.products_count > 0 -%}
     <div id="SimilarProductsMain" class="recent-product">
       <div class="recent-product-header shopify__top__section">
-        <h4>Recent Product</h4>
+        <h4>{{'products.product.similar_products' | t}}</h4>
       </div>
-      <div class="recent-product-slide owl-carousel owl-theme">
+      <div class="recent-product-slide">
         {%- for product in recommendations.products -%}
         <div class="item">
           <div class="slider-content">
-            {% include 'product-grid' hideRelated:true %}
+            {% include 'product-grid' hideRelated:true,hideQuickView:true ,show_second_image : true %}
           </div>
         </div>
       {%- endfor -%}
@@ -19,12 +20,44 @@
   </div>
 
 </div>
-  {% javascript %}
-    const handleIntersection = (entries, observer) => {
-      if (!entries[0].isIntersecting) return;
+</div>
+    
+    <script type="application/json" name="slider-json">    
+         {
+          "slidesToShow":6,
+          "slidesToScroll":1,
+          "infinite":true,
+          "draggable":false,
+          "cssEase": "linear",
+         "dots":false,
+          "autoplay":false,
+          "arrows":true,
+          "prevArrow":"<button type=\"button\" class=\"slick-prev\" aria-label=\"Prev\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M15.526 18.966L8.559 12l6.967-6.967\"></path></svg></span></button>",
+          "nextArrow":"<button type=\"button\" class=\"slick-next\" aria-label=\"Next\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M8.474 18.966L15.44 12 8.474 5.033\"></path></svg></span></button>",
+          "responsive":[
+          	{
+            "breakpoint": 1440,
+              "settings": {
+              	"slidesToShow": 5
+              }
+            },
+          	{
+            "breakpoint": 1199,
+              "settings": {
+              	"slidesToShow": 4
+              }
+            },
+          	{
+            "breakpoint": 767,
+                "settings": "unslick"
+            }
+          ]
+        }
+    </script>
   
-      observer.unobserve(productRecommendationsSection);
-  
+  <script>
+    
+    const productRecommendationsSection = document.querySelector('.product-recommendations');
       const url = productRecommendationsSection.dataset.url;
   
       fetch(url)
@@ -41,36 +74,29 @@
         .catch(e => {
           console.error(e);
         });
-    };
-  
-    const productRecommendationsSection = document.querySelector('.product-recommendations');
-    const observer = new IntersectionObserver(handleIntersection, {rootMargin: '0px 0px 200px 0px'});
-  
-    observer.observe(productRecommendationsSection);
-  {% endjavascript %}
-  <script>
     $(document).ready(function(){
+      recommendedProductsSlider();
+    })
+    function recommendedProductsSlider(){
       var recomend = setInterval(function(){
-        if($('.recent-product-slide').length > 0 ){
-          $('.recent-product-slide').owlCarousel({
-            center: false,
-            items: 6,
-            loop: false,
-            margin: 26,
-            dots:false,
-            slideSpeed: 1200,
-            paginationSpeed: 500,
-            responsiveClass:true
-          });
+        if($('.recent-product-slide').length > 0 ){ 
+          if(!($('.recent-product-slide').hasClass('slick-initialized'))){
+            slickSlider($('.recent-product-slide'))
+            showMultipleOptions(); 
+          }
           clearInterval(recomend);
         }
       },100)
-    })
+      setTimeout(function(){
+        clearInterval(recomend);
+      },5000)
+    }
     </script>
   {% schema %}
     {
-      "name": "Product recommendations",
+      "name": "t:sections.product_recommendations.name",
       "tag":"section",
+		"class":"product-page-recommendations",
       "settings": []
     }
   {% endschema %}
