@@ -1,16 +1,16 @@
 <div class="item col-12 col-sm-12 col-md-6 col-lg-4">
     <div class="post-wrapper">
-            {% assign article_image = 'featured_image.png' | asset_url %}
-            {% if article.image %}
-            {% assign article_image = article.image %}
-            {% endif %}
+            {%- assign article_image = 'featured_image.png' | asset_url -%}
+            {%- if article.image -%}
+            {%- assign article_image = article.image -%}
+            {%- endif -%}
             <div class="post-information-image">
-                <a href="{{article.url}}" class="animate_hvrbr">                    
-                  {% if article.image != blank %}
-                  {% include 'lazy-image' image:article_image%}
-                  {% else %}
-                  {% render 'placeholder' %}
-                  {% endif %}
+                <a href="{{-article.url-}}" class="animate_hvrbr">                    
+                  {%- if article.image != blank -%}
+                  {%- include 'lazy-image' image:article_image -%}
+                  {%- else -%}
+                  {%- render 'placeholder' %}
+                  {%- endif -%}
                 </a>
             </div>
             <div class="post-information__wrapper text__left">
@@ -19,44 +19,10 @@
                 </div>
                 <div class="post-name">
                   <h6><a href="{{article.url}}">{{article.title| truncatewords: 6}}</a></h6>
-                  {% assign word_limit = 6 %}
-                  {% if desc_limit %}{% assign word_limit = desc_limit %}{% endif %}
-                  <p>{{article.excerpt_or_content | strip_html | truncatewords: word_limit}}</p>
+                  {%- assign word_limit = 6 -%}
+                  {%- if desc_limit -%}{%- assign word_limit = desc_limit -%}{%- endif -%}
+                  <p>{{-article.excerpt_or_content | strip_html | truncatewords: word_limit-}}</p>
               </div>
             </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

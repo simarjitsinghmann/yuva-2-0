@@ -21,15 +21,21 @@
     var filterHeading = document.getElementById('filterHeading');
     var filters = document.getElementById('filterSideBar');
     if(window.innerWidth < 768){
+    if(filterHeading){
       filterHeading.addEventListener("click", ()=>{	
                                      filters.classList.add('active')
       document.querySelector('body').classList.add('open-filter-sort');
     });
+    }
+    
     var cancelFiltes = document.getElementById('cancelFilters');
+    
+    if(cancelFiltes){
     cancelFiltes.addEventListener("click", ()=>{	
                                   filters.classList.remove('active')
     document.querySelector('body').classList.remove('open-filter-sort');
   });
+    }
 }
  }
 
@@ -43,11 +49,11 @@
 window.addEventListener('resize', function(event){
   //   changeGridLayout();
   applyFilters();
-  hideShowFilters();
+//   hideShowFilters();
   
   var filters = document.getElementById('filterSideBar');
   if (filters){
-  	if(window.innerWidth < 768){
+  	if(window.innerWidth < 768 && window.innerWidth > 760){
       filters.style.display = 'none';
       setTimeout(function(){filters.style.display = '';},500)
     }
@@ -243,22 +249,21 @@ function getFilterData(filterForm,input,sectionId,remove){
 
 let triggered = false;
 function ScrollExecute() {
-  let moreButon = $('#more').last();
-  let nextUrl = $(moreButon).find('a').attr("href");
-  if (screenVisibility($(moreButon)) && (triggered == false)) {
+  var moreButon = $('#more').last();
+  var nextUrl = moreButon.find('a').attr("href");
+  if (screenVisibility(moreButon) && (triggered == false)) {
     triggered = true;
     $.ajax({
       url: nextUrl,
       type: 'GET',
       beforeSend: function() {
-        moreButon.removeClass('hidden');
+        moreButon.find('.load').removeClass('hidden');
       }
     })
     .done(function(data) {
       moreButon.remove();
       $('[data-collection-products]').append($(data).find('[data-collection-products]').html());
       productVariants();
-//       showMultipleOptions();
       triggered = false
     });
   }

@@ -4,7 +4,6 @@ $(document).ready(function(){
 		$('body').toggleClass(_class);		
 		$('input.search-input').focus();
 		$('#recent_search_list').html('');
-      console.log('starts')
       recentSearch();
 	});
   $('.search-input').bind('focusin focusout', function(e){
@@ -43,10 +42,10 @@ $(document).ready(function(){
 
       var $form = $(this).closest('form');
       //Search term
-      var term = '*' + $form.find('input[name="q"]').val() + '*';
+      var term = $form.find('input[name="q"]').val();
 
       //URL for full search page
-      var linkURL = $form.attr('action') + '?type=product&q=' + term;
+      var linkURL = $form.attr('action') + '?q=' + term+'&options%5Bprefix%5D=last';
 
       //Show loading
       $resultsBox.html(preLoadLoadGif);
@@ -61,13 +60,16 @@ $(document).ready(function(){
             type: 'product',
             view: 'json',
             q: term,
+            options:{
+              prefix:'last'
+            }
           },
           dataType: "json",
           success: function(data){
             $('.note').remove();
             if(data.results_total == 0) {
               //No results
-              $resultsBox.html('<div class="note">{{'templates.search.drawer_no_results' | t}}</div>');
+              $resultsBox.html('<div class="note">'+searchNoResultText+'</div>');
               $('.Search_loader').hide();                  
               $('.header_icon_search').show();
               $('.recent-search-list').removeClass('ActiveSearch');
@@ -101,7 +103,7 @@ $(document).ready(function(){
               localStorage.setItem("Recent_search", JSON.stringify(retrievedSearch_v));                          
               $('.searc-item-box').wrapAll( "<div class='result-list' />" );                         	                          
               //$('<div class="rightsearch"><p>This is collection</p></div>').insertAfter(".leftsearch");                           
-              $resultsBox.append('<a href="' + linkURL + '" class="note">{{'templates.search.drawer_all_results' | t}}</a>');
+              $resultsBox.append('<a href="' + linkURL + '" class="note">'+searchAllResultText+'</a>');
               $('.Search_loader').hide();                  
               $('.header_icon_search').show();
               $('.recent-search-list').addClass('ActiveSearch');
@@ -142,15 +144,19 @@ $(document).ready(function(){
       if(recent_pro_val==null){  
         $('.recent-search-list').html('');
       }else{
-        recent_Html =  recent_Html.concat('<h5 style="">{{'templates.search.drawer_recent_title' | t}}</h5>');
+        recent_Html =  recent_Html.concat('<h5 style="">'+searchRecentTitleText+'</h5>');
         recent_Html =  recent_Html.concat('<div class="recent-search-inner mCustomScrollbar"><div id="mCSB_9_container" class="mCSB_container mCS_x_hidden mCS_no_scrollbar_x"><ul class="search-recent-list">'); 
         var Prev_search =recent_pro_val.reverse();
-        $.each(Prev_search, function(index, value){   
+        $.each(Prev_search, function(index, value){ 
+          var productUrl='';
+          if(rootUrl.length>1){
+          productUrl=rootUrl;
+          }
           if(index<10){
             var getV = value;
             jQuery.ajax({
               type: 'GET',
-              url: '/products/' + value + '.json',
+              url: productUrl+'/products/' + value + '.json',
               success: function(response) {
                 
                 showRecent = true;
@@ -159,7 +165,7 @@ $(document).ready(function(){
                 if(product.image){
                   imgSrc = product.image.src;
                 }
-                recent_Html +=`<li><a href="/products/${product.handle}" title="${product.title}">
+                recent_Html +=`<li><a href="${productUrl}/products/${product.handle}" title="${product.title}">
 				<span><img src="${imgSrc}"></span>${truncate(product.title,2)}</a></li>`;     
               },
               error: function(error) {
@@ -185,7 +191,7 @@ $(document).ready(function(){
   $('.search-form, #search-form').on('submit', function(e){
     e.preventDefault();
     var term = '*' + $(this).find('input[name="q"]').val() + '*';
-    var linkURL = $(this).attr('action') + '?type=product&q=' + term;
+    var linkURL = $(this).attr('action') + '?q=' + term+'&options%5Bprefix%5D=last';
     window.location = linkURL;
   });
 

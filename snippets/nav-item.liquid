@@ -1,13 +1,13 @@
 {%- for link in linklists[section.settings.menu].links -%}
-{% assign menuIndex = forloop.index %}
-{% assign menuDropdown = false %}
-{% for block in section.blocks %}
-{% assign blockPosition = block.settings.position | plus:0 %}
-  {% if blockPosition == menuIndex %}
-	{% assign menuDropdown = true %}
-	{% break %}
-  {% endif %}
-{% endfor %}
+{%- assign menuIndex = forloop.index -%}
+{%- assign menuDropdown = false -%}
+{%- for block in section.blocks -%}
+{%- assign blockPosition = block.settings.position | plus:0 -%}
+  {%- if blockPosition == menuIndex -%}
+	{%- assign menuDropdown = true -%}
+	{%- break -%}
+  {%- endif -%}
+{%- endfor -%}
 <li class="nav-item {% if link.current %}active{% endif %}">
   <a class="list-menu__item" href="{{ link.url }}">{{link.title | split:"{badge" | first | escape | capitalize }}
     {%- if link.links != blank or menuDropdown -%}
@@ -16,25 +16,25 @@
         <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" class=""></path>
       </svg>
     </span>
-    {% endif %}
+    {%- endif -%}
   </a>                                
   {%- if link.links != blank or menuDropdown -%}
   <div class="sub-menu">
     <div class="site-nav-dropdown">
       <div class="container">
         <div class="row">    
-          {% assign menuLinkLists = false %}
-          {% assign menuWidth = 'col-md-12' %}
+          {%- assign menuLinkLists = false -%}
+          {%- assign menuWidth = 'col-md-12' -%}
           {%- if menuDropdown -%}
-          {% include 'mega-menu' %}
-          {% else %}          
-          {% assign menuLinkLists = true %}
+          {%- include 'mega-menu' -%}
+          {%- else -%}          
+          {%- assign menuLinkLists = true -%}
           {%- endif -%}
-          {% if menuLinkLists %}
+          {%- if menuLinkLists -%}
           <div class="col-12 {{menuWidth}} col5 inner dropdown {{test}}">
-            <div class="menuLinks-wrapper">
+            <div class="row menuLinks-wrapper">
               {%- for childlink in link.links -%}
-              <div class="sub-menu-list">
+              <div class="col-12 col-md-3 sub-menu-list">
                 <div class="menu-mb-title">
                   <span>{%- unless childlink.links != blank -%}<a href="{{ childlink.url }}">{% endunless %}{{ childlink.title | split:"{badge" | first | escape | captilize }}{%- unless childlink.links != blank -%}</a>{% endunless %}</span>
                 </div>
@@ -49,10 +49,10 @@
                   </li>
                   {%- endfor -%}
                 </ul>
-                {% endif %}
+                {%- endif -%}
               </div>
-              {% endfor %}
-              {% include 'mega-menu' content:'menu' %}
+              {%- endfor -%}
+              {%- include 'mega-menu' content:'menu' -%}
             </div>
           </div>     
           {% endif %}

@@ -1,24 +1,24 @@
 <div class="footer-top-box {% unless section.settings.image != blank %}no-footer-logo{% endunless %}">
   <div class="container">
     <div class="footer-logo-box">
-      <div class="row">
-        {% assign footlogo = false %}
-        {% if section.settings.image != blank %}
-        {% assign footlogo = true %}
+      <div class="row align-items-center">
+        {%- assign footlogo = false -%}
+        {%- if section.settings.image != blank -%}
+        {%- assign footlogo = true -%}
         <div class="col-sm-12 col-md-3 col-lg-2">
           <div class="footer-logo">
-            {% assign width = section.settings.image_width | append:'px' %}
+            {%- assign width = section.settings.image_width | append:'px' -%}
               {% render 'lazy-image' image:section.settings.image,class:'Yuva-logo',max_width:width %}
           </div>
         </div>
-        {% endif %}
-        {% if section.settings.subtext != blank %}
+        {%- endif -%}
+        {%- if section.settings.subtext != blank -%}
         <div class="col-sm-12 {% if footlogo %}col-md-10{% else %}col-md-12{%endif%}">
           <div class="footer-content">
             {{ section.settings.subtext }}
           </div>
         </div>
-        {% endif %}
+        {%- endif -%}
       </div>
     </div>
   </div>
@@ -27,41 +27,41 @@
   <div class="container">
     <div class="footer-menu-list">
       <div class="row">
-        {% for block in section.blocks %}
-        {% case block.type %}
-        {% when 'link_list'%}
+        {%- for block in section.blocks -%}
+        {%- case block.type -%}
+        {%- when 'link_list'-%}
         <div class="col-sm-12 col-md-3 col-lg-2" {{ block.shopify_attributes }}>
           <div class="footer-menu-accordion">
-            {% if block.settings.heading != blank %}
+            {%- if block.settings.heading != blank -%}
             <h5 class="footer-menu-head footer-menu-accordion-head">{{block.settings.heading}}</h5>
-            {% endif %}
-            {% if block.settings.menu != blank %}
+            {%- endif -%}
+            {%- if block.settings.menu != blank -%}
             <ul>
-              {% for link in block.settings.menu.links %}
+              {%- for link in block.settings.menu.links -%}
               <li><a href="{{link.url}}">{{link.title | split: '{'| first }}</a></li>
-              {% endfor %}
+              {%- endfor -%}
             </ul>
-            {% endif %}
+            {%- endif -%}
           </div>
         </div>
-        {% when 'newsletter'%}
+        {%- when 'newsletter' -%}
         <div class="col-sm-12 col-md-12 col-lg-4" {{ block.shopify_attributes }}>
 			<div class="newsletter-box">
-          {% if block.settings.heading != blank %}
+          {%- if block.settings.heading != blank -%}
           <h5 class="footer-menu-head ">{{block.settings.heading}}</h5>
-          {% endif %}
+          {%- endif -%}
 
-          {% if block.settings.subtext != blank %}
+          {%- if block.settings.subtext != blank -%}
           {{block.settings.subtext}}
-          {% endif %}
+          {%- endif -%}
 
-          {% if block.settings.show_newsletter %}
+          {%- if block.settings.show_newsletter -%}
           {%- form 'customer', id: 'ContactFooter',class:'footer__newsletter newsletter-form' -%}
           <input type="hidden" name="contact[tags]" value="newsletter">
 
-          {% if form.posted_successfully? %}
+          {%- if form.posted_successfully? -%}
           <span class="success-text">{{ 'newsletter.success' | t }}</span>
-          {% else %}
+          {%- else -%}
           <div class="newsletter-form__field-wrapper">
             <div class="field">
               <input id="NewsletterForm--footer" 
@@ -91,18 +91,16 @@
   
             <img src="{{'arrow.svg' | asset_url}}" width="20" height="15" alt="{{'newsletter.button_label' | t}}"/>
           </button>
-          {% endif %}
-          {% endform %}
-          {% endif %}
-
-
-          {% if block.settings.show_social %}
-          {% include 'social-media-icons' %}
-          {% endif %}
+          {%- endif -%}
+          {%- endform -%}
+          {%- endif -%}
+          {%- if block.settings.show_social -%}
+          {%- include 'social-media-icons' -%}
+          {%- endif -%}
         </div>
         </div>
-        {% endcase %}
-        {% endfor %}
+        {%- endcase -%}
+        {%- endfor -%}
       </div>
     </div>
   </div>
@@ -112,9 +110,9 @@
     <div class="footer-copyright-box">
       {%- if section.settings.copyright_content -%}
       <div class="footer-copyright">
-        {% if section.settings.enable_language_selector %}
-        {% include 'language' %}
-        {% endif %}
+        {%- if section.settings.enable_language_selector -%}
+        {%- include 'language' -%}
+        {%- endif -%}
         <p class="copyright-content">{{section.settings.copyright_content}}</p>
       </div>
       {%- endif -%}
@@ -161,7 +159,7 @@
     background-color:{{section.settings.footer_text_hover}};
 }
 </style>
-{% schema %}
+{%- schema -%}
 {
    "name":"t:sections.footer.name",
 	"tag":"footer",
@@ -234,7 +232,8 @@
       {
          "type":"image_picker",
          "id":"image",
-         "label":"t:sections.footer.settings.image.label"
+         "label":"t:sections.footer.settings.image.label",
+		 "info": "e.g. 235 x 74"
       },
       {
          "type":"range",
@@ -296,4 +295,4 @@
       ]
    }
 }
-{% endschema %}
+{%- endschema -%}

@@ -4,27 +4,27 @@
       <div class="section-heading-box shopify__top__section text__center">
         <small>{{section.settings.heading}}</small>
         <h2>{{section.settings.subheading}} 
-          {% if section.settings.view_all_btn and section.settings.collection != blank and section.settings.view_all_btn_text != blank %}
+          {%- if section.settings.view_all_btn and section.settings.collection != blank and section.settings.view_all_btn_text != blank -%}
           <a class="view-all corner-view" href="{{section.settings.collection.url}}">{{section.settings.view_all_btn_text}}</a>    
-          {% endif %}
+          {%- endif -%}
         </h2>
       </div>
         <div class="products-grid ">
           <div class="row column-{{section.settings.col_size}} product_columns">
-            {% assign limit = section.settings.col_size | times : section.settings.row_size%}
-            {% if section.settings.collection != blank %}
-            {% assign collection = section.settings.collection %}
-            {% for product in collection.products limit:limit%}
-            {% include 'product-grid' %}
-            {% endfor %}
-            {% else %}
+            {%- assign limit = section.settings.col_size | times : section.settings.row_size  -%}
+            {%- if section.settings.collection != blank -%}
+            {%- assign collection = section.settings.collection -%}
+            {%- for product in collection.products limit:limit -%}
+            {%- include 'product-grid' -%}
+            {%- endfor -%}
+            {%- else -%}
 
-            {% for i in (1..limit) %}
+            {%- for i in (1..limit) -%}
             <div class="grid-item col collection-product-grid">
               <div class="card-wrapper">
                 <div class="card card--text-only card--soft card--product text__left">
                   <div class="card-wrapper-img ">
-                    {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                    {%- capture current -%}{% cycle 1, 2, 3, 4, 5, 6 %}{%- endcapture -%}
                     {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
                   </div>
                   <div class="product-information">
@@ -38,8 +38,8 @@
                 </div>
               </div>
             </div>
-            {% endfor %}
-            {% endif%}
+            {%- endfor -%}
+            {%- endif -%}
           </div>
         </div>
       
@@ -66,14 +66,14 @@
   "settings": [
     {
       "type": "text",
-      "id": "heading",
-      "default": "All Products",
+      "id": "subheading",
+      "default": "Add Featured Collection here",
       "label": "t:sections.featured-collection.settings.heading.label"
     },
     {
-      "type": "textarea",
-      "id": "subheading",
-      "default": "Add Featured Collection here",
+      "type": "text",
+      "id": "heading",
+      "default": "All Products",
       "label": "t:sections.featured-collection.settings.subheading.label"
     },
     {

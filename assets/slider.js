@@ -1,34 +1,31 @@
+findVisibleItems();
 
-var elements = document.getElementsByClassName('productImageSlideItem');
-
-var thumbs = document.getElementsByClassName('productThumbImage');
-
-
-window.addEventListener('scroll', function(event){
+window.addEventListener('resize', function(event){
   findVisibleItems();
 });
 
 function findVisibleItems(){
-  var visibleThumbs=[];
-  Array.from(elements).forEach(function(item) {
-    if (isOnScreen(item)) {
-      visibleThumbs.push(item.id)
-      
-    }
-  var size = 0;
-    if(visibleThumbs.length > 2){
-      size = Math.floor(visibleThumbs.length / 2)
-    }
-  thumbs = document.getElementsByClassName('productThumbImage');
-    Array.from(thumbs).forEach(function(thumb) {
-      thumb.classList.remove('active');
+  
+var elements = document.getElementsByClassName('productImageItem');
+
+var thumbs = document.getElementsByClassName('productThumbImage');
+
+  window.addEventListener('scroll', function(event){
+    Array.from(elements).forEach(function(item) {
+      if (isOnScreen(item)) {
+        thumbs = document.getElementsByClassName('productThumbImage');
+        Array.from(thumbs).forEach(function(thumb) {
+          thumb.classList.remove('active');
+        });
+        var relatedThumb = document.querySelector('.productThumbImage[href="#'+item.id+'"]');
+        if(relatedThumb){
+        relatedThumb.classList.add('active');
+        }
+      }
     });
-    const relatedThumb = document.querySelector('.productThumbImage[href="#'+visibleThumbs[size]+'"]');
-    
-    if(relatedThumb){
-      relatedThumb.classList.add('active');
-    }
+
   });
+
 }
 findVisibleItems()
 function isOnScreen(elem) {

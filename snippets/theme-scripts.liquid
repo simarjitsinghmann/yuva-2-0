@@ -6,13 +6,19 @@
   var preorderStatus = {{settings.enable_preorder}};                 
   var soldOutText = '{{ 'products.product.sold_out' | t }}';          
   var cartTitleLabel = '{{'sections.cart.title' | t}}';           
-  var errorLabel = '{{'sections.cart.shipping_estimates.error' | t}}';      
+  var errorLabel = '{{'sections.cart.shipping_estimates.error' | t}}';   
+  var notAvailableLabel = '{{'sections.cart.shipping_estimates.not_available' | t}}';     
   var variantStyle = '{{ settings.option_style }}';                
   var unavailableText = '{{ 'products.product.unavailable' | t }}';       
   var oneTimePurchaseText = '{{'products.product.one_time_purchase' | t}}';    
   var showSavedAmount = {{ settings.show_saved_amount }};                 
   var savedAmountStyle = '{{ settings.saved_amount_style }}';                
-  var quickViewHeading = '{{ 'general.quick_view_heading' | t }}'; 
+  var quickViewHeading = '{{ 'general.quick_view_heading' | t }}';        
+  var searchAllResultText = '{{ 'templates.search.drawer_all_results' | t }}';   
+  var searchRecentTitleText = '{{ 'templates.search.drawer_recent_title' | t }}';  
+  var searchNoResultText = '{{ 'templates.search.drawer_no_results' | t }}'; 
+  var searchNoResultText = '{{ 'templates.search.drawer_no_results' | t }}'; 
+  var rootUrl = '{{routes.root_url}}';
   var cartUrl = '{{routes.cart_url}}.js';  
   var mainCartUrl = '{{routes.cart_url}}'; 
   var cartAdd = '{{routes.cart_add_url}}';  
@@ -20,7 +26,8 @@
   var cartUpdateUrl = '{{routes.cart_update_url}}.js'; 
   var cartChangeUrl = '{{routes.cart_change_url}}.js'; 
   var cartClearUrl = '{{routes.cart_clear_url}}.js'; 
-  var productRecommendationUrl = '{{routes.product_recommendations_url }}'; 
+  var productRecommendationUrl = '{{routes.product_recommendations_url }}';
+  var searchUrl = '{{ routes.search_url }}';  
   var preLoadLoadGif = `<div class="load">     
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                style="margin: auto; display: block; shape-rendering: auto;" 
@@ -33,7 +40,6 @@
 </script>
 <script src="{{'jquery.min.js' | asset_url}}"></script> 
 <script src="{{'cookies.min.js' | asset_url}}"></script> 
-<script src="{{'masnory.min.js' | asset_url}}" defer="defer"></script> 
 
 <script src="{{'slick.min.js' | asset_url}}"></script> 
 <script src="{{'common.js' | asset_url}}" defer="defer"></script> 

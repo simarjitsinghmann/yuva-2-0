@@ -1,35 +1,32 @@
-{% if block.settings.image_desktop != blank %}
-{% assign banner_image = block.settings.image_desktop | img_url: "master" %} 
-{% else %}
-{% assign banner_image = 'placeholder.svg' | asset_url  %} 
-{% endif %}   
+{%- if block.settings.image_desktop != blank -%}
+{%- assign banner_image = block.settings.image_desktop | img_url: "master" -%} 
+{%- else -%}
+{%- assign banner_image = 'placeholder.svg' | asset_url  -%} 
+{%- endif -%}   
 <div class="container slide_container">
   <div class="row">
     <div class="col-md-6 banner-left">
       <div class="carousel-caption-title style_new">       
-        {% if block.settings.banner_tag_line != blank %}
+        {%- if block.settings.banner_tag_line != blank -%}
         <span class="tag-line">{{block.settings.banner_tag_line}}</span>
-        {% endif %}
-        {% if block.settings.banner_title != blank %}
+        {%- endif %}
+        {%- if block.settings.banner_title != blank -%}
         <div class="clerafix"></div>
         <h1>{{block.settings.banner_title}}</h1>
-        {% endif %}
-        {% if block.settings.banner_subtitle != blank %}
+        {%- endif -%}
+        {%- if block.settings.banner_subtitle != blank -%}
          <h2>{{block.settings.banner_subtitle}}</h2>
-        {% endif %}
-        {% if block.settings.banner_desc != blank %}
+        {%- endif -%}
+        {%- if block.settings.banner_desc != blank -%}
         <p>{{block.settings.banner_desc}} </p>
-        {% endif %}
-        {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+        {%- endif -%}
+        {%- if block.settings.button_text != blank and block.settings.button_link != blank -%}
         <div class="btn-box"> 
           <a href="{{block.settings.button_link}}" class="black-btn button" >{{block.settings.button_text}}</a>
         </div>
-        {% endif %}
+        {%- endif -%}
       </div>
     </div>
-    <!--                 <div class="col-md-6 banner-right" >                 
-<img src="{{banner_image}}" class="banner_image" loading="lazy" alt="">
-</div> -->
   </div>
 </div>
 <style>   
@@ -38,32 +35,27 @@
     background: {{ block.settings.tag_line_bk }};
   }
 
-  {% if block.settings.banner_left_bk != blank %}
+  {%- if block.settings.banner_left_bk != blank -%}
   .banner-{{block.id}} {background: {{ block.settings.banner_left_bk }}!important;}
-  {% endif %}
+  {%- endif -%}
 
-{% if block.settings.banner_subtitle_color != blank %}
+{%- if block.settings.banner_subtitle_color != blank -%}
   .banner-{{block.id}}  h2 {
-    
     color: {{ block.settings.banner_subtitle_color }} !important;}
-  {% endif %}
+  {%- endif -%}
 
-  {% if block.settings.banner_title_color != blank %}
+  {%- if block.settings.banner_title_color != blank -%}
   .banner-{{block.id}}  h1 {
     color: {{ block.settings.banner_title_color }};}
-  {% endif %}
+  {%- endif -%}
 
-  {% if block.settings.banner_title_color != blank %}								
+  {%- if block.settings.banner_title_color != blank -%}								
  .banner-{{block.id}}  p {color: {{ block.settings.banner_title_color }};}								 
-  {% endif %}
+  {%- endif -%}
 
-  {% if block.settings.banner_desc_color != blank %}								
+  {%- if block.settings.banner_desc_color != blank -%}								
   .banner-{{block.id}}  p {color: {{ block.settings.banner_desc_color }};}								 
-  {% endif %}
-
-  
-
-
+  {%- endif -%}
 
   .banner-{{block.id}}  .btn-box a {
     background-color:{{ block.settings.button_text_bk }};

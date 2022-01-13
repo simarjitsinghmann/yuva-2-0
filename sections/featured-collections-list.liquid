@@ -1,81 +1,81 @@
 <div class="section-spacer">
     <div class="container">
       <div class="collection-section-header section-heading-box">                  
-        {% if section.settings.heading != blank %}
+        {%- if section.settings.heading != blank -%}
         <h2 class="title">{{section.settings.heading}}</h2>
-        {% endif %}
-        {% if section.settings.btntext != blank and section.settings.btnlink != blank %}
+        {%- endif %}
+        {%- if section.settings.btntext != blank and section.settings.btnlink != blank -%}
         <a class="view-all" href="{{section.settings.btnlink}}">{{section.settings.btntext}}</a>
-        {% endif %}
+        {%- endif -%}
       </div>
       <div class="colllection-list-view collection-count-{{section.blocks.size}}">
         <div class="row">
           <div class="col-sm-12 {% if section.blocks.size > 1 %}col-md-6{% else %}col-md-12{% endif %}">
-          {% for block in section.blocks %}
-          {% if forloop.first %}
-          {% assign collection = block.settings.collection %}
+          {%- for block in section.blocks -%}
+          {%- if forloop.first -%}
+          {%- assign collection = block.settings.collection -%}
             <div class="collection-list-view-wrapper left-wrapper" id="block-{{block.id}}"  {{ block.shopify_attributes }}>
               <div class="collection-list-view-card {% if section.settings.show_hover_content %}on-hover-content{% endif %}" >
-                {% if block.settings.image != blank %}
-                {% include 'lazy-image' image:block.settings.image %}
-                {% elsif collection.featured_image %}
-                {% include 'lazy-image' image:collection.featured_image %}
-                {% else %}
-                {% render 'placeholder' %}
-                {% endif %}
-                    {% if block.settings.collection != blank or block.settings.heading != blank %}
-                <div class="list-view-content text__{{block.settings.info_position}}">          
-                  {% if block.settings.heading != blank %}
+                {%- if block.settings.image != blank -%}
+                {%- include 'lazy-image' image:block.settings.image -%}
+                {%- elsif collection.featured_image -%}
+                {%- include 'lazy-image' image:collection.featured_image -%}
+                {%- else -%}
+                {%- render 'placeholder' -%}
+                {%- endif -%}
+                    {%- if block.settings.collection != blank or block.settings.heading != blank -%}
+                <div class="list-view-content">          
+                  {%- if block.settings.heading != blank -%}
                   <h2>{{block.settings.heading}}</h2>
-                  {% else %}
+                  {%- else -%}
                   <h2>{{collection.title}}</h2>
-                  {% endif %}
-                  {% if block.settings.collection != blank and block.settings.btntext != blank %}
+                  {%- endif -%}
+                  {%- if block.settings.collection != blank and block.settings.btntext != blank -%}
                   <a href="{{collection.url}}" class="link">{{block.settings.btntext}}</a>
-                  {% endif %}
+                  {%- endif -%}
                 </div>
-                {% endif %}
+                {%- endif -%}
               </div>
             </div>
-          {% endif %}
-          {% endfor%}
+          {%- endif -%}
+          {%- endfor -%}
           </div>
-          {% if section.blocks.size > 1 %}
+          {%- if section.blocks.size > 1 -%}
           <div class="col-sm-12 col-md-6">
             <div class="small-collection-list">
-              {% for block in section.blocks %}
-              {% unless forloop.first %}
-              {% assign collection = block.settings.collection %}
+              {%- for block in section.blocks -%}
+              {%- unless forloop.first -%}
+              {%- assign collection = block.settings.collection -%}
               <div id="block-{{block.id}}" class="small-collection-item" {{ block.shopify_attributes }}>
                 <div class="collection-list-view-wrapper right-wrapper">
                   <div class="collection-list-view-card {% if section.settings.show_hover_content %}on-hover-content{% endif %}">
-                    {% if block.settings.image != blank %}
-                    {% include 'lazy-image' image:block.settings.image %}
-                    {% elsif collection.featured_image %}
-                    {% include 'lazy-image' image:collection.featured_image %}
-                    {% else %}
-                    {% render 'placeholder' %}
-                    {% endif %}
-                    {% if block.settings.collection != blank or block.settings.heading != blank %}
-                    <div class="list-view-content text__{{block.settings.info_position}}">          
-                      {% if block.settings.heading != blank %}
+                    {%- if block.settings.image != blank -%}
+                    {%- include 'lazy-image' image:block.settings.image -%}
+                    {%- elsif collection.featured_image -%}
+                    {%- include 'lazy-image' image:collection.featured_image -%}
+                    {%- else -%}
+                    {%- render 'placeholder' -%}
+                    {%- endif -%}
+                    {%- if block.settings.collection != blank or block.settings.heading != blank -%}
+                    <div class="list-view-content">          
+                      {%- if block.settings.heading != blank %}
                       <h4>{{block.settings.heading}}</h4>
-                      {% elsif block.settings.collection != blank  %}
+                      {%- elsif block.settings.collection != blank -%}
                       <h4>{{collection.title}}</h4>
-                      {% endif %}
-                      {% if block.settings.collection != blank and block.settings.btntext != blank %}
+                      {%- endif -%}
+                      {%- if block.settings.collection != blank and block.settings.btntext != blank -%}
                       <a href="{{collection.url}}" class="link">{{block.settings.btntext}}</a>
-                      {% endif %}
+                      {%- endif -%}
                     </div>
-                    {% endif %}
+                    {%- endif -%}
                   </div>
                 </div>
               </div>
-              {% endunless %}
-              {% endfor%}
+              {%- endunless -%}
+              {%- endfor -%}
             </div>
           </div>
-          {% endif%}
+          {%- endif -%}
         </div>
       </div>
     </div>
@@ -172,7 +172,8 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "t:sections.featured-collections-list.blocks.collection.settings.image.label"
+          "label": "t:sections.featured-collections-list.blocks.collection.settings.image.label",
+		 "info": "e.g. 776 x 670"
         },
         {
           "type": "text",

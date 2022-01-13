@@ -91,6 +91,11 @@
         clearInterval(recomend);
       },5000)
     }
+      window.addEventListener('resize',function(){
+        if(window.innerWidth > 767){
+          recommendedProductsSlider();
+        }
+    })
     </script>
   {% schema %}
     {

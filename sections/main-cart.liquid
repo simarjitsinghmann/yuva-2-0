@@ -1,24 +1,21 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
-<div class="container">  
-
+<div class="container"> 
   <div class="continue-shopping"{% if cart.item_count > 0 %}style="display:none"{% endif %} cart-empty>
     <img class="emptyCartIcon" src="{{ 'cart.svg' | asset_url}}">
     <h4>{{'sections.cart.empty' | t}}</h4>
     <a href="{{routes.all_products_collection_url}}" class="button black-btn"  aria-label="{{'general.continue_shopping' | t}}">{{'general.continue_shopping' | t}}</a>
   </div>
-
-  {% if cart.item_count > 0 %}
-  
-    <div class="row">    
+  {%- if cart.item_count > 0 -%}  
+    <div class="row" cart-form>    
       <div class="col-sm-12 col-md-12 col-lg-8">
-        <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart" cart-form>
+        <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart">
         <h3>
           {{'sections.cart.heading_html' | t: itemCount :cart.item_count}}
         </h3>
         <div class="inner-box">
           <table class="cart-products-table">
             <tbody data-cart-items>
-              {% for item in cart.items %}
+              {%- for item in cart.items -%}
               <tr>
                 <th scope="row"  data-label="product img">
                   <a class="cart-img" href="{{item.url}}" aria-label="{{item.product.title}}">
@@ -29,12 +26,12 @@
 
                   <a href="{{item.url}}" aria-label="{{item.product.title}}">{{item.product.title | truncatewords:5}}</a>
                   <div class="cart-item-product-details">
-                    {% unless item.variant.title == null or item.variant.title == 'Default Title'%}
+                    {%- unless item.variant.title == null or item.variant.title == 'Default Title' -%}
                     <p class="item-variant-title">{{item.variant.title}}</p>
-                    {% endunless %}	
-                    {% if item.selling_plan_allocation %}
+                    {%- endunless -%}	
+                    {%- if item.selling_plan_allocation -%}
                     <p class="item-variant-title">{{item.selling_plan_allocation.selling_plan.name }}</p>    
-                    {% endif %}
+                    {%- endif -%}
                     <div class="price item-price d-none d-sm-block" data-item-price="{{forloop.index0}}">
                       {%- if item.original_price != item.final_price -%}
                       <strong class="cart-item__final-price product-option">
@@ -43,11 +40,11 @@
                       <s class="cart-item__old-price product-option">
                         {{- item.original_price | money -}}
                       </s>
-                      {% else %}
+                      {%- else -%}
                       <strong class="cart-item__final-price product-option">
                         {{ item.original_price | money }}
                       </strong>
-                      {% endif %}
+                      {%- endif -%}
                     </div>
 
                     <div class="mobile-price d-block d-sm-none">
@@ -60,11 +57,11 @@
                         <s class="cart-item__old-price product-option">
                           {{- item.original_line_price | money -}}
                         </s>
-                        {% else %}
+                        {%-else -%}
                         <strong class="cart-item__final-price product-option">
                           {{ item.original_line_price | money }}
                         </strong>
-                        {% endif %}
+                        {%- endif -%}
                       </div>
                       {%- if item.unit_price_measurement -%}
                       <p class="unit-price">
@@ -77,7 +74,7 @@
                       </p>
                       {%- endif -%}
                     </div>
-                    {% if item.discounts.size > 0 %}
+                    {%- if item.discounts.size > 0 -%}
                     <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}" data-item-discount="{{forloop.index0}}">
                       {%- for discount in item.discounts -%}
                       <li class="discounts__discount coupanName">
@@ -86,7 +83,7 @@
                       </li>
                       {%- endfor -%}
                     </ul>
-                    {% endif %}
+                    {%- endif -%}
                     {%- for property in item.properties -%}
                     {%- assign property_first_char = property.first | slice: 0 -%}
                     {%- if property.last != blank and property_first_char != '_' -%}
@@ -155,7 +152,7 @@
         </div>
         
         </form>
-        {% if section.settings.shipping_estimate_enable %}
+        {%- if section.settings.shipping_estimate_enable -%}
         <div id="shipping_estimations_template" class="shipping_estimations">
           <h3>{{'sections.cart.shipping_estimates.heading' | t}}</h3>
           <div class="row">
@@ -209,15 +206,15 @@
             </div>
           </div>
         </div>
-        {% endif %}
+        {%- endif -%}
       </div>
       <div class="col-sm-12 col-md-12 col-lg-4">
         <div class="sticky_cartsidebar">
           <h3>{{'sections.cart.price_detail' | t}}</h3>
           <div class="inner-box price-details">
-            {% if section.settings.show_cart_note %}
+            {%- if section.settings.show_cart_note -%}
             <textarea class="seller-box" name="note" id="Cart-note" placeholder="Special instructions for seller">{{ cart.note }}</textarea>
-            {% endif %}
+            {%- endif -%}
             <ul>
               <li {% if cart.cart_level_discount_applications.size == 0 %}class="hidden"{% endif %} data-cart-original>{{'sections.cart.subtotal' | t}} <strong data-cart-original-price>{{cart.original_total_price | money}}</strong></li>
               {%- if cart.cart_level_discount_applications.size > 0 -%}

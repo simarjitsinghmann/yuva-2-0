@@ -1,24 +1,24 @@
 <div id="product-slider" class="banner-product-slider">
   <div id="slider-{{section.id}}" class=" fade slider-item {% if section.blocks.size > 1 %}slideShow{% endif %}"  {% if section.blocks.size > 1 %}data-slider{% endif %}>
         
-      {% for block in section.blocks %}
-      {% case block.type %}
-        {% when 'slide' %}
+      {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'slide' -%}
       <div id="banner-{{block.id}}" class="banner-{{block.id}} banner banner-section item slider-banner slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
-      {% render 'banner-slide-content' block:block,animation:animation%}	
+      {%- render 'banner-slide-content' block:block,animation:animation -%}	
       </div>
-      {% when 'split' %}
+      {%- when 'split' -%}
       <div id="banner-{{block.id}}" class="banner-{{block.id}} banner banner-section item split-slider slider-banner slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>	
-        {% render 'split-slide-content' block:block,animation:animation%}	
+        {%- render 'split-slide-content' block:block,animation:animation -%}	
       </div>
-      {% when 'video' %}
-      {% if block.settings.videofile != blank or block.settings.poster != blank %}
+      {%- when 'video' -%}
+      {%- if block.settings.videofile != blank or block.settings.poster != blank -%}
       <div id="banner-{{block.id}}" class="banner-{{block.id}} banner banner-section item slider-banner slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>	
-        {% render 'video-slide-content' block:block,animation:animation%}	
+        {%- render 'video-slide-content' block:block,animation:animation -%}	
       </div>
-      {% endif %}						
-      {% endcase %}
-      {% endfor %}
+      {%- endif -%}						
+      {%- endcase -%}
+      {%- endfor -%}
     </div>
   <script type="application/json" name="slider-json">
          {
@@ -131,12 +131,14 @@
 			{
 				"type": "image_picker",
 				"id": "image",
-				"label": "t:sections.main-slider.blocks.slide.settings.image.label"
+				"label": "t:sections.main-slider.blocks.slide.settings.image.label",
+				"info": "e.g. 1920 x 800"
 			},
 			{
 				"type": "image_picker",
 				"id": "image_mob",
-				"label": "t:sections.main-slider.blocks.slide.settings.image_mob.label"
+				"label": "t:sections.main-slider.blocks.slide.settings.image_mob.label",
+				"info": "e.g. 570 x 630"
 			},
 			{
 				"type": "text",
@@ -257,7 +259,8 @@
 			   "type":"image_picker",
 			   "id":"image_desktop",
 			   "label":"t:sections.main-slider.blocks.split.settings.image_desktop.label",
-			   "info":"t:sections.main-slider.blocks.split.settings.image_desktop.info"
+			   "info":"t:sections.main-slider.blocks.split.settings.image_desktop.info",
+			   "info":"e.g. 957 x 800"
 			},
 			{
 			   "type":"text",
@@ -368,7 +371,8 @@
             {
               "type": "image_picker",
               "id": "poster",
-              "label": "t:sections.main-slider.blocks.video-slide.settings.poster.label"
+              "label": "t:sections.main-slider.blocks.video-slide.settings.poster.label",
+			  "info": "e.g. 1920 x 800"	
             },
             {
               "type": "text",

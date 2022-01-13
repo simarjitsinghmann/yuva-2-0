@@ -1,15 +1,15 @@
 <div class="{% unless section.settings.full_width %}container{% endunless %}">
   <div  id="promo-banner-{{section.id}}" class="promo-banner-content">
-    {% if section.settings.heading != blank %}
-    <h3>{{ section.settings.heading }}</h3>
+    {%- if section.settings.heading != blank -%}
+    <p class="promo-banner-title">{{ section.settings.heading }}</p>
     {% endif %}
-    {% if section.settings.text != blank %}
+    {%- if section.settings.text != blank -%}
     <p>{{ section.settings.text }}</p>
-    {% endif %}
-    {% if section.settings.label != blank and section.settings.link != blank %}
+    {%- endif -%}
+    {%- if section.settings.label != blank and section.settings.link != blank -%}
     <a href="{{ section.settings.link }}" class="type-banner__link">{{ section.settings.label }}
     </a>
-    {% endif %}
+    {%- endif -%}
   </div>
 </div>
 <style>
@@ -29,7 +29,7 @@
     }
   }
   
-  #promo-banner-{{section.id}}.promo-banner-content h3{
+  #promo-banner-{{section.id}}.promo-banner-content .promo-banner-title{
     color:{{section.settings.textcolor}}
   }
   
@@ -52,14 +52,26 @@
     align-items: center;
     text-align: center;
 }
-  .promo-banner-content h3, .promo-banner-content p, .promo-banner-content a {
+  .promo-banner-title {
+      font-size: 19px;
+  }
+  .promo-banner-content .promo-banner-title, .promo-banner-content p, .promo-banner-content a {
     margin: 5px 10px;
     display: inline-block;
     vertical-align: middle;
-    line-height: 1.2;
+    line-height: 1;
   }
   .promo-banner-content a {
     padding: 4px 10px;
+  }
+  @media screen and (max-width:575px){
+    .promo-banner-title {
+      font-size: 15px;
+      width:100%
+  }
+    .promo-banner-content p {
+      width:100%
+  }
   }
 </style>
 {% schema %}

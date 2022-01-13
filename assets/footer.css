@@ -30,20 +30,6 @@ footer ul li a {
       transition: all .3s ease;
   position:relative;
 }
-footer .footer-menu-accordion ul li a:hover {
-    padding-left: 15px;
-}
-footer .footer-menu-accordion ul li a:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 11px;
-    width: 0;
-    height: 1px;
-}
-footer .footer-menu-accordion ul li a:hover:before {
-    width: 10px;
-}
 #ContactFooter {
    position: relative;
    margin-top: 28px;
@@ -127,4 +113,20 @@ footer .footer-menu-accordion ul li a:hover:before {
 }
 .btn-group.dropup {
     margin-right: 10px;
+}
+@media screen and (min-width:992px){
+footer .footer-menu-accordion ul li a:hover {
+    padding-left: 15px;
+}
+footer .footer-menu-accordion ul li a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 0;
+    height: 1px;
+}
+footer .footer-menu-accordion ul li a:hover:before {
+    width: 10px;
+}
 }

@@ -5,11 +5,11 @@
     <p class="instagramUserName">{{section.settings.subheading}}</p>
   </div>
   <div class="instagram-post-list">
-{% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
+{%- if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank -%}
     <ul id="instafeed"></ul>
-    {% else %}
+    {%- else -%}
     <ul>
-      {% for i in (1..6) %}
+      {%- for i in (1..6) -%}
       <li>
         <a>
           <div class="instagram-post-detail">
@@ -22,13 +22,14 @@
           </div>
         </a>
       </li>
-      {% endfor %}
+      {%- endfor -%}
     </ul>
-{% endif %}
+{%- endif -%}
   </div>
 </div>
 </div>
-{% if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank %}
+{%- if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank -%}
+
 <script src="{{'instafeed.min.js' | asset_url}}"></script> 
 <script>
   function instagramFeed(){
@@ -47,7 +48,7 @@
   }
   instagramFeed();
 </script>
-{% endif %}
+{%- endif -%}
 <style>
   #shopify-section-{{section.id}}.shopify-section{
     background-color:{{section.settings.bgcolor}};

@@ -1,17 +1,17 @@
 <div class="section-spacer">
   <div class="container">
     <div class="collection-section-header section-heading-box">                  
-      {% if section.settings.heading != blank %}
+      {%- if section.settings.heading != blank -%}
       <h2 class="title">{{section.settings.heading}}</h2>
-      {% endif %}
-      {% if section.settings.btntext != blank and section.settings.btnlink != blank %}
+      {%- endif -%}
+      {%- if section.settings.btntext != blank and section.settings.btnlink != blank -%}
       <a class="view-all" href="{{section.settings.btnlink}}">{{section.settings.btntext}}</a>
-      {% endif %}
+      {%- endif -%}
     </div>
     <div class="collection-gutter">
-      {% if section.settings.m_collection != blank or section.settings.m_collection != false %}
+      {%- if section.settings.m_collection != blank or section.settings.m_collection != false -%}
       <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col">
-        {% include 'featured-collection-grid'
+        {%- include 'featured-collection-grid'
                       	m_collection:section.settings.m_collection,
         custom:section.settings.custom,
         mc_image:section.settings.mc_image,
@@ -20,79 +20,84 @@
         mc_btntext:section.settings.mc_btntext,
         mc_btnlink:section.settings.mc_btnlink,
         button_icon:section.settings.button_icon
-        %}
+        -%}
       </div>
-      {% endif %}
-      {% if section.blocks.size > 0 %}
+      {%- endif -%}
+      {%- if section.blocks.size > 0 -%}
       <div class="grid--2-col-tablet grid--2-col-desktop grid--2-col ">
-        {% if section.blocks.size > 1 %}
+        {%- if section.blocks.size > 1 -%}
         <ul class="collection__right__list block-count{{section.blocks.size}}">
-          {% for block in section.blocks %}
-          {% assign collection = ''%}
-          {% if block.settings.collection != blank %}
-          {% assign collection = block.settings.collection %}
-          {% endif %}
-          {% capture image_content %}
+          {%- for block in section.blocks -%}
+          {%- assign collection = '' -%}
+          {%- if block.settings.collection != blank -%}
+          {%- assign collection = block.settings.collection -%}
+          {%- endif %}
+          {%- capture image_content -%}
           <div class="collection-image ">
-            {% if block.settings.custom == false and collection.featured_image != blank %}
-            {% include 'lazy-image' image:collection.featured_image %} 
-            {% elsif block.settings.custom == true and block.settings.image == blank and collection.featured_image != blank %}
-            {% include 'lazy-image' image:collection.featured_image %}
-            {% elsif block.settings.image != blank  %}
-            {% include 'lazy-image' image:block.settings.image %}
-            {%else%}
-            {% render 'placeholder' %}
-            {% endif %}
+            {%- if block.settings.custom == false and collection.featured_image != blank -%}
+            {%- include 'lazy-image' image:collection.featured_image -%} 
+            {%- elsif block.settings.custom == true and block.settings.image == blank and collection.featured_image != blank -%}
+            {%- include 'lazy-image' image:collection.featured_image -%}
+            {%- elsif block.settings.image != blank  -%}
+            {%- include 'lazy-image' image:block.settings.image -%}
+            {%-else-%}
+            {%- render 'placeholder' -%}
+            {%- endif -%}
           </div>
           {% endcapture %}
+          {%- if block.settings.custom and block.settings.btnlink != blank -%}
+          {%- assign btnlink = block.settings.btnlink -%}
+          {%- else -%}
+          {%- assign btnlink = collection.url -%}
+          {%- endif -%}
           <li class="grid__item__list">
             <div class="card-wrapper">
               <div class="card__warpper__detail right__sided block-{{forloop.index}}">                                        
                 {{image_content}}
                 <div class="collection-detail-right">
+                   {%- if btnlink != blank -%}
+                  <a href="{{btnlink}}" aria-label="{{collection.title}}">  
+                    {%- endif -%}  
                   <h4>
-                    {% if block.settings.custom == false %}
+                    {%- if block.settings.custom == false -%}
                     {{collection.title}}
-                    {% elsif block.settings.custom and block.settings.heading != blank  %}
+                    {%- elsif block.settings.custom and block.settings.heading != blank -%}
                     {{block.settings.heading}}
-                    {% endif %}
+                    {%- endif -%}
                   </h4>
+                   {%- if btnlink != blank -%}
+                  </a>
+                    {%- endif -%}  
                   <p>
-                    {% if block.settings.custom == false %}
+                    {%- if block.settings.custom == false -%}
                     {{collection.description | strip_html | truncatewords: 12, ".." }}
-                    {% elsif block.settings.custom and block.settings.desc != blank  %}
+                    {%- elsif block.settings.custom and block.settings.desc != blank  -%}
                     {{block.settings.desc| strip_html | truncatewords: 12, ".." }}
-                    {% endif %}
+                    {%- endif -%}
                   </p> 
-                  {% if block.settings.btntext != blank %}
+                  {%- if block.settings.btntext != blank -%}           
 
-                  {% if block.settings.custom and block.settings.btnlink != blank  %}
-                  {% assign btnlink = block.settings.btnlink %}
-                  {% else %}
-                  {% assign btnlink = collection.url %}
-                  {% endif%}               
-
-                  {% if btnlink != blank %}
+                  {%- if btnlink != blank -%}
                   <a href="{{btnlink}}" class="mainColbutton-{{section.id}} collection-list-btn link">    
                     <span>
-                      {% if section.settings.button_icon %}
+                      {%- if section.settings.button_icon -%}
                       <svg height="14px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="14px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288 "></polygon></svg> 
-                      {% endif %}
+                      {%- endif -%}
                       {{block.settings.btntext }}
                     </span>
 
                   </a>
-                  {% endif %}
-                  {% endif %}
+                  {%- endif -%}
+                  {%- endif -%}
                 </div>
               </div>
             </div>
           </li>
-          {% endfor %}
+          {%- endfor -%}
         </ul>
-        {% else %}
-        {% for block in section.blocks %}
-        {% include 'featured-collection-grid'
+        {%- else %}
+        {%- for block in section.blocks -%}
+        {%- include 'featured-collection-grid'
                       	m_collection:block.settings.collection,
         custom:block.settings.custom,
         mc_image:block.settings.image,
@@ -101,11 +106,11 @@
         mc_btntext:block.settings.btntext,
         mc_btnlink:block.settings.btnlink,
         button_icon:section.settings.button_icon
-        %}
-        {% endfor %}
-        {% endif %}
+        -%}
+        {%- endfor -%}
+        {%- endif -%}
       </div>
-      {% endif %}
+      {%- endif -%}
     </div>
   </div>
 </div>
@@ -128,7 +133,7 @@
     }
   }
 </style>
-{% schema %}
+{%- schema -%}
 {
   "name": "t:sections.collection-list.name",
   "tag": "section",
@@ -193,7 +198,8 @@
     {
       "type": "image_picker",
       "id": "mc_image",
-      "label": "t:sections.collection-list.settings.mc_image.label"
+      "label": "t:sections.collection-list.settings.mc_image.label",
+	  "info": "e.g. 772 x 630"	
     },
     {
       "type": "checkbox",
@@ -286,7 +292,8 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "t:sections.collection-list.blocks.collection.settings.image.label"
+          "label": "t:sections.collection-list.blocks.collection.settings.image.label",
+		  "info": "e.g. 390 x 210"
         }
       ]
     }
@@ -308,4 +315,4 @@
     }
   ]
 }
-{% endschema %}
+{%- endschema -%}

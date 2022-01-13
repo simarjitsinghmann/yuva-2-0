@@ -32,7 +32,6 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
         if(!country){
         	return false;
         }
-        //      country.querySelectorAll('option')[1].setAttribute('selected',true);
         var shipping = new Shopify.CountryProvinceSelector('shippingCountry', 'shippingProvince', {
           hideElement: 'shippingProvinceContainer'
         });
@@ -71,7 +70,6 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
       jQuery.ajax('/cart/async_shipping_rates', {
         dataType: 'json',
         success: function(response, textStatus, xhr) {
-          console.log(response)
           if (xhr.status === 200) {
             _render(response.shipping_rates)
           } 
@@ -92,11 +90,11 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
   };
   var _onError = function(XMLHttpRequest, textStatus) {
     var data = eval('(' + XMLHttpRequest.responseText + ')');
-    feedback = errorLabel +' : ' + _fullMessagesFromErrors(data).join(', ') + '.';  
+    feedback = _fullMessagesFromErrors(data).join(', ') + '.';  
     $('#ShippingWrapperResponse').html('<p class="error-text">'+feedback+'</p>').addClass('error').show();
   }
   var _render = function(response) {
- if(response && response.length > 0){
+    if(response && response.length > 0){
       var html= '';
       response.forEach(function(shipping){
         html += `<p class="delievery-text success-text">${shipping.name}:${Shopify.formatMoney((shipping.price*100),moneyFormat)}</p>`;
@@ -104,7 +102,7 @@ if(window.location.pathname.indexOf('/cart') > -1 ){
       $('#ShippingWrapperResponse').html(html).addClass('success').show();
     }
     else{      
-      $('#ShippingWrapperResponse').html('<p class="error-text">Shipping not available for this location</p>').addClass('error').show();
+      $('#ShippingWrapperResponse').html('<p class="error-text">'+notAvailableLabel+'</p>').addClass('error').show();
     }
   };  
   setTimeout(function(){
@@ -330,8 +328,6 @@ else{
           errorCallback(XMLHttpRequest, textStatus);
         }
         else {
-          console.log(XMLHttpRequest);
-          console.log(XMLHttpRequest.responseJSON.description);
           $('body').find('.productErrors').html(XMLHttpRequest.responseJSON.description).show();
         }
         setTimeout(function(){

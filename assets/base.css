@@ -1024,14 +1024,16 @@ details-disclosure > details {
 }
   
 /* 24-Nov-21 */
-.content-for-layout .customer.reset-password {
+.content-for-layout .customer.reset-password,
+  .content-for-layout .customer.activate{
     padding: 40px 45px;
     text-align: left;
   	border: 1px solid #dbdbdb;
     background: var(--white);
     max-width: 560px;
 }
-.customer.reset-password .form_title {
+.customer.reset-password .form_title,
+.customer.activate .form_title  {
     font-weight: var(--bold);
     text-transform: uppercase;
     letter-spacing: .6px;

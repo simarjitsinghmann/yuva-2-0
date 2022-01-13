@@ -1,170 +1,155 @@
-{% if content == 'menu' %}
-  {% for block in section.blocks %}
-    {% assign blockPosition = block.settings.position | plus:0 %}
-    {% if blockPosition == menuIndex %}
-
-      {% case block.type %}
-        {% when 'menu' %}
-          {% for i in (1..4) %}
-            {% assign menu = 'menu'|append:i %}
-            {% assign heading = 'menu_heading'|append:i %}
-              {% if block.settings[menu] != blank %}
-                {% assign mainMenu = block.settings[menu] %}
-                <div class="sub-menu-list {{test}}">
+{%- if content == 'menu' -%}
+  {%- for block in section.blocks -%}
+    {%- assign blockPosition = block.settings.position | plus:0 -%}
+    {%- if blockPosition == menuIndex -%}
+      {%- case block.type -%}
+        {%- when 'menu' -%}
+          {%- for i in (1..4) -%}
+            {%- assign menu = 'menu'|append:i -%}
+            {%- assign heading = 'menu_heading'|append:i -%}
+              {%- if block.settings[menu] != blank -%}
+                {%- assign mainMenu = block.settings[menu] -%}
+                <div class="col-12 col-md-3 sub-menu-list {{-test-}}">
                   <div class="menu-mb-title">
-                    <span>{% if block.settings[heading] != blank %}{{ block.settings[heading] | escape | captilize }}{% else %}{{ mainMenu.title | escape | captilize }}{% endif %}</span>
+                    <span>{%- if block.settings[heading] != blank -%}{{- block.settings[heading] | escape | captilize -}}{%- else -%}{{- mainMenu.title | escape | captilize -}}{%- endif -%}</span>
                   </div>
                   {%- if linklists[mainMenu].links != blank -%}
                   <ul class="site-nav-dropdown">
                     {%- for childlink in linklists[mainMenu].links -%}
                     <li class="menu-lv-3">
-                      <a href="{{ childlink.url }}"><span>{{ childlink.title | split:"{badge" | first | escape | captilize }}</span></a>
+                      <a href="{{- childlink.url -}}"><span>{{- childlink.title | split:"{badge" | first | escape | captilize -}}</span></a>
                     </li>
                     {%- endfor -%}
                   </ul>
-                  {% endif %}
+                  {%- endif -%}
                 </div>
-              {% endif %}
-          {% endfor %}
-      {% endcase %}
-    {% endif %}
-  {% endfor %}
+              {%- endif -%}
+          {%- endfor -%}
+      {%- endcase -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- else -%}
+{%- assign productMenu = ''-%}
+{%- assign imageMenu = ''-%}
+{%- assign pending = 2 -%}
+{%- assign hasProduct = false -%}
+{%- assign hasImage = false -%}
+{%- if link.links != blank  -%}
+{%- assign menuLinkLists = true -%}
+{%- endif -%}
+  {%- for block in section.blocks -%}
+    {%- assign blockPosition = block.settings.position | plus:0 -%}
+    {%- if blockPosition == menuIndex -%}
+      {%- case block.type -%}
+        {%- when 'menu' -%}
+          {%- for i in (1..4) -%}
+            {%- assign menu = 'menu'|append:i -%}
+              {%- if block.settings[menu] != blank -%}
+				{%- assign menuLinkLists = true -%}
+              {%- endif -%}
+          {%- endfor -%}
+      {%- endcase -%}
+    {%- endif -%}
+  {%- endfor -%}
+	{%- assign count = 0 -%}
+    {%- for block in section.blocks -%}
+      {%- assign blockPosition = block.settings.position | plus:0 -%}
+      {%- if blockPosition == menuIndex -%}
 
-
-
-{% else %}
-{% assign productMenu = ''%}
-{% assign imageMenu = ''%}
-{% assign pending = 2 %}
-
-{% assign hasProduct = false %}
-{% assign hasImage = false %}
-
-{% if link.links != blank  %}
-{% assign menuLinkLists = true %}
-{% endif %}
-  {% for block in section.blocks %}
-    {% assign blockPosition = block.settings.position | plus:0 %}
-    {% if blockPosition == menuIndex %}
-
-      {% case block.type %}
-        {% when 'menu' %}
-          {% for i in (1..4) %}
-            {% assign menu = 'menu'|append:i %}
-              {% if block.settings[menu] != blank %}
-				{% assign menuLinkLists = true %}
-              {% endif %}
-          {% endfor %}
-      {% endcase %}
-    {% endif %}
-  {% endfor %}
-
-	{% assign count = 0 %}
-
-    {% for block in section.blocks %}
-      {% assign blockPosition = block.settings.position | plus:0 %}
-      {% if blockPosition == menuIndex %}
-
-        {% case block.type %}
-          {% when 'product' %}
+        {%- case block.type -%}
+          {%- when 'product' -%}
             {%- capture productData -%}
-              {% for i in (1..2) %}
-                {% assign product = 'product'|append:i %}
-				{% if pending > 0 and pending < 3 %}
-                {% unless block.settings[product] == blank  %}
-					{% assign hasProduct = true %}
-                  {% assign count = count | plus:1 %}
-					{% assign pending = pending | minus: 1 %}
-					{% assign product = block.settings[product] %}
+              {%- for i in (1..2) -%}
+                {%- assign product = 'product'|append:i -%}
+				{%- if pending > 0 and pending < 3 -%}
+                {%- unless block.settings[product] == blank  -%}
+					{%- assign hasProduct = true -%}
+                  {%- assign count = count | plus:1 -%}
+					{%- assign pending = pending | minus: 1 -%}
+					{%- assign product = block.settings[product] -%}
                   <div class="sub-menu-list row">
-                    {% include 'product-grid' product:all_products[product] ,hide_options:true,hideRelated:true,hideQuickView:true %}
+                    {%- include 'product-grid' product:all_products[product] ,hide_options:true,hideRelated:true,hideQuickView:true -%}
                   </div>
-                {% endunless %}
-				{% endif %}
-              {% endfor %}
+                {%- endunless -%}
+				{%- endif -%}
+              {%- endfor -%}
             {%- endcapture -%}
-			{% assign productMenu = productMenu | append: productData%}
-           
+			{%- assign productMenu = productMenu | append: productData-%}
+        {%- endcase -%}  
+      {%- endif -%}
+    {%- endfor -%}
+    {%- if count < 2 -%}  
+      {%- if count == 0 -%}
+      {%- assign limit = 2 -%}
+      {%- elsif count == 1 -%}
+      {%- assign limit = 2 -%}
+      {%- endif -%}
+      {%- for block in section.blocks -%}
+      	{%- assign blockPosition = block.settings.position | plus:0 -%}
+          {%- if blockPosition == menuIndex -%}
 
-        {% endcase %}  
-      {% endif %}
-    {% endfor %}
-
-    {% if count < 2 %}  
-      {% if count == 0 %}
-      {% assign limit = 2 %}
-      {% elsif count == 1 %}
-      {% assign limit = 2 %}
-      {% endif %}
-      {% for block in section.blocks %}
-      	{% assign blockPosition = block.settings.position | plus:0 %}
-          {% if blockPosition == menuIndex %}
-
-            {% case block.type %}
-            {% when 'image' %}
+            {%- case block.type -%}
+            {%- when 'image' -%}
               {%- capture imageData -%}
-              {% for i in (1..limit) %}
-              {% assign image = 'image'|append:i %}
-              {% assign heading = 'heading'|append:i %}
-              {% assign button = 'button'|append:i %}
-              {% assign newLink = 'link'|append:i %}
-				{% if pending > 0 and pending < 3 %}
-              {% unless block.settings[image] == blank and block.settings[heading] == blank %}
-				{% assign hasImage = true %}
-				{% assign count = count | plus:1 %}
-					{% assign pending = pending | minus: 1 %}
+              {%- for i in (1..limit) -%}
+              {%- assign image = 'image'|append:i -%}
+              {%- assign heading = 'heading'|append:i -%}
+              {%- assign button = 'button'|append:i -%}
+              {%- assign newLink = 'link'|append:i -%}
+				{%- if pending > 0 and pending < 3 -%}
+              {%- unless block.settings[image] == blank and block.settings[heading] == blank -%}
+				{%- assign hasImage = true -%}
+				{%- assign count = count | plus:1 -%}
+					{%- assign pending = pending | minus: 1 -%}
               <div class="sub-menu-list {{pending}} mega-images row">
                 <div class="grid-item col">
                 <div class="menu-image-content">
-                  {% render 'lazy-image' image:block.settings[image],class:'menu-image'%}
+                  {%- render 'lazy-image' image:block.settings[image],class:'menu-image'-%}
                   <div class="menu-content">
-                    <h6>{{block.settings[heading]}}</h6>
-                    {% if block.settings[newLink] != blank and block.settings[button] != blank %}
-                    <a href="{{block.settings[newLink]}}" class="button black-button small-btn">{{block.settings[button]}}</a>
-                    {% endif %}
+                    <h6>{{-block.settings[heading]-}}</h6>
+                    {%- if block.settings[newLink] != blank and block.settings[button] != blank -%}
+                    <a href="{{-block.settings[newLink]-}}" class="button black-button small-btn">{{-block.settings[button]-}}</a>
+                    {%- endif -%}
                   </div>
                 </div>
                 </div>
               </div>
-              {% endunless %}
-				{% endif %}
-              {% endfor %}
+              {%- endunless -%}
+				{%- endif -%}
+              {%- endfor -%}
               {%- endcapture -%}
-			{% assign imageMenu = imageMenu | append: imageData%}
-            {% endcase %}  
-          {% endif %}
-      {% endfor %}
-    {% endif %}
-
-
-{% if count == 0 %}
-{% assign menuWidth = 'col-md-12' %}
-{% elsif count == 1 %}
-{% assign colWidth = 'col-md-3' %}
-{% assign menuWidth = 'col-md-9' %}
-{% else %}
-{% assign colWidth = 'col-md-4' %}
-{% assign menuWidth = 'col-md-8' %}
-{% endif %}
-{% unless productMenu == blank and imageMenu == blank %}
-<div class="col-12 {{colWidth}} box-items">        
-  
+			{%- assign imageMenu = imageMenu | append: imageData-%}
+            {%- endcase -%}  
+          {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+{%- if count == 0 -%}
+{%- assign menuWidth = 'col-md-12' -%}
+{%- elsif count == 1 -%}
+{%- assign colWidth = 'col-md-3' -%}
+{%- assign menuWidth = 'col-md-9' -%}
+{%- else -%}
+{%- assign colWidth = 'col-md-4' -%}
+{%- assign menuWidth = 'col-md-8' -%}
+{%- endif -%}
+{%- unless productMenu == blank and imageMenu == blank -%}
+<div class="col-12 {{colWidth }} box-items"> 
   <div class="megaMenuContentWrapper">
     <div class="row">
-       {% if productMenu != blank %}
-              <div class="megaMenuProduct-wrapper col-12  items-{{count}} {% if hasProduct and hasImage %}col-md-6 nocategory{% else %}col-md-12 samecategory{% endif %}">
-                {{productMenu}}
+       {%- if productMenu != blank -%}
+              <div class="megaMenuProduct-wrapper col-12  items-{{count}} {% if hasProduct and hasImage %}col-md-6 nocategory{% else %}col-md-12 samecategory{%- endif -%}">
+                {{-productMenu-}}
               </div>
-            {% endif %}
-       {% if imageMenu != blank %}
-              <div class="megaMenuProduct-wrapper col-12 items-{{count}} {% if hasProduct and hasImage %}col-md-6 nocategory{% else %}col-md-12 samecategory{% endif %}">
-                {{imageMenu}}
+            {%- endif -%}
+       {%- if imageMenu != blank -%}
+              <div class="megaMenuProduct-wrapper col-12 items-{{count}} {% if hasProduct and hasImage %}col-md-6 nocategory{% else %}col-md-12 samecategory{%- endif -%}">
+                {{-imageMenu-}}
               </div>
-            {% endif %}
+            {%- endif -%}
     </div>
   </div>
 </div>
-{% endunless %}
-{% endif %}
+{%- endunless -%}
+{%- endif -%}
 
 

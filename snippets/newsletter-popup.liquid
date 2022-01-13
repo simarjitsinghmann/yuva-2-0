@@ -1,9 +1,10 @@
 {% if settings.newsletter_pop_enable %}
 {{ 'newsletter-popup.css' | asset_url | stylesheet_tag }}
 <div class="newsletter-popup" style="display:none">
+  <div class="newsletter-popup-outer">
   <div class="newsletter-popup-inner" style="background:{{settings.newsletter_bk}}">
     <div class="popclose">
-      <a class="pop_cross" href="javascript:;">
+      <a class="pop_cross" href="#" aria-label="{{'accessibility.close' | t}}">
         <svg height="13" viewbox="0 0 13 13" width="13" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <style>
@@ -61,9 +62,10 @@
       </div>
     </div>
   </div>
+  </div>
 </div>
 <style>
-  .newsletter-popup .newsletter-popup-inner .popup-body .nl-content .newsDescription h6, .newsletter-popup .newsletter-popup-inner .popup-body .nl-content .newsDescription p{
+  .newsletter-popup .newsletter-popup-inner .popup-body .nl-content .newsDescription h6, .newsletter-popup .newsletter-popup-inner .popup-body .nl-content .newsDescription p,.newsletter-popup .newsletter-popup-inner .popup-body .nl-content .newsDescription p strong{
     color:{{settings.newsletter_description_color}}
   }
 </style>
@@ -71,7 +73,6 @@
   /* NEWSLETTER POPUP STARTS */
   var getnew_Pop = Cookies.get('Newsletter_closed');
   if(getnew_Pop!="Newsletter_closed_val" && window.location.pathname.indexOf('/challenge') < 0 ){
-    console.log(window.location.pathname)
     $('.newsletter-popup').fadeIn('slow');  
     $('body').addClass('NewsletterActive').addClass('scrollHidden'); 
   }else{

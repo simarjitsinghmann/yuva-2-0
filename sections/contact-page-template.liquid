@@ -1,9 +1,8 @@
-
-<div class="top_page_title {% if section.settings.banner == blank %}no-bg{% endif %}" {% if section.settings.banner != blank %}style="background:url({{section.settings.banner | img_url:'master'}}) no-repeat center"{% endif %}>
+<div class="top_page_title {% if section.settings.banner == blank %}no-bg{% endif %}" style="{% if section.settings.banner != blank %}background:url({{section.settings.banner | img_url:'master'}}) no-repeat center/cover;{% elsif section.settings.banner_bg != blank %}background-color:{{section.settings.banner_bg}};{% endif %}">
   <div class="container">
     <div class="contact-banner-text">
       <div class="banner_title">
-        <h1>{{page.title}}</h1>
+        <h1 style="color:{{section.settings.banner_color}}">{{page.title}}</h1>
       </div>
     </div>
   </div>
@@ -14,7 +13,7 @@
       <div class="customer__service">
         <h2>{{section.settings.contact_heading}}</h2>
         <div class="row">
-          {% if section.settings.phone_heading != blank and section.settings.phone_number != blank %}
+          {%- if section.settings.phone_heading != blank and section.settings.phone_number != blank -%}
           <div class="col-sm-12 col-md-4">
             <div class="tt-contact-info">
               <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
@@ -29,14 +28,14 @@
               </svg>
               <div class="contact_block">
                 <span class="tt-title">{{section.settings.phone_heading}}</span>
-                {% if section.settings.phone_number != blank %}
+                {%- if section.settings.phone_number != blank -%}
                 <p><a href="tel:{{section.settings.phone_number}}">{{section.settings.phone_number}}</a></p>
-                {% endif %}
+                {%- endif -%}
               </div>
             </div>
           </div>
-          {% endif %}
-          {% if section.settings.email_heading != blank and section.settings.email != blank %}
+          {%- endif -%}
+          {%- if section.settings.email_heading != blank and section.settings.email != blank -%}
           <div class="col-sm-12 col-md-4">
             <div class="tt-contact-info">
               <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
@@ -57,8 +56,8 @@
               </div>
             </div>
           </div>
-          {% endif %}
-          {% if section.settings.address_heading != blank and section.settings.address != blank %}
+          {%- endif -%}
+          {%- if section.settings.address_heading != blank and section.settings.address != blank -%}
           <div class="col-sm-12 col-md-4">
             <div class="tt-contact-info">
               <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
@@ -77,7 +76,7 @@
               </div>
             </div>
           </div>
-          {% endif %}
+          {%- endif -%}
         </div>
       </div>
       <div class="get_in_touch">
@@ -133,16 +132,16 @@
                 </div>
 
               </div>
-              {% endform %}
+              {%- endform -%}
             </div>
             
-                {% if section.settings.form_info != blank %}
+                {%- if section.settings.form_info != blank -%}
             <div class="col-md-4 col-sm-12">
               <div class="contact-details">
                 {{section.settings.form_info}}
               </div>
             </div>
-            {% endif %}
+            {%- endif -%}
           </div>
         </div>
       </div>
@@ -161,7 +160,20 @@
       {
          "type":"image_picker",
          "id":"banner",
-         "label":"t:sections.contact-page-template.settings.banner.label"
+         "label":"t:sections.contact-page-template.settings.banner.label",
+		 "info": "e.g. 1883 x 300"
+      },
+      {
+         "type":"color",
+         "id":"banner_bg",
+         "default":"#ffffff",
+         "label":"t:sections.contact-page-template.settings.banner_bg.label"
+      },
+      {
+         "type":"color",
+         "id":"banner_color",
+         "default":"#000000",
+         "label":"t:sections.contact-page-template.settings.banner_color.label"
       },
       {
          "type":"header",
@@ -233,9 +245,3 @@
    ]
 }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}

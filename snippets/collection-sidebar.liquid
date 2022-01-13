@@ -24,22 +24,16 @@
     {%- endif -%}
     {%- for filter in results.filters -%}
 
-    {% case filter.type %}
+    {%- case filter.type -%}
 
-    {% when 'list' %}
-
+    {%- when 'list' -%}
     <div class="widget sidebar-widget-product">
-
       <div class="widget-title">
-
         <h6 class="sidebar-title">
           {{ filter.label | escape }} 
         </h6>
-
         <div class="widget-content">
-
           <ul class="list-tags">
-
             {%- for value in filter.values limit:5 -%}
             <li class=" {% if value.count == 0 and value.active == false %}disabled{% endif %}">
 
@@ -47,24 +41,15 @@
                      {% if value.active %}checked{% endif %}
                      {% if value.count == 0 and value.active == false %}disabled{% endif %}
                      >
-
               <span class="checkmark"></span>
-
               <label for="Filter-{{ filter.label | escape }}-{{ forloop.index }}">
-
                 {{ value.label | escape }} ({{ value.count }})
-
               </label>
-
             </li>
             {% endfor %}
-
           </ul>
-
-
           {%- if filter.values.size > 5 -%}
           <ul class="list-tags more-options" style="display:none">
-
             {%- for value in filter.values offset:5 -%}
             <li class=" {% if value.count == 0 and value.active == false %}disabled{% endif %}">
 
@@ -86,52 +71,31 @@
 
           </ul>
           <div class="br_more_filter">
-
             <div class="showMore">{% render 'icon-plus' %} {{'sections.collection_template.filter_show_more' | t}}</div>
-
             <div class="showLess" style="display:none">{% render 'icon-minus' %} {{'sections.collection_template.filter_show_less' | t}}</div>
-
           </div>
-
           {%-endif-%}
-
         </div>
-
       </div>
-
     </div>
-
     {% when 'price_range' %}
-
     <div class="widget sidebar-widget-product">
       {%- if uses_comma -%}
-      {% assign max_value = filter.range_max |money_without_currency  | replace:'.','' | replace:',','.' | floor%} 
-
-      {% assign min_value = filter.range_min |money_without_currency | replace:'.','' | replace:',','.' | floor %}
+      {%- assign max_value = filter.range_max |money_without_currency  | replace:'.','' | replace:',','.' | floor -%} 
+      {%- assign min_value = filter.range_min |money_without_currency | replace:'.','' | replace:',','.' | floor -%}
       {%- else -%}
-      {% assign max_value = filter.range_max |money_without_currency %} 
-
-      {% assign min_value = filter.range_min |money_without_currency %}
-
+      {%- assign max_value = filter.range_max |money_without_currency -%} 
+      {%- assign min_value = filter.range_min |money_without_currency -%}
       {%- endif -%}
-
-
-      {% assign max_value_formatted = filter.range_max |money %}       
-
-      {% assign min_value_formatted = filter.range_max |money %}
-
+      {%- assign max_value_formatted = filter.range_max |money -%} 
+      {%- assign min_value_formatted = filter.range_max |money -%}
       {%- if filter.max_value.value -%} 
-      {% assign max_value = filter.max_value.value |money_without_currency  %} 
-
-      {% assign max_value_formatted = filter.max_value.value |money %}       
-
+      {%- assign max_value = filter.max_value.value |money_without_currency  -%} 
+      {%- assign max_value_formatted = filter.max_value.value |money -%}
       {%- endif -%}
-
       {%- if filter.min_value.value -%}
-      {% assign min_value = filter.min_value.value |money_without_currency %}
-
-      {% assign min_value_formatted = filter.min_value.value |money %}
-
+      {%- assign min_value = filter.min_value.value |money_without_currency -%}
+      {%- assign min_value_formatted = filter.min_value.value |money -%}
       {%- endif -%}
 
       <div class="widget-title">

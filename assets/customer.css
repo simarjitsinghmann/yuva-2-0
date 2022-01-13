@@ -89,6 +89,7 @@
     padding: 20px 20px;
     text-align: left;
     font-size: 13px;
+  vertical-align:middle;
 }
 .customer td:empty {
   display: initial;
@@ -241,7 +242,7 @@
 @media only screen and (min-width: 768px) {
   .activate button[name="decline"] {
     margin-top: inherit;
-    margin-left: 1rem;
+/*     margin-left: 1rem; */
   }
 }
 @media screen and (min-width: 768px) {

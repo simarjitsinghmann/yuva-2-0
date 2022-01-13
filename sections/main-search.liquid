@@ -106,6 +106,7 @@
             {% include 'collection-sidebar' results:search %}
           </aside>
           <div class="searchProductcontainer filteredData">
+            {% paginate search.results by 25 %}
             {%- capture activeFilters -%}
             {%- for filter in search.filters -%}
             {%- for value in filter.active_values -%}
@@ -136,8 +137,7 @@
                 <p>{{ 'sections.collection_template.filter_by_label' | t }}</p>
               </div>
             </div>
-            
-            {% paginate search.results by 25 %}
+            {%- if productResults -%}
             <div class="search-product-list">
               <div class="toolbox-item toolbox-layout">
                 {%- if activeFilters != '' -%}
@@ -151,28 +151,24 @@
 
                 {%- endif -%}
               </div>
-              
-            {%- if productResults -%}
-              <ul class="grid grid--5-col-desktop grid--3-col-tablet grid--2-col grid--one-third-max grid--quarter-max negative-margin product-grid result_product" 
-                  role="list">
+              <div class="row product_column product-grid result_product">
                 {%- for item in search.results  -%}
                 {%- case item.object_type -%}
                 {%- when 'product' -%}
-                <li class="grid__item search_result_items product_item">
+                {% assign searchGridClasses = 'search_result_items product_item' %}
                   {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
-                  {% include 'product-grid',product: item,  hideRelated:true %}
-                </li>
+                  {% include 'product-grid',product: item,  hideRelated:true,classes:searchGridClasses %}
+               
                 {%- endcase -%}
                 {%- endfor -%}
-              </ul>
+              </div>
+            </div>
             {%- if paginate.pages > 1 -%}
             {% render 'pagination', paginate: paginate %}
             {%- endif -%}
             {%- else -%}
             {% render 'not-found'%}
             {%- endif -%}
-              
-            </div>
 
             {% endpaginate %}
           </div>
@@ -216,28 +212,26 @@
 
 <script>
   var categories = document.getElementsByClassName('result_category_button');
-  if(categories.length > 0 ){
+  if(categories.length > 0 ){  
     Array.from(categories).forEach(function(btn) {
       btn.addEventListener("click", ()=>{
-                           var parent = btn.parentNode;
-                           var option =  btn.getAttribute('');
+      var parent = btn.closest('li');
       if(parent.classList.contains('active')){
         return false;
       }
-      else{
-        clearActive()
+      else{ 
+        Array.from(categories).forEach(function(btn) {
+          btn.closest('li').classList.remove('active');
+        });
         parent.classList.add("active");
         var _value = btn.getAttribute("data-type");
         document.getElementById('searchResultContainer').setAttribute("data-result",_value);
       }
     });
   });
-  function clearActive(){
-    Array.from(categories).forEach(function(btn) {
-      btn.parentNode.classList.remove('active');
-    });
+
   }
-  }
+   
 </script>
 {% schema %}
 {

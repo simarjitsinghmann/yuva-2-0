@@ -1,32 +1,33 @@
 <div class="section-spacer">
   <div class="container ">
     <div class="testimonials-variation-{{section.settings.style}}">
-      {% if section.settings.style == 'style1' %}
+      {%- if section.settings.style == 'style1' -%}
+      <div class="inner-container">
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
           <div class="client-say-left">       
             <small>{{section.settings.subheading}}</small>
             <h2>{{section.settings.heading}}</h2>  
-            {% if section.settings.description %}
+            {%- if section.settings.description -%}
             <p>{{section.settings.description}}</p>
-            {% endif %}
+            {%- endif -%}
           </div>
         </div>
-        {% if section.blocks.size > 0 %}
+        {%- if section.blocks.size > 0 -%}
         <div class="col-sm-12 col-md-12 col-lg-12">
           <div class="client-slider">
             <div class="testimonial-slider testimonial-variation1">
               <div id="testimonials-{{section.id}}" class="testimonial-client-slide" data-slider>
-                {% for block in section.blocks %}
+                {%- for block in section.blocks -%}
                 <div class="item slick-slide slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
                   <div class="slider-item">
                     <div class="slider-box">
                       <div class="client-image">   
-                      {% if block.settings.image != blank %}    
+                      {%- if block.settings.image != blank -%}    
                         {% render 'lazy-image' image:block.settings.image %}
-                      {% else %}
+                      {%- else -%}
                       {{ 'user-icon.svg' | asset_url | img_tag }}
-                      {% endif %}                    
+                      {%- endif -%}                    
                       </div>
                       <h5 class="author">{{block.settings.author}}</h5>
                       <p class="testimonial-title">{{block.settings.message}}</p>
@@ -39,34 +40,35 @@
             </div>
           </div>
         </div>
-        {% endif %}
+        {%- endif -%}
       </div>
-      {% elsif section.settings.style == 'style2' %}
+      </div>
+      {%- elsif section.settings.style == 'style2' -%}
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-3">
           <div class="client-say-left">       
             <small>{{section.settings.subheading}}</small>
             <h2>{{section.settings.heading}}</h2>  
-            {% if section.settings.description %}
+            {%- if section.settings.description -%}
             <p>{{section.settings.description}}</p>
-            {% endif %}
+            {%- endif -%}
           </div>
         </div>
-        {% if section.blocks.size > 0 %}
+        {%- if section.blocks.size > 0 -%}
         <div class="col-sm-12 col-md-12 col-lg-9">
           <div class="client-slider">
             <div class="testimonial-slider testimonial-variation2">
               <div id="testimonials-{{section.id}}" class="testimonial-client-slide" data-slider>
-                {% for block in section.blocks %}
+                {%- for block in section.blocks -%}
                 <div class="item slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
                   <div class="slider-item">
                     <div class="slider-box">
                       <div class="client-image">   
-                      {% if block.settings.image != blank %}         
-                        {% render 'lazy-image' image:block.settings.image %}
-                      {% else %}
+                      {%- if block.settings.image != blank -%}         
+                        {%- render 'lazy-image' image:block.settings.image %}
+                      {%- else -%}
                       {{ 'user-icon.svg' | asset_url | img_tag }}
-                      {% endif %}                    
+                      {%- endif -%}                    
                       </div>
                       <h5 class="author">{{block.settings.author}}</h5>
                       <p class="testimonial-title">{{block.settings.message}}</p>
@@ -79,9 +81,9 @@
             </div>
           </div>
         </div>
-        {% endif %}
+        {%- endif -%}
       </div>
-      {% endif %} 
+      {%- endif -%} 
     </div>
     <script type="application/json" name="slider-json">    
          {
@@ -156,15 +158,15 @@
       },
       {
          "type":"text",
-         "id":"subheading",
-         "default":"HAPPY CLIENT’S",
-         "label":"t:sections.testimonials.settings.subheading.label"
-      },
-      {
-         "type":"text",
          "id":"heading",
          "default":"Add Testimonials here",
          "label":"t:sections.testimonials.settings.heading.label"
+      },
+      {
+         "type":"text",
+         "id":"subheading",
+         "default":"HAPPY CLIENT’S",
+         "label":"t:sections.testimonials.settings.subheading.label"
       },
       {
          "type":"textarea",
@@ -253,7 +255,8 @@
             {
                "type":"image_picker",
                "id":"image",
-               "label":"t:sections.testimonials.blocks.quote.settings.image.label"
+               "label":"t:sections.testimonials.blocks.quote.settings.image.label",
+				"info": "e.g. 90 x 90"
             }
          ]
       }

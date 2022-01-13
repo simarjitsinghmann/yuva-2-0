@@ -1,19 +1,19 @@
-{% assign show_bar = false %}
-{% unless section.settings.first_text == blank and section.settings.last_text == blank and section.settings.date == blank %}
-{% assign show_bar = true %}
-{% endunless %}
-{% if section.settings.show_bar and show_bar %}
+{%- assign show_bar = false -%}
+{%- unless section.settings.first_text == blank and section.settings.last_text == blank and section.settings.date == blank -%}
+{%- assign show_bar = true -%}
+{%- endunless -%}
+{%- if section.settings.show_bar and show_bar -%}
 <style>
   #shopify-section-{{section.id}} .announcement-bar {
     border-color:transparent !important;
-    {% if section.settings.bg_style == 'gradient' %}
+    {%- if section.settings.bg_style == 'gradient' -%}
     background: -moz-linear-gradient(left, {{section.settings.bgcolor}} 0%, {{section.settings.bgcolor}} 33%, {{section.settings.bgcolor2}} 66%, {{section.settings.bgcolor2}} 100%);
     background: -webkit-linear-gradient(left, {{section.settings.bgcolor}} 0%,{{section.settings.bgcolor}} 33%,{{section.settings.bgcolor2}} 66%,{{section.settings.bgcolor2}} 100%);
     background: linear-gradient(to right, {{section.settings.bgcolor}} 0%,{{section.settings.bgcolor}} 33%,{{section.settings.bgcolor2}} 66%,{{section.settings.bgcolor2}} 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{{section.settings.bgcolor}}', endColorstr='{{section.settings.bgcolor2}}',GradientType=1 );
-      {% else %}
+      {%- else -%}
       background-color:{{section.settings.bgcolor}};
-      {% endif %}
+      {%- endif -%}
       }
   #shopify-section-{{section.id}} .announcement-bar .announcement-bar__message{
     color:{{section.settings.fontcolor}};
@@ -26,17 +26,17 @@
 </style>
 <div id="announcement{{section.id}}" class="announcement-bar hidden" >
   <div class="announcement-bar__message" >
-    {% unless section.settings.icon == 'none' %}
+    {%- unless section.settings.icon == 'none' %}
     <span class="announcement_icon">
-      {% render 'icons' icon:section.settings.icon %}
+      {% render 'icons' icon:section.settings.icon -%}
     </span>
-    {%endunless%}
-    {% if section.settings.first_text != blank %}
+    {%- endunless -%}
+    {%- if section.settings.first_text != blank -%}
     <p>
       {{section.settings.first_text}}
     </p>
-    {% endif %}
-    {% if section.settings.date != blank %}
+    {%- endif -%}
+    {%- if section.settings.date != blank -%}
     <div id="announcementTimer" class="hidden">
       <input type="hidden" id="eventDate" value="{{section.settings.date}}">
       <ul>
@@ -46,22 +46,20 @@
         <li><span id="seconds"></span> <span id="dayHours"></span></li>
       </ul>
     </div>
-    {% endif %}
-    {% if section.settings.last_text != blank %}
+    {%- endif -%}
+    {%- if section.settings.last_text != blank -%}
     <p>
       {{section.settings.last_text}}
     </p>
-    {% endif %}
-
-
-    {% if section.settings.btn != blank and section.settings.link != blank %}
+    {%- endif -%}
+    {%- if section.settings.btn != blank and section.settings.link != blank -%}
     <a class="announce-btn" href="{{section.settings.link}}">{{section.settings.btn}}</a>
-    {% endif %}
-    {% if section.settings.show_close %}
+    {%- endif %}
+    {%- if section.settings.show_close -%}
     <span class="announce_close">
       <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 40 40"><path d="M23.868 20.015L39.117 4.78c1.11-1.108 1.11-2.77 0-3.877-1.109-1.108-2.773-1.108-3.882 0L19.986 16.137 4.737.904C3.628-.204 1.965-.204.856.904c-1.11 1.108-1.11 2.77 0 3.877l15.249 15.234L.855 35.248c-1.108 1.108-1.108 2.77 0 3.877.555.554 1.248.831 1.942.831s1.386-.277 1.94-.83l15.25-15.234 15.248 15.233c.555.554 1.248.831 1.941.831s1.387-.277 1.941-.83c1.11-1.109 1.11-2.77 0-3.878L23.868 20.015z" class="layer"></path></svg>
     </span>
-    {% endif %}
+    {%- endif -%}
   </div>
 </div>
 <script>
@@ -141,12 +139,9 @@
       $('body').removeClass('announcement_open');
     });
   }
-  
-
 </script>
-{% endif %}
-
-{% schema %}
+{%- endif -%}
+{%- schema -%}
 {
    "name":"t:sections.announcement-bar.name",
    "class":"announcement-bar-section",
@@ -263,4 +258,4 @@
       }
    ]
 }
-{% endschema %}
+{%- endschema -%}

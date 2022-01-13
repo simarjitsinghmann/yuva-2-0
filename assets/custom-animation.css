@@ -1,96 +1,96 @@
 @-webkit-keyframes fadeInDown{
-	0%{
-		opacity: 0;
-		transform: translateY(-20px);
-		}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-		}
-	}
-	
-	@keyframes fadeInDown{
-	0%{
-		opacity: 0;
-		transform: translateY(-20px);
-		}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-		}
-	}
-	@-webkit-keyframes shine{
-		100%{
-			left:125%
-		}
-	}
-	@keyframes shine{
-		100%{
-			left:125%
-		}
-	}
-	
-	 @-webkit-keyframes SlideDown{
-	0%{
-		opacity: 0;
-		transform: translateY(-100%);
-		}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-		}
-	}
-	
-	@keyframes SlideDown{
-	0%{
-		opacity: 0;
-		transform: translateY(-100%);
-		}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-		}
-	}
-	
-	@-webkit-keyframes SlideUp{
-	0%{
-		opacity: 0;
-		transform: translateY(0%);
-		}
-	to {
-		opacity: 1;
-		transform: translateY(-100%);
-		}
-	}
-	
-	@keyframes SlideUp{
-	0%{
-		opacity: 0;
-		transform: translateY(0%);
-		}
-	to {
-		opacity: 1;
-		transform: translateY(-100%);
-		}
-	} 
-	@-webkit-keyframes SlideLeft{
-	0%{
-		opacity: 0;
-		transform: translateY(-100%);
-		}
-	to {
-		opacity: 1;
-		transform: translateY(100%);
-		}
-	}
-	
-	@keyframes SlideLeft{
-	0%{
-		opacity: 0;
-		transform: translateY(-100%);
-		}
-	to {
-		opacity: 1;
-		transform: translateY(100%);
-		}
-	} 
+  0%{
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown{
+  0%{
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes shine{
+  100%{
+    left:125%
+  }
+}
+@keyframes shine{
+  100%{
+    left:125%
+  }
+}
+
+@-webkit-keyframes SlideDown{
+  0%{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes SlideDown{
+  0%{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes SlideUp{
+  0%{
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes SlideUp{
+  0%{
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+} 
+@-webkit-keyframes SlideLeft{
+  0%{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes SlideLeft{
+  0%{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+} 

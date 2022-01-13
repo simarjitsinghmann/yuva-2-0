@@ -1,38 +1,38 @@
 <div id="banner-{{section.id}}">
   <div class="item">
-    {% assign desktopClass = '' %}
-    {% if section.settings.image_mob != blank %}
-    {% assign desktopClass = 'slide-image-desktop' %}
-    {% endif %}
-    {% if section.settings.image != blank %}
-    {% render 'lazy-image' image:section.settings.image,class:desktopClass %}
-    {%else%}
+    {%- assign desktopClass = '' -%}
+    {%- if section.settings.image_mob != blank -%}
+    {%- assign desktopClass = 'slide-image-desktop' -%}
+    {%- endif -%}
+    {%- if section.settings.image != blank -%}
+    {%- render 'lazy-image' image:section.settings.image,class:desktopClass -%}
+    {%-else-%}
     <div class="{{desktopClass}} banner-placeholder">{% render 'banner-placeholder'%}</div>
-    {% endif %} 
-    {% if section.settings.image_mob != blank %}
-    {% render 'lazy-image' image:section.settings.image_mob,class:'slide-image-mobile' %}
-    {% endif %}
+    {%- endif %} 
+    {%- if section.settings.image_mob != blank -%}
+    {%- render 'lazy-image' image:section.settings.image_mob,class:'slide-image-mobile' -%}
+    {%- endif -%}
     <div class="banner-caption ">
       <div class="container">
         <div class="banner-caption-outer">
           <div class="banner-caption-title banner-slide {{section.settings.info_position}} text__{{section.settings.info_alignment}}">
-            {% if section.settings.tag_line != blank %}
+            {%- if section.settings.tag_line != blank %}
             <span class="tag-line">{{section.settings.tag_line}}</span>
-            {% endif %}
-            {% if section.settings.heading != blank %}
+            {%- endif %}
+            {%- if section.settings.heading != blank -%}
             <h2>{{section.settings.heading}}</h2>
-            {% endif %}
+            {%- endif -%}
 
-            {% if section.settings.subheading != blank %}
+            {%- if section.settings.subheading != blank -%}
             <h3>{{section.settings.subheading}}</h3>
-            {% endif %}
+            {%- endif -%}
 
-            {% if section.settings.content != blank %}        
+            {%- if section.settings.content != blank -%}        
             <p>{{section.settings.content}}</p>
-            {% endif %}
-            {% if section.settings.btn != blank and section.settings.link != blank %}
+            {%- endif -%}
+            {%- if section.settings.btn != blank and section.settings.link != blank -%}
             <a href="{{section.settings.link}}" class="black-btn button">{{section.settings.btn}}<i class="fas fa-arrow-right"></i></a>
-            {% endif %}
+            {%- endif %}
           </div>
         </div>
     </div>
@@ -41,46 +41,46 @@
 </div>
 <style>              
   #banner-{{section.id}} .banner-caption-title span.tag-line { 
-    {% if section.settings.sh_bg != blank %}
+    {%- if section.settings.sh_bg != blank -%}
     background: {{ section.settings.sh_bg }};
-    {% endif %}
-    {% if section.settings.sh_text != blank %}
+    {%- endif -%}
+    {%- if section.settings.sh_text != blank -%}
     color: {{ section.settings.sh_text }};
-    {% endif %}
+    {%- endif -%}
   }  
                 
   #banner-{{section.id}} .banner-caption-title h3 { 
     font-size:{{section.settings.subheading_font_size}}px;
-    {% if section.settings.subh_text != blank %}
+    {%- if section.settings.subh_text != blank -%}
     color: {{ section.settings.subh_text }};
-    {% endif %}
+    {%- endif -%}
   }              
   #banner-{{section.id}} .banner-caption-title h2 { 
     font-size:{{section.settings.heading_font_size}}px;
-    {% if section.settings.h_text != blank %}
+    {%- if section.settings.h_text != blank -%}
     color: {{ section.settings.h_text }};
-    {% endif %}
+    {%- endif -%}
   }     
   #banner-{{section.id}} .banner-caption-title p { 
-    {% if section.settings.c_text != blank %}
+    {%- if section.settings.c_text != blank -%}
     color: {{ section.settings.c_text }};
-    {% endif %}
+    {%- endif -%}
   }        
   #banner-{{section.id}} .banner-caption-title a.button { 
-    {% if section.settings.btn_text != blank %}
+    {%- if section.settings.btn_text != blank -%}
     color: {{ section.settings.btn_text }};
-    {% endif %}
+    {%- endif -%}
     background-color:{{ section.settings.btn_bg }} ;
   }
 
   #banner-{{section.id}} .banner-caption-title a.button:hover { 
-    {% if section.settings.btn_h_text != blank %}
+    {%- if section.settings.btn_h_text != blank -%}
     color: {{ section.settings.btn_h_text }};
-    {% endif %}
+    {%- endif -%}
      background-color:{{ section.settings.btn_h_bg }}
   }
 </style>
-{% schema %}
+{%- schema -%}
 {
    "name":"t:sections.banner-section.name",
    "class":"banner-section single-banner-section",
@@ -89,12 +89,14 @@
       {
          "type":"image_picker",
          "id":"image",
-         "label":"t:sections.banner-section.settings.image.label"
+         "label":"t:sections.banner-section.settings.image.label",
+		"info": "e.g. 1920 x 600"
       },
       {
          "type":"image_picker",
          "id":"image_mob",
-         "label":"t:sections.banner-section.settings.image_mob.label"
+         "label":"t:sections.banner-section.settings.image_mob.label",
+		"info": "e.g. 550 x 320"
       },
       {
          "type":"text",
@@ -231,4 +233,4 @@
       }
    ]
 }
-{% endschema %}
+{%- endschema -%}

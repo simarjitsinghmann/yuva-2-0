@@ -22,10 +22,12 @@
     {%- if section.settings.bgcolor != blank  -%}
     background-color:{{section.settings.bgcolor}};
     {%- endif -%}
-    {%- if section.settings.textcolor != blank  -%}
-    color:{{section.settings.textcolor}};
-    {%- endif -%}
   }
+    {%- if section.settings.textcolor != blank  -%}
+  #main-page-{{section.id}} h1,#main-page-{{section.id}} p{
+    color:{{section.settings.textcolor}};
+  }
+    {%- endif -%}
 </style>
 {%- endif -%}
 {% schema %}

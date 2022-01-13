@@ -1,78 +1,79 @@
-:root {
-    --black: #000000;
-    --white:#ffffff;
-    --gray: #ececec;
-    --dark-gray: #7b7b7b;
-    --theme-color: #c58b2f;
-    --green:#6cad61;
-    --red:#ec7c7c;
-    --font-family:'Jost', sans-serif;
-    --extra-small:12px;
-    --small-text: 13px;
-    --reg-text: 14px;
-    --med-text: 16px;
-    --large-text: 18px;
-    --thin:100;
-	--light:300;
-	--normal:400;
-	--medium:500;
-	--semibold:600;
-  	--bold:700;
-  	--extrabold:900;    
-/*   
-  
-	--bg-breadcrumb:#f7f8fa;
-	--bg-top-header:#f17e35;
-	--bg-theme:#f17e35;
-	--img-bg:#ececec;
-	--color-primary:#000000;
-	--color-secondary:#ffffff;
-	--color-gray:#555555;
-	--color-light-gray:#757575;
-	--color-theme-text:#f17e35;
-	--footer-link-color:#aeb9c3;
-	--btn-primary-bg:#000000;
-	--btn-primary-hover:#f17e35;
-	--btn-secondary-bg:#f17e35;
-	--btn-secondary-hover:#000000;
-	--btn-orange:#f17e35;
-	--font-size:16px;
-	--small-size:15px;
-	--small-font:13px;
-    --font-normal:14px;
-	--extra-small:12px;
 
-	--font-style: normal;
-	
-	--bold:bold;
-
-	--border-white: #ffffff;
-	--border-light-theme:#f5a47b;
-	--search-background:#f6f4f2;
-	--search-border-radius:30px;
-	--search-color:rgba(63,63,63,0.6);
-	--color-pink:#fccdd6;
-	--color-light-brown:#c7906a;
-	--color-light-blue:#cfcdfc;
-	--color-light-marrown:#d76655;
-	--color-dark-sky:#5f83b4;
-	--color-yellow:#ffff00;
-	--color-black:#000000;
-	--border-color-white:#ffffff;
-	--overlay-bg:rgba(44,44,44,.4);
-	--copyright-text:#999999;
-	--footer-border-color:#1d2329;
-	--fb-bg:#4668b2;
-	--twitter-bg:#1d98e6;
-	--linkedin-bg:#0076b4;
-	--insta-bg:#ca3174; 
-	--copyright-size:12px;
-	--star-checked:#f28b49;
-	--product-heading:#000;
-	--sf-slide-trans-dur: 0.3s;
-    --sf-slide-from-val: -65px;
-    --sf-slide-to-val: 65px;
-	--submenu-label: #f24747;
-	
-	--new-arrival-badges:#ec7c7c; */
+@font-face {
+  font-family: Rubik;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://fonts.shopifycdn.com/rubik/rubik_n4.cc9422f2e84f41ed4707ebaebe66b6de39308266.woff2?&hmac=772c540b8b6dececbde27939c79f7fd75b840816c938fc8cd126aa7bdc06cdc2") format("woff2"),
+       url("https://fonts.shopifycdn.com/rubik/rubik_n4.e38b3e3cdf5bea8165936df21f0aa42a1290b5ea.woff?&hmac=eb48a980b3a9c33159fa2d49b7b863366928aa838560ed14a9b1917cca78ab0a") format("woff");
 }
+
+@font-face {
+  font-family: Assistant;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://fonts.shopifycdn.com/assistant/assistant_n6.839c78d596129444922cad85799f3e4bffc9fc19.woff2?&hmac=7e2cdb9e0c4c820e277f048400408dd267bfe2e93d247e63ebff62065b74ea43") format("woff2"),
+       url("https://fonts.shopifycdn.com/assistant/assistant_n6.7fe336638212d1ced72174e8532df00dbc2738e5.woff?&hmac=035369c2e1c637a4bae833e1b2d2884ee4ee033481f41c90b4cb6944d1b11b1c") format("woff");
+}
+
+
+
+:root {
+  --black: #000000;
+  --white:#ffffff;
+  --gray: #ececec;
+  --dark-gray: #7b7b7b;
+  --green:#6cad61;
+  --red:#ec7c7c;
+    
+  --heading-font-family:Assistant,sans-serif;
+  --font-family:Rubik,sans-serif;
+    
+/*     --heading-font-weight:600; */
+/*     --base-font-weight:400; */
+  --extra-small:12px;
+  --small-text: 13px;
+  --reg-text: 14px;
+  --med-text: 16px;
+  --large-text: 18px;
+  --thin:100;
+  --light:300;
+  --normal:400;
+  --medium:500;
+  --semibold:600;
+  --bold:700;
+  --extrabold:900;
+  --theme-color: #b39964;
+  --theme-light-color: rgba(179, 153, 100, 0.05);
+  --cartDotColor: #b39964;
+  --colorBtnPrimary: #b39964;
+  --colorBtnPrimaryText: #ffffff;  
+  --colorBtnSecondary: #ffffff;
+  --colorBtnSecondaryText:#b39964;  
+  --colorBody: #ffffff;
+  --colorTextBody: #605745;
+  --colorImageBg: #f9f4e9;
+  --colorTextSavings: #e22120;
+  --heading_color: #605745;
+  --product_title_color: #b39964;
+  --heading_spacing: 0.0em;
+  --base_spacing: 0.025em;
+  --base_line_height: 1.6;
+  --text_size: 13px;
+}
+.blur-up {
+		-webkit-filter: blur(2px);
+		filter: blur(2px);
+		transition: filter 400ms, -webkit-filter 400ms;
+	}
+
+	.blur-up.lazyloaded {
+		-webkit-filter: blur(0);
+		filter: blur(0);
+	}
+  
+/*   body.template_collection.loading .filteredData {
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+} */

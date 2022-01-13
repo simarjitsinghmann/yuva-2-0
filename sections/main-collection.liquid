@@ -50,7 +50,7 @@
         <div class="toolbox-left">
           <div class="filter-total-result">
 
-            <p>{{collection.title}} - {{ collection.products_count}} {{ collection.products_count | pluralize: 'item', 'items' }}</p>
+            <p>{{collection.title}} - {{ 'sections.collection_template.product_count_simple'| t: count :collection.products_count }}</p>
           </div>
         </div>
         {% if section.settings.enable_sorting or section.settings.enable_display_options%}
@@ -188,7 +188,7 @@
     </div>
     <div class="product-listing-box filters-{{section.settings.enable_filtering}}">
       {% if section.settings.enable_filtering and collection.filters.size > 0 %}
-      <aside id="filterSideBar" class="sidebar sidebar-fixed shop-sidebar sticky-sidebar-wrapper">
+      <aside id="filterSideBar" class="sidebar sidebar-fixed shop-sidebar">
         {% include 'collection-sidebar' results:collection %}
       </aside>
       {% else %}
@@ -239,8 +239,9 @@
               {% endfor %}
               {%- if section.settings.pagination_type == 'infinite'-%}
               {% if paginate.next %}
-              <div id="more" class="hidden" style="width:100%"><a href="{{ paginate.next.url }}"></a>
-                <div class="load" >
+              <div id="more"style="width:100%">
+                <a href="{{ paginate.next.url }}" aria-label="{{'accessibility.loading' | t}}"></a>
+                <div class="load hidden" >
                   <svg width="30" height="30"
                        style="shape-rendering: auto; animation-play-state: running; animation-delay: 0s; background: none;"
                        class="Search_loader lds-rolling" xmlns="http://www.w3.org/2000/svg"
@@ -259,7 +260,6 @@
                 </div>
               </div>
               {% endif %}
-              <div id="product-list-foot"></div>
               {%- endif -%}
               {% else %}
               {% render 'not-found'  item:'Product'%}

@@ -42,6 +42,9 @@
   h6 {
     font-size: 16px;
   }
+  h4 {
+    font-size: 18px;
+  }
   .button:not(.small-btn) {
     min-width: 165px;
   }
@@ -56,6 +59,10 @@
   .card-wrapper-img {
     min-height: 320px;
     max-height: 320px;
+  }
+  .result_product .card-wrapper-img {
+    min-height: 240px;
+    max-height: 240px;
   }
   .row.column-2.product_columns .card-wrapper-img {
     min-height: 530px;
@@ -72,15 +79,15 @@
   .navbar-expand-md .navbar-collapse {
     max-width: 65%;
   }
-  .site-nav-dropdown .inner.dropdown .sub-menu-list .menu-mb-title span {
-    font-weight:bold;
-  }
-  .site-nav-dropdown .inner.dropdown .sub-menu-list .site-nav-dropdown li a {
+  .site-nav-dropdown .inner.dropdown .sub-menu-list .site-nav-dropdown li a:not(.caption-with-letter-spacing) {
     font-size: 11px;
     padding: 0 0 2px;
   }
   .site-nav-dropdown .inner.dropdown .sub-menu-list .menu-mb-title span {
     margin-bottom: 2px;
+  }
+  .sub-menu-list .product-information__wrapper .caption-with-letter-spacing {
+    font-size:11px;
   }
   /*=========== header css start ===========*/
   /*============ whats more css start ============*/
@@ -159,7 +166,8 @@
   }
   /*=================== collection page end ==================*/
   /*==============  banner slider start  ===========*/
-  .banner.banner-section.item {
+  .banner.banner-section.item,
+  .banner-product-slider .slick-slide{
     height: 650px;
   }
   .banner-section.item.slider-banner h1 {
@@ -248,8 +256,8 @@
     font-size: 12px;
     margin: 0 10px;
   }
-    .product-information__wrapper .caption-with-letter-spacing {
-    font-size: 12px;
+    .similar_drawer_body .product-information__wrapper .caption-with-letter-spacing {
+    font-size: 11px;
 }
   .product-productMetaInfo .product-product {
 font-size: 12px;
@@ -291,7 +299,7 @@ font-size: 12px;
     max-height: 400px;
   }
   .testimonials-variation-style1 .testimonial-client-slide .slider-item .slider-box {
-    padding: 30px 30px;
+    padding: 30px ;
   }
   .testimonials-variation-style2 .client-say-left h2 {
     padding-right: 20px;
@@ -346,7 +354,8 @@ font-size: 12px;
   }
   /*===========  header css start =============*/
   /*================  banner slider css start ==============*/
-  .banner.banner-section.item {
+  .banner.banner-section.item,
+  .banner-product-slider .slick-slide{
     height: 540px;
   }
   .banner-section.item.slider-banner h1 {
@@ -397,14 +406,7 @@ font-size: 12px;
     left: -400px;
   }
   .side-menu {
-    padding: 30px 36px;
-  }
-  .side-menu .inner-side ul li a {
-    padding: 7px 0;
-    font-size: 22px;
-  }
-  .side-menu .inner-side ul li .inner li .toggle-level {
-    font-size: 18px;
+    padding: 30px 30px;
   }
   /*=============  side menu end  ============*/
   /*==============  header end ================*/
@@ -450,6 +452,16 @@ font-size: 12px;
     -ms-flex: 0 0 75%;
     flex: 0 0 75%;
   }
+  .productResultContainer .searchProductcontainer {
+    max-width: 75%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+}
+  .productResultContainer .search_result_items {
+    max-width: 25%;
+    flex: 0 0 25%;
+}
   /*===========  product listing home end  ============*/
   /*==================  collection list css start  ===============*/
   .card__warpper__detail.right__sided .collection-detail-right {
@@ -555,7 +567,7 @@ font-size: 12px;
   }
   #shopify-product-reviews .spr-summary-caption,
   #shopify-product-reviews .spr-icon {
-    font-size: 13px;
+    font-size: 11px;
   }
   #shopify-product-reviews .spr-header-title {
     font-size: 17px;
@@ -566,6 +578,12 @@ font-size: 12px;
   }
   .slider-main .image-popup-link {
     height: 550px;
+  }
+  #shopify-product-reviews .spr-review-header-byline {
+    font-size: 11px;
+  }
+  .spr-summary-caption {
+    display: none;
   }
   /*=================  product detail css end  ================*/
   /*============  footer css start  ===================*/
@@ -717,6 +735,11 @@ font-size: 12px;
   .carousel-caption-title{
     max-width: 400px;
   }
+  .similar_options {
+      top: 0;
+      right: 0;
+      padding: 14px;
+  }
 }
 @media screen and (max-width: 991px) {
   /*==========  common csss start  ==========*/
@@ -753,7 +776,6 @@ font-size: 12px;
     padding: 6px 12px;
     min-height: 25px;
     line-height: 25px;
-    font-size: 11px;
     letter-spacing: 1px;
     min-width: 115px;
   }
@@ -777,17 +799,14 @@ font-size: 12px;
   .newsletter-box .footer-menu-head {
     display: none;
 }
+    .productResultContainer .search_result_items {
+    max-width: 33.333333%;
+    flex: 0 0 33.333333%;
+}
   /*===========  common css end  ==============*/
   /*==========  header menu css start  ==========*/
   .navbar-expand-md .navbar-collapse {
     max-width: 100%;
-  }
-  .menu-login-btn {
-    margin-top: 30px;
-  }
-  .side-menu .nav-item.dropdown .inner.child li a.toggle-level {
-    padding: 8px 0;
-    font-size: 14px;
   }
   .header_2 .nav-menu-btn {
     position: absolute;
@@ -1064,7 +1083,6 @@ font-size: 12px;
   }
   .sidebar-widget-product {
     padding: 0 20px 10px 0;
-    margin: 0 0 10px;
   }
   .aside-title, .shop-sidebar {
     padding-right: 25px;
@@ -1122,7 +1140,7 @@ font-size: 12px;
   .widget-content li label {
     font-size: 11px;
     line-height: 19px;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
   .collectionFilters__form .widget__selected {
     font-size: 11px;
@@ -1136,10 +1154,6 @@ font-size: 12px;
   }
   .card.card--product {
     margin-bottom: 20px;
-  }
-  .similar_options {
-    top: 7px;
-    right: 7px;
   }
   .card-wrapper .card.card--product .card-wrapper-img:hover .shop__options {
     bottom: 10px;
@@ -1172,7 +1186,7 @@ font-size: 12px;
   /*==========  product listing page end  ============*/
   /*==============  pdp page start  ==========*/
   .slider-main .image-popup-link {
-    height: 450px;
+    height: 350px;
   }
   .product-add-to-cart-right .product-detail-title {
     font-size: 21px;
@@ -1195,6 +1209,12 @@ font-size: 12px;
   .select__quantity,
   .prizebox{
     margin-bottom: 15px;
+  }
+  #shopify-product-reviews .spr-review-reportreview, #shopify-product-reviews .spr-summary-actions-newreview {
+    font-size: 11px;
+  }
+  #shopify-product-reviews .spr-review-reportreview {
+    padding: 3px 9px;
   }
   /*============   pdp page end =============*/
   /*=================  header css start  =============*/
@@ -1222,21 +1242,26 @@ font-size: 12px;
     position: absolute;
     left: 0;
   }
-  .side-menu .inner-side ul li a {
+  .side-menu .inner-side ul li a:not(.caption-with-letter-spacing) {
+    font-size: 20px;
     padding: 12px 0;
-    font-size: 18px;
+  }
+  .side-menu .nav-item.dropdown .inner.child li a:not(.caption-with-letter-spacing) {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+  .inner.grandchild {
+    margin: 0 10px;
+    border-left: 1px solid #eee;
+    padding-left: 10px;
+  }
+  .side-menu .nav-item.dropdown .inner.grandchild li a:not(.caption-with-letter-spacing) {
+    font-size: 13px;
+    padding: 7px 0;
   }
   .side-menu {
     max-width: 340px;
     left: -340px;
-  }
-  .side-menu .nav-item.dropdown .inner.grandchild li a {
-    font-size: 12px;
-    line-height: 14px;
-    padding: 4px 0;
-  }
-  .side-menu .nav-item.dropdown .inner.grandchild li {
-    border: 0;
   }
   /*============  header menu end  ===========*/
   nav.breadcrumb-nav {
@@ -1317,6 +1342,12 @@ font-size: 12px;
     min-height: 340px;
     max-height: 340px;
   }
+  .breadcrumb-false .product-section {
+    padding: 0px 0 40px;
+  }
+  .askmeOuter {
+    max-width: 450px;
+}
   /*=================  common end  ===============*/
   .image-with-text-section .right-text-content {
     padding-left: 0;
@@ -1338,8 +1369,8 @@ font-size: 12px;
     height: 15px;
   }
   .search-bar-container .search-bar-box svg.HeaderProClose {
-    height: 16px;
-    width: 16px;
+    height: 20px;
+    width: 20px;
   }
   .recent-search-inner ul li {
     max-width: 9%;
@@ -1354,7 +1385,8 @@ font-size: 12px;
   }
   /*===========  header css end ==============*/
   /*================ banner slider css start ================*/
-  .banner.banner-section.item {
+  .banner.banner-section.item,
+  .banner-product-slider .slick-slide{
     height: 630px;
   }
   .carousel-caption-title,
@@ -1626,7 +1658,7 @@ font-size: 12px;
     position: relative;
     height: 100%;
     overflow: auto;
-    padding: 25px 20px 100px;
+    padding: 25px 20px 120px;
     overflow-x: hidden;
   }
   #CollectionProductsContainer[data-view="grid-layout-2"]
@@ -1687,8 +1719,14 @@ font-size: 12px;
   button.navbar-toggler span.navbar-toggler-icon,
   button.navbar-toggler span.navbar-toggler-icon:after,
   button.navbar-toggler span.navbar-toggler-icon:before {
-    width: 19px;
+    width: 17px;
     height: 2px;
+  }
+   button.navbar-toggler span.navbar-toggler-icon:after {
+    top: 6px;
+  } 
+   button.navbar-toggler span.navbar-toggler-icon:before {
+    bottom: 6px;
   }
   body .shopify-section.collection-grid-section {
     padding: 0 !important;
@@ -1701,7 +1739,7 @@ font-size: 12px;
   }
   .product-information__wrapper .caption-with-letter-spacing {
     padding-top: 6px;
-    padding-bottom: 2px;
+    padding-bottom: 0;
   }
   .toolbox-right .toolbox-item.toolbox-sort.select-box {
     padding: 0;
@@ -2072,8 +2110,8 @@ font-size: 12px;
     justify-content: space-between;
     z-index: 1;
   }
-  .product_button .pdp-add-to-bag,
-  .product_button .shopify-payment-button {
+  .product_button .pdp-action-container.dynamic-checkout-enabled .pdp-add-to-bag,
+  .product_button .pdp-action-container.dynamic-checkout-enabled .shopify-payment-button {
     width: 100%;
     margin-bottom: 0;
     max-width: 48.5%;
@@ -2085,21 +2123,21 @@ font-size: 12px;
     font-size: 10px;
     margin: 0px 0 3px 0;
   }
-  .askmeMain .askmecontainer a.ask_cross {
+  .askmeMain .askmecontainer .ask_cross {
     top: -12px;
     right: -12px;
     width: 30px;
     height: 30px;
   }
-  .askmeMain .askmecontainer a.ask_cross svg {
+  .askmeMain .askmecontainer .ask_cross svg {
     width: 10px;
   }
   /*============= PDP css end ===============*/
   /*============= blog detail css start ==============*/
   .blog-detail-outer .row,
   .blog-detail-outer .container,
-  .blog-detail-outer .col-md-8,
-  .blog-detail-outer .col-md-4{
+  .blog-detail-outer .col-lg-8,
+  .blog-detail-outer .col-lg-4{
     padding:0;
     margin:0;
   }
@@ -2171,7 +2209,7 @@ font-size: 12px;
     padding:20px 0;
   }
   .breadcrumb-false .product-section {
-    padding: 20px 0;
+    padding: 0 0 20px;
   }
   .form-control {
     padding: 7px 15px;
@@ -2314,9 +2352,16 @@ font-size: 12px;
     line-height: 24px;
     margin: 0 0 10px;
   }
+  .collection-card-box svg {
+    enable-background: new 0 0 512 512;
+    width: 11px;
+    vertical-align: middle;
+    margin-bottom: 2px;
+  }
   /*================  collection css end ===============*/
   /*=============   testimonial css start =============*/
-  .client-say-left {
+  .client-say-left,
+  .testimonials-variation-style1 .client-say-left{
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -2324,7 +2369,7 @@ font-size: 12px;
     -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
-    padding: 0 70px;
+    padding: 0 90px;
   }
   .client-say-left small {
     display: none;
@@ -2367,9 +2412,6 @@ font-size: 12px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-  }
-  .blog-post {
-    border-bottom: 1px solid #efefef;
   }
   .blog-multi-slide.desktop,
   .corner-view.desktop-only{
@@ -2526,6 +2568,9 @@ font-size: 12px;
   .social-icons .share-icons {
     text-align: center;
   }
+  .pdp-wrapper .social-icons .share-icons {
+    text-align: left;
+}
   .recent-product-header h4 {
     margin-bottom: 10px;
   }
@@ -2540,7 +2585,7 @@ font-size: 12px;
     line-height: 22px;
   }
   .product-add-to-cart-right p.vendor_name {
-    margin: 3px 0 2px;
+    margin: 3px 0 5px;
     line-height: 10px;
   }
   .ratingbox .spr-badge {
@@ -2558,22 +2603,25 @@ font-size: 12px;
   #shopify-product-reviews .spr-icon, #shopify-product-reviews .spr-summary-caption {
     font-size: 10px;
   }
-  .askmeMain .askmecontainer {
+  .askmeOuter {
     -webkit-transform: translate(0,100%);
     -ms-transform: translate(0,100%);
     transform: translate(0,100%);
     top: unset;
     left: 0;
-    padding: 30px;
-    width: 100%;
+    max-width: 100%;
     bottom: 0;
+    padding:0;
   }
-  .askmeMain.slideAskme .askmecontainer {
+  .askmeMain .askmecontainer {
+      padding: 30px;
+  }
+  .askmeMain.slideAskme .askmeOuter {
     -webkit-transform: translate(0,0);
     -ms-transform: translate(0,0);
     transform: translate(0,0);
   }
-  .askmeMain .askmecontainer a.ask_cross {
+  .askmeMain .askmecontainer .ask_cross {
     top: 0;
     right: 0;
     width: 25px;
@@ -2586,7 +2634,7 @@ font-size: 12px;
     width: 100%;
     border-radius:0;
   }
-  body.template_product.active_askme:after {
+/*   .template_product.active_askme:after {
     position: fixed;
     content: "";
     background: #000000a6;
@@ -2609,9 +2657,7 @@ font-size: 12px;
     height: 0;
     display: block !important;
     z-index: 5;
-    visibility: visible;
-    opacity: 1;
-  }
+  } */
   .feature-product .product-image-left {
     max-height: 400px;
     min-height: 350px;
@@ -2751,6 +2797,10 @@ font-size: 12px;
     padding: 20px 20px;
   }
 /*============ policies page css end ===========*/
+  .productResultContainer  .search_result_items {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
 }
 @media screen and (max-width: 480px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
@@ -2814,6 +2864,14 @@ font-size: 12px;
   .img-content-placeholder {
     min-height: 350px;
   }
+  .spr-header-title {
+      text-align: left!important;
+  }
+  .service__column .col svg {
+    min-width: 25px;
+    max-width: 25px;
+    margin-right: 10px;
+  }
 }
 @media screen and (max-width: 414px) {
   #CollectionProductsContainer[data-view="grid-layout-2"]
@@ -2831,14 +2889,18 @@ font-size: 12px;
     min-height: 250px;
     max-height: 250px;
   }
-  .product_button{
-    text-align: center;
+ 
+  .product__pickup-availabilities {
+  	text-align:left;
   }
   .banner-caption-title h3 {
     font-size: 38px!important;
   }
   .side_drawer_wrapper {
     max-width: 100%;
+  }
+    .similar_options {
+      padding: 12px;
   }
 }
 @media screen and (max-width: 380px) {
@@ -2857,12 +2919,9 @@ font-size: 12px;
     min-height: 200px;
     max-height: 200px;
   }
-  .client-say-left {
-    padding: 0 40px;
-  }
   .client-say-left h2 {
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 24px;
+    line-height: 28px;
   }
 
   .product-page-recommendations .card-wrapper-img {
@@ -2944,6 +3003,11 @@ font-size: 12px;
   .row.style_variation_2{
     justify-content:center;
   }
+  .card-wrapper .card.card--product .card-wrapper-img:hover .shop__options {
+    opacity: 1;
+    bottom: 20px;
+    height: auto;
+  }
 }
 @media (min-width: 992px){
   .similar_options .vs-icon.text-true:hover {
@@ -2958,6 +3022,75 @@ font-size: 12px;
     font-size:11px;
     padding-left:5px;
     max-width:300px;
+  }
+  .black-btn:after,
+  .shopify-challenge__button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 150%;
+    width: 200%;
+    height: 100%;
+    -webkit-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    background-image: -webkit-gradient(
+      linear,
+      left top, right top,
+      from(transparent),
+      color-stop(hsla(0, 0%, 100%, 0.25)),
+      to(transparent)
+    );
+    background-image: -o-linear-gradient(
+      left,
+      transparent,
+      hsla(0, 0%, 100%, 0.25),
+      transparent
+    );
+    background-image: linear-gradient(
+      90deg,
+      transparent,
+      hsla(0, 0%, 100%, 0.25),
+      transparent
+    );
+    -webkit-transition: 2s ease all;
+    -o-transition: 2s ease all;
+    transition: 2s ease all;
+  }
+  .black-btn:hover:after,
+  .shopify-challenge__button:hover:after {
+    -webkit-animation: wave 0.75s linear;
+    animation: wave 0.75s linear;
+  }
+  .card-wrapper
+  .card.card--product
+  .card-wrapper-img.has-multiimage a:hover img {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    -ms-opacity: 0;
+    -o-opacity: 0;
+    opacity: 0;
+
+  }
+  .card-wrapper
+  .card.card--product
+  .card-wrapper-img.has-multiimage a:hover img.product-second-img {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    -ms-opacity: 1;
+    -o-opacity: 1;
+    opacity: 1;
+  }
+  .collection-card-box:hover img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  .card-wrapper .card__warpper__detail:hover:before,
+  .animate_hvrbr:hover::before {
+    -webkit-animation: shine 1.3s;
+    animation: shine 1.3s;
+    opacity: 0.8;
   }
 }
 @media (min-width: 1441px){

@@ -1,11 +1,11 @@
-{% if section.blocks.size > 0 %}
+{%- if section.blocks.size > 0 -%}
 <div class="section-spacer">
   <div class="container">
       <div class="faq-detail">
         <h3>{{section.settings.heading}}</h3>
         <div class="accordion-container">
-          {% for block in section.blocks %}
-          {% if block.settings.heading != blank or block.settings.answer != blank%}
+          {%- for block in section.blocks -%}
+          {%- if block.settings.heading != blank or block.settings.answer != blank -%}
           <div class="set">
             <h6 class="panel-title faq-{{section.id}} faqSection-header" content="faq-content-{{block.id}}">
               <a>
@@ -20,8 +20,8 @@
               </div>
             </div>
           </div>
-          {% endif %}
-          {% endfor %}
+          {%- endif -%}
+          {%- endfor -%}
         </div>
       </div>
   </div> 

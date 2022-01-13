@@ -1,19 +1,18 @@
-{% case section.settings.header_style %}
-{% when 'header1' %}
-{% include 'header-1' %}
-{% when 'header2' %}
-{% include 'header-2' %}
+{%- case section.settings.header_style -%}
+{%- when 'header1' -%}
+{%- include 'header-1' -%}
+{%- when 'header2' -%}
+{%- include 'header-2' -%}
 <style>
   .top-header .nav__header{
     background:{{section.settings.menu_bgcolor}} !important;
   }.top-header .nav__header a.list-menu__item{
     color:{{section.settings.menu_textcolor}} !important;
   }
-
 </style>
-{% when 'header3' %}
-{% include 'header-3' %}
-{% endcase %}
+{%- when 'header3' -%}
+{%- include 'header-3' -%}
+{%- endcase -%}
 <style>
   #nav_style_3 ul.navbar-nav.list-menu--inline{
     justify-content: {{section.settings.menu_position}};
@@ -24,24 +23,18 @@
 </style>
 <style>
   header { 
-    {% if section.settings.enable_sticky_header %}
+    {%- if section.settings.enable_sticky_header -%}
     position: sticky;
     top: 0;
     z-index: 3; 
-    {% endif %}
+    {%- endif -%}
     background-color:{{section.settings.header_bgcolor | default:'#fff'}};
   }
 
   .site-nav-dropdown .inner.dropdown .sub-menu-list {
-    width: 250px;
     padding:0 10px;
   }
-  .site-nav-dropdown .inner.dropdown.col-md-8 .sub-menu-list {
-    width: 200px;
-  }
-  .site-nav-dropdown .inner.dropdown.col-md-9 .sub-menu-list {
-    width: 190px;
-  }
+
   header a,
   .side-menu .back-btn,
   .side-menu .close-btn,
@@ -79,7 +72,7 @@
   }
   .menuLinks-wrapper {
     width: 100%;
-    display: block;
+/*     display: block; */
   }
  .site-nav-dropdown .inner.dropdown .sub-menu-list .site-nav-dropdown li a{
     color:{{section.settings.sub_menu_color}} !important;
@@ -90,43 +83,22 @@
   .side-menu, .side-menu .inner-side .nav-item.dropdown ul.child, .side-menu .inner-side .nav-item.dropdown ul.grandchild{
     background-color:{{section.settings.header_bgcolor | default:'#fff'}};
   }
-  @media screen and (max-width:1440px){
-    .site-nav-dropdown .inner.dropdown .sub-menu-list,
-    .site-nav-dropdown .inner.dropdown.col-md-8 .sub-menu-list{
-      width: 175px;
-    }
-    .site-nav-dropdown .inner.dropdown.col-md-9 .sub-menu-list{
-      width: 160px;
-    }
-    .site-nav-dropdown .inner.dropdown.col-md-8 .sub-menu-list {
-      width: 140px;
-    }
-    .items-1 .sub-menu-list.mega-images .menu-image-content {
-      height: 250px;
-    }
-  }
+
 </style>
 <script>
   {% if section.settings.enable_sticky_header %}
-  ///Sticky-header//
-  $('body').addClass('{{section.settings.header_style}}')
+  $('body').addClass('{{section.settings.header_style}} sticky-header')
                      $(window).scroll(function () {
     if($(window).scrollTop()>150){
       $(".top-header").addClass("sticky-header");
       $("header").addClass("sticky-header");
-      $("body").addClass("sticky-header");
     }else {
       $(".top-header").removeClass("sticky-header");
       $("header").removeClass("sticky-header");
-      $("body").removeClass("sticky-header");
     }
   });
   {% endif %}
-  $(document).ready(function(){
-    $('.menuLinks-wrapper').masonry({
-      itemSelector: '.sub-menu-list'
-    });
-  })
+
 </script>
 
 <script type="application/ld+json">
@@ -134,26 +106,26 @@
     "@context": "http://schema.org",
     "@type": "Organization",
     "name": {{ shop.name | json }},
-    {% if section.settings.logo %}
+    {%- if section.settings.logo -%}
       {% assign image_size = section.settings.logo.width | append: 'x' %}
       "logo": {{ section.settings.logo | img_url: image_size | prepend: "https:" | json }},
-    {% endif %}
+    {%- endif -%}
     "sameAs": [
-      {{ settings.social_twitter_link | json }},
-      {{ settings.social_facebook_link | json }},
-      {{ settings.social_pinterest_link | json }},
-      {{ settings.social_instagram_link | json }},
-      {{ settings.social_tumblr_link | json }},
-      {{ settings.social_snapchat_link | json }},
-      {{ settings.social_youtube_link | json }},
-      {{ settings.social_vimeo_link | json }}
+      {{- settings.social_twitter_link | json -}},
+      {{- settings.social_facebook_link | json -}},
+      {{- settings.social_pinterest_link | json -}},
+      {{- settings.social_instagram_link | json -}},
+      {{- settings.social_tumblr_link | json -}},
+      {{- settings.social_snapchat_link | json -}},
+      {{- settings.social_youtube_link | json -}},
+      {{- settings.social_vimeo_link | json -}}
     ],
-    "url": {{ shop.url | append: page.url | json }}
+    "url": {{- shop.url | append: page.url | json -}}
   }
 </script>
 
 {%- if request.page_type == 'index' -%}
-{% assign potential_action_target = shop.url | append: routes.search_url | append: "?q={search_term_string}" %}
+{%- assign potential_action_target = shop.url | append: routes.search_url | append: "?q={search_term_string}" -%}
 <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -168,8 +140,7 @@
     }
 </script>
 {%- endif -%}
-
-{% schema %}
+{%- schema -%}
 {
    "name":"t:sections.header.name",
    "class":"shopify-section-main-header",
@@ -199,7 +170,8 @@
       {
          "type":"image_picker",
          "id":"logo",
-         "label":"t:sections.header.settings.logo.label"
+         "label":"t:sections.header.settings.logo.label",
+		"info": "e.g. 110 x 36"
       },
       {
          "type":"range",
@@ -373,7 +345,8 @@
             {
                "type":"image_picker",
                "id":"image1",
-               "label":"Image 1"
+               "label":"Image 1",
+				"info": "e.g. 235 x 230"
             },
             {
                "type":"text",
@@ -393,7 +366,8 @@
             {
                "type":"image_picker",
                "id":"image2",
-               "label":"Image 2"
+               "label":"Image 2",
+				"info": "e.g. 235 x 230"
             },
             {
                "type":"text",
@@ -582,4 +556,4 @@
       }
    ]
 }
-{% endschema %}
+{%- endschema -%}

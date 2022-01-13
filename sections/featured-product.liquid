@@ -9,27 +9,27 @@
       <div class="row">
         <div class="col-md-6 col-lg-6 col-xl-7">
           <div class="product-image-left" {% unless product.images.size == 1%}data-slider{% endunless %}>
-            {% unless product == empty %}   
+            {%- unless product == empty -%}   
             {%- for media in product.media -%}
             {%-if media.media_type == 'image'-%}
             <div id="media-{{media.id}}" class="item" >
-              {% include 'lazy-image' image:media %}  
+              {%- include 'lazy-image' image:media -%}  
             </div>
             {%-endif-%}
-            {% endfor %}
+            {%- endfor -%}
             {%else%}
-            {% for i in (1..3) %}
+            {%- for i in (1..3) -%}
             <div class="item" >
             {{ 'product-'| append: i | placeholder_svg_tag: 'placeholder-svg' }}
             </div>
-            {% endfor %}
-            {%endunless%}
+            {%- endfor -%}
+            {%-endunless-%}
           </div>
         </div>
         <div class="col-md-5 col-lg-5 col-xl-5">
-          {% unless section.settings.product == blank %}
-          {% include 'product-form' %}
-            {%else%}
+          {%- unless section.settings.product == blank -%}
+          {%- include 'product-form' -%}
+            {%- else -%}
           <div class="product-add-to-cart-right placeholder-content">
             <div class="pdp-wrapper">
               <a class="product-detail-title" href="/products/copy-of-basic-fur-hood-grey-jacket">{{'onboarding.product_title' | t}}</a>
@@ -37,13 +37,13 @@
                 <h3 id="get_price" class="price-list">
                   <span class="get-price">{{8800 | money}}</span>
                   <span class="main-price"> {{9900 | money}}</span>
-                  {% if settings.show_saved_amount %}
-                  {% if settings.saved_amount_style == 'percentage' %}
+                  {%- if settings.show_saved_amount -%}
+                  {%- if settings.saved_amount_style == 'percentage' -%}
                   <span class="percent-off">{{ 9900 | minus: 8800  | times: 100.0 | divided_by: 9900 | round:2 | append: "% OFF"}}</span>
-                  {% else %}
+                  {%- else -%}
                   <span class="percent-off">{{ 9900| minus: 8800  | money | append: " OFF"}}</span>
-                  {% endif %}
-                  {% endif %}
+                  {%- endif -%}
+                  {%- endif -%}
                 </h3>
               </div>
               <div class="select__quantity">
@@ -72,7 +72,7 @@
               </div>
             </div>
           </div>
-          {% endunless %}
+          {%- endunless -%}
         </div>
       </div>
     </div>

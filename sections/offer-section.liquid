@@ -8,7 +8,7 @@
     </div>
     <div class="offer-list">
       <div class="row {% if section.settings.style == 'style2' %}style_variation_2{%else%}style_variation_1{% endif %} row-items-{{section.blocks.size}}">
-        {% for block in section.blocks%}
+        {%- for block in section.blocks -%}
         <div  class="{% if section.blocks.size == 1%}col-12{%else%}col-10{% endif %} col-sm-6 col-md-4">
           <div class="card-wrapper">
             <div class="card-information">
@@ -20,18 +20,18 @@
                 {% render 'placeholder' %}
                   {% endif %}
               </div>
-              {% unless block.settings.heading == blank and block.settings.subheading == blank %}
+              {%- unless block.settings.heading == blank and block.settings.subheading == blank -%}
               <div class="card-information__wrapper {% if section.settings.style  == 'style2' %}text__{{section.settings.info_position}}{% else %}bottom-{{section.settings.info_position}}{% endif %} content-border-{{section.settings.show_border}}" >
                 <div data-aos="fade-up" data-aos-duration="1200">
-                {% if block.settings.heading != blank %}
+                {%- if block.settings.heading != blank -%}
                 <h5>{{block.settings.heading}}</h5>
-                {% endif%}
-                {% if block.settings.subheading != blank %}
+                {%- endif -%}
+                {%- if block.settings.subheading != blank -%}
                 {{block.settings.subheading}}
-                {% endif%}
+                {%- endif -%}
               </div>
                   </div>
-              {% endunless %}
+              {%- endunless -%}
               </a>
             </div>
           </div>
@@ -178,7 +178,8 @@
             {
                "type":"image_picker",
                "id":"image",
-               "label":"t:sections.offer-section.blocks.offer.settings.image.label"
+               "label":"t:sections.offer-section.blocks.offer.settings.image.label",
+				"info": "e.g. 484 x 284"
             },
             {
                "type":"url",

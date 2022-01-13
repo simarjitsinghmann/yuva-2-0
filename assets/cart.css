@@ -297,6 +297,17 @@ input[type="number"] {
   background-color: #ffffff;
   padding: 5px 15px;
 }
+#shipping_estimations_template {
+    padding: 30px;
+    background: #fff;
+}
+#shipping_estimations_template .form-control {
+	border: 1px solid #ddd;
+  min-height:42px;
+}
+li.total {
+    margin-bottom: 20px!important;
+}
 /* responsive */
 @media screen and (max-width: 1440px) {
   .cstm-cart-sec .inner-box.price-details {

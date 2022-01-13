@@ -5,17 +5,15 @@
     </video> 
     <div class="videoOverlay"></div>
     <div class="container">
-      {% unless section.settings.title == blank and section.settings.description == blank %}
-     
-
+      {%- unless section.settings.title == blank and section.settings.description == blank -%}
         <div class="flex-absolute center text__center">
           <div class="wrapper preventOverflowContent">
-            {% unless section.settings.title == '' %}
+            {%- unless section.settings.title == '' -%}
             <h2 class="title--overlay h2">{{ section.settings.title | escape }}</h2>
-            {% endunless %}
-            {% unless section.settings.description == '' %}
+            {%- endunless -%}
+            {%- unless section.settings.description == '' -%}
             <p class="content--overlay h5--body">{{ section.settings.description }}</p>
-            {% endunless %}
+            {%- endunless -%}
           </div>
         </div>
       {% endunless %}
@@ -57,7 +55,8 @@
         {
           "type": "image_picker",
           "id": "poster",
-          "label": "t:sections.video-banner.settings.poster.label"
+          "label": "t:sections.video-banner.settings.poster.label",
+		  "info": "e.g. 1915 x 600"
         },
         {
           "type": "text",

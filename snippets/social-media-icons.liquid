@@ -1,3 +1,4 @@
+{% if settings.social_facebook_link != blank or settings.social_twitter_link != blank or settings.social_linkedin_link != blank or settings.social_instagram_link != blank %}
 <div class="social-links">
   <ul>                  
     {% if settings.social_facebook_link != blank %}
@@ -14,3 +15,4 @@
     {% endif %}
   </ul>
 </div>
+{% endif %}

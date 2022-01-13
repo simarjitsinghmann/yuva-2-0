@@ -1,18 +1,18 @@
-{% if section.blocks.size > 0 %}
+{%- if section.blocks.size > 0 -%}
 <div class="container">
   <div class="service__column">
-    {% for block in section.blocks %}
+    {%- for block in section.blocks -%}
     <div class="col" {{ block.shopify_attributes }}>
-      {% render 'icons' icon:block.settings.icon%}
+      {%- render 'icons' icon:block.settings.icon -%}
       <div class="service_title">
         <h6>{{block.settings.heading}}</h6>
         {{block.settings.subtext}}
       </div>
     </div>            
-    {% endfor %}
+    {%- endfor -%}
   </div>
 </div>
-{% endif %}
+{%- endif -%}
 <style>
   #shopify-section-{{section.id}}.shopify-section{
     background-color:{{section.settings.bgcolor}};

@@ -16,31 +16,33 @@
           <div class="blog-detail-content">
             <h3 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h3>
             <div class="blog-author">
-              {% if section.settings.show_author %}
+              {%- if section.settings.show_author -%}
               <span class="" itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <span itemprop="name">Posted By {{ article.author }}</span>
               </span>
-              {% endif %}
-              {% if section.settings.show_date %}
+              {%- endif -%}
+              {%- if section.settings.show_date -%}
               <span class="circle-divider" itemprop="dateCreated pubdate datePublished">
                 on {{ article.published_at | time_tag: format: 'month_year' }}
               </span>
-              {% endif %}
+              {%- endif -%}
 
             </div>
             <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody">
               {{ article.content }}
             </div>
+              {%- if section.settings.show_tags -%}
             <ul class="article_tags">
-            	{% for tag in article.tags %}
+            	{%- for tag in article.tags -%}
               <li><a href="{{blog.url}}/tagged/{{tag}}">{{tag}}</a></li>
-              {% endfor %} 
+              {%- endfor -%} 
             </ul>
-            {% if section.settings.show_social %}
+            {%- endif -%}
+            {%- if section.settings.show_social -%}
             <div class="article-template__social-sharing page-width page-width--narrow social-icons">
-              {% render 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+              {%- render 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image -%}
             </div>
-            {% endif %}
+            {%- endif -%}
 
             {%- if blog.comments_enabled? -%}
             <div class="article-template__comment-wrapper background-secondary shopify-blog-comments">
@@ -49,7 +51,7 @@
                 {%- assign anchorId = '#Comments-' | append: article.id -%}
 
                 <h3 id="Comments-{{ article.id }}">{{ 'blogs.article.comments' | t: count: article.comments_count }}</h3>
-                {% paginate article.comments by 5 %}
+                {%- paginate article.comments by 5 -%}
                 <div class="article-template__comments">
                   {%- if comment.status == 'pending' and comment.content -%}
                   <article id="{{ comment.id }}" class="article-template__comments-comment">

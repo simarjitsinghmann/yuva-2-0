@@ -33,11 +33,11 @@
           <p class="item-variant-title">{{item.selling_plan_allocation.selling_plan.name }}</p>
           {% endif %}
           <p class="product__price">
-            {%- if item.original_price != item.final_price -%}
-            <span>{{item.final_price| money}}</span>
-            <s class="item__price-strikethrough">{{item.original_price| money}}</s>
+            {%- if item.original_line_price != item.final_line_price -%}
+            <span>{{item.final_line_price| money}}</span>
+            <s class="item__price-strikethrough">{{item.original_line_price| money}}</s>
             {%else%}
-            <span>{{item.final_price | money}}</span>
+            <span>{{item.final_line_price | money}}</span>
             {%- endif -%}
 
             {%- if item.unit_price_measurement -%}
@@ -104,7 +104,7 @@
 {%- else -%}
 <div class="emptySideCart">
   <img class="emptyCartIcon" src="{{'cart.svg' | asset_url}}">
-  <h4>{{'sections.cart.empty' | t}}</h4>
-  <a class="button black-btn" href="{{routes.all_products_collection_url}}" aria-label="{{'general.continue_shopping' | t}}">{{'general.continue_shopping' | t}}</a>
+  <p>{{'sections.cart.empty' | t}}</p>
+  <a class="link" href="{{routes.all_products_collection_url}}" aria-label="{{'general.continue_shopping' | t}}">{{'general.continue_shopping' | t}}</a>
 </div>
 {%- endif -%}
