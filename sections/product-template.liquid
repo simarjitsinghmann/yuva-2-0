@@ -391,7 +391,7 @@
           	fancyBoxContainer.append(`<div class="fancybox__bg_container"><img class="fancybox__bg_container_image" src="${fancybox.getSlide().src}"/></div>`);
           }
           if (slide.type === "image") {
-            console.log('<a target="_blank" href="' +fancybox.getSlide().src +'">Download image</a>');
+            fancyBoxContainer.find('.fancybox__bg_container_image').attr('src',fancybox.getSlide().src);
           }
         }
       },
