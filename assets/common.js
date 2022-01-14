@@ -984,6 +984,26 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
       slideIndex = undefined;
     }
     slickSlider(jQuery(slider),slideIndex);
+    
+    
+    if(jQuery(slider).is("[mobile-only]")){
+        if($(window).width() < 768 ){
+        console.log('here')
+          if (!jQuery(slider).hasClass('slick-initialized')) {
+            slickSlider(jQuery(slider));
+          }
+        }
+        else{
+        console.log('there')
+          if (jQuery(slider).hasClass('slick-initialized')) {
+            jQuery(slider).slick('unslick');
+          }
+        }
+      }else{
+      	 if (!jQuery(slider).hasClass('slick-initialized')) {
+            slickSlider(jQuery(slider));
+          }
+      }
     if(jQuery(event.target).find('[data-slider]').length > 0){
       jQuery('html, body').animate({ scrollTop:(jQuery(event.target).offset().top)});
     
