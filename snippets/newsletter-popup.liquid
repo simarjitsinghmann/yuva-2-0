@@ -90,12 +90,7 @@
   $('button[name="commit"]').click(function(e){
     e.preventDefault();
     var form = $(this).closest('form');
-
-//     var date = new Date();
-//     date.setDate(date.getTime() + parseInt('{{settings.popup_cookie}}') * 24 * 60 * 60 * 1000);
-
-//                                            Cookies.set('Newsletter_closed', 'Newsletter_closed_val', { expires: date, path: '/' });
-                 form.submit();
+    form.submit();
   })
   /* NEWSLETTER POPUP ENDS */
 </script>
