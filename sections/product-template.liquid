@@ -374,21 +374,20 @@
     Fancybox.bind(fancySelector, {
       on: {
         load: (fancybox, slide) => {
-         	var fancyBoxContainer = $('body').find('.fancybox__container');
+          var fancyBoxContainer = $('body').find('.fancybox__container');
           if (slide.type === "image") {
-          if(fancyBoxContainer.find('.fancybox__bg_container').length == 0 ){
-          	fancyBoxContainer.append(`<div class="fancybox__bg_container"><img class="fancybox__bg_container_image" src="${fancybox.getSlide().src}"/></div>`);
-            
-          }
+            if(fancyBoxContainer.find('.fancybox__bg_container').length == 0 ){
+              fancyBoxContainer.append(`<div class="fancybox__bg_container"><img class="fancybox__bg_container_image" src="${fancybox.getSlide().src}"/></div>`);            
+            }
             else{
-            	fancyBoxContainer.find('.fancybox__bg_container_image').attr('src',fancybox.getSlide().src);
+              fancyBoxContainer.find('.fancybox__bg_container_image').attr('src',fancybox.getSlide().src);
             }
           }
         },
         done: (fancybox, slide) => {
           var fancyBoxContainer = $('body').find('.fancybox__container');
           if(fancyBoxContainer.find('.fancybox__bg_container').length == 0 ){
-          	fancyBoxContainer.append(`<div class="fancybox__bg_container"><img class="fancybox__bg_container_image" src="${fancybox.getSlide().src}"/></div>`);
+            fancyBoxContainer.append(`<div class="fancybox__bg_container"><img class="fancybox__bg_container_image" src="${fancybox.getSlide().src}"/></div>`);
           }
           if (slide.type === "image") {
             fancyBoxContainer.find('.fancybox__bg_container_image').attr('src',fancybox.getSlide().src);
