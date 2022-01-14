@@ -983,25 +983,22 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     if(block != ''){
       slideIndex = undefined;
     }
-    slickSlider(jQuery(slider),slideIndex);
-    
+//     slickSlider(jQuery(slider),slideIndex);    
     
     if(jQuery(slider).is("[mobile-only]")){
         if($(window).width() < 768 ){
-        console.log('here')
           if (!jQuery(slider).hasClass('slick-initialized')) {
-            slickSlider(jQuery(slider));
+            slickSlider(jQuery(slider),slideIndex);
           }
         }
         else{
-        console.log('there')
           if (jQuery(slider).hasClass('slick-initialized')) {
             jQuery(slider).slick('unslick');
           }
         }
       }else{
       	 if (!jQuery(slider).hasClass('slick-initialized')) {
-            slickSlider(jQuery(slider));
+            slickSlider(jQuery(slider),slideIndex);
           }
       }
     if(jQuery(event.target).find('[data-slider]').length > 0){
