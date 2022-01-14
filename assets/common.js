@@ -882,9 +882,9 @@ sliders = function(){
           }
         }
       }else{
-      	 if (!jQuery(this).hasClass('slick-initialized')) {
-            slickSlider(jQuery(this));
-          }
+        if (!jQuery(this).hasClass('slick-initialized')) {
+          slickSlider(jQuery(this));
+        }
       }
     });
   }
