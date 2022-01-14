@@ -983,21 +983,21 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     }  
     
     if(jQuery(slider).is("[mobile-only]")){
-        if($(window).width() < 768 ){
-          if (!jQuery(slider).hasClass('slick-initialized')) {
-            slickSlider(jQuery(slider),slideIndex);
-          }
+      if($(window).width() < 768 ){
+        if (!jQuery(slider).hasClass('slick-initialized')) {
+          slickSlider(jQuery(slider),slideIndex);
         }
-        else{
-          if (jQuery(slider).hasClass('slick-initialized')) {
-            jQuery(slider).slick('unslick');
-          }
-        }
-      }else{
-      	 if (!jQuery(slider).hasClass('slick-initialized')) {
-            slickSlider(jQuery(slider),slideIndex);
-          }
       }
+      else{
+        if (jQuery(slider).hasClass('slick-initialized')) {
+          jQuery(slider).slick('unslick');
+        }
+      }
+    }else{
+      if (!jQuery(slider).hasClass('slick-initialized')) {
+        slickSlider(jQuery(slider),slideIndex);
+      }
+    }
     if(jQuery(event.target).find('[data-slider]').length > 0){
       jQuery('html, body').animate({ scrollTop:(jQuery(event.target).offset().top)});
     
