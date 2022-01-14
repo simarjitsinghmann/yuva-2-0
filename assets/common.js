@@ -871,6 +871,7 @@ sliders = function(){
     sliders.each(function(index) {
 
       if(jQuery(this).is("[mobile-only]")){
+        console.log('mobile-only',$(window).width())
         if($(window).width() < 768 ){
 
           if (!jQuery(this).hasClass('slick-initialized')) {
@@ -883,6 +884,7 @@ sliders = function(){
           }
         }
       }else{
+        console.log('all',$(window).width())
       	 if (!jQuery(this).hasClass('slick-initialized')) {
             slickSlider(jQuery(this));
           }
