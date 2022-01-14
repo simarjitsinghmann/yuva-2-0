@@ -872,16 +872,14 @@ sliders = function(){
 
       if(jQuery(this).is("[mobile-only]")){
         if($(window).width() < 768 ){
-        console.log('here')
           if (!jQuery(this).hasClass('slick-initialized')) {
             slickSlider(jQuery(this));
           }
         }
         else{
-        console.log('there')
-//           if (jQuery(this).hasClass('slick-initialized')) {
-//             jQuery(this).slick('unslick');
-//           }
+          if (jQuery(this).hasClass('slick-initialized')) {
+            jQuery(this).slick('unslick');
+          }
         }
       }else{
       	 if (!jQuery(this).hasClass('slick-initialized')) {
@@ -982,8 +980,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
   else if(event.type == "shopify:section:load"){
     if(block != ''){
       slideIndex = undefined;
-    }
-//     slickSlider(jQuery(slider),slideIndex);    
+    }  
     
     if(jQuery(slider).is("[mobile-only]")){
         if($(window).width() < 768 ){
