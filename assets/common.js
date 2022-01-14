@@ -487,8 +487,7 @@ productVariants=function() {
           var paymentButton = paymentButtonWrapper.querySelector('span');
           var advancePayment = paymentButtonWrapper.querySelector('.shopify-payment-button');
           if(getVariant != undefined){
-          sellingPlans(getVariant,_productParent);
-            
+          sellingPlans(getVariant,_productParent);            
             pickUpAvialabiliy(true);
             if(getVariant.featured_media != null){
               var image= getVariant.featured_media.id; 
