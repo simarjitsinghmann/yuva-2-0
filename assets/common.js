@@ -1113,7 +1113,7 @@ $(document).ready(function(){
   //currency-dropdown//
   $('.currency-dropdown .dropdown-toggle').click(function(){
     $(this).closest('.currency-dropdown').find(".currency-menu").slideToggle("fast");
-    $('.currency-menu').css({"display": "block"});
+//     $('.currency-menu').css({"display": "block"});
   });
 
   ///product-size-select///
