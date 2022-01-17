@@ -1118,6 +1118,7 @@ $(document).ready(function(){
      var value = $(this).attr('data-value');
      var text = $(this).text();
      $(this).closest('form').find('.dropdown-toggle').text(text);
+     $(this).closest('form').find('[country_code]').val(value);
     $(this).closest('.currency-dropdown').find(".currency-menu").slideUp("fast");
   });
 
