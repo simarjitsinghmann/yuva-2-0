@@ -296,9 +296,9 @@ else{
   // POST to cart/add.js returns the cart in JSON
   $('body').on('click','.Sd_addProduct',function(evt) {
     evt.preventDefault();
-    $('body').find('.productErrors').hide().html('');
     var form = $(this).closest('form')
     var submit = $(this);
+    $('body').find('.productErrors').hide().html('');
     submit.addClass('is-loading');
     params = {
       type: 'POST',
