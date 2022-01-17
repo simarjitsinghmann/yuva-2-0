@@ -1113,7 +1113,9 @@ $(document).ready(function(){
   //currency-dropdown//
   $('.currency-dropdown .dropdown-toggle').click(function(){
     $(this).closest('.currency-dropdown').find(".currency-menu").slideToggle("fast");
-//     $('.currency-menu').css({"display": "block"});
+  });
+   $('body').on('click','#CountryList .dropdown-item',function(){
+    $(this).closest('.currency-dropdown').find(".currency-menu").slideToggle("fast");
   });
 
   ///product-size-select///
