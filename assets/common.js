@@ -1114,7 +1114,8 @@ $(document).ready(function(){
   $('.currency-dropdown .dropdown-toggle').click(function(){
     $(this).closest('.currency-dropdown').find(".currency-menu").slideToggle("fast");
   });
-   $('body').on('click','#CountryList .dropdown-item',function(){
+   $('body').on('click','#CountryList .dropdown-item',function(event){
+     event.preventDefault();
      var value = $(this).attr('data-value');
      var text = $(this).text();
      $(this).closest('form').find('.dropdown-toggle').text(text);
