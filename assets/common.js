@@ -49,18 +49,18 @@ Shopify.addListener = function(target, eventName, callback) {
 Shopify.postLink = function(path, options) {
   options = options || {};
   var method = options['method'] || 'post';
-  var params = options['parameters'] || {};
+  var parameters = options['parameters'] || {};
 
   var form = document.createElement("form");
   form.setAttribute("method", method);
   form.setAttribute("action", path);
 
-  for(var key in params) {
-    var hiddenField = document.createElement("input");
-    hiddenField.setAttribute("type", "hidden");
-    hiddenField.setAttribute("name", key);
-    hiddenField.setAttribute("value", params[key]);
-    form.appendChild(hiddenField);
+  for(var key in parameters) {
+    var fields = document.createElement("input");
+    fields.setAttribute("type", "hidden");
+    fields.setAttribute("name", key);
+    fields.setAttribute("value", parameters[key]);
+    form.appendChild(fields);
   }
   document.body.appendChild(form);
   form.submit();
