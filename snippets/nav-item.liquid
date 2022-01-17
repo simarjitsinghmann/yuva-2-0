@@ -8,7 +8,7 @@
 	{%- break -%}
   {%- endif -%}
 {%- endfor -%}
-<li class="nav-item {% if link.links != blank or menuDropdown %}dropdown-menu{% endif %} {% if link.current %}active{% endif %}">
+<li class="nav-item {% if link.links != blank or menuDropdown %}dropdown-menu-item{% endif %} {% if link.current %}active{% endif %}">
   {%- if link.links != blank or menuDropdown -%}
     <span class="list-menu__item">{{link.title | split:"{badge" | first | escape | capitalize }}
     <span class="ml-2 sf-menu__arrow">
