@@ -1117,7 +1117,8 @@ $(document).ready(function(){
    $('body').on('click','#CountryList .dropdown-item',function(){
      var value = $(this).attr('data-value');
      var text = $(this).text();
-    $(this).closest('.currency-dropdown').find(".currency-menu").slideToggle("fast");
+     $(this).closest('form').find('.dropdown-toggle').text(text);
+    $(this).closest('.currency-dropdown').find(".currency-menu").slideUp("fast");
   });
 
   ///product-size-select///
