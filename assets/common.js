@@ -1233,7 +1233,6 @@ $(document).ready(function()
       .removeClass('NewsletterActive')
       .removeClass('show__similar__products');
       
-//     $('.newsletter-popup,.wrapper-overlay').hide();
     $('.wrapper-overlay').hide();
       setTimeout(function(){
           $('.newsletter-popup').hide();
