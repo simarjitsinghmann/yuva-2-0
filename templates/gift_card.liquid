@@ -19,9 +19,9 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
-    {%- assign formatted_initial_value = gift_card.initial_value | money_without_trailing_zeros | strip_html -%}
+    {%- assign gift_card_value = gift_card.initial_value | money_without_trailing_zeros | strip_html -%}
 
-    <title>{{ 'gift_cards.issued.title' | t: value: formatted_initial_value, shop: shop.name }}</title>
+    <title>{{ 'gift_cards.issued.title' | t: value: gift_card_value, shop: shop.name }}</title>
 
     <meta name="description" content="{{ 'gift_cards.issued.subtext' | t }}">
 
@@ -30,12 +30,6 @@
 
 {{ 'variable.css' | asset_url | stylesheet_tag }}
 
-    {%- unless settings.type_body_font.system? -%}
-      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
-    {%- endunless -%}
-    {%- unless settings.type_header_font.system? -%}
-      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
-    {%- endunless -%}
 <style>
   /*=========== gift card page css start ================*/
 .gift-card-page {
