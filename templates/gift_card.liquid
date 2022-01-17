@@ -14,10 +14,6 @@
       <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: '32x32' }}">
     {%- endif -%}
 
-    {%- unless settings.type_header_font.system? -%}
-      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
-    {%- endunless -%}
-
     {%- assign gift_card_value = gift_card.initial_value | money_without_trailing_zeros | strip_html -%}
 
     <title>{{ 'gift_cards.issued.title' | t: value: gift_card_value, shop: shop.name }}</title>
