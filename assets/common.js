@@ -1112,7 +1112,7 @@ $(document).ready(function(){
 
   //currency-dropdown//
   $('.currency-dropdown').click(function(){
-    $(this).find(".currency-menu").slideToggle("fast");
+    $(this).find(".currency-menu").slideDown("fast");
     $('.currency-menu').css({"display": "block"});
   });
 
