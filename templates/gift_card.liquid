@@ -98,12 +98,12 @@
       </div>
 
       {% if settings.currency_code_enabled %}
-        {%- assign gift_card_balance = gift_card.balance | money_with_currency -%}
+        {%- assign gc_balance = gift_card.balance | money_with_currency -%}
       {% else %}
-        {%- assign gift_card_balance = gift_card.balance | money -%}
+        {%- assign gc_balance = gift_card.balance | money -%}
       {% endif %}
       {%- if gift_card.balance != gift_card.initial_value -%}
-        <p class="gift-card__label caption-large">{{ 'gift_cards.issued.remaining_html' | t: balance: gift_card_balance }}</p>
+        <p class="gift-card__label caption-large">{{ 'gift_cards.issued.remaining_html' | t: balance: gc_balance }}</p>
       {%- endif -%}
     </header>
 
