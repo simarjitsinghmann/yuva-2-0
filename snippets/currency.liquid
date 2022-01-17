@@ -5,7 +5,7 @@
         {{ localization.country.currency.iso_code }}
       </label>
 
-      <ul id="CountryList" role="list" class="dropdown-menu currency-menu" hidden>
+      <ul id="CountryList" role="list" class="dropdown-menu currency-menu">
         {% for country in localization.available_countries %}
         <li tabindex="-1">
           <a class="dropdown-item"  tabindex="-1" aria-label="{{ country.currency.iso_code }}" href="#"{% if country.iso_code == localization.country.iso_code %} aria-current="true"{% endif %} data-value="{{ country.iso_code }}">
