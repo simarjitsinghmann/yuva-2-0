@@ -1212,7 +1212,7 @@ var mouse_is_inside = false;
 
 $(document).ready(function()
                   {
-  $('.ask_this_product,.similar_drawer_wrapper,#toolbox-sort,#sort__list,.side_drawer_wrapper,.askmecontainer,.search-bar-container,.search-form,.newsletter-popup-inner,.side-menu').hover(function(){ 
+  $('.dropdown-menu-item,.ask_this_product,.similar_drawer_wrapper,#toolbox-sort,#sort__list,.side_drawer_wrapper,.askmecontainer,.search-bar-container,.search-form,.newsletter-popup-inner,.side-menu').hover(function(){ 
     mouse_is_inside=true; 
   }, function(){ 
     mouse_is_inside=false; 
