@@ -1006,7 +1006,7 @@ a:hover {
 .site-nav-dropdown .inner.dropdown .menuLinks-wrapper .sub-menu-list {
   margin-bottom: 15px;
 }
-.list-menu--inline .nav-item:hover > .sub-menu {
+.list-menu--inline .nav-item.open > .sub-menu {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
