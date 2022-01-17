@@ -328,7 +328,7 @@ else{
           errorCallback(XMLHttpRequest, textStatus);
         }
         else {
-          $('body').find('.productErrors').html(XMLHttpRequest.responseJSON.description).show();
+          form.find('.productErrors').html(XMLHttpRequest.responseJSON.description).show();
         }
         setTimeout(function(){
           submit.removeClass('is-loading');
