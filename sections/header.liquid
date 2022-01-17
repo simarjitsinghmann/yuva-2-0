@@ -99,6 +99,34 @@
   });
   {% endif %}
 
+  document.addEventListener("DOMContentLoaded", navigationMenu,false);
+  document.addEventListener("shopify:section:load", navigationMenu,false);
+  
+  
+  function navigationMenu(){
+    var dropDownMenu = document.getElementsByClassName('resp-tab-item');
+    if(tabHead.length > 0 ){
+      tabHead[0].classList.add('active');
+      var tabContent =  document.getElementsByClassName('resp-tab-content');
+      tabContent[0].style.display = 'block';
+      function clearActive(){
+        Array.from(tabHead).forEach(function(item) {
+          item.classList.remove('active');
+        });
+        Array.from(tabContent).forEach(function(item) {
+          item.style.display = 'none';
+        });
+      }
+      Array.from(tabHead).forEach(function(btn) {
+        btn.addEventListener("click", ()=>{ 
+                             clearActive();
+        btn.classList.add("active");
+        var _value = btn.getAttribute("content");
+        document.getElementById(_value).style.display = "block";
+      });
+    });
+  }
+  }
 </script>
 
 <script type="application/ld+json">
