@@ -1,16 +1,16 @@
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
-{%- assign pu_availabilities = product_variant.store_availabilities | where: 'pick_up_enabled', true -%}
+{%- assign puAvailabilities = product_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
-{%- if pu_availabilities.size > 0 -%}
+{%- if puAvailabilities.size > 0 -%}
 <div  id="pickUpAvailabilityPreview">
   {%- liquid
-      assign closest_location = pu_availabilities.first
+      assign nearestLocation = puAvailabilities.first
     -%}
 
   <div class="pickup-availability-info">
-    {%- if closest_location.available -%}
-    <p class="">{{ 'products.product.pickup_availability.pick_up_available_at_html' | t: location_name: closest_location.location.name }}</p>
-    <p class="">{{ closest_location.pick_up_time }}</p>
+    {%- if nearestLocation.available -%}
+    <p class="">{{ 'products.product.pickup_availability.pick_up_available_at_html' | t: location_name: nearestLocation.location.name }}</p>
+    <p class="">{{ nearestLocation.pick_up_time }}</p>
     <span id="ShowPickupAvailabilityDrawer" class="pickup-availability-button link link--text underlined-link" aria-haspopup="dialog">
       {%- if pu_availabilities.size == 1 -%}
       {{ 'products.product.pickup_availability.view_store_info' | t }}
@@ -19,8 +19,8 @@
       {%- endif -%}
     </span>
     {%- else -%}
-    <p class="">{{ 'products.product.pickup_availability.pick_up_unavailable_at_html' | t: location_name: closest_location.location.name }}</p>
-    {%- if pu_availabilities.size > 1 -%}
+    <p class="">{{ 'products.product.pickup_availability.pick_up_unavailable_at_html' | t: location_name: nearestLocation.location.name }}</p>
+    {%- if puAvailabilities.size > 1 -%}
     <span id="ShowPickupAvailabilityDrawer" class="pickup-availability-button link link--text underlined-link" aria-haspopup="dialog">{{ 'products.product.pickup_availability.check_other_stores' | t }}</span>
     {%- endif -%}
     {%- endif -%}
@@ -45,18 +45,18 @@
       {%- endunless -%}
     </div>
     <ul class="pickup-availability-list list-unstyled" role="list" data-store-availability-drawer-content>
-      {%- for availability in pu_availabilities -%}
+      {%- for availabile in puAvailabilities -%}
       <li class="pickup-availability-list__item">
-        <h6>{{ availability.location.name | escape }}</h6>
+        <h6>{{ availabile.location.name | escape }}</h6>
         <p class="pickup-availability-preview">
-          {%- if availability.available -%}
+          {%- if availabile.available -%}
           <svg xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true" viewBox="0 0 512 512">
             <path fill="green" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path></svg>
           <span>{{ 'products.product.pickup_availability.pick_up_available' | t }}, {{ availability.pick_up_time | downcase }}</span>
           {%- endif -%}
         </p>
 
-        {%- assign address = availability.location.address -%}
+        {%- assign address = availabile.location.address -%}
         <address class="pickup-availability-address">
           {{ address | format_address }}
 
