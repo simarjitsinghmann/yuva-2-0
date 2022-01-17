@@ -172,13 +172,12 @@
 </html>
 
 <script>
-  var string = { qrImageAlt: {{ 'gift_cards.issued.qr_image_alt' | t | json }} };
   document.addEventListener('DOMContentLoaded', function() {
    new QRCode( document.querySelector('.gift-card__qr-code'), {
-    text: document.querySelector('.gift-card__qr-code').dataset.identifier,
+    text: '{{ gift_card.qr_identifier }}',
     width: 120,
     height: 120,
-    imageAltText: string.qrImageAlt
+    imageAltText: '{{ 'gift_cards.issued.qr_image_alt' | t | json }}'
     });
   });
 
