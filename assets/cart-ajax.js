@@ -298,7 +298,7 @@ else{
     evt.preventDefault();
     var form = $(this).closest('form')
     var submit = $(this);
-    $('body').find('.productErrors').hide().html('');
+    form.find('.productErrors').hide().html('');
     submit.addClass('is-loading');
     params = {
       type: 'POST',
