@@ -1115,6 +1115,8 @@ $(document).ready(function(){
     $(this).closest('.currency-dropdown').find(".currency-menu").slideToggle("fast");
   });
    $('body').on('click','#CountryList .dropdown-item',function(){
+     var value = $(this).attr('data-value');
+     var text = $(this).text();
     $(this).closest('.currency-dropdown').find(".currency-menu").slideToggle("fast");
   });
 
