@@ -1254,7 +1254,7 @@ $(document).ready(function()
       $('.askmeMain').hide()
       },250)
     }
-      $('.dropdown-menu-item').removeClass('open')
+      $('.dropdown-menu-list').removeClass('open')
       $('.toggle-level,.list-menu__item.toggle').removeClass('open-menu-drop');
      $('.side-menu').find('.inner').slideUp('slow');
       if($(window).width() < 768){
