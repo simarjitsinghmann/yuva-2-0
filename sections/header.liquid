@@ -110,9 +110,10 @@
       Array.from(dropDownMenus).forEach(function(menu) {
         menu.addEventListener("click", (event)=>{ 
                               event.preventDefault();
-          if(!menu.classList.contains('open')){
+          var parent = menu.parentNode;
+          if(!parent.classList.contains('open')){
           	hideAllMenu();
-            menu.classList.add("open");
+            parent.classList.add("open");
           }
           else{
           	hideAllMenu();
@@ -125,7 +126,7 @@
     var dropDownMenus = document.getElementsByClassName('dropdown-menu-item');
     if(dropDownMenus.length > 0 ){
        Array.from(dropDownMenus).forEach(function(menu) {
-         menu.classList.remove('open')
+         menu.parentNode.classList.remove('open')
        });
     }
   };
