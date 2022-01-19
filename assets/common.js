@@ -824,7 +824,7 @@ slickSlider = function(selector,slideIndex){
     }
     var iframeVideo = $(slick.$slides[currentSlide]).find('iframe');
     if(iframeVideo.length > 0){
-      iframeVideo.contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+      iframeVideo[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
     }
     console.log(video, iframeVideo)
   })
