@@ -2157,6 +2157,10 @@
     transform: translateY(-50%);
     z-index: 9999;
   }
+  .left-product-images .productModelSlideItem model-viewer,
+  .left-product-images .productModelSlideItem {
+    min-height: 500px;
+}
   /*============= PDP css end ===============*/
   /*============= blog detail css start ==============*/
   .blog-detail-outer .row,
