@@ -75,9 +75,9 @@
                   </div>
                   {%- when 'video' -%}
                   {% assign videoTag =  media |media_tag | split:'src="'%}
-                  {{videoTag[2] }}
+                  
                   <div class="responsive-image__wrapper productImageSlideItem ">
-                <a id="media-{{media.id}}" href="{{media.url}}sssssssss"class="productImageItem image-popup-link productVideoSlideItem" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
+                <a id="media-{{media.id}}" href="{{videoTag[2] | split:'"' | first }}"class="productImageItem image-popup-link productVideoSlideItem" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                  {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
                 </a> 
                   {% if forloop.last %}
