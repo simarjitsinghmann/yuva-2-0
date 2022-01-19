@@ -82,7 +82,7 @@
                   {%- when 'model' -%}
                   <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem productModelSlideItem">
                     
-                    <a id="media-{{media.id}}" href="{{media.url}}"  class="productImageItem image-popup-link" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
+                    <a id="media-{{media.id}}"  class="productImageItem image-popup-link" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                       {{media | model_viewer_tag }}
                     </a>
                   {% if forloop.last %}
