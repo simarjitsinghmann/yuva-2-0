@@ -142,14 +142,14 @@
                   {% endif%}
                 </a>
                   {%- when 'external_video' -%}
-                <a href="{{media | external_video_url}}" class="iframe-gallery-item"  data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
+                <a href="{{media | external_video_url}}" class="iframe-gallery-item productVideoSlideItem"  data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                   {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
                   {% if forloop.last %}
                  {{productHighlights}}
                   {% endif%}
                 </a>
                   {%- when 'video' -%}
-                <a href="{{media.sources[1].url}}" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
+                <a href="{{media.sources[1].url}}" class="productVideoSlideItem" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                   {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
                   {% if forloop.last %}
                  {{productHighlights}}
