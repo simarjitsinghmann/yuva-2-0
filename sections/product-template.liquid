@@ -84,8 +84,7 @@
                   </div>
                   {%- when 'model' -%}
                   <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem productModelSlideItem">
-                    
-                    <a id="media-{{media.id}}"  class="productImageItem image-popup-link" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
+                    <a id="media-{{media.id}}"  class="productImageItem image-popup-link" aria-label="{{media.alt | default:product.title}}">
                       {{media |  media_tag: image_size: "2048x", toggleable: true}}
                     </a>
                   {% if forloop.last %}
