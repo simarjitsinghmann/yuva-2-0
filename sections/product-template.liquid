@@ -88,6 +88,18 @@
                     <a id="media-{{media.id}}"  class="productImageItem image-popup-link" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                       {{media | model_viewer_tag }}
                     </a>
+                    <button
+        class="button button--full-width product__xr-button"
+        type="button"
+        aria-label="{{ 'products.product.xr_button_label' | t }}"
+        data-shopify-xr
+        data-shopify-model3d-id="{{ media.id }}"
+        data-shopify-title="title"
+        data-shopify-xr-hidden
+        >
+        {% render 'icon-3d-model' %}
+        {{ 'products.product.xr_button' | t }}
+      </button>
                   {% if forloop.last %}
                  {{productHighlights}}
                   {% endif%}
