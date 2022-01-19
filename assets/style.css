@@ -2437,9 +2437,10 @@ li.breadcrumb-item a {
 .left-product-images .slick-arrow span {
    font-size: 0;
 }
-.left-product-images model-viewer {
-   height: 100%;
-   width: 100%;
+.left-product-images .productModelSlideItem model-viewer,
+.left-product-images .productModelSlideItem {
+    height: 100%;
+    width: 100%;
 }
 .left-product-images iframe,
 .left-product-images video  {
