@@ -80,7 +80,7 @@
                   {% endif%}
                   </div>
                   {%- when 'model' -%}
-                  <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem">
+                  <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem  productModelSlideItem">
                   {{media | model_viewer_tag }}
                   {% if forloop.last %}
                  {{productHighlights}}
