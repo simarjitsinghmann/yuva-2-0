@@ -2132,7 +2132,10 @@
   .askmeMain .askmecontainer .ask_cross svg {
     width: 10px;
   }
-  a.productVideoSlideItem:after {
+  .left-product-images.multiple-images .gallery-item .gallery-item-product a {
+    position: relative;
+}
+  .left-product-images a.productVideoSlideItem:after {
     content: '';
     position: absolute;
     width: 40%;
@@ -2143,7 +2146,7 @@
     transform: translateY(-50%);
     z-index: 9999;
   }
-  a.productVideoSlideItem:before {
+ .left-product-images a.productVideoSlideItem:before {
     content: '';
     position: absolute;
     width: 40%;
