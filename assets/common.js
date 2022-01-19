@@ -824,7 +824,7 @@ slickSlider = function(selector,slideIndex){
     }
     var iframeVideo = $(slick.$slides[currentSlide]).find('iframe');
     if(iframeVideo.length > 0){
-      iframeVideo.trigger('pause')
+      iframeVideo.stopVideo();
     }
     console.log(video, iframeVideo)
   })
