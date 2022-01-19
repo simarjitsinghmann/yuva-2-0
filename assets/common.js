@@ -819,7 +819,7 @@ slickSlider = function(selector,slideIndex){
   jQuery(selector)
   .on('beforeChange', function(event, slick, currentSlide, nextSlide) {
     var video = $(this).find('.slick-current video');
-    console.log(slick, currentSlide, nextSlide)
+    console.log(slick.$slides[currentSlide], currentSlide, nextSlide)
     if(video.length > 0){
       video.trigger('pause')
     }
