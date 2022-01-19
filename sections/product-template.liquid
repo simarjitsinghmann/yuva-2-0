@@ -291,14 +291,12 @@
       var sizeChartClose = sizeChartModel.querySelector('#sizeChartClose');
       sizeChartInit.addEventListener("click", ()=>{ 
                                      
-//         DOMAnimations.slideDown(sizeChartModel);
                                      sizeChartModel.fadeIn();
       document.querySelector('body').classList.add('scrollHidden');
     });
       sizeChartClose.addEventListener("click", ()=>{ 
                                       document.querySelector('body').classList.remove('scrollHidden');
                                      sizeChartModel.fadeOut();
-//         DOMAnimations.slideUp(sizeChartModel);
     });
     }
   }
