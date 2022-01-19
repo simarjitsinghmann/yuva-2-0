@@ -72,7 +72,7 @@
                   </div>
                   {%- when 'video' -%}
                   <div class="responsive-image__wrapper productImageSlideItem ">
-                <a id="media-{{media.id}}" href="{{video_source.url}}" {{media | video_url | link}} class="productImageItem image-popup-linkr productVideoSlideItem" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
+                <a id="media-{{media.id}}" href="{{video_source.url}}"class="productImageItem image-popup-link productVideoSlideItem" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                  {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
                 </a> 
                   {% if forloop.last %}
@@ -82,7 +82,7 @@
                   {%- when 'model' -%}
                   <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem productModelSlideItem">
                     
-                    <a id="media-{{media.id}}" href="{{video_source.url}}" {{media | video_url | link}} class="productImageItem image-popup-linkr productVideoSlideItem" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
+                    <a id="media-{{media.id}}" href="{{media.url}}"  class="productImageItem image-popup-link" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                       {{media | model_viewer_tag }}
                     </a>
                   {% if forloop.last %}
