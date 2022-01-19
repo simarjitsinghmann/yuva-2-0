@@ -2132,6 +2132,28 @@
   .askmeMain .askmecontainer .ask_cross svg {
     width: 10px;
   }
+  a.productVideoSlideItem:after {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 75%;
+    right: 0;
+    top: 50%;
+    background: transparent;
+    transform: translateY(-50%);
+    z-index: 9999;
+  }
+  a.productVideoSlideItem:before {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 75%;
+    left: 0;
+    top: 50%;
+    background: transparent;
+    transform: translateY(-50%);
+    z-index: 9999;
+  }
   /*============= PDP css end ===============*/
   /*============= blog detail css start ==============*/
   .blog-detail-outer .row,
