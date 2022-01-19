@@ -823,6 +823,10 @@ slickSlider = function(selector,slideIndex){
     if(video.length > 0){
       video.trigger('pause')
     }
+    var iframeVideo = $(slick.$slides[currentSlide]).find('iframe');
+    if(iframeVideo.length > 0){
+      iframeVideo.trigger('pause')
+    }
   })
   .on('afterChange', function(event, slick, currentSlide){
     var video = $(this).find('.slick-current video');
