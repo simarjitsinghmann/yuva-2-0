@@ -81,7 +81,10 @@
                   </div>
                   {%- when 'model' -%}
                   <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem productModelSlideItem">
-                  {{media | model_viewer_tag }}
+                    
+                    <a id="media-{{media.id}}" href="{{video_source.url}}" {{media | video_url | link}} class="productImageItem image-popup-linkr productVideoSlideItem" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
+                      {{media | model_viewer_tag }}
+                    </a>
                   {% if forloop.last %}
                  {{productHighlights}}
                   {% endif%}
