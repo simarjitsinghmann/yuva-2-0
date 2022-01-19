@@ -309,6 +309,11 @@
 </script>
 
 
+<script>
+  window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)}
+  {% assign models = product.media | where: 'media_type', 'model' | json %}
+  ShopifyXR('addModels', {{ models }});
+</script>
 <script type="application/ld+json">
 {
   "@context": "http://schema.org/",
