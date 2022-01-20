@@ -3735,6 +3735,31 @@ p.hightlight-point-value {
     width: 100%;
     height: 100%;
 }
+.slick-slide .slick-slide-video-item{
+  position:relative;
+}
+.slick-slide .slick-slide-video-item:after {
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: 75%;
+  right: 0;
+  top: 50%;
+  background: transparent;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+.slick-slide .slick-slide-video-item:before {
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: 75%;
+  left: 0;
+  top: 50%;
+  background: transparent;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
 .feature-section .product-image-left img {
    width: 100%;
    height: 100%;
