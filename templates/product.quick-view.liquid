@@ -17,13 +17,19 @@
     </div> 
     <div id="feature__productThumbs-{{product.id}}" class="quickview_product thumb d-none d-md-block d-lg-block">
       {%- for media in product.media -%}
-      {%-if media.media_type == 'image'-%}
       <div class="item" data-id="media-{{media.id}}">
         <div class="quickview_product_img_thumb">
+          {%-if media.media_type == 'image'-%}
           <img src="{{media | img_url: '150x'}}" alt="{{ media.preview_image.alt | escape }}">
+          {%-elsif media.media_type== 'external_video'-%} 
+          {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
+          {%-elsif media.media_type== 'video'-%}
+          {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
+          {%-elsif media.media_type== 'model'-%}
+          {{media |  media_tag: image_size: "2048x", toggleable: true}}
+          {%-endif-%}
         </div>
       </div>
-      {%-endif-%}
       {%-endfor-%}
     </div> 
   </div>
