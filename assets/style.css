@@ -5608,10 +5608,11 @@ body #shopify-product-reviews {
    .quickview_product_img_thumb {
    border: 1px solid var(--theme-color);
 }
-.quickview_product_slider .quickview_product .quickview_product_img video {
+.quickview_product_slider .quickview_product .quickview_product_img video,
+.quickview_product_slider .quickview_product .quickview_product_img model-viewer {
     height: 100%;
     width: 100%;
-}
+} 
 /**Quickview-end**/
 #slider-round {
    height: 3px;
