@@ -11,11 +11,24 @@
           <div class="product-image-left" {% unless product.images.size == 1%}data-slider{% endunless %}>
             {%- unless product == empty -%}   
             {%- for media in product.media -%}
-            {%-if media.media_type == 'image'-%}
+            {%-case media.media_type-%}
+            {%- when 'image'-%}
             <div id="media-{{media.id}}" class="item" >
-              {%- include 'lazy-image' image:media -%}  
+              {%- include 'lazy-image' image:media -%} 
             </div>
-            {%-endif-%}
+            {%- when 'external_video'-%} 
+            <div id="media-{{media.id}}" class="item" >
+              {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
+            </div>
+            {%- when 'video'-%}
+            <div id="media-{{media.id}}" class="item" >
+              {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
+            </div>
+            {%- when 'model'-%}
+            <div id="media-{{media.id}}" class="item" >
+              {{media |  media_tag: image_size: "2048x", toggleable: true}}
+            </div>
+            {%-endcase-%}
             {%- endfor -%}
             {%else%}
             {%- for i in (1..3) -%}
