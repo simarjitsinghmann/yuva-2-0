@@ -7,23 +7,24 @@
     <div id="feature__product-{{product.id}}" class="quickview_product">
       {%- for media in product.media -%}
       <div class="item" >
-          {%-if media.media_type == 'image'-%}
+        {%-case media.media_type-%}
+          {%- when 'image'-%}
         <div class="quickview_product_img">
           <img src="{{media | img_url: 'master'}}" alt="{{ media.preview_image.alt | escape }}">
         </div>
-          {%-elsif media.media_type== 'external_video'-%} 
+          {%- when 'external_video'-%} 
         <div class="quickview_product_img">
           {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
         </div>
-          {%-elsif media.media_type== 'video'-%}
+          {%- when 'video'-%}
         <div class="quickview_product_img">
           {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
         </div>
-          {%-elsif media.media_type== 'model'-%}
+          {%- when 'model'-%}
         <div class="quickview_product_img">
           {{media |  media_tag: image_size: "2048x", toggleable: true}}
         </div>
-          {%-endif-%}
+          {%-endcase-%}
       </div>
       {%-endfor-%}
     </div> 
