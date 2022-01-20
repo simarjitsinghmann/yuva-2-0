@@ -7,17 +7,23 @@
     <div id="feature__product-{{product.id}}" class="quickview_product">
       {%- for media in product.media -%}
       <div class="item" >
-        <div class="quickview_product_img">
           {%-if media.media_type == 'image'-%}
+        <div class="quickview_product_img">
           <img src="{{media | img_url: 'master'}}" alt="{{ media.preview_image.alt | escape }}">
-          {%-elsif media.media_type== 'external_video'-%} 
-          {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
-          {%-elsif media.media_type== 'video'-%}
-          {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
-          {%-elsif media.media_type== 'model'-%}
-          {{media |  media_tag: image_size: "2048x", toggleable: true}}
-          {%-endif-%}
         </div>
+          {%-elsif media.media_type== 'external_video'-%} 
+        <div class="quickview_product_img">
+          {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
+        </div>
+          {%-elsif media.media_type== 'video'-%}
+        <div class="quickview_product_img">
+          {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
+        </div>
+          {%-elsif media.media_type== 'model'-%}
+        <div class="quickview_product_img">
+          {{media |  media_tag: image_size: "2048x", toggleable: true}}
+        </div>
+          {%-endif-%}
       </div>
       {%-endfor-%}
     </div> 
@@ -26,13 +32,21 @@
       <div class="item" data-id="media-{{media.id}}">
         <div class="quickview_product_img_thumb">
           {%-if media.media_type == 'image'-%}
+        <div class="quickview_product_img_thumb">
           <img src="{{media | img_url: '150x'}}" alt="{{ media.preview_image.alt | escape }}">
+        </div>
           {%-elsif media.media_type== 'external_video'-%} 
+        <div class="quickview_product_img_thumb">
           {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
+        </div>
           {%-elsif media.media_type== 'video'-%}
+        <div class="quickview_product_img_thumb">
           {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
+        </div>
           {%-elsif media.media_type== 'model'-%}
+        <div class="quickview_product_img_thumb">
           {{media |  media_tag: image_size: "2048x", toggleable: true}}
+        </div>
           {%-endif-%}
         </div>
       </div>
