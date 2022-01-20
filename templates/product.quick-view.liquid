@@ -31,24 +31,9 @@
     <div id="feature__productThumbs-{{product.id}}" class="quickview_product thumb d-none d-md-block d-lg-block">
       {%- for media in product.media -%}
       <div class="item" data-id="media-{{media.id}}">
-        {%-case media.media_type-%}
-          {%- when 'image'-%}
         <div class="quickview_product_img_thumb">
-          <img src="{{media | img_url: '150x'}}" alt="{{ media.preview_image.alt | escape }}">
+          <img src="{{media.preview_image | img_url: '150x'}}" alt="{{ media.preview_image.alt | escape }}">
         </div>
-          {%- when 'external_video'-%} 
-        <div class="quickview_product_img_thumb">
-          {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
-        </div>
-          {%- when 'video'-%}
-        <div class="quickview_product_img_thumb">
-          {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
-        </div>
-          {%- when 'model'-%}
-        <div class="quickview_product_img_thumb">
-          {{media |  media_tag: image_size: "2048x", toggleable: true}}
-        </div>
-          {%-endcase -%}
         </div>
       {%-endfor-%}
     </div> 
