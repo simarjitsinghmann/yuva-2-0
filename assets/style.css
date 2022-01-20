@@ -3729,7 +3729,8 @@ p.hightlight-point-value {
 }
 .feature-product .product-image-left model-viewer,
 .feature-product .product-image-left video,
-.feature-product .product-image-left iframe  {
+.feature-product .product-image-left iframe ,
+.feature-product .product-image-left .slick-slide>div {
     width: 100%;
     height: 100%;
 }
