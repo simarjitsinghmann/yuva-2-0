@@ -250,7 +250,16 @@
             }
           }
         ]
-      });
+      }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    var video = $(slick.$slides[currentSlide]).find('video');
+    if(video.length > 0){
+      video.trigger('pause')
+    }
+    var iframeVideo = $(slick.$slides[currentSlide]).find('iframe');
+    if(iframeVideo.length > 0){
+      iframeVideo[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+    }
+  });
     $('#feature__productThumbs-{{product.id}}').slick({
       slidesToShow: 6,
       slidesToScroll: 1,
