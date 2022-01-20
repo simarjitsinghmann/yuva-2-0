@@ -3727,6 +3727,12 @@ p.hightlight-point-value {
    position: relative;
    min-height: 500px;
 }
+.feature-product .product-image-left model-viewer,
+.feature-product .product-image-left video,
+.feature-product .product-image-left iframe  {
+    width: 100%;
+    height: 100%;
+}
 .feature-section .product-image-left img {
    width: 100%;
    height: 100%;
