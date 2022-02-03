@@ -248,8 +248,9 @@ header {
   position: relative;
   font-size: 12px;
   background: var(--gray);
-    padding: 5px 36px 5px 12px;
-    }
+  padding: 5px 36px 5px 12px;
+  min-width:100px;
+}
 .header__icons .nav-wishlist a.wishlist,
 .wrapper-top-cart a,
 .customer-links a,
