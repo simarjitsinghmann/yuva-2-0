@@ -27,25 +27,15 @@
         
       </div>
       <div class="card-wrapper-slider " product-grid-slider>           
-        {%- for media in product.media -%}
-        <div class="item" >
-          <a href="{{product.url | within : collection}}">    
+        {%- for media in product.media -%}   
             {%-case media.media_type-%}
             {%- when 'image'-%}
-            <div class="quickview_product_img">
               <img src="{{media | img_url: '500x'}}" alt="{{ media.preview_image.alt | escape }}">
-            </div>
             {%- when 'external_video'-%} 
-            <div class="quickview_product_img slick-slide-video-item">
               {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
-            </div>
             {%- when 'video'-%}
-            <div class="quickview_product_img">
               {{ media |media_tag: image_size: "500x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
-            </div>
             {%-endcase-%}
-          </a>
-          </div>
           {%-endfor-%}
       </div>
         {%- unless hide_options and settings.show_quick_view == false and settings.show_atc == false -%}
