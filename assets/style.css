@@ -5871,21 +5871,11 @@ body #shopify-product-reviews {
     font-size: 15px;
     font-weight: 600;
     color: #6b6b6b;
-    padding: 15px 0;
-  	margin: 0 40px;
+    padding: 15px;
   	position:relative;
 }
 .yv-tab-item.active .yv-tab-link {
 	color: var(--theme-color);
-}
-.yv-tab-item.active .yv-tab-link:after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    background-color: var(--theme-color);
-    bottom: -3px;
-    height: 3px;
-    left: 0;
 }
 .yv-tab-content {
 	padding:30px 0;
