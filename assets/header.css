@@ -165,25 +165,25 @@ header {
   align-items: center;
 }
 #currency_form select {
-  border: none;
-  background: transparent;
-  font-weight: var(--medium);
+    border: none;
+    background: transparent;
+    font-weight: var(--medium);
     font-family: var(--font-family);
-      color: var(--black);
-        font-size: var(--med-text);
-          line-height: 32px;
-          letter-spacing: 0.5px;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none;
-          background: url(../images/menu-dropdown.svg);
-          background-repeat: no-repeat;
-          background-position: 100% center;
-          padding-right: 15px;
-          cursor: pointer;
-          min-width: 60px;
-          text-align: right;
-          }
+    color: var(--black);
+    font-size: var(--med-text);
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(../images/menu-dropdown.svg);
+    background-repeat: no-repeat;
+    background-position: 100% center;
+    padding-right: 15px;
+    cursor: pointer;
+    min-width: 60px;
+    text-align: right;
+}
 .currency-block .label-text {
   display: none;
 }
