@@ -16,13 +16,11 @@
           <div class="yv-testimonial-slider">
             <div id="testimonials-{{section.id}}" data-slider>
               {%- for block in section.blocks -%}
-              <div class="item slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
+              <div class="slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
                 <div class="slider-item">
-                  <div class="slider-box">
                     <h5 class="author">{{block.settings.author}}</h5>
                     <p class="testimonial-title">{{block.settings.message}}</p>
                   </div>
-                </div>
               </div>
               {% endfor %}
             </div>
