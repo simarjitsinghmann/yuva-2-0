@@ -17,7 +17,7 @@
                 {%- assign image_size = section.settings.logo_width -%}
               {% render 'lazy-image' image:section.settings.logo,class:'Yuva-logo',max_width:image_size %}  
           {% else %}
-          <span class="h2">{{ shop.name }}</span>
+          <span>{{ shop.name }}</span>
           {% endif %}
         </a>
         <div class="form-inline header-right">
