@@ -14,8 +14,8 @@
         </ul>
         <div class="yv-tab-content">
           <div class="yv-tab-pane">
-            <div class="products-grid ">
-              <div class="row column-{{section.settings.col_size}} product_columns">
+            <div class="products-grid">
+              <div class="row product_columns">
                 {%- assign limit = section.settings.col_size | times : section.settings.row_size  -%}
                 {%- if section.settings.collection != blank -%}
                 {%- assign collection = section.settings.collection -%}
