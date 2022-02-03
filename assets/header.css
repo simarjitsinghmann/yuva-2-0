@@ -94,30 +94,11 @@ header {
   background-color: transparent;
   image-rendering: -webkit-optimize-contrast;
 }
-.navbar {
-  position: static;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 0;
-  margin: 0;
-}
 .navbar-nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-  flex-wrap: wrap;
-  -ms-flex-direction: row;
-  flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
 }
 .header__icons {
     display: flex;
