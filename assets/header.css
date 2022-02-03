@@ -118,6 +118,16 @@ header {
   	max-width:80%;
     justify-content: center;
 }
+.nav-item .nav-link.list-menu__item {
+    position: relative;
+    display: inline-block;
+    padding: 13px 13px;
+    font-size: 15px;
+    line-height: 32px;
+    cursor: pointer;
+    text-transform: capitalize;
+    margin: 0 10px;
+}
 .header__icons {
     display: flex;
     align-items: center;
@@ -130,15 +140,60 @@ header {
   cursor: pointer;
   fill: currentColor;
 }
-.nav-item .nav-link.list-menu__item {
-    position: relative;
-    display: inline-block;
-    padding: 13px 13px;
-    font-size: 15px;
-    line-height: 32px;
-    cursor: pointer;
-    text-transform: capitalize;
-    margin: 0 10px;
+#currency_form select {
+  border: none;
+  background: transparent;
+  font-weight: var(--medium);
+    font-family: var(--font-family);
+      color: var(--black);
+        font-size: var(--med-text);
+          line-height: 32px;
+          letter-spacing: 0.5px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          background: url(../images/menu-dropdown.svg);
+          background-repeat: no-repeat;
+          background-position: 100% center;
+          padding-right: 15px;
+          cursor: pointer;
+          min-width: 60px;
+          text-align: right;
+          }
+.currency-block .label-text {
+  display: none;
+}
+.currency-block {
+  position: relative;
+}
+.currency-block .dropdown-menu {
+  background-color: var(--white);
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 3;
+    padding: 3px 0px 3px;
+    width: 100%;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 1px;
+    display: none;
+    }
+.currency-block .dropdown-menu a.dropdown-item {
+  width: 100%;
+  font-size: 12px;
+  padding: 3px 10px;
+  display: inline-block;
+}
+.currency-block .dropdown-menu a.dropdown-item:hover {
+  background: var(--gray);
+    }
+.currency-block .dropdown-toggle {
+  position: relative;
+  font-size: 12px;
+  background: var(--gray);
+  padding: 5px 36px 5px 12px;
+  min-width:100px;
 }
 .navbar .dropdown-toggle,
 .navbar .dropdown-menu a {
@@ -196,61 +251,7 @@ header {
     font-family: var(--font-family);
       opacity: 1;
       }
-#currency_form select {
-  border: none;
-  background: transparent;
-  font-weight: var(--medium);
-    font-family: var(--font-family);
-      color: var(--black);
-        font-size: var(--med-text);
-          line-height: 32px;
-          letter-spacing: 0.5px;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none;
-          background: url(../images/menu-dropdown.svg);
-          background-repeat: no-repeat;
-          background-position: 100% center;
-          padding-right: 15px;
-          cursor: pointer;
-          min-width: 60px;
-          text-align: right;
-          }
-.currency-block .label-text {
-  display: none;
-}
-.currency-block {
-  position: relative;
-}
-.currency-block .dropdown-menu {
-  background-color: var(--white);
-    position: absolute;
-    right: 0;
-    top: 100%;
-    z-index: 3;
-    padding: 3px 0px 3px;
-    width: 100%;
-    border: 1px solid #f0f0f0;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 1px;
-    display: none;
-    }
-.currency-block .dropdown-menu a.dropdown-item {
-  width: 100%;
-  font-size: 12px;
-  padding: 3px 10px;
-  display: inline-block;
-}
-.currency-block .dropdown-menu a.dropdown-item:hover {
-  background: var(--gray);
-    }
-.currency-block .dropdown-toggle {
-  position: relative;
-  font-size: 12px;
-  background: var(--gray);
-  padding: 5px 36px 5px 12px;
-  min-width:100px;
-}
+
 .header__icons .nav-wishlist a.wishlist,
 .wrapper-top-cart a,
 .customer-links a,
