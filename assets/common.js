@@ -1273,6 +1273,7 @@ $(document).ready(function()
     if(!$(this).hasClass('active')){   	
    		$('[product-grid-slider-wrapper]').removeClass('active'); 
    		$(this).addClass('active'); 
+      $(window).trigger('resize');
     }
   }, function(){ 
    $('[product-grid-slider-wrapper]').removeClass('active'); 
