@@ -1260,14 +1260,26 @@ $(document).ready(function()
     evt.preventDefault();
     $('body').removeClass('quickview-open');
   });
-$('[product-grid-slider]').slick({
-  dots: true,
-  infinite: true,
-  arrows:false,
-  speed: 500,
-  fade: true,
-  cssEase: 'linear'
-});
+  $('[product-grid-slider]').slick({
+    dots: true,
+    infinite: true,
+    arrows:false,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear'
+  });
+  var productGridSliderWrapper = false;
+  $('[ product-grid-slider-wrapper]').hover(function(){ 
+    productGridSliderWrapper=true; 
+  }, function(){ 
+    productGridSliderWrapper=false; 
+  });
+
+  $("body").mouseup(function(){ 
+    if(! mouse_is_inside) {
+    }
+  });
+  
 });
 
 
