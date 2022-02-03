@@ -17,44 +17,43 @@
         </ul>
         <div class="yv-tab-content">
           <div id="home" class="yv-tab-pane">
-            <h3>HOME</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-        </div>
-      </div>
-      <div class="products-grid ">
-        <div class="row column-{{section.settings.col_size}} product_columns">
-          {%- assign limit = section.settings.col_size | times : section.settings.row_size  -%}
-          {%- if section.settings.collection != blank -%}
-          {%- assign collection = section.settings.collection -%}
-          {%- for product in collection.products limit:limit -%}
-          {%- include 'product-grid' -%}
-          {%- endfor -%}
-          {%- else -%}
+            <div class="products-grid ">
+              <div class="row column-{{section.settings.col_size}} product_columns">
+                {%- assign limit = section.settings.col_size | times : section.settings.row_size  -%}
+                {%- if section.settings.collection != blank -%}
+                {%- assign collection = section.settings.collection -%}
+                {%- for product in collection.products limit:limit -%}
+                {%- include 'product-grid' -%}
+                {%- endfor -%}
+                {%- else -%}
 
-          {%- for i in (1..limit) -%}
-          <div class="grid-item col collection-product-grid">
-            <div class="card-wrapper">
-              <div class="card card--text-only card--soft card--product text__left">
-                <div class="card-wrapper-img ">
-                  {%- capture current -%}{% cycle 1, 2, 3, 4, 5, 6 %}{%- endcapture -%}
-                  {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
-                </div>
-                <div class="product-information">
-                  <div class="product-information__wrapper">
-                    <div class="caption-with-letter-spacing light">{{ 'onboarding.product_title' | t | capitalize }}</div>
-                    <div class="price__regular">
-                      <span data-regular-price>{{ 1999 | money}}</span>
+                {%- for i in (1..limit) -%}
+                <div class="grid-item col collection-product-grid">
+                  <div class="card-wrapper">
+                    <div class="card card--text-only card--soft card--product text__left">
+                      <div class="card-wrapper-img ">
+                        {%- capture current -%}{% cycle 1, 2, 3, 4, 5, 6 %}{%- endcapture -%}
+                        {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                      </div>
+                      <div class="product-information">
+                        <div class="product-information__wrapper">
+                          <div class="caption-with-letter-spacing light">{{ 'onboarding.product_title' | t | capitalize }}</div>
+                          <div class="price__regular">
+                            <span data-regular-price>{{ 1999 | money}}</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+                {%- endfor -%}
+                {%- endif -%}
               </div>
             </div>
           </div>
-          {%- endfor -%}
-          {%- endif -%}
         </div>
       </div>
+      
     </div>
   </div>
 </div>
