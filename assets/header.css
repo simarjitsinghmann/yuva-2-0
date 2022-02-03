@@ -126,6 +126,9 @@ header {
   margin-left: 20px;
   margin-right: 10px;
 }
+.header__icons > div:not(last-child) {
+  margin-right: 10px;
+}
 .header__icons svg {
   width: 19px;
   cursor: pointer;
