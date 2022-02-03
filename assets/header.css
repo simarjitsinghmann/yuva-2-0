@@ -157,6 +157,13 @@ header {
   text-decoration: none;
   position: relative;
 }
+.header__icons .nav-wishlist a.wishlist,
+.wrapper-top-cart a,
+.customer-links a,
+.search-form a {
+  display: flex;
+  align-items: center;
+}
 #currency_form select {
   border: none;
   background: transparent;
@@ -269,13 +276,7 @@ header {
       opacity: 1;
       }
 
-.header__icons .nav-wishlist a.wishlist,
-.wrapper-top-cart a,
-.customer-links a,
-.search-form a {
-  display: flex;
-  align-items: center;
-}
+
 .currency-block .dropdown-toggle:after {
   border-top: 1px solid #000;
   border-left: 1px solid #000;
