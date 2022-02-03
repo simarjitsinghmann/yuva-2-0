@@ -112,9 +112,6 @@ header {
   padding: 0;
   margin: 0;
 }
-.header_1 .navbar {
-    padding: 7px 0;
-}
 .navbar-collapse-sidebar .navbar-nav {
 	display:flex;
 }
@@ -223,6 +220,18 @@ header {
   padding: 5px 36px 5px 12px;
   min-width:100px;
 }
+/* header 1 changes */
+.header_1 .navbar {
+    padding: 7px 0;
+}
+
+/* header 2 chnages */
+.top-header .nav__header {
+  border-top: 1px solid #eaeaea;
+}
+
+
+
 .search-form .header-search__input {
   background: var(--search-background);
     width: 120px;
@@ -1021,9 +1030,7 @@ a:hover {
 .side-menu .card-wrapper-img a {
   padding:0!important;
 }
-.top-header .nav__header {
-  border-top: 1px solid #eaeaea;
-}
+
 
 .search-bar-container {
   z-index: 99999;
