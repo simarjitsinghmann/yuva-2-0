@@ -1275,10 +1275,6 @@ $(document).ready(function()
   }, function(){ 
     productGridSliderWrapper=false; 
   });
-
-  $("body").mouseup(function(e){ 
-    console.log('mouseup',e,e.target)
-  });
   
 });
 
