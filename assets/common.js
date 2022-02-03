@@ -1260,7 +1260,13 @@ $(document).ready(function()
     evt.preventDefault();
     $('body').removeClass('quickview-open');
   });
-
+$('[product-grid-slider]').slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear'
+});
 });
 
 
