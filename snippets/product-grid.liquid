@@ -13,7 +13,7 @@
   <div class="card-wrapper">
     <div class="card card--text-only card--soft card--product text__left">
       <div class="card-wrapper-img {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{% endunless %}" product-grid-slider-wrapper>
-      <div class="card-grid-product-images">
+      <div class="card-grid-product-images hidden">
         <a href="{{product.url | within : collection}}">
           {%- if product.featured_image != blank -%}
           {%- render 'lazy-image' image: product.featured_image -%}
@@ -26,7 +26,7 @@
         </a>
         
       </div>
-      <div class="card-wrapper-slider hidden" product-grid-slider>           
+      <div class="card-wrapper-slider " product-grid-slider>           
         {%- for media in product.media -%}
         <div class="item" >
           <a href="{{product.url | within : collection}}">    
