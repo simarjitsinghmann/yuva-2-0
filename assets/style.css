@@ -276,20 +276,11 @@ img {
    min-height: 500px;
    max-height: 500px;
 }
-.row.column-4.product_columns .card-wrapper-img {
-   min-height: 420px;
-   max-height: 420px;
-}
-.row.column-3.product_columns .card-wrapper-img {
-   min-height: 580px;
-   max-height: 580px;
-}
 #CollectionProductsContainer[data-view="grid-layout-2"]
    .products-grid
    .product_columns
    .grid-item
-   .card-wrapper-img,
-.row.column-2.product_columns .card-wrapper-img {
+   .card-wrapper-img{
    min-height: 650px;
    max-height: 650px;
 }
