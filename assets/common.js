@@ -1269,7 +1269,8 @@ $(document).ready(function()
     cssEase: 'linear'
   });
   var productGridSliderWrapper = false;
-  $('[ product-grid-slider-wrapper]').hover(function(e){ 
+  $('[ product-grid-slider-wrapper]').hover(function(){ 
+    console.log('testtt')
     if(!$(this).hasClass('active')){   	
    		$('[product-grid-slider-wrapper]').removeClass('active'); 
    		$(this).addClass('active'); 
