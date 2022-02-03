@@ -1,26 +1,26 @@
 <div class="top-header header_3">
-    <div class="container">
-            <div class="navbar navbar-expand-md">
-                {%- if section.settings.menu != blank or section.blocks.size > 0 -%}
-                <div class="nav__btn">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <span class="menu_title">{{'sections.header.menu' | t}}</span>
-                </div>
-                {% include 'side-menu' %}
-                {%- endif -%}
-                <a class="header__heading-link" href="{{ routes.root_url }}" aria-label="{{shop.name}}">
-                  {%- if section.settings.logo != blank -%}
-                {%- assign image_size = section.settings.logo_width -%}
-              {% render 'lazy-image' image:section.settings.logo,class:'Yuva-logo',max_width:image_size %}  
-                  {% else %}
-                  <span class="h2">{{ shop.name }}</span>
-                  {% endif %}
-                </a>
-                <div class="form-inline">
-                    {% include 'header-icons' %}
-                </div>
-            </div>
+  <div class="container">
+    <div class="navbar navbar-expand-md">
+      {%- if section.settings.menu != blank or section.blocks.size > 0 -%}
+      <div class="nav__btn">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <span class="menu_title">{{'sections.header.menu' | t}}</span>
+      </div>
+      {% include 'side-menu' %}
+      {%- endif -%}
+      <a class="header__heading-link" href="{{ routes.root_url }}" aria-label="{{shop.name}}">
+        {%- if section.settings.logo != blank -%}
+        {%- assign image_size = section.settings.logo_width -%}
+        {% render 'lazy-image' image:section.settings.logo,class:'Yuva-logo',max_width:image_size %}  
+        {% else %}
+        <span class="h2">{{ shop.name }}</span>
+        {% endif %}
+      </a>
+      <div class="form-inline">
+        {% include 'header-icons' %}
+      </div>
     </div>
+  </div>
 </div>
