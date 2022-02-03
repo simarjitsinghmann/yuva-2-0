@@ -232,7 +232,10 @@ header {
 .nav-top-header {
   padding: 20px 0;
 }
-
+.header_2 .header-right {
+  position: absolute;
+  right: 0;
+}
 
 .search-form .header-search__input {
   background: var(--search-background);
@@ -354,14 +357,7 @@ header {
 .navigation__header {
   position: relative;
 }
-.header_2 .header-right {
-  position: absolute;
-  right: 0;
-}
 
-.nav_2 .navbar {
-  padding: 0;
-}
 .navbar-nav .nav-item span.sf-menu__arrow {
   position: absolute;
   top: 51%;
