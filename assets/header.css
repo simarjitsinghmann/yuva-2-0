@@ -84,6 +84,16 @@ header {
 .nav-menu-btn {
   display: none;
 }
+.header__heading-link {
+  display:inherit;
+  align-items:center;
+}
+.header__heading-link img {
+  max-width: 250px;
+  margin: 0 auto;
+  background-color: transparent;
+  image-rendering: -webkit-optimize-contrast;
+}
 .navbar {
   position: static;
   display: -ms-flexbox;
@@ -1782,16 +1792,7 @@ div#mini__cartForm {
 .top-header .navbar#nav_style_2 form .header__icons {
   justify-content: flex-end;
 }
-.header__heading-link {
-  display:inherit;
-  align-items:center;
-}
-.header__heading-link img {
-  max-width: 250px;
-  margin: 0 auto;
-  background-color: transparent;
-  image-rendering: -webkit-optimize-contrast;
-}
+
 @media only screen and (min-width: 992px) {
   .navbar-expand-md .navbar-collapse {
     display: -ms-flexbox;
