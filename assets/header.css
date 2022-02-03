@@ -1894,10 +1894,15 @@ ul.grandchild::-webkit-scrollbar-thumb:hover,
     font-size: 14px;
     line-height: 30px;
     margin: 0 5px;
+  }
 }
+@media screen and (max-width:1199px){
+  .currency-block .dropdown-toggle {
+    min-width: 80px;
+  }
 }
 @media screen and (max-width:991px){
-.navbar-nav {
+  .navbar-nav {
     display: none;
-}
+  }
 }
