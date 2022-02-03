@@ -23,10 +23,10 @@
   </head>
   <body class="template_{{ template |handle }} loading breadcrumb-{{settings.enable_breadcrumb}}">
     <div class="wrapper"> 
-      <header id="headerSection">
+      <div id="headerSection">
         {% section 'announcement-bar' %}
         {% section 'header' %} 
-      </header>
+      </div>
       {%- if settings.enable_breadcrumb -%}
       {% include 'breadcrumb' %}      
       {%- endif -%}
