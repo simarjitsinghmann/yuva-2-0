@@ -14,18 +14,11 @@
         {%- if section.blocks.size > 0 -%}
         <div class="col-sm-12 col-md-12 col-lg-9">
           <div class="yv-testimonial-slider">
-            <div id="testimonials-{{section.id}}" class="testimonial-client-slide" data-slider>
+            <div id="testimonials-{{section.id}}" data-slider>
               {%- for block in section.blocks -%}
               <div class="item slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
                 <div class="slider-item">
                   <div class="slider-box">
-                    <div class="client-image">   
-                      {%- if block.settings.image != blank -%}         
-                      {%- render 'lazy-image' image:block.settings.image %}
-                      {%- else -%}
-                      {{ 'user-icon.svg' | asset_url | img_tag }}
-                      {%- endif -%}                    
-                    </div>
                     <h5 class="author">{{block.settings.author}}</h5>
                     <p class="testimonial-title">{{block.settings.message}}</p>
                   </div>
