@@ -108,6 +108,9 @@ header {
   padding: 0;
   margin: 0;
 }
+.header_1 .navbar {
+    padding: 7px 0;
+}
 .navbar-nav {
     display: flex;
     flex-wrap: wrap;
@@ -115,6 +118,7 @@ header {
   	max-width:80%;
     justify-content: center;
 }
+
 .header__icons {
     display: flex;
     align-items: center;
