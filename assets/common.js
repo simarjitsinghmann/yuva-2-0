@@ -1270,10 +1270,12 @@ $(document).ready(function()
   });
   var productGridSliderWrapper = false;
   $('[ product-grid-slider-wrapper]').hover(function(e){ 
-    console.log('hover',e,e.target)
-    productGridSliderWrapper=true; 
+    if(!$(this).hasClass('active')){   	
+   		$('[product-grid-slider-wrapper]').removeClass('active'); 
+   		$(this).addClass('active'); 
+    }
   }, function(){ 
-    productGridSliderWrapper=false; 
+   $('[product-grid-slider-wrapper]').removeClass('active'); 
   });
   
 });
