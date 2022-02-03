@@ -1890,3 +1890,9 @@ ul.grandchild::-webkit-scrollbar-thumb:hover,
     }
 /**End progress-bar**/
 /* header menu */
+/* header responsive  */
+@media screen and (max-width:991px){
+.navbar-nav {
+    display: none;
+}
+}
