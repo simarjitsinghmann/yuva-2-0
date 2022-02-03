@@ -81,9 +81,8 @@ header {
     animation-duration: 1s;
   animation-fill-mode: both;
 }
-.header__icons {
-    display: flex;
-    align-items: center;
+.nav-menu-btn {
+  display: none;
 }
 .navbar {
   position: static;
@@ -98,6 +97,11 @@ header {
   padding: 0;
   margin: 0;
 }
+.header__icons {
+    display: flex;
+    align-items: center;
+}
+
 .navbar-toggler:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
@@ -1919,6 +1923,3 @@ ul.grandchild::-webkit-scrollbar-thumb:hover,
     }
 /**End progress-bar**/
 /* header menu */
-.nav-menu-btn {
-  display: none;
-}
