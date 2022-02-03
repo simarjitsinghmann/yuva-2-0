@@ -14,7 +14,7 @@
         {%- if section.blocks.size > 0 -%}
         <div class="col-sm-12 col-md-12 col-lg-9">
           <div class="yv-testimonial-slider">
-            <div id="testimonials-{{section.id}}" data-slider>
+            <div id="testimonials-{{section.id}}">
               {%- for block in section.blocks -%}
               <div class="item slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
                 <div class="slider-item">
