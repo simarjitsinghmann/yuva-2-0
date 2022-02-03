@@ -118,10 +118,17 @@ header {
   	max-width:80%;
     justify-content: center;
 }
-
 .header__icons {
     display: flex;
     align-items: center;
+}
+.header__icons > div {
+  margin-left: 20px;
+}
+.header__icons svg {
+  width: 19px;
+  cursor: pointer;
+  fill: currentColor;
 }
 /* .navbar-toggler:not(:disabled):not(.disabled) {
   cursor: pointer;
@@ -141,7 +148,6 @@ header {
   content: "";
   background: none;
 } */
-
 .nav-item .nav-link.list-menu__item {
   position: relative;
   display: inline-block;
@@ -157,14 +163,6 @@ header {
   cursor: pointer;
 }
 
-.header__icons > div {
-  margin-left: 20px;
-}
-.header__icons svg {
-  width: 19px;
-  cursor: pointer;
-  fill: currentColor;
-}
 .search-form .header-search__input {
   background: var(--search-background);
     width: 120px;
