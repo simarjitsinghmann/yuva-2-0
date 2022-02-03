@@ -1269,14 +1269,15 @@ $(document).ready(function()
     cssEase: 'linear'
   });
   var productGridSliderWrapper = false;
-  $('[ product-grid-slider-wrapper]').hover(function(){ 
+  $('[ product-grid-slider-wrapper]').hover(function(e){ 
+    console.log('hover',e,e.target)
     productGridSliderWrapper=true; 
   }, function(){ 
     productGridSliderWrapper=false; 
   });
 
   $("body").mouseup(function(e){ 
-    console.log(e,e.targer)
+    console.log('mouseup',e,e.target)
   });
   
 });
