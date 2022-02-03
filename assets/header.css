@@ -264,6 +264,28 @@ header {
     padding: 21px 0;
 }
 /* header 3 chnages end */
+/* searchar css start */
+.search-bar-container {
+    z-index: 99999;
+    background-color: var(--white);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: 0.5s;
+    transform: translateY(-100%);
+}
+.addsearch .search-bar-container {
+    transition: 0.8s;
+    transform: translateY(0%);
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+    max-height:100%;
+    overflow:auto;
+}
+.addsearch .search-bar-box.search-box {
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 9%);
+}
+/* searchar css end */
 .search-form .header-search__input {
     background: var(--search-background);
     width: 120px;
