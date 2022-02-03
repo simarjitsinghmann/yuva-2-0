@@ -13,8 +13,7 @@
         </div>
         {%- if section.blocks.size > 0 -%}
         <div class="col-sm-12 col-md-12 col-lg-9">
-          <div class="client-slider">
-            <div class="testimonial-slider testimonial-variation2">
+            <div class="yv-testimonial-slider">
               <div id="testimonials-{{section.id}}" class="testimonial-client-slide" data-slider>
                 {%- for block in section.blocks -%}
                 <div class="item slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
@@ -37,7 +36,6 @@
 
             </div>
           </div>
-        </div>
         {%- endif -%}
       </div>
     </div>
@@ -52,7 +50,7 @@
           "autoplay":{{section.settings.rotate}},
           "arrows":{{section.settings.arrows}},
           "prevArrow":"<button type=\"button\" class=\"slick-prev\" aria-label=\"Prev\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M15.526 18.966L8.559 12l6.967-6.967\"></path></svg></span></button>",
-          "nextArrow":"<button type=\"button\" class=\"slick-next\" aria-label=\"Next\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M8.474 18.966L15.44 12 8.474 5.033\"></path></svg></span></button>",
+          "nextArrow":"<button type=\"button\" class=\"slick-next\" aria-label=\"Next\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M8.474 18.966L15.44 12 8.474 5.033\"></path></svg></span></button>"
         }
     </script>
   </div>
