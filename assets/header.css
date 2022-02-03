@@ -131,14 +131,14 @@ header {
   fill: currentColor;
 }
 .nav-item .nav-link.list-menu__item {
-  position: relative;
-  display: inline-block;
-  padding: 13px 15px;
-  font-size: 13px;
-  margin: 0 8px;
-  line-height: 32px;
-  cursor:pointer;
-  text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding: 13px 13px;
+    font-size: 15px;
+    line-height: 32px;
+    cursor: pointer;
+    text-transform: capitalize;
+    margin: 0 10px;
 }
 .navbar .dropdown-toggle,
 .navbar .dropdown-menu a {
