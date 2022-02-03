@@ -18,7 +18,7 @@
     </span>
     </span>
  
-  {%- else -%} <a class="list-menu__item" href="{{ link.url }}">{{link.title | split:"{badge" | first | escape | capitalize }}</a>
+  {%- else -%} <a class="nav-link list-menu__item" href="{{ link.url }}">{{link.title | split:"{badge" | first | escape | capitalize }}</a>
     {%- endif -%}                              
   {%- if link.links != blank or menuDropdown -%}
   <div class="sub-menu">
