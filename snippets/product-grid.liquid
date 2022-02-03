@@ -12,8 +12,7 @@
 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
   <div class="card-wrapper">
     <div class="card card--text-only card--soft card--product text__left">
-      <div class="card-wrapper-img {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{% endunless %}" product-grid-slider-wrapper>
-      <div class="card-grid-product-images ">
+      <div class="card-wrapper-img {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{% endunless %} ">
         <a href="{{product.url | within : collection}}">
           {%- if product.featured_image != blank -%}
           {%- render 'lazy-image' image: product.featured_image -%}
@@ -24,30 +23,6 @@
           {%- render 'placeholder' -%}
           {%- endif -%}
         </a>
-        
-      </div>
-      <div class="card-wrapper-slider hidden" product-grid-slider>           
-        {%- for media in product.media -%}
-        <div class="item" >
-          <a href="{{product.url | within : collection}}">    
-            {%-case media.media_type-%}
-            {%- when 'image'-%}
-            <div class="quickview_product_img">
-              <img src="{{media | img_url: '500x'}}" alt="{{ media.preview_image.alt | escape }}">
-            </div>
-            {%- when 'external_video'-%} 
-            <div class="quickview_product_img slick-slide-video-item">
-              {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
-            </div>
-            {%- when 'video'-%}
-            <div class="quickview_product_img">
-              {{ media |media_tag: image_size: "500x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
-            </div>
-            {%-endcase-%}
-          </a>
-          </div>
-          {%-endfor-%}
-      </div>
         {%- unless hide_options and settings.show_quick_view == false and settings.show_atc == false -%}
        <div class="shop__options">
           <div class="product__view__option">
@@ -116,7 +91,6 @@
         </div>
         {%- endif -%}
       </div>
-
       <div class="product-information">
         <div class="product-information__wrapper">
           <a href="{{product.url | within: collection}}" class="caption-with-letter-spacing light" title="{{product.title}}">{{product.title}}</a>
