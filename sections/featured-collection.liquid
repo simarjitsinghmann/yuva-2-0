@@ -15,43 +15,46 @@
           <button class="yv-tab-link" onclick="openCity(event, 'Paris')">Paris</button>
           <button class="yv-tab-link" onclick="openCity(event, 'Tokyo')">Tokyo</button>
         </div>
-		<div class="yv-tab-content">
-        
+        <div class="yv-tab-content">
+          <div id="home" class="tab-pane fade in active">
+            <h3>HOME</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
         </div>
       </div>
-        <div class="products-grid ">
-          <div class="row column-{{section.settings.col_size}} product_columns">
-            {%- assign limit = section.settings.col_size | times : section.settings.row_size  -%}
-            {%- if section.settings.collection != blank -%}
-            {%- assign collection = section.settings.collection -%}
-            {%- for product in collection.products limit:limit -%}
-            {%- include 'product-grid' -%}
-            {%- endfor -%}
-            {%- else -%}
+      <div class="products-grid ">
+        <div class="row column-{{section.settings.col_size}} product_columns">
+          {%- assign limit = section.settings.col_size | times : section.settings.row_size  -%}
+          {%- if section.settings.collection != blank -%}
+          {%- assign collection = section.settings.collection -%}
+          {%- for product in collection.products limit:limit -%}
+          {%- include 'product-grid' -%}
+          {%- endfor -%}
+          {%- else -%}
 
-            {%- for i in (1..limit) -%}
-            <div class="grid-item col collection-product-grid">
-              <div class="card-wrapper">
-                <div class="card card--text-only card--soft card--product text__left">
-                  <div class="card-wrapper-img ">
-                    {%- capture current -%}{% cycle 1, 2, 3, 4, 5, 6 %}{%- endcapture -%}
-                    {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
-                  </div>
-                  <div class="product-information">
-                    <div class="product-information__wrapper">
-                      <div class="caption-with-letter-spacing light">{{ 'onboarding.product_title' | t | capitalize }}</div>
-                      <div class="price__regular">
-                        <span data-regular-price>{{ 1999 | money}}</span>
-                      </div>
+          {%- for i in (1..limit) -%}
+          <div class="grid-item col collection-product-grid">
+            <div class="card-wrapper">
+              <div class="card card--text-only card--soft card--product text__left">
+                <div class="card-wrapper-img ">
+                  {%- capture current -%}{% cycle 1, 2, 3, 4, 5, 6 %}{%- endcapture -%}
+                  {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+                <div class="product-information">
+                  <div class="product-information__wrapper">
+                    <div class="caption-with-letter-spacing light">{{ 'onboarding.product_title' | t | capitalize }}</div>
+                    <div class="price__regular">
+                      <span data-regular-price>{{ 1999 | money}}</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            {%- endfor -%}
-            {%- endif -%}
           </div>
+          {%- endfor -%}
+          {%- endif -%}
         </div>
+      </div>
     </div>
   </div>
 </div>
@@ -69,98 +72,98 @@
 </style>
 {% schema %}
 {
-  "name": "t:sections.featured-collection.name",
-  "tag": "section",
-  "class":"latest__sale featured-collection-section",
-  "settings": [
-    {
-      "type": "text",
-      "id": "subheading",
-      "default": "Add Featured Collection here",
-      "label": "t:sections.featured-collection.settings.heading.label"
-    },
-    {
-      "type": "text",
-      "id": "heading",
-      "default": "All Products",
-      "label": "t:sections.featured-collection.settings.subheading.label"
-    },
-    {
-      "type": "collection",
-      "id": "collection",
-      "label": "t:sections.featured-collection.settings.collection.label"
-    },
-    {
-        "type": "range",
-        "id": "col_size",
-        "min": 2,
-        "max": 5,
-        "step": 1,
-        "label": "t:sections.featured-collection.settings.col_size.label",
-        "default": 5
-    },
-    {
-        "type": "range",
-        "id": "row_size",
-        "min": 1,
-        "max": 5,
-        "step": 1,
-        "label": "t:sections.featured-collection.settings.row_size.label",
-        "default": 1
-    },
-    {
-      "type": "checkbox",
-      "id": "view_all_btn",
-      "default": false,
-      "label": "t:sections.featured-collection.settings.view_all_btn.label"
-    },
-    {
-      "type": "text",
-      "id": "view_all_btn_text",
-      "default": "View all",
-      "label": "t:sections.featured-collection.settings.view_all_btn_text.label"
-    },
-    {
-      "type": "range",
-      "id": "top_space_desktop",
-      "label": "t:sections.featured-collection.settings.top_space_desktop.label",
-      "default":30,
-      "min":0,
-      "max":60,
-      "step":5
-    },
-    {
-      "type": "range",
-      "id": "bottom_space_desktop",
-      "label": "t:sections.featured-collection.settings.bottom_space_desktop.label",
-      "default":30,
-      "min":0,
-      "max":60,
-      "step":5
-    },
-    {
-      "type": "range",
-      "id": "top_space_mobile",
-      "label": "t:sections.featured-collection.settings.top_space_mobile.label",
-      "default":20,
-      "min":0,
-      "max":60,
-      "step":5
-    },
-    {
-      "type": "range",
-      "id": "bottom_space_mobile",
-      "label": "t:sections.featured-collection.settings.bottom_space_mobile.label",
-      "default":0,
-      "min":0,
-      "max":60,
-      "step":5
-    }
-  ],
-  "presets": [
-    {
-      "name": "t:sections.featured-collection.presets.name"
-    }
-  ]
+"name": "t:sections.featured-collection.name",
+"tag": "section",
+"class":"latest__sale featured-collection-section",
+"settings": [
+{
+"type": "text",
+"id": "subheading",
+"default": "Add Featured Collection here",
+"label": "t:sections.featured-collection.settings.heading.label"
+},
+{
+"type": "text",
+"id": "heading",
+"default": "All Products",
+"label": "t:sections.featured-collection.settings.subheading.label"
+},
+{
+"type": "collection",
+"id": "collection",
+"label": "t:sections.featured-collection.settings.collection.label"
+},
+{
+"type": "range",
+"id": "col_size",
+"min": 2,
+"max": 5,
+"step": 1,
+"label": "t:sections.featured-collection.settings.col_size.label",
+"default": 5
+},
+{
+"type": "range",
+"id": "row_size",
+"min": 1,
+"max": 5,
+"step": 1,
+"label": "t:sections.featured-collection.settings.row_size.label",
+"default": 1
+},
+{
+"type": "checkbox",
+"id": "view_all_btn",
+"default": false,
+"label": "t:sections.featured-collection.settings.view_all_btn.label"
+},
+{
+"type": "text",
+"id": "view_all_btn_text",
+"default": "View all",
+"label": "t:sections.featured-collection.settings.view_all_btn_text.label"
+},
+{
+"type": "range",
+"id": "top_space_desktop",
+"label": "t:sections.featured-collection.settings.top_space_desktop.label",
+"default":30,
+"min":0,
+"max":60,
+"step":5
+},
+{
+"type": "range",
+"id": "bottom_space_desktop",
+"label": "t:sections.featured-collection.settings.bottom_space_desktop.label",
+"default":30,
+"min":0,
+"max":60,
+"step":5
+},
+{
+"type": "range",
+"id": "top_space_mobile",
+"label": "t:sections.featured-collection.settings.top_space_mobile.label",
+"default":20,
+"min":0,
+"max":60,
+"step":5
+},
+{
+"type": "range",
+"id": "bottom_space_mobile",
+"label": "t:sections.featured-collection.settings.bottom_space_mobile.label",
+"default":0,
+"min":0,
+"max":60,
+"step":5
+}
+],
+"presets": [
+{
+"name": "t:sections.featured-collection.presets.name"
+}
+]
 }
 {% endschema %}
