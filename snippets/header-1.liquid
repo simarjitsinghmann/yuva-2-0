@@ -1,34 +1,34 @@
 <div class="top-header header_1">
-    <div class="container">
-            <div class="navbar navbar-expand-md header__inline-menu" role="navigation">
-                {%- if section.settings.menu != blank  -%}
-                <div id="nav_style_4" class="nav-menu-btn">
-                <div class="nav__btn">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>              
-                {% include 'side-menu' mobileMenu:true %}
-                </div>
-              {%- endif -%}
-              <a class="header__heading-link" href="{{ routes.root_url }}" aria-label="{{shop.name}}">
-                {%- if section.settings.logo != blank -%}
-                {%- assign image_size = section.settings.logo_width -%}
-              {% render 'lazy-image' image:section.settings.logo,class:'Yuva-logo',max_width:image_size %}                
-                {% else %}
-                <span class="h2">{{ shop.name }}</span>
-                {% endif %}
-              </a>
-                {%- if section.settings.menu != blank-%}
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav list-menu list-menu--inline">					
-                        {% include 'nav-item' %}
-                    </ul>
-                </div>
-                {%- endif -%}
-                <div class="form-inline mt-2 mt-md-0">
-                    {% include 'header-icons' %}
-                </div>
-            </div>
+  <div class="container">
+    <div class="navbar navbar-expand-md header__inline-menu" role="navigation">
+      {%- if section.settings.menu != blank  -%}
+      <div id="nav_style_4" class="nav-menu-btn">
+        <div class="nav__btn">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>              
+        {% include 'side-menu' mobileMenu:true %}
+      </div>
+      {%- endif -%}
+      <a class="header__heading-link" href="{{ routes.root_url }}" aria-label="{{shop.name}}">
+        {%- if section.settings.logo != blank -%}
+        {%- assign image_size = section.settings.logo_width -%}
+        {% render 'lazy-image' image:section.settings.logo,class:'Yuva-logo',max_width:image_size %}                
+        {% else %}
+        <span class="h2">{{ shop.name }}</span>
+        {% endif %}
+      </a>
+      {%- if section.settings.menu != blank-%}
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav list-menu list-menu--inline">					
+          {% include 'nav-item' %}
+        </ul>
+      </div>
+      {%- endif -%}
+      <div class="form-inline mt-2 mt-md-0">
+        {% include 'header-icons' %}
+      </div>
     </div>
+  </div>
 </div>
