@@ -1275,9 +1275,8 @@ $(document).ready(function()
     productGridSliderWrapper=false; 
   });
 
-  $("body").mouseup(function(){ 
-    if(! mouse_is_inside) {
-    }
+  $("body").mouseup(function(e){ 
+    console.log(e,e.targer)
   });
   
 });
