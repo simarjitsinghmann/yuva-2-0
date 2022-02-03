@@ -72,11 +72,12 @@ div#countdown {
   position: relative;
 }
 /*======================== header menu css start ==================*/
+header {
+  width: 100%;
+}
 #shopify-section-header {
   z-index: 999;
 }
-
-
 .navbar {
   position: static;
   display: -ms-flexbox;
@@ -112,7 +113,6 @@ div#countdown {
   -ms-flex-direction: row;
   flex-direction: row;
 }
-
 .top-header .navbar {
   width: 100%;
 }
@@ -1018,11 +1018,6 @@ a:hover {
 }
 .custom_login {
   padding: 30px 30px;
-}
-
-header {
-  background: #fff;
-  width: 100%;
 }
 .side-menu .card-wrapper-img a {
   padding:0!important;
