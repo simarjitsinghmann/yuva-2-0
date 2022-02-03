@@ -5866,7 +5866,7 @@ body #shopify-product-reviews {
 .yv-tabs.align-end {
 	justify-content: flex-end;
 }
-.yv-tab-link {
+.yv-tab-link:not(:last-child) {
   	display:inline-block;
     font-size: 15px;
     font-weight: 600;
