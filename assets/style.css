@@ -5740,7 +5740,7 @@ body #shopify-product-reviews {
 }
 .yv-testimonial-slider {
     max-width: 75%;
-  	padding:0 60px
+  	padding:20px 60px
 }
 .yv-testimonial-feature-text {
     display: inline-block;
@@ -5760,5 +5760,9 @@ body #shopify-product-reviews {
     vertical-align: revert;
     display: inline-block;
     margin-right: 5px;
+}
+.yv-testimonial-slider .slick-arrow {
+    position: absolute;
+    bottom: 0;
 }
 /*===============testimonial section css end=============*/
