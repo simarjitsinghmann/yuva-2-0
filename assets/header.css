@@ -191,7 +191,7 @@ header {
   position: relative;
 }
 .currency-block .dropdown-menu {
-  background-color: var(--white);
+    background-color: var(--white);
     position: absolute;
     right: 0;
     top: 100%;
@@ -202,7 +202,7 @@ header {
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
     border-radius: 1px;
     display: none;
-    }
+}
 .currency-block .dropdown-menu a.dropdown-item {
   width: 100%;
   font-size: 12px;
@@ -211,7 +211,7 @@ header {
 }
 .currency-block .dropdown-menu a.dropdown-item:hover {
   background: var(--gray);
-    }
+}
 .currency-block .dropdown-toggle {
   position: relative;
   font-size: 12px;
