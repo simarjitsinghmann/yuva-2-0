@@ -20,11 +20,9 @@
         {% endif %}
       </a>
       {%- if section.settings.menu != blank-%}
-      <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav list-menu list-menu--inline">					
           {% include 'nav-item' %}
         </ul>
-      </div>
       {%- endif -%}
       <div class="form-inline mt-2 mt-md-0">
         {% include 'header-icons' %}
