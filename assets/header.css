@@ -257,6 +257,10 @@ header {
   max-width:100%;
   justify-content:flex-start;
 }
+.header_2 .nav-item .list-menu__item {
+    margin-right: 10px;
+    margin-left: 0;
+}
 /* header 2 chnages end */
 /* header 3 chnages start */
 .top-header.header_3 {
@@ -334,13 +338,6 @@ header {
 .site-nav-dropdown .row {
   margin: 0;
   align-items: flex-start;
-}
-.header_2 .navbar-expand-md .nav-item .list-menu__item {
-  padding: 7px 14px 7px 0;
-  margin-right: 35px;
-  font-size: 12px;
-  line-height: 30px;
-  margin-left: 0;
 }
 .navbar-nav .nav-item span.sf-menu__arrow {
   position: absolute;
