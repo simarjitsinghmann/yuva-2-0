@@ -1885,7 +1885,10 @@ ul.grandchild::-webkit-scrollbar-thumb:hover,
 @media screen and (max-width:1440px){
   .header__icons>div {
     margin-left: 20px;
-}
+  }
+  .navbar-nav {
+    max-width: 90%;
+  }
 }
 @media screen and (max-width:991px){
 .navbar-nav {
