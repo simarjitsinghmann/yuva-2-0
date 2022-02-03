@@ -81,6 +81,10 @@ header {
     animation-duration: 1s;
   animation-fill-mode: both;
 }
+.header__icons {
+    display: flex;
+    align-items: center;
+}
 .navbar {
   position: static;
   display: -ms-flexbox;
