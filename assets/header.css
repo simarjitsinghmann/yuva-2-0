@@ -136,26 +136,26 @@ header {
   margin-left: 30px;
 }
 .header__icons svg {
-  width: 19px;
-  cursor: pointer;
-  fill: currentColor;
+    width: 19px;
+    cursor: pointer;
+    fill: currentColor;
 }
 
-.header__icons .wrapper-top-cart span.cartCount {
-  width: 14px;
-  height: 14px;
-  background: var(--cartDotColor);
+.header__icons .wrapper-top-cart .cartCount {
+    width: 14px;
+    height: 14px;
+    background: var(--cartDotColor);
     color: var(--cartDotText);
-      position: absolute;
-      right: -5px;
-      top: -5px;
-      font-size: 0;
-      border-radius: 100%;
-      border: 2px solid #fff;
-      }
-.header__icons .wrapper-top-cart a.cart-icon {
-  text-decoration: none;
-  position: relative;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    font-size: 0;
+    border-radius: 100%;
+    border: 2px solid #fff;
+}
+.header__icons .wrapper-top-cart .cart-icon {
+    text-decoration: none;
+    position: relative;
 }
 .header__icons .nav-wishlist a.wishlist,
 .wrapper-top-cart a,
