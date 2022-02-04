@@ -1,10 +1,10 @@
 <div class="col-12 col-sm-12 {{mainclasses}}">
-  <div class="post-wrapper">
+  <div class="yv-blog-card">
     {%- assign article_image = 'featured_image.png' | asset_url -%}
     {%- if article.image -%}
     {%- assign article_image = article.image -%}
     {%- endif -%}
-    <div class="post-information-image">
+    <div class="yv-blog-card-img post-information-image">
       <a href="{{-article.url-}}" class="animate_hvrbr">                    
         {%- if article.image != blank -%}
         {%- include 'lazy-image' image:article_image -%}
