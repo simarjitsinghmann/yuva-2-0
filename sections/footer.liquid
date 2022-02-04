@@ -51,7 +51,6 @@
         {%- for block in section.blocks -%}
         {%- case block.type -%}
         {%- when 'newsletter'-%}
-        <div class="col-sm-12 col-md-12 col-lg-4" {{ block.shopify_attributes }}>
           <div class="newsletter-box">
             {%- if block.settings.show_newsletter -%}
             {%- form 'customer', id: 'ContactFooter',class:'footer__newsletter newsletter-form' -%}
@@ -95,7 +94,6 @@
             {%- include 'social-media-icons' -%}
             {%- endif -%}
           </div>
-        </div>
         {%- endcase -%}
         {%- endfor -%}
       </div>
