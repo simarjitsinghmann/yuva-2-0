@@ -26,14 +26,17 @@ footer img {
       transition: all .3s ease;
   position:relative;
 }
-.yv-footer-newsletter-form input {
+.yv-footer-newsletter-wrapper {
+	position:relative;
+}
+.yv-footer-newsletter-wrapper input {
     padding: 13px 40px 13px 0;
     height: auto;
     font-size: 13px;
     color: var(--gray);
     border-bottom: 1px solid #585858;
 }
-.yv-footer-newsletter-form button {
+.yv-footer-newsletter-wrapper button {
    text-transform: none;
    top: 0;
    position: absolute;
