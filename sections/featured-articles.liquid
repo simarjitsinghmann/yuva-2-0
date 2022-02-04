@@ -30,13 +30,13 @@
             {%- else -%}
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
               <div class="yv-blog-card">               
-                  <div class="post-information-image">
+                  <div class="yv-blog-card-img">
                     {% render 'placeholder' %}
                   </div>
-                  <div class="yv-blog-card-text">
-                      <span class="yv-blog-date">{{'sections.featured_article.onboarding_date' | t}}</span>
-                      <a class="yv-blog-title" href="">{{'sections.featured_article.onboarding_title' | t}}</a>
-                  </div>
+                <div class="yv-blog-card-text">
+                  <span class="yv-blog-date">{{'sections.featured_article.onboarding_date' | t}}</span>
+                  <a class="yv-blog-title" href="">{{'sections.featured_article.onboarding_title' | t}}</a>
+                </div>
               </div>
             </div>
             {%- endif -%}
