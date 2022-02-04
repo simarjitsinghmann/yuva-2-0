@@ -144,34 +144,6 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "13d7696e-34c9-4596-918d-a7f54c72d486": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Most purchase",
-              "menu": "new-menu"
-            }
-          },
-          "2eb4c084-f5d5-4960-a3c5-afe63900e6c9": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Featured Products",
-              "menu": "kids-fashion"
-            }
-          },
-          "7a4ba778-edc6-414e-9ba9-35df7a860199": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Most Viewed",
-              "menu": "footer"
-            }
-          },
-          "e974d7a5-14bd-4c2b-8da6-8729ad4cbf55": {
-            "type": "link_list",
-            "settings": {
-              "heading": "Quick links",
-              "menu": "main-menu"
-            }
-          },
           "57f704b8-298e-4d7d-ad9d-379725cd6fc6": {
             "type": "newsletter",
             "settings": {
@@ -181,14 +153,18 @@
               "placeholder": "Email address",
               "show_social": true
             }
+          },
+          "d419c63b-7e8e-4e57-a615-5c956b9ee4e7": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Most purchase",
+              "menu": "footer"
+            }
           }
         },
         "block_order": [
-          "13d7696e-34c9-4596-918d-a7f54c72d486",
-          "2eb4c084-f5d5-4960-a3c5-afe63900e6c9",
-          "7a4ba778-edc6-414e-9ba9-35df7a860199",
-          "e974d7a5-14bd-4c2b-8da6-8729ad4cbf55",
-          "57f704b8-298e-4d7d-ad9d-379725cd6fc6"
+          "57f704b8-298e-4d7d-ad9d-379725cd6fc6",
+          "d419c63b-7e8e-4e57-a615-5c956b9ee4e7"
         ],
         "settings": {
           "image": "shopify:\/\/shop_images\/Asset_4.png",
