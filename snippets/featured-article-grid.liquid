@@ -4,15 +4,13 @@
     {%- if article.image -%}
     {%- assign article_image = article.image -%}
     {%- endif -%}
-    <div class="yv-blog-card-img">
-      <a href="{{-article.url-}}" class="animate_hvrbr">                    
-        {%- if article.image != blank -%}
-        {%- include 'lazy-image' image:article_image -%}
-        {%- else -%}
-        {%- render 'placeholder' %}
+    <a href="{{-article.url-}}" class="yv-blog-card-img animate_hvrbr">                    
+      {%- if article.image != blank -%}
+      {%- include 'lazy-image' image:article_image -%}
+      {%- else -%}
+      {%- render 'placeholder' %}
                   {%- endif -%}
-      </a>
-    </div>
+    </a>
     <div class="post-information__wrapper text__left">
       <div class="post-date">
         <span class="custom-title">{{article.published_at | date: "%d" }} {{article.published_at | date: " %b %Y" }} </span>
