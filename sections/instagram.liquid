@@ -39,7 +39,7 @@
       accessToken: '{{ section.settings.insta_access_Token}}',
       limit: 6,
       resolution : 'standard_resolution',
-      template:'<li><a href="{% raw %}{{link}}{% endraw %}" aria-label="Instagram Post"><div class="instagram-post-detail"><img src="{% raw %}{{image}}{% endraw %}" alt="{{caption}}"><div class="insta-icon"><i class="fab fa-instagram"></i></div></div></a></li>'
+      template:'<li><a class="yv-instagram-post-detail" href="{% raw %}{{link}}{% endraw %}" aria-label="Instagram Post"><img src="{% raw %}{{image}}{% endraw %}" alt="{{caption}}"><div class="insta-icon"><i class="fab fa-instagram"></i></div></a></li>'
     });
     userFeed.run();
     setTimeout(function(){ 
