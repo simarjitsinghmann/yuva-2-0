@@ -1,25 +1,23 @@
 <div class="yv-footer-top-box {% unless section.settings.image != blank %}no-footer-logo{% endunless %}">
   <div class="container">
-    <div class="footer-logo-box">
-      <div class="row align-items-center">
-        {%- assign footlogo = false -%}
-        {%- if section.settings.image != blank -%}
-        {%- assign footlogo = true -%}
-        <div class="col-sm-12 col-md-3 col-lg-2">
-          <div class="yv-footer-logo">
-            {%- assign width = section.settings.image_width | append:'px' -%}
-              {% render 'lazy-image' image:section.settings.image,class:'Yuva-logo',max_width:width %}
-          </div>
+    <div class="row align-items-center">
+      {%- assign footlogo = false -%}
+      {%- if section.settings.image != blank -%}
+      {%- assign footlogo = true -%}
+      <div class="col-sm-12 col-md-3 col-lg-2">
+        <div class="yv-footer-logo">
+          {%- assign width = section.settings.image_width | append:'px' -%}
+          {% render 'lazy-image' image:section.settings.image,class:'Yuva-logo',max_width:width %}
         </div>
-        {%- endif -%}
-        {%- if section.settings.subtext != blank -%}
-        <div class="col-sm-12 {% if footlogo %}col-md-7{% else %}col-md-10{%endif%}">
-          <div class="yv-footer-content">
-            {{ section.settings.subtext }}
-          </div>
-        </div>
-        {%- endif -%}
       </div>
+      {%- endif -%}
+      {%- if section.settings.subtext != blank -%}
+      <div class="col-sm-12 {% if footlogo %}col-md-7{% else %}col-md-8{%endif%}">
+        <div class="yv-footer-content">
+          {{ section.settings.subtext }}
+        </div>
+      </div>
+      {%- endif -%}
     </div>
   </div>
 </div> 
