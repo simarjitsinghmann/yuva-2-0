@@ -11,16 +11,14 @@
       <ul class="yv-instagram-post">
         {%- for i in (1..6) -%}
         <li>
-          <a>
-            <div class="instagram-post-detail">
-              <div class="insta-placeholder">
-                {% render 'placeholder' %}
-              </div>
-              <div class="insta-icon">
-                <i class="fab fa-instagram"></i>
-              </div>
+          <div class="yv-instagram-post-detail">
+            <div class="insta-placeholder">
+              {% render 'placeholder' %}
             </div>
-          </a>
+            <div class="insta-icon">
+              <i class="fab fa-instagram"></i>
+            </div>
+          </div>
         </li>
         {%- endfor -%}
       </ul>
