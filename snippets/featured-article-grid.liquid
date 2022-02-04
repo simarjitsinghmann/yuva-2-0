@@ -14,7 +14,7 @@
     <div class="yv-blog-card-text">
       <span class="yv-blog-date">{{article.published_at | date: "%d" }} {{article.published_at | date: " %b %Y" }} </span>
       <div class="post-name">
-        <a href="{{article.url}}">{{article.title| truncatewords: 6}}</a>
+        <a class="yv-blog-title" href="{{article.url}}">{{article.title| truncatewords: 6}}</a>
       </div>
     </div>
   </div>
