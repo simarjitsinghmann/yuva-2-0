@@ -139,9 +139,6 @@
   .yv-footer-bottom-box {
     padding: 30px 0;
   }
-  .yv-footer-payment-box {
-    justify-content: flex-start;
-  }
   .yv-newsletter-text {
     display: none;
   }
@@ -151,7 +148,10 @@
   }
 }
 @media screen and (max-width: 991px){
-.yv-newsletter-outerbox {
+  .yv-newsletter-outerbox {
     margin-bottom: 30px;
-}
+  }
+  .yv-footer-payment-box {
+    justify-content: center;
+  }
 }
