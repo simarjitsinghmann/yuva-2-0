@@ -51,6 +51,8 @@
         {%- for block in section.blocks -%}
         {%- case block.type -%}
         {%- when 'newsletter'-%}
+        <div class="yv-newsletter-wrapper">
+          
         <div class="yv-footer-newsletter-box">
           {%- if block.settings.show_newsletter -%}
           {%- form 'customer', id: 'ContactFooter',class:'yv-footer-newsletter-form newsletter-form' -%}
@@ -87,6 +89,7 @@
           {%- endif -%}
           {%- endform -%}
           {%- endif -%}
+        </div>
         </div>
         {%- endcase -%}
         {%- endfor -%}
