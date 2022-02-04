@@ -5834,10 +5834,19 @@ input:checked
     display: flex;
     align-items: center;
     width: 100%;
+      position:relative;
 }
 .yv-collection-item img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.yv-collection-name {
+    position: absolute;
+    bottom: 3%;
+    left: 5%;
+    width: 90%;
+    background-color: #fff;
+    padding: 20px;
 }
 /* ============== featured collection section css end ============ */
