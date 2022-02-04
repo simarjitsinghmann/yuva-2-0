@@ -66,36 +66,9 @@ footer img {
     background-color: var(--theme-color);
     min-width: 130px;
 }
-.social-links {
-   margin-top: 30px;
-}
-.social-links ul li {
-   width: 30px;
-   height: 30px;
-   background: transparent;
-   text-align: center;
-   display: inline-block;
-   margin-right: 10px;
-   color: #fff;
-}
-.social-links ul li:last-child {
-   margin-right: 0px;
-}
-.social-links ul li a {
-   text-decoration: none;
-   color: #fff;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 100%;
-}
-.footer-copyright-box {
-	display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.footer-copyright {
+.yv-footer-payment-box {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
 }
 .list-payment {
