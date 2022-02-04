@@ -38,21 +38,17 @@ footer img {
     background-color: rgba(62, 62, 62, 0.22);
 }
 .yv-footer-newsletter-wrapper button {
-   text-transform: none;
-   top: 0;
-   position: absolute!important;
-   right: 0;
-   font-size: 13px;
-   line-height: 22px;
-   padding: 0;
-   height: 100%;
-   min-width: auto;
-   background: 0 0;
-   min-height: 46px;
-   border: 0;
-}
-.newsletter-box img {
-    max-width: 15px;
+    text-transform: none;
+    top: 0;
+    position: absolute!important;
+    right: 0;
+    font-size: 13px;
+    line-height: 22px;
+    height: 100%;
+    background: 0 0;
+    border: 0;
+    background-color: var(--theme-color);
+    min-width: 130px;
 }
 .social-links {
    margin-top: 30px;
