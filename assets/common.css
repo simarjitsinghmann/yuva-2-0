@@ -732,12 +732,15 @@ label {
     max-width: 1500px;
   }
   .md-container {
-    max-width:1480px;
+    max-width:1350px;
   }
 }
 @media only screen and (min-width:1650px){
   .container {
     max-width: 1700px;
+  }
+  .md-container {
+    max-width:1480px;
   }
 }
 .form-group {
