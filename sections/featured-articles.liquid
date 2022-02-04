@@ -15,7 +15,7 @@
             {%- for block in section.blocks -%}  
             {%- if block.settings.article != blank -%}  
             {%- assign article = block.settings.article -%}
-            {%- include 'featured-article-grid' -%}
+            {%- include 'featured-article-grid' block:block -%}
             {%- else -%}
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
               <div class="post-wrapper">               
