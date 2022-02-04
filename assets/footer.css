@@ -136,10 +136,14 @@
   }
 }
 @media screen and (max-width: 1199px){
-  .yv-newsletter-outerbox {
-    margin-bottom: 30px;
-  }
   .yv-footer-payment-box {
     justify-content: flex-start;
   }
+  .yv-newsletter-text {
+    display: none;
+}
+  .yv-footer-newsletter-box {
+    max-width: 100%;
+    flex: 0 0 100%;
+}
 }
