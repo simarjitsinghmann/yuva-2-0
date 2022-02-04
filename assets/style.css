@@ -1548,7 +1548,7 @@ a.wishlist-view .fas {
     height: 100%;
     object-fit: cover;
   }
-.instagram-post-detail {
+.yv-instagram-post-detail {
   position: relative;
   overflow: hidden;
   background-color: var(--colorImageBg);
@@ -1563,7 +1563,7 @@ a.wishlist-view .fas {
   align-items: center;
   width: 100%;
 }
-.instagram-post-detail img {
+.yv-instagram-post-detail img {
   width: 100%;
   -webkit-transition: 1s;
   -o-transition: 1s;
@@ -1572,7 +1572,7 @@ a.wishlist-view .fas {
   -o-object-fit: cover;
   object-fit: cover;
 }
-.instagram-post-detail .insta-icon {
+.yv-instagram-post-detail .insta-icon {
   background: rgba(0, 0, 0, 0.6);
   position: absolute;
   left: 0;
@@ -1597,11 +1597,11 @@ a.wishlist-view .fas {
     -o-transition: 0.5s;
     transition: 0.5s;
     }
-.instagram-post-detail:hover .insta-icon {
+.yv-instagram-post-detail:hover .insta-icon {
   opacity: 1;
   visibility: visible;
 }
-.instagram-post-detail:hover img {
+.yv-instagram-post-detail:hover img {
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
