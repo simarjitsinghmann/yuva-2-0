@@ -54,18 +54,24 @@
     background-color: rgba(62, 62, 62, 0.22);
     }
 .yv-footer-newsletter-wrapper button {
-  text-transform: none;
-  top: 0;
-  position: absolute!important;
-  right: 0;
-  font-size: 13px;
-  line-height: 22px;
-  height: 100%;
-  background: 0 0;
-  border: 0;
-  background-color: var(--theme-color);
+    text-transform: none;
+    top: 0;
+    position: absolute!important;
+    right: 0;
+    font-size: 13px;
+    line-height: 22px;
+    height: 100%;
+    background: 0 0;
+    border: 0;
     min-width: 130px;
-    }
+    overflow: hidden;
+    display: inline-block;
+    font-family: var(--font-family);
+    background-color: var(--colorBtnPrimary);
+    color: var(--colorBtnPrimaryText);
+    transition: .25s ease-out;
+    letter-spacing: 2px;
+}
 .yv-footer-payment-box {
   display: flex;
   justify-content: flex-end;

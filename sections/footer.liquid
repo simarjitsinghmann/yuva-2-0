@@ -85,7 +85,7 @@
             {%- if form.errors -%}
             <span class="newsletter-form__message form__message error-text" id="Newsletter-error--{{ section.id }}">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
             {%- endif -%}
-            <button type="submit" class="button button--secondary newsletter-form__button" name="commit">
+            <button type="submit" class="button--secondary newsletter-form__button" name="commit">
               Subscribe
             </button>
           </div>
