@@ -51,6 +51,9 @@
 <div class="yv-footer-bottom-box">
   <div class="container">
     
+        {%- for block in section.blocks -%}
+        {%- case block.type -%}
+        {%- when 'link_list'-%}
         <div class="col-sm-12 col-md-12 col-lg-4" {{ block.shopify_attributes }}>
 			<div class="newsletter-box">
           {%- if block.settings.heading != blank -%}
@@ -105,6 +108,8 @@
           {%- endif -%}
         </div>
         </div>
+        {%- endcase -%}
+        {%- endfor -%}
     <div class="footer-copyright-box">
       {%- if section.settings.copyright_content -%}
       <div class="footer-copyright">
