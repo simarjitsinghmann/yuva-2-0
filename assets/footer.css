@@ -227,10 +227,15 @@
   }
 }
 @media screen and (max-width: 575px){
-.yv-footer-payment-box {
+  .yv-footer-payment-box {
     flex-wrap: wrap;
-}
-.yv-footer-payment-box .footer-payment {
+  }
+  .yv-footer-payment-box .footer-payment {
     width: 100%;
-}
+  }
+  .list-payment {
+    margin-right: 0;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 }
