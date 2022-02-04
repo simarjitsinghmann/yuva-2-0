@@ -5828,7 +5828,12 @@ input:checked
   flex:0 0 70%
 }
 .yv-collection-item {
-	
+    height: 475px;
+    overflow: hidden;
+    background-color: var(--colorImageBg);
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 .yv-collection-item img{
     width: 100%;
