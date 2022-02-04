@@ -20,13 +20,13 @@
             {% endif %}
             {%- for block in section.blocks -%}
             {% if forloop.first %}
-            {% assign class =first_grid_class %}
+            {% assign mainclass =first_grid_class %}
             {% else %}
-            {% assign class = second_grid_class %}
+            {% assign mainclass = second_grid_class %}
             {% endif %}
             {%- if block.settings.article != blank -%}  
             {%- assign article = block.settings.article -%}
-            {%- include 'featured-article-grid' classes:class -%}
+            {%- include 'featured-article-grid' mainclasses:mainclass -%}
             {%- else -%}
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
               <div class="post-wrapper">               
