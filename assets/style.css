@@ -1427,21 +1427,6 @@ a.wishlist-view .fas {
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     }
-.post-information-image,
-.post-information-image .animate_hvrbr {
-  height: 200px;
-  overflow: hidden;
-  background-color: var(--colorImageBg);
-    display: flex;
-    align-items: center;
-    width: 100%;
-    }
-.post-information-image img {
-  width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  height: 100%;
-}
 .article_tags {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5790,5 +5775,11 @@ input:checked
     display: flex;
     align-items: center;
     width: 100%;
+}
+.yv-blog-card-img img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
 }
 /*========== featured blog section css start ==========*/
