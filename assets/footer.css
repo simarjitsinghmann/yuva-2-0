@@ -163,13 +163,17 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .yv-footer-top-box,
+  .yv-footer-middle-box {
+    padding: 20px 0;
+  }
   .yv-footer-content p{
     display: none;
   }
   .yv-footer-copyright-box {
     padding: 20px 0;
   }
-    .footer-menu-list .col-xl-2 {
-  	margin-bottom:5px;
+  .footer-menu-list .col-xl-2 {
+    margin-bottom:5px;
   }
 }
