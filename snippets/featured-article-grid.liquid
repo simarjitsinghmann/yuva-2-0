@@ -19,8 +19,6 @@
       </div>
       <div class="post-name">
         <h6><a href="{{article.url}}">{{article.title| truncatewords: 6}}</a></h6>
-        {%- assign word_limit = 6 -%}
-        {%- if desc_limit -%}{%- assign word_limit = desc_limit -%}{%- endif -%}
       </div>
     </div>
   </div>
