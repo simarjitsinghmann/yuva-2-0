@@ -99,11 +99,6 @@
       </div>
       <div class="col-12 col-sm-12 col-md-4 col-lg-5">
         <div class="footer-copyright-box">
-          {%- if section.settings.copyright_content -%}
-          <div class="footer-copyright">
-            <p class="copyright-content">{{section.settings.copyright_content}}</p>
-          </div>
-          {%- endif -%}
           {%- if section.settings.payment_enable -%}
           <div class="footer-payment">
             <ul class="list list-payment" role="list">
@@ -121,6 +116,13 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="yv-footer-copyright-box">
+    {%- if section.settings.copyright_content -%}
+    <div class="footer-copyright">
+      <p class="copyright-content">{{section.settings.copyright_content}}</p>
+    </div>
+    {%- endif -%}
   </div>
 </div>
 <style>
