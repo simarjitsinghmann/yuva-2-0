@@ -53,14 +53,6 @@
         {%- when 'newsletter'-%}
         <div class="col-sm-12 col-md-12 col-lg-4" {{ block.shopify_attributes }}>
           <div class="newsletter-box">
-            {%- if block.settings.heading != blank -%}
-            <h5 class="footer-menu-head ">{{block.settings.heading}}</h5>
-            {%- endif -%}
-
-            {%- if block.settings.subtext != blank -%}
-            {{block.settings.subtext}}
-            {%- endif -%}
-
             {%- if block.settings.show_newsletter -%}
             {%- form 'customer', id: 'ContactFooter',class:'footer__newsletter newsletter-form' -%}
             <input type="hidden" name="contact[tags]" value="newsletter">
