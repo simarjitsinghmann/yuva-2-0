@@ -8,7 +8,7 @@
       {%- if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank -%}
       <ul id="instafeed" class="yv-instagram-post" ></ul>
       {%- else -%}
-      <ul>
+      <ul class="yv-instagram-post">
         {%- for i in (1..6) -%}
         <li>
           <a>
