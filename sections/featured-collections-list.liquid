@@ -16,7 +16,7 @@
       {%- for block in section.blocks -%}
       {%- assign collection = block.settings.collection -%}
       <div class="yv-collection-list">
-        <a href="yv-collection-item">
+        <a href="#" class="yv-collection-item">
         	{%- if block.settings.image != blank -%}
           {%- include 'lazy-image' image:block.settings.image -%}
           {%- elsif collection.featured_image -%}
