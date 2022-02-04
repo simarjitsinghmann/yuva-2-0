@@ -101,9 +101,6 @@
         <div class="footer-copyright-box">
           {%- if section.settings.copyright_content -%}
           <div class="footer-copyright">
-            {%- if section.settings.enable_language_selector -%}
-            {%- include 'language' -%}
-            {%- endif -%}
             <p class="copyright-content">{{section.settings.copyright_content}}</p>
           </div>
           {%- endif -%}
@@ -117,6 +114,9 @@
               {%- endfor -%}
             </ul>
           </div>
+          {%- endif -%}
+          {%- if section.settings.enable_language_selector -%}
+          {%- include 'language' -%}
           {%- endif -%}
         </div>
       </div>
