@@ -17,13 +17,19 @@
       {%- assign collection = block.settings.collection -%}
       <div class="yv-collection-list">
         <a href="yv-collection-item">
-        	
+        	{%- if block.settings.image != blank -%}
+          {%- include 'lazy-image' image:block.settings.image -%}
+          {%- elsif collection.featured_image -%}
+          {%- include 'lazy-image' image:collection.featured_image -%}
+          {%- else -%}
+          {%- render 'placeholder' -%}
+          {%- endif -%}
         </a>
       </div>
       
       
       
-      <div class="collection-list-view-wrapper left-wrapper" id="block-{{block.id}}"  {{ block.shopify_attributes }}>
+<!--       <div class="collection-list-view-wrapper left-wrapper" id="block-{{block.id}}"  {{ block.shopify_attributes }}>
         <div class="collection-list-view-card {% if section.settings.show_hover_content %}on-hover-content{% endif %}" >
           {%- if block.settings.image != blank -%}
           {%- include 'lazy-image' image:block.settings.image -%}
@@ -45,7 +51,7 @@
           </div>
           {%- endif -%}
         </div>
-      </div>
+      </div> -->
       {%- endfor -%}
     </div>
   </div>
