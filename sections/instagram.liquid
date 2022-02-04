@@ -1,31 +1,29 @@
 <div class="section-spacer">
-  <div class="container">
-    <div class="section-heading center-heading">
-      <h2>{{section.settings.heading}}</h2>
-      <p>{{section.settings.subheading}}</p>
-    </div>
-    <div class="yv-instagram-post-wrapper">
-      {%- if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank -%}
-      <ul id="instafeed" class="yv-instagram-post" ></ul>
-      {%- else -%}
-      <ul class="yv-instagram-post">
-        {%- for i in (1..6) -%}
-        <li>
-          <div class="yv-instagram-post-detail">
-            <div class="insta-placeholder">
-              {% render 'placeholder' %}
-            </div>
-            <div class="yv-insta-icon">
-              <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372 372" width="26" height="26">
-                <path id="Layer" fill-rule="evenodd" fill="#fff" d="m349.6 22.3c14 14 21.8 32.9 21.8 52.6v222.2c0 19.7-7.8 38.6-21.8 52.6c-13.9 13.9-32.9 21.8-52.6 21.8h-222.1c-19.8 0-38.7-7.9-52.6-21.8c-14-14-21.8-32.9-21.8-52.6v-222.2c0-19.7 7.8-38.6 21.8-52.6c13.9-13.9 32.8-21.8 52.6-21.8h222.1c19.7 0 38.7 7.9 52.6 21.8zm-8 52.6c0-11.8-4.7-23.2-13-31.5c-8.4-8.4-19.8-13.1-31.6-13.1h-222.1c-11.9 0-23.2 4.7-31.6 13.1c-8.4 8.3-13.1 19.7-13.1 31.5v222.2c0 11.8 4.7 23.2 13.1 31.5c8.4 8.4 19.7 13.1 31.6 13.1h222.1c11.8 0 23.2-4.7 31.6-13.1c8.3-8.3 13-19.7 13-31.5zm-101.9 57.4c14.2 14.3 22.2 33.6 22.2 53.7c0 20.2-8 39.5-22.3 53.8c-14.3 14.3-33.6 22.3-53.8 22.2c-20.2 0-39.5-8-53.7-22.3c-14.3-14.3-22.3-33.6-22.3-53.8c0.1-20.2 8.1-39.5 22.4-53.7c14.3-14.3 33.6-22.2 53.8-22.2c20.2 0 39.5 8.1 53.7 22.3zm-53.7 99.5c12.2 0 23.9-4.8 32.5-13.4c8.7-8.5 13.6-20.2 13.6-32.4c0.1-12.3-4.8-24.1-13.4-32.8c-8.7-8.7-20.5-13.6-32.8-13.6c-12.3 0-24.1 4.9-32.8 13.5c-8.6 8.7-13.5 20.5-13.5 32.8c0 12.3 4.9 24.1 13.6 32.8c8.7 8.6 20.5 13.5 32.8 13.4zm127.5-161.8c0 3.9-1.5 7.7-4.3 10.5c-2.8 2.8-6.6 4.3-10.6 4.3h-14.8c-5.3 0-10.3-2.8-12.9-7.4c-2.7-4.6-2.7-10.3 0-14.9c2.6-4.6 7.5-7.4 12.9-7.4h14.8c4 0 7.8 1.5 10.6 4.3c2.8 2.8 4.3 6.6 4.3 10.6z" />
-              </svg>
-            </div>
+  <div class="section-heading center-heading">
+    <h2>{{section.settings.heading}}</h2>
+    <p>{{section.settings.subheading}}</p>
+  </div>
+  <div class="yv-instagram-post-wrapper">
+    {%- if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank -%}
+    <ul id="instafeed" class="yv-instagram-post" ></ul>
+    {%- else -%}
+    <ul class="yv-instagram-post">
+      {%- for i in (1..6) -%}
+      <li>
+        <div class="yv-instagram-post-detail">
+          <div class="insta-placeholder">
+            {% render 'placeholder' %}
           </div>
-        </li>
-        {%- endfor -%}
-      </ul>
-      {%- endif -%}
-    </div>
+          <div class="yv-insta-icon">
+            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372 372" width="26" height="26">
+              <path id="Layer" fill-rule="evenodd" fill="#fff" d="m349.6 22.3c14 14 21.8 32.9 21.8 52.6v222.2c0 19.7-7.8 38.6-21.8 52.6c-13.9 13.9-32.9 21.8-52.6 21.8h-222.1c-19.8 0-38.7-7.9-52.6-21.8c-14-14-21.8-32.9-21.8-52.6v-222.2c0-19.7 7.8-38.6 21.8-52.6c13.9-13.9 32.8-21.8 52.6-21.8h222.1c19.7 0 38.7 7.9 52.6 21.8zm-8 52.6c0-11.8-4.7-23.2-13-31.5c-8.4-8.4-19.8-13.1-31.6-13.1h-222.1c-11.9 0-23.2 4.7-31.6 13.1c-8.4 8.3-13.1 19.7-13.1 31.5v222.2c0 11.8 4.7 23.2 13.1 31.5c8.4 8.4 19.7 13.1 31.6 13.1h222.1c11.8 0 23.2-4.7 31.6-13.1c8.3-8.3 13-19.7 13-31.5zm-101.9 57.4c14.2 14.3 22.2 33.6 22.2 53.7c0 20.2-8 39.5-22.3 53.8c-14.3 14.3-33.6 22.3-53.8 22.2c-20.2 0-39.5-8-53.7-22.3c-14.3-14.3-22.3-33.6-22.3-53.8c0.1-20.2 8.1-39.5 22.4-53.7c14.3-14.3 33.6-22.2 53.8-22.2c20.2 0 39.5 8.1 53.7 22.3zm-53.7 99.5c12.2 0 23.9-4.8 32.5-13.4c8.7-8.5 13.6-20.2 13.6-32.4c0.1-12.3-4.8-24.1-13.4-32.8c-8.7-8.7-20.5-13.6-32.8-13.6c-12.3 0-24.1 4.9-32.8 13.5c-8.6 8.7-13.5 20.5-13.5 32.8c0 12.3 4.9 24.1 13.6 32.8c8.7 8.6 20.5 13.5 32.8 13.4zm127.5-161.8c0 3.9-1.5 7.7-4.3 10.5c-2.8 2.8-6.6 4.3-10.6 4.3h-14.8c-5.3 0-10.3-2.8-12.9-7.4c-2.7-4.6-2.7-10.3 0-14.9c2.6-4.6 7.5-7.4 12.9-7.4h14.8c4 0 7.8 1.5 10.6 4.3c2.8 2.8 4.3 6.6 4.3 10.6z" />
+            </svg>
+          </div>
+        </div>
+      </li>
+      {%- endfor -%}
+    </ul>
+    {%- endif -%}
   </div>
 </div>
 {%- if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank -%}
