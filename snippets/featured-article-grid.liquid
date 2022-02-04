@@ -4,7 +4,7 @@
     {%- if article.image -%}
     {%- assign article_image = article.image -%}
     {%- endif -%}
-    <a href="{{-article.url-}}" class="yv-blog-card-img animate_hvrbr">                    
+    <a href="{{-article.url-}}" class="yv-blog-card-img">                    
       {%- if article.image != blank -%}
       {%- include 'lazy-image' image:article_image -%}
       {%- else -%}
