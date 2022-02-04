@@ -52,7 +52,10 @@
         {%- case block.type -%}
         {%- when 'newsletter'-%}
         <div class="yv-newsletter-wrapper">
-          
+          <div class="">
+            <h4>Enter the fold</h4>
+            <p>Subscribe to our newsletter</p>
+          </div>
         <div class="yv-footer-newsletter-box">
           {%- if block.settings.show_newsletter -%}
           {%- form 'customer', id: 'ContactFooter',class:'yv-footer-newsletter-form newsletter-form' -%}
