@@ -4,9 +4,9 @@
       <h2>{{section.settings.heading}}</h2>
       <p>{{section.settings.subheading}}</p>
     </div>
-    <div class="yv-instagram-posts">
+    <div class="yv-instagram-post-wrapper">
       {%- if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank -%}
-      <ul id="instafeed"></ul>
+      <ul id="instafeed" class="yv-instagram-post" ></ul>
       {%- else -%}
       <ul>
         {%- for i in (1..6) -%}
