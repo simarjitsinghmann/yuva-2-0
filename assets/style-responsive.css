@@ -504,9 +504,7 @@
   }
   /*============= testimonial css end =============*/
   /*===============  instagram post css start  ==============*/
-  .instagram-post {
-    padding: 45px 0 45px;
-  }
+
   /*===================  instagram post css end  ==============*/
   /*============  multicolumn css start  ===========*/
   .service__column .col {
@@ -1869,15 +1867,7 @@
 
   /*============  multi column css end  ==========*/
   /*============  insta feed css start  ==========*/
-  .instagram-post-list ul li {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 33.3%;
-    flex: 0 0 33.3%;
-    max-width: 33.3%;
-  }
-  .instagram-post-list ul li {
-    min-height: 200px;
-  }
+
   /*============  insta feed css end  ==========*/
   .card__warpper__detail.right__sided .collection-detail-right h5 {
     font-family: var(--heading-font-family);
@@ -2424,12 +2414,6 @@
     margin-top: 8px;
   }
   /*===============  single banner css end  =============*/
-  .instagram-post-list ul li {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
   .customer-links {
     display: none;
   }
@@ -2437,10 +2421,6 @@
     font-size: 18px;
     line-height: 25px;
     margin: 0 0 10px;
-  }
-  .instagramUserName {
-    font-size: 13px;
-    padding: 0 17px;
   }
   /*================== PDP page css start ===================*/
   .product-section .container {
@@ -2751,9 +2731,7 @@
   }
   /*=========== banner css start =============*/  
   /*============  insta feed css start  ==========*/
-  .instagram-post-list ul li {
-    min-height: 180px;
-  }
+
   /*============  insta feed css end  ==========*/
   /*============ policies page css start ===========*/
   .shopify-policy__container {
@@ -3055,10 +3033,5 @@
     -webkit-animation: shine 1.3s;
     animation: shine 1.3s;
     opacity: 0.8;
-  }
-}
-@media (min-width: 1441px){
-  .instagram-post-list ul li {
-    min-height: 300px;
   }
 }
