@@ -80,11 +80,10 @@
             {%- if form.errors -%}
             <span class="newsletter-form__message form__message error-text" id="Newsletter-error--{{ section.id }}">{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</span>
             {%- endif -%}
+            <button type="submit" class="button button--secondary newsletter-form__button" name="commit">
+              <img src="{{'arrow.svg' | asset_url}}" width="20" height="15" alt="{{'newsletter.button_label' | t}}"/>
+            </button>
           </div>
-          <button type="submit" class="button button--secondary newsletter-form__button" name="commit">
-
-            <img src="{{'arrow.svg' | asset_url}}" width="20" height="15" alt="{{'newsletter.button_label' | t}}"/>
-          </button>
           {%- endif -%}
           {%- endform -%}
           {%- endif -%}
