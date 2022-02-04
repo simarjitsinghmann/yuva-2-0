@@ -53,7 +53,7 @@
         {%- when 'newsletter'-%}
           <div class="yv-footer-newsletter-box">
             {%- if block.settings.show_newsletter -%}
-            {%- form 'customer', id: 'ContactFooter',class:'footer__newsletter newsletter-form' -%}
+            {%- form 'customer', id: 'ContactFooter',class:'yv-footer-newsletter-form newsletter-form' -%}
             <input type="hidden" name="contact[tags]" value="newsletter">
             {%- if form.posted_successfully? -%}
             <span class="success-text">{{ 'newsletter.success' | t }}</span>
