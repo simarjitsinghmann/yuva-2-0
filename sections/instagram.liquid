@@ -1,32 +1,32 @@
 <div class="section-spacer">
-<div class="container">
-  <div class="shopify__top__section section-heading-box text__center">
-    <h2>{{section.settings.heading}}</h2>
-    <p class="instagramUserName">{{section.settings.subheading}}</p>
-  </div>
-  <div class="instagram-post-list">
-{%- if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank -%}
-    <ul id="instafeed"></ul>
-    {%- else -%}
-    <ul>
-      {%- for i in (1..6) -%}
-      <li>
-        <a>
-          <div class="instagram-post-detail">
-            <div class="insta-placeholder">
-            {% render 'placeholder' %}
+  <div class="container">
+    <div class="section-heading center-heading">
+      <h2>{{section.settings.heading}}</h2>
+      <p class="instagramUserName">{{section.settings.subheading}}</p>
+    </div>
+    <div class="instagram-post-list">
+      {%- if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank -%}
+      <ul id="instafeed"></ul>
+      {%- else -%}
+      <ul>
+        {%- for i in (1..6) -%}
+        <li>
+          <a>
+            <div class="instagram-post-detail">
+              <div class="insta-placeholder">
+                {% render 'placeholder' %}
+              </div>
+              <div class="insta-icon">
+                <i class="fab fa-instagram"></i>
+              </div>
             </div>
-            <div class="insta-icon">
-              <i class="fab fa-instagram"></i>
-            </div>
-          </div>
-        </a>
-      </li>
-      {%- endfor -%}
-    </ul>
-{%- endif -%}
+          </a>
+        </li>
+        {%- endfor -%}
+      </ul>
+      {%- endif -%}
+    </div>
   </div>
-</div>
 </div>
 {%- if section.settings.insta_user_id != blank and section.settings.insta_access_Token != blank -%}
 
@@ -44,7 +44,7 @@
     userFeed.run();
     setTimeout(function(){ 
       $('#instafeed a').attr('target','_blank');    
-                         }, 2000);
+    }, 2000);
   }
   instagramFeed();
 </script>
@@ -81,82 +81,82 @@
   }
 </style>
 {% schema %} 
-  {
-    "name": "t:sections.instagram.name",
-    "tag": "section",
-    "class":"instagram-post instagram-section",
-    "settings": [
-      {
-        "type": "text",
-        "id": "heading",
-        "label": "t:sections.instagram.settings.heading.label",
-        "default": "@instafeed"
-      },
-      {
-        "type": "textarea",
-        "id": "subheading",
-        "label": "t:sections.instagram.settings.subheading.label",
-        "default": "Use this section to show Instagram posts related to your brand."
-      },
-       {
-        "type": "text",
-        "id": "insta_user_id",
-        "label": "t:sections.instagram.settings.insta_user_id.label"
-      },
-      {
-        "type": "text",
-        "id": "insta_access_Token",
-        "label": "t:sections.instagram.settings.insta_access_Token.label"
-      },
-      {
-        "type": "color",
-        "id": "bgcolor",
-        "label": "t:sections.instagram.settings.bgcolor.label",
-        "default":"#ffffff"
-      },
-      {
-        "type": "range",
-        "id": "top_space_desktop",
-        "label": "t:sections.instagram.settings.top_space_desktop.label",
-        "default":45,
-        "min":0,
-        "max":60,
-        "step":5
-      },
-      {
-        "type": "range",
-        "id": "bottom_space_desktop",
-        "label": "t:sections.instagram.settings.bottom_space_desktop.label",
-        "default":60,
-        "min":0,
-        "max":60,
-        "step":5
-      },
-      {
-        "type": "range",
-        "id": "top_space_mobile",
-        "label": "t:sections.instagram.settings.top_space_mobile.label",
-        "default":30,
-        "min":0,
-        "max":60,
-        "step":5
-      },
-      {
-        "type": "range",
-        "id": "bottom_space_mobile",
-        "label": "t:sections.instagram.settings.bottom_space_mobile.label",
-        "default":30,
-        "min":0,
-        "max":60,
-        "step":5
-      }
-    
-    ],
-    "presets": [
-    	{
-          "name": "t:sections.instagram.presets.name",
-          "category": "Promotional"
-        }
-    ]
-  }
+{
+"name": "t:sections.instagram.name",
+"tag": "section",
+"class":"instagram-post instagram-section",
+"settings": [
+{
+"type": "text",
+"id": "heading",
+"label": "t:sections.instagram.settings.heading.label",
+"default": "@instafeed"
+},
+{
+"type": "textarea",
+"id": "subheading",
+"label": "t:sections.instagram.settings.subheading.label",
+"default": "Use this section to show Instagram posts related to your brand."
+},
+{
+"type": "text",
+"id": "insta_user_id",
+"label": "t:sections.instagram.settings.insta_user_id.label"
+},
+{
+"type": "text",
+"id": "insta_access_Token",
+"label": "t:sections.instagram.settings.insta_access_Token.label"
+},
+{
+"type": "color",
+"id": "bgcolor",
+"label": "t:sections.instagram.settings.bgcolor.label",
+"default":"#ffffff"
+},
+{
+"type": "range",
+"id": "top_space_desktop",
+"label": "t:sections.instagram.settings.top_space_desktop.label",
+"default":45,
+"min":0,
+"max":60,
+"step":5
+},
+{
+"type": "range",
+"id": "bottom_space_desktop",
+"label": "t:sections.instagram.settings.bottom_space_desktop.label",
+"default":60,
+"min":0,
+"max":60,
+"step":5
+},
+{
+"type": "range",
+"id": "top_space_mobile",
+"label": "t:sections.instagram.settings.top_space_mobile.label",
+"default":30,
+"min":0,
+"max":60,
+"step":5
+},
+{
+"type": "range",
+"id": "bottom_space_mobile",
+"label": "t:sections.instagram.settings.bottom_space_mobile.label",
+"default":30,
+"min":0,
+"max":60,
+"step":5
+}
+
+],
+"presets": [
+{
+"name": "t:sections.instagram.presets.name",
+"category": "Promotional"
+}
+]
+}
 {% endschema %}
