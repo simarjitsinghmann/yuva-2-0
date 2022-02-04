@@ -11,8 +11,14 @@
       </div>
       {%- if section.blocks.size > 0  -%}
       <div class="yv-blogs-wrapper desktop"> 
-          <div id="featuredBlog-{{section.id}}" class="row">         
-            {%- for block in section.blocks -%}  
+          <div id="featuredBlog-{{section.id}}" class="row">       
+            {% assign first_grid_class = 'col-md-6 col-lg-6' %}
+            {% assign second_grid_class = 'col-md-6 col-lg-6' %}
+            
+            {% if section.blocks.size > 2 %}
+            {% assign second_grid_class = 'col-md-3 col-lg-3' %}
+            {% endif %}
+            {%- for block in section.blocks -%}
             {%- if block.settings.article != blank -%}  
             {%- assign article = block.settings.article -%}
             {%- include 'featured-article-grid' classes:class -%}
