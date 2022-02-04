@@ -1,5 +1,5 @@
 .footer-section img {
-   background-color: transparent;
+  background-color: transparent;
 }
 .yv-footer-top-box {
   padding: 45px 0;
@@ -13,104 +13,107 @@
   padding: 50px 0;
 }
 .footer-menu-head {
-    font-size: 17px;
-    margin-bottom: 20px;
-    line-height: 26px;
-    font-family: var(--font-family);
+  font-size: 17px;
+  margin-bottom: 20px;
+  line-height: 26px;
+  font-family: var(--font-family);
     color: #fff;
     letter-spacing: 0.2px;
-}
+    }
 .footer-menu-list ul li a {
-   display: inline-block;
-   margin-bottom: 10px;
-      transition: all .3s ease;
+  display: inline-block;
+  margin-bottom: 10px;
+  transition: all .3s ease;
   position:relative;
 }
 .yv-newsletter-outerbox {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .yv-newsletter-text {
-	margin-right:60px;
+  margin-right:60px;
 }
 .yv-newsletter-text span {
   font-size:16px;
   display:inline-block;
   margin-top:5px;
-	color: rgba(255, 255, 255 ,.5)
+  color: rgba(255, 255, 255 ,.5)
 }
 .yv-footer-newsletter-box {
-    max-width: 55%;
-    flex: 0 0 55%;
+  max-width: 55%;
+  flex: 0 0 55%;
 }
 .yv-footer-newsletter-wrapper {
-	position:relative;
+  position:relative;
 }
 .yv-footer-newsletter-wrapper input {
-    padding: 10px 150px 10px 20px;
-    min-height: 56px;
-    color: var(--gray);
-     border: 0;
-    background-color: rgba(62, 62, 62, 0.22);
-}
-.yv-footer-newsletter-wrapper button {
-    text-transform: none;
-    top: 0;
-    position: absolute!important;
-    right: 0;
-    font-size: 13px;
-    line-height: 22px;
-    height: 100%;
-    background: 0 0;
+  padding: 10px 150px 10px 20px;
+  min-height: 56px;
+  color: var(--gray);
     border: 0;
-    background-color: var(--theme-color);
+    background-color: rgba(62, 62, 62, 0.22);
+    }
+.yv-footer-newsletter-wrapper button {
+  text-transform: none;
+  top: 0;
+  position: absolute!important;
+  right: 0;
+  font-size: 13px;
+  line-height: 22px;
+  height: 100%;
+  background: 0 0;
+  border: 0;
+  background-color: var(--theme-color);
     min-width: 130px;
-}
+    }
 .yv-footer-payment-box {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 .list-payment {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
   margin-right: 40px;
 }
 .list-payment li {
-    padding: 5px;
-    line-height: 0;
+  padding: 5px;
+  line-height: 0;
 }
 .list-payment li a {
-   line-height: 0;
+  line-height: 0;
 }
 .lang-dropdown {
-    border: 0;
-    padding: 12px 30px 12px 20px;
-    min-height: 30px;
-    font-size: 13px;
-    letter-spacing: .5px;
-    font-family: var(--font-family);
+  border: 0;
+  padding: 12px 30px 12px 20px;
+  min-height: 30px;
+  font-size: 13px;
+  letter-spacing: .5px;
+  font-family: var(--font-family);
     border-radius: 0;
     min-width: 140px;
-      color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
     background:rgba(62, 62, 62, 0.22) url(https://cdn.shopify.com/s/files/1/0597/9668/5009/files/select-arrow-white.png?v=1643970461) no-repeat 95% 52% /12px
-}
+    }
 .btn-group.dropup {
-    margin-right: 10px;
+  margin-right: 10px;
+}
+.yv-copyright-content {
+	text-align:center
 }
 @media screen and (min-width:992px){
-footer .footer-menu-accordion ul li a:hover {
+  footer .footer-menu-accordion ul li a:hover {
     padding-left: 15px;
-}
-footer .footer-menu-accordion ul li a:before {
+  }
+  footer .footer-menu-accordion ul li a:before {
     content: '';
     position: absolute;
     left: 0;
     top: 11px;
     width: 0;
     height: 1px;
-}
-footer .footer-menu-accordion ul li a:hover:before {
+  }
+  footer .footer-menu-accordion ul li a:hover:before {
     width: 10px;
-}
+  }
 }
