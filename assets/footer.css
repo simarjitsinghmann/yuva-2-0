@@ -17,60 +17,60 @@
   margin-bottom: 20px;
   line-height: 26px;
   font-family: var(--font-family);
-    color: #fff;
-    letter-spacing: 0.2px;
-    }
+  color: #fff;
+  letter-spacing: 0.2px;
+}
 .footer-menu-list ul li a {
   display: inline-block;
   margin-bottom: 10px;
-  transition: all .3s ease;
-  position:relative;
+  transition: all 0.3s ease;
+  position: relative;
 }
 .yv-newsletter-outerbox {
   display: flex;
   align-items: center;
 }
 .yv-newsletter-text {
-  margin-right:60px;
+  margin-right: 60px;
 }
 .yv-newsletter-text span {
-  font-size:16px;
-  display:inline-block;
-  margin-top:5px;
-  color: rgba(255, 255, 255 ,.5)
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.5);
 }
 .yv-footer-newsletter-box {
   max-width: 55%;
   flex: 0 0 55%;
 }
 .yv-footer-newsletter-wrapper {
-  position:relative;
+  position: relative;
 }
 .yv-footer-newsletter-wrapper input {
   padding: 10px 150px 10px 20px;
   min-height: 56px;
   color: var(--gray);
-    border: 0;
-    background-color: rgba(62, 62, 62, 0.22);
-    }
+  border: 0;
+  background-color: rgba(62, 62, 62, 0.22);
+}
 .yv-footer-newsletter-wrapper button {
-    text-transform: none;
-    top: 0;
-    position: absolute!important;
-    right: 0;
-    font-size: 13px;
-    line-height: 22px;
-    height: 100%;
-    background: 0 0;
-    border: 0;
-    min-width: 130px;
-    overflow: hidden;
-    display: inline-block;
-    font-family: var(--font-family);
-    background-color: var(--colorBtnPrimary);
-    color: var(--colorBtnPrimaryText);
-    transition: .25s ease-out;
-    letter-spacing: 2px;
+  text-transform: none;
+  top: 0;
+  position: absolute !important;
+  right: 0;
+  font-size: 13px;
+  line-height: 22px;
+  height: 100%;
+  background: 0 0;
+  border: 0;
+  min-width: 130px;
+  overflow: hidden;
+  display: inline-block;
+  font-family: var(--font-family);
+  background-color: var(--colorBtnPrimary);
+  color: var(--colorBtnPrimaryText);
+  transition: 0.25s ease-out;
+  letter-spacing: 2px;
 }
 .yv-footer-payment-box {
   display: flex;
@@ -94,30 +94,32 @@
   padding: 12px 30px 12px 20px;
   min-height: 30px;
   font-size: 13px;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   font-family: var(--font-family);
-    border-radius: 0;
-    min-width: 140px;
-    color: rgba(255, 255, 255, 0.5);
-    background:rgba(62, 62, 62, 0.22) url(https://cdn.shopify.com/s/files/1/0597/9668/5009/files/select-arrow-white.png?v=1643970461) no-repeat 95% 52% /12px
-    }
+  border-radius: 0;
+  min-width: 140px;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(62, 62, 62, 0.22)
+    url(https://cdn.shopify.com/s/files/1/0597/9668/5009/files/select-arrow-white.png?v=1643970461)
+    no-repeat 95% 52% /12px;
+}
 .btn-group.dropup {
   margin-right: 10px;
 }
 .yv-footer-copyright-box {
-	padding:30px 0
+  padding: 30px 0;
 }
 .yv-copyright-content {
-	text-align:center;
-      color: rgba(255, 255, 255, 0.5);
-  font-size:12px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
 }
-@media screen and (min-width:992px){
+@media screen and (min-width: 992px) {
   footer .footer-menu-accordion ul li a:hover {
     padding-left: 15px;
   }
   footer .footer-menu-accordion ul li a:before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 11px;
@@ -128,8 +130,8 @@
     width: 10px;
   }
 }
-@media screen and (max-width:1440px){
+@media screen and (max-width: 1440px) {
   .yv-footer-newsletter-wrapper button {
-  	min-width:130px;
+    min-width: 130px;
   }
 }
