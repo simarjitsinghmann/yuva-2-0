@@ -1805,63 +1805,7 @@
     top: 0;
     z-index:5;
   }
-  /*  ============= footer css start ============  */
-  .Yuva-logo {
-    max-width: 80px;
-  }
-  .list-payment {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-top: 10px;
-  }
-  .footer-menu-accordion ul {
-    display: none;
-    padding: 10px 0 5px;
-  }
-  .footer-menu-accordion {
-    padding-bottom: 12px;
-  }
-  .footer-menu-head {
-    position: relative;
-    font-size: 14px;
-    margin-bottom:0;
-  }
-  .footer-menu-accordion .footer-menu-head:after,
-  .footer-menu-accordion .footer-menu-head:before {
-    content: "";
-    position: absolute;
-    top: calc(50% - 1px);
-    right: 0;
-    width: 10px;
-    height: 1px;
-    background-color: currentColor;
-    -webkit-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-    transition: 0.3s ease;
-    -webkit-transition-property: -webkit-transform;
-    transition-property: -webkit-transform;
-    -o-transition-property: transform;
-    transition-property: transform;
-    transition-property: transform, -webkit-transform;
-  }
-  .footer-menu-head:before {
-    -webkit-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-  }
-  .footer-menu-accordion.active .footer-menu-head:before {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    opacity: 0;
-  }
-  .footer-menu-accordion.active .footer-menu-head:after {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-  /*  ============= footer css end =============  */
+
   /*===============  single banner css start  =============*/
   .single-banner-section.banner-section .item {
     height: 400px;
