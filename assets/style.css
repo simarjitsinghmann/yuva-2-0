@@ -916,13 +916,7 @@ img {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.product-loop-variants {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
+
 .product__view__option li button {
   background: transparent;
 }
@@ -5856,5 +5850,12 @@ input:checked
     font-size: 12px;
   	color: #0c0c0c;
     margin-bottom: 6px;
+}
+.product-loop-variants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 /*========== featured Product section css end here =============*/
