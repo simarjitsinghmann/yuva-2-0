@@ -1,4 +1,4 @@
-<div class="yv-feature-product-deatil product_content_section">
+<div class="yv-feature-product-detail product_content_section">
   {%- assign product_form_id = 'product-form-' | append: section.id -%}
   {%- for block in section.blocks -%}
   {%- case block.type -%}
@@ -22,7 +22,7 @@
   <div class="prizebox" data-saved="{{settings.show_saved_amount}}"  data-saved-style="{{settings.saved_amount_style}}" data-price-wrapper=""   {{ block.shopify_attributes }}>
    <span class="product-price">{{current_variant.price | money}}</span>
     {%- if current_variant.compare_at_price > current_variant.price -%}
-      <span class="main-price"> {{current_variant.compare_at_price | money}}</span>
+      <span class="product-compare-price main-price"> {{current_variant.compare_at_price | money}}</span>
       {%- if settings.show_saved_amount -%}
       {%- if settings.saved_amount_style == 'percentage' -%}
       <span class="percent-off">{{ current_variant.compare_at_price | minus: current_variant.price | times: 100.0 | divided_by: current_variant.compare_at_price| round:2 | append: "% OFF"}}</span>
