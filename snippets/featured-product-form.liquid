@@ -47,7 +47,7 @@
   {%- assign downOption = option.name | downcase -%}
   {%- assign optionIndex = forloop.index -%}
   {%- assign varOptionIndex = 'option'|append:forloop.index -%}
-  <div class="select__{{downOption}} product-option-selector"  {{ block.shopify_attributes }}>
+  <div class="select-{{downOption}} product-option-selector"  {{ block.shopify_attributes }}>
     <span class="yv-variant-title">{{ 'products.product.option' | t: title:option.name }}</span>
     {%- if custom and downOption == 'size' and block.settings.size_chart != blank -%}
     <span id="sizeChart" class="sizeChart-label link">{{'products.product.size_chart_label' | t}}</span>
