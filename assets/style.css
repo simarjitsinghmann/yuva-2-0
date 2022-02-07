@@ -5857,11 +5857,10 @@ input:checked
 .yv-collection-slider .slick-slide {
 	margin:20px;
 }
-.center-slider .slick-center,
-.center-slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"],
-.center-slider .slick-current.slick-active{
+.yv-collection-slider .slick-center,
+.yv-collection-slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"],
+.yv-collection-slider .slick-current.slick-active{
   transform: scale(1.1);
-  background-color: #000000;
 }
 .yv-collection-slider .slick-next{
   right: 15px;
