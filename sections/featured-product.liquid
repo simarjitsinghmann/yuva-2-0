@@ -14,49 +14,6 @@
         <div class="col-md-6 col-lg-6">
           {%- unless section.settings.product == blank -%}
           {%- include 'featured-product-form' -%}
-            {%- else -%}
-          <div class="product-add-to-cart-right placeholder-content">
-            <div class="pdp-wrapper">
-              <a class="product-detail-title" href="/products/copy-of-basic-fur-hood-grey-jacket">{{'onboarding.product_title' | t}}</a>
-              <div class="prizebox" data-saved="true" data-saved-style="currency" data-price-wrapper="">
-                <h3 id="get_price" class="price-list">
-                  <span class="get-price">{{8800 | money}}</span>
-                  <span class="main-price"> {{9900 | money}}</span>
-                  {%- if settings.show_saved_amount -%}
-                  {%- if settings.saved_amount_style == 'percentage' -%}
-                  <span class="percent-off">{{ 9900 | minus: 8800  | times: 100.0 | divided_by: 9900 | round:2 | append: "% OFF"}}</span>
-                  {%- else -%}
-                  <span class="percent-off">{{ 9900| minus: 8800  | money | append: " OFF"}}</span>
-                  {%- endif -%}
-                  {%- endif -%}
-                </h3>
-              </div>
-              <div class="select__quantity">
-                <span class="variant_title">{{ 'products.product.quantity.label' | t }}</span>
-                <div class="quantity">
-                  <input type="number" name="quantity" min="1" max="50" step="1" value="1" aria-label="{{ 'products.product.quantity.label' | t }}">
-                  <div class="quantity-nav">
-                    <div class="quantity-button quantity-up"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102 99" style="enable-background:new 0 0 102 99;" xml:space="preserve">
-                      <polygon points="100.1,37.2 63.5,37.2 63.5,0.5 39.1,0.5 39.1,37.2 2.4,37.2 2.4,61.6 39.1,61.6 39.1,98.3 63.5,98.3 63.5,61.6 100.1,61.6 "></polygon>
-                      </svg></div>
-                    <div class="quantity-button quantity-down"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102 99" style="enable-background:new 0 0 102 99;" xml:space="preserve">
-                      <polyline points="63.3,61.6 102,61.6 102,37.2 63.3,37.2 "></polyline>
-                      <polyline points="78.7,37.2 0.1,37.2 0.1,61.6 78.7,61.6 "></polyline>
-                      </svg></div>
-                  </div>
-                </div>
-              </div>
-              <div class="product_button">
-                  <div class="pdp-action-container " data-button-wrapper="">
-                    <div class="pdp-add-to-bag">
-                      <button class="Sd_addProduct add_to_cart black-btn button btn-block">
-                        <span> {{ 'products.product.add_to_cart' | t }} </span>
-                      </button>
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div>
           {%- endunless -%}
         </div>
       </div>
