@@ -182,28 +182,8 @@
     {%- if block.settings.show_view_detail -%}
     <a href="{{product.url}}" class="link text__right">{{'general.view_detail' | t}}</a>
     {%- endif -%}
-    {%- if block.settings.show_contact and block.settings.form_text != blank -%}
-    <div class="product-contact-form">
-      <div class="ask_about"> 
-        <a class="ask_this_product" data-name="{{product.title}}"> 
-          <i class="far fa-envelope"></i> {{block.settings.form_text}}</a>
-      </div>
-    </div>
-    {%- endif -%}
   </div>
   {%- endcase -%}
   {%- endfor -%}
 </div>
-   {%- for block in section.blocks -%}
-  {%- case block.type -%}
-  {%- when 'content' -%}
-  {%- if block.settings.width == 'half' -%}
-  {%- if block.settings.style == "accordion" -%}
-  {%- include 'product-accordion-content' position:"sidebar-content" -%}
-  {%- else -%}
-  {%- include 'product-tabs-content' -%}
-  {%- endif -%}
-  {%- endif -%}
-  {%- endcase -%}
-  {%- endfor -%}
 </div>
