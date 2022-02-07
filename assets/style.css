@@ -2157,24 +2157,6 @@ img.responsive-image__image {
   font-size: 15px;
 }
 
-.product-loop-variants .color_option span {
-  font-size: 0px;
-  width: 18px;
-  height: 18px;
-  color: inherit;
-  display: inline-block;
-  float: left;
-  cursor: pointer;
-  padding: 2px;
-  position: relative;
-  border: 1px solid #ececec;
-}
-.product-loop-variants .denominations_option span {
-  font-size: 12px;
-  width: auto;
-  height: auto;
-  padding: 2px 6px;
-}
 .variant_option,
 .sellingPlanHeading {
   display: inline-block;
@@ -3635,20 +3617,6 @@ button.shopify-payment-button__button {
     -ms-flex-direction: column;
     flex-direction: column;
     }
-.product-wrap .product-loop-variants {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-.product-wrap .product-loop-variants .color_option span {
-  width: 18px;
-  height: 18px;
-}
 
 .product-wrap .shopify-product-form .form-group {
   -ms-flex-line-pack: center;
@@ -5365,25 +5333,6 @@ p::-webkit-scrollbar-thumb:hover,
   height: 50px;
 }
 
-.select__color.product-option-selector .product-loop-variants.color .option {
-  -webkit-box-shadow: 0 0 0 1px #e8e8e1;
-  box-shadow: 0 0 0 1px #e8e8e1;
-  border: 2px solid #fff;
-  background-color: #fff;
-}
-
-.product-loop-variants .color_option input:checked + span.option,
-.product-loop-variants .color_option input:hover + span.option,
-.select__color
-.product-loop-variants
-.variant_option
-input:checked
-+ span.option {
-  -webkit-box-shadow: 0 0 0 2px #7b7b7b;
-  box-shadow: 0 0 0 2px #7b7b7b;
-  border: 2px solid #fff;
-  background-color: #fff;
-}
 
 
 #myBtn {
