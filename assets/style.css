@@ -5765,18 +5765,17 @@ p::-webkit-scrollbar-thumb:hover,
   margin-bottom: 9px;
   position: relative;
 }
-
 .variant_option .option {
     font-size: 14px;
     color: #0c0c0c;
     text-align: center;
     display: inline-block;
-    padding: 11px 9px;
-    min-width: 52px;
+    padding: 12px 9px;
+    min-width: 49px;
     border: 1px solid #d6d6d6;
     text-transform: uppercase;
     border-radius: 2px;
-  box-shadow :0px 1px 1px rgba(0,0,0,0.4);
+    box-shadow: 0 1px 1px #0006;
 }
 .product-loop-variants .variant_option img {
   width: 100%;
