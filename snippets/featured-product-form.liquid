@@ -5,9 +5,9 @@
   {%- when '@app' -%}
     {%- render block -%}
   {%- when 'title' -%}
-  <h3 class="product-detail-title"><a href="{{product.url}}"   {{ block.shopify_attributes }}>{{product.title}}</a></h3>
+  <h3 class="yv-product-detail-title"><a href="{{product.url}}"   {{ block.shopify_attributes }}>{{product.title}}</a></h3>
   {%- when 'text' -%}
-  <p class="product-detail-desc"  {{ block.shopify_attributes }}>{{block.settings.text}}</p>
+  <p class="yv-product-detail-desc"  {{ block.shopify_attributes }}>{{block.settings.text}}</p>
   {%- when 'inventory' -%}            
   {%- if current_variant.available -%}
   <span id="variant-inventory" class="product-instock product-stock" {{ block.shopify_attributes }}>{{ 'products.product.in_stock' | t }}</span>
@@ -15,7 +15,7 @@
   <span id="variant-inventory" class="product-outstock product-stock" {{ block.shopify_attributes }}>{{ 'products.product.out_stock' | t }}</span>
   {%- endif -%}
   {%- when 'review-star' -%}
-  <div class="ratingbox" {{ block.shopify_attributes }}>
+  <div class="yv-ratingbox" {{ block.shopify_attributes }}>
     <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
   </div>
   {%- when 'price' -%}
