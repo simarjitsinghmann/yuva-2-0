@@ -3521,20 +3521,8 @@ img {
     min-width: 100px;
     width: auto;
     }
-.product-add-to-cart-right .prizebox h3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: var(--black);
-    font-size: 36px;
-    flex-wrap: wrap;
-    }
-.product-add-to-cart-right .prizebox h3 span {
-  margin-right: 12px;
-}
+
+
 .product-add-to-cart-right .form-group {
   margin-bottom: 0;
 }
@@ -5874,6 +5862,9 @@ input:checked
 }
 .yv-prizebox {
     margin-bottom: 20px;
+}
+.yv-prizebox span {
+  margin-right: 12px;
 }
 .yv-product-price {
     font-size: 30px;
