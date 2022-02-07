@@ -901,9 +901,6 @@ img {
 .product-information__wrapper .price-item span {
   margin-right: 6px;
 }
-.product-information__wrapper .percent-off {
-  font-size: 12px;
-}
 .product__view__option li button svg.svg-loader {
   visibility: visible;
   width: 18px;
@@ -2182,9 +2179,6 @@ img.responsive-image__image {
 .ratingbox .star-rating .fa-star {
   font-size: 15px;
 }
-.percent-off {
-  color: var(--colorTextSavings);
-    }
 
 .unit-price {
   margin-top: 10px;
@@ -5859,5 +5853,6 @@ input:checked
 }
 .yv-product-percent-off {
 	font-size:20px;
+    color: var(--colorTextSavings);
 }
 /*========== featured Product section css end here =============*/
