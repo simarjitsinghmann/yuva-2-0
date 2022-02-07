@@ -5765,7 +5765,7 @@ p::-webkit-scrollbar-thumb:hover,
   margin-bottom: 9px;
   position: relative;
 }
-.variant_option .option {
+.product-loop-variants .option {
     font-size: 14px;
     color: #0c0c0c;
     text-align: center;
@@ -5776,6 +5776,9 @@ p::-webkit-scrollbar-thumb:hover,
     text-transform: uppercase;
     border-radius: 2px;
     box-shadow: 0 1px 1px #0006;
+}
+.product-loop-variants.circle .option {
+	border-radius:100%;
 }
 .product-loop-variants .variant_option img {
   width: 100%;
