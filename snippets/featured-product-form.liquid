@@ -5,7 +5,7 @@
   {%- when '@app' -%}
     {%- render block -%}
   {%- when 'title' -%}
-  <a class="product-detail-title" href="{{product.url}}"   {{ block.shopify_attributes }}>{{product.title}}</a>
+  <h2><a class="product-detail-title" href="{{product.url}}"   {{ block.shopify_attributes }}>{{product.title}}</a></h2>
   {%- when 'text' -%}
   <p class="vendor_name"  {{ block.shopify_attributes }}>{{block.settings.text}}</p>
   {%- when 'inventory' -%}            
