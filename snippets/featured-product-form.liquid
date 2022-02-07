@@ -149,58 +149,8 @@
     {%- if settings.enable_preorder and current_variant.inventory_policy == 'continue' and current_variant.inventory_quantity <= 0  -%}
     {%- assign preorder = true -%}
     {%- endif -%}
-
-
-    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-   	{%- if template == 'product' -%}
-    <input type="hidden" name="selling_plan" value="">
     
-    {%- assign currentVariantSellingGroups = "" -%}
-    {%- assign currentVariantSellingPlans = ""  -%}
-
-    {%- for selling_plan_allocation in current_variant.selling_plan_allocations -%}
-    {%- unless currentVariantSellingGroups contains selling_plan_allocation.selling_plan_group_id -%}
-    {%- assign currentVariantSellingGroups = currentVariantSellingGroups | append: selling_plan_allocation.selling_plan_group_id -%}
-    {%- endunless -%}
-    {%- unless currentVariantSellingPlans contains selling_plan_allocation.selling_plan.id -%}
-
-    {%- assign currentVariantSellingPlans = currentVariantSellingPlans | append: selling_plan_allocation.selling_plan.id -%}
-    {%- endunless -%}
-    {%- endfor -%}
-      {%- if current_variant.selling_plan_allocations.size > 0 -%}
-    <div class="selling_plan_wrapper" data-selling-plan-container>
-      <div class="selling_group active">
-        <div class="sellingPlanHeading" for="oneTimePurchase">
-          <input type="radio" id="oneTimePurchase" name="sellingPlanHeading" checked>
-          <label for="oneTimePurchase">{{'products.product.one_time_purchase' | t}}</label>
-        </div>
-      </div>
-      {%- for selling_plan_group  in product.selling_plan_groups -%}
-      {%- if currentVariantSellingGroups contains selling_plan_group.id -%}
-      <div class="selling_group">
-        <div class="sellingPlanHeading" for="sellingGroup{{forloop.index}}">
-          <input type="radio" id="sellingGroup{{forloop.index}}" name="sellingPlanHeading" value="">
-          <label for="sellingGroup{{forloop.index}}">{{selling_plan_group.name}}</label>
-        </div>
-        <div class="selling_plan" data-val>
-          <select class="selling_plan_attribute">
-            {%- for selling_plan in selling_plan_group.selling_plans -%}
-            <option value="{{selling_plan.id}}" {% if forloop.first %}selected{% endif %}>{{selling_plan.name }}</option>
-            {%- endfor -%}
-          </select>
-        </div>
-      </div>
-      {%- endif -%}
-      {%- endfor -%}
-    </div>
-      {%- endif -%}
-    
-    {%- endif -%}
-    
-    
-    {%- if template == 'product' -%}
-    {%- include 'product-pickup-availability' -%}
-    {%- endif -%}
+   
     <div class="productErrors error_message" style="display:none"></div>
     <div class="pdp-action-container {% if block.settings.dynamic_checkout_btn %}dynamic-checkout-enabled{% endif %} {% unless current_variant.available %}disabled{% endunless %}" data-button-wrapper>
       <div class="pdp-add-to-bag">
