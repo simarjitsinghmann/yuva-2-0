@@ -84,9 +84,11 @@ header {
   position: relative;
     animation-duration: 1s;
   animation-fill-mode: both;
+      border-bottom: 1px solid rgb(0 0 0 / 8%);
 }
 #headerSection.sticky-header .top-header {
     box-shadow: 0 2px 2px #0000000d;
+      border-bottom: 0;
 }
 .nav-menu-btn {
   display: none;
