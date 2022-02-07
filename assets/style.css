@@ -5845,4 +5845,10 @@ input:checked
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+.product-loop-variants .variant_option img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
 /*========== featured Product section css end here =============*/
