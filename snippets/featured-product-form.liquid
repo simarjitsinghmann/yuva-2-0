@@ -7,7 +7,7 @@
   {%- when 'title' -%}
   <h3 class="product-detail-title"><a href="{{product.url}}"   {{ block.shopify_attributes }}>{{product.title}}</a></h3>
   {%- when 'text' -%}
-  <p class="vendor_name"  {{ block.shopify_attributes }}>{{block.settings.text}}</p>
+  <p class="product-detail-desc"  {{ block.shopify_attributes }}>{{block.settings.text}}</p>
   {%- when 'inventory' -%}            
   {%- if current_variant.available -%}
   <span id="variant-inventory" class="product-instock product-stock" {{ block.shopify_attributes }}>{{ 'products.product.in_stock' | t }}</span>
