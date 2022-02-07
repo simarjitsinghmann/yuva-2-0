@@ -15,7 +15,7 @@
   <span id="variant-inventory" class="product-outstock product-stock" {{ block.shopify_attributes }}>{{ 'products.product.out_stock' | t }}</span>
   {%- endif -%}
   {%- when 'review-star' -%}
-  <div class="yv-ratingbox" {{ block.shopify_attributes }}>
+  <div class="ratingbox" {{ block.shopify_attributes }}>
     <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
   </div>
   {%- when 'price' -%}
