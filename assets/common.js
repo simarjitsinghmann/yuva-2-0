@@ -579,7 +579,7 @@ function priceUpdate(priceContainer,getVariant,showSaved){
     }
   }
   if(compareAtPrice > price){
-    priceHtml = `<h3 id="get_price">${Shopify.formatMoney(price, moneyFormat)}<span class="main-price"> <del>${Shopify.formatMoney(compareAtPrice, moneyFormat)}</del> </span> ${savedAmountHtml}</h3>`;
+    priceHtml = `${Shopify.formatMoney(price, moneyFormat)}<span class="main-price"> <del>${Shopify.formatMoney(compareAtPrice, moneyFormat)}</del> </span> ${savedAmountHtml}`;
   }
   if(getVariant.unit_price_measurement){
     priceHtml += '<p class="unit-price">'+Shopify.formatMoney(getVariant.unit_price, moneyFormat)+' / ';
