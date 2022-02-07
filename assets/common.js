@@ -564,18 +564,18 @@ function priceUpdate(priceContainer,getVariant,showSaved){
   if(showSaved){
     if(showSavedAmount == 'true'){
       if(savedAmountStyle == 'percentage'){
-        savedAmountHtml +=`<span class="percent-off">${percentage}</span>`;
+        savedAmountHtml +=`<span class="yv-product-percent-off">${percentage}</span>`;
       }
       else{              	
-        savedAmountHtml +=`<span class="percent-off">${savedAmount}</span>`;
+        savedAmountHtml +=`<span class="yv-product-percent-off">${savedAmount}</span>`;
       }
     }
   }else{
     if(getVariant.allocation_type == 'percentage'){
-      savedAmountHtml +=`<span class="percent-off">${getVariant.allocation_value}% OFF</span>`;
+      savedAmountHtml +=`<span class="yv-product-percent-off">${getVariant.allocation_value}% OFF</span>`;
     }
     else{              	
-      savedAmountHtml +=`<span class="percent-off">${Shopify.formatMoney(getVariant.allocation_value, moneyFormat)} OFF</span>`;
+      savedAmountHtml +=`<span class="yv-product-percent-off">${Shopify.formatMoney(getVariant.allocation_value, moneyFormat)} OFF</span>`;
     }
   }
   if(compareAtPrice > price){
