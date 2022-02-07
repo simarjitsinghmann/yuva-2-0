@@ -91,9 +91,9 @@
   $('body').addClass('{{section.settings.header_style}} sticky-header')
                      $(window).scroll(function () {
     if($(window).scrollTop()>150){
-      $("header").addClass("sticky-header");
+      $("#headerSection").addClass("sticky-header");
     }else {
-      $("header").removeClass("sticky-header");
+      $("#headerSection").removeClass("sticky-header");
     }
   });
   {% endif %}
