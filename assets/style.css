@@ -1178,10 +1178,6 @@ a.wishlist-view .fas {
   display: block;
   height: 100%;
 }
-.product-loop-variants .color_option input:checked + span.option,
-.product-loop-variants .color_option input:hover + span.option {
-  border-color: #000;
-}
 .product__view__option li button svg {
   width: 19px;
 }
@@ -2161,15 +2157,6 @@ img.responsive-image__image {
   font-size: 15px;
 }
 
-.product-loop-variants .variant_option input,
-.sellingPlanHeading input {
-  opacity: 0;
-  position: absolute;
-  cursor: pointer;
-  z-index: 9;
-  width: 100%;
-  height: 100%;
-}
 .product-loop-variants .color_option span {
   font-size: 0px;
   width: 18px;
@@ -5850,5 +5837,15 @@ input:checked
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.product-loop-variants .variant_option input,
+.sellingPlanHeading input {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
 }
 /*========== featured Product section css end here =============*/
