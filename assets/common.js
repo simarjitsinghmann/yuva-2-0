@@ -579,7 +579,7 @@ function priceUpdate(priceContainer,getVariant,showSaved){
     }
   }
   if(compareAtPrice > price){
-    priceHtml = `<span class="yv-product-price">${Shopify.formatMoney(price, moneyFormat)}</span><span class="main-price"> ${Shopify.formatMoney(compareAtPrice, moneyFormat)}</span> ${savedAmountHtml}`;
+    priceHtml = `<span class="yv-product-price">${Shopify.formatMoney(price, moneyFormat)}</span><span class="yv-product-compare-price"> ${Shopify.formatMoney(compareAtPrice, moneyFormat)}</span> ${savedAmountHtml}`;
   }
   if(getVariant.unit_price_measurement){
     priceHtml += '<p class="unit-price">'+Shopify.formatMoney(getVariant.unit_price, moneyFormat)+' / ';
