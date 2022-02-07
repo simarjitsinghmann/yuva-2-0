@@ -8,35 +8,8 @@
     <div class="feature-product product_content_section ">
       <div class="row">
         <div class="col-md-6 col-lg-6 col-xl-7">
-          <div class="product-image-left" {% unless product.images.size == 1%}data-slider{% endunless %}>
-            {%- unless product == empty -%}   
-            {%- for media in product.media -%}
-            {%-case media.media_type-%}
-            {%- when 'image'-%}
-            <div id="media-{{media.id}}" class="item" >
-              {%- include 'lazy-image' image:media -%} 
-            </div>
-            {%- when 'external_video'-%} 
-            <div id="media-{{media.id}}" class="item slick-slide-video-item" >
-              {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
-            </div>
-            {%- when 'video'-%}
-            <div id="media-{{media.id}}" class="item" >
-              {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
-            </div>
-            {%- when 'model'-%}
-            <div id="media-{{media.id}}" class="item" >
-              {{media |  media_tag: image_size: "2048x", toggleable: true}}
-            </div>
-            {%-endcase-%}
-            {%- endfor -%}
-            {%else%}
-            {%- for i in (1..3) -%}
-            <div class="item" >
-            {{ 'product-'| append: i | placeholder_svg_tag: 'placeholder-svg' }}
-            </div>
-            {%- endfor -%}
-            {%-endunless-%}
+          <div class="product-image-left" >
+              {%- include 'lazy-image' image:featured_image -%} 
           </div>
         </div>
         <div class="col-md-5 col-lg-5 col-xl-5">
