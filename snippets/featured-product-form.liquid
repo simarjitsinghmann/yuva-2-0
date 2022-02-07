@@ -70,7 +70,7 @@
     {% endif %}
     
     {%- if settings.option_style == 'swatch' -%}
-    <ul class="product-loop-variants {{downOption}} {{settings.color_swatch_style}}">                            
+    <ul class="product-loop-variants {{settings.color_swatch_style}}">                            
       {%- for value in option.values -%}  
       <li class="{{downOption}}_option  variant_option">
         <input class="productOption" form="{{product_form_id}}" type="radio" name="option-{{optionIndex}}" value="{{value}}" title="{{value}}" {% if option.selected_value == value %}checked{% endif %}>
