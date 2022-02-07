@@ -22,15 +22,15 @@
   }
 </style>
 <style>
-  header { 
     {%- if section.settings.enable_sticky_header -%}
+  #headerSection { 
     position: sticky;
     top: 0;
     z-index: 3; 
-    {%- endif -%}
     background-color:{{section.settings.header_bgcolor | default:'#fff'}};
   }
 
+    {%- endif -%}
   .site-nav-dropdown .inner.dropdown .sub-menu-list {
     padding:0 10px;
   }
