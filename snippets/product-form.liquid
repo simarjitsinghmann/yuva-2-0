@@ -20,10 +20,9 @@
     <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
   </div>
   {%- when 'price' -%}
-  <div class="prizebox" data-saved="{{settings.show_saved_amount}}"  data-saved-style="{{settings.saved_amount_style}}" data-price-wrapper=""   {{ block.shopify_attributes }}>
+   <div class="prizebox" data-saved="{{settings.show_saved_amount}}"  data-saved-style="{{settings.saved_amount_style}}" data-price-wrapper=""   {{ block.shopify_attributes }}>
+   <span class="get-price">{{current_variant.price | money}}</span>
     {%- if current_variant.compare_at_price > current_variant.price -%}
-    <h3 id="get_price" class="price-list">
-      <span class="get-price">{{current_variant.price | money}}</span>
       <span class="main-price"> {{current_variant.compare_at_price | money}}</span>
       {%- if settings.show_saved_amount -%}
       {%- if settings.saved_amount_style == 'percentage' -%}
@@ -32,9 +31,6 @@
       <span class="percent-off">{{ current_variant.compare_at_price | minus: current_variant.price | money | append: " OFF"}}</span>
       {%- endif -%}
       {%- endif -%}
-    </h3>
-    {%- else -%}
-    <h3 id="get_price" class="price-list">{{current_variant.price | money}}</h3>
     {%- endif -%}
     {%- if current_variant.unit_price_measurement -%}
     <p class="unit-price">
