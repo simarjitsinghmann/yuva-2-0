@@ -5807,4 +5807,7 @@ p::-webkit-scrollbar-thumb:hover,
 .product-loop-variants .variant_option input:checked+.option {
     outline: 2px solid #d6d6d6;
 }
+.product-loop-variants .variant_option.color_option  input:checked+.option {
+    border: 3px solid #aaa;
+}
 /*========== featured Product section css end here =============*/
