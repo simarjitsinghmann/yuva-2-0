@@ -2156,25 +2156,6 @@ img.responsive-image__image {
 .ratingbox .star-rating .fa-star {
   font-size: 15px;
 }
-
-.variant_option,
-.sellingPlanHeading {
-  display: inline-block;
-  margin-right: 9px;
-  margin-bottom: 9px;
-  position: relative;
-}
-.variant_option .option {
-  font-size: 12px;
-  color: var(--theme-color);
-    text-align: center;
-    display: inline-block;
-    padding: 3px 9px;
-    border: 1px solid var(--theme-color);
-      border-radius: 0;
-      }
-
-
 .product_button .shopify-payment-button__button {
   min-width: 208px;
   padding: 9px 20px;
@@ -5777,6 +5758,14 @@ p::-webkit-scrollbar-thumb:hover,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+.variant_option,
+.sellingPlanHeading {
+  display: inline-block;
+  margin-right: 9px;
+  margin-bottom: 9px;
+  position: relative;
+}
+
 .variant_option .option {
     font-size: 14px;
     color: #0c0c0c;
