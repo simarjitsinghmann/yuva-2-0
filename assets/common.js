@@ -559,7 +559,7 @@ function priceUpdate(priceContainer,getVariant,showSaved){
   
   var percentage = roundToTwo(((compareAtPrice-price)/compareAtPrice)*100)+'% OFF';
   var savedAmount = Shopify.formatMoney((compareAtPrice-price),moneyFormat);
-  var priceHtml = `${Shopify.formatMoney(price, moneyFormat)}`;
+  var priceHtml = `<span class="get-price">${Shopify.formatMoney(price, moneyFormat)}</span>`;
   var savedAmountHtml = '';
   if(showSaved){
     if(showSavedAmount == 'true'){
