@@ -6,8 +6,6 @@
     {%- render block -%}
   {%- when 'title' -%}
   <h3 class="yv-product-detail-title"><a href="{{product.url}}"   {{ block.shopify_attributes }}>{{product.title}}</a></h3>
-  {%- when 'text' -%}
-  <p class="yv-product-detail-desc"  {{ block.shopify_attributes }}>{{block.settings.text}}</p>
   {%- when 'inventory' -%}            
   {%- if current_variant.available -%}
   <span id="variant-inventory" class="product-instock product-stock" {{ block.shopify_attributes }}>{{ 'products.product.in_stock' | t }}</span>
@@ -18,6 +16,8 @@
   <div class="ratingbox" {{ block.shopify_attributes }}>
     <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
   </div>
+    {%- when 'text' -%}
+  <p class="yv-product-detail-desc"  {{ block.shopify_attributes }}>{{block.settings.text}}</p>
   {%- when 'price' -%}
   <div class="yv-prizebox" data-saved="{{settings.show_saved_amount}}"  data-saved-style="{{settings.saved_amount_style}}" data-price-wrapper=""   {{ block.shopify_attributes }}>
    <span class="yv-product-price">{{current_variant.price | money}}</span>
