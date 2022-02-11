@@ -5299,9 +5299,10 @@ p::-webkit-scrollbar-thumb:hover,
   padding:0;
 }
 .yv-testimonail-text-outer {
-  padding: 0 70px;
-  border-right: 1px solid #dddbd7;
-  height:100%;
+    padding: 100px 70px;
+    border-right: 1px solid #dddbd7;
+    height: 100%;
+    background-color: #2c2d36;
 }
 .yv-testimonail-text {
     max-width: 83%;
@@ -5311,12 +5312,13 @@ p::-webkit-scrollbar-thumb:hover,
 }
 .yv-testimonail-title {
   margin-bottom:30px;
-  color: #0c0c0c;
+  color: #fff;
   padding-right: 10px;
 }
 .yv-testimonail-desc {
   font-size: 16px;
   line-height: 28px;
+    color: #fff;
 }
 .yv-testimonial-slider {
   max-width: 95%;
