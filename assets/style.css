@@ -5323,8 +5323,12 @@ p::-webkit-scrollbar-thumb:hover,
       margin-bottom: 30px;
 }
 .yv-testimonial-slider {
-  max-width: 95%;
-  padding:20px 60px;
+    padding: 20px 60px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f8f3eb;
 }
 .yv-testimonial-feature-text {
   display: inline-block;
