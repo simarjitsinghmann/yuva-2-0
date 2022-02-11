@@ -2346,13 +2346,6 @@ p.hightlight-point-value {
 .single__product__right .pdp-wrapper {
   max-width: 80%;
 }
-.product_button .pdp-action-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
 .accordion-container .panel-title a {
   color: var(--black);
     line-height: 35px;
@@ -5791,5 +5784,12 @@ p::-webkit-scrollbar-thumb:hover,
 }
 .quantity-button.quantity-down {
   left: 0;
+}
+.pdp-action-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 /*========== featured Product section css end here =============*/
