@@ -150,7 +150,7 @@
     {%- endif -%}
     <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
     <div class="productErrors error_message" style="display:none"></div>
-    <div class="pdp-action-container yv-checkout-btn{% if block.settings.dynamic_checkout_btn %}dynamic-checkout-enabled{% endif %} {% unless current_variant.available %}disabled{% endunless %}" data-button-wrapper>
+    <div class="pdp-action-container yv-checkout-btn {% if block.settings.dynamic_checkout_btn %}dynamic-checkout-enabled{% endif %} {% unless current_variant.available %}disabled{% endunless %}" data-button-wrapper>
         <button type="submit" class="Sd_addProduct add_to_cart button btn-block"{% unless current_variant.available %}disabled{% endunless %}>
           <span>
             {%- unless current_variant.available -%}                      
