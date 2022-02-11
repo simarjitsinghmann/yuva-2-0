@@ -5358,9 +5358,12 @@ p::-webkit-scrollbar-thumb:hover,
   margin-bottom: 35px;
 }
 .yv-testimonial-author {
-  font-size: 16px;
-  padding-left: 20px;
-  margin-bottom:20px;
+    font-size: 16px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .yv-testimonial-author .author-img {
 	width: 46px;
@@ -5368,6 +5371,11 @@ p::-webkit-scrollbar-thumb:hover,
     border-radius: 100%;
   	overflow:hidden;
     background-color: #0c0c0c;
+}
+.yv-testimonial-author p{
+  font-size: 16px;
+  padding-left: 20px;
+  margin-bottom:20px;
 }
 .yv-testimonial-slider .slick-arrow {
   position: absolute;
