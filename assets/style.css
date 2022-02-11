@@ -5759,6 +5759,9 @@ p::-webkit-scrollbar-thumb:hover,
   display: -ms-flexbox;
   display: flex;
 }
+.shopify-payment-button__button:hover {
+  background-color: transparent!important;
+}
 .add_to_cart.button, .shopify-payment-button {
     max-width: 47.3%;
     flex: 0 0 47.3%;
@@ -5794,7 +5797,5 @@ p::-webkit-scrollbar-thumb:hover,
   font-size: 13px;
   font-family: var(--font-family);
 }
-.shopify-payment-button__button:hover {
-  background-color: transparent!important;
-}
+
 /*========== featured Product section css end here =============*/
