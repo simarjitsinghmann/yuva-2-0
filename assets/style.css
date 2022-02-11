@@ -5574,6 +5574,7 @@ p::-webkit-scrollbar-thumb:hover,
 .yv-feature-product-image {
     border: 10px solid #fff;
     height: 760px;
+    position: relative;
 }
 .yv-feature-product-image img{
     width: 100%;
@@ -5807,6 +5808,7 @@ p::-webkit-scrollbar-thumb:hover,
     position: absolute;
     background-color: #fff;
     left: 0;
+  	top:0;
     width: 30px;
     height: 100%;
 }
