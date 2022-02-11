@@ -2964,6 +2964,7 @@
     padding-left:5px;
     max-width:300px;
   }
+  button:after,
   .button:after,
   .shopify-challenge__button:after {
     content: "";
@@ -2998,6 +2999,7 @@
     -o-transition: 2s ease all;
     transition: 2s ease all;
   }
+  button:hover:after,
   .button:hover:after,
   .shopify-challenge__button:hover:after {
     -webkit-animation: wave 0.75s linear;
