@@ -5330,8 +5330,12 @@ p::-webkit-scrollbar-thumb:hover,
     justify-content: center;
     background-color: #f8f3eb;
 }
-.yv-testimonial-slider  .slider-item {
-	text-align:center;
+.slider-item {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
 }
 .yv-testimonial-feature-text {
   display: inline-block;
