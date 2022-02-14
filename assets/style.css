@@ -5102,6 +5102,19 @@ p::-webkit-scrollbar-thumb:hover,
     height: 100%;
     object-fit: cover;
 }
+.yv-product-img .product-second-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  -ms-opacity: 0;
+  -o-opacity: 0;
+  opacity: 0;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
 .yv-product-information {
     text-align: center;
 }
