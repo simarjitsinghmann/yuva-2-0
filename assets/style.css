@@ -5329,10 +5329,9 @@ p::-webkit-scrollbar-thumb:hover,
   z-index: 1;
 }
 .similar_options .vs-icon {
-  width: 36px;
-  height: 36px;
-  background: var(--white);
-    text-align: center;
+    width: 36px;
+    height: 36px;
+    background: var(--white);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5343,15 +5342,15 @@ p::-webkit-scrollbar-thumb:hover,
     -ms-flex-pack: center;
     justify-content: center;
     position: relative;
-    -webkit-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-    transition: 0.3s ease;
+    -webkit-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
     overflow: hidden;
     padding: 0 10px;
-    box-shadow: 0 1px 1px 1px #0000000a;
-    }
+    box-shadow: 0 2px 2px 1px rgb(0 0 0 / 12%);
+}
 .similar_options svg path {
-  fill: #606060;
+  fill: var(--theme-color);
 }
 .similar_options svg {
   fill: #1f2a2e;
