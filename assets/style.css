@@ -5915,7 +5915,13 @@ p::-webkit-scrollbar-thumb:hover,
     color: var(--theme-color);
     font-family: var(--heading-font-family);
     text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .vertical-text {
+    font-size: 30px;
+    display: inline-flex;
+    flex-direction: column;
 }
 /*=========== theme featured section css end =============*/
