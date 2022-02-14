@@ -5909,7 +5909,11 @@ p::-webkit-scrollbar-thumb:hover,
     text-align: center;
     padding: 30px;
 }
-.img-overlay-text h3 {
-  
+.img-overlay-text p {
+    font-size: 80px;
+    line-height: 1;
+    color: var(--theme-color);
+    font-family: var(--heading-font-family);
+    text-transform: uppercase;
 }
 /*=========== theme featured section css end =============*/
