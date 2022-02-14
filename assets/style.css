@@ -5206,11 +5206,14 @@ p::-webkit-scrollbar-thumb:hover,
     justify-content: center;
     border-radius: 6px 6px 0 0;
 }
-.yv-product-options li a{
-    border-right: 1px solid #e6e9ee;
+.yv-product-options li {
     min-width: 100px;
     text-align: center;
     flex-grow: 1;
+}
+.yv-product-options li a{
+  	display:inline-block;
+    border-right: 1px solid #e6e9ee;
 }
 .yv-product-options li:last-child a{
 	border:0
