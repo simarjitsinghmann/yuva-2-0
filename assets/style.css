@@ -5192,13 +5192,11 @@ p::-webkit-scrollbar-thumb:hover,
   transition: all 0.1s linear;
 }
 .yv-product-options {
+  display:flex;
   position: absolute;
   bottom: 0px;
-  text-align: center;
   left: 0;
-  right: 0;
   z-index: 1;
-  top: auto;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
