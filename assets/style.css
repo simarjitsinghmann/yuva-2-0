@@ -5548,6 +5548,7 @@ transform:translateY(0%);
 }
 .yv-collection-slider .slick-slide {
     transition: all 0.4s ease-in-out;
+  margin:20px;
 }
 .yv-collection-slider.slick-slide,
 .yv-collection-slider .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
@@ -5558,7 +5559,7 @@ transform:translateY(0%);
 .yv-collection-slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"],
 .yv-collection-slider .slick-current.slick-active {
   transform: scale(1.1);  
-    	margin:20px;
+    	
 }
 .yv-collection-slider .slick-arrow {
     position: absolute;
