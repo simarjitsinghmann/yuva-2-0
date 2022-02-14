@@ -23,8 +23,7 @@
         {%- endif -%}
       </a>
       {%- unless hide_options and settings.show_quick_view == false and settings.show_atc == false -%}
-      <div class="yv-product-options">
-        <ul>
+        <ul class="yv-product-options">
           {%- if settings.show_quick_view -%}
           <li class="quickView" data-href="{{product.url}}">
             <a href="#" aria-label="{{'general.quick_view_heading' | t}}"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="12.32" viewBox="0 0 21.312 12.32">
@@ -62,8 +61,7 @@
           </li>
           {%- endif -%}
           {%- endif -%}
-        </ul>
-      </div>  
+        </ul> 
       {%- unless hideRelated or settings.show_similar == false -%}      
       <div class="similar_options" data-url="{{product.url}}">
         <span class="vs-icon text-{{settings.show_similar_text}}">
