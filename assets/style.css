@@ -5560,9 +5560,9 @@ transform:translateY(0%);
 .yv-collection-slider .slick-current.slick-active {
   transform: scale(1.1);   
 }
-.yv-collection-slider .slick-center .yv-collection-item,
-.yv-collection-slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"] .yv-collection-item,
-.yv-collection-slider .slick-current.slick-active .yv-collection-item{
+.yv-collection-slider .slick-center .yv-collection-list,
+.yv-collection-slider .slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"] .yv-collection-list,
+.yv-collection-slider .slick-current.slick-active .yv-collection-list{
   
 }
 .yv-collection-slider .slick-arrow {
