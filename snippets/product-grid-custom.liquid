@@ -91,7 +91,7 @@
       {%- endif -%}
     </div>
     <div class="yv-product-information">
-        <a href="{{product.url | within: collection}}" class="caption-with-letter-spacing light" title="{{product.title}}">{{product.title}}</a>
+        <a href="{{product.url | within: collection}}" class="yv-product-title" title="{{product.title}}">{{product.title}}</a>
         {%- if settings.show_price -%}
         <div class="price">
           <div class="price__regular">
