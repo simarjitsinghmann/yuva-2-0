@@ -5207,7 +5207,10 @@ p::-webkit-scrollbar-thumb:hover,
     border-radius: 6px 6px 0 0;
 }
 .yv-product-options li {
-	
+    border-right: 1px solid #e6e9ee;
+    min-width: 100px;
+    text-align: center;
+    flex-grow: 1;
 }
 /*========= featured Product collection section css end =======*/
 /*===============testimonial section css start=============*/
