@@ -80,7 +80,7 @@ img {
   overflow: hidden;
 }
 .section-heading {
-	margin-bottom:30px;
+	margin-bottom:24px;
 }
 .section-heading h2{
     position: relative;
@@ -5398,14 +5398,16 @@ p::-webkit-scrollbar-thumb:hover,
 }
 /*===============testimonial section css end=============*/
 /*========== featured blog section css start ==========*/
-.corner-view-all  {
+.corner-view-all {
     position: absolute;
     font-size: 14px;
     background-color: #fff;
     border-radius: 20px;
     display: inline-block;
+    right: 0;
     padding: 4px 24px;
     line-height: 1.4;
+    bottom: 0;
 }
 .featured-articles-section {
 	padding:75px 0;
