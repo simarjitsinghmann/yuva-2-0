@@ -5557,7 +5557,7 @@ transform:translateY(0%);
 }
 .slick-arrow {
     position: absolute;
-    top: 50%;
+    top: calc(50% - 25px);
     z-index: 2;
     width: 52px;
     height: 52px;
