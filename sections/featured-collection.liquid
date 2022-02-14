@@ -19,7 +19,7 @@
                 {%- if section.settings.collection != blank -%}
                 {%- assign collection = section.settings.collection -%}
                 {%- for product in collection.products limit:limit -%}
-                {%- include 'product-grid' -%}
+                {%- include 'product-grid-custom' -%}
                 {%- endfor -%}
                 {%- else -%}
 
