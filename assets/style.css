@@ -5555,6 +5555,11 @@ transform:translateY(0%);
 .yv-collection-slider .slick-current.slick-active{
   transform: scale(1.1);
 }
+.yv-collection-slider  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+}
 .yv-collection-slider .slick-next{
   right: 15px;
 }
