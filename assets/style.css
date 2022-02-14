@@ -304,6 +304,7 @@ img {
   max-height: 650px;
 }
 /*============= Slider banner css start ===============*/
+
 .banner.banner-section,
 .banner-product-slider .slick-slide{
   height: 800px;
@@ -311,6 +312,9 @@ img {
   position: relative;
   background-color: var(--colorImageBg);
     }
+.banner.banner-section {
+	height:100vh;
+}
 .banner.banner-section img {
   height: 100%;
   width: 100%;
