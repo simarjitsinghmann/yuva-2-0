@@ -5327,10 +5327,15 @@ p::-webkit-scrollbar-thumb:hover,
     overflow: hidden;
     margin-bottom: 10px;
 }
-.yv-product-card-img .yv-product-img{
+.yv-product-img{
     display: block;
     width: 100%;
     height: 100%;
+}
+.yv-product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .yv-product-information {
     text-align: center;
