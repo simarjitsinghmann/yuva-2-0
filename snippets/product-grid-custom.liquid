@@ -11,123 +11,121 @@
 {%- endif -%}
 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
   <div class="card-wrapper">
-    <div class="card card--text-only card--soft card--product text__left">
-      <div class="card-wrapper-img {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{% endunless %} ">
-        <a href="{{product.url | within : collection}}">
-          {%- if product.featured_image != blank -%}
-          {%- render 'lazy-image' image: product.featured_image -%}
-          {%- unless settings.show_second_image == false or second_image == blank -%}          
-          {%- render 'lazy-image' image: second_image ,class:'product-second-img' -%}
-          {%- endunless -%} 
-          {%- else -%}
-          {%- render 'placeholder' -%}
-          {%- endif -%}
-        </a>
-        {%- unless hide_options and settings.show_quick_view == false and settings.show_atc == false -%}
-       <div class="shop__options">
-          <div class="product__view__option">
-            <ul>
-              {%- if settings.show_quick_view -%}
-              <li class="quickView" data-href="{{product.url}}">
-                <a href="#" aria-label="{{'general.quick_view_heading' | t}}"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="12.32" viewBox="0 0 21.312 12.32">
+    <div class="card-wrapper-img {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{% endunless %} ">
+      <a href="{{product.url | within : collection}}">
+        {%- if product.featured_image != blank -%}
+        {%- render 'lazy-image' image: product.featured_image -%}
+        {%- unless settings.show_second_image == false or second_image == blank -%}          
+        {%- render 'lazy-image' image: second_image ,class:'product-second-img' -%}
+        {%- endunless -%} 
+        {%- else -%}
+        {%- render 'placeholder' -%}
+        {%- endif -%}
+      </a>
+      {%- unless hide_options and settings.show_quick_view == false and settings.show_atc == false -%}
+      <div class="shop__options">
+        <div class="product__view__option">
+          <ul>
+            {%- if settings.show_quick_view -%}
+            <li class="quickView" data-href="{{product.url}}">
+              <a href="#" aria-label="{{'general.quick_view_heading' | t}}"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="12.32" viewBox="0 0 21.312 12.32">
                 <path class="cls-1" d="M700.034,2910.26h-0.042a3.653,3.653,0,0,0-2.506,1.06,3.047,3.047,0,0,0-.943,2.22,3.391,3.391,0,0,0,3.524,3.14h0.117a3.384,3.384,0,0,0,3.449-3.23A3.427,3.427,0,0,0,700.034,2910.26Zm-1.52,4.43a1.713,1.713,0,0,1-.518-1.25,1.942,1.942,0,0,1,2.021-1.79h0.042a1.939,1.939,0,0,1,1.979,1.82,1.961,1.961,0,0,1-2.021,1.83h0A2.145,2.145,0,0,1,698.514,2914.69Zm11.951-1.68h0c-0.192-.23-4.719-5.66-10.481-5.66-5.6,0-9.989,5.05-10.482,5.66a0.79,0.79,0,0,0,0,.98c0.484,0.57,4.844,5.66,10.482,5.66s10.022-5.06,10.481-5.66A0.794,0.794,0,0,0,710.465,2913.01Zm-1.862.49c-1.153,1.22-4.644,4.52-8.619,4.52s-7.467-3.33-8.62-4.55c1.153-1.21,4.644-4.5,8.62-4.5s7.466,3.29,8.619,4.5v0.03Z" transform="translate(-689.344 -2907.34)"></path>
                 </svg></a>
-              </li>
-				{%- endif -%}
-              
-              {%- if settings.show_atc -%}
-              {%- if has_only_default_variant or product.variants.size == 1 -%}
-              {%- if product.available -%}
+            </li>
+            {%- endif -%}
 
-              <li>
-                {%- form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' -%} 
-                <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
-                <button type="submit" class="Sd_addProduct" {% unless product.available %} disabled="disabled"{% endunless %} aria-label="{{'products.product.add_to_cart' | t}}">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
+            {%- if settings.show_atc -%}
+            {%- if has_only_default_variant or product.variants.size == 1 -%}
+            {%- if product.available -%}
+
+            <li>
+              {%- form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' -%} 
+              <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
+              <button type="submit" class="Sd_addProduct" {% unless product.available %} disabled="disabled"{% endunless %} aria-label="{{'products.product.add_to_cart' | t}}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
                   <path class="cls-1" d="M811.524,2918.03a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,811.524,2918.03Zm6.579,0a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,818.1,2918.03Zm7.781-9.41a1.222,1.222,0,0,0-1.01-.59H810.352l-0.688-4.02h-4.638a0.99,0.99,0,1,0,0,1.98h2.941l0.636,3.83,0.89,6.06a1.212,1.212,0,0,0,1.2.99h10.329a1.228,1.228,0,0,0,1.01-.6l3.81-6.52A1.19,1.19,0,0,0,825.884,2908.62Zm-5.336,6.33h-9.155l-0.718-4.95h12.764Z" transform="translate(-804 -2904)"></path>
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                       style="margin: auto; display: none; shape-rendering: auto;" 
-                       width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="svg-loader" >
-                    <circle cx="50" cy="50" fill="none" stroke="#ffffff" stroke-width="6" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
-                      <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"/>
-                    </circle>
-                  </svg>
-                </button>
-                {%- endform -%}
-              </li>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                     style="margin: auto; display: none; shape-rendering: auto;" 
+                     width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="svg-loader" >
+                  <circle cx="50" cy="50" fill="none" stroke="#ffffff" stroke-width="6" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
+                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"/>
+                  </circle>
+                </svg>
+              </button>
+              {%- endform -%}
+            </li>
+            {%- endif -%}
+            {%- else -%}
+            <li>
+              <a href="{{product.url | within:collection}}" class="showOptions" data-product="showProductWrap-{{product.id}}" aria-label="{{'products.product.view_product' | t}}"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
+                <path class="cls-1" d="M811.524,2918.03a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,811.524,2918.03Zm6.579,0a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,818.1,2918.03Zm7.781-9.41a1.222,1.222,0,0,0-1.01-.59H810.352l-0.688-4.02h-4.638a0.99,0.99,0,1,0,0,1.98h2.941l0.636,3.83,0.89,6.06a1.212,1.212,0,0,0,1.2.99h10.329a1.228,1.228,0,0,0,1.01-.6l3.81-6.52A1.19,1.19,0,0,0,825.884,2908.62Zm-5.336,6.33h-9.155l-0.718-4.95h12.764Z" transform="translate(-804 -2904)"></path>
+                </svg>
+              </a>
+            </li>
+            {%- endif -%}
+            {%- endif -%}
+          </ul>
+        </div>
+
+      </div>  
+      {%- unless hideRelated or settings.show_similar == false -%}      
+      <div class="similar_options" data-url="{{product.url}}">
+        <span class="vs-icon text-{{settings.show_similar_text}}">
+          {%- render 'similar-product-icon' -%}
+          {%- unless settings.show_similar_text == false -%} 
+          <span class="similar-text">{{'products.product.similar_products' | t}}</span>
+          {%- endunless -%}
+        </span>
+      </div>
+      {%- endunless -%}
+      {%- endunless -%}
+      {%- if product.available == false -%}
+      <div class="product__badge product__on__soldOut">
+        {{'products.product.sold_out' | t}}
+      </div> 
+      {%- elsif product.compare_at_price > product.price -%}
+      <div class="product__badge product__on__sale">
+        {{'products.product.on_sale' | t}}
+      </div>
+      {%- endif -%}
+    </div>
+    <div class="product-information">
+      <div class="product-information__wrapper">
+        <a href="{{product.url | within: collection}}" class="caption-with-letter-spacing light" title="{{product.title}}">{{product.title}}</a>
+        {%- if settings.show_price -%}
+        <div class="price">
+          <div class="price__regular">
+            <span class="price-item price-item--regular">
+              <span data-regular-price>{{current_variant.price | money}}</span>
+              {%- if current_variant.compare_at_price > current_variant.price -%}
+              <span data-compare-price>
+                {{ current_variant.compare_at_price | money }}
+              </span>
+              {%- if settings.show_saved_amount -%}        
+              {%- if settings.saved_amount_style == 'percentage' -%}
+              <span class="percent-off">{{ current_variant.compare_at_price | minus: current_variant.price | times: 100.0 | divided_by: current_variant.compare_at_price | round: 2 | append: "% OFF"}}</span>
+              {%- else %}
+                <span class="percent-off">{{ current_variant.compare_at_price | minus: current_variant.price | money | append: " OFF"}}</span>
               {%- endif -%}
-              {%- else -%}
-              <li>
-                <a href="{{product.url | within:collection}}" class="showOptions" data-product="showProductWrap-{{product.id}}" aria-label="{{'products.product.view_product' | t}}"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
-                  <path class="cls-1" d="M811.524,2918.03a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,811.524,2918.03Zm6.579,0a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,818.1,2918.03Zm7.781-9.41a1.222,1.222,0,0,0-1.01-.59H810.352l-0.688-4.02h-4.638a0.99,0.99,0,1,0,0,1.98h2.941l0.636,3.83,0.89,6.06a1.212,1.212,0,0,0,1.2.99h10.329a1.228,1.228,0,0,0,1.01-.6l3.81-6.52A1.19,1.19,0,0,0,825.884,2908.62Zm-5.336,6.33h-9.155l-0.718-4.95h12.764Z" transform="translate(-804 -2904)"></path>
-                  </svg>
-                </a>
-              </li>
               {%- endif -%}
               {%- endif -%}
-            </ul>
+            </span>
+            {%- if current_variant.unit_price_measurement -%}
+            <small class="unit-price">
+              {{ current_variant.unit_price | money }} /
+              {%- if current_variant.unit_price_measurement.reference_value != 1 %}
+              {{ current_variant.unit_price_measurement.reference_value }}
+              {%- endif -%}
+              {{ current_variant.unit_price_measurement.reference_unit }}
+            </small>
+            {%- endif -%}
           </div>
 
-        </div>  
-        {%- unless hideRelated or settings.show_similar == false -%}      
-        <div class="similar_options" data-url="{{product.url}}">
-          <span class="vs-icon text-{{settings.show_similar_text}}">
-            {%- render 'similar-product-icon' -%}
-            {%- unless settings.show_similar_text == false -%} 
-            <span class="similar-text">{{'products.product.similar_products' | t}}</span>
-            {%- endunless -%}
-          </span>
-        </div>
-        {%- endunless -%}
-        {%- endunless -%}
-        {%- if product.available == false -%}
-        <div class="product__badge product__on__soldOut">
-          {{'products.product.sold_out' | t}}
-        </div> 
-        {%- elsif product.compare_at_price > product.price -%}
-        <div class="product__badge product__on__sale">
-          {{'products.product.on_sale' | t}}
         </div>
         {%- endif -%}
       </div>
-      <div class="product-information">
-        <div class="product-information__wrapper">
-          <a href="{{product.url | within: collection}}" class="caption-with-letter-spacing light" title="{{product.title}}">{{product.title}}</a>
-          {%- if settings.show_price -%}
-          <div class="price">
-            <div class="price__regular">
-              <span class="price-item price-item--regular">
-                <span data-regular-price>{{current_variant.price | money}}</span>
-                {%- if current_variant.compare_at_price > current_variant.price -%}
-                <span data-compare-price>
-                  {{ current_variant.compare_at_price | money }}
-                </span>
-                {%- if settings.show_saved_amount -%}        
-                {%- if settings.saved_amount_style == 'percentage' -%}
-                <span class="percent-off">{{ current_variant.compare_at_price | minus: current_variant.price | times: 100.0 | divided_by: current_variant.compare_at_price | round: 2 | append: "% OFF"}}</span>
-                {%- else %}
-                <span class="percent-off">{{ current_variant.compare_at_price | minus: current_variant.price | money | append: " OFF"}}</span>
-                {%- endif -%}
-                {%- endif -%}
-                {%- endif -%}
-              </span>
-              {%- if current_variant.unit_price_measurement -%}
-              <small class="unit-price">
-                {{ current_variant.unit_price | money }} /
-                {%- if current_variant.unit_price_measurement.reference_value != 1 %}
-              {{ current_variant.unit_price_measurement.reference_value }}
-                {%- endif -%}
-                {{ current_variant.unit_price_measurement.reference_unit }}
-              </small>
-              {%- endif -%}
-            </div>
-            
-          </div>
-          {%- endif -%}
-        </div>
 
-      </div>
     </div>
-  </div>  
-</div>
+  </div>
+</div>  
