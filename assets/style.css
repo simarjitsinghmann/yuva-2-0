@@ -5901,6 +5901,12 @@ p::-webkit-scrollbar-thumb:hover,
   	object-fit:cover;
 }
 .img-overlay-text {
-	background-color:#fff;
+    background-color: #fff;
+    position: absolute;
+    bottom: 10px;
+    width: 96%;
+    left: 2%;
+    text-align: center;
+    padding: 30px;
 }
 /*=========== theme featured section css end =============*/
