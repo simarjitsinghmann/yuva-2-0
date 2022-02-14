@@ -5418,9 +5418,10 @@ p::-webkit-scrollbar-thumb:hover,
     background-color: #fff;
 }
 .yv-blog-date {
-  	display:block;
+    display: inline-block;
     color: var(--theme-color);
-    font-weight: 600;
+    background-color: #f6f0ec;
+    padding: 4px 18px;
 }
 .yv-blog-title {
     font-size: 20px;
