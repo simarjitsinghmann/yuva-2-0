@@ -203,12 +203,14 @@ header {
     right: 0;
     top: 100%;
     z-index: 3;
-    padding: 3px 0px 3px;
+    padding: 3px 0;
     width: 100%;
     border: 1px solid #f0f0f0;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 6px #0000001a;
     border-radius: 1px;
     display: none;
+    max-height: 200px;
+    overflow: auto;
 }
 .currency-block .dropdown-menu a.dropdown-item {
   width: 100%;
