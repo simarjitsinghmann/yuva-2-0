@@ -33,11 +33,9 @@
                 </svg></a>
             </li>
             {%- endif -%}
-
             {%- if settings.show_atc -%}
             {%- if has_only_default_variant or product.variants.size == 1 -%}
             {%- if product.available -%}
-
             <li>
               {%- form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' -%} 
               <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
