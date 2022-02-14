@@ -5280,9 +5280,10 @@ p::-webkit-scrollbar-thumb:hover,
 .yv-tab-link {
   display:inline-block;
   font-size: 14px;
-  color: #6b6b6b;
+  color: var(--theme-color);
   padding: 2px 15px;
   position:relative;
+  background-color: #f4f3ec;
 }
 .yv-tab-item:last-child .yv-tab-link{
   border:0
