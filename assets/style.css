@@ -5347,13 +5347,11 @@ p::-webkit-scrollbar-thumb:hover,
     transition: .3s ease;
     overflow: hidden;
     padding: 0 10px;
+    color:var(--theme-color);
     box-shadow: 0 2px 2px 1px rgb(0 0 0 / 12%);
 }
-.similar_options svg path {
-  fill: var(--theme-color);
-}
 .similar_options svg {
-  fill: #1f2a2e;
+  fill: var(--theme-color);
   min-width: 17px;
   max-width: 17px;
 }
