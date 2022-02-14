@@ -5925,4 +5925,15 @@ p::-webkit-scrollbar-thumb:hover,
     display: inline-flex;
     flex-direction: column;
 }
+.video-overlay-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.04);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 /*=========== theme featured section css end =============*/
