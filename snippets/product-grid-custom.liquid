@@ -108,16 +108,16 @@
         {%- endif -%}
         {%- endif -%}
         {%- endif -%}
-        {%- if current_variant.unit_price_measurement -%}
-        <p class="yv-product-unit-price">
-          {{ current_variant.unit_price | money }} /
-          {% if current_variant.unit_price_measurement.reference_value != 1 %}
-          {{ current_variant.unit_price_measurement.reference_value }}
-          {%- endif -%}
-          {{ current_variant.unit_price_measurement.reference_unit }}
-        </p>
-        {%- endif -%}
       </div>
+      {%- if current_variant.unit_price_measurement -%}
+      <p class="yv-product-unit-price">
+        {{ current_variant.unit_price | money }} /
+        {% if current_variant.unit_price_measurement.reference_value != 1 %}
+        {{ current_variant.unit_price_measurement.reference_value }}
+        {%- endif -%}
+        {{ current_variant.unit_price_measurement.reference_unit }}
+      </p>
+      {%- endif -%}
       {%- endif -%}
     </div>
   </div>
