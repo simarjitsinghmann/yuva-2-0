@@ -5321,6 +5321,53 @@ p::-webkit-scrollbar-thumb:hover,
     color: var(--theme-color);
     font-weight: bold;
 }
+.similar_options {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  cursor: pointer;
+  z-index: 1;
+}
+.similar_options .vs-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--white);
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-items: center;
+    border-radius: 50px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+    overflow: hidden;
+    padding: 0 10px;
+    box-shadow: 0 1px 1px 1px #0000000a;
+    }
+.similar_options svg path.st0 {
+  fill: #606060;
+}
+.similar_options svg {
+  fill: #1f2a2e;
+  min-width: 17px;
+  max-width: 17px;
+}
+.similar-text {
+  font-size: 0;
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+  max-width: 0;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
 /*========= featured Product collection section css end =======*/
 /*===============testimonial section css start=============*/
 .testimonial-section {
