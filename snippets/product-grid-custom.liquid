@@ -33,7 +33,7 @@
           {%- endif -%}
           <li data-href="{{product.url}}">
             <a href="#" aria-label="{{'general.quick_view_heading' | t}}">
-              
+              {%- render 'similar-product-icon' -%}
             </a>
           </li>
           {%- if settings.show_atc -%}
