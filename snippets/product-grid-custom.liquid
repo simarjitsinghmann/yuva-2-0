@@ -12,7 +12,7 @@
 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
   <div class="yv-product-card">
     <div class="yv-product-card-img {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{% endunless %} ">
-      <a href="{{product.url | within : collection}}">
+      <a class="yv-product-img" href="{{product.url | within : collection}}">
         {%- if product.featured_image != blank -%}
         {%- render 'lazy-image' image: product.featured_image -%}
         {%- unless settings.show_second_image == false or second_image == blank -%}          
