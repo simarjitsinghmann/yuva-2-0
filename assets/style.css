@@ -5323,8 +5323,8 @@ p::-webkit-scrollbar-thumb:hover,
 }
 .similar_options {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 15px;
+  right: 20px;
   cursor: pointer;
   z-index: 1;
 }
@@ -5350,7 +5350,7 @@ p::-webkit-scrollbar-thumb:hover,
     padding: 0 10px;
     box-shadow: 0 1px 1px 1px #0000000a;
     }
-.similar_options svg path.st0 {
+.similar_options svg path {
   fill: #606060;
 }
 .similar_options svg {
