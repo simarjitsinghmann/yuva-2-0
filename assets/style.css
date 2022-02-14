@@ -5284,13 +5284,13 @@ p::-webkit-scrollbar-thumb:hover,
   padding: 2px 15px;
   position:relative;
   background-color: #f4f3ec;
+  border-radius: 20px;
 }
 .yv-tab-item:last-child .yv-tab-link{
   border:0
 }
 .yv-tab-item.active .yv-tab-link {
     background-color: var(--theme-color);
-    border-radius: 20px;
     color: #fff;
 }
 .yv-tab-content {
