@@ -5395,6 +5395,10 @@ p::-webkit-scrollbar-thumb:hover,
 }
 /*===============testimonial section css end=============*/
 /*========== featured blog section css start ==========*/
+.yv-blog-card {
+    height: 100%;
+    background-color: #fff;
+}
 .yv-blog-card-img {
     height: 340px;
     overflow: hidden;
@@ -5415,7 +5419,6 @@ p::-webkit-scrollbar-thumb:hover,
 }
 .yv-blog-card-text {
     padding: 30px;
-    background-color: #fff;
 }
 .yv-blog-date {
     display: inline-block;
