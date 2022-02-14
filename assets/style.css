@@ -5316,7 +5316,10 @@ p::-webkit-scrollbar-thumb:hover,
     margin-bottom: 40px;
 }
 .yv-product-card-img {
-	
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 10px;
 }
 .yv-product-information {
     text-align: center;
