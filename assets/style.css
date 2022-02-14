@@ -5196,6 +5196,7 @@ p::-webkit-scrollbar-thumb:hover,
     position: absolute;
     bottom: 0px;
     z-index: 1;
+  	transform:translateY(-100%);
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
     transition: all .3s linear;
@@ -5213,7 +5214,7 @@ p::-webkit-scrollbar-thumb:hover,
 }
 .yv-product-options li a {
   	display:inline-block;
-  width:100%;
+  	width:100%;
     border-right: 1px solid #e6e9ee;
 }
 .yv-product-options li:last-child a{
