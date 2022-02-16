@@ -5,7 +5,17 @@
       {%-else-%}
       <div class="spotlightSectionPlaceholder">{% render 'banner-placeholder'%}</div>
       {%- endif %}
-    
+    {% for block in section.blocks %}
+    <div class="spotlightPoint">
+      {% if block.settings.product != blank %}
+      <div class="spotlightProductDetails">
+        <a href="{{block.settings.product.url}}">
+          <h3>{{block.settings.product.title}}</h3>
+        </a>
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
   </div>
 </div>
 <style>
