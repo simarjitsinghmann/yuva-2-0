@@ -1,4 +1,13 @@
 <div class="spotlightSectionMain">
+  <div class="spotlighSectionWrapper">
+    <div class="spotlightSectionImage">
+      {%- if section.settings.image != blank -%}
+      {%- render 'lazy-image' image:section.settings.image,class:'spotlightSectionImage' -%}
+      {%-else-%}
+      <div class="spotlightSectionPlaceholder">{% render 'banner-placeholder'%}</div>
+      {%- endif %} 
+    </div>
+  </div>
 </div>
 {% schema %}
   {
