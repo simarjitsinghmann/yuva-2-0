@@ -6,7 +6,7 @@
       <div class="spotlightSectionPlaceholder">{% render 'banner-placeholder'%}</div>
       {%- endif %}
     {% for block in section.blocks %}
-    <div class="spotlightPoint">
+    <div class="spotlightPoint" style="top:{{block.settings.vertical}}%;left:{{block.settings.horizontal}}%">
       {% if block.settings.product != blank %}
       <div class="spotlightProductDetails">
         <a href="{{block.settings.product.url}}">
