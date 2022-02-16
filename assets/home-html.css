@@ -272,6 +272,24 @@
     transition: all .3s linear;
     justify-content: center;
 }
+.shop__options .product__view__option ul li {
+    background: var(--white);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 5px;
+    cursor: pointer;
+}
 .yv-product-card-img:hover .yv-product-options{
 	transform:translateY(0%);
 }
