@@ -264,7 +264,7 @@
 .yv-product-options {
     display: flex;
     position: absolute;
-    bottom: 20px;
+    bottom: 0;
     z-index: 1;
   	transform:translateY(100%);
     -webkit-transition: all .3s linear;
@@ -292,6 +292,7 @@
 }
 .yv-product-card-img:hover .yv-product-options{
 	transform:translateY(0%);
+  	bottom:20px;
 }
 .yv-product-options li {
     min-width: 100px;
