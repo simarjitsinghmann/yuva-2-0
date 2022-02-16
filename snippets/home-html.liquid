@@ -11,23 +11,14 @@
         </div>
       </div>
       <div class="yv-collection-slider" data-slider>
-        {%- for block in section.blocks -%}
-        {%- assign collection = block.settings.collection -%}
         <div class="yv-collection-list">
           <a href="#" class="yv-collection-item">
-            {%- if block.settings.image != blank -%}
             {%- include 'lazy-image' image:block.settings.image -%}
-            {%- elsif collection.featured_image -%}
-            {%- include 'lazy-image' image:collection.featured_image -%}
-            {%- else -%}
-            {%- render 'placeholder' -%}
-            {%- endif -%}
             <div class="yv-collection-name">
               <h4>{{collection.title}}</h4>
             </div>
           </a>
         </div>
-        {%- endfor -%}
       </div>
     </div>
   </div>
