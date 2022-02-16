@@ -1,12 +1,11 @@
 <div class="spotlightSectionMain">
   <div class="spotlighSectionWrapper">
-    <div class="spotlightSectionImage">
       {%- if section.settings.image != blank -%}
       {%- render 'lazy-image' image:section.settings.image,class:'spotlightSectionImage' -%}
       {%-else-%}
       <div class="spotlightSectionPlaceholder">{% render 'banner-placeholder'%}</div>
-      {%- endif %} 
-    </div>
+      {%- endif %}
+    
   </div>
 </div>
 <style>
@@ -15,11 +14,9 @@
     height: 100%;
     object-fit: cover;
 }
-  .spotlightSectionImage {
+  .spotlighSectionWrapper {
     width: 100%;
     height: 600px;
-}
-  .spotlighSectionWrapper {
     position: relative;
 }
   </style>
