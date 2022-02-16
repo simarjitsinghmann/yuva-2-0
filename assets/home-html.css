@@ -257,8 +257,6 @@
     visibility: hidden;
     white-space: nowrap;
     max-width: 0;
-    -webkit-transition: all 0.1s linear;
-    -o-transition: all 0.1s linear;
     transition: all 0.1s linear;
 }
 .yv-product-options {
@@ -268,8 +266,6 @@
     bottom: 0;
     z-index: 1;
   	transform:translateY(100%);
-    -webkit-transition: all .3s linear;
-    -o-transition: all .3s linear;
     transition: all .3s linear;
     justify-content: center;
 }
@@ -277,15 +273,8 @@
     background: var(--white);
     width: 40px;
     height: 40px;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     margin: 0 5px;
     cursor: pointer;
