@@ -5046,38 +5046,6 @@ p::-webkit-scrollbar-thumb:hover,
 /*============ policies page css end ===========*/
 
 
-
-
-/*============ tabs section css start ===========*/
-.yv-tabs {
-  display: flex;
-  justify-content: center;
-}
-.yv-tabs.align-end {
-  justify-content: flex-end;
-}
-.yv-tab-link {
-  display:inline-block;
-  font-size: 14px;
-  color: var(--theme-color);
-  padding: 2px 15px;
-  position:relative;
-  background-color: #f4f3ec;
-  border-radius: 20px;
-  margin-left:10px;
-   margin-bottom:5px;
-}
-.yv-tab-item:last-child .yv-tab-link{
-  border:0
-}
-.yv-tab-item.active .yv-tab-link {
-    background-color: var(--theme-color);
-    color: #fff;
-}
-.yv-tab-content {
-  padding:20px 0;
-}
-/*============ all tabs style css end ===========*/
 /*===============testimonial section css start=============*/
 .testimonial-section {
   padding:0;
