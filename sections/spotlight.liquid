@@ -9,11 +9,13 @@
     <div class="spotlightPoint" style="top:{{block.settings.vertical}}%;left:{{block.settings.horizontal}}%">
       {% if block.settings.product != blank %}
       <div class="spotlightProductDetails {% if block.settings.vertical > 50 %}spotlightProductDetails-top{% endif %} {% if block.settings.horizontal > 70 %}spotlightProductDetails-left{% elsif block.settings.horizontal < 30%}spotlightProductDetails-right{% endif %}">
-        <a href="{{block.settings.product.url}}">
-          <h6>{{block.settings.product.title}}</h6>
-          {{block.settings.product.featured_image | img_url:'350x'| img_tag}}
-          <p>{{block.settings.product.price | money}}</p>
+        {%- assign product = block.settings.product -%}
+        <a href="{{product.url}}">
+          <h6>{{product.title}}</h6>
+          {{product.featured_image | img_url:'350x'| img_tag}}
+          <p>{{product.price | money}}</p>
         </a>
+        
         {%- assign product_form_id = 'product-form-' | append: section.id | append : product.id-%}
         {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
         <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
