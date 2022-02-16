@@ -264,18 +264,13 @@
 .yv-product-options {
     display: flex;
     position: absolute;
-    bottom: 0px;
+    bottom: 20px;
     z-index: 1;
   	transform:translateY(100%);
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
     transition: all .3s linear;
-    background-color: #fff;
-    width: 80%;
-    left: 10%;
-    padding: 10px;
     justify-content: center;
-    border-radius: 6px 6px 0 0;
 }
 .yv-product-card-img:hover .yv-product-options{
 	transform:translateY(0%);
