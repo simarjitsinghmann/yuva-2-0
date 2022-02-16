@@ -109,14 +109,17 @@
   	justify-content: flex-end;
 }
 .yv-tab-link {
-    display:inline-block;
+    display: inline-block;
     font-size: 13px;
     color: #585858;
-    padding: 2px 15px;
-    position:relative;
+    padding: 11px 15px;
+    position: relative;
     border: 2px solid #f1e8e4;
-    margin-left:10px;
-    margin-bottom:5px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    line-height: 1;
+    min-width: 125px;
+    text-align: center;
 }
 .yv-tab-item.active .yv-tab-link {
     background-color: #f4f3ec;
