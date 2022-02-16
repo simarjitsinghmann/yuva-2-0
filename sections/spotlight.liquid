@@ -14,7 +14,7 @@
           {{block.settings.product.featured_image | img_url:'350x'| img_tag}}
           <p>{{block.settings.product.price | money}}</p>
         </a>
-        {% form 'product',product %}
+        {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
         <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
         <input type="hidden" name="quantity" value="1">
         <button type="submit" class="btn" >Add to Cart</button>
