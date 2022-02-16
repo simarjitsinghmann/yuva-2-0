@@ -5523,7 +5523,7 @@ transform:translateY(0%);
 .yv-collection-item {
     height: 530px;
     overflow: hidden;
-    background-color: var(--colorImageBg);
+    background-color: #f1e2ce;
     display: flex;
     align-items: center;
     width: 100%;
@@ -5532,7 +5532,7 @@ transform:translateY(0%);
 .yv-collection-item img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 .yv-collection-name {
     position: absolute;
