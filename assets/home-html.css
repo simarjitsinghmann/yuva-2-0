@@ -253,7 +253,7 @@
     transition: all .2s linear;
     justify-content: center;
 }
-.yv-product-options li {
+.yv-product-options li a{
     background: var(--white);
     width: 40px;
     height: 40px;
@@ -268,7 +268,7 @@
   	bottom:20px;
 }
 
-.yv-product-options li svg {
+.yv-product-options li a svg {
 	width:19px;
 }
 /*========= collection Product section css end =======*/
