@@ -390,6 +390,10 @@ function toggleDropdown(id) {
   }
 }
 
+function roundToTwo(num) {    
+    return +(Math.round(num + "e+2")  + "e-2");
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   setTimeout(function(){
   document.querySelector('body').classList.remove('loading')
@@ -543,9 +547,6 @@ function variantChange(options,type,selector){
   });
 }
 
-function roundToTwo(num) {    
-    return +(Math.round(num + "e+2")  + "e-2");
-}
 
 function priceUpdate(priceContainer,getVariant,showSaved){
   var showSavedAmount = '';
