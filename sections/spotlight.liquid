@@ -8,7 +8,7 @@
     {% for block in section.blocks %}
     <div class="spotlightPoint" style="top:{{block.settings.vertical}}%;left:{{block.settings.horizontal}}%">
       {% if block.settings.product != blank %}
-      <div class="spotlightProductDetails {% if block.settings.vertical > 50 %}spotlightProductDetails-top{% endif %} {% if block.settings.horizontal > 70 %}spotlightProductDetails-left{% endif %}">
+      <div class="spotlightProductDetails {% if block.settings.vertical > 50 %}spotlightProductDetails-top{% endif %} {% if block.settings.horizontal > 70 %}spotlightProductDetails-left{% elsif block.settings.horizontal < 30%}spotlightProductDetails-right{% endif %}">
         <a href="{{block.settings.product.url}}">
           <h6>{{block.settings.product.title}}</h6>
           {{block.settings.product.featured_image | img_url:'350x'| img_tag}}
