@@ -143,8 +143,7 @@
                     <div class="yv-prizebox" data-saved="{{settings.show_saved_amount}}"  data-saved-style="{{settings.saved_amount_style}}" data-price-wrapper=""   {{ block.shopify_attributes }}>
                       <span class="yv-product-price">$1,100.00</span>
                       <span class="yv-product-compare-price"> $1,190.00</span>
-                      <span class="yv-product-percent-off">{{ current_variant.compare_at_price | minus: current_variant.price | times: 100.0 | divided_by: current_variant.compare_at_price| round:2 | append: "% OFF"}}</span>
-                      <span class="yv-product-percent-off">{{ current_variant.compare_at_price | minus: current_variant.price | money | append: " OFF"}}</span>
+                      <span class="yv-product-percent-off"> 50% Off</span>
                     </div>
                   </div>
                 </div>
