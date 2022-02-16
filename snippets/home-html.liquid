@@ -1,53 +1,51 @@
 <!-- colection slider section start -->
 <section class="collection-list-section shopify-section">
-  <div class="section-spacer">
-    <div class="yv-collection-wrapper">
-      <div class="yv-collections-text-outer">
-        <div class="yv-collections-text">
-          <h5 class="yv-collections-subtitle">Collection List</h5>
-          <h2 class="yv-collections-title">Every Cloud Intsia Knit Jumper</h2>
-          <p class="yv-collections-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
-          <a class="button" href="#">shop now</a>
+  <div class="yv-collection-wrapper">
+    <div class="yv-collections-text-outer">
+      <div class="yv-collections-text">
+        <h5 class="yv-collections-subtitle">Collection List</h5>
+        <h2 class="yv-collections-title">Every Cloud Intsia Knit Jumper</h2>
+        <p class="yv-collections-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+        <a class="button" href="#">shop now</a>
+      </div>
+    </div>
+    <div class="yv-collection-slider" data-slider>
+      <a href="#" class="yv-collection-item">
+        <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/collection1.png?v=1645004597" alt="" />
+        <div class="yv-collection-name">
+          <h4>Women Life Colections</h4>
         </div>
-      </div>
-      <div class="yv-collection-slider" data-slider>
-        <a href="#" class="yv-collection-item">
-          <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/collection1.png?v=1645004597" alt="" />
-          <div class="yv-collection-name">
-            <h4>Women Life Colections</h4>
-          </div>
-        </a>
-        <a href="#" class="yv-collection-item">
-          <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/collection2.png?v=1645004597" alt="" />
-          <div class="yv-collection-name">
-            <h4>Women Life Colections</h4>
-          </div>
-        </a>
-        <a href="#" class="yv-collection-item">
-          <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/collection3.png?v=1645004597" alt="" />
-          <div class="yv-collection-name">
-            <h4>Women Life Colections</h4>
-          </div>
-        </a>
-        <a href="#" class="yv-collection-item">
-          <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/collection1.png?v=1645004597" alt="" />
-          <div class="yv-collection-name">
-            <h4>Women Life Colections</h4>
-          </div>
-        </a>
-        <a href="#" class="yv-collection-item">
-          <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/collection2.png?v=1645004597" alt="" />
-          <div class="yv-collection-name">
-            <h4>Women Life Colections</h4>
-          </div>
-        </a>
-        <a href="#" class="yv-collection-item">
-          <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/collection3.png?v=1645004597" alt="" />
-          <div class="yv-collection-name">
-            <h4>Women Life Colections</h4>
-          </div>
-        </a>
-      </div>
+      </a>
+      <a href="#" class="yv-collection-item">
+        <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/collection2.png?v=1645004597" alt="" />
+        <div class="yv-collection-name">
+          <h4>Women Life Colections</h4>
+        </div>
+      </a>
+      <a href="#" class="yv-collection-item">
+        <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/collection3.png?v=1645004597" alt="" />
+        <div class="yv-collection-name">
+          <h4>Women Life Colections</h4>
+        </div>
+      </a>
+      <a href="#" class="yv-collection-item">
+        <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/collection1.png?v=1645004597" alt="" />
+        <div class="yv-collection-name">
+          <h4>Women Life Colections</h4>
+        </div>
+      </a>
+      <a href="#" class="yv-collection-item">
+        <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/collection2.png?v=1645004597" alt="" />
+        <div class="yv-collection-name">
+          <h4>Women Life Colections</h4>
+        </div>
+      </a>
+      <a href="#" class="yv-collection-item">
+        <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/collection3.png?v=1645004597" alt="" />
+        <div class="yv-collection-name">
+          <h4>Women Life Colections</h4>
+        </div>
+      </a>
     </div>
   </div>
   <script type="application/json" name="slider-json">
@@ -76,5 +74,49 @@
 <!-- colection slider section end -->
 <!-- collection products slider section start -->
 <section class="shopify-section ">
+    <div class="container-fluid">
+      <div class="section-heading between-heading">
+        <h2>{{section.settings.subheading}} </h2>
+        <ul class="yv-tabs align-end">
+          <li class="yv-tab-item active"><a href="javascript:void(0)" class="yv-tab-link">For Everday</a></li>
+          <li class="yv-tab-item"><a href="javascript:void(0)" class="yv-tab-link">For Lounge</a></li>
+        </ul>
+      </div>
+      <div class="yv-tabs-wrapper">
+        <div class="yv-tab-content">
+          <div class="yv-tab-pane">
+            <div class="yv-featured-product-grid">
+              <div class="row">
+                {%- assign limit = section.settings.col_size | times : section.settings.row_size  -%}
+                {%- if section.settings.collection != blank -%}
+                {%- assign collection = section.settings.collection -%}
+                {%- for product in collection.products limit:limit -%}
+                {%- include 'product-grid-custom' -%}
+                {%- endfor -%}
+                {%- else -%}
+
+                {%- for i in (1..limit) -%}
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                  <div class="yv-product-card-wrapper">
+                    <div class="card-wrapper-img ">
+                      {%- capture current -%}{% cycle 1, 2, 3, 4, 5, 6 %}{%- endcapture -%}
+                      {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                    </div>
+                    <div class="product-information">
+                      <div class="caption-with-letter-spacing light">{{ 'onboarding.product_title' | t | capitalize }}</div>
+                      <div class="price__regular">
+                        <span data-regular-price>{{ 1999 | money}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {%- endfor -%}
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </section>
 <!-- collection products slider section end -->
