@@ -104,11 +104,6 @@
                         </a>
                       </li>
                       <li>
-                        <a href="#" >
-                          {%- render 'similar-product-icon' -%}
-                        </a>
-                      </li>
-                      <li>
                         <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
                         <button type="submit" class="Sd_addProduct" {% unless product.available %} disabled="disabled"{% endunless %} aria-label="{{'products.product.add_to_cart' | t}}">
                           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
