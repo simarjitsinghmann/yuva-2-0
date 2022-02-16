@@ -263,6 +263,7 @@
 }
 .yv-product-options {
     display: flex;
+  	width:100%;
     position: absolute;
     bottom: 0;
     z-index: 1;
@@ -293,10 +294,6 @@
 .yv-product-card-img:hover .yv-product-options{
 	transform:translateY(0%);
   	bottom:20px;
-}
-.yv-product-options li {
-    min-width: 100px;
-    text-align: center;
 }
 .yv-product-options li a {
   	display:inline-block;
