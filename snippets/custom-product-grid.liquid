@@ -39,7 +39,7 @@
       </li> -->
       
           {%- if settings.show_atc -%}
-          {%- if has_only_default_variant or product.variants.size == 1 -%}
+          {%- if has_only_default_variants or product.variants.sizes == 1 -%}
           {%- if product.available -%}
           <li>
             {%- form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' -%} 
