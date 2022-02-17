@@ -22,7 +22,7 @@
     </ul>
     <div class="yv-tab-content">
       <div class="yv-tab-pane">
-        <div class="yv-featured-product-grid" data-slider>
+        <div id="slider-{{section.id}}" class="yv-featured-product-grid" data-slider>
           {% for block in section.blocks %}
           {%assign mainClass='product-'| append:block.id%}
           {% if block.settings.collection != blank or block.settings.collection.all_products_count > 0 %}
@@ -58,6 +58,11 @@
           ]
         }
 </script>
+  <script>
+    $(document).ready(function(){
+    	
+    })
+  </script>
 {% schema %}
 {
    "name":"featured-collections-2",
