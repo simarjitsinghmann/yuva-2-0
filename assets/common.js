@@ -806,6 +806,9 @@ sellingPlanChange();
 slickSlider = function(selector,slideIndex){
   var optionContainer = selector.closest('.shopify-section').find('[name="slider-json"]')[0];
   if(optionContainer){
+    selector.on('init', function(event, slick){
+      console.log("initialised")
+    });
     var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
     var options = JSON.parse(html);
     if(slideIndex){
@@ -814,9 +817,6 @@ slickSlider = function(selector,slideIndex){
     else{
       selector.slick(options);
     }
-    selector.on('init', function(event, slick){
-      console.log("initialised")
-    });
     if(selector.attr('data-slider-filter') != undefined){
       var filterButtons = selector.closest('.shopify-section').find('.filter-products');
       var selectedCollection = selector.closest('.shopify-section').find('.filter-products.active').data('products');

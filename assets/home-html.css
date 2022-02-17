@@ -329,9 +329,11 @@
 .about-left-img {
     overflow: hidden;
     border-radius: 10px;
+  position:absolute;
 }
 .about-left-img.img1 {
     width: 412px;
+    position: static;
     height: 425px;
 }
 .about-left-img.img2 {
