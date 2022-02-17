@@ -1307,17 +1307,11 @@ $(document).ready(function()
         
     });
     
-  var productGridSliderWrapper;
+  var productGridSliderInterval;
   $('.hover-slider').hover(function(){ 
-    if(!$(this).hasClass('active')){   	
-   		$('.hover-slider').removeClass('active');
-      $('.hover-slider').find('.yv-product-img').removeClass('hidden');
-      $('.hover-slider').find('[product-grid-slides]').addClass('hidden');
-   		$(this).addClass('active'); 
-      $(this).find('.yv-product-img').addClass('hidden');
-      $(this).find('[product-grid-slides]').removeClass('hidden');
-      $(window).trigger('resize');
-    }
+    productGridSliderInterval = setInterval(function(){
+    	$(this).find('..sd_slider_controls[attr-type="next"]').trigger('click');
+    })
   }, function(){ 
    $('.hover-slider').removeClass('active'); 
       $('.hover-slider').find('.yv-product-img').removeClass('hidden');
