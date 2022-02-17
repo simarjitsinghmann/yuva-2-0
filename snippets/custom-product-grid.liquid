@@ -32,7 +32,7 @@
           
             {%- when 'image'-%}
             <div class="quickview_product_img">
-              <img src="{{media | img_url: '500x'}}" alt="{{ media.preview_image.alt | escape }}">
+             {%- render 'lazy-image' image:media -%}
             </div>
             {%- when 'external_video'-%} 
             <div class="quickview_product_img slick-slide-video-item">
