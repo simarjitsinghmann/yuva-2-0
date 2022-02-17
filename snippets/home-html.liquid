@@ -426,13 +426,34 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- theme about section end -->
+<!--  featured product section start  -->
+<section>
+  <div class="section-spacer">
+    <div class="container sm-container">
+      <div class="yv-feature-product-wrapper">
+        <div class="row no-gutters">
+          <div class="col-md-6 col-lg-6">
+            <div class="yv-feature-product-image" >
+              {%- include 'lazy-image' image:featured_image -%} 
+              <div class="featured-product-img-text">
+                <h3>Featured</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6">
+            {%- unless section.settings.product == blank -%}
+            {%- include 'featured-product-form' -%}
+            {%- endunless -%}
           </div>
         </div>
       </div>
-      </section>
-<!-- theme about section end -->
-<!--  featured product section start  -->
-  <section>
-    
-  </section>
+    </div>
+  </div>
+</section>
 <!--  featured product section start  -->
