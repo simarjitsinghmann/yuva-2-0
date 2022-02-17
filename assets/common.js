@@ -813,7 +813,7 @@ slickSlider = function(selector,slideIndex){
         filterSlides.each(function(){
         	var item = $(this).attr('data-filter-item');
           console.log('$(this)',$(this).closest('.slick-slide'))
-          $(this).closest('.slick-slide').addClass('item')
+          $(this).closest('.slick-slide').addClass(item)
         })       
       }
     });
@@ -830,8 +830,8 @@ slickSlider = function(selector,slideIndex){
         var filterButtons = selector.closest('.shopify-section').find('.filter-products');
         var selectedCollection = selector.closest('.shopify-section').find('.filter-products.active').data('products');
         //       console.log('selectedCollection',selectedCollection)        
-//         selector.slick('slickUnfilter');
-//         selector.slick('slickFilter','.'+selectedCollection)
+        selector.slick('slickUnfilter');
+        selector.slick('slickFilter','.'+selectedCollection)
         //       $('#shopify-section-{{section.id}}').on('click','.filter-products',function(){
         //         if(!$(this).hasClass('active')){
         //           $(this).siblings().removeClass('active');
