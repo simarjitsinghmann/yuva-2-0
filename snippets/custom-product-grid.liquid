@@ -98,9 +98,9 @@
       {%- endif -%}
   </div>
   <div class="yv-product-information">
-    <div class="ratingbox" >
-      <span class="shopify-product-reviews-badge"></span>
-    </div>
+     <div class="ratingbox">
+        <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+      </div>
     <a href="{{product.url | within: collection}}" class="yv-product-title" title="{{product.title}}">{{product.title}}</a>
     <div class="yv-prizebox">
       <span class="yv-product-price">$1,100.00</span>
