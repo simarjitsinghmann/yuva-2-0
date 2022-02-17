@@ -871,9 +871,14 @@ section.about-theme-section.shopify-section {
 .yv-blog-date {
     display: inline-block;
     color: var(--theme-color);
-    background-color: #f6f0ec;
+    background-color: #fff;
     padding: 4px 18px;
     margin-bottom:15px;
+}
+.featured-blog .yv-blog-date{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .yv-blog-title {
     color: #0c0c0c;
