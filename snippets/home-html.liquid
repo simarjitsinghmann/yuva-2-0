@@ -958,36 +958,26 @@
       </div>
       <div class="yv-blogs-wrapper"> 
           <div class="row">       
-            {% assign first_grid_class = 'col-md-6 col-lg-6' %}
-            {% assign second_grid_class = 'col-md-6 col-lg-6' %}
-            
-            {% if section.blocks.size > 2 %}
-            {% assign second_grid_class = 'col-md-3 col-lg-3' %}
-            {% endif %}
-            {%- for block in section.blocks -%}
-            {% if forloop.first %}
-            {% assign mainclass =first_grid_class %}
-            {% else %}
-            {% assign mainclass = second_grid_class %}
-            {% endif %}
-            {%- if block.settings.article != blank -%}  
-            {%- assign article = block.settings.article -%}
-            {%- include 'featured-article-grid' mainclasses:mainclass -%}
-            {%- else -%}
-            <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-              <div class="yv-blog-card">               
-                  <div class="yv-blog-card-img">
-                    {% render 'placeholder' %}
-                  </div>
-                <div class="yv-blog-card-text">
-                  <span class="yv-blog-date">{{'sections.featured_article.onboarding_date' | t}}</span>
-                  <a class="yv-blog-title" href="">{{'sections.featured_article.onboarding_title' | t}}</a>
-                  <a href="" class="yv-blog-link">Read More</a>
-                </div>
-              </div>
-            </div>
-            {%- endif -%}
-            {%- endfor -%}
+            <div class="col-12 col-sm-12 {{mainclasses}}">
+  <div class="yv-blog-card">
+    {%- assign article_image = 'featured_image.png' | asset_url -%}
+    {%- if article.image -%}
+    {%- assign article_image = article.image -%}
+    {%- endif -%}
+    <a href="{{-article.url-}}" class="yv-blog-card-img">                    
+      {%- if article.image != blank -%}
+      {%- include 'lazy-image' image:article_image -%}
+      {%- else -%}
+      {%- render 'placeholder' %}
+                  {%- endif -%}
+    </a>
+    <div class="yv-blog-card-text">
+      <span class="yv-blog-date">{{article.published_at | date: "%d" }} {{article.published_at | date: " %b %Y" }} </span>
+      <a class="yv-blog-title" href="{{article.url}}">{{article.title}}</a>
+       <a href="" class="yv-blog-link">Read More</a>
+    </div>
+  </div>
+</div>
           </div>
       </div>
     </div>
