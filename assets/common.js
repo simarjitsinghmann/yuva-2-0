@@ -15,10 +15,9 @@ jQuery.event.special.wheel = {
 };
 jQuery.event.special.mousewheel = {
     setup: function( _, ns, handle ){
-        this.addEventListener("mousewheel", handle, { passive: true });
+        this.addEventListener("mousewheel", handle, { passive: false });
     }
 };
-document.addEventListener("mousewheel", this.mousewheel.bind(this), { passive: false });
 if ((typeof window.Shopify) == 'undefined') {
   window.Shopify = {};
 }
