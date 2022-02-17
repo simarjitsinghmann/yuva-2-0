@@ -10,7 +10,7 @@
 {%- endfor -%}
 {%- endif -%}
 <div class="yv-product-card {{productClasses}}" {{mainAttr}}>
-  <div class="yv-product-card-img {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{% endunless %}">
+  <div class="yv-product-card-img {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{%else%}hover-slider{% endunless %}">
     <a class="yv-product-img" href="{{product.url | within : collection}}">
         {%- if product.featured_image != blank -%}
         {%- render 'lazy-image' image: product.featured_image -%}
