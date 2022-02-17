@@ -1310,7 +1310,7 @@ $(document).ready(function()
   var productGridSliderInterval;
   $('.hover-slider').hover(function(){ 
     productGridSliderInterval = setInterval(function(){
-    	$(this).find('..sd_slider_controls[attr-type="next"]').trigger('click');
+    	$(this).find('.sd_slider_controls[attr-type="next"]').trigger('click');
     },1000)
   }, function(){ 
    $('.hover-slider').removeClass('active'); 
