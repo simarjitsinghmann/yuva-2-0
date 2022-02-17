@@ -814,8 +814,8 @@ slickSlider = function(selector,slideIndex){
     else{
       selector.slick(options);
     }
-    console.log(selector.attr('data-slider-filter'))
     if(selector.attr('data-slider-filter')){
+    console.log(selector.attr('data-slider-filter'))
       var filterButtons = selector.closest('.shopify-section').find('.filter-products');
       var selectedCollection = selector.closest('.shopify-section').find('.filter-products.active').data('products');
 //       console.log('selectedCollection',selectedCollection)        
