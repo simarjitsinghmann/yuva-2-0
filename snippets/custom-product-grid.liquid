@@ -10,10 +10,16 @@
 {%- endfor -%}
 {%- endif -%}
 <div class="yv-product-card {{productClasses}}" {{mainAttr}}>
-  <div class="yv-product-card-img has-multiimage ">
-    <a class="yv-product-img" href="#">
-      <img src="//cdn.shopify.com/s/files/1/0597/9668/5009/products/watch.png?v=1644838541" alt="product image" />
-      <img class="product-second-img" src="//cdn.shopify.com/s/files/1/0597/9668/5009/products/watch.png?v=1644838541" alt="product image" />
+  <div class="yv-product-card-img {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{% endunless %}">
+    <a class="yv-product-img" href="{{product.url | within : collection}}">
+        {%- if product.featured_image != blank -%}
+        {%- render 'lazy-image' image: product.featured_image -%}
+        {%- unless settings.show_second_image == false or second_image == blank -%}          
+        {%- render 'lazy-image' image: second_image ,class:'product-second-img' -%}
+        {%- endunless -%} 
+        {%- else -%}
+        {%- render 'placeholder' -%}
+        {%- endif -%}
     </a>
     <ul class="yv-product-options">
       <li>
