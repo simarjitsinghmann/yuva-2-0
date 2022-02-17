@@ -832,8 +832,9 @@ section.about-theme-section.shopify-section {
 .featured-articles-section {
 	padding:75px 0;
 }
-.featured-blog .yv-blog-card-img{
+.featured-blog{
     height: 550px;
+  position:relative;
 }
 .yv-blog-card-img {
     height: 340px;
@@ -842,6 +843,9 @@ section.about-theme-section.shopify-section {
     display: flex;
     align-items: center;
     width: 100%;
+}
+.featured-blog .yv-blog-card-img {
+    height: 100%;
 }
 .yv-blog-card-img img {
     width: 100%;
@@ -855,6 +859,11 @@ section.about-theme-section.shopify-section {
 }
 .yv-blog-card-text {
     padding: 30px;
+}
+..featured-blog  .yv-blog-card-text {
+	position:absolute; 
+  bottom:0;
+  	background-color:#fff;
 }
 .yv-blog-date {
     display: inline-block;
