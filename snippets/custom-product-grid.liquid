@@ -86,9 +86,16 @@
     </div>
     {%- endunless -%}
     {%- endunless -%}
+    
+      {%- if product.available == false -%}
     <div class="yv-product-badge sold-badge">
       Sold Out
     </div> 
+      {%- elsif product.compare_at_price > product.price -%}
+      <div class="product__badge product__on__sale">
+        {{'products.product.on_sale' | t}}
+      </div>
+      {%- endif -%}
   </div>
   <div class="yv-product-information">
     <div class="ratingbox" >
