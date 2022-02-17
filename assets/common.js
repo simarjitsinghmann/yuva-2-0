@@ -817,9 +817,9 @@ slickSlider = function(selector,slideIndex){
     if(selector.attr('data-slider-filter')){
       var filterButtons = selector.closest('.shopify-section').find('.filter-products');
       var selectedCollection = selector.closest('.shopify-section').find('.filter-products.active').data('products');
-      console.log('selectedCollection',selectedCollection)        
-      selector.slick('slickUnfilter');
-      selector.slick('slickFilter','.'+selectedCollection)
+//       console.log('selectedCollection',selectedCollection)        
+//       selector.slick('slickUnfilter');
+//       selector.slick('slickFilter','.'+selectedCollection)
 //       $('#shopify-section-{{section.id}}').on('click','.filter-products',function(){
 //         if(!$(this).hasClass('active')){
 //           $(this).siblings().removeClass('active');
