@@ -860,10 +860,12 @@ section.about-theme-section.shopify-section {
 .yv-blog-card-text {
     padding: 30px;
 }
-.featured-blog  .yv-blog-card-text {
-	position:absolute; 
-  bottom:0;
-  	background-color:#fff;
+.featured-blog .yv-blog-card-text {
+    position: absolute;
+    bottom: 10px;
+    background-color: #fff;
+    left: 10px;
+    display: inline-block;
 }
 .yv-blog-date {
     display: inline-block;
