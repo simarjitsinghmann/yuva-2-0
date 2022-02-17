@@ -807,7 +807,7 @@ slickSlider = function(selector,slideIndex){
   var optionContainer = selector.closest('.shopify-section').find('[name="slider-json"]')[0];
   if(optionContainer){
     selector.on('init', function(event, slick){
-      console.log("initialised",selector)
+      console.log("initialised",selector.attr('data-slider-filter'))
     });
     
     var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
