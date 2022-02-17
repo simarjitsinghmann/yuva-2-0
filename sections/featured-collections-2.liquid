@@ -9,7 +9,7 @@
           {% for block in section.blocks %}
           {% if block.settings.collection != blank or block.settings.collection.all_products_count > 0 %}
       {% assign customIndex = customIndex | plus:1 %}
-      <li class="yv-tab-item active"><a href="javascript:void(0)" class="yv-tab-link">{{block.settings.heading}}</a></li>
+      <li class="yv-tab-item {% if customIndex == 1 %}active{% endif %}"><a href="javascript:void(0)" class="yv-tab-link">{{block.settings.heading}}</a></li>
           {% endif %}
           {% endfor %}
     </ul>

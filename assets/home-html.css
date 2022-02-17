@@ -273,6 +273,30 @@
 .yv-collection-product-grid .slick-slide {
 	margin:0 7px;
 }
+.yv-collection-product-grid .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #fff;
+  	box-shadow: 0 2px 2px 1px #0000001f;
+}
+.yv-collection-product-grid .slick-arrow span {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.yv-collection-product-grid  .slick-next{
+  	right: 30px;
+}
+.yv-collection-product-grid .slick-prev{
+  	left: 30px;
+}
 /*========= collection Product section css end =======*/
 /*========== about theme section css start ========*/
 .about-left-content {
