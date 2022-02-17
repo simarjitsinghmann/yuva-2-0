@@ -792,7 +792,7 @@ slickSlider = function(selector,slideIndex){
           filterSlides.each(function(){
             var item = $(this).attr('data-filter-item');
             console.log(item,'item', $(this).closest('.slick-slide'))
-            $(this).closest('.slick-slide').addClass(item)
+            $(this).closest('.slick-slide').addClass('tessssssssssssssssst')
           })  
       }
     });
