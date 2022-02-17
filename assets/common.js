@@ -1307,9 +1307,10 @@ $(document).ready(function()
     
   var productGridSliderInterval;
   $('.hover-slider').hover(function(){ 
+    var _this = $(this);
     productGridSliderInterval = setInterval(function(){
-      console.log('interval',$(this).find('.sd_slider_controls[attr-type="next"]'))
-    	$(this).find('.sd_slider_controls[attr-type="next"]').trigger('click');
+      console.log('interval',_this.find('.sd_slider_controls[attr-type="next"]'))
+    	_this.find('.sd_slider_controls[attr-type="next"]').trigger('click');
     },1000)
   }, function(){ 
    $('.hover-slider').removeClass('active'); 
