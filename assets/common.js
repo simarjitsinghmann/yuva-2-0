@@ -810,7 +810,6 @@ slickSlider = function(selector,slideIndex){
       console.log("initialised")
     });
     
-      return false;
     var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
     var options = JSON.parse(html);
     if(slideIndex){
@@ -819,6 +818,7 @@ slickSlider = function(selector,slideIndex){
     else{
       selector.slick(options);
     }
+      return false;
     if(selector.attr('data-slider-filter') != undefined){
       var filterButtons = selector.closest('.shopify-section').find('.filter-products');
       var selectedCollection = selector.closest('.shopify-section').find('.filter-products.active').data('products');
