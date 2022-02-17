@@ -98,12 +98,12 @@
       {%- endif -%}
   </div>
   <div class="yv-product-information">
-     <div class="ratingbox">
+     <div class="ratingbox" {{ block.shopify_attributes }}>
         <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
       </div>
     <a href="{{product.url | within: collection}}" class="yv-product-title" title="{{product.title}}">{{product.title}}</a>
     {%- if settings.show_price -%}
-    <div class="yv-prizebox">
+    <div class="yv-prizebox" data-saved="{{settings.show_saved_amount}}"  data-saved-style="{{settings.saved_amount_style}}" data-price-wrapper="" {{ block.shopify_attributes }}>
       <span class="yv-product-price">$1,100.00</span>
       <span class="yv-product-compare-price"> $1,190.00</span>
       <span class="yv-product-percent-off"> 50% Off</span>
