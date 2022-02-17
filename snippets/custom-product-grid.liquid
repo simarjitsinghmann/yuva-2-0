@@ -79,7 +79,9 @@
           <path d="M17.1,5l-3-0.8v1l2.7,0.7c0.1,0,0.1,0,0.1,0.1c0,0,0,0.1,0,0.2l-2.1,7.7c0,0.1-0.2,0.2-0.3,0.2l-0.4-0.1v1   l0.1,0.1c0.1,0,0.2,0.1,0.4,0.1c0.5,0,1-0.3,1.2-0.9L18,6.4l0-0.1C18.1,5.8,17.7,5.2,17.1,5z"/>
         </g>
         </svg>
-        <span class="similar-text">Similar Products</span>
+          {%- unless settings.show_similar_text == false -%} 
+          <span class="similar-text">{{'products.product.similar_products' | t}}</span>
+          {%- endunless -%}
       </span>
     </div>
     {%- endunless -%}
