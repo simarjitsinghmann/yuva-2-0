@@ -805,12 +805,13 @@ slickSlider = function(selector,slideIndex){
     else{
       selector.slick(options);
     }
+    setTimeout(function(){
    if(selector.attr('data-slider-filter') != undefined){
         var filterButtons = selector.closest('.shopify-section').find('.filter-products');
         var selectedCollection = selector.closest('.shopify-section').find('.filter-products.active').data('products');
         //       console.log('selectedCollection',selectedCollection)        
-//         selector.slick('slickUnfilter');
-//         selector.slick('slickFilter','.'+selectedCollection)
+        selector.slick('slickUnfilter');
+        selector.slick('slickFilter','.'+selectedCollection)
               filterButtons.on('click',function(){                
                 if(!$(this).hasClass('active')){
                   $(this).siblings().removeClass('active');
@@ -820,7 +821,7 @@ slickSlider = function(selector,slideIndex){
                   selector.slick('slickFilter','.'+selectedCollection)
                 }
               })
-      }
+      }},500)
     jQuery(window).trigger('resize');
   }
   jQuery(selector)
