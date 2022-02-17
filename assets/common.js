@@ -808,6 +808,19 @@ slickSlider = function(selector,slideIndex){
   if(optionContainer){
     selector.on('init', function(event, slick){
       console.log("initialised",selector.attr('data-slider-filter'))
+      if(selector.attr('data-slider-filter') != undefined){
+        var filterButtons = selector.closest('.shopify-section').find('.filter-products');
+        var selectedCollection = selector.closest('.shopify-section').find('.filter-products.active').data('products');
+        //       console.log('selectedCollection',selectedCollection)        
+        selector.slick('slickUnfilter');
+        selector.slick('slickFilter','.'+selectedCollection)
+        //       $('#shopify-section-{{section.id}}').on('click','.filter-products',function(){
+        //         if(!$(this).hasClass('active')){
+        //           $(this).siblings().removeClass('active');
+        //           $(this).addClass('active');
+        //         }
+        //       })
+      }
     });
     
     var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
@@ -818,20 +831,7 @@ slickSlider = function(selector,slideIndex){
     else{
       selector.slick(options);
     }
-      return false;
-    if(selector.attr('data-slider-filter') != undefined){
-      var filterButtons = selector.closest('.shopify-section').find('.filter-products');
-      var selectedCollection = selector.closest('.shopify-section').find('.filter-products.active').data('products');
-//       console.log('selectedCollection',selectedCollection)        
-      selector.slick('slickUnfilter');
-      selector.slick('slickFilter','.'+selectedCollection)
-//       $('#shopify-section-{{section.id}}').on('click','.filter-products',function(){
-//         if(!$(this).hasClass('active')){
-//           $(this).siblings().removeClass('active');
-//           $(this).addClass('active');
-//         }
-//       })
-    }
+  
     jQuery(window).trigger('resize');
   }
   jQuery(selector)
