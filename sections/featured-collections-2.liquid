@@ -25,9 +25,10 @@
         <div id="slider-{{section.id}}" class="yv-featured-product-grid" data-slider-filter data-slider>
           {% for block in section.blocks %}
           {%assign mainClass='filter-slide'%}
+          {% assign mainAttr = 'data-filter-item="product-'| append:block.id | append:'"' %}
           {% if block.settings.collection != blank or block.settings.collection.all_products_count > 0 %}
           {% for product in block.settings.collection.products %}
-          {% include 'product-grid-custom' hideClass:true ,productClasses:mainClass %}
+          {% include 'product-grid-custom' hideClass:true ,productClasses:mainClass,mainAttr:mainAttr %}
           {% endfor %}
           {% endif %}
           {% endfor %}
