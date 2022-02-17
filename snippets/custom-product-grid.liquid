@@ -22,6 +22,33 @@
       {%- render 'placeholder' -%}
       {%- endif -%}
     </a>
+    
+      <div class="card-wrapper-slider" product-grid-slider>   
+        <div  id= "sd_slider_{{product.id}}-{{section.id}}" class="sd_main_Slider">        
+        {%- for media in product.media -%}
+        <div parent-slider="sd_slider_{{product.id}}-{{section.id}}" sd-slide-number='{{forloop.index}}' class="sd_slide_wrapper {% if forloop.first %}sd_active_slider{% endif %}" >  
+            {%-case media.media_type-%}
+            {%- when 'image'-%}
+            <div class="quickview_product_img">
+              <img src="{{media | img_url: '500x'}}" alt="{{ media.preview_image.alt | escape }}">
+            </div>
+            {%- when 'external_video'-%} 
+            <div class="quickview_product_img slick-slide-video-item">
+              {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
+            </div>
+            {%- when 'video'-%}
+            <div class="quickview_product_img">
+              {{ media |media_tag: image_size: "500x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
+            </div>
+            {%-endcase-%}
+          </div>
+          {%-endfor-%}
+        </div>
+        <div class="sd_slider_controls_wrapper">
+          <span class="sd_slider_controls" parent-slider="sd_slider_{{product.id}}-{{section.id}}" attr-type="prev">Previous</span> 
+          <span class="sd_slider_controls" parent-slider="sd_slider_{{product.id}}-{{section.id}}" attr-type="next">Next</span> 
+        </div>
+      </div>
     {%- unless hide_options and settings.show_quick_view == false and settings.show_atc == false -%}
     <ul class="yv-product-options">
       {%- if settings.show_quick_view -%}
