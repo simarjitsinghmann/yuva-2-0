@@ -276,7 +276,7 @@
 }
 .yv-collection-product-grid .slick-arrow {
     position: absolute;
-    top: 50%;
+    top: calc(50% - 50px);
     z-index: 2;
   	background-color:transparent;
       display: flex;
