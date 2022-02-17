@@ -722,6 +722,11 @@ section.about-theme-section.shopify-section {
     background-color: #fff;
   	position:relative;	
 }
+.yv-testimonail-text-outer img {
+	width:100%;
+  height:100%;
+  object-fit:cover;
+}
 .yv-testimonail-text {
     background-color: #fff;
     position: absolute;
@@ -734,11 +739,12 @@ section.about-theme-section.shopify-section {
   margin-bottom:40px
 }
 .yv-testimonail-title {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    max-width: 88%;
 }
 .yv-testimonail-desc {
   font-size: 16px;
-  line-height: 28px;
+  line-height: 22px;
 }
 .yv-testimonial-slider {
     padding: 20px 60px;
