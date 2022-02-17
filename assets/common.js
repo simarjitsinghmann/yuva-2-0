@@ -807,12 +807,10 @@ slickSlider = function(selector,slideIndex){
   var optionContainer = selector.closest('.shopify-section').find('[name="slider-json"]')[0];
   if(optionContainer){
     selector.on('init', function(event, slick){
-      console.log("initialised",selector.attr('data-slider-filter'))
       if(selector.attr('data-slider-filter') != undefined){
         var filterSlides = selector.find('.filter-slide');
         filterSlides.each(function(){
         	var item = $(this).attr('data-filter-item');
-          console.log('$(this)',$(this).closest('.slick-slide'))
           $(this).closest('.slick-slide').addClass(item)
         })       
       }
