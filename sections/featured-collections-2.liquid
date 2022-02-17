@@ -22,7 +22,7 @@
     </ul>
     <div class="yv-tab-content">
       <div class="yv-tab-pane">
-        <div id="slider-{{section.id}}" class="yv-featured-product-grid" data-slider-filter data-slider>
+        <div id="slider-{{section.id}}" class="yv-collection-product-grid " data-slider-filter data-slider>
           {% for block in section.blocks %}
           {%assign mainClass='filter-slide'%}
           {% assign mainAttr = 'data-filter-item="product-'| append:block.id | append:'"' %}
