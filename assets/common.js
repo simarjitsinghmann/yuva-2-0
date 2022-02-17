@@ -806,7 +806,7 @@ sellingPlanChange();
 slickSlider = function(selector,slideIndex){
   var optionContainer = selector.closest('.shopify-section').find('[name="slider-json"]')[0];
   if(optionContainer){
-    selector.on('init reInit', function(event, slick){
+    selector.on('init,reInit', function(event, slick){
       if(selector.attr('data-slider-filter') != undefined){
         var filterSlides = selector.find('.filter-slide');
           filterSlides.each(function(){
