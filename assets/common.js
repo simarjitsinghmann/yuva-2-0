@@ -811,7 +811,8 @@ slickSlider = function(selector,slideIndex){
       if(selector.attr('data-slider-filter') != undefined){
         var filterSlides = selector.find('.filter-slide');
         filterSlides.each(function(){
-        	console.log($(this).attr('data-filter-item'))
+        	var item = $(this).attr('data-filter-item');
+          $(this).closest('.slick-slide').addClass('item')
         })
         var filterButtons = selector.closest('.shopify-section').find('.filter-products');
         var selectedCollection = selector.closest('.shopify-section').find('.filter-products.active').data('products');
