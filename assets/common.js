@@ -1311,11 +1311,10 @@ $(document).ready(function()
   $('.hover-slider').hover(function(){ 
     productGridSliderInterval = setInterval(function(){
     	$(this).find('..sd_slider_controls[attr-type="next"]').trigger('click');
-    })
+    },1000)
   }, function(){ 
    $('.hover-slider').removeClass('active'); 
-      $('.hover-slider').find('.yv-product-img').removeClass('hidden');
-      $('.hover-slider').find('[product-grid-slides]').addClass('hidden');
+     clearInterval(productGridSliderInterval)
   });
   
 });
