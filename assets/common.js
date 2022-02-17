@@ -814,17 +814,18 @@ slickSlider = function(selector,slideIndex){
     else{
       selector.slick(options);
     }
-    var selectedslider = $('#shopify-section-{{section.id}}').find('.filter-products.active').data('nav');
-    var selectedCollection = $('#shopify-section-{{section.id}}').find('.filter-products.active').data('products');
-    console.log('selectedCollection',selectedCollection)        
-    selectedslider.slick('slickUnfilter');
-    selectedslider.slick('slickFilter','.'+selectedCollection)
-    $('#shopify-section-{{section.id}}').on('click','.filter-products',function(){
-      if(!$(this).hasClass('active')){
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-      }
-    })
+    if(selector.attr('data-slider-filter')){
+      var selectedCollection = selector.closest('.shopify-section').find('.filter-products.active').data('products');
+      console.log('selectedCollection',selectedCollection)        
+      selector.slick('slickUnfilter');
+      selector.slick('slickFilter','.'+selectedCollection)
+      $('#shopify-section-{{section.id}}').on('click','.filter-products',function(){
+        if(!$(this).hasClass('active')){
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+        }
+      })
+    }
     jQuery(window).trigger('resize');
   }
   jQuery(selector)
