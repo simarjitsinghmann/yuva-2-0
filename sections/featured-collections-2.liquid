@@ -6,19 +6,19 @@
   <div class="yv-tabs-wrapper">
     <ul class="yv-tabs">
       {% assign customIndex = 0 %}
-          {% for block in section.blocks %}
-          {% if block.settings.collection != blank or block.settings.collection.all_products_count > 0 %}
+      {% for block in section.blocks %}
+      {% if block.settings.collection != blank or block.settings.collection.all_products_count > 0 %}
       {% assign customIndex = customIndex | plus:1 %}
       <li class="yv-tab-item {% if customIndex == 1 %}active{% endif %}" data-products="product-{{block.id}}"><a href="javascript:void(0)" class="yv-tab-link">
         {% if block.settings.heading != blank %}
         {{block.settings.heading}}
-          {% else %}
+        {% else %}
         {{block.settings.collection.title}}
-          {% endif %}
+        {% endif %}
         </a>
       </li>
-          {% endif %}
-          {% endfor %}
+      {% endif %}
+      {% endfor %}
     </ul>
     <div class="yv-tab-content">
       <div class="yv-tab-pane">
@@ -38,7 +38,7 @@
 </div>
 <script type="application/json" name="slider-json">
          {
-          "slidesToShow":3,
+          "slidesToShow":4,
           "slidesToScroll":1,
           "infinite": false,
           "centerMode":false,
