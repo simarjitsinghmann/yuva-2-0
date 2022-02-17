@@ -27,7 +27,9 @@
         <div  id= "sd_slider_{{product.id}}-{{section.id}}" class="sd_main_Slider">        
         {%- for media in product.media -%}
         <div parent-slider="sd_slider_{{product.id}}-{{section.id}}" sd-slide-number='{{forloop.index}}' class="sd_slide_wrapper {% if forloop.first %}sd_active_slider{% endif %}" >  
-            {%-case media.media_type-%}
+          <a class="yv-product-img" href="{{product.url | within : collection}}">  
+          {%-case media.media_type-%}
+          
             {%- when 'image'-%}
             <div class="quickview_product_img">
               <img src="{{media | img_url: '500x'}}" alt="{{ media.preview_image.alt | escape }}">
@@ -41,6 +43,7 @@
               {{ media |media_tag: image_size: "500x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
             </div>
             {%-endcase-%}
+          </a>
           </div>
           {%-endfor-%}
         </div>
