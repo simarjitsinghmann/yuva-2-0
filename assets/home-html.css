@@ -279,10 +279,11 @@
     top: calc(50% - 50px);
     z-index: 2;
   	background-color:transparent;
-      display: flex;
+    display: flex;
     align-items: center;
-  color: #a3a3a1;
-  font-size:14px;
+  	color: #a3a3a1;
+  	font-size:14px;
+  	min-width:70px
 }
 .yv-collection-product-grid .slick-arrow svg {
 	margin:0 10px;
