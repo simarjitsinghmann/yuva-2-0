@@ -791,7 +791,6 @@ slickSlider = function(selector,slideIndex){
         var filterSlides = selector.find('.filter-slide');
           filterSlides.each(function(){
             var item = $(this).attr('data-filter-item');
-            console.log(item,'item', $(this).closest('.slick-slide'))
             $(this).closest('.slick-slide').addClass(item)
           })  
       }
@@ -817,7 +816,6 @@ slickSlider = function(selector,slideIndex){
                   $(this).siblings().removeClass('active');
                   $(this).addClass('active');     
                   selectedCollection = $(this).data('products');
-                  console.log('selector',selector);
                   selector.slick('slickUnfilter');
                   selector.slick('slickFilter','.'+selectedCollection)
                 }
