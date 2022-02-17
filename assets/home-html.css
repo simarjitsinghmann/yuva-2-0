@@ -917,6 +917,10 @@ section.about-theme-section.shopify-section {
 .featured-blog .yv-blog-title {
    margin-bottom:10px;
   padding-bottom: 0;
+       font-weight:normal;
+}
+.featured-blog .yv-blog-title:after {
+	display:none;
 }
 .yv-blog-link {
     text-decoration: underline;
