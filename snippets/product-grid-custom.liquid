@@ -9,7 +9,9 @@
 {%- endunless -%}
 {%- endfor -%}
 {%- endif -%}
+{% unless hideClass %}
 <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+  {% endunless %}
   <div class="yv-product-card">
     <div class="yv-product-card-img {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{% endunless %} ">
       <a class="yv-product-img" href="{{product.url | within : collection}}">
@@ -119,4 +121,7 @@
       {%- endif -%}
     </div>
   </div>
+  
+{% unless hideClass %}
 </div>  
+  {% endunless %}
