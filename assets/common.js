@@ -817,6 +817,7 @@ slickSlider = function(selector,slideIndex){
                   $(this).siblings().removeClass('active');
                   $(this).addClass('active');     
                   selectedCollection = $(this).data('products');
+                  console.log('selector',selector);
                   selector.slick('slickUnfilter');
                   selector.slick('slickFilter','.'+selectedCollection)
                 }
