@@ -809,8 +809,8 @@ slickSlider = function(selector,slideIndex){
         var filterButtons = selector.closest('.shopify-section').find('.filter-products');
         var selectedCollection = selector.closest('.shopify-section').find('.filter-products.active').data('products');
         //       console.log('selectedCollection',selectedCollection)        
-        selector.slick('slickUnfilter');
-        selector.slick('slickFilter','.'+selectedCollection)
+//         selector.slick('slickUnfilter');
+//         selector.slick('slickFilter','.'+selectedCollection)
               filterButtons.on('click',function(){                
                 if(!$(this).hasClass('active')){
                   $(this).siblings().removeClass('active');
