@@ -17,12 +17,6 @@
       {%- unless settings.show_second_image == false or second_image == blank -%}          
       {%- render 'lazy-image' image: second_image ,class:'product-second-img' -%}
       {%else%}
-      {%- endunless -%} 
-      {%- else -%}
-      {%- render 'placeholder' -%}
-      {%- endif -%}
-    </a>
-    
       <div class="card-wrapper-slider" product-grid-slider>   
         <div  id= "sd_slider_{{product.id}}-{{section.id}}" class="sd_main_Slider">        
         {%- for media in product.media -%}
@@ -49,6 +43,12 @@
           <span class="sd_slider_controls" parent-slider="sd_slider_{{product.id}}-{{section.id}}" attr-type="next">Next</span> 
         </div>
       </div>
+      {%- endunless -%} 
+      {%- else -%}
+      {%- render 'placeholder' -%}
+      {%- endif -%}
+    </a>
+    
     {%- unless hide_options and settings.show_quick_view == false and settings.show_atc == false -%}
     <ul class="yv-product-options">
       {%- if settings.show_quick_view -%}
