@@ -24,7 +24,7 @@
       <div class="yv-tab-pane">
         <div id="slider-{{section.id}}" class="yv-featured-product-grid" data-slider-filter data-slider>
           {% for block in section.blocks %}
-          {%assign mainClass='product-'| append:block.id | append:' filter-slide'%}
+          {%assign mainClass='filter-slide'%}
           {% if block.settings.collection != blank or block.settings.collection.all_products_count > 0 %}
           {% for product in block.settings.collection.products %}
           {% include 'product-grid-custom' hideClass:true ,productClasses:mainClass %}
