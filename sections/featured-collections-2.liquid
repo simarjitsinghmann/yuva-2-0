@@ -62,6 +62,9 @@
     $(document).ready(function(){
       var selectedslider = $('#shopify-section-{{section.id}}').find('.filter-products.active').data('nav');
       var selectedCollection = $('#shopify-section-{{section.id}}').find('.filter-products.active').data('products');
+                             
+            selectedslider.slick('slickUnfilter');
+            selectedslider.slick('slickFilter','.'+selectedCollection)
       $('#shopify-section-{{section.id}}').on('click','.filter-products',function(){
         if(!$(this).hasClass('active')){
         	$(this).siblings().removeClass('active');
