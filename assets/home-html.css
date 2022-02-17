@@ -901,15 +901,21 @@ section.about-theme-section.shopify-section {
     margin-bottom: 10px;
     display: inline-block;
     font-family: var(--font-family);
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     position: relative;
 }
 .yv-blog-title:after {
-	position:absolute;
-  	content:"";
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 50%;
+    background-color: #ddd;
+    height: 2px;
+    bottom: 0;
 }
 .featured-blog .yv-blog-title {
    margin-bottom:10px;
+  padding-bottom: 0;
 }
 .yv-blog-link {
     text-decoration: underline;
