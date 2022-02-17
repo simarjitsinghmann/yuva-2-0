@@ -9,7 +9,7 @@
       {% for block in section.blocks %}
       {% if block.settings.collection != blank or block.settings.collection.all_products_count > 0 %}
       {% assign customIndex = customIndex | plus:1 %}
-      <li class="yv-tab-item {% if customIndex == 1 %}active{% endif %}" data-products="product-{{block.id}}"><a href="javascript:void(0)" class="yv-tab-link">
+      <li class="yv-tab-item {% if customIndex == 1 %}active{% endif %}" data-slider="#id="slider-{{section.id}}"" data-products="product-{{block.id}}"><a href="javascript:void(0)" class="yv-tab-link">
         {% if block.settings.heading != blank %}
         {{block.settings.heading}}
         {% else %}
