@@ -820,12 +820,12 @@ slickSlider = function(selector,slideIndex){
       console.log('selectedCollection',selectedCollection)        
       selector.slick('slickUnfilter');
       selector.slick('slickFilter','.'+selectedCollection)
-      $('#shopify-section-{{section.id}}').on('click','.filter-products',function(){
-        if(!$(this).hasClass('active')){
-          $(this).siblings().removeClass('active');
-          $(this).addClass('active');
-        }
-      })
+//       $('#shopify-section-{{section.id}}').on('click','.filter-products',function(){
+//         if(!$(this).hasClass('active')){
+//           $(this).siblings().removeClass('active');
+//           $(this).addClass('active');
+//         }
+//       })
     }
     jQuery(window).trigger('resize');
   }
