@@ -286,7 +286,8 @@
   	min-width:70px;
     justify-content: flex-end;
 }
-.yv-collection-product-grid .slick-arrow:hover {
+.yv-collection-product-grid .slick-arrow:hover,
+.yv-collection-product-grid .slick-arrow:focus{
 	color: #0c0c0c;
 }
 .yv-collection-product-grid .slick-arrow svg {
