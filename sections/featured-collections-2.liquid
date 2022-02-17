@@ -32,21 +32,19 @@
           {% endfor %}
           {% endif %}
           {% endfor %}
+        </div>
       </div>
+      {% endif %}
     </div>
-    {% endif %}
   </div>
-</div>
-<script type="application/json" name="slider-json">
+  <script type="application/json" name="slider-json">
          {
           "slidesToShow":4,
           "slidesToScroll":1,
           "infinite": false,
-          "centerMode":false,
             "speed": 1000,
-            "centerPadding":0,
-          "prevArrow":"<button type=\"button\" class=\"slick-prev\" aria-label=\"Prev\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M15.526 18.966L8.559 12l6.967-6.967\"></path></svg></span></button>",
-          "nextArrow":"<button type=\"button\" class=\"slick-next\" aria-label=\"Next\"><span><svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" role=\"img\" width=\"24px\" height=\"24px\" fill=\"none\"><path stroke=\"currentColor\" stroke-width=\"1.5\" d=\"M8.474 18.966L15.44 12 8.474 5.033\"></path></svg></span></button>",
+          "prevArrow":"<span class=\"slick-prev\" aria-label=\"Prev\"><svg version=\"1.2\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 21 14\" width=\"21\" height=\"14\"><style>.s0tt{fill:currentcolor}</style><path class=\"s0tt\" d=\"m7.6 12.6c0.4 0.3 0.4 0.8 0 1.2q-0.2 0.2-0.6 0.2q-0.3 0-0.6-0.2l-6.1-6.3c-0.4-0.3-0.4-0.9 0-1.2l5.9-6.1c0.3-0.3 0.8-0.3 1.1 0c0.4 0.3 0.4 0.9 0 1.2l-5.3 5.5zm12.6-6.5c0.4 0 0.8 0.4 0.8 0.9c0 0.5-0.4 0.8-0.8 0.8h-17.6c-0.5 0-0.8-0.3-0.8-0.8c0-0.5 0.3-0.9 0.8-0.9h17.6z\" /></svg> Pre</span>",
+          "nextArrow":"<span class=\"slick-next\" aria-label=\"Next\">Next <svg version=\"1.2\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 21 15\" width=\"21\" height=\"15\"><style>.s0tt{fill:currentcolor}</style><path class=\"s0tt\" d=\"m18.9 7.5l-5.3-5.3c-0.3-0.4-0.3-0.9 0-1.2c0.4-0.3 0.9-0.4 1.2 0l5.9 6c0.3 0.3 0.3 0.9 0 1.2l-6.2 6.2q-0.2 0.2-0.6 0.2q-0.3 0-0.6-0.2c-0.3-0.4-0.3-0.9 0-1.2zm-18.1-0.7h17.6c0.4 0 0.8 0.4 0.8 0.8c0 0.5-0.4 0.9-0.8 0.9h-17.6c-0.4 0-0.8-0.4-0.8-0.9c0-0.4 0.4-0.8 0.8-0.8z\" /></svg></span>",
           "responsive":[
           	{
             "breakpoint": 768,
@@ -58,22 +56,8 @@
             }
           ]
         }
-</script>
-  <script>
-    $(document).ready(function(){
-//       var selectedslider = $('#shopify-section-{{section.id}}').find('.filter-products.active').data('nav');
-//       var selectedCollection = $('#shopify-section-{{section.id}}').find('.filter-products.active').data('products');
-//                      console.log('selectedCollection',selectedCollection)        
-//             selectedslider.slick('slickUnfilter');
-//             selectedslider.slick('slickFilter','.'+selectedCollection)
-//       $('#shopify-section-{{section.id}}').on('click','.filter-products',function(){
-//         if(!$(this).hasClass('active')){
-//         	$(this).siblings().removeClass('active');
-//         	$(this).addClass('active');
-//         }
-//       })
-    })
   </script>
+
 {% schema %}
 {
    "name":"featured-collections-2",
