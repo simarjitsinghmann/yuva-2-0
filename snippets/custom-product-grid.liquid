@@ -10,8 +10,8 @@
 {%- endfor -%}
 {%- endif -%}
 <div class="yv-product-card {{productClasses}}" {{mainAttr}}>
-  <div class="yv-product-card-img {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{%else%}hovers-slider{% endunless %}">
-    <a class="yv-product-img hidden" href="{{product.url | within : collection}}">
+  <div class="yv-product-card-img {% unless settings.show_second_image == false or second_image == blank %}has-multiimage{%else%}hover-slider{% endunless %}">
+    <a class="yv-product-img" href="{{product.url | within : collection}}">
       {%- if product.featured_image != blank -%}
       {%- render 'lazy-image' image: product.featured_image -%}
       {%- unless settings.show_second_image == false or second_image == blank -%}          
@@ -23,7 +23,7 @@
     </a>
     
       {%- if settings.show_second_image == false or second_image == blank -%}  
-      <div class="card-wrapper-slider " product-grid-slides>   
+      <div class="card-wrapper-slider hidden" product-grid-slides>   
         <div  id= "sd_slider_{{product.id}}-{{section.id}}" class="sd_main_Slider">        
         {%- for media in product.media -%}
         <div parent-slider="sd_slider_{{product.id}}-{{section.id}}" sd-slide-number='{{forloop.index}}' class="sd_slide_wrapper {% if forloop.first %}sd_active_slider{% endif %}" >  
