@@ -32,11 +32,42 @@
 <!--         <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/cart.png?v=1645011498" alt="cart icon" /> -->
       </li>
       {%- endif -%}
-      <li>
+<!--       <li>
         <a href="#">
           <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/cart.png?v=1645011498" alt="cart icon" />
         </a>
-      </li>
+      </li> -->
+      
+          {%- if settings.show_atc -%}
+          {%- if has_only_default_variant or product.variants.size == 1 -%}
+          {%- if product.available -%}
+          <li>
+            {%- form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' -%} 
+            <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
+            <button type="submit" class="Sd_addProduct" {% unless product.available %} disabled="disabled"{% endunless %} aria-label="{{'products.product.add_to_cart' | t}}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
+                <path class="cls-1" d="M811.524,2918.03a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,811.524,2918.03Zm6.579,0a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,818.1,2918.03Zm7.781-9.41a1.222,1.222,0,0,0-1.01-.59H810.352l-0.688-4.02h-4.638a0.99,0.99,0,1,0,0,1.98h2.941l0.636,3.83,0.89,6.06a1.212,1.212,0,0,0,1.2.99h10.329a1.228,1.228,0,0,0,1.01-.6l3.81-6.52A1.19,1.19,0,0,0,825.884,2908.62Zm-5.336,6.33h-9.155l-0.718-4.95h12.764Z" transform="translate(-804 -2904)"></path>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                   style="margin: auto; display: none; shape-rendering: auto;" 
+                   width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="svg-loader" >
+                <circle cx="50" cy="50" fill="none" stroke="#ffffff" stroke-width="6" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
+                  <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"/>
+                </circle>
+              </svg>
+            </button>
+            {%- endform -%}
+          </li>
+          {%- endif -%}
+          {%- else -%}
+          <li>
+            <a href="{{product.url | within:collection}}" class="showOptions" data-product="showProductWrap-{{product.id}}" aria-label="{{'products.product.view_product' | t}}"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
+              <path class="cls-1" d="M811.524,2918.03a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,811.524,2918.03Zm6.579,0a1.485,1.485,0,1,1-1.516,1.48A1.5,1.5,0,0,1,818.1,2918.03Zm7.781-9.41a1.222,1.222,0,0,0-1.01-.59H810.352l-0.688-4.02h-4.638a0.99,0.99,0,1,0,0,1.98h2.941l0.636,3.83,0.89,6.06a1.212,1.212,0,0,0,1.2.99h10.329a1.228,1.228,0,0,0,1.01-.6l3.81-6.52A1.19,1.19,0,0,0,825.884,2908.62Zm-5.336,6.33h-9.155l-0.718-4.95h12.764Z" transform="translate(-804 -2904)"></path>
+              </svg>
+            </a>
+          </li>
+          {%- endif -%}
+          {%- endif -%}
     </ul>      
     <div class="similar_options" data-url="">
       <span class="vs-icon text-true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
