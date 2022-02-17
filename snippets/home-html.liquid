@@ -951,5 +951,49 @@
 <!-- testimonial section start -->
 <!-- blog listing section start -->
 <section class="">
+  <div class="section-spacer">
+  <div class="container"> 
+      <div class="section-heading">
+        <h2>{{-section.settings.subheading}} 
+          <a class="corner-view-all" href="{{section.settings.link}}">{{section.settings.button}}</a></h2>
+      </div>
+      {%- if section.blocks.size > 0  -%}
+      <div class="yv-blogs-wrapper"> 
+          <div id="featuredBlog-{{section.id}}" class="row">       
+            {% assign first_grid_class = 'col-md-6 col-lg-6' %}
+            {% assign second_grid_class = 'col-md-6 col-lg-6' %}
+            
+            {% if section.blocks.size > 2 %}
+            {% assign second_grid_class = 'col-md-3 col-lg-3' %}
+            {% endif %}
+            {%- for block in section.blocks -%}
+            {% if forloop.first %}
+            {% assign mainclass =first_grid_class %}
+            {% else %}
+            {% assign mainclass = second_grid_class %}
+            {% endif %}
+            {%- if block.settings.article != blank -%}  
+            {%- assign article = block.settings.article -%}
+            {%- include 'featured-article-grid' mainclasses:mainclass -%}
+            {%- else -%}
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+              <div class="yv-blog-card">               
+                  <div class="yv-blog-card-img">
+                    {% render 'placeholder' %}
+                  </div>
+                <div class="yv-blog-card-text">
+                  <span class="yv-blog-date">{{'sections.featured_article.onboarding_date' | t}}</span>
+                  <a class="yv-blog-title" href="">{{'sections.featured_article.onboarding_title' | t}}</a>
+                  <a href="" class="yv-blog-link">Read More</a>
+                </div>
+              </div>
+            </div>
+            {%- endif -%}
+            {%- endfor -%}
+          </div>
+      </div>
+      {%- endif -%}
+    </div>
+  </div>
 </section>
 <!-- blog listing section end -->
