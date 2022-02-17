@@ -1269,14 +1269,44 @@ $(document).ready(function()
     evt.preventDefault();
     $('body').removeClass('quickview-open');
   });
-  $('[product-grid-slider]').slick({
-    dots: true,
-    infinite: true,
-    arrows:false,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear'
-  });
+  
+     
+    jQuery('body').on('click', '.sd_slider_controls', function() {
+    
+        // get the current slider
+        var sd_slider = $(this).attr('parent-slider');	
+        
+        // $('#sd_slider_1').find('.sd_active_slider').attr('sd-slide-number');
+        var current_slide_number = $('#'+sd_slider).find('.sd_active_slider').attr('sd-slide-number');
+    
+    
+        //then hide all slides of current slider
+        $('#'+sd_slider+' .sd_slide_wrapper').removeClass('sd_active_slider');
+    
+        //find the next & prev Case
+        var control_type =  jQuery(this).attr('attr-type');
+        var total_slides = jQuery('#'+sd_slider).find('.sd_slide_wrapper').length;
+        if(control_type == 'next'){
+            var next_slide_number = parseInt(current_slide_number)+1;
+            if(jQuery('#'+sd_slider).find(`[sd-slide-number='${next_slide_number}']`).length > 0){
+                jQuery('#'+sd_slider).find(`[sd-slide-number='${next_slide_number}']`).addClass('sd_active_slider');
+            }
+            else{
+                jQuery('#'+sd_slider).find(`[sd-slide-number='1'`).addClass('sd_active_slider');
+            }
+        }
+    
+        if(control_type == 'prev'){
+            var prev_slide_number = parseInt(current_slide_number)-1;
+            if(jQuery('#'+sd_slider).find(`[sd-slide-number='${prev_slide_number}']`).length > 0){
+                jQuery('#'+sd_slider).find(`[sd-slide-number='${prev_slide_number}']`).addClass('sd_active_slider');
+            }else{
+                jQuery('#'+sd_slider).find(`[sd-slide-number='${total_slides}']`).addClass('sd_active_slider');
+            }
+        }
+        
+    });
+    
   var productGridSliderWrapper = false;
   $('.hover-slider').hover(function(){ 
     if(!$(this).hasClass('active')){   	
