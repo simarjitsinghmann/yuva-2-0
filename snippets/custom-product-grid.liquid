@@ -17,7 +17,7 @@
       {%- unless settings.show_second_image == false or second_image == blank -%}          
       {%- render 'lazy-image' image: second_image ,class:'product-second-img' -%}
       {%else%}
-      <div class="card-wrapper-slider" product-grid-slider>   
+      <div class="card-wrapper-slider" >   
         <div  id= "sd_slider_{{product.id}}-{{section.id}}" class="sd_main_Slider">        
         {%- for media in product.media -%}
         <div parent-slider="sd_slider_{{product.id}}-{{section.id}}" sd-slide-number='{{forloop.index}}' class="sd_slide_wrapper {% if forloop.first %}sd_active_slider{% endif %}" >  
