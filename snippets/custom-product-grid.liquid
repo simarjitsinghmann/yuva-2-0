@@ -102,10 +102,12 @@
         <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
       </div>
     <a href="{{product.url | within: collection}}" class="yv-product-title" title="{{product.title}}">{{product.title}}</a>
+    {%- if settings.show_price -%}
     <div class="yv-prizebox">
       <span class="yv-product-price">$1,100.00</span>
       <span class="yv-product-compare-price"> $1,190.00</span>
       <span class="yv-product-percent-off"> 50% Off</span>
     </div>
+      {%- endif -%}
   </div>
 </div> 
