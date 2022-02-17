@@ -53,9 +53,11 @@
               </div>
               <a href="#" class="yv-product-title" title="">{{product.title}}</a>
               <div class="yv-prizebox" data-saved="true" data-saved-style="percentage" data-price-wrapper="">
-                <span class="yv-product-price">$1,100.00</span>
-                <span class="yv-product-compare-price"> $1,190.00</span>
+                <span class="yv-product-price">{{product.price | money}}</span>
+                {% if product.compare_at_price  > product.price %}
+                <span class="yv-product-compare-price">{{product.compare_at_price | money}}</span>
                 <span class="yv-product-percent-off"> 50% Off</span>
+                {% endif %}
               </div>
             </div>
           </div>
