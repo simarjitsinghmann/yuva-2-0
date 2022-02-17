@@ -1281,16 +1281,16 @@ $(document).ready(function()
   $('.hover-slider').hover(function(){ 
     if(!$(this).hasClass('active')){   	
    		$('.hover-slider').removeClass('active');
-      $('.hover-slider').find('.card-grid-product-images').removeClass('hidden');
+      $('.hover-slider').find('.yv-product-img').removeClass('hidden');
       $('.hover-slider').find('[product-grid-slides]').addClass('hidden');
    		$(this).addClass('active'); 
-      $(this).find('.card-grid-product-images').addClass('hidden');
+      $(this).find('.yv-product-img').addClass('hidden');
       $(this).find('[product-grid-slides]').removeClass('hidden');
       $(window).trigger('resize');
     }
   }, function(){ 
    $('.hover-slider').removeClass('active'); 
-      $('.hover-slider').find('.card-grid-product-images').removeClass('hidden');
+      $('.hover-slider').find('.yv-product-img').removeClass('hidden');
       $('.hover-slider').find('[product-grid-slides]').addClass('hidden');
   });
   
