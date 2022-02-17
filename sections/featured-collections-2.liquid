@@ -60,7 +60,8 @@
 </script>
   <script>
     $(document).ready(function(){
-      $('.filter-products').on('click',function(){
+      
+      $('#shopify-section-{{section.id}}').on('click','.filter-products',function(){
         if(!$(this).hasClass('active')){
         	$(this).siblings().removeClass('active');
         	$(this).addClass('active');
