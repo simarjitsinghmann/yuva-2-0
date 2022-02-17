@@ -835,10 +835,6 @@ section.about-theme-section.shopify-section {
 .yv-blog-card.featured-blog{
     height: 550px;
   	position:relative;
-  	padding:0;
-}
-.yv-blog-card {
-	padding:20px;
 }
 .yv-blog-card-img {
   position:relative;
@@ -934,5 +930,11 @@ section.about-theme-section.shopify-section {
   font-size:15px;
   font-weight:500;
 	margin-bottom: 15px;
+}
+.small-blog-outer ..yv-blog-card:first-child {
+	padding: 0 20px 0 30px
+}
+.small-blog-outer ..yv-blog-card:last-child {
+	padding: 0 0 0 20px
 }
 /*========== featured blog section css start ==========*/
