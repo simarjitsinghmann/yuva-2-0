@@ -811,7 +811,7 @@ slickSlider = function(selector,slideIndex){
         var filterSlides = selector.find('.filter-slide');
           filterSlides.each(function(){
             var item = $(this).attr('data-filter-item');
-            console.log(item,'item')
+            console.log(item,'item', $(this).closest('.slick-slide'))
             $(this).closest('.slick-slide').addClass(item)
           })  
       }
