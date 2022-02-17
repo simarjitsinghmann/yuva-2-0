@@ -279,12 +279,14 @@
     top: 50%;
     z-index: 2;
   	background-color:transparent;
+      display: flex;
+    align-items: center;
 }
-.yv-collection-product-grid  .slick-next{
-  	right: -30px;
+.yv-collection-product-grid .slick-next {
+    right: -70px;
 }
 .yv-collection-product-grid .slick-prev{
-  	left: -30px;
+  	left: -70px;
 }
 /*========= collection Product section css end =======*/
 /*========== about theme section css start ========*/
