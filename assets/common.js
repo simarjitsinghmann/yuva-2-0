@@ -810,11 +810,12 @@ slickSlider = function(selector,slideIndex){
       if(selector.attr('data-slider-filter') != undefined){
         var filterSlides = selector.find('.filter-slide');
         setTimeout(function(){
-        filterSlides.each(function(){
-        	var item = $(this).attr('data-filter-item');
-          console.log(item,'item')
-          $(this).closest('.slick-slide').addClass(item)
-        })    },500);   
+          filterSlides.each(function(){
+            var item = $(this).attr('data-filter-item');
+            console.log(item,'item')
+            $(this).closest('.slick-slide').addClass(item)
+          })
+        },500);   
       }
     });
     
