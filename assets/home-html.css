@@ -974,7 +974,8 @@ section.about-theme-section.shopify-section {
 /*========== Deal banner section css start ===========*/
 .deal-banner-section {
 	background-color:#f3ece6;
-  	height:610px;
+  	min-height:600px;
+  	max-height:700px;
   	padding:80px 0;
 }
 .yv-deal-content {
