@@ -1,12 +1,134 @@
+<div class="container md-container">
+  <div class="about-content-wrapper">
+    <div class="row align-items-center">
+      <div class="col-12 col-sm-12 col-md-5">
+        <div class="about-left-content">
+          <h6 class="about-left-subtitle">About Yuva Theme</h6>
+          <h2 class="about-left-title">Give a little love &amp; joy this christmas.</h2>
+          <p class="about-left-desc">
+            Lorem ipsum dolor sit amet, vadipiscing elit. In vehicula lorem sed leo varius, nec cursus augue maximus. Vivamus lacinia lacus leo, nec venenatis mi cursus sit amet. Vestibulum sit amet tellus ipsum.
+          </p>
+          <p class="about-left-desc">
+            Vivamus pellentesque quam non metus gravida vestibulum. Nulla congue sagittis fermentum. Lorm a Sed suscipit fringilla dapibus.
+          </p> 
+          <a class="button black-btn mt-3" href="#">shop now</a>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-7">
+        <div class="about-left-imgbox-container">
+          <div class="about-left-imgbox">
+            <div class="about-left-img img1">
+              <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/image.png?v=1645017085" alt="image">
+            </div>
+            <div class="about-left-img img2">
+              <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/image2.png?v=1645091449" alt="image">
+            </div>
+            <div class="about-left-img img3">
+              <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/image3.png?v=1645091450" alt="image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+   "name":"featured-collections-2",
+   "tag":"section",
+   "class":"collection-product-section",
+   "max_blocks":5,
+   "settings":[
+      {
+         "type":"text",
+         "id":"heading",
+         "default":"Collection list",
+         "label":"t:sections.featured-collections-list.settings.heading.label"
+      },
+      {
+         "type":"text",
+         "id":"btntext",
+         "default":"View All",
+         "label":"t:sections.featured-collections-list.settings.btntext.label"
+      },
+      {
+         "type":"url",
+         "id":"btnlink",
+         "label":"t:sections.featured-collections-list.settings.btnlink.label"
+      },
+      {
+         "type":"checkbox",
+         "id":"show_hover_content",
+         "label":"t:sections.featured-collections-list.settings.show_hover_content.label",
+         "default":true
+      },
+      {
+         "type":"range",
+         "id":"top_space_desktop",
+         "label":"t:sections.featured-collections-list.settings.top_space_desktop.label",
+         "default":30,
+         "min":0,
+         "max":60,
+         "step":5
+      },
+      {
+         "type":"range",
+         "id":"bottom_space_desktop",
+         "label":"t:sections.featured-collections-list.settings.bottom_space_desktop.label",
+         "default":30,
+         "min":0,
+         "max":60,
+         "step":5
+      },
+      {
+         "type":"range",
+         "id":"top_space_mobile",
+         "label":"t:sections.featured-collections-list.settings.top_space_mobile.label",
+         "default":30,
+         "min":0,
+         "max":60,
+         "step":5
+      },
+      {
+         "type":"range",
+         "id":"bottom_space_mobile",
+         "label":"t:sections.featured-collections-list.settings.bottom_space_mobile.label",
+         "default":30,
+         "min":0,
+         "max":60,
+         "step":5
+      }
+   ],
+   "blocks":[
+      {
+         "type":"product",
+         "name":"Product",
+         "settings":[
+            {
+               "type":"text",
+               "id":"heading",
+               "label":"t:sections.featured-collections-list.settings.heading.label"
+            },
+            {
+               "type":"product",
+               "id":"product",
+               "label":"Product"
+            }
+         ]
+      }
+   ],
+   "presets":[
+      {
+         "name":"featured-products-2",
+         "blocks":[
+            {
+               "type":"product"
+            },
+            {
+               "type":"product"
+            }
+         ]
+      }
+   ]
+}
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
