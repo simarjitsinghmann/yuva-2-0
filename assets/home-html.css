@@ -339,6 +339,7 @@ section.about-theme-section.shopify-section {
     border-radius: 10px;
   	position:absolute;
   	cursor:pointer;
+    z-index: -1;
 }
 .about-left-img.img1 {
     width: 310px;
@@ -356,6 +357,9 @@ section.about-theme-section.shopify-section {
     height: 328px;
     bottom: -26%;
     right: -90%;
+}
+.about-left-img.active {
+    z-index: 1;
 }
 .black-btn {
 	background-color:#000;
