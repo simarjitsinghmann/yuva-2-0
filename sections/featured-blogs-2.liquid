@@ -16,7 +16,7 @@
             {%- include 'lazy-image' image:article_image -%}
             {%- else -%}
             {%- render 'placeholder' %}
-                  {%- endif -%}
+            {%- endif -%}
           </a>
           <div class="yv-blog-card-text">
             <h4 class="yv-blog-title" >{{article.excerpt_or_content}}</h4>
@@ -33,9 +33,12 @@
           <div class="col-12 col-sm-12 col-md-6 ">
             <div class="yv-blog-card">
               <h3 class="yv-blog-title" href="#">{{article.title}}</h3>
-              <a href="#" class="yv-blog-card-img">                    
-                <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/blog-img.png?v=1645103327" alt="blog thumbnail image">
-                <span class="yv-blog-date">September 23, 2021 </span>
+              <a href="{{-article.url-}}" class="yv-blog-card-img">                    
+                {%- if article.image != blank -%}
+                {%- include 'lazy-image' image:article_image -%}
+                {%- else -%}
+                {%- render 'placeholder' %}
+                {%- endif -%}
               </a>
               <div class="yv-blog-card-text">
                 <p class="yv-blog-desc">{{article.excerpt_or_content}}</p>
