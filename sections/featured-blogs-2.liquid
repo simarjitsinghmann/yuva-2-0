@@ -9,13 +9,18 @@
     <div class="row align-items-center">       
       <div class="col-12 col-sm-12 col-md-6 col-lg-5">
             {%- for block in section.blocks limit:1 -%}
+            {%- assign article = block.settings.article -%}
         <div class="yv-blog-card featured-blog">
-          <a href="#" class="yv-blog-card-img">                    
-            <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/blog-img.png?v=1645103327" alt="blog thumbnail image">
+          <a href="{{-article.url-}}" class="yv-blog-card-img">                    
+            {%- if article.image != blank -%}
+            {%- include 'lazy-image' image:article_image -%}
+            {%- else -%}
+            {%- render 'placeholder' %}
+                  {%- endif -%}
           </a>
           <div class="yv-blog-card-text">
-            <h4 class="yv-blog-title" href="#">The piece of comfort you can lways designenjoy. walk up with a lot of energy</h4>
-            <a href="" class="yv-blog-link">Read More</a>
+            <h4 class="yv-blog-title" >The piece of comfort you can lways designenjoy. walk up with a lot of energy</h4>
+            <a href="{{-article.url-}}" class="yv-blog-link">Read More</a>
           </div>
           <span class="yv-blog-date">September 23, 2021 </span>
         </div>
