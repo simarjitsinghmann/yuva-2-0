@@ -13,7 +13,7 @@
         <div class="yv-blog-card featured-blog">
           <a href="{{-article.url-}}" class="yv-blog-card-img">                    
             {%- if article.image != blank -%}
-            {%- include 'lazy-image' image:article_image -%}
+            {%- include 'lazy-image' image:article.image  -%}
             {%- else -%}
             {%- render 'placeholder' %}
             {%- endif -%}
@@ -35,7 +35,7 @@
               <h3 class="yv-blog-title" href="#">{{article.title}}</h3>
               <a href="{{-article.url-}}" class="yv-blog-card-img">                    
                 {%- if article.image != blank -%}
-                {%- include 'lazy-image' image:article_image -%}
+                {%- include 'lazy-image' image:article.image  -%}
                 {%- else -%}
                 {%- render 'placeholder' %}
                 {%- endif -%}
