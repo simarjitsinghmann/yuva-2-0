@@ -1316,7 +1316,7 @@ $(document).ready(function()
     clearInterval(productGridSliderInterval)
   });
   
-  $('.about-left-img').on('hover',function(){ 
+  $('.about-left-img').hover(function(){ 
     var _this = $(this);
     var _parent = _this.closest('.shopify-section');
     var _product = _this.data('product');
