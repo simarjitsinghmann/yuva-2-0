@@ -1326,9 +1326,6 @@ $(document).ready(function()
       _parent.find('.about-left-content').fadeOut();
       $('#'+_product).fadeIn();
     }
-  }, function(){ 
-    $('.hover-slider').removeClass('active'); 
-    clearInterval(productGridSliderInterval)
   });
 });
 
