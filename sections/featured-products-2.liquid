@@ -9,9 +9,9 @@
         <div id="product-{{block.id}}" class="about-left-content" {% if count > 1 %}style="display:none"{% endif %}>
           <h6 class="about-left-subtitle">{{product.vendor}}</h6>
           <h2 class="about-left-title">{{product.title}}</h2>
-          <p class="about-left-desc">
+          <div class="about-left-desc">
             {{product.description | truncatewords:30}}
-          </p>
+          </div>
           <a class="button black-btn mt-3" href="{{product.url}}">More Detail</a>
         </div>
         {% assign count = count | plus:1 %}
