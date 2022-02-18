@@ -7,12 +7,18 @@
 .text-center {
 	text-align:center;
 }
-.small-btn {
+.button.small-btn {
     min-width: auto;
     min-height: 17px;
     line-height: 1;
     padding: 8px 10px;
     font-size: 11px;
+}
+.button.med-btn{
+    min-width: 140px;
+    padding: 5px 20px;
+    min-height: 26px;
+    line-height: 26px;
 }
 /* ============== collection list section css start ============ */
 .collection-list-section {
