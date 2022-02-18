@@ -1118,7 +1118,7 @@
   <div class="container">
     <div class="yv-deal-content">
       <h2 class="yv-deal-banner-title text-center">Deal of the week</h2>
-      <div id="countdown" class="deal-countdown">
+      <div id="dealCountdown" class="deal-countdown">
         <ul>
           <li class="deal-counter"><span id="dealDays"></span></li>
           <li class="deal-counter"><span id="dealHours"></span></li>
@@ -1292,7 +1292,7 @@
         //do something later when date is reached
         if (distance < 0) {
           document.getElementById("headline").innerText = "It's my birthday!";
-          document.getElementById("countdown").style.display = "none";
+          document.getElementById("dealCountdown").style.display = "none";
           document.getElementById("content").style.display = "block";
           clearInterval(x);
         }
