@@ -984,9 +984,15 @@ section.about-theme-section.shopify-section {
     background-color: #fff;
     padding: 13px;
 }
+.yv-deal-product.big-deal-product {
+    height: 100%;
+}
 .yv-deal-product.small-deal-product {
     display: flex;
-  margin-bottom:16px;
+  	margin-bottom:16px;
+}
+.yv-deal-product.small-deal-product:last-child {
+  	margin-bottom:0;
 }
 .yv-deal-product-img {
     height: 154px;
