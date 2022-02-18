@@ -6,18 +6,21 @@
         "71e01e33-5647-46ba-868d-09e2283cb693": {
           "type": "collection",
           "settings": {
+            "heading": "",
             "collection": "mens"
           }
         },
         "9b918020-b84c-4277-bec4-e986882ab96c": {
           "type": "collection",
           "settings": {
+            "heading": "",
             "collection": "winter-collections"
           }
         },
         "60a48513-1bb8-42c0-8f9c-45afc4b95901": {
           "type": "collection",
           "settings": {
+            "heading": "",
             "collection": "womens-handbag"
           }
         }
@@ -37,9 +40,47 @@
         "top_space_mobile": 30,
         "bottom_space_mobile": 30
       }
+    },
+    "1645152558c945df49": {
+      "type": "featured-products-2",
+      "blocks": {
+        "1645152558a661715d-0": {
+          "type": "product",
+          "settings": {
+            "heading": "",
+            "product": "capri-jumpsuit"
+          }
+        },
+        "1645152558a661715d-1": {
+          "type": "product",
+          "settings": {
+            "heading": "",
+            "product": "men-solid-casual-shirt"
+          }
+        },
+        "bed5f5dc-f400-49c2-adf8-a5d22327b898": {
+          "type": "product",
+          "settings": {
+            "heading": "",
+            "product": "full-sleeve-solid-women-sweatshirt"
+          }
+        }
+      },
+      "block_order": [
+        "1645152558a661715d-0",
+        "1645152558a661715d-1",
+        "bed5f5dc-f400-49c2-adf8-a5d22327b898"
+      ],
+      "settings": {
+        "top_space_desktop": 30,
+        "bottom_space_desktop": 30,
+        "top_space_mobile": 30,
+        "bottom_space_mobile": 30
+      }
     }
   },
   "order": [
-    "featured-collections-2"
+    "featured-collections-2",
+    "1645152558c945df49"
   ]
 }
