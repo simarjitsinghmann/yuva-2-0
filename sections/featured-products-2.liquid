@@ -2,6 +2,9 @@
   <div class="about-content-wrapper">
     <div class="row align-items-center">
       <div class="col-12 col-sm-12 col-md-5">
+        {% assign count = 1 %}
+        {%for block in section.blocks%}
+        {% if block.settings.product != blank %}
         <div id="product-{{block.id}}" class="about-left-content">
           <h6 class="about-left-subtitle">About Yuva Theme</h6>
           <h2 class="about-left-title">Give a little love &amp; joy this christmas.</h2>
@@ -13,6 +16,9 @@
           </p> 
           <a class="button black-btn mt-3" href="#">shop now</a>
         </div>
+        {% assign count = count | plus:1 %}
+        {% endif %}
+        {% endfor %}
       </div>
       <div class="col-12 col-sm-12 col-md-7">
         <div class="about-left-imgbox-container">
