@@ -8,6 +8,7 @@
   <div class="yv-blogs-wrapper"> 
     <div class="row align-items-center">       
       <div class="col-12 col-sm-12 col-md-6 col-lg-5">
+            {%- for block in section.blocks limit:1 -%}
         <div class="yv-blog-card featured-blog">
           <a href="#" class="yv-blog-card-img">                    
             <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/blog-img.png?v=1645103327" alt="blog thumbnail image">
@@ -18,9 +19,12 @@
           </div>
           <span class="yv-blog-date">September 23, 2021 </span>
         </div>
+            {%- endfor -%}
       </div>
+      {%- if section.blocks.size > 1  -%}
       <div class="col-12 col-sm-12 col-md-6 col-lg-7">
         <div class="row">
+            {%- for block in section.blocks offset:1 -%}
           <div class="col-12 col-sm-12 col-md-6 ">
             <div class="yv-blog-card">
               <h3 class="yv-blog-title" href="#">Exclusive Racerback</h3>
@@ -34,21 +38,10 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-12 col-md-6 ">
-            <div class="yv-blog-card">
-              <h3 class="yv-blog-title" href="#">Exclusive Racerback</h3>
-              <a href="#" class="yv-blog-card-img">                    
-                <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/blog-img.png?v=1645103327" alt="blog thumbnail image">
-                <span class="yv-blog-date">September 23, 2021 </span>
-              </a>
-              <div class="yv-blog-card-text">
-                <p class="yv-blog-desc">Lorem ipsum dolor sit amet, vadipiscing elit. In and vehicula lorem sed leo varius, nec cursus augue.</p>
-                <a href="" class="yv-blog-link">Read More</a>
-              </div>
-            </div>
-          </div>
+            {%- endfor -%}
         </div>
       </div>
+      {%- endif -%}
     </div>
   </div>
   {%- endif -%}
