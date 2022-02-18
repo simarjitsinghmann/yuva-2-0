@@ -102,11 +102,14 @@
   <div class="yv-footer-bottom-box">
     <div class="row align-items-center">
       <div class="col-12 col-sm-12 col-lg-6 col-xl-7">
-          <div class="yv-footer-copyright-box">
-    {%- if section.settings.copyright_content -%}
-    <p class="yv-copyright-content">{{section.settings.copyright_content}}</p>
-    {%- endif -%}
-  </div>
+        <div class="yv-footer-copyright-box">
+          {%- if section.settings.copyright_content -%}
+          <p class="yv-copyright-content">{{section.settings.copyright_content}}</p>
+          {%- endif -%}
+          {%- if section.settings.enable_language_selector -%}
+          {%- include 'language' -%}
+          {%- endif -%}
+        </div>
       </div>
       <div class="col-12 col-sm-12 col-lg-6 col-xl-5">
         <div class="yv-footer-payment-box">
@@ -120,9 +123,6 @@
               {%- endfor -%}
             </ul>
           </div>
-          {%- endif -%}
-          {%- if section.settings.enable_language_selector -%}
-          {%- include 'language' -%}
           {%- endif -%}
         </div>
       </div>
