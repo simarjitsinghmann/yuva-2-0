@@ -1309,9 +1309,8 @@ $(document).ready(function()
   $('.hover-slider').hover(function(){ 
     var _this = $(this);
     productGridSliderInterval = setInterval(function(){
-      console.log('interval',_this.find('.sd_slider_controls[attr-type="next"]'))
     	_this.find('.sd_slider_controls[attr-type="next"]').trigger('click');
-    },1000)
+    },2000)
   }, function(){ 
    $('.hover-slider').removeClass('active'); 
      clearInterval(productGridSliderInterval)
