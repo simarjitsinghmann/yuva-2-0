@@ -6,7 +6,7 @@
       {%- assign footlogo = false -%}
       {%- if section.settings.image != blank -%}
       {%- assign footlogo = true -%}
-      <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2">
+      <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
         <div class="yv-footer-logo">
           {%- assign width = section.settings.image_width | append:'px' -%}
           {% render 'lazy-image' image:section.settings.image,class:'Yuva-logo',max_width:width %}
