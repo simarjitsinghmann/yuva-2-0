@@ -1,49 +1,47 @@
-<section class="featured-articles-section shopify-section">
-  <div class="container"> 
-    <div class="section-heading">
-      <h2>Featured News Blogs
-        <a class="corner-view-all" href="#">View All</a></h2>
-    </div>
-    <div class="yv-blogs-wrapper"> 
-      <div class="row align-items-center">       
-        <div class="col-12 col-sm-12 col-md-6 col-lg-5">
-          <div class="yv-blog-card featured-blog">
-            <a href="#" class="yv-blog-card-img">                    
-              <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/blog-img.png?v=1645103327" alt="blog thumbnail image">
-            </a>
-            <div class="yv-blog-card-text">
-              <h4 class="yv-blog-title" href="#">The piece of comfort you can lways designenjoy. walk up with a lot of energy</h4>
-              <a href="" class="yv-blog-link">Read More</a>
-            </div>
-            <span class="yv-blog-date">September 23, 2021 </span>
+<div class="container"> 
+  <div class="section-heading">
+    <h2>Featured News Blogs
+      <a class="corner-view-all" href="#">View All</a></h2>
+  </div>
+  <div class="yv-blogs-wrapper"> 
+    <div class="row align-items-center">       
+      <div class="col-12 col-sm-12 col-md-6 col-lg-5">
+        <div class="yv-blog-card featured-blog">
+          <a href="#" class="yv-blog-card-img">                    
+            <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/blog-img.png?v=1645103327" alt="blog thumbnail image">
+          </a>
+          <div class="yv-blog-card-text">
+            <h4 class="yv-blog-title" href="#">The piece of comfort you can lways designenjoy. walk up with a lot of energy</h4>
+            <a href="" class="yv-blog-link">Read More</a>
           </div>
+          <span class="yv-blog-date">September 23, 2021 </span>
         </div>
-        <div class="col-12 col-sm-12 col-md-6 col-lg-7">
-          <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 ">
-              <div class="yv-blog-card">
-                <h3 class="yv-blog-title" href="#">Exclusive Racerback</h3>
-                <a href="#" class="yv-blog-card-img">                    
-                  <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/blog-img.png?v=1645103327" alt="blog thumbnail image">
-                  <span class="yv-blog-date">September 23, 2021 </span>
-                </a>
-                <div class="yv-blog-card-text">
-                  <p class="yv-blog-desc">Lorem ipsum dolor sit amet, vadipiscing elit. In and vehicula lorem sed leo varius, nec cursus augue.</p>
-                  <a href="" class="yv-blog-link">Read More</a>
-                </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-7">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-6 ">
+            <div class="yv-blog-card">
+              <h3 class="yv-blog-title" href="#">Exclusive Racerback</h3>
+              <a href="#" class="yv-blog-card-img">                    
+                <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/blog-img.png?v=1645103327" alt="blog thumbnail image">
+                <span class="yv-blog-date">September 23, 2021 </span>
+              </a>
+              <div class="yv-blog-card-text">
+                <p class="yv-blog-desc">Lorem ipsum dolor sit amet, vadipiscing elit. In and vehicula lorem sed leo varius, nec cursus augue.</p>
+                <a href="" class="yv-blog-link">Read More</a>
               </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-6 ">
-              <div class="yv-blog-card">
-                <h3 class="yv-blog-title" href="#">Exclusive Racerback</h3>
-                <a href="#" class="yv-blog-card-img">                    
-                  <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/blog-img.png?v=1645103327" alt="blog thumbnail image">
-                  <span class="yv-blog-date">September 23, 2021 </span>
-                </a>
-                <div class="yv-blog-card-text">
-                  <p class="yv-blog-desc">Lorem ipsum dolor sit amet, vadipiscing elit. In and vehicula lorem sed leo varius, nec cursus augue.</p>
-                  <a href="" class="yv-blog-link">Read More</a>
-                </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 ">
+            <div class="yv-blog-card">
+              <h3 class="yv-blog-title" href="#">Exclusive Racerback</h3>
+              <a href="#" class="yv-blog-card-img">                    
+                <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/blog-img.png?v=1645103327" alt="blog thumbnail image">
+                <span class="yv-blog-date">September 23, 2021 </span>
+              </a>
+              <div class="yv-blog-card-text">
+                <p class="yv-blog-desc">Lorem ipsum dolor sit amet, vadipiscing elit. In and vehicula lorem sed leo varius, nec cursus augue.</p>
+                <a href="" class="yv-blog-link">Read More</a>
               </div>
             </div>
           </div>
@@ -51,4 +49,111 @@
       </div>
     </div>
   </div>
-</section>
+</div>
+
+
+{% schema %}
+{
+    "name": "t:sections.featured-article.name",
+    "tag": "section",
+    "class":"blog-post featured-articles-section",
+    "max_blocks":3,
+    "settings": [
+      {
+        "type": "text",
+        "id": "subheading",
+        "default": "Add Blog posts here",
+        "label": "t:sections.featured-article.settings.subheading.label"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "default": "Posts",
+        "label": "t:sections.featured-article.settings.heading.label"
+      },
+      {
+        "type": "text",
+        "id": "button",
+        "default": "View all",
+        "label": "t:sections.featured-article.settings.button.label"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "t:sections.featured-article.settings.link.label"
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "t:sections.featured-article.settings.color.label",
+        "default":"#ffffff"
+      },
+      {
+        "type": "range",
+        "id": "top_space_desktop",
+        "label": "t:sections.featured-article.settings.top_space_desktop.label",
+        "default":40,
+        "min":0,
+        "max":60,
+        "step":5
+      },
+      {
+        "type": "range",
+        "id": "bottom_space_desktop",
+        "label": "t:sections.featured-article.settings.bottom_space_desktop.label",
+        "default":0,
+        "min":0,
+        "max":60,
+        "step":5
+      },
+      {
+        "type": "range",
+        "id": "top_space_mobile",
+        "label": "t:sections.featured-article.settings.top_space_mobile.label",
+        "default":30,
+        "min":0,
+        "max":60,
+        "step":5
+      },
+      {
+        "type": "range",
+        "id": "bottom_space_mobile",
+        "label": "t:sections.featured-article.settings.bottom_space_mobile.label",
+        "default":30,
+        "min":0,
+        "max":60,
+        "step":5
+      }
+    ],
+    "blocks":[
+      {
+        "type":"article",
+         "name":"t:sections.featured-article.blocks.article.name",
+         "settings":[
+          {
+          "type":"article",
+          "id":"article",
+          "label": "t:sections.featured-article.blocks.article.settings.article.label"
+          }
+           ]
+       }
+         ],
+    "presets": [
+      {
+        "name": "t:sections.featured-article.presets.name",
+        "category": "Article",
+        "blocks": [
+          {
+            "type": "article"
+          },
+          {
+            "type": "article"
+          },
+          {
+            "type": "article"
+          }
+        ]
+      }
+    ]
+  }
+  {% endschema %}
