@@ -21,7 +21,7 @@
             {%for block in section.blocks%}
             {% if block.settings.product != blank %}
             <div class="about-left-img {% if section.blocks.size > 1%}img{{count}}{% endif%}">
-              <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/image.png?v=1645017085" alt="image">
+              <img src="{{block.settings.product.featured_image | img_url:'500x'}}" alt="image">
             </div>
             {% assign count = count | plus:1 %}
             {% endif %}
