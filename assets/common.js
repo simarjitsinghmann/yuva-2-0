@@ -1318,9 +1318,13 @@ $(document).ready(function()
   
   $('.about-left-img').hover(function(){ 
     var _this = $(this);
-    var _parent = $(this).closest('.shopify-section');
+    var _parent = _this.closest('.shopify-section');
+    var _product = _this.data('product');
     if(!_this.hasClass('active')){
     	_parent.find('.about-left-img').removeClass('active');
+      _this.addClass('active');
+      _parent.find('.about-left-content').fadeOut();
+      $('#'+_product).fadeIn();
     }
   }, function(){ 
     $('.hover-slider').removeClass('active'); 
