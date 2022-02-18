@@ -1320,7 +1320,7 @@ $(document).ready(function()
     var _this = $(this);
     var _parent = $(this).closest('.shopify-section');
     if(!_this.hasClass('active')){
-    	_parent.find('.about-left-img')
+    	_parent.find('.about-left-img').removeClass('active');
     }
   }, function(){ 
     $('.hover-slider').removeClass('active'); 
