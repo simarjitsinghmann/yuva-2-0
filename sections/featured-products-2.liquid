@@ -12,7 +12,7 @@
           <p class="about-left-desc">
             {{product.description | escape | truncatewords:30}}
           </p>
-          <a class="button black-btn mt-3" href="#">shop now</a>
+          <a class="button black-btn mt-3" href="{{product.url}}">More Detail</a>
         </div>
         {% assign count = count | plus:1 %}
         {% endif %}
