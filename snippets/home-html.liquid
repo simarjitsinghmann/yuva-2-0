@@ -1312,10 +1312,10 @@
           <h2 class="yv-deal-banner-title">Deal of the week</h2>
           <div id="leftdealCountdown" class="deal-countdown">
             <ul class="deal-counter-box">
-              <li class="deal-counter"><span id="dealDays"></span></li>
-              <li class="deal-counter"><span id="dealHours"></span></li>
-              <li class="deal-counter"><span id="dealMinutes"></span></li>
-              <li class="deal-counter"><span id="dealSeconds"></span></li>
+              <li class="deal-counter"><span id="leftdealDays"></span></li>
+              <li class="deal-counter"><span id="leftdealHours"></span></li>
+              <li class="deal-counter"><span id="leftdealMinutes"></span></li>
+              <li class="deal-counter"><span id="leftdealSeconds"></span></li>
             </ul>
       	</div>
           <p class="yv-deal-offer">50<span>%</span></p>
@@ -1496,7 +1496,7 @@
         //do something later when date is reached
         if (distance < 0) {
           document.getElementById("headline").innerText = "It's my birthday!";
-          document.getElementById("dealCountdown").style.display = "none";
+          document.getElementById("leftdealCountdown").style.display = "none";
           document.getElementById("content").style.display = "block";
           clearInterval(x);
         }
