@@ -31,7 +31,8 @@
   align-items: center;
 }
 .yv-newsletter-text {
-  margin-right: 60px;
+    max-width: 33%;
+    flex: 0 0 33%;
 }
 .yv-newsletter-text span {
   font-size: 16px;
@@ -40,8 +41,8 @@
   color: rgba(255, 255, 255, 0.5);
 }
 .yv-footer-newsletter-box {
-  max-width: 55%;
-  flex: 0 0 55%;
+    max-width: 67%;
+    flex: 0 0 67%;
 }
 .yv-footer-newsletter-wrapper {
   position: relative;
