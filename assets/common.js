@@ -1312,9 +1312,19 @@ $(document).ready(function()
     	_this.find('.sd_slider_controls[attr-type="next"]').trigger('click');
     },2000)
   }, function(){ 
-   $('.hover-slider').removeClass('active'); 
-     clearInterval(productGridSliderInterval)
+    $('.hover-slider').removeClass('active'); 
+    clearInterval(productGridSliderInterval)
   });
   
+  $('.about-left-img').hover(function(){ 
+    var _this = $(this);
+    var _parent = $(this).closest('.shopify-section');
+    if(!_this.hasClass('active')){
+    	_parent.find('.about-left-img')
+    }
+  }, function(){ 
+    $('.hover-slider').removeClass('active'); 
+    clearInterval(productGridSliderInterval)
+  });
 });
 
