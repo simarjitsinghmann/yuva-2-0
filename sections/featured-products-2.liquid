@@ -8,13 +8,10 @@
         {% assign product = block.settings.product %}
         <div id="product-{{block.id}}" class="about-left-content" {% if count > 1 %}style="display:none"{% endif %}>
           <h6 class="about-left-subtitle">{{product.vendor}}</h6>
-          <h2 class="about-left-title">Give a little love &amp; joy this christmas.</h2>
+          <h2 class="about-left-title">{{product.title}}</h2>
           <p class="about-left-desc">
-            Lorem ipsum dolor sit amet, vadipiscing elit. In vehicula lorem sed leo varius, nec cursus augue maximus. Vivamus lacinia lacus leo, nec venenatis mi cursus sit amet. Vestibulum sit amet tellus ipsum.
+            {{product.description | escape | truncatewords:30}}
           </p>
-          <p class="about-left-desc">
-            Vivamus pellentesque quam non metus gravida vestibulum. Nulla congue sagittis fermentum. Lorm a Sed suscipit fringilla dapibus.
-          </p> 
           <a class="button black-btn mt-3" href="#">shop now</a>
         </div>
         {% assign count = count | plus:1 %}
