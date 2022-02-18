@@ -339,27 +339,26 @@ section.about-theme-section.shopify-section {
     border-radius: 10px;
   	position:absolute;
   	cursor:pointer;
-    z-index: 1;
 }
 .about-left-img.img1 {
-    width: 310px;
-    height: 318px;
-    left: 48%;
-    top: 86%;
-}
-.about-left-img.img2 {
     width: 412px;
     position: static;
     height: 425px;
 }
-.about-left-img.img3 {
+.about-left-img.img2 {
     width: 323px;
     height: 328px;
     bottom: -26%;
     right: -90%;
 }
+.about-left-img.img3 {
+    width: 310px;
+    height: 318px;
+    left: 48%;
+    top: 86%;
+}
 .about-left-img.active {
-    z-index: 2;
+    z-index: 1;
 }
 .black-btn {
 	background-color:#000;
