@@ -1284,7 +1284,7 @@
         const now = new Date().getTime(),
               distance = countDown - now;
 
-        document.getElementById("dealdays").innerText = Math.floor(distance / (day)),
+        document.getElementById("dealDays").innerText = Math.floor(distance / (day)),
           document.getElementById("dealhours").innerText = Math.floor((distance % (day)) / (hour)),
           document.getElementById("dealminutes").innerText = Math.floor((distance % (hour)) / (minute)),
           document.getElementById("dealseconds").innerText = Math.floor((distance % (minute)) / second);
