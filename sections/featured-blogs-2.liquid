@@ -22,7 +22,7 @@
             <h4 class="yv-blog-title" >{{article.excerpt_or_content | truncatewords:30}}</h4>
             <a href="{{-article.url-}}" class="yv-blog-link">Read More</a>
           </div>
-          <span class="yv-blog-date">{{article.published_at | date: "%B %d %Y" }}</span>
+          <span class="yv-blog-date">{{article.published_at | date: "%B %d, %Y" }}</span>
         </div>
             {%- endfor -%}
       </div>
@@ -39,7 +39,7 @@
                 {%- else -%}
                 {%- render 'placeholder' %}
                 {%- endif -%}
-                <span class="yv-blog-date">{{article.published_at | date: "%B %d %Y" }}</span>
+                <span class="yv-blog-date">{{article.published_at | date: "%B %d, %Y" }}</span>
               </a>
               <div class="yv-blog-card-text">
                 <p class="yv-blog-desc">{{article.excerpt_or_content | truncatewords:30}}</p>
