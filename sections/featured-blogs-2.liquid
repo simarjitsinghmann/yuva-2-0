@@ -19,7 +19,7 @@
             {%- endif -%}
           </a>
           <div class="yv-blog-card-text">
-            <h4 class="yv-blog-title" >{{article.excerpt_or_content}}</h4>
+            <h4 class="yv-blog-title" >{{article.excerpt_or_content | truncatewords:30}}</h4>
             <a href="{{-article.url-}}" class="yv-blog-link">Read More</a>
           </div>
           <span class="yv-blog-date">{{article.published_at | date: "%d %b %Y" }} </span>
@@ -41,7 +41,7 @@
                 {%- endif -%}
               </a>
               <div class="yv-blog-card-text">
-                <p class="yv-blog-desc">{{article.excerpt_or_content}}</p>
+                <p class="yv-blog-desc">{{article.excerpt_or_content | truncatewords:30}}</p>
                 <a href="{{-article.url-}}" class="yv-blog-link">Read More</a>
               </div>
             </div>
