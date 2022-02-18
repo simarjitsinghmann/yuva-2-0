@@ -1323,8 +1323,8 @@ $(document).ready(function()
     if(!_this.hasClass('active')){
     	_parent.find('.about-left-img').removeClass('active');
       _this.addClass('active');
-      _parent.find('.about-left-content').fadeOut();
-      $('#'+_product).fadeIn();
+      _parent.find('.about-left-content').fadeOut(100);
+      $('#'+_product).delay(100).fadeIn(100);
     }
   });
 });
