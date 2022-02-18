@@ -1488,10 +1488,10 @@
         const now = new Date().getTime(),
               distance = countDown - now;
 
-        document.getElementById("dealDays").innerText = Math.floor(distance / (day)),
-          document.getElementById("dealHours").innerText = Math.floor((distance % (day)) / (hour)),
-          document.getElementById("dealMinutes").innerText = Math.floor((distance % (hour)) / (minute)),
-          document.getElementById("dealSeconds").innerText = Math.floor((distance % (minute)) / second);
+        document.getElementById("leftdealDays").innerText = Math.floor(distance / (day)),
+          document.getElementById("leftdealHours").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("leftdealMinutes").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("leftdealSeconds").innerText = Math.floor((distance % (minute)) / second);
 
         //do something later when date is reached
         if (distance < 0) {
