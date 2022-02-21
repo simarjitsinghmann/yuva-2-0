@@ -1338,7 +1338,11 @@ $(document).ready(function(){
     evt.preventDefault();
     $('body').removeClass('quickview-open');
   });
-  
+
+  $('.sd_main_Slider').each(function () {
+    var _slider = $(this);
+    sd_slider(_slider, 'next');
+  })
      
     jQuery('body').on('click', '.sd_slider_controls', function() {
     
