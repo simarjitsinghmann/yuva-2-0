@@ -919,7 +919,6 @@ var dealSection = function(selector){
         hour = minute * 60,
         day = hour * 24;
   var clearCountDown;
-  countdown(selector);
 
   countdown = function(selector){
     console.log('selector',selector)
@@ -956,7 +955,10 @@ var dealSection = function(selector){
         }
       }, 0)
     }
-  }
+  }  
+  
+  countdown(selector);
+  
 }
 
 
