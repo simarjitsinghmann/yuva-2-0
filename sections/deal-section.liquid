@@ -10,57 +10,8 @@
 
 {% if section.settings.date != blank %}
 
-<input type="hidden" id="dealDate-{{section.id}}" value="{{section.settings.date}}">
-<script>
-  function dealSection{{section.id | remove:'-'|remove:'_'}}(){ 
-    const second = 1000,
-          minute = second * 60,
-          hour = minute * 60,
-          day = hour * 24;
+<input type="hidden" class="dealDate" value="{{section.settings.date}}">
 
-    var eventdate = document.getElementById("dealDate-{{section.id}}");
-     
-	var countDownParent = document.getElementById("shopify-section-{{section.id}}");
-
-    if(eventdate) {
-      const myArr = eventdate.value.split("/");
-      let _day = myArr[0];
-      let _month = myArr[1];
-      let _year = myArr[2];
-      let _date = _month+"/"+_day+"/"+_year+" 00:00:00";
-      let countDown = new Date(_date).getTime();
-      if(isNaN(countDown)){
-        if(Shopify.designMode){
-          alert('Incorrect Date or Date Format');
-        }
-        return false;
-      }
-
-      x = setInterval(function() {    
-
-        let now = new Date().getTime(),
-            distance = countDown - now;
-          var leftDays = Math.floor(distance / (day));
-        if(distance > 0){
-          countDownParent.querySelector("#dDays").innerText = pad2(leftDays),
-            countDownParent.querySelector("#dHours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
-            countDownParent.querySelector("#dMinutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
-            countDownParent.querySelector("#dSeconds").innerText = pad2(Math.floor((distance % (minute)) / second));
-        }
-        else{
-          countDownParent.querySelector("#dealCountdown").style.display = "none";
-          clearInterval(x);
-        }
-      }, 0)
-    }
-  }
-  window.onload = (event) => { 
-    dealSection{{section.id| remove:'-'|remove:'_'}}();
-  }
-  jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
-    console.log('event',event)
-  });
-</script>
 {% endif %}
 {% schema %}
   {
