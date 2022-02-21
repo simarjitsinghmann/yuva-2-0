@@ -12,7 +12,7 @@
 
 <input type="hidden" id="dealDate-{{section.id}}" value="{{section.settings.date}}">
 <script>
-  window.onload = (event) => { 
+  function dealSection-{{section.id}}(){ 
     const second = 1000,
           minute = second * 60,
           hour = minute * 60,
@@ -40,7 +40,6 @@
 
         let now = new Date().getTime(),
             distance = countDown - now;
-          var leftDays = Math.floor(distance / (day));
         if(distance > 0){
           countDownParent.querySelector("#dDays").innerText = pad2(leftDays),
             countDownParent.querySelector("#dHours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
@@ -53,6 +52,8 @@
         }
       }, 0)
     }
+  }
+     window.onload = (event) => { 
   }
 </script>
 {% endif %}
