@@ -59,13 +59,18 @@
     justify-content: flex-end;
     padding-right: 5%;
 }
-.banner-small-slides-container {
+.banner-section .banner-small-slides-container {
     position: absolute;
     bottom: 0;
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+.banner-section .yv-banner-thumbnail {
+    width: 178px;
+    border: 10px solid #fff;
+    margin: 0 10px;
 }
 /* ============== collection list section css start ============ */
 .collection-list-section {

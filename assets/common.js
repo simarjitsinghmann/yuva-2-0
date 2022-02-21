@@ -921,8 +921,9 @@ var dealSection = function(selector){
   var clearCountDown;
 
   countdown = function(selector){
-    var eventdate = selector.querySelector("#dealDate");
-    console.log('selector',selector,'eventdate',eventdate)
+    var parent = document.querySelector(selector);
+    var eventdate = parent.querySelector("#dealDate");
+    console.log('selector',parent,'eventdate',)
     return false;
     if(eventdate) {
       const myArr = eventdate.value.split("/");
@@ -957,7 +958,7 @@ var dealSection = function(selector){
     }
   }  
   
-  countdown(document.getElementById("#"+selector));
+  countdown(document.querySelector("#"+selector));
   
 }
 
