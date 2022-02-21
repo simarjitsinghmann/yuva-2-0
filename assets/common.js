@@ -965,7 +965,7 @@ if(deals){
 	
   Array.from(deals).forEach(function(deal) {
     dealSection(deal)
-  }
+  });
 }
 
 function clearActive(currentHead,currentContent){
