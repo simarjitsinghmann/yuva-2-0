@@ -47,14 +47,12 @@
 //           else{
 //             document.getElementById("dayHours").textContent = '{{'general.hours' | t}}';
 //           }
-          document.getElementById("days").innerText = pad2(leftDays),
-            document.getElementById("hours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
-            document.getElementById("minutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
-            document.getElementById("seconds").innerText = pad2(Math.floor((distance % (minute)) / second));
+          document.getElementById("dealDays").innerText = pad2(leftDays),
+            document.getElementById("dealHours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
+            document.getElementById("dealMinutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
+            document.getElementById("dealSeconds").innerText = pad2(Math.floor((distance % (minute)) / second));
         }
         else{
-          document.getElementById("announcementTimer").classList.add('hidden');
-          document.querySelector('body').classList.remove('announcement_open');
           clearInterval(x);
         }
       }, 0)
