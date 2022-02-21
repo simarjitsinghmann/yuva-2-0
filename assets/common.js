@@ -921,7 +921,7 @@ var dealSection = function(selector){
   var clearCountDown;
 
   countdown = function(selector){
-    var eventdate = selector.getElementById("#dealDate");
+    var eventdate = selector.querySelector("#dealDate");
     console.log('selector',selector,'eventdate',eventdate)
     return false;
     if(eventdate) {
