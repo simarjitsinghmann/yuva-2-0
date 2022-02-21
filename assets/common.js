@@ -971,8 +971,7 @@ var dealSection = function(selector){
 
 
 var deals = document.getElementsByClassName('deal-banner-section');
-if(deals){
-	
+if(deals){	
   Array.from(deals).forEach(function(deal) {
     dealSection(deal.getAttribute('id'))
   });
