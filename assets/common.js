@@ -943,8 +943,8 @@ var dealSection = function(selector){
 		var hourSelector = parent.querySelector("#ddHours");
 		var minSelector = parent.querySelector("#dMinutes");
 		var secSelector = parent.querySelector("#dSeconds");
-        console.log(daySelector ,hourSelector, minSelector, minSelector)
-        if(daySelector && hourSelector && minSelector && minSelector){
+        console.log(daySelector ,hourSelector, minSelector, secSelector)
+        if(daySelector && hourSelector && minSelector && secSelector){
           clearCountDown = setInterval(function() {    
 
             let now = new Date().getTime(),
