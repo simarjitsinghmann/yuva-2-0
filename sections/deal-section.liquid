@@ -41,13 +41,13 @@
         let now = new Date().getTime(),
             distance = countDown - now;
         if(distance > 0){
-          countDownParent.getElementById("dDays").innerText = pad2(leftDays),
-            countDownParent.getElementById("dHours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
-            countDownParent.getElementById("dMinutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
-            countDownParent.getElementById("dSeconds").innerText = pad2(Math.floor((distance % (minute)) / second));
+          countDownParent.querySelector("#dDays").innerText = pad2(leftDays),
+            countDownParent.querySelector("#"dHours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
+            countDownParent.querySelector("#dMinutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
+            countDownParent.querySelector("#dSeconds").innerText = pad2(Math.floor((distance % (minute)) / second));
         }
         else{
-          countDownParent.getElementById("dealCountdown").style.display = "none";
+          countDownParent.querySelector("#dealCountdown").style.display = "none";
           clearInterval(x);
         }
       }, 0)
