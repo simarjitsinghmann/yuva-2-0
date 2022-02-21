@@ -7,6 +7,82 @@
   {% include 'deal-slider-section' %}
 </div>
 {% endif %}
+
+<script>
+  function announcementTimer(){
+    const second = 1000,
+          minute = second * 60,
+          hour = minute * 60,
+          day = hour * 24;
+
+    var eventdate = document.getElementById("eventDate");
+
+    if(eventdate) {
+      const myArr = eventdate.value.split("/");
+      let _day = myArr[0];
+      let _month = myArr[1];
+      let _year = myArr[2];
+      let _date = _month+"/"+_day+"/"+_year+" 00:00:00";
+      let countDown = new Date(_date).getTime();
+      if(isNaN(countDown)){
+        if(Shopify.designMode){
+          alert('Incorrect Date or Date Format');
+        }
+        return false;
+      }
+
+      x = setInterval(function() {    
+
+        let now = new Date().getTime(),
+            distance = countDown - now;
+        if(distance > 0){
+          document.getElementById("announcementTimer").classList.remove('hidden');
+          var leftDays = Math.floor(distance / (day));
+          if(leftDays > 0){
+            document.getElementById("dayHours").textContent= '{{'general.days' | t}}';
+          }
+          else{
+            document.getElementById("dayHours").textContent = '{{'general.hours' | t}}';
+          }
+          document.getElementById("days").innerText = pad2(leftDays),
+            document.getElementById("hours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
+            document.getElementById("minutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
+            document.getElementById("seconds").innerText = pad2(Math.floor((distance % (minute)) / second));
+        }
+        else{
+          document.getElementById("announcementTimer").classList.add('hidden');
+          document.querySelector('body').classList.remove('announcement_open');
+          clearInterval(x);
+        }
+      }, 0)
+    }
+
+    setTimeout(function(){
+      var getnew_Pop = Cookies.get('announcement_closed');
+      if(getnew_Pop != "true"){
+        document.querySelector('body').classList.add('announcement_open');
+      }      
+    },500);
+  }
+  window.onload = (event) => { 
+    announcementTimer();
+    initAnnouncement();
+  }
+  function initAnnouncement(){
+    var getnew_Pop = Cookies.get('announcement_closed');
+    if(getnew_Pop != "true"){
+      $('#announcement{{section.id}}').removeClass('hidden');
+        $('body').removeClass('announcement_open');
+    }
+    $('.announce_close').click(function(){
+      $('.announcement-bar').slideToggle();
+      var date = new Date();
+      date.setTime(date.getTime() + (parseInt(24 * 60 * 60 * 1000)));
+      Cookies.set('announcement_closed', 'true', { expires: date, path: '/' });
+      $('body').removeClass('announcement_open');
+    });
+  }
+</script>
 {% schema %}
   {
     "name": "Deal Section",
