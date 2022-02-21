@@ -8,6 +8,7 @@
 </div>
 {% endif %}
 
+{% if section.settings.style == 'grid' %}
 <script>
   function announcementTimer(){
     const second = 1000,
@@ -83,6 +84,7 @@
     });
   }
 </script>
+{% endif %}
 {% schema %}
   {
     "name": "Deal Section",
