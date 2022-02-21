@@ -926,8 +926,6 @@ var dealSection = function(selector){
       var dateSelector = parent.querySelector(".dealDate");
       if(dateSelector) {
         var date = dateSelector.getAttribute('value');
-      console.log('selector',parent,'eventdate',date)
-      return false;
       const myArr = date.value.split("/");
       let _day = myArr[0];
       let _month = myArr[1];
