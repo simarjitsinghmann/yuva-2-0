@@ -40,6 +40,7 @@
 
         let now = new Date().getTime(),
             distance = countDown - now;
+          var leftDays = Math.floor(distance / (day));
         if(distance > 0){
           countDownParent.querySelector("#dDays").innerText = pad2(leftDays),
             countDownParent.querySelector("#dHours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
