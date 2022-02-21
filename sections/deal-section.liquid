@@ -12,7 +12,7 @@
 
 <input type="hidden" id="dealDate-{{section.id}}" value="{{section.settings.date}}">
 <script>
-  function dealSection-{{section.id | remove:'-'|remove:'_'}}(){ 
+  function dealSection{{section.id | remove:'-'|remove:'_'}}(){ 
     const second = 1000,
           minute = second * 60,
           hour = minute * 60,
@@ -54,7 +54,7 @@
     }
   }
   window.onload = (event) => { 
-    dealSection-{{section.id| remove:'-'|remove:'_'}}();
+    dealSection{{section.id| remove:'-'|remove:'_'}}();
   }
 </script>
 {% endif %}
