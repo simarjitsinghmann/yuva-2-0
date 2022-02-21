@@ -1,13 +1,9 @@
 
 <div class="{% if section.settings.style == 'grid' %}center-side-deal{% else %}left-side-deal{% endif %}"> 
+  {% assign dealLayout = 'deal-' |append:section.settings.style | append:'-section' %}
   <div class="container">
-  {% include 'deal-grid-section' %}
-
-<div class="">
-   <div class="container">
-  {% include 'deal-slider-section' %}
-
-</div>
+    {% include dealLayout %}
+  </div>
 </div>
 
 {% if section.settings.date != blank %}
