@@ -11,6 +11,22 @@
     "max_blocks":3,
     "settings": [
       {
+        "type":"select",
+        "id":"style",
+        "default":"grid",
+        "label":"t:sections.testimonials.settings.style.label",
+		"options":[
+          {
+            "value":"grid",
+            "label":"Grid"
+          },
+          {
+            "value":"slider",
+            "label":"Slider"
+          }
+        ]
+      },
+      {
         "type": "text",
         "id": "subheading",
         "default": "Deal of the week",
