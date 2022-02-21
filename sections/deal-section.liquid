@@ -1,8 +1,11 @@
+{% if section.settings.style == 'grid' %}
 <div class="center-side-deal">
   
 </div>
+{% else %}
 <div class="left-side-deal">
 </div>
+{% endif %}
 {% schema %}
   {
     "name": "Deal Section",
