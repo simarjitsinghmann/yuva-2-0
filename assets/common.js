@@ -939,23 +939,28 @@ var dealSection = function(selector){
         }
         return false;
       }
+		var daySelector = parent.querySelector("#dDays");
+		var hourSelector = parent.querySelector("#dDays");
+		var minSelector = parent.querySelector("#dDays");
+		var secSelector = parent.querySelector("#dDays");
+        if(daySelector && hourSelector && minSelector && minSelector){
+          clearCountDown = setInterval(function() {    
 
-      clearCountDown = setInterval(function() {    
-
-        let now = new Date().getTime(),
-            distance = countDown - now;
-        var leftDays = Math.floor(distance / (day));
-        if(distance > 0){
-          parent.querySelector("#dDays").innerText = pad2(leftDays),
-            parent.querySelector("#dHours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
-            parent.querySelector("#dMinutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
-            parent.querySelector("#dSeconds").innerText = pad2(Math.floor((distance % (minute)) / second));
+            let now = new Date().getTime(),
+                distance = countDown - now;
+            var leftDays = Math.floor(distance / (day));
+            if(distance > 0){
+              daySelector.innerText = pad2(leftDays),
+                hourSelector.innerText = pad2(Math.floor((distance % (day)) / (hour))),
+                minSelector.innerText = pad2(Math.floor((distance % (hour)) / (minute))),
+                secSelector.innerText = pad2(Math.floor((distance % (minute)) / second));
+            }
+            else{
+              parent.querySelector("#dealCountdown").style.display = "none";
+              clearInterval(clearCountDown);
+            }
+          }, 0)
         }
-        else{
-          parent.querySelector("#dealCountdown").style.display = "none";
-          clearInterval(clearCountDown);
-        }
-      }, 0)
     }
     }
   }  
