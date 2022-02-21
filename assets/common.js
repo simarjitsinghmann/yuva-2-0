@@ -914,7 +914,48 @@ function faqInit(){
 
 
 var dealSection = function(selector){
-   	
+   	  const second = 1000,
+          minute = second * 60,
+          hour = minute * 60,
+          day = hour * 24;
+	var clearCountDown;
+  countdown = function(selector){
+    var eventdate = document.getElementById("dealDate-{{section.id}}");
+
+    var countDownParent = document.getElementById("shopify-section-{{section.id}}");
+
+    if(eventdate) {
+      const myArr = eventdate.value.split("/");
+      let _day = myArr[0];
+      let _month = myArr[1];
+      let _year = myArr[2];
+      let _date = _month+"/"+_day+"/"+_year+" 00:00:00";
+      let countDown = new Date(_date).getTime();
+      if(isNaN(countDown)){
+        if(Shopify.designMode){
+          alert('Incorrect Date or Date Format');
+        }
+        return false;
+      }
+
+      clearCountDown = setInterval(function() {    
+
+        let now = new Date().getTime(),
+            distance = countDown - now;
+        var leftDays = Math.floor(distance / (day));
+        if(distance > 0){
+          countDownParent.querySelector("#dDays").innerText = pad2(leftDays),
+            countDownParent.querySelector("#dHours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
+            countDownParent.querySelector("#dMinutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
+            countDownParent.querySelector("#dSeconds").innerText = pad2(Math.floor((distance % (minute)) / second));
+        }
+        else{
+          countDownParent.querySelector("#dealCountdown").style.display = "none";
+          clearInterval(clearCountDown);
+        }
+      }, 0)
+    }
+  }
 }
 
 
