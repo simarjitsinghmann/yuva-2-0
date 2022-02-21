@@ -12,7 +12,7 @@
 
 <input type="hidden" id="dealDate-{{section.id}}" value="{{section.settings.date}}">
 <script>
-  function announcementTimer(){
+window.onload = (event) => { 
     const second = 1000,
           minute = second * 60,
           hour = minute * 60,
@@ -53,35 +53,15 @@
             document.getElementById("dealSeconds").innerText = pad2(Math.floor((distance % (minute)) / second));
         }
         else{
+              document.getElementById("dealCountdown").style.display = "none";
           clearInterval(x);
         }
       }, 0)
     }
-
-    setTimeout(function(){
-      var getnew_Pop = Cookies.get('announcement_closed');
-      if(getnew_Pop != "true"){
-        document.querySelector('body').classList.add('announcement_open');
-      }      
-    },500);
   }
-  window.onload = (event) => { 
+  
     announcementTimer();
     initAnnouncement();
-  }
-  function initAnnouncement(){
-    var getnew_Pop = Cookies.get('announcement_closed');
-    if(getnew_Pop != "true"){
-      $('#announcement{{section.id}}').removeClass('hidden');
-        $('body').removeClass('announcement_open');
-    }
-    $('.announce_close').click(function(){
-      $('.announcement-bar').slideToggle();
-      var date = new Date();
-      date.setTime(date.getTime() + (parseInt(24 * 60 * 60 * 1000)));
-      Cookies.set('announcement_closed', 'true', { expires: date, path: '/' });
-      $('body').removeClass('announcement_open');
-    });
   }
 </script>
 {% endif %}
