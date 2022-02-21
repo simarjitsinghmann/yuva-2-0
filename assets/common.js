@@ -920,9 +920,9 @@ var dealSection = function(selector){
           day = hour * 24;
 	var clearCountDown;
   	countdown(selector);
+  
   	countdown = function(selector){
-    var eventdate = selector.querySelector("#dealDate-{{section.id}}");
-    var countDownParent = selector.querySelector("shopify-section-{{section.id}}");
+    var eventdate = selector.querySelector("#dealDate");
     if(eventdate) {
       const myArr = eventdate.value.split("/");
       let _day = myArr[0];
