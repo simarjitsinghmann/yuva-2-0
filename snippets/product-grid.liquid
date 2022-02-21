@@ -36,7 +36,7 @@
 				{%- endif -%}
               
               {%- if settings.show_atc -%}
-              {%- if has_only_default_variant or product.variants.size == 1 -%}
+              {%- if product.has_only_default_variant or product.variants.size == 1 -%}
               {%- if product.available -%}
 
               <li>
