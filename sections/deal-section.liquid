@@ -1,12 +1,46 @@
 <div class="center-side-deal">
+  
 </div>
 <div class="left-side-deal">
 </div>
 {% schema %}
   {
     "name": "Deal Section",
+    "tag": "section",
 	"class":"deal-banner-section",
-    "settings": []
+    "max_blocks":3,
+    "settings": [
+      {
+        "type": "text",
+        "id": "subheading",
+        "default": "Add Blog posts here",
+        "label": "t:sections.featured-article.settings.subheading.label"
+      }
+	],
+    "blocks":[
+      {
+        "type":"product",
+         "name":"Product",
+         "settings":[
+          {
+            "type":"product",
+            "id":"product",
+            "label": "Product"
+          }
+       	]
+       }
+    ],
+    "presets": [
+      {
+        "name": "Deal Section",
+        "category": "product",
+        "blocks": [
+          {
+            "type": "product"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}
 
