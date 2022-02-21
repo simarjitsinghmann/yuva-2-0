@@ -44,7 +44,9 @@
     {%- form 'product', product, data-product-form: '', data-product-handle: product.handle -%} 
     <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}">
     {%- if product.available -%}
-    <a href="#" class="button small-btn">ADD TO CART</a>
+    <button type="submit" class="button small-btn">ADD TO CART</button>
+    {% else %}
+    <button type="button" class="button small-btn" disabled>SOLD OUT</button>
     {% endif %}
     {% endform %}
     {% endif %}
