@@ -31,6 +31,12 @@
             </div>
             {% endfor %}
           </div>
+          
+        <div class="sd_slider_dots_wrapper">
+            {% for image in product.images %}
+            <span class="sd_slider_dots {% if forloop.first%}sd_active{% endif %}" parent-slider="slider-{{section.id}}" sd-slide="{{forloop.index}}">{{forloop.index}}</span>
+            {% endfor %}
+        </div>
         </div>
       </div>
       {% endif %}
