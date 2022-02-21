@@ -25,11 +25,11 @@
         {% include 'deal-product-grid'%}
         <div class="yv-deal-product-slider main-slider-wrapper">
           <div id="slider-{{section.id}}" class="sd_main_Slider">
-          {% for image in product.images %}
-          <div class="yv-deal-product-slider-item">
-            <img src="{{product.featured_image | img_url:'500x'}}" alt="{{product.title | escape}}"/>
-          </div>
-          {% endfor %}
+            {% for image in product.images %}
+            <div class="yv-deal-product-slider-item sd_slide_wrapper {% if forloop.first%}sd_active_slider{% endif %}" parent-slider="slider-{{section.id}}" sd-slide-number="{{forloop.index}}">
+              <img src="{{image | img_url:'500x'}}" alt="{{product.title | escape}}"/>
+            </div>
+            {% endfor %}
           </div>
         </div>
       </div>
