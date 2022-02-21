@@ -923,7 +923,7 @@ var dealSection = function(selector){
   countdown = function(selector){
     var parent = document.querySelector(selector);
     if(parent){
-      var eventdate = parent.querySelector(".dealDate");
+      var eventdate = parent.querySelector(".dealDate").value;
       console.log('selector',parent,'eventdate',eventdate)
       return false;
       if(eventdate) {
