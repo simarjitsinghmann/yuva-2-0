@@ -912,6 +912,12 @@ function faqInit(){
 }
 }
 
+
+var dealSection = function(selector){
+   	
+}
+
+
 function clearActive(currentHead,currentContent){
   var tabs = document.getElementsByClassName('faqSection-header');
   var tabsContent =  document.getElementsByClassName('faqSection-content');
