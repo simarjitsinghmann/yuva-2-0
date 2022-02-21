@@ -1306,7 +1306,7 @@ $(document).ready(function()
     });
     
   var productGridSliderInterval;
-  $('.hover-slider').click(function(){ 
+  $('.hover-slider').hover(function(){ 
     var _this = $(this);
     productGridSliderInterval = setInterval(function(){
     	_this.find('.sd_slider_controls[attr-type="next"]').trigger('click');
@@ -1316,7 +1316,7 @@ $(document).ready(function()
     clearInterval(productGridSliderInterval)
   });
   
-  $('.about-left-img').hover(function(){ 
+  $('.about-left-img').click(function(){ 
     var _this = $(this);
     var _parent = _this.closest('.shopify-section');
     var _product = _this.data('product');
