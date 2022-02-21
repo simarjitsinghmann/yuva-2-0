@@ -74,6 +74,9 @@
     margin: 0 10px;
   	cursor:pointer;
 }
+.banner-section .yv-banner-thumbnail.slick-slide.slick-current.slick-active {
+	border-color: var(--theme-color)
+}
 /* ============== collection list section css start ============ */
 .collection-list-section {
 	padding:100px 0;

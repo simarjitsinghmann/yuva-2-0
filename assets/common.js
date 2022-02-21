@@ -1047,6 +1047,7 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     	faqInit();
     }
     if(jQuery(event.target).find('.dealDate').length > 0 ){
+      console.log("jQuery(event.target).attr('id')",jQuery(event.target).attr('id'))
       dealSection(jQuery(event.target).attr('id'))
     }
     if(jQuery(event.target).find('#instafeed').length > 0 ){
