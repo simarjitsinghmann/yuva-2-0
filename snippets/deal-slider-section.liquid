@@ -26,7 +26,7 @@
             {% include 'deal-product-grid'%}
             <div class="yv-deal-product-slider">
               <div class="yv-deal-product-slider-item">
-                <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/shirt.png?v=1645189571" alt="" />
+                <img src="{{product.featured_image | img_url:'500x'}}" alt="{{product.title | escape}}"/>
               </div>
             </div>
           </div>
