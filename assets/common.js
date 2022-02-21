@@ -1046,8 +1046,8 @@ jQuery(document).on('shopify:section:load shopify:section:unload shopify:block:s
     if(jQuery(event.target).find('.faqSection-header').length > 0 ){
     	faqInit();
     }
-    if(jQuery(event.target).find('.faqSection-header').length > 0 ){
-      dealSection(deal.getAttribute('id'))
+    if(jQuery(event.target).find('.dealDate').length > 0 ){
+      dealSection(jQuery(event.target).attr('id'))
     }
     if(jQuery(event.target).find('#instafeed').length > 0 ){
     	instagramFeed();
