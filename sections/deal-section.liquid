@@ -57,6 +57,9 @@
   window.onload = (event) => { 
     dealSection{{section.id| remove:'-'|remove:'_'}}();
   }
+  jQuery(document).on('shopify:section:load shopify:section:unload', function(event){
+    console.log('event',event)
+  });
 </script>
 {% endif %}
 {% schema %}
