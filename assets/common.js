@@ -941,8 +941,8 @@ var dealSection = function(selector){
       }
 		var daySelector = parent.querySelector("#dDays");
 		var hourSelector = parent.querySelector("#ddHours");
-		var minSelector = parent.querySelector("#dDays");
-		var secSelector = parent.querySelector("#dDays");
+		var minSelector = parent.querySelector("#dMinutes");
+		var secSelector = parent.querySelector("#dSeconds");
         if(daySelector && hourSelector && minSelector && minSelector){
           clearCountDown = setInterval(function() {    
 
