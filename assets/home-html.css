@@ -60,8 +60,13 @@
     padding-right: 5%;
 }
 .banner-small-slides-container {
-	position:absolute;
-  
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 /* ============== collection list section css start ============ */
 .collection-list-section {
