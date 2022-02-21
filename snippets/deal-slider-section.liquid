@@ -21,23 +21,12 @@
       {% for block in section.blocks%}
       {% if block.settings.product != blank %}
       {% assign product = block.settings.product %}
-      <div class="yv-deal-right-detail  ">
+      <div class="yv-deal-right-detail">
         {% include 'deal-product-grid'%}
-        <div class="yv-deal-product-slider main-slider-wrapper">
-          <div id="slider-{{section.id}}" class="sd_main_Slider">
-            {% for image in product.images %}
-            <div class="yv-deal-product-slider-item sd_slide_wrapper {% if forloop.first%}sd_active_slider{% endif %}" parent-slider="slider-{{section.id}}" sd-slide-number="{{forloop.index}}">
-              <img src="{{image | img_url:'500x'}}" alt="{{product.title | escape}}"/>
-            </div>
-            {% endfor %}
+        <div class="yv-deal-product-slider">
+          <div class="yv-deal-product-slider-item">
+            <img src="{{product.featured_image | img_url:'500x'}}" alt="{{product.title | escape}}"/>
           </div>
-          {% if product.images.size > 1 %}
-        <div class="sd_slider_dots_wrapper">
-            {% for image in product.images %}
-            <span class="sd_slider_dots {% if forloop.first%}sd_active{% endif %}" parent-slider="slider-{{section.id}}" sd-slide="{{forloop.index}}">{{forloop.index}}</span>
-            {% endfor %}
-        </div>
-          {% endif %}
         </div>
       </div>
       {% endif %}
