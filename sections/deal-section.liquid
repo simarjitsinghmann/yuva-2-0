@@ -1,12 +1,12 @@
-{% if section.settings.style == 'grid' %}
-<div class="center-side-deal"> 
+
+<div class="{% if section.settings.style == 'grid' %}center-side-deal{% else %}left-side-deal{% endif %}"> 
   <div class="container">
   {% include 'deal-grid-section' %}
-{% else %}
-<div class="left-side-deal">
+
+<div class="">
    <div class="container">
   {% include 'deal-slider-section' %}
-{% endif %}
+
 </div>
 </div>
 
