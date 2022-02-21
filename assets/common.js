@@ -923,6 +923,7 @@ var dealSection = function(selector){
   countdown = function(selector){
     var parent = document.querySelector(selector);
     if(parent){
+      clearInterval(clearCountDown);
       var dateSelector = parent.querySelector(".dealDate");
       if(dateSelector) {
        
