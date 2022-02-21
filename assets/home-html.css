@@ -48,6 +48,14 @@
     height: 100%;
     object-fit: cover;
 }
+.banner-section .slick-dots {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5%;
+}
 /* ============== collection list section css start ============ */
 .collection-list-section {
 	padding:100px 0;

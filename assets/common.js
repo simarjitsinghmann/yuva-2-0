@@ -966,7 +966,7 @@ var deals = document.getElementsByClassName('deal-banner-section');
 if(deals){
 	
   Array.from(deals).forEach(function(deal) {
-    dealSection(deal)
+    dealSection(deal.getAttribute('id'))
   });
 }
 
