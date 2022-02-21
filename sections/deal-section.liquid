@@ -19,6 +19,8 @@
           day = hour * 24;
 
     var eventdate = document.getElementById("dealDate-{{section.id}}");
+     
+	var countDownParent = document.getElementById("shopify-section-{{section.id}}");
 
     if(eventdate) {
       const myArr = eventdate.value.split("/");
