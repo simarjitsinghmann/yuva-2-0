@@ -49,6 +49,8 @@
     <button type="button" class="button small-btn" disabled>SOLD OUT</button>
     {% endif %}
     {% endform %}
+    {% else %}
+    <a href="{{product.url}}" class="button small-btn">VIEW</a>
     {% endif %}
   </div>
 </div>
