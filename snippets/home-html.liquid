@@ -1,23 +1,24 @@
 <!-- banner section start -->
 <section class="shopify-section banner-section">
-  <div class="yv-banner-container" data-slider>
-    <div class="yv-banner-item">
-      <div class="row no-gutters">
-        <div class="col-12 col-sm-12 col-md-6 col-lg-7">
-          <div class="yv-banner-image">
-            <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/banner-img.png?v=1645439518" alt="banner image"/>
+  <div class="yv-banner-container">
+    <div class="banner-big-slides">
+      <div class="yv-banner-item">
+        <div class="row no-gutters">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-7">
+            <div class="yv-banner-image">
+              <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/banner-img.png?v=1645439518" alt="banner image"/>
+            </div>
           </div>
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 col-lg-5">
-          <div class="yv-banner-content">
-            <span class="yv-banner-subtitle">Special offer Discount 50% OFF</span>
-            <h1 class="yv-banner-title">Girl from around the world</h1>
-            <a href="" class="button">Shop Now</a>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-5">
+            <div class="yv-banner-content">
+              <span class="yv-banner-subtitle">Special offer Discount 50% OFF</span>
+              <h1 class="yv-banner-title">Girl from around the world</h1>
+              <a href="" class="button">Shop Now</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="yv-banner-item">
+      <div class="yv-banner-item">
       <div class="row no-gutters">
         <div class="col-12 col-sm-12 col-md-6 col-lg-7">
           <div class="yv-banner-image">
@@ -33,24 +34,27 @@
         </div>
       </div>
     </div>
+    </div>
+    <div class="banner-small-slides">
+      
+    </div>
   </div>
   <script type="application/json" name="slider-json">
-         {
-          "slidesToShow":1,
-          "slidesToScroll":1,
-            "speed": 1000,
-            "dots":true,
-            "arrows":false,
-            "fade": true,
-          "responsive":[
-          	{
-            "breakpoint": 768,
-                "settings": {
-                    "draggable":true
-                  }
-            }
-          ]
-        }
+          $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+          });
+          $('.slider-nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: true,
+            centerMode: true,
+            focusOnSelect: true
+          });
   </script>
 </section>
 <!-- banner css end -->
