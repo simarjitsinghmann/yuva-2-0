@@ -923,11 +923,12 @@ var dealSection = function(selector){
   countdown = function(selector){
     var parent = document.querySelector(selector);
     if(parent){
-      var eventdate = parent.querySelector(".dealDate").value;
-      console.log('selector',parent,'eventdate',eventdate)
+      var dateSelector = parent.querySelector(".dealDate");
+      if(dateSelector) {
+        var date = dateSelector.value();
+      console.log('selector',parent,'eventdate',date)
       return false;
-      if(eventdate) {
-      const myArr = eventdate.value.split("/");
+      const myArr = date.value.split("/");
       let _day = myArr[0];
       let _month = myArr[1];
       let _year = myArr[2];
