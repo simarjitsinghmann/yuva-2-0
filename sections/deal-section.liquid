@@ -49,13 +49,13 @@
           //           else{
           //             document.getElementById("dayHours").textContent = '{{'general.hours' | t}}';
           //           }
-          document.getElementById("dealDays").innerText = pad2(leftDays),
-            document.getElementById("dealHours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
-            document.getElementById("dealMinutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
-            document.getElementById("dealSeconds").innerText = pad2(Math.floor((distance % (minute)) / second));
+          countDownParent.getElementById("dealDays").innerText = pad2(leftDays),
+            countDownParent.getElementById("dealHours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
+            countDownParent.getElementById("dealMinutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
+            countDownParent.getElementById("dealSeconds").innerText = pad2(Math.floor((distance % (minute)) / second));
         }
         else{
-          document.getElementById("dealCountdown").style.display = "none";
+          countDownParent.getElementById("dealCountdown").style.display = "none";
           clearInterval(x);
         }
       }, 0)
