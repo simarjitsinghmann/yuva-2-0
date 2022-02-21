@@ -963,6 +963,9 @@ var dealSection = function(selector){
 var deals = document.getElementsByClassName('deal-banner-section');
 if(deals){
 	
+  Array.from(deals).forEach(function(deal) {
+    dealSection(deal)
+  }
 }
 
 function clearActive(currentHead,currentContent){
