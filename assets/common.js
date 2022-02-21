@@ -914,16 +914,16 @@ function faqInit(){
 
 
 var dealSection = function(selector){
-  console.log('selector',selector)
-  return false;
-   	  const second = 1000,
-          minute = second * 60,
-          hour = minute * 60,
-          day = hour * 24;
-	var clearCountDown;
-  	countdown(selector);
-  
-  	countdown = function(selector){
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+  var clearCountDown;
+  countdown(selector);
+
+  countdown = function(selector){
+    console.log('selector',selector)
+    return false;
     var eventdate = selector.querySelector("#dealDate");
     if(eventdate) {
       const myArr = eventdate.value.split("/");
