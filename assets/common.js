@@ -333,6 +333,10 @@ function hideallMenus(menus,current){
   });
 }
 
+function pad2(number) {
+  return (number < 10 ? '0' : '') + number
+}
+
 function screenVisibility(elem) {
 
   if( elem.length == 0 ) {
