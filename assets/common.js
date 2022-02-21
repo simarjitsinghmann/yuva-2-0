@@ -957,7 +957,7 @@ var dealSection = function(selector){
     }
   }  
   
-  countdown(selector);
+  countdown(document.querySelector("#"+selector));
   
 }
 
