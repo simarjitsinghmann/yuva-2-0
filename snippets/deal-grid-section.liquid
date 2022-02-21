@@ -1,32 +1,38 @@
 <div class="yv-deal-content">
-      <h2 class="yv-deal-banner-title text-center">{{section.settings.subheading}}</h2>
-      <div id="dealCountdown" class="deal-countdown ">
-        <ul class="deal-counter-box center-countdown">
-          <li class="deal-counter"><span id="dDays"></span></li>
-          <li class="deal-counter"><span id="dHours"></span></li>
-          <li class="deal-counter"><span id="dMinutes"></span></li>
-          <li class="deal-counter"><span id="dSeconds"></span></li>
-        </ul>
-      </div>
+  <h2 class="yv-deal-banner-title text-center">{{section.settings.subheading}}</h2>
+  <div id="dealCountdown" class="deal-countdown ">
+    <ul class="deal-counter-box center-countdown">
+      <li class="deal-counter"><span id="dDays"></span></li>
+      <li class="deal-counter"><span id="dHours"></span></li>
+      <li class="deal-counter"><span id="dMinutes"></span></li>
+      <li class="deal-counter"><span id="dSeconds"></span></li>
+    </ul>
+  </div>
   {% if section.blocks.size > 0 %}
   <div class="row">
     <div class="col-12 col-sm-6">
       {% for block in section.blocks limit:1%}
+      {% if block.settings.product != blank %}
+      {% assign product = block.settings.product %}
       {% include 'deal-product-grid' dealClass:'big-deal-product' %}
+      {% endif %}
       {% endfor %}
     </div>
     {% if section.blocks.size > 1 %}
     <div class="col-12 col-sm-6">
       {% for block in section.blocks offset:1%}
+      {% if block.settings.product != blank %}
+      {% assign product = block.settings.product %}
       {% include 'deal-product-grid' dealClass:'small-deal-product' %}
+      {% endif %}
       {% endfor %}
     </div>
     {% endif %}
   </div>
   {% endif %}
   {% if section.settings.link != blank and section.settings.button != blank %}
-      <div class="yv-deal-view-button">
-        <a href="{{section.settings.link}}" class="button med-btn">{{section.settings.button}}</a>
-      </div>
+  <div class="yv-deal-view-button">
+    <a href="{{section.settings.link}}" class="button med-btn">{{section.settings.button}}</a>
+  </div>
   {% endif %}
 </div>
