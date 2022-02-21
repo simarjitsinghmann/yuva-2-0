@@ -940,7 +940,7 @@ var dealSection = function(selector){
         return false;
       }
 		var daySelector = parent.querySelector("#dDays");
-		var hourSelector = parent.querySelector("#dDays");
+		var hourSelector = parent.querySelector("#ddHours");
 		var minSelector = parent.querySelector("#dDays");
 		var secSelector = parent.querySelector("#dDays");
         if(daySelector && hourSelector && minSelector && minSelector){
