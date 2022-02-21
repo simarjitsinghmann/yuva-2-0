@@ -39,14 +39,14 @@
         let now = new Date().getTime(),
             distance = countDown - now;
         if(distance > 0){
-          document.getElementById("announcementTimer").classList.remove('hidden');
-          var leftDays = Math.floor(distance / (day));
-          if(leftDays > 0){
-            document.getElementById("dayHours").textContent= '{{'general.days' | t}}';
-          }
-          else{
-            document.getElementById("dayHours").textContent = '{{'general.hours' | t}}';
-          }
+//           document.getElementById("announcementTimer").classList.remove('hidden');
+//           var leftDays = Math.floor(distance / (day));
+//           if(leftDays > 0){
+//             document.getElementById("dayHours").textContent= '{{'general.days' | t}}';
+//           }
+//           else{
+//             document.getElementById("dayHours").textContent = '{{'general.hours' | t}}';
+//           }
           document.getElementById("days").innerText = pad2(leftDays),
             document.getElementById("hours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
             document.getElementById("minutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
