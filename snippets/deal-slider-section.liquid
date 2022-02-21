@@ -1,38 +1,37 @@
-
-    <div class="row align-items-center">
-      <div class="col-12 col-sm-12 col-md-5 col-lg-5">
-        <div class="yv-deal-detail">
-          <h2 class="yv-deal-banner-title">{{section.settings.subheading}}</h2>
-          <div id="leftdealCountdown" class="deal-countdown">
-            <ul class="deal-counter-box">
-              <li class="deal-counter"><span id="leftdealDays"></span></li>
-              <li class="deal-counter"><span id="leftdealHours"></span></li>
-              <li class="deal-counter"><span id="leftdealMinutes"></span></li>
-              <li class="deal-counter"><span id="leftdealSeconds"></span></li>
-            </ul>
-          </div>
-          <p class="yv-deal-offer">50<span>%</span></p>
-          <p class="yv-deal-offer-text">Save Up To 50% Off On First Order</p>
-          <a href="" class="button">Shop Now</a>
-        </div>
+<div class="row align-items-center">
+  <div class="col-12 col-sm-12 col-md-5 col-lg-5">
+    <div class="yv-deal-detail">
+      <h2 class="yv-deal-banner-title">{{section.settings.subheading}}</h2>
+      <div id="leftdealCountdown" class="deal-countdown">
+        <ul class="deal-counter-box">
+          <li class="deal-counter"><span id="leftdealDays"></span></li>
+          <li class="deal-counter"><span id="leftdealHours"></span></li>
+          <li class="deal-counter"><span id="leftdealMinutes"></span></li>
+          <li class="deal-counter"><span id="leftdealSeconds"></span></li>
+        </ul>
       </div>
-  {% if section.blocks.size > 0 %}
-      <div class="col-12 col-sm-12 col-md-7 col-lg-6">
-        <div class="yv-deal-outer-slider" data-slider>
-          {% for block in section.blocks%}
-          {% if block.settings.product != blank %}
-          {% assign product = block.settings.product %}
-          <div class="yv-deal-right-detail">
-            {% include 'deal-product-grid'%}
-            <div class="yv-deal-product-slider">
-              <div class="yv-deal-product-slider-item">
-                <img src="{{product.featured_image | img_url:'500x'}}" alt="{{product.title | escape}}"/>
-              </div>
-            </div>
-          </div>
-          {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-  {% endif %}
+      <p class="yv-deal-offer">50<span>%</span></p>
+      <p class="yv-deal-offer-text">Save Up To 50% Off On First Order</p>
+      <a href="" class="button">Shop Now</a>
     </div>
+  </div>
+  {% if section.blocks.size > 0 %}
+  <div class="col-12 col-sm-12 col-md-7 col-lg-6">
+    <div class="yv-deal-outer-slider" data-slider>
+      {% for block in section.blocks%}
+      {% if block.settings.product != blank %}
+      {% assign product = block.settings.product %}
+      <div class="yv-deal-right-detail">
+        {% include 'deal-product-grid'%}
+        <div class="yv-deal-product-slider">
+          <div class="yv-deal-product-slider-item">
+            <img src="{{product.featured_image | img_url:'500x'}}" alt="{{product.title | escape}}"/>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div>
