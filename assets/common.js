@@ -945,13 +945,13 @@ var dealSection = function(selector){
             distance = countDown - now;
         var leftDays = Math.floor(distance / (day));
         if(distance > 0){
-          countDownParent.querySelector("#dDays").innerText = pad2(leftDays),
-            countDownParent.querySelector("#dHours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
-            countDownParent.querySelector("#dMinutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
-            countDownParent.querySelector("#dSeconds").innerText = pad2(Math.floor((distance % (minute)) / second));
+          parent.querySelector("#dDays").innerText = pad2(leftDays),
+            parent.querySelector("#dHours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
+            parent.querySelector("#dMinutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
+            parent.querySelector("#dSeconds").innerText = pad2(Math.floor((distance % (minute)) / second));
         }
         else{
-          countDownParent.querySelector("#dealCountdown").style.display = "none";
+          parent.querySelector("#dealCountdown").style.display = "none";
           clearInterval(clearCountDown);
         }
       }, 0)
