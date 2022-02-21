@@ -12,7 +12,7 @@
 
 <input type="hidden" id="dealDate-{{section.id}}" value="{{section.settings.date}}">
 <script>
-window.onload = (event) => { 
+  window.onload = (event) => { 
     const second = 1000,
           minute = second * 60,
           hour = minute * 60,
@@ -39,29 +39,25 @@ window.onload = (event) => {
         let now = new Date().getTime(),
             distance = countDown - now;
         if(distance > 0){
-//           document.getElementById("announcementTimer").classList.remove('hidden');
-//           var leftDays = Math.floor(distance / (day));
-//           if(leftDays > 0){
-//             document.getElementById("dayHours").textContent= '{{'general.days' | t}}';
-//           }
-//           else{
-//             document.getElementById("dayHours").textContent = '{{'general.hours' | t}}';
-//           }
+          //           document.getElementById("announcementTimer").classList.remove('hidden');
+          //           var leftDays = Math.floor(distance / (day));
+          //           if(leftDays > 0){
+          //             document.getElementById("dayHours").textContent= '{{'general.days' | t}}';
+          //           }
+          //           else{
+          //             document.getElementById("dayHours").textContent = '{{'general.hours' | t}}';
+          //           }
           document.getElementById("dealDays").innerText = pad2(leftDays),
             document.getElementById("dealHours").innerText = pad2(Math.floor((distance % (day)) / (hour))),
             document.getElementById("dealMinutes").innerText = pad2(Math.floor((distance % (hour)) / (minute))),
             document.getElementById("dealSeconds").innerText = pad2(Math.floor((distance % (minute)) / second));
         }
         else{
-              document.getElementById("dealCountdown").style.display = "none";
+          document.getElementById("dealCountdown").style.display = "none";
           clearInterval(x);
         }
       }, 0)
     }
-  }
-  
-    announcementTimer();
-    initAnnouncement();
   }
 </script>
 {% endif %}
