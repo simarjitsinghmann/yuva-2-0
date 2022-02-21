@@ -914,6 +914,8 @@ function faqInit(){
 
 
 var dealSection = function(selector){
+  console.log('selector',selector)
+  return false;
    	  const second = 1000,
           minute = second * 60,
           hour = minute * 60,
@@ -957,6 +959,11 @@ var dealSection = function(selector){
   }
 }
 
+
+var deals = document.getElementsByClassName('deal-banner-section');
+if(deals){
+	
+}
 
 function clearActive(currentHead,currentContent){
   var tabs = document.getElementsByClassName('faqSection-header');
