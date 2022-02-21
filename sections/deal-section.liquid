@@ -1,8 +1,10 @@
 {% if section.settings.style == 'grid' %}
-<div class="center-side-deal">
+<div class="center-side-deal"> 
+  <div class="container">
   {% include 'deal-grid-section' %}
 {% else %}
 <div class="left-side-deal">
+   <div class="container">
   {% include 'deal-slider-section' %}
 {% endif %}
 </div>
