@@ -9,6 +9,8 @@
 {% endif %}
 
 {% if section.settings.date != blank %}
+
+<input type="hidden" id="dealDate-{{section.id}}" value="{{section.settings.date}}">
 <script>
   function announcementTimer(){
     const second = 1000,
@@ -16,7 +18,7 @@
           hour = minute * 60,
           day = hour * 24;
 
-    var eventdate = document.getElementById("eventDate");
+    var eventdate = document.getElementById("dealDate-{{section.id}}");
 
     if(eventdate) {
       const myArr = eventdate.value.split("/");
