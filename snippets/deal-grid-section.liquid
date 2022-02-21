@@ -8,6 +8,7 @@
           <li class="deal-counter"><span id="dSeconds"></span></li>
         </ul>
       </div>
+  
       <div class="row">
         <div class="col-12 col-sm-6">
           <div class="yv-deal-product big-deal-product">
@@ -135,7 +136,9 @@
           </div>
         </div>
       </div>
+  {% if section.settings.link != blank and section.settings.button != blank %}
       <div class="yv-deal-view-button">
-        <a href="" class="button med-btn">View Detail</a>
+        <a href="{{section.settings.link}}" class="button med-btn">{{section.settings.button}}</a>
       </div>
+  {% endif %}
 </div>
