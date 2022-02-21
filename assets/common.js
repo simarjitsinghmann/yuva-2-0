@@ -921,9 +921,9 @@ var dealSection = function(selector){
   var clearCountDown;
 
   countdown = function(selector){
-    var eventdate = selector.querySelector("#dealDate");
-    console.log('selector',selector,'eventdate',eventdate)
+    console.log('selector',selector,'eventdate')
     return false;
+    var eventdate = selector.querySelector("#dealDate");
     if(eventdate) {
       const myArr = eventdate.value.split("/");
       let _day = myArr[0];
