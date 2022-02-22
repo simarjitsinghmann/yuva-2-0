@@ -812,7 +812,6 @@ slickSlider = function(selector,slideIndex){
    if(selector.attr('data-slider-filter') != undefined){
         var filterButtons = selector.closest('.shopify-section').find('.filter-products');
         var selectedCollection = selector.closest('.shopify-section').find('.filter-products.active').data('products');
-        //       console.log('selectedCollection',selectedCollection)        
         selector.slick('slickUnfilter');
         selector.slick('slickFilter','.'+selectedCollection)
               filterButtons.on('click',function(){                
@@ -943,10 +942,8 @@ var dealSection = function(selector){
 		var hourSelector = parent.querySelector("#dHours");
 		var minSelector = parent.querySelector("#dMinutes");
 		var secSelector = parent.querySelector("#dSeconds");
-        console.log(parent,selector,daySelector, hourSelector, minSelector, secSelector)
         if(daySelector && hourSelector && minSelector && secSelector){
-          clearCountDown = setInterval(function() {    
-
+          clearCountDown = setInterval(function() {
             let now = new Date().getTime(),
                 distance = countDown - now;
             var leftDays = Math.floor(distance / (day));
