@@ -23,8 +23,7 @@
     <div class="banner-small-slides">
       {% for block in section.blocks %}
       <div class="yv-banner-thumbnail">
-
-        <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/banner-small-img2.png?v=1645442762" alt="thymbnail image" />
+        <img src="{{block.settings.image_desktop | img_url:'master'}}" alt="thymbnail image" />
       </div>
       {% endfor %}
     </div>
