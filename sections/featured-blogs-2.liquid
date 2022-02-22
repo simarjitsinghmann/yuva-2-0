@@ -43,7 +43,7 @@
                 <span class="yv-blog-date">{{article.published_at | date: "%B %d, %Y" }}</span>
               </a>
               <div class="yv-blog-card-text">
-                <p class="yv-blog-desc">{{article.excerpt_or_content | truncatewords:30}}</p>
+                <p class="yv-blog-desc">{{article.excerpt_or_content | truncatewords:30 | strip_html}}</p>
                 <a href="{{-article.url-}}" class="yv-blog-link">Read More</a>
               </div>
             </div>
