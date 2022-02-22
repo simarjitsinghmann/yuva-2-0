@@ -23,7 +23,7 @@
     </a>
     
       {%- if settings.show_second_image == false or second_image == blank -%}  
-      <div class="card-wrapper-slider" product-grid-slides>   
+      <div class="main-slider-wrapper" product-grid-slides>   
         <div  id= "sd_slider_{{product.id}}-{{section.id}}" class="sd_main_Slider">        
         {%- for media in product.media -%}
         <div parent-slider="sd_slider_{{product.id}}-{{section.id}}" sd-slide-number='{{forloop.index}}' class="sd_slide_wrapper {% if forloop.first %}sd_active_slider{% endif %}" >  
