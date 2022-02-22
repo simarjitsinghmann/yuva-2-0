@@ -5,12 +5,12 @@
       <div class="row no-gutters align-items-center">
         <div class="col-12 col-sm-12 col-md-6 col-lg-7">
           <div class="yv-banner-image">
-            <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/banner-img.png?v=1645439518" alt="banner image"/>
+            <img src="{{block.settings.image_desktop | img_url:'master'}}" alt="banner image"/>
           </div>
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-5">
           <div class="yv-banner-content">
-            <span class="yv-banner-subtitle">Special offer Discount 50% OFF</span>
+            <span class="yv-banner-subtitle">{{ block.settings.image_desktop }}</span>
             <h1 class="yv-banner-title">Girl from around the world</h1>
             <a href="" class="button">Shop Now</a>
           </div>
