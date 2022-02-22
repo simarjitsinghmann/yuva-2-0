@@ -1254,4 +1254,16 @@
 .yv-recent-product-grid .slick-slide {
     margin: 0 7px;
 }
+.yv-recent-product-grid .slick-arrow {
+    position: absolute;
+    top: calc(50% - 50px);
+    z-index: 2;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    color: #a3a3a1;
+    font-size: 14px;
+    min-width: 70px;
+    justify-content: flex-end;
+}
 /*============ recent product section css end ===========*/
