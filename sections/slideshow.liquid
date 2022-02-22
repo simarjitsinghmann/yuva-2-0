@@ -10,9 +10,11 @@
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-5">
           <div class="yv-banner-content">
-            <span class="yv-banner-subtitle">{{ block.settings.image_desktop }}</span>
-            <h1 class="yv-banner-title">{{ block.settings.image_desktop }}</h1>
-            <a href="" class="button">{{ block.settings.image_desktop }}</a>
+            <span class="yv-banner-subtitle">{{ block.settings.banner_subtitle }}</span>
+            <h1 class="yv-banner-title">{{ block.settings.banner_title }}</h1>
+            {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+            <a href="{{ block.settings.button_link }}" class="button">{{ block.settings.button_text }}</a>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -115,12 +117,6 @@
 			},
 			{
 			   "type":"text",
-			   "id":"banner_tag_line",
-			   "label":"t:sections.main-slider.blocks.split.settings.banner_tag_line.label",
-			   "default":"Tagline"
-			},
-			{
-			   "type":"text",
 			   "id":"banner_title",
 			   "label":"t:sections.main-slider.blocks.split.settings.banner_title.label",
 			   "default":"Talk about your brand here"
@@ -130,12 +126,6 @@
 			   "id":"banner_subtitle",
 			   "default":"Split Slide",
 			   "label":"t:sections.main-slider.blocks.split.settings.banner_subtitle.label"
-			},
-			{
-			   "type":"textarea",
-			   "id":"banner_desc",
-			   "label":"t:sections.main-slider.blocks.split.settings.banner_desc.label",
-			   "default":"Description"
 			},
 			{
 			   "type":"text",
@@ -155,18 +145,6 @@
 			},
 			{
 			   "type":"color",
-			   "id":"tag_line_color",
-			   "label":"t:sections.main-slider.blocks.split.settings.tag_line_color.label",
-			   "default":"#ffffff"
-			},
-			{
-			   "type":"color",
-			   "id":"tag_line_bk",
-			   "label":"t:sections.main-slider.blocks.split.settings.tag_line_bk.label",
-			   "default":"#746850"
-			},
-			{
-			   "type":"color",
 			   "id":"banner_title_color",
 			   "label":"t:sections.main-slider.blocks.split.settings.banner_title_color.label",
 			   "default":"#746850"
@@ -175,12 +153,6 @@
 			   "type":"color",
 			   "id":"banner_subtitle_color",
 			   "label":"t:sections.main-slider.blocks.split.settings.banner_subtitle_color.label",
-			   "default":"#746850"
-			},
-			{
-			   "type":"color",
-			   "id":"banner_desc_color",
-			   "label":"t:sections.main-slider.blocks.split.settings.banner_desc_color.label",
 			   "default":"#746850"
 			},
 			{
