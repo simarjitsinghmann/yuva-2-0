@@ -1337,7 +1337,7 @@ $(document).ready(function(){
     $('body').removeClass('quickview-open');
   });
 
-  $('.sd_main_Slider').each(function () {
+  $('.sd-main-Slider').each(function () {
     var _slider = $(this);
     sd_slider(_slider, 'next');
   })
