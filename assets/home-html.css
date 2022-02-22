@@ -1230,12 +1230,15 @@
     height: 620px;
     border-radius:10px;
     overflow:hidden;
+    margin-left: -120px;
 }
 .small-img-content {
     max-width: 340px;
     height: 390px;
     border: 2px solid #fff;
     width: 100%;
+  	margin-left: 0;
+  	position:relative;
 }
 .yv-img-content img{
     width: 100%;
