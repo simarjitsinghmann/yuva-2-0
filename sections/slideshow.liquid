@@ -1,12 +1,434 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "t:sections.main-slider.name",
+  "tag": "section",
+  "class":"shopify-section-slider",
+  "settings":[
+	  {
+		  "type":"checkbox",
+		  "id":"rotate",
+		  "label":"t:sections.main-slider.settings.rotate.label",
+		  "default":false
+	  },
+	  {
+		  "type":"checkbox",
+		  "id":"arrows",
+		  "label":"t:sections.main-slider.settings.arrows.label",
+		  "default":true
+	  },
+	  {
+		  "type":"checkbox",
+		  "id":"dots",
+		  "label":"t:sections.main-slider.settings.dots.label",
+		  "default":true
+	  },
+	  {
+		  "type": "range",
+		  "id": "rotate_speed",
+		  "min": 1,
+		  "max": 10,
+		  "step": 1,
+		  "unit":"s",
+		  "label": "t:sections.main-slider.settings.rotate_speed.label",
+		  "default": 1
+	  },
+      {
+          "type": "range",
+          "id": "heading_font_size",
+          "label": "t:sections.main-slider.settings.heading_font_size.label",
+          "default": 50,
+          "min":0,
+          "max":100,
+          "step":1,
+          "unit":"px"          
+      },
+      {
+          "type": "range",
+          "id": "subheading_font_size",
+          "label": "t:sections.main-slider.settings.subheading_font_size.label",
+          "default": 130,
+          "min":50,
+          "max":150,
+          "step":1,
+          "unit":"px"          
+      }
+  ],
+  "blocks": [
+	{
+		"type":"slide",
+		"name":"t:sections.main-slider.blocks.slide.name",
+		"settings": [
+			{
+				"type": "image_picker",
+				"id": "image",
+				"label": "t:sections.main-slider.blocks.slide.settings.image.label",
+				"info": "e.g. 1920 x 800"
+			},
+			{
+				"type": "image_picker",
+				"id": "image_mob",
+				"label": "t:sections.main-slider.blocks.slide.settings.image_mob.label",
+				"info": "e.g. 570 x 630"
+			},
+			{
+				"type": "text",
+				"id": "tag_line",
+				"default": "Add Tagline here",
+				"label": "t:sections.main-slider.blocks.slide.settings.tag_line.label"
+			},
+			{
+				"type": "text",
+				"id": "heading",
+				"default": "Talk about your brand here",
+				"label": "t:sections.main-slider.blocks.slide.settings.heading.label"
+			},
+			{
+				"type": "text",
+				"id": "subheading",
+				"default":"Image",
+				"label": "t:sections.main-slider.blocks.slide.settings.subheading.label"
+			},
+			{
+				"type": "textarea",
+				"id": "content",
+				"default": "Description here",
+				"label": "t:sections.main-slider.blocks.slide.settings.content.label"
+			},
+			{
+				"type": "text",
+				"id": "btn",
+				"default": "Explore",
+				"label": "t:sections.main-slider.blocks.slide.settings.btn.label"
+			},
+			{
+				"type": "url",
+				"id": "link",
+				"label": "t:sections.main-slider.blocks.slide.settings.link.label"
+			},
+			{
+				"type": "color",
+				"id": "sh_bg",
+				"default":"#746850",
+				"label": "t:sections.main-slider.blocks.slide.settings.sh_bg.label"
+			},
+			{
+				"type": "color",
+				"id": "sh_text",
+				"default":"#ffffff",
+				"label": "t:sections.main-slider.blocks.slide.settings.sh_text.label"
+			},
+			{
+				"type": "color",
+				"id": "h_text",
+				"default":"#746850",
+				"label": "t:sections.main-slider.blocks.slide.settings.h_text.label"
+			},
+			{
+				"type": "color",
+				"id": "subh_text",
+				"default":"#746850",
+				"label": "t:sections.main-slider.blocks.slide.settings.subh_text.label"
+			},
+			{
+				"type": "color",
+				"id": "c_text",
+				"default":"#746850",
+				"label": "t:sections.main-slider.blocks.slide.settings.c_text.label"
+			},
+			{
+				"type": "color",
+				"id": "btn_bg",
+				"default":"#746850",
+				"label": "t:sections.main-slider.blocks.slide.settings.btn_bg.label"
+			},
+			{
+				"type": "color",
+				"id": "btn_text",
+				"default":"#ffffff",
+				"label": "t:sections.main-slider.blocks.slide.settings.btn_text.label"
+			},
+			{
+				"type": "color",
+				"id": "btn_h_bg",
+				"default":"#645C4D",
+				"label": "t:sections.main-slider.blocks.slide.settings.btn_h_bg.label"
+			},
+			{
+				"type": "color",
+				"id": "btn_h_text",
+				"default":"#ffffff",
+				"label": "t:sections.main-slider.blocks.slide.settings.btn_h_text.label"
+			},
+			{
+			  "type": "select",
+			  "id": "info_position",
+			  "label": "t:sections.main-slider.blocks.slide.settings.info_position.label",
+			  "default": "center-left",
+			  "options": [
+				{
+				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.center-left.label",
+				  "value": "center-left"
+				},
+				{
+				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.center.label",
+				  "value": "center"
+				},
+				{
+				  "label": "t:sections.main-slider.blocks.slide.settings.info_position.center-right.label",
+				  "value": "center-right"
+				}
+			  ]
+			}
+		]
+	}, 
+	{
+		"type": "split",
+		"name": "t:sections.main-slider.blocks.split.name",
+		"settings":[
+			{
+			   "type":"image_picker",
+			   "id":"image_desktop",
+			   "label":"t:sections.main-slider.blocks.split.settings.image_desktop.label",
+			   "info":"t:sections.main-slider.blocks.split.settings.image_desktop.info",
+			   "info":"e.g. 957 x 800"
+			},
+			{
+			   "type":"text",
+			   "id":"banner_tag_line",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_tag_line.label",
+			   "default":"Tagline"
+			},
+			{
+			   "type":"text",
+			   "id":"banner_title",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_title.label",
+			   "default":"Talk about your brand here"
+			},
+			{
+			   "type":"text",
+			   "id":"banner_subtitle",
+			   "default":"Split Slide",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_subtitle.label"
+			},
+			{
+			   "type":"textarea",
+			   "id":"banner_desc",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_desc.label",
+			   "default":"Description"
+			},
+			{
+			   "type":"text",
+			   "id":"button_text",
+			   "label":"t:sections.main-slider.blocks.split.settings.button_text.label",
+			   "default":"Explore"
+			},
+			{
+			   "type":"url",
+			   "id":"button_link",
+			   "label":"t:sections.main-slider.blocks.split.settings.button_link.label"
+			},
+			{
+			   "type":"color",
+			   "id":"banner_left_bk",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_left_bk.label"
+			},
+			{
+			   "type":"color",
+			   "id":"tag_line_color",
+			   "label":"t:sections.main-slider.blocks.split.settings.tag_line_color.label",
+			   "default":"#ffffff"
+			},
+			{
+			   "type":"color",
+			   "id":"tag_line_bk",
+			   "label":"t:sections.main-slider.blocks.split.settings.tag_line_bk.label",
+			   "default":"#746850"
+			},
+			{
+			   "type":"color",
+			   "id":"banner_title_color",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_title_color.label",
+			   "default":"#746850"
+			},
+			{
+			   "type":"color",
+			   "id":"banner_subtitle_color",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_subtitle_color.label",
+			   "default":"#746850"
+			},
+			{
+			   "type":"color",
+			   "id":"banner_desc_color",
+			   "label":"t:sections.main-slider.blocks.split.settings.banner_desc_color.label",
+			   "default":"#746850"
+			},
+			{
+			   "type":"color",
+			   "id":"button_text_color",
+			   "label":"t:sections.main-slider.blocks.split.settings.button_text_color.label",
+			   "default":"#ffffff"
+			},
+			{
+			   "type":"color",
+			   "id":"button_text_bk",
+			   "label":"t:sections.main-slider.blocks.split.settings.button_text_bk.label",
+			   "default":"#746850"
+			},
+			{
+			   "type":"color",
+			   "id":"hvr_button_text_color",
+			   "label":"t:sections.main-slider.blocks.split.settings.hvr_button_text_color.label",
+			   "default":"#ffffff"
+			},
+			{
+			   "type":"color",
+			   "id":"hvr_button_text_bk",
+			   "label":"t:sections.main-slider.blocks.split.settings.hvr_button_text_bk.label",
+			   "default":"#615A4C"
+			}
+		]
+	},
+  	{
+    	"type": "video",
+          "name": "t:sections.main-slider.blocks.video-slide.name",
+          "settings": [
+            {
+              "type": "text",
+              "id": "videofile",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.videofile.label",
+              "default": "https://cdn.shopify.com/s/files/1/0597/9668/5009/files/placeholder-video.mp4?v=1640600092"
+            },
+            {
+              "type": "image_picker",
+              "id": "poster",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.poster.label",
+			  "info": "e.g. 1920 x 800"	
+            },
+            {
+              "type": "text",
+              "id": "title",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.title.label",
+              "default": "Talk about your brand here"
+            },
+            {
+              "type": "text",
+              "id": "subtitle",
+			  "default":"Video",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.subtitle.label"
+            },
+            {
+              "type": "textarea",
+              "id": "description",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.description.label",
+              "default": "Description"
+            },
+            {
+              "type": "text",
+              "id": "link_text",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.link_text.label",
+              "default": "Explore"
+            },
+            {
+              "type": "url",
+              "id": "link",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.link.label"
+            },
+            {
+              "type": "checkbox",
+              "id": "overlay",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.overlay.label",
+              "default": true   
+            },
+            {
+              "type": "range",
+              "id": "opacity",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.opacity.label",
+              "default": 40,
+              "min":0,
+              "max":100,
+              "step":1,
+              "unit":"%"          
+            },
+            {
+              "type": "select",
+              "id": "text_position",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.text_position.label",
+              "default": "center",
+              "options": [
+                {
+                  "label": "t:sections.main-slider.blocks.video-slide.settings.text_position.center-left.label",
+                  "value": "center-left"
+                },
+                {
+                  "label": "t:sections.main-slider.blocks.video-slide.settings.text_position.center.label",
+                  "value": "center"
+                },
+                {
+                  "label": "t:sections.main-slider.blocks.video-slide.settings.text_position.center-right.label",
+                  "value": "center-right"
+                }
+              ]
+            },
+            {
+              "type": "color",
+              "id": "title_color",
+              "default":"#746850",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.title_color.label"
+            },
+            {
+              "type": "color",
+              "id": "subtitle_color",
+              "default":"#746850",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.subtitle_color.label"
+            },
+            {
+              "type": "color",
+              "id": "desc_color",
+              "default":"#746850",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.desc_color.label"
+            },
+            {
+              "type": "color",
+              "id": "bgcolor",
+              "label": "t:sections.main-slider.blocks.video-slide.settings.bgcolor.label",
+              "default": "#EADEC4" 
+            },
+			{
+			   "type":"color",
+			   "id":"button_text_color",
+			   "label":"t:sections.main-slider.blocks.video-slide.settings.button_text_color.label",
+			   "default":"#ffffff"
+			},
+			{
+			   "type":"color",
+			   "id":"button_text_bk",
+			   "label":"t:sections.main-slider.blocks.video-slide.settings.button_text_bk.label",
+			   "default":"#746850"
+			},
+			{
+			   "type":"color",
+			   "id":"hvr_button_text_color",
+			   "label":"t:sections.main-slider.blocks.video-slide.settings.hvr_button_text_color.label",
+			   "default":"#ffffff"
+			},
+			{
+			   "type":"color",
+			   "id":"hvr_button_text_bk",
+			   "label":"t:sections.main-slider.blocks.video-slide.settings.hvr_button_text_bk.label",
+			   "default":"#5E594F"
+			}
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slidshow",
+      "blocks": [
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
