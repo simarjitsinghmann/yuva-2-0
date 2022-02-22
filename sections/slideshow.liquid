@@ -1,6 +1,6 @@
 <div class="yv-banner-container">
   <div class="banner-big-slides">
-      {% for block in section.blocks %}
+    {% for block in section.blocks %}
     <div class="yv-banner-item">
       <div class="row no-gutters align-items-center">
         <div class="col-12 col-sm-12 col-md-6 col-lg-7">
@@ -17,35 +17,36 @@
         </div>
       </div>
     </div>
-      {% endfor %}
+    {% endfor %}
   </div>
   <div class="banner-small-slides-container">
     <div class="banner-small-slides">
       {% for block in section.blocks %}
       <div class="yv-banner-thumbnail">
+
         <img src="https://cdn.shopify.com/s/files/1/0597/9668/5009/files/banner-small-img2.png?v=1645442762" alt="thymbnail image" />
       </div>
       {% endfor %}
     </div>
   </div>
 </div>
-  <script>
+<script>
 
-    $('.banner-big-slides').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: true,
-      asNavFor: '.banner-small-slides'
-    });
-    $('.banner-small-slides').slick({
-      slidesToShow: 4,
-      slideToScroll: 1,
-      asNavFor: '.banner-big-slides',
-      dots: true,
-      focusOnSelect: true
-    });
-  </script>
+  $('.banner-big-slides').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.banner-small-slides'
+  });
+  $('.banner-small-slides').slick({
+    slidesToShow: 4,
+    slideToScroll: 1,
+    asNavFor: '.banner-big-slides',
+    dots: true,
+    focusOnSelect: true
+  });
+</script>
 {% schema %}
 {
   "name": "t:sections.main-slider.name",
