@@ -24,7 +24,7 @@
     
       {%- if settings.show_second_image == false or second_image == blank -%}  
       <div class="main-slider-wrapper" product-grid-slides>   
-        <div  id= "sd_slider_{{product.id}}-{{section.id}}" class="sd-main-Slider">        
+        <div  id="sd_slider_{{product.id}}-{{section.id}}" class="sd-main-Slider">        
         {%- for media in product.media -%}
         <div parent-slider="sd_slider_{{product.id}}-{{section.id}}" sd-slide-number='{{forloop.index}}' class="sd-slide-wrapper {% if forloop.first %}sd-active-slider{% endif %}" >  
           <a class="yv-product-img" href="{{product.url | within : collection}}">  
