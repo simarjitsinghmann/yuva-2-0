@@ -24,17 +24,17 @@
       <div class="yv-deal-right-detail">
         {% include 'deal-product-grid'%}
         <div class="yv-deal-product-slider main-slider-wrapper">
-          <div id="slider-{{section.id}}" class="sd_main_Slider">
+          <div id="slider-{{section.id}}" class="sd-main-Slider">
             {% for image in product.images %}
-            <div class="yv-deal-product-slider-item sd_slide_wrapper {% if forloop.first%}sd_active_slider{% endif %}" parent-slider="slider-{{section.id}}" sd-slide-number="{{forloop.index}}">
+            <div class="yv-deal-product-slider-item sd-slide-wrapper {% if forloop.first%}sd-active-slider{% endif %}" parent-slider="slider-{{section.id}}" sd-slide-number="{{forloop.index}}">
               <img src="{{image | img_url:'500x'}}" alt="{{product.title | escape}}"/>
             </div>
             {% endfor %}
           </div>
           {% if product.images.size > 1 %}
-          <div class="sd_slider_dots_wrapper">
+          <div class="sd-slider-dots-wrapper">
             {% for image in product.images %}
-            <span class="sd_slider_dots {% if forloop.first%}sd_active{% endif %}" parent-slider="slider-{{section.id}}" sd-slide="{{forloop.index}}">{{forloop.index}}</span>
+            <span class="sd-slider-dots {% if forloop.first%}sd-active{% endif %}" parent-slider="slider-{{section.id}}" sd-slide="{{forloop.index}}">{{forloop.index}}</span>
             {% endfor %}
           </div>
           {% endif %}
