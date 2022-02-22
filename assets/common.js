@@ -798,6 +798,7 @@ slickSlider = function(selector,slideIndex){
             $(this).closest('.slick-slide').addClass(item)
           })  
       }
+      selector.find('.slick-track').attr('aria-label','slide-list')
     });
     
     var html = selector.closest('.shopify-section').find('[name="slider-json"]')[0].textContent;
