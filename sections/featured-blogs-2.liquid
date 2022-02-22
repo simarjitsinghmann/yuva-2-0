@@ -19,7 +19,7 @@
             {%- endif -%}
           </a>
           <div class="yv-blog-card-text">
-            <h4 class="yv-blog-title" >{{article.excerpt_or_content | truncatewords:30}}</h4>
+            <h4 class="yv-blog-title" >{{article.title}}</h4>
             <a href="{{-article.url-}}" class="yv-blog-link">Read More</a>
           </div>
           <span class="yv-blog-date">{{article.published_at | date: "%B %d, %Y" }}</span>
@@ -30,6 +30,7 @@
       <div class="col-12 col-sm-12 col-md-6 col-lg-7">
         <div class="row small-blog-outer">
             {%- for block in section.blocks offset:1 -%}
+            {%- assign article = block.settings.article -%}
           <div class="col-12 col-sm-12 col-md-6 ">
             <div class="yv-blog-card">
               <h3 class="yv-blog-title" href="#">{{article.title}}</h3>
