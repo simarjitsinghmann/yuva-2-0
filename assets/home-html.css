@@ -1227,9 +1227,13 @@
     overflow:hidden;
 }
 .small-img-content {
-    max-width: 390px;
-    height: 340px;
-  	border:2px solid #fff;
+    max-width: 340px;
+    height: 390px;
+    border: 2px solid #fff;
+    position: absolute;
+    top: calc(50% - 185px);
+    left: 20%;
+    width: 100%;
 }
 .yv-img-content img{
     width: 100%;
