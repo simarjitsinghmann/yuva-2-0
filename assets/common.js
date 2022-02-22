@@ -1406,7 +1406,7 @@ var sd_slider = function (slider, slide) {
   var root = this;
   // get the current slider
   var sd_slider = slider;
-  var sd_buttons = sd_slider.parent().find('.sd_slider_controls');
+  var sd_buttons = sd_slider.parent().find('.sd-slider-controls');
   var sliderID = sd_slider.attr('id');
 
 
@@ -1420,10 +1420,10 @@ var sd_slider = function (slider, slide) {
     }
   });
 
-  jQuery('body').on('click', '.sd_slider_dots', function (e) {
+  jQuery('body').on('click', '.sd-slider-dots', function (e) {
     e.preventDefault();
 
-    if (!$(this).hasClass('sd_active')) {
+    if (!$(this).hasClass('sd-active')) {
       // get the current slider
       var sd_slider = $(this).attr('parent-slider');
 
@@ -1431,19 +1431,19 @@ var sd_slider = function (slider, slide) {
 
       var direction_type = $('#' + sd_slider).attr('data-direction');
 
-      var slideWidth = jQuery('#' + sd_slider).find('.sd_slide_wrapper').width();
-      var slideHeight = jQuery('#' + sd_slider).find('.sd_slide_wrapper').height();
+      var slideWidth = jQuery('#' + sd_slider).find('.sd-slide-wrapper').width();
+      var slideHeight = jQuery('#' + sd_slider).find('.sd-slide-wrapper').height();
 
       //then hide all slides of current slider
-      $('#' + sd_slider + ' .sd_slide_wrapper').removeClass('sd_active_slider');
+      $('#' + sd_slider + ' .sd-slide-wrapper').removeClass('sd-active-slider');
 
-      $(this).closest('.sd_slider_dots_wrapper').find('.sd_slider_dots').removeClass(
-        'sd_active');
+      $(this).closest('.sd-slider-dots-wrapper').find('.sd-slider-dots').removeClass(
+        'sd-active');
 
       jQuery('#' + sd_slider).find(`[sd-slide-number='${current_slide_number}']`).addClass(
-        'sd_active_slider');
+        'sd-active-slider');
       //find the next & prev Case
-      $(this).addClass('sd_active');
+      $(this).addClass('sd-active');
       if (direction_type == '' || direction_type == 'left-right') {
         jQuery('#' + sd_slider).animate({
           scrollLeft: (current_slide_number * slideWidth) - slideWidth
@@ -1462,18 +1462,18 @@ var sd_slider = function (slider, slide) {
     //find the next & prev Case
     var direction_type = slider.attr('data-direction');
     var infinite = slider.attr('data-infinite');
-    var total_slides = slider.find('.sd_slide_wrapper').length;
-    var slideWidth = slider.find('.sd_slide_wrapper').width();
-    var slideHeight = slider.find('.sd_slide_wrapper').height();
+    var total_slides = slider.find('.sd-slide-wrapper').length;
+    var slideWidth = slider.find('.sd-slide-wrapper').width();
+    var slideHeight = slider.find('.sd-slide-wrapper').height();
 
-    slider.parent().find('.sd_slider_dots').removeClass('sd_active');
+    slider.parent().find('.sd-slider-dots').removeClass('sd-active');
     if (slide == 'next') {
-      var current_slide_number = slider.find('.sd_active_slider').last().attr('sd-slide-number');
-      slider.find('.sd_slide_wrapper.sd_active_slider').first().removeClass('sd_active_slider');
+      var current_slide_number = slider.find('.sd-active-slider').last().attr('sd-slide-number');
+      slider.find('.sd-slide-wrapper.sd-active-slider').first().removeClass('sd-active-slider');
       var next_slide_number = parseInt(current_slide_number) + 1;
       if (slider.find(`[sd-slide-number='${next_slide_number}']`).length > 0) {
-        slider.find(`[sd-slide-number='${next_slide_number}']`).addClass('sd_active_slider');
-        slider.parent().find(`[sd-slide='${next_slide_number}']`).addClass('sd_active');
+        slider.find(`[sd-slide-number='${next_slide_number}']`).addClass('sd-active-slider');
+        slider.parent().find(`[sd-slide='${next_slide_number}']`).addClass('sd-active');
         if (direction_type == '' || direction_type == 'left-right') {
           slider.animate({
             scrollLeft: current_slide_number * slideWidth
@@ -1486,13 +1486,13 @@ var sd_slider = function (slider, slide) {
       } else {
         if (infinite == undefined || infinite == 'false') {
           slider.find(`[sd-slide-number='${parseInt(current_slide_number)}']`).addClass(
-            'sd_active_slider');
+            'sd-active-slider');
           slider.parent().find(`[sd-slide='${parseInt(current_slide_number)}']`).addClass(
-            'sd_active');
+            'sd-active');
           return false;
         }
-        slider.find(`[sd-slide-number='1']`).addClass('sd_active_slider');
-        slider.parent().find(`[sd-slide='1']`).addClass('sd_active');
+        slider.find(`[sd-slide-number='1']`).addClass('sd-active-slider');
+        slider.parent().find(`[sd-slide='1']`).addClass('sd-active');
         if (direction_type == '' || direction_type == 'left-right') {
           slider.animate({
             scrollLeft: 0
@@ -1505,12 +1505,12 @@ var sd_slider = function (slider, slide) {
       }
     } else if (slide == 'prev') {
 
-      var current_slide_number = slider.find('.sd_active_slider').first().attr('sd-slide-number');
-      slider.find('.sd_slide_wrapper.sd_active_slider').last().removeClass('sd_active_slider');
+      var current_slide_number = slider.find('.sd-active-slider').first().attr('sd-slide-number');
+      slider.find('.sd-slide-wrapper.sd-active-slider').last().removeClass('sd-active-slider');
       var prev_slide_number = parseInt(current_slide_number) - 1;
       if (slider.find(`[sd-slide-number='${prev_slide_number}']`).length > 0) {
-        slider.find(`[sd-slide-number='${prev_slide_number}']`).addClass('sd_active_slider');
-        slider.parent().find(`[sd-slide='${prev_slide_number}']`).addClass('sd_active');
+        slider.find(`[sd-slide-number='${prev_slide_number}']`).addClass('sd-active-slider');
+        slider.parent().find(`[sd-slide='${prev_slide_number}']`).addClass('sd-active');
         if (direction_type == '' || direction_type == 'left-right') {
           slider.animate({
             scrollLeft: (prev_slide_number * slideWidth) - slideWidth
@@ -1523,13 +1523,13 @@ var sd_slider = function (slider, slide) {
       } else {
         if (infinite == undefined || infinite == 'false') {
           slider.find(`[sd-slide-number='${parseInt(current_slide_number)}']`).addClass(
-            'sd_active_slider');
+            'sd-active-slider');
           slider.parent().find(`[sd-slide='${parseInt(current_slide_number)}']`).addClass(
-            'sd_active');
+            'sd-active');
           return false;
         }
-        slider.find(`[sd-slide-number='${total_slides}']`).addClass('sd_active_slider');
-        slider.parent().find(`[sd-slide='${total_slides}']`).addClass('sd_active');
+        slider.find(`[sd-slide-number='${total_slides}']`).addClass('sd-active-slider');
+        slider.parent().find(`[sd-slide='${total_slides}']`).addClass('sd-active');
         if (direction_type == '' || direction_type == 'left-right') {
           slider.animate({
             scrollLeft: (total_slides * slideWidth) - slideWidth
@@ -1542,8 +1542,8 @@ var sd_slider = function (slider, slide) {
       }
     } else {
 
-      slider.find(`[sd-slide-number='1']`).addClass('sd_active_slider');
-      slider.parent().find(`[sd-slide='1']`).addClass('sd_active');
+      slider.find(`[sd-slide-number='1']`).addClass('sd-active-slider');
+      slider.parent().find(`[sd-slide='1']`).addClass('sd-active');
     }
   }
 
