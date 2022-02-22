@@ -378,9 +378,6 @@
 .yv-collection-product-grid .slick-prev{
   	left: -90px;
 }
-.slick-arrow.slick-disabled {
-    opacity: 0.3;
-}
 /*========= collection Product section css end =======*/
 /*========== about theme section css start ========*/
 .about-theme-section {
@@ -1265,5 +1262,11 @@
     font-size: 14px;
     min-width: 70px;
     justify-content: flex-end;
+}
+.yv-collection-product-grid .slick-next {
+    right: -90px;
+}
+.yv-collection-product-grid .slick-prev {
+    left: -90px;
 }
 /*============ recent product section css end ===========*/
