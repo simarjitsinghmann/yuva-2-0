@@ -236,7 +236,9 @@
               {% if collection.products_count > 0 %}
               {% for product in collection.products %}
               
-              {% render 'product-grid-custom',product: product,hideClass:true %}
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+              {% render 'product-grid-custom',product: product %}
+              </div>
               {% endfor %}
               {%- if section.settings.pagination_type == 'infinite'-%}
               {% if paginate.next %}
