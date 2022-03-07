@@ -235,7 +235,8 @@
             <div class="row product_columns" data-collection-products>
               {% if collection.products_count > 0 %}
               {% for product in collection.products %}
-              {% render 'product-grid-custom',product: product %}
+              
+              {% render 'product-grid-custom',product: product,hideClass:true %}
               {% endfor %}
               {%- if section.settings.pagination_type == 'infinite'-%}
               {% if paginate.next %}
