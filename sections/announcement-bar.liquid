@@ -105,7 +105,7 @@
         }
         else{
           document.getElementById("announcementTimer").classList.add('hidden');
-          document.querySelector('body').classList.remove('announcement-open');
+          document.querySelector('body').classList.remove('announcement_open');
           clearInterval(x);
         }
       }, 0)
@@ -114,7 +114,7 @@
     setTimeout(function(){
       var getnew_Pop = Cookies.get('announcement_closed');
       if(getnew_Pop != "true"){
-        document.querySelector('body').classList.add('announcement-open');
+        document.querySelector('body').classList.add('announcement_open');
       }      
     },500);
   }
@@ -126,14 +126,14 @@
     var getnew_Pop = Cookies.get('announcement_closed');
     if(getnew_Pop != "true"){
       $('#announcement{{section.id}}').removeClass('hidden');
-        $('body').removeClass('announcement-open');
+        $('body').removeClass('announcement_open');
     }
     $('.announce_close').click(function(){
       $('.announcement-bar').slideToggle();
       var date = new Date();
       date.setTime(date.getTime() + (parseInt(24 * 60 * 60 * 1000)));
       Cookies.set('announcement_closed', 'true', { expires: date, path: '/' });
-      $('body').removeClass('announcement-open');
+      $('body').removeClass('announcement_open');
     });
   }
 </script>
