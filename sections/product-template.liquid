@@ -51,7 +51,7 @@
               <div class="main-container">
                 <div class="slider slider-main" mobile-only data-slider>
                   {%- for media in product.media -%}
-                {%-case media.media_type-%}
+                  {%-case media.media_type-%}
                   {%- when 'image' -%}
                   <div class="responsive-image__wrapper productImageSlideItem">
                     <a id="media-{{media.id}}"  href="{{media | img_url: 'master'}}" class="productImageItem image-popup-link" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
@@ -66,32 +66,32 @@
                   </div>
                   {%- when 'external_video' -%}
                   <div  class="responsive-image__wrapper productImageSlideItem">
-                <a id="media-{{media.id}}" href="{{media | external_video_url}}" class="productImageItem image-popup-link productVideoSlideItem" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}" aria-label="{{media.alt | default:product.title}}">
-                  {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
-                  
-                </a>{% if forloop.last %}
-                 {{productHighlights}}
-                  {% endif%}
+                    <a id="media-{{media.id}}" href="{{media | external_video_url}}" class="productImageItem image-popup-link productVideoSlideItem" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}" aria-label="{{media.alt | default:product.title}}">
+                      {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
+
+                    </a>{% if forloop.last %}
+                    {{productHighlights}}
+                    {% endif%}
                   </div>
                   {%- when 'video' -%}
                   {% assign videoTag =  media |media_tag | split:'src="'%}
-                  
+
                   <div class="responsive-image__wrapper productImageSlideItem ">
-                <a id="media-{{media.id}}" href="{{videoTag[2] | split:'"' | first }}"class="productImageItem image-popup-link productVideoSlideItem" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
-                 {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
-                </a> 
-                  {% if forloop.last %}
-                 {{productHighlights}}
-                  {% endif%}
+                    <a id="media-{{media.id}}" href="{{videoTag[2] | split:'"' | first }}"class="productImageItem image-popup-link productVideoSlideItem" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
+                      {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
+                    </a> 
+                    {% if forloop.last %}
+                    {{productHighlights}}
+                    {% endif%}
                   </div>
                   {%- when 'model' -%}
                   <div id="media-{{media.id}}" class="responsive-image__wrapper productImageSlideItem productModelSlideItem">
                     <a id="media-{{media.id}}"  class="productImageItem image-popup-link" aria-label="{{media.alt | default:product.title}}">
                       {{media |  media_tag: image_size: "2048x", toggleable: true}}
                     </a>
-                  {% if forloop.last %}
-                 {{productHighlights}}
-                  {% endif%}
+                    {% if forloop.last %}
+                    {{productHighlights}}
+                    {% endif%}
                   </div>
                   {%-endcase-%}
                   {%-endfor-%}
@@ -106,70 +106,70 @@
               {%- assign media = current_variant.featured_media -%}
               <div class="gallery-item-product" id="media-{{media.id}}">
                 {%-case media.media_type-%}
-                  {%- when 'image' -%}
+                {%- when 'image' -%}
                 <a href="{{media | img_url: 'master'}}" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                   <img class="responsive-image__image lazyload" src="{{media | img_url: 'master'}}" data-src="" data-sizes="auto" alt="{{ media.preview_image.alt | escape }}">
                   {% if forloop.last %}
-                 {{productHighlights}}
+                  {{productHighlights}}
                   {% endif%}
                 </a>
-                  {%- when 'external_video' -%}
+                {%- when 'external_video' -%}
                 <a href="{{media | external_video_url}}" class="iframe-gallery-item productVideoSlideItem"  data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                   {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
                   {% if forloop.last %}
-                 {{productHighlights}}
+                  {{productHighlights}}
                   {% endif%}
                 </a>
-                  {%- when 'video' -%}
+                {%- when 'video' -%}
                 <a href="{{media.video_sources.url}}" class="productImageItem image-popup-linkr productVideoSlideItem" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                   {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
                   {% if forloop.last %}
-                 {{productHighlights}}
+                  {{productHighlights}}
                   {% endif%}
                 </a>
-                  {%- when 'model' -%}
+                {%- when 'model' -%}
                 <div class="productModelSlideItem">
                   {{media | model_viewer_tag }}                  
                   {% if forloop.last %}
-                 {{productHighlights}}
+                  {{productHighlights}}
                   {% endif%}
                 </div>
-                  {%- endcase -%}
+                {%- endcase -%}
               </div>
               {%endif%}                         
               {%- for media in product.media -%}
               {%- unless media.id == current_variant.featured_media.id -%}
               <div  class="gallery-item-product" id="media-{{media.id}}">
-                  {%-case media.media_type-%}
-                  {%- when 'image' -%}
+                {%-case media.media_type-%}
+                {%- when 'image' -%}
                 <a href="{{media | img_url: 'master'}}" class="iframe-gallery-item" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                   <img class="responsive-image__image lazyload" src="{{media | img_url: 'master'}}" data-src="" data-sizes="auto" alt="{{ media.preview_image.alt | escape }}">
                   {% if forloop.last %}
-                 {{productHighlights}}
+                  {{productHighlights}}
                   {% endif%}
                 </a>
-                  {%- when 'external_video' -%}
+                {%- when 'external_video' -%}
                 <a href="{{media | external_video_url}}" class="iframe-gallery-item productVideoSlideItem"  data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                   {{media | external_video_url: autoplay: false, loop: loop | external_video_tag: class: video_class, loading: "lazy"}}
                   {% if forloop.last %}
-                 {{productHighlights}}
+                  {{productHighlights}}
                   {% endif%}
                 </a>
-                  {%- when 'video' -%}
+                {%- when 'video' -%}
                 <a href="{{media.sources[1].url}}" class="productVideoSlideItem" data-fancybox="gallery{{section.id}}" aria-label="{{media.alt | default:product.title}}">
                   {{ media |media_tag: image_size: "2048x", autoplay: false, loop: loop, controls: true, preload: "none", autoplay: false }}
                   {% if forloop.last %}
-                 {{productHighlights}}
+                  {{productHighlights}}
                   {% endif%}
                 </a>
-                  {%- when 'model' -%}
+                {%- when 'model' -%}
                 <div class="productModelSlideItem">
                   {{media | model_viewer_tag }}
                   {% if forloop.last %}
-                 {{productHighlights}}
+                  {{productHighlights}}
                   {% endif%}
                 </div>
-                  {%- endcase -%}
+                {%- endcase -%}
               </div>
               {%-endunless-%}
               {%-endfor-%}
@@ -177,10 +177,10 @@
           </div>
           {% endif %}
         </div>
-          {% endif %}
+        {% endif %}
         <div class="col-sm-12 col-md-5 col-lg-5 {% if product.media.size == 0 %}mx-auto{% endif %}">
           <div class="single__product__right sidebar-fixed">
-          {% include 'product-form' custom:true  %}
+            {% include 'product-form' custom:true  %}
           </div>
         </div>
       </div> 
