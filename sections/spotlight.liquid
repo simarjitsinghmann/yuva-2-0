@@ -1,7 +1,9 @@
 <div class="spotlightSectionMain">
   <div class="spotlighSectionWrapper">
       {%- if section.settings.image != blank -%}
-      {%- render 'lazy-image' image:section.settings.image,class:'spotlightSectionImage' -%}
+     <div class="image-wrapper" style="padding-bottom:{{ 1 | divided_by : section.settings.image.aspect_ratio | times: 100 | minus : 1 }}%">
+         {%- render 'lazy-image' image:section.settings.image,class:'spotlightSectionImage' -%}
+    </div>
       {%-else-%}
       <div class="spotlightSectionPlaceholder">{% render 'banner-placeholder'%}</div>
       {%- endif %}
