@@ -109,6 +109,7 @@ Shopify.CountryProvinceSelector.prototype = {
   },
 
   setOptions: function(selector, values) {
+    console.log('values',values)
     for (var i = 0, count = values.length; i < values.length; i++) {
       var opt = document.createElement('option');
       opt.value = values[i];
