@@ -242,7 +242,7 @@
               {% endfor %}
               {%- if section.settings.pagination_type == 'infinite'-%}
               {% if paginate.next %}
-              <div id="more"style="width:100%">
+              <div id="more" style="width:100%">
                 <a href="{{ paginate.next.url }}" aria-label="{{'accessibility.loading' | t}}"></a>
                 <div class="load hidden" >
                   <svg width="30" height="30"
